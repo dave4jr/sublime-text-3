@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[{% now "SHORT_DATE_FORMAT" %}]]></content>
+	<tabTrigger>date</tabTrigger>
+	<description>CenterStack:	Django - Current Date</description>
+</snippet>

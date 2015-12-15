@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[<div class="line"></div>]]></content>
+	<tabTrigger>line</tabTrigger>
+	<description>CenterStack: Line</description>
+</snippet>

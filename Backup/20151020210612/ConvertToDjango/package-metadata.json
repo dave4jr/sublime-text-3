@@ -1,0 +1,1 @@
+{"description": "Project Manager for Sublime Text 3", "dependencies": [], "platforms": ["*"], "url": "https://github.com/randy3k/Project-Manager", "version": "0.5.15", "sublime_text": ">=3000"}

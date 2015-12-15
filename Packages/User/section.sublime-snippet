@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[<section id="$1">
+	<div id="heading" class="flex-col">
+		<div class="box-1">
+			<h4>$2</h4>
+		</div>
+		<div class="box-1">
+			<h6>$3</h6>
+		</div>
+	</div>
+</section>
+]]></content>
+	<tabTrigger>section</tabTrigger>
+	<description>CenterStack: Section Heading</description>
+</snippet>

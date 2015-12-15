@@ -1,0 +1,23 @@
+[
+	{
+		"args":
+		{
+			"characters": "# ==================================================#\n"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": "#\tSection\n"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": "# ==================================================#"
+		},
+		"command": "insert"
+	}
+]

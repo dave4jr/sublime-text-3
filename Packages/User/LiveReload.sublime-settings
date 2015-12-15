@@ -1,0 +1,9 @@
+{
+    "version" : "1.6"
+  , "port" : 35729
+  , "delay_ms" : 1000
+  , "apply_js_live" : true
+  , "apply_css_live" : true
+  , "apply_images_live" : true
+  , "enabled_plugins" : ["SimpleRefreshDelay"]
+}

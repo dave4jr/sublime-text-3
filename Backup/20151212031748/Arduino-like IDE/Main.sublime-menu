@@ -1,0 +1,516 @@
+[
+    {
+        "mnemonic": "n", 
+        "caption": "Preferences", 
+        "id": "preferences", 
+        "children": [
+            {
+                "caption": "Show Arduino Menu", 
+                "checkbox": true, 
+                "command": "show_arduino_menu"
+            }
+        ]
+    }, 
+    {
+        "mnemonic": null, 
+        "caption": "Arduino", 
+        "id": "arduino", 
+        "children": [
+            {
+                "caption": "New Sketch", 
+                "command": "new_sketch"
+            }, 
+            {
+                "mnemonic": null, 
+                "caption": "Sketchbook", 
+                "id": "sketchbook", 
+                "children": [
+                    {
+                        "caption": "-", 
+                        "command": null
+                    }
+                ]
+            }, 
+            {
+                "mnemonic": null, 
+                "caption": "Examples", 
+                "id": "examples", 
+                "children": [
+                    {
+                        "mnemonic": null, 
+                        "caption": "General", 
+                        "id": "general", 
+                        "children": [
+                            {
+                                "caption": "-", 
+                                "command": null
+                            }
+                        ]
+                    }
+                ]
+            }, 
+            {
+                "caption": "-", 
+                "command": null
+            }, 
+            {
+                "mnemonic": null, 
+                "caption": "Import Library", 
+                "id": "import library", 
+                "children": []
+            }, 
+            {
+                "caption": "Show Sketch Folder", 
+                "command": "show_sketch_folder"
+            }, 
+            {
+                "caption": "-", 
+                "command": null
+            }, 
+            {
+                "caption": "Extra Flags", 
+                "command": "set_extra_flag"
+            }, 
+            {
+                "caption": "Verify/Compile", 
+                "command": "compile_sketch"
+            }, 
+            {
+                "caption": "Upload", 
+                "command": "upload_sketch"
+            }, 
+            {
+                "caption": "Upload by Using Programmer", 
+                "command": "upload_using_programmer"
+            }, 
+            {
+                "caption": "-", 
+                "command": null
+            }, 
+            {
+                "caption": "-", 
+                "command": null
+            }, 
+            {
+                "caption": "Burn Bootloader", 
+                "command": "burn_bootloader"
+            }, 
+            {
+                "caption": "-", 
+                "command": null
+            }, 
+            {
+                "mnemonic": null, 
+                "caption": "Serial Port", 
+                "id": "serial port", 
+                "children": [
+                    {
+                        "caption": "/dev/cu.Bluetooth-Incoming-Port", 
+                        "args": {
+                            "serial_port": 0
+                        }, 
+                        "command": "choose_serial_port", 
+                        "checkbox": true
+                    }, 
+                    {
+                        "caption": "/dev/tty.Bluetooth-Incoming-Port", 
+                        "args": {
+                            "serial_port": 1
+                        }, 
+                        "command": "choose_serial_port", 
+                        "checkbox": true
+                    }, 
+                    {
+                        "caption": "/dev/cu.davejr-iphone-Wirelessi", 
+                        "args": {
+                            "serial_port": 2
+                        }, 
+                        "command": "choose_serial_port", 
+                        "checkbox": true
+                    }, 
+                    {
+                        "caption": "/dev/tty.davejr-iphone-Wirelessi", 
+                        "args": {
+                            "serial_port": 3
+                        }, 
+                        "command": "choose_serial_port", 
+                        "checkbox": true
+                    }
+                ]
+            }, 
+            {
+                "mnemonic": null, 
+                "caption": "Serial Monitor", 
+                "id": "serial monitor", 
+                "children": [
+                    {
+                        "caption": "Start", 
+                        "command": "start_serial_monitor"
+                    }, 
+                    {
+                        "caption": "Stop", 
+                        "command": "stop_serial_monitor"
+                    }, 
+                    {
+                        "caption": "Send", 
+                        "command": "send_serial_text"
+                    }, 
+                    {
+                        "mnemonic": null, 
+                        "caption": "Baudrate", 
+                        "id": "baudrate", 
+                        "children": [
+                            {
+                                "caption": "300", 
+                                "args": {
+                                    "baudrate": 0
+                                }, 
+                                "command": "choose_baudrate", 
+                                "checkbox": true
+                            }, 
+                            {
+                                "caption": "1200", 
+                                "args": {
+                                    "baudrate": 1
+                                }, 
+                                "command": "choose_baudrate", 
+                                "checkbox": true
+                            }, 
+                            {
+                                "caption": "2400", 
+                                "args": {
+                                    "baudrate": 2
+                                }, 
+                                "command": "choose_baudrate", 
+                                "checkbox": true
+                            }, 
+                            {
+                                "caption": "4800", 
+                                "args": {
+                                    "baudrate": 3
+                                }, 
+                                "command": "choose_baudrate", 
+                                "checkbox": true
+                            }, 
+                            {
+                                "caption": "9600", 
+                                "args": {
+                                    "baudrate": 4
+                                }, 
+                                "command": "choose_baudrate", 
+                                "checkbox": true
+                            }, 
+                            {
+                                "caption": "14400", 
+                                "args": {
+                                    "baudrate": 5
+                                }, 
+                                "command": "choose_baudrate", 
+                                "checkbox": true
+                            }, 
+                            {
+                                "caption": "19200", 
+                                "args": {
+                                    "baudrate": 6
+                                }, 
+                                "command": "choose_baudrate", 
+                                "checkbox": true
+                            }, 
+                            {
+                                "caption": "28800", 
+                                "args": {
+                                    "baudrate": 7
+                                }, 
+                                "command": "choose_baudrate", 
+                                "checkbox": true
+                            }, 
+                            {
+                                "caption": "38400", 
+                                "args": {
+                                    "baudrate": 8
+                                }, 
+                                "command": "choose_baudrate", 
+                                "checkbox": true
+                            }, 
+                            {
+                                "caption": "57600", 
+                                "args": {
+                                    "baudrate": 9
+                                }, 
+                                "command": "choose_baudrate", 
+                                "checkbox": true
+                            }, 
+                            {
+                                "caption": "115200", 
+                                "args": {
+                                    "baudrate": 10
+                                }, 
+                                "command": "choose_baudrate", 
+                                "checkbox": true
+                            }
+                        ]
+                    }, 
+                    {
+                        "mnemonic": null, 
+                        "caption": "Line Ending", 
+                        "id": "line ending", 
+                        "children": [
+                            {
+                                "caption": "None", 
+                                "args": {
+                                    "line_ending": 0
+                                }, 
+                                "command": "choose_line_ending", 
+                                "checkbox": true
+                            }, 
+                            {
+                                "caption": "Newline", 
+                                "args": {
+                                    "line_ending": 1
+                                }, 
+                                "command": "choose_line_ending", 
+                                "checkbox": true
+                            }, 
+                            {
+                                "caption": "Carriage return", 
+                                "args": {
+                                    "line_ending": 2
+                                }, 
+                                "command": "choose_line_ending", 
+                                "checkbox": true
+                            }, 
+                            {
+                                "caption": "Both NL & CR", 
+                                "args": {
+                                    "line_ending": 3
+                                }, 
+                                "command": "choose_line_ending", 
+                                "checkbox": true
+                            }
+                        ]
+                    }, 
+                    {
+                        "mnemonic": null, 
+                        "caption": "Display as", 
+                        "id": "display as", 
+                        "children": [
+                            {
+                                "caption": "Text", 
+                                "args": {
+                                    "display_mode": 0
+                                }, 
+                                "command": "choose_display_mode", 
+                                "checkbox": true
+                            }, 
+                            {
+                                "caption": "Ascii", 
+                                "args": {
+                                    "display_mode": 1
+                                }, 
+                                "command": "choose_display_mode", 
+                                "checkbox": true
+                            }, 
+                            {
+                                "caption": "Hex", 
+                                "args": {
+                                    "display_mode": 2
+                                }, 
+                                "command": "choose_display_mode", 
+                                "checkbox": true
+                            }
+                        ]
+                    }
+                ]
+            }, 
+            {
+                "caption": "-", 
+                "command": null
+            }, 
+            {
+                "caption": "Auto Format", 
+                "command": "auto_format"
+            }, 
+            {
+                "caption": "Archive Sketch", 
+                "command": "archive_sketch"
+            }, 
+            {
+                "caption": "-", 
+                "command": null
+            }, 
+            {
+                "mnemonic": null, 
+                "caption": "Preferences", 
+                "id": "preferences", 
+                "children": [
+                    {
+                        "caption": "Select Arduino Application Folder", 
+                        "command": "choose_arduino_folder"
+                    }, 
+                    {
+                        "caption": "Change Sketchbook Folder", 
+                        "command": "change_sketchbook_folder"
+                    }, 
+                    {
+                        "caption": "Select Build Folder", 
+                        "command": "choose_build_folder"
+                    }, 
+                    {
+                        "mnemonic": null, 
+                        "caption": "Language", 
+                        "id": "language", 
+                        "children": [
+                            {
+                                "caption": "Deutsch (German)", 
+                                "args": {
+                                    "language": 0
+                                }, 
+                                "command": "choose_language", 
+                                "checkbox": true
+                            }, 
+                            {
+                                "caption": "English (English)", 
+                                "args": {
+                                    "language": 1
+                                }, 
+                                "command": "choose_language", 
+                                "checkbox": true
+                            }, 
+                            {
+                                "caption": "fran\u00e7ais (French)", 
+                                "args": {
+                                    "language": 2
+                                }, 
+                                "command": "choose_language", 
+                                "checkbox": true
+                            }, 
+                            {
+                                "caption": "italiano (Italian)", 
+                                "args": {
+                                    "language": 3
+                                }, 
+                                "command": "choose_language", 
+                                "checkbox": true
+                            }, 
+                            {
+                                "caption": "\u65e5\u672c\u8a9e (Japanese)", 
+                                "args": {
+                                    "language": 4
+                                }, 
+                                "command": "choose_language", 
+                                "checkbox": true
+                            }, 
+                            {
+                                "caption": "portugu\u00eas - Brazil (Portuguese)", 
+                                "args": {
+                                    "language": 5
+                                }, 
+                                "command": "choose_language", 
+                                "checkbox": true
+                            }, 
+                            {
+                                "caption": "\u7b80\u4f53\u4e2d\u6587 (Chinese Simplified)", 
+                                "args": {
+                                    "language": 6
+                                }, 
+                                "command": "choose_language", 
+                                "checkbox": true
+                            }
+                        ]
+                    }
+                ]
+            }, 
+            {
+                "caption": "Global Setting", 
+                "checkbox": true, 
+                "command": "set_global_setting"
+            }, 
+            {
+                "caption": "Bare GCC Build (No Arduino code-munging)", 
+                "checkbox": true, 
+                "command": "set_bare_gcc_only"
+            }, 
+            {
+                "caption": "Full Compilation", 
+                "checkbox": true, 
+                "command": "set_full_compilation"
+            }, 
+            {
+                "mnemonic": null, 
+                "caption": "Show Verbose Output", 
+                "id": "show verbose output", 
+                "children": [
+                    {
+                        "caption": "Compilation", 
+                        "checkbox": true, 
+                        "command": "show_compilation_output"
+                    }, 
+                    {
+                        "caption": "Upload", 
+                        "checkbox": true, 
+                        "command": "show_upload_output"
+                    }
+                ]
+            }, 
+            {
+                "caption": "Verify Code after Upload", 
+                "checkbox": true, 
+                "command": "verify_code"
+            }, 
+            {
+                "caption": "-", 
+                "command": null
+            }, 
+            {
+                "mnemonic": null, 
+                "caption": "References", 
+                "id": "references", 
+                "children": [
+                    {
+                        "caption": "Getting Started", 
+                        "args": {
+                            "url": "Guide_index"
+                        }, 
+                        "command": "open_ref"
+                    }, 
+                    {
+                        "caption": "Troubleshooting", 
+                        "args": {
+                            "url": "Guide_Troubleshooting"
+                        }, 
+                        "command": "open_ref"
+                    }, 
+                    {
+                        "caption": "Reference", 
+                        "args": {
+                            "url": "index"
+                        }, 
+                        "command": "open_ref"
+                    }, 
+                    {
+                        "caption": "Find in Reference", 
+                        "command": "find_in_reference"
+                    }, 
+                    {
+                        "caption": "Frequently Asked Questions", 
+                        "args": {
+                            "url": "FAQ"
+                        }, 
+                        "command": "open_ref"
+                    }, 
+                    {
+                        "caption": "Visit Arduino Website", 
+                        "args": {
+                            "url": "http://arduino.cc"
+                        }, 
+                        "command": "open_url"
+                    }
+                ]
+            }, 
+            {
+                "caption": "About Stino", 
+                "command": "about_stino"
+            }
+        ]
+    }
+]

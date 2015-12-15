@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[<section id="$1"></section>]]></content>
+	<tabTrigger>sectionid</tabTrigger>
+	<description>CenterStack: Section-id</description>
+</snippet>

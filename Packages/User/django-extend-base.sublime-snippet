@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[{% extends "base.html" %}$1]]></content>
+	<tabTrigger>base</tabTrigger>
+	<description>django - extends</description>
+</snippet>

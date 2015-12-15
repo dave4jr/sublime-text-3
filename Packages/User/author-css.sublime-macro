@@ -1,0 +1,44 @@
+[
+	{
+		"args":
+		{
+			"characters": "/*=======================\n"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": " *  Author:		 Dave Luke Jr\n"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": "*  Company:	 CenterStack.io\n"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": "*  Description:	 "
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": "\n"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": "*=======================*/"
+		},
+		"command": "insert"
+	}
+]

@@ -1,0 +1,9 @@
+{
+	"extensions":
+	[
+		"scss",
+		"scss.erb",
+		"css"
+	],
+	"word_separators": "./\\()\"':,.;<>~!@#$%^&*|+=[]{}`~?"
+}

@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[{% $1 %}]]></content>
+	<tabTrigger>dtag</tabTrigger>
+	<description>Django - Template Tag</description>
+</snippet>

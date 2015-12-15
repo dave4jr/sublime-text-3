@@ -1,0 +1,6 @@
+[
+    {
+        "keys": ["super+ctrl+alt+x"],
+        "command": "convert_to_django"
+    }
+]

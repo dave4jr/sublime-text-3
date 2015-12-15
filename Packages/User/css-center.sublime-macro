@@ -1,0 +1,16 @@
+[
+	{
+		"args":
+		{
+			"characters": "\t<!-- Assets -->\n"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": "<link rel=\"stylesheet\" href=\"css/custom.css\">"
+		},
+		"command": "insert"
+	}
+]

@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[{% static $1 %}]]></content>
+	<tabTrigger>static</tabTrigger>
+	<description>Snippet:  django - static</description>
+</snippet>

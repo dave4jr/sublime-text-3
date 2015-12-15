@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+$1::before {
+	content:"";
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+}
+	]]></content>
+	<tabTrigger>before</tabTrigger>
+	<scope>source.scss, source.css</scope>
+	<description>CenterStack: CSS Pseudo Element</description>
+</snippet>

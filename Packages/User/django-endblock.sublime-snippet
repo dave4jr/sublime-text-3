@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[{% endblock %}]]></content>
+	<tabTrigger>endb</tabTrigger>
+	<description>Django - endblock</description>
+</snippet>

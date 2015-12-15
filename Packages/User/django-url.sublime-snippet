@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[{% url '$1' %}]]></content>
+	<tabTrigger>url</tabTrigger>
+	<description>CenterStack:	Django - URL</description>
+</snippet>

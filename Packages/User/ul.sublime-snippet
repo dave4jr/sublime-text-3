@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[<ul>$1</ul>]]></content>
+	<tabTrigger>ul</tabTrigger>
+	<description>Snippet - ul</description>
+</snippet>

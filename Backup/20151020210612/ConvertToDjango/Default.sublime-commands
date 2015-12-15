@@ -1,0 +1,18 @@
+[
+	{
+		"caption": "Convert To Django Syntax",
+		"command": "convert_to_django"
+	},
+	{
+		"caption": "Create URLs",
+		"command": "create_urls"
+	},
+	{
+		"caption": "Create Views",
+		"command": "create_views"
+	},
+	{
+		"caption": "Restore Template Files",
+		"command": "restore_template_files"
+	}
+]

@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[{% block $1 %}]]></content>
+	<tabTrigger>block</tabTrigger>
+	<description>Django - block</description>
+</snippet>

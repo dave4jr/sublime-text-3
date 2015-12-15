@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[<input type="$1" class="$2" name="$3" placeholder="$4" required$5></input>]]></content>
+	<tabTrigger>input</tabTrigger>
+	<description>Forms - Input</description>
+</snippet>

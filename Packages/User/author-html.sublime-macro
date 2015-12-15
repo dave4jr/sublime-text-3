@@ -1,0 +1,37 @@
+[
+	{
+		"args":
+		{
+			"characters": "<!--======================\n"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": " *  Author:\t\tDave Luke Jr\n"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": "*  Company:\tCenterStack.io\n"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": "*  Description:\t\n"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": "*======================-->"
+		},
+		"command": "insert"
+	}
+]

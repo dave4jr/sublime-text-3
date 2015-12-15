@@ -1,0 +1,13 @@
+{
+	"printer": "EPSOND8C848",
+	"filter_chain": ["Enscript"],
+	"landscape": true,
+	"font_size": 16,
+	"font_family": "maven pro",
+	"margin_top": 36,
+	"margin_left": 36,
+	"margin_bottom": 36,
+	"margin_right": 36,
+	"highlight": true,
+	"header": false
+}

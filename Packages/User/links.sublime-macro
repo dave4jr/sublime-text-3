@@ -1,0 +1,58 @@
+[
+	{
+		"args":
+		{
+			"characters": "\t<!-- Assets -->\n"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": "<link rel=\"stylesheet\" href=\"assets/font-awesome/css/font-awesome.min.css\">\n"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": "<link rel=\"stylesheet\" href=\"assets/bootstrap/css/bootstrap.min.css\">\n"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": "<link rel=\"stylesheet\" href=\"assets/animate-css/animate.min.css\">\n"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": "\n"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": "<!-- Custom -->\n"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": "<link rel=\"stylesheet\" href=\"assets/fullstackart/css/fullstackart.min.css\">\n"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": "<link rel=\"stylesheet\" href=\"css/custom.css\">"
+		},
+		"command": "insert"
+	},
+]

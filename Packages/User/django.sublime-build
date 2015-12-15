@@ -1,0 +1,10 @@
+{
+"working_dir": "/sys/centerstack/projects/kindredspirit",
+// "cmd": ["/sys/virtual-envs/kindredspirit/bin/python","manage.py", "shell","&lt;", "$file"],
+"cmd": ["/sys/virtual-envs/kindredspirit/bin/python","manage.py", "shell", "-h"],
+"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+"selector": "source.python"
+// "shell": true
+}
+
+

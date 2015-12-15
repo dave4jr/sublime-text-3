@@ -1,0 +1,761 @@
+{
+"/sys/centerstack/templates/canvas/main.css": {
+"history": "0,574430"
+}, 
+"/sys/centerstack/site/static/static_dirs/scss/blog.scss": {
+"history": ""
+}, 
+"/sys/centerstack/site/static/static_dirs/scss/ref.scss": {
+"history": "371|372|373"
+}, 
+"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/LiveReload/SimpleReloadPluginDelay.py": {
+"history": "419|448|654|419|653|419|448"
+}, 
+"/sys/centerstack/site/static/static_dirs/scss/responsive.scss": {
+"history": "148|115|148"
+}, 
+"/sys/centerstack/projects/kindredspirit/static/static_dirs/img/patterns/paws.svg": {
+"history": "465|434|278|436"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/six-only/html/jet-black.html": {
+"history": "105|137|158:1217:2232"
+}, 
+"/sys/os/site-sucker/weather/snow/demo.pooyaa.com/html/newone/snow/css/style.css": {
+"history": "0"
+}, 
+"/sys/centerstack/site/static/static_dirs/js/snow.js": {
+"history": "1260|1010|760|97|312|1362|1362|1440|408|458|577|740|782|859|662|860:911:989:1031:1108|1161:1239:1281:1358|1362|1110|1361"
+}, 
+"/sys/dev/web/templates/portfolio/forest/forrest/elements.html": {
+"history": "0,35427"
+}, 
+"/sys/centerstack/site/static/static_dirs/fonts/css/social-style.min.css": {
+"history": "1628,18597"
+}, 
+"/sys/centerstack/projects/kindredspirit/templates/blog.html": {
+"history": "788|200|201|782|646|781|781|781|717|781|370|306|475|612|816|520"
+}, 
+"/sys/dev/web/assets/animate-css/animate.min.css": {
+"history": "0"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/six-only/html/black.html": {
+"history": "569|567|566|249|587|5143|5149:6812:8273|9374|569:5125:9374:9675:9850:18974|9374|9374|9374|9675|18974|9849|9374|9374|9374|9374,9681|9830,18980|111|249|9374|249|9374|9374|9374|249,9374|111|52|111|18992|18991|111|249,9374|9374|9374|9374|9374|9374|111|9374|52|111|9374|249|9374|250,9373|111|43"
+}, 
+"/sys/centerstack/site/main/views.py": {
+"history": "137|109|137"
+}, 
+"/sys/centerstack/branding/logo/svg/logo.svg": {
+"history": "246|246|246|246:476|879|879|879|879|879|879|879:970|970|885|246:482:885|246|246|246|970|246|246|246|970|246|970|970|246|246|246|246|246|246|247:730:970|970:971:1544|1544:4394:5227|5642:6205:6812|6812:7463:7922:8469:8884|8884|9122|247,9121|246|9122|976|1544|1551|4403|246,9121|139|246:9122|266|489"
+}, 
+"/sys/centerstack/site/static/static_dirs/css/popup.css": {
+"history": "135|133|81|105"
+}, 
+"/sys/centerstack/projects/bondsix/logo/psd/round-2/retro-6.svg": {
+"history": "282|3627|282|3627|3627|303|1393|3627|1395|2440|3627|2440|1393|3627|2440|2439:2440|277|1374|1369|2420|2415|277|3627|303|1395|2440|303|2440|1395|2440|301|2439|1393|265|260|301|1393|2439|1393|2439|1393|2439|1393|2439|294,301|1393|2432,2439|1393|294,301"
+}, 
+"/sys/centerstack/projects/kindredspirit/static/static_dirs/scss/css/archive/style.css": {
+"history": "0"
+}, 
+"/sys/centerstack/projects/kindredspirit/templates/base.html": {
+"history": "2099|1935|2099|2099|2099|2099|2099|2108|2099|2099|2099|2108|2099|2099|2099|2099|2099|1940|2099|1946:1981:2013:2019:2099|2013|1946:1981:2013:2019:2099|1946|2013|2013|2013|2013|2019,2040|2099|2099|2099|2099|2099|2099|2099|2099|2099|2099|2099|2099|2099|2099|2099|2099|2099|2098|1904,2107|1676|1611|68"
+}, 
+"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/Copy Relative Path/README.md": {
+"history": "410|308"
+}, 
+"/sys/centerstack/branding/logo/html/logo.html": {
+"history": "9063|1238|1238|1238|1238|421|1238|1238|1238|1238|1238|1238|1238|1238|1238|1238|1238|1238|1238|1238|1238|1238|1238|1238|1238|1238|1238|1238|1238|1238|1238|1238|1238|1238|1238|1238|1238|1238|1238,2021|1247:1574|2021|1209|9054|2939|388|548|2082"
+}, 
+"/Users/davejr/Downloads/live-coding-presentations-master/2011/1_Particles/js/DOMParticle.js": {
+"history": "0"
+}, 
+"/sys/centerstack/projects/kindredspirit/ks/urls.py": {
+"history": "1488,1534|1251|1688|1181,1252|1121|1192|1159:1177:1230:1248|1230:1248|1513|1451|1369|1315|1449|1398"
+}, 
+"/sys/dev/web/templates/ecommerce/sapphire/sapphire-html/index.html": {
+"history": "0"
+}, 
+"/sys/centerstack/projects/kindredspirit/templates/archive/403.html": {
+"history": "0"
+}, 
+"/sys/centerstack/site/main/urls.py": {
+"history": "82|1228,1297|1224|1217|377|864|864|864|864|465:508:528|549:596:620|799:841:860|864|864|799|841:860|799:841:860|799|841:860|1297|1101,1291|1100|933|1096|864|377|887|876:919:939"
+}, 
+"/sys/os/site-sucker/weather/snow/demo.pooyaa.com/html/newone/snow/css/colors/blue.css": {
+"history": "134,1993|305,307|134|81|106"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/6/html/gradient-blue.html": {
+"history": "10908|10908|10745|10908|10908|10727|10908|10815|10785|10804|10763|10785|10785|10819|9968|9967|10888|9967|413,9967|9966|10888|849"
+}, 
+"/sys/centerstack/projects/kindredspirit/apps/tags/templates/heading.html": {
+"history": "0"
+}, 
+"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/JsFormat/Default (OSX).sublime-keymap": {
+"history": "55|8:145"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/six-only/html/outline-red.html": {
+"history": "118|130|9393|300|118|118|118|118,136|284,9399|118|118|118|118|118|118|118|118|118|81|118|9411|9410|118|118|118|118|118|118|118|118|118|81|118|49|118|118|118|118|118|257,9387|9389|262:9386|258,9387|9388|299|278|49|49:278|49|278"
+}, 
+"/sys/centerstack/projects/kindredspirit/static/static_dirs/fonts/css/font-awesome.min.css": {
+"history": "3481,25300"
+}, 
+"/sys/centerstack/projects/bond6/logo/svg/logo.html": {
+"history": "2255|1073|150,1161|982|1125|877|982|1077|1163|1163|982|674|982|366|224:601:909|138|1190|982|150,1161|674|798|674|601|1077|674|366|490|982|1106|1163|1189|982|1125|982|1077|1163|814|196:573:881|214|506:814:1122|1106|441,511:749,819:1057,1127|361:669:977|408,415:716,723:1024,1031|3273|408,415|204:581:889|316"
+}, 
+"/sys/centerstack/site/static/static_dirs/scss/style.scss": {
+"history": "0"
+}, 
+"/sys/centerstack/projects/bond6/logo/svg/logo-girly.html": {
+"history": "3999|682|590|636|1782:2803|569|455,678|590|361|449|198|251|391|314"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/six-only/html/background-sample.svg": {
+"history": "269:4856:9365|269|4856|4850|263|9365|248:269:4842:4844:4856:6517:7976|140|4861:6522:7981|4850"
+}, 
+"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/author-css.sublime-macro": {
+"history": "255"
+}, 
+"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/GutterColor.sublime-settings": {
+"history": "1591|175|312"
+}, 
+"/sys/centerstack/site/static/static_dirs/fonts/css/ionicons.min.css": {
+"history": "4640,47421"
+}, 
+"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap": {
+"history": "0"
+}, 
+"/sys/centerstack/site/static/static_dirs/js/animation.js": {
+"history": "37670,113010|18881,113010|142|112|242|0,94129|92121"
+}, 
+"/sys/centerstack/projects/kindredspirit/static/static_dirs/scss/flexbox.scss": {
+"history": "2437|7835,7933|7757|7883:7900:7916:7928|7780:7799:7817:7831|8234|8256|8273:8289:8301|8421|8442|8459|8475|8487|8607|8628:8645:8661:8673|8794|8815:8832:8848:8860|8952,9051|9002|9019|9035|9047|8981"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/6/html/real-black.html": {
+"history": "430|5892"
+}, 
+"/sys/dev/web/templates/portfolio/forest/forrest/portfolio.html": {
+"history": "0,24452"
+}, 
+"/sys/centerstack/site/static/static_dirs/js/jquery.min.js": {
+"history": "95957"
+}, 
+"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap": {
+"history": "8349|8349|8103|8349|8103|4236|8103|8176|8103|8176|8103|1893|1893|1795|316|316|8732|3204|3453|3453|3453|1795|1795|1795|1893|1266|1891|1378|1491|1606|1384|1645|316|6547|3900|1198|349|6101|6098|2737|972|240|169|239|240|1226|1258|8423|8515|1289"
+}, 
+"/sys/dev/python/projects/webscrape/pattern8/pattern8.py": {
+"history": "276|300|370|386|418,567|614|602|814|1185|815,879|791,812|878|898|300|877|883,897|898|900,1184|1036|1036|1036,1184|1036|1036|1036|899,1036|883,897|877|883,897|899,1036|300|1036|1038,1184|1036|1018|1036|1036,1184|300|960"
+}, 
+"/sys/centerstack/materials/logo-tool/index.html": {
+"history": "487|418"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/svg/texture/logo.html": {
+"history": "501,745|628|584:657|679"
+}, 
+"/sys/centerstack/site/static/static_dirs/scss/ref2.scss": {
+"history": ""
+}, 
+"/sys/centerstack/branding/logo/logo.svg": {
+"history": "1008|272|277:470:682|1445|2029|2251|2484|3133|3772|4387|4959|5362|5999|6594|7113|7648|7883|8221|8689|269|277|277:470:682|7646|7861|269|1007|277:470:682|924|1007|924|941|1007|891|1007|891|1013|1444|1013|1438|2008|1007|1007|924|1007|948|1007|948,981|947|1007,1995|1007:1438"
+}, 
+"/sys/centerstack/projects/kindredspirit/ks/wsgi.py": {
+"history": "218,380"
+}, 
+"/sys/centerstack/projects/kindredspirit/templates/footer.html": {
+"history": "3047|3096|360|852|1410|2060|359|851|1408|2059|3094|2985|3141|943|851|943|851|943|851|943|984|1037|1105|1207|1260|1321|841|943|893|886|1354|893:940:951:1004:1061:1171:1224:1276:1337|884|840|341|822|884|484|851|884|851|884|166|1207|987|3045"
+}, 
+"/sys/centerstack/projects/kindredspirit/templates/awards.html": {
+"history": "1700|1700|1700|1700|1700|1700|1700|1700|1700|1700|1700|1700|1700|1700|1700|1700|1700|1700|1700|1700|1700|1700|1700|1700|1700|1700|1700|1700|1700|1700|1700|1700|1700|1700|1700|1700|1700|1700|1700|1700|1700|1700|1700|1700|1699|1701|226|1700|537|459"
+}, 
+"/sys/os/site-sucker/gentleman.com/demovenustheme.com/gentshop/fs/index.html": {
+"history": ""
+}, 
+"/sys/centerstack/projects/kindredspirit/static/static_dirs/fonts/css/flaticon.css": {
+"history": "572|572|3444|572|572|523|572|793|572|3426|890,893|919,922|948,951|977,980|1006,1009|1061,1064|1143,1146|1179,1182|1304,1307|1338,1341|1565,1568|1597,1600|1639,1642|1689,1692|1860,1863|2021,2024|2200,2203|2383,2386|2566,2569|2758,2761|3054,3057|3092,3095|3239,3242|3323,3326|3364,3367|3399,3402|524|59|95|160:207:257"
+}, 
+"/sys/centerstack/projects/kindredspirit/static/static_dirs/img/patterns/paws2.svg": {
+"history": "465|434|278|433|260"
+}, 
+"/sys/centerstack/site/templates/login.html": {
+"history": "240|111|218|240|224|223|106|218|221|106|218|221|106|218:221|106|106:218:221|239|221"
+}, 
+"/sys/centerstack/site/templates/navbar.html": {
+"history": "1091|107:220|1074|362|361|297|391|842,947|837|953"
+}, 
+"/sys/centerstack/site/static/static_dirs/fonts/css/pe-icons.css": {
+"history": "68956|68903|171079|72747|72694|25516|138|110|25515|25515|25462|44850|35378|35325|44849|72694|86605|171079|77945|77892|86605|86552|171078|160903|96377|96324|160768|113561|50363|50310|68835|68833|25401|265|212|25400|113561|113508|160767|160903|160849|171076|140"
+}, 
+"/sys/centerstack/projects/bond6/logo/svg/logo-dave.html": {
+"history": "138|629|592|150,601|592|592|592|592|592|592|432|550|592|592|603|452:592|592|592|592|592|603|592|195:592|213|566:592|592|566:592|358:592|432:592|2710|221|203:592|432:592|203|592|452:592|592|186:626:1690:2710|221|314|480|342|273|335,336|404,411|473,480|266,273|335,342|404,411|473,480"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/6/html/outline-red.html": {
+"history": "5936|5936|5777|5936|5936|5759|5936|5847|5817|5836|5795|5817|5817|5851|5000|5000|5916|5000|413,5000|5000|5916|5000|5916|4999|4999|4999|4999|5916|4999|4999|4999|5916|4999|439|5916"
+}, 
+"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/Django Manage Commands/Default.sublime-keymap": {
+"history": "56|6|151"
+}, 
+"/sys/centerstack/projects/kindredspirit/templates/table.html": {
+"history": "646"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/svg/no-texture/logo-g.html": {
+"history": "715:1779:2799|186|213"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/six-only/css/logo.scss": {
+"history": "293|292|227|291|259|273|242|322|322|306|320|322|301|295|227|320|295|322"
+}, 
+"/sys/centerstack/projects/kindredspirit/templates/tooltip.js": {
+"history": "798|0,798"
+}, 
+"/sys/centerstack/projects/bondsix/logo/color-picker/style.css": {
+"history": "458|109|458|456|283|208,212|283|184|182|181|184|283|455|453|452|324|452|282|307|324|451|228|282|294|294"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/final/svg/logo.svg": {
+"history": "3755|139|138|169|155:168|155"
+}, 
+"/sys/centerstack/site/static/static_dirs/scss/_variables.scss": {
+"history": "349|349|349|349|1557|349|405|990|990|990|349|349|349|990|990|990|990,1557|1557|349:990:1557|349,716|990|990|349|281|282|348|157|227|348|1557|990|348|592|715|990|1557|990|1557|1557|990|715|1557|112|22:145|349|349|349|349|348|1202"
+}, 
+"/sys/centerstack/projects/kindredspirit/static/static_dirs/img/patterns/paw-tracks.svg": {
+"history": "307|247"
+}, 
+"/sys/centerstack/site/templates/contact.html": {
+"history": "272|113|222|272|256|255|108|222|245|108|222|245"
+}, 
+"/sys/centerstack/projects/bond6/logo/svg/new/logo.html": {
+"history": "133|133|133|133|133|133|133|133|133|134|133|133|133|133|133|134|133|133|133|133|133|133|133|133|2230|133|133|133|133|133|133|133|133:156:1216:2230|133|133|133|133|133|133|133|133|133|133|133|133|154|1215|2230|127|133"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/six-only/html/gradient-blue-black.html": {
+"history": "674|19263|9965|9924,19087|19244,28394|28543,37693|121|265|9780|284|9924,19087|9952:19086|9985|261,9781|121|60|121|37705|37704|121|261,9781|9948,19087|9782|9948|524|403,410|453|428|639|524|453|639|452|524|283|51|403,410|358|524|452|524|639|452|428|499|348|428|639"
+}, 
+"/sys/centerstack/branding/logo/logo-red.svg": {
+"history": "11325"
+}, 
+"/sys/centerstack/projects/bond6/logo/svg/logo-gradient.html": {
+"history": "418|418|418|418|418|23|402|401"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/notes/to-do.txt": {
+"history": "95"
+}, 
+"/sys/centerstack/projects/bondsix/logo/color-picker/index.html": {
+"history": "1076|1403|1732|5879|5678|5879|5879|5879|5879|5879|5879|5879|5879|5879|2126|5567|2126|2236|709|2126|2126|1644,1971|2126,5567|2126|2126|709|1133|2260|2259:3338:4371|3338|4371|5873|366|1133|1237|1220|1220|1175|1220|1185|1185|1220|1220|1218|366|1133|1523|1850|171|93"
+}, 
+"/sys/centerstack/projects/kindredspirit/ks/settings.py": {
+"history": "1544|2563|2273:2303:2563|2563|3134|3134|3134|3134:3150:3173:3194:3214:3240:3262|3134|3134|2273:2303:2563:3134|3134|3134|3134:3150:3173:3194:3214:3240:3262|3134|2563|2563|2563|2563|2563|2563|2563|2402|2563|2563|2563|2563|2563|2563|2563|2563|2563|2563|2563|2563|2563|2563|2563|2563|2563|2563|2563|2563|2563|2567|2548|2563,2599|1535,1546|96|2316,2404"
+}, 
+"/sys/centerstack/site/static/static_dirs/js/three.js": {
+"history": "37670,113005|18881,113005|142|112|242"
+}, 
+"/sys/centerstack/projects/bond6/logo/svg/texture/logo.html": {
+"history": "798|798:1858:2875|769|789|4061|792:1852:2869|785|737|576:589:664:676|576:664|768|534|460|164:173:202:242:307:374:441|157|134|459|496|769|735|576|676|576|654,677|576|650|576:589:664:676|650|576:589:664:676|650|576:589:664:676|650|576:589:664:676|650|576:589:664:676|650|576:589:664:676|650|576:589:664:676|650|576:589:664:676|698|162,469|535,565|634|576:589:650:663|684|506,751|162,469|198"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/six-only/html/gradient.html": {
+"history": "273|19170|586|585|584|277|603|5161|5165:6828:8289|9683|586:5144:9877:14459:19174:28298:28473:37597|14463:16128:17591|18987|14442|28298|37597|28472|19173|9875|9834,18997|19154,28304|28453,37603|116|260|9690|274|9834,18997|9862:18996|9895|256,9691|116|55|116|37615|37614|116|256,9691|9858,18997|9692|9858|9854|19010|116|9833,19006|55|116|9692|9692|256,9691|46"
+}, 
+"/sys/centerstack/site/static/static_dirs/img/order.sh": {
+"history": "301|140|30:170|301|296|184|296|184|296|241|272|296|241|272|259|267|291"
+}, 
+"/sys/centerstack/projects/bondsix/logo/color-picker/js/jscolor.js": {
+"history": "22599,22636|9340|4153|8832"
+}, 
+"/sys/centerstack/projects/kindredspirit/static/static_dirs/scss/[archive]/css/elements.css": {
+"history": "0"
+}, 
+"/sys/centerstack/projects/kindredspirit/templates/index.html": {
+"history": "5801|4525|2715|3783|11298|6114|9942|11258|9942|11258|9942|9928|9992|10074|10466|10859|9796|9944,11249|9121|6321|6114,11258|11256|6036|6114|6114|6105|6114|8938|6140|6114|6749|6728|6140|6114|6140|6195,6677|6687|6191|6115,8289|8290|6114|6142|6173|6191|6139|6730,8272|8281|6726|8281|8270"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/final/grey-gradient.html": {
+"history": "105"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/six-only/html/gradient-blue-red.html": {
+"history": "675|19264|9966|9925,19088|19245,28395|28544,37694|121|265|9781|284|9925,19088|9953:19087|9986|261,9782|121|60|121|37706|37705|121|261,9782|9949,19088|9783|9949|523|405,412|454|430"
+}, 
+"/sys/centerstack/projects/kindredspirit/templates/403.html": {
+"history": "0|0|0|0|0|0|0|0,2013|666|666|2029|666,2012|666|666|666|666|291|666|848|1977|2001|2028|661|372|367|48|74|103"
+}, 
+"/sys/centerstack/site/static/static_dirs/img/arrow.svg": {
+"history": "342:415|472|279,502|347|515|385"
+}, 
+"/sys/dev/web/templates/portfolio/forest/forrest/testimonials.html": {
+"history": "0,42123"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/six-only/gradient.html": {
+"history": "105|138,445"
+}, 
+"/sys/centerstack/projects/kindredspirit/main/settings.py": {
+"history": "2782|2782|2782|2782|2782|2782|2782|2782|2782|2782|2782|2782|2782|1531|2327"
+}, 
+"/sys/centerstack/projects/kindredspirit/templates/about.html": {
+"history": "4050|4050|4050|4050|4050|4050|4050|2895|4035|4035|4026|4035|4035|4035|4003,4035|4035|3173|2951|2921|4026|3173|2921|3140|4026|3140|3991|3211|3173|3140|2895|4050"
+}, 
+"/sys/centerstack/projects/kindredspirit/static/static_dirs/scss/[archive]/elements.scss": {
+"history": "17008,18301|0"
+}, 
+"/sys/centerstack/projects/bond6/logo/notes/to-do.txt": {
+"history": "106|105|11"
+}, 
+"/sys/centerstack/site/templates/login-ref.html": {
+"history": ""
+}, 
+"/sys/centerstack/projects/[backups]/kindredspirit/static/static_dirs/scss/style.scss": {
+"history": "0,77269"
+}, 
+"/sys/centerstack/branding/logo/html/css/logo.scss": {
+"history": "426|425|495|494|596|528|527|561|561|561|561|455|525|386|369|232|369|561|232|301|596|596|199:214|162:177|231|596|494|425|405|424|287|267|357|337|356|286|424|286:356|231|560|559|369|596|594|593|356|286|424|286|493"
+}, 
+"/sys/os/site-sucker/[stage]/themes.semicolonweb.com/html/canvas/canvas.html": {
+"history": "121|152|52|152|143|355|120|435"
+}, 
+"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/flex-row.sublime-snippet": {
+"history": "50|74|74|123|164|50"
+}, 
+"/sys/dev/bash/projects/img2num.sh": {
+"history": "301|140|30:170|301|296|184|296|184|296|241|272|296|241|272|259|267|291"
+}, 
+"/Users/davejr/Desktop/logo-final.svg": {
+"history": "268|293:540:912|276|1182|264|1178"
+}, 
+"/sys/design/photoshop/notes/notes.txt": {
+"history": "1219|113|19:133|1219|262|209|408|1219|66|40|19:133|408|209|279|408|281|408|281|408|277|276|408|98|66|40|18:132|568|410|500|1218|1213|650|572|650|572|650|1213|853|938|1213"
+}, 
+"/sys/centerstack/branding/logo/psd/logo.svg": {
+"history": "279|591:983|320|608|1000|2118|352|2118|352:640:1032|2118|1339:1610:1913|303:320:591:608:983:1000|1291:1308:1562:1579:1865:1882|303:320:591:608:983:1000|352:640:1032|303:320:591:608:983:1000:1291:1308:1562:1579:1865:1882|303:320:591:608:983:1000:1291:1308:1562:1579:1865:1882:6762:7386:8149:8931:9526|6774:7398:8161:8943:9538|303:320:591:608:983:1000:1291:1308:1562:1579:1865:1882:6762:7386:8149:8931:9526|352:640:1032|303:320:591:608:983:1000:1291:1308:1562:1579:1865:1882:6762:7386:8149:8931:9526|352:640:1032|339|627|1018|338:626|1327:1598:1901|303:320:591:608:983:1000:1291:1308:1562:1579:1865:1882:6762:7386:8149:8931:9526|352:640:1032|2167|2457|2920|2161|2190:2207|2480:2497|2528|2480:2497|2190:2207|2473,2480:2490,2497|2183,2190:2200,2207|2936,2943:2953,2960|352:640:1032|1339:1610:1913|352:640:1032|1271|2473,2480:2490,2497|1562:1865|2936,2943:2953,2960|352:640:1032|6755,6762:7379,7386:8142,8149:8924,8931:9519,9526"
+}, 
+"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/SublimeOnSaveBuild.sublime-settings": {
+"history": "74|54"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/final/gradient.html": {
+"history": "105|143,450"
+}, 
+"/sys/centerstack/site/static/static_dirs/js/snow.init.js": {
+"history": "2629|509|980|1232|980|155|140|112|154"
+}, 
+"/Users/davejr/Downloads/live-coding-presentations-master/2011/JSSnow/snow3d.html": {
+"history": "0|676|694|711|757|795|884|1049|1070"
+}, 
+"/sys/centerstack/projects/kindredspirit/templates/awards-notes.html": {
+"history": "1055|1055|944|942|11039|1057,11030|0,943|11029"
+}, 
+"/sys/centerstack/site/templates/base.html": {
+"history": "2451|2483|2849|2451|2611|2520|2650|2451|2642|2451|2642|2821|2649|4640|1259,1339|1235,1346|1225|1220,1340|1890"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/six-only/html/logo.html": {
+"history": "9823|19144|28443|28529|291|19230|621|619|618|296|639|5201|5207:6872:8335|9731|621:5183:9937:14519:19234:28358:28533:37657|14523:16188:17651|19047|14502|28358|37657|28532|19233|9935|9894,19057|19214,28364|28513,37663|132|278|9740|292|9894,19057|9922:19056|9955|274,9741|132|71|132|37675|37674|132|274,9741|9918,19057|9750|9918|9914|19070|132|9893,19066|71|132"
+}, 
+"/sys/centerstack/projects/kindredspirit/static/static_dirs/js/custom.js": {
+"history": "4933|4932|4347,5260|4728,5231|4342,4671"
+}, 
+"/sys/centerstack/projects/bond6/logo/svg/logo-gradient.svg": {
+"history": "0|0|0|0|0"
+}, 
+"/sys/centerstack/site/static/static_dirs/scss/blue.scss": {
+"history": "134,1993|305,307|134|81|106"
+}, 
+"/sys/dev/python/projects/webscrape/pattern8/build.html": {
+"history": "203217|0,203217|6489|6488"
+}, 
+"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/space-h-outline.sublime-snippet": {
+"history": "101|59|101|140"
+}, 
+"/sys/centerstack/projects/kindredspirit/static/static_dirs/assets/css/bootstrap.css": {
+"history": "102819,105957"
+}, 
+"/sys/centerstack/projects/kindredspirit/static/static_dirs/scss/css/custom.css": {
+"history": "0"
+}, 
+"/sys/centerstack/site/templates/about.html": {
+"history": "266|111|218|266|250|249|106|218|239|215"
+}, 
+"/sys/centerstack/site/static/static_dirs/js/plugin.min.js": {
+"history": "167528"
+}, 
+"/sys/centerstack/projects/bond6/logo/svg/logo.svg": {
+"history": "339:1445:2506|339|1445|2506"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/6/html/gradient-blue-red.html": {
+"history": "10919|10919|10748|10919|10919|10730|10919|10818|10788|10807|10766|10788|10788|10822|9971|9971|10899|9971|413,9971|9971|10899|9971|10899|854"
+}, 
+"/sys/centerstack/site/static/static_dirs/scss/media.scss": {
+"history": "142|138|81|110|168"
+}, 
+"/sys/centerstack/projects/kindredspirit/templates/services.html": {
+"history": "0"
+}, 
+"/sys/centerstack/projects/kindredspirit/static/static_dirs/scss/helpers.scss": {
+"history": "5829|5824|8681|8667|8681|4829|4749|4709|4829|4692|4731|4773|4812|4515|4439|4363|4591|4667|8845|11420|11307:11326|11347:11366|11387:11406|11427:11446|12041|11462|11513|11513:11528:11548|11564:11579:11599|11616:11632:11653|11670:11686:11707|11670|11724:11778:11832:11886:11940:11994:12048|11707:11761:11815:11869:11923:11977:12031:12085|11670:11686:11707|11724|11778|11832|11886|11940|11994|12048|11740:11761|11794|11848|11902|11956|12010|12064|11815:11869:11923:11977:12031:12085"
+}, 
+"/sys/centerstack/projects/kindredspirit/templates/awards-archive.html": {
+"history": "10917|12598"
+}, 
+"/sys/centerstack/site/templates/shop.html": {
+"history": "105|105:216:236"
+}, 
+"/sys/centerstack/projects/kindredspirit/main/views.py": {
+"history": "108"
+}, 
+"/Users/davejr/Downloads/live-coding-presentations-master/2011/1_Particles/js/PhysicsParticle.js": {
+"history": "0"
+}, 
+"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/EsFormatter.sublime-settings": {
+"history": "14281|709"
+}, 
+"/sys/centerstack/site/static/static_dirs/css/flexbox.css": {
+"history": "0|9000"
+}, 
+"/sys/dev/web/assets/animate-css/source/_base.css": {
+"history": "0"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/six-only/html/white.html": {
+"history": "9374|9374|9374|9374|9374|9374|9374|9374|9374|9374:9379|9374|9374|9374|9374|9379|9374|9374|9374|9374|9374|9374,9385|9374|9374|9374|9374|9374|9374|9374|9374|9374|75|9374|9397|9396|9374|9374|9374|9374|9374|9374|9374|9374|9374|75|9374|43|9374|9374|264|285"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/6/notes.txt": {
+"history": "308|0|198|308"
+}, 
+"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/author-html.sublime-macro": {
+"history": "255|54|495"
+}, 
+"/sys/dev/web/assets/animate-css/animate.css": {
+"history": "0"
+}, 
+"/sys/centerstack/projects/kindredspirit/templates/archive/portfolio.html": {
+"history": "0"
+}, 
+"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings": {
+"history": "601"
+}, 
+"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/LiveReload.sublime-settings": {
+"history": "195"
+}, 
+"/sys/centerstack/projects/kindredspirit/static/static_dirs/scss/css/archive/elements.css": {
+"history": "0"
+}, 
+"/sys/centerstack/projects/kindredspirit/templates/awards3.html": {
+"history": "347|347|347|347|347|347|347|347|347|347|347,4466|347|4466|133|107|347|283|210|209|4465|4464|704|704|704|704|704|704|740|726|1788|1788|1093|1277|704|704|704|704|625|704|698|704|673|380|377|747|379|747|673|704|688"
+}, 
+"/Users/davejr/.bash_profile": {
+"history": "2893|7886|7811|7810|7739|7808|7815|13627|7885|13627|13838|960|3619|3582|3619|3617|3864"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/6/html/gradient-black.html": {
+"history": "10827|10827|10662|10827|10827|10644|10827|10732|10702|10721|10680|10702|10702|10736|9885|425,439|10807|768"
+}, 
+"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/HTMLBeautify/Default (OSX).sublime-keymap": {
+"history": "75:93:113|35:62:75:93:113|201|3|5|207|206"
+}, 
+"/sys/centerstack/site/static/static_dirs/js/custom.js": {
+"history": "338,341|140,341|331|167|331|185|330|330|330|330|330|330|330|330|327|325|330|282|258|258,330|258,330|315|271|308|259,330|156,330|156|156|155|156|156|156|156|156|156|156|156|156|156|156|156|156|156|156|156|156,330|237|336"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/six-only/outline.html": {
+"history": "105|137|158:1217:2232"
+}, 
+"/sys/centerstack/site/main/settings.py": {
+"history": "214|2260|2289|2318|2474"
+}, 
+"/sys/os/site-sucker/weather/snow/demo.pooyaa.com/html/newone/snow/js/animation.js": {
+"history": "0"
+}, 
+"/sys/dev/python/projects/webscrape/zen-textures/zen-textures.py": {
+"history": "155|124|22:148|316|423|448|358|484|522|711,732|735,796|779,796|776|711,732|799,945|782,796|866|944|945|931,944|946,990|1001,1093|999|798|358|999|798|874,907|926|798|1105|926|798|456|449|456|455"
+}, 
+"/sys/centerstack/projects/bond6/logo/svg/logo-blair.html": {
+"history": "4225|908|816|862|2008:3029|795|681,904|816|584|675|420|541|614|584|633|448|584|411|633|411|448|383,675|382|411|3029|563|633|537|497:563"
+}, 
+"/sys/centerstack/site/templates/blog.html": {
+"history": "263|110|216|263|247|246|105|216|236|105|216|236|105|216:236|105|105:216:236"
+}, 
+"/sys/centerstack/projects/studiom/site/index.html": {
+"history": "21|41|90|137|243:325:384:455:481:540:604:651:779|916|916:1018:1129:1225:1323:1434|915|1434|6013|6012"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/final/logo.html": {
+"history": "105"
+}, 
+"/sys/centerstack/projects/bond6/logo/svg/logo.css": {
+"history": "293|108|293|291|258|258|182|180|179|182|258|288|288|258|199|214|199|137,259|138,181|183,259|258|288|288|175|160|175|291|287|283|263,288|255"
+}, 
+"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/author-py.sublime-macro": {
+"history": "257"
+}, 
+"/sys/centerstack/projects/kindredspirit/static/static_dirs/assets/js/jquery.tooltipster.js": {
+"history": "31597,31604|13485|13753"
+}, 
+"/sys/design/photoshop/notes/notes": {
+"history": "412|113|19:133|412|262|209|408|412|66|40|19:133|408|209|279|408|281|408|281|408|277|276|408|98|66|40|18:132"
+}, 
+"/sys/centerstack/projects/kindredspirit/static/static_dirs/assets/js/layerslider.transitions.js": {
+"history": "204,21094"
+}, 
+"/sys/centerstack/branding/logo/logo2.svg": {
+"history": "5547,5553|6124|6650|5564,5568|6124"
+}, 
+"/sys/centerstack/projects/kindredspirit/static/static_dirs/scss/[archive]/style_newest_before_changing_to_custom.scss": {
+"history": "0"
+}, 
+"/sys/dev/python/projects/webscrape/zen-textures/html-output.html": {
+"history": "39882"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/6/html/white.html": {
+"history": "5917|5917|5770|5917|5917|5752|5917|5840|5810|5829|5788|5810|5810|5844|4993|4993|5897|4993|413,4993|4993|5897|4993|5897|4992|4992|4992|4992|5897|4992|433:435:455:2120:3583:4976:4985|433|5897"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/6/html/outline-black.html": {
+"history": "5941|5941|5778|5941|5941|5760|5941|5848|5818|5837|5796|5818|5818|5852|5001|5001|5921|5001|413,5001|5001|5921|5001|5921|5000|441:443:463:2128:3591:4984:4993|440|441|5921"
+}, 
+"/sys/centerstack/branding/logo/archive/logo_new.svg": {
+"history": "0"
+}, 
+"/sys/centerstack/agency/canvas.html": {
+"history": "121|152|52|152|143|355|120|435"
+}, 
+"/sys/centerstack/site/static/static_dirs/scss/styles.scss": {
+"history": "1216|1216|1216|1216|1216|1216|1216|1216|1216|1216|1216|1216|1216|1216|1216|1216|1216|1216|1216|1216|1216|1216|1216|1216|1216|1216|1216|1216|1216|1216|1216|1216|1216|1216|1216|1216|1216|1216|1216|1216|1216|885|832|886|2094|2327|2274|2632|1216|148"
+}, 
+"/sys/centerstack/projects/kindredspirit/templates/testimonials.html": {
+"history": "0"
+}, 
+"/sys/centerstack/projects/kindredspirit/static/static_dirs/scss/[archive]/elements_layout.scss": {
+"history": "1|0"
+}, 
+"/sys/centerstack/site/static/static_dirs/scss/flexbox.scss": {
+"history": "10751|10751|8711|8589,8590|8711|8589|8589|8589|8589|8589|8589|8589|8589|8459|8589|8587|8587|8587|8587|8587|8587|8439,8590|8587|8484|8587|8481|8514|10751|10751|7891|8711|8711|8658|8711|7878|8652|8417,8436|8204|8398|8365|8395|8514|4280|1208|1207|876|823|877|12508"
+}, 
+"/sys/centerstack/projects/bond6/logo/svg/logo2.html": {
+"history": "4364|274:570:866|343:639:935|413:709:1005|413|274:343:570:639:866:935|709|1005|343:639:935|212|508:804|315:611:907|429:725:1021|274:570:866|315:611:907|384:680:976|336,338:632,634:928,930|267,274:563,570:859,866|315:611:907|268,274:564,570:860,866|343:639:935|406,413:702,709:998,1005|315:611:907"
+}, 
+"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/trailing_spaces.sublime-settings": {
+"history": "1833|1833|1833|1833|1833|1833|1833|234|0|1|207,234|437|657|1432|1833"
+}, 
+"/sys/dev/photoshop/notes/notes.txt": {
+"history": "1219|113|19:133|1219|262|209|408|1219|66|40|19:133|408|209|279|408|281|408|281|408|277|276|408|98|66|40|18:132|568|410|500|1218|1213|650|572|650|572|650|1213|853|938|1213"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/svg/no-texture/logo.css": {
+"history": "219|216|160|175|181"
+}, 
+"/sys/centerstack/projects/bondsix/logo/color-picker/logo.svg": {
+"history": "3664|2477|2477|315|1411|1406|2457|2452|315|3664|340|1432|2477|340|2477|1432|2477|339|2477|1431|303|303|339|1431|2477|1431|2477|1431|2477|1431|2477|339|1431|2477|1431|339|303|339|1431|2477|1430|2475|339|298|252|297|1431|297|2477|297"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/final/svg/logo.html": {
+"history": "466:1530:2550|170|197|432|127|111"
+}, 
+"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/Autocomplete Javascript with Method Signature/MySignaturePlugin.sublime-settings": {
+"history": "0"
+}, 
+"/sys/centerstack/projects/kindredspirit/templates/navbar.html": {
+"history": "2134"
+}, 
+"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/flex.sublime-snippet": {
+"history": "53|84|84|49|90|140"
+}, 
+"/sys/dev/web/assets/animate-css/Gruntfile.js": {
+"history": "0"
+}, 
+"/sys/centerstack/projects/kindredspirit/static/static_dirs/scss/[archive]/centerstack.scss": {
+"history": "0"
+}, 
+"/sys/centerstack/projects/kindredspirit/templates/yo.html": {
+"history": ""
+}, 
+"/sys/centerstack/projects/kindredspirit/templates/faq.html": {
+"history": "0|974|973|626|936|974|16789|974|16789|994|974,16788|973|974,16788|973|727,940|989|727,940|989|455|474|589|727,940|16787|435|394|16879|16878|0|425"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/six-only/html/outline-black.html": {
+"history": "120:132:304:9397|120|120|120|132|9397|304|120|120|120|120,138|288,9403|120|120|120|120|120|120|120|120|120|83|120|9415|9414|120|120|120|120|120|120|120|120|120|83|120|51|120|120|120|120|120|259,9391|9393|264:9390|260,9391|9392|303|282|51"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/6/html/js/canvg.js": {
+"history": "60360"
+}, 
+"/sys/centerstack/site/templates/index.html": {
+"history": "1197|1163|1056|1163|1208|1128|928|1454|1364|1237|1426|1399|1426|1424|1339,1441|1421|1265|1237|1202|1294|1398|1201|2077|1265|1294|2077|1559|1491|1555|961|1555|2659|2144|2659|1895|1404|1990|2589|2492|1705|2744|2307|1710|1124|460|2741|280|441|460|2699"
+}, 
+"/sys/centerstack/projects/kindredspirit/templates/archive/404.html": {
+"history": "0"
+}, 
+"/sys/centerstack/site/static/static_dirs/img/logo/logo.svg": {
+"history": "318,325|1793|2049|1793"
+}, 
+"/sys/centerstack/site/static/static_dirs/js/main.js": {
+"history": "0"
+}, 
+"/sys/centerstack/site/static/static_dirs/fonts/css/pe-icon-7-stroke.css": {
+"history": "9742"
+}, 
+"/sys/centerstack/projects/kindredspirit/static/static_dirs/scss/custom.scss": {
+"history": "30882|30707|30638|30707|30638|30707|30638|30750|30451:30459:30476:30500|30451|30447|30504|30814|30804|30882|30703|30919|30911|30772|9658|9919|30753|30707|30750|30804|30764|30804|30803|30804|30827|30882|30764|30802|30856|30802|30915|30878|30856|30802|30750|30707|30771|30707|30692,30706|30753,30772|30750|30750|30692,30706|30750|294,301"
+}, 
+"/sys/centerstack/projects/bond6/logo/svg/texture/logo.css": {
+"history": "175|160|175|309|244|244|244|242|244|244|160|175|198|307|307|181|244|160|175|198|213|216|307|216|198|213|307|307|307|244|304|304|305|267|304|304|309|309|304|304|160:175|307|309|307|304|304|271,288|304|293,304|286"
+}, 
+"/sys/centerstack/snow/js/plugin.min.js": {
+"history": "0,212503"
+}, 
+"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/JsFormat.sublime-settings": {
+"history": "502|60"
+}, 
+"/sys/dev/web/assets/animate-css/source/flippers/flip.css": {
+"history": "0"
+}, 
+"/sys/centerstack/projects/kindredspirit/main/urls.py": {
+"history": "1276|1469"
+}, 
+"/sys/centerstack/projects/bondsix/logo/color-picker/css/style.css": {
+"history": "524|581|230|466|283|630|630|630|630|630|630|630|630|630|630|409|408|350|408|266|408|263|629|628|611|410|468|468|581|468|573,580|583|583|583|523|231,248|410|410|885|743|690|410|879|879|796|231,248|860|850|876|229"
+}, 
+"/sys/centerstack/projects/kindredspirit/templates/archive/elements.html": {
+"history": "0"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/6/background-sample.svg": {
+"history": "269:4856:9365|269|4856|4850|263|9365|248:269:4842:4844:4856:6517:7976|140|4861:6522:7981|4850"
+}, 
+"/Users/davejr/Desktop/arrow.svg": {
+"history": "249|807|264|807|807:1650|828|249:807|140"
+}, 
+"/sys/centerstack/agency/index.html": {
+"history": "121|152|52|152|143|355|120|435"
+}, 
+"/sys/centerstack/projects/kindredspirit/templates/archive/portfolio-single.html": {
+"history": "0"
+}, 
+"/sys/centerstack/projects/kindredspirit/static/static_dirs/assets/js/ddsmoothmenu.js": {
+"history": "3875,3876"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/final/svg/logo.css": {
+"history": "219|216|160|175|181"
+}, 
+"/sys/centerstack/site/manage.py": {
+"history": "3"
+}, 
+"/sys/centerstack/site/static/static_dirs/js/Snow.js": {
+"history": "1260|1010|760|97|312|1362|1362|1440|408|458|577|740|782|859|662|860:911:989:1031:1108|1161:1239:1281:1358|1362|1110|1361"
+}, 
+"/sys/dev/web/templates/portfolio/forest/forrest/single-portfolio.html": {
+"history": "0,22354"
+}, 
+"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/flex-col.sublime-snippet": {
+"history": "50|81|81|130|50|171"
+}, 
+"/sys/centerstack/site/templates/clients.html": {
+"history": "108:222:245"
+}, 
+"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/space-h.sublime-snippet": {
+"history": "101|60|101|140|51|175|51"
+}, 
+"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/Auto Semi-Colon/Default (OSX).sublime-keymap": {
+"history": "4:61:134:265:266|268"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/final/6-gradient.html": {
+"history": "105"
+}, 
+"/sys/centerstack/branding/logo/logo1.svg": {
+"history": "13331|9973"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/six-only/css/logo.css": {
+"history": "293|292|220|291|259|273|242|405|404|357|374|380,404|352|324,344"
+}, 
+"/sys/centerstack/projects/kindredspirit/static/static_dirs/assets/css/themes/tooltipster-custom.css": {
+"history": "19|150|71|356|71|356|63,71|89|150|356|71|88|39|53|23|53|150|150|150|150|150|72|71|88|150|355|355|169|150|150|71|62,69|150|88|150|88|150|353|150|150|150|334,353|150|151,169|271|289"
+}, 
+"/sys/dev/python/projects/webscrape/pattern-8/pattern8.py": {
+"history": "396|1078|375,390|1103|1277|1103|1151|1265|361|396|1265"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/six-only/html/css/logo.scss": {
+"history": "783|546|546|491|783|490|435|497|434,491|378|431|432|489:546|400|382|422|381|198|213|198|213|175|398|463|485|381|188|188,216|783|783|783|783|783|783|783|783|783|783|783|783|783|783|783|783|491,547|491|545|520|491,547|378"
+}, 
+"/sys/centerstack/projects/kindredspirit/templates/awards-jquery.html": {
+"history": "0,1497|200|236|330|390|493|1484|1491"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/six-only/html/gradient-blue.html": {
+"history": "675|19264|9966|9925,19088|19245,28395|28544,37694|121|265|9781|284|9925,19088|9953:19087|9986|261,9782|121|60|121|37706|37705|121|261,9782|9949,19088|9783|9949|523|405,412|454|430"
+}, 
+"/sys/centerstack/site/templates/title.html": {
+"history": "895|106|168|879|352|288|879|877|877|616,877|615"
+}, 
+"/sys/centerstack/site/static/static_dirs/scss/custom.scss": {
+"history": "381|5406|5401|874|288"
+}, 
+"/sys/centerstack/site/static/static_dirs/img/order.bash": {
+"history": "293|140|30:170|293|288|184|288|184|288|242|274|288"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/six-only/html/outline.html": {
+"history": "120:132:304:9397|120|120|120|132|9397|304|120|120|120|120,138|288,9403|120|120|120|120|120|120|120|120|120|83|120|9415|9414|120|120|120|120|120|120|120|120|120|83|120|51|120|120|120|120|120|259,9391|9393|264:9390|260,9391|9392|303|282|51"
+}, 
+"/sys/dev/web/assets/animate-css/README.md": {
+"history": "0"
+}, 
+"/sys/centerstack/projects/bond6/logo/svg/logo-girly2.html": {
+"history": "978|150,1062|893|1030|788|893|982|1064|1064|893|595|893|297|224:522:820|138|1091|893|150,1062|595|713|595|522|982|595|297|415|893|1011|1064|316:614:912|893|1030|893|982|1064|729|196:494:792|214|431:729:1027|1011|431:729:1027|292:590:888|297:595:893|3174|224|204:502:800|297:595:893|204|512:810|316:614:912"
+}, 
+"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/LiveReload/Default.sublime-commands": {
+"history": "298|298|298|297"
+}, 
+"/sys/centerstack/projects/bondsix/logo/samples/6.svg": {
+"history": "247|286|281"
+}, 
+"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/SublimeOnSaveBuild/SublimeOnSaveBuild.sublime-settings": {
+"history": "77|101"
+}, 
+"/sys/centerstack/site/static/static_dirs/scss/helpers.scss": {
+"history": "8172|8277"
+}, 
+"/sys/centerstack/projects/kindredspirit/static/static_dirs/assets/css/tooltipster.css": {
+"history": "1056|1056|1056|7853|7891|7924|7955|7987|8015|8528|7823|7770|7853|7891|7920,7924|7951,7955|7983,7987|8011,8015|1791,1796|1156|1147|1155|8017,8479|7853|1056|1071|1070|1068|1070"
+}, 
+"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/bootstrap-offset.sublime-macro": {
+"history": "52"
+}, 
+"/sys/centerstack/branding/logo/logo-blue.svg": {
+"history": "247|286"
+}, 
+"/sys/centerstack/branding/logo/logo-final.svg": {
+"history": "286|347:540:858|337|285:302|1143|1145:1334:1545|2742|1089:1106|1089|1089:1106|2743|2758|2831:3330:3872:4489:5042:5659|6056|6129:6840:7542|7967|7967|7967|7967|7967|7967|7967:9062|9062:9063|7973|6135:6846:7548:7973|6052|2754|2837:3336:3878:4495:5048:5665|9056|2743|2829|6127|8515|6073:6090|9062|9062|2741|1769|1793:1810|2049:2066|2486:2503"
+}, 
+"/sys/centerstack/snow/js/animation.js": {
+"history": "37670,113005|18881,113005|142|112|242"
+}, 
+"/sys/centerstack/projects/kindredspirit/static/static_dirs/assets/css/layerslider.css": {
+"history": "3792|3852|3782|3851|3782|3842"
+}, 
+"/sys/centerstack/projects/kindredspirit/static/static_dirs/scss/[archive]/style_layout.scss": {
+"history": "0"
+}, 
+"/sys/centerstack/site/templates/portfolio.html": {
+"history": "278|115|226|278|262|261|110|226|251|110|226|251|110|226:251"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/six-only/html/gradient-black.html": {
+"history": "19182|598|597|596|289|615|5173|5177:6840:8301|9695|598:5156:9889:14471:19186:28310:28485:37609|14475:16140:17603|18999|14454|28310|37609|28484|19185|9887|9846,19009|19166,28316|28465,37615|122|266|9702|286|9846,19009|9874:19008|9907|262,9703|122|61|122|37627|37626|122|262,9703|9870,19009|9704|9870|9866|19022|122|9845,19018|61|122|9704|9704|262,9703|52|285"
+}, 
+"/sys/dev/web/assets/tooltipster/js/jquery.tooltipster.js": {
+"history": "658|12200"
+}, 
+"/sys/centerstack/templates/agency/index.html": {
+"history": "254|255|185|255|255|255|253|255|255|143|140|107|140|165|255|282|633|670|699|734"
+}, 
+"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/box.sublime-snippet": {
+"history": "86|133|50"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/6/html/css/logo.scss": {
+"history": "138|138|1533|1598|1620|1516|138|138|1923|1923|1923|1923|1923|1923|1923|1923|1923|1923|1923|1923|1923|1923|1923|1923|1626,1687|1626|1685|1660|1626,1687|1513|138|138|1352|1352|138|138|138|138|138|138|138|1351|1350|1313|1333|1312|138|1085|1632|1682"
+}, 
+"/sys/centerstack/branding/logo/html/symbol.html": {
+"history": "2948,9058"
+}, 
+"/sys/centerstack/projects/bond6/branding/logo/6/html/black.html": {
+"history": "5917|5917|5770|5917|5917|5752|5917|5840|5810|5829|5788|5810|5810|5844|433"
+}, 
+"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/LiveReload/SimpleWSCallback.py": {
+"history": "721,749|759|721"
+}, 
+"/sys/centerstack/site/static/static_dirs/fonts/css/icons.min.css": {
+"history": "46309|46256|148444|50100|50047|2869|138|110|2868|2868|2815|22203|12731|12678|22202|50047|63958|148444|55298|55245|63958|63905|148443|138268|73736|73683|138133|90920|27716|27663|46188|46186|2754|140|140|2753|90920|90867|138132|138268|138214|148441|139|140,148444|139|140,167488|71190|71237|93733|93782"
+}, 
+"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/SASS Build/SASS.sublime-build": {
+"history": "55"
+}, 
+"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/davejr/sex v2.tmTheme": {
+"history": "1433|1013,1020"
+}, 
+"/sys/centerstack/projects/kindredspirit/static/static_dirs/scss/css/archive/elements_layout.css": {
+"history": "0"
+}, 
+"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/auto-save/auto_save.sublime-settings": {
+"history": "103|102|66"
+}, 
+"/sys/centerstack/projects/kindredspirit/templates/404.html": {
+"history": "615|417,630|605|615|562|666|848|1991|2015|2016|2009|2001|1974|693:755|624|562|2042|291|661|372|367|48|74|103"
+}, 
+"/Users/davejr/Downloads/live-coding-presentations-master/2011/JSSnow/js/Snow.js": {
+"history": "0"
+}
+}

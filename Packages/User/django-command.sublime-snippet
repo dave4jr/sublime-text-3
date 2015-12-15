@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[{% comment %}
+	$1
+{% endcomment %}]]></content>
+	<tabTrigger>dcom</tabTrigger>
+	<description>Django - Comment</description>
+</snippet>

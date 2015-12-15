@@ -1,0 +1,13 @@
+<snippet>
+	<content>
+
+<![CDATA[
+<?xml-stylesheet href="$1.css" type="text/css"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="$2" width="$3" height="$4">
+	<rect x="0$5" y="0$6" rx="0$7" ry="0$8" width="$9" height="$10"/>
+</svg>]]>
+
+	</content>
+	<tabTrigger>rect</tabTrigger>
+	<description>SVG - rect</description>
+</snippet>

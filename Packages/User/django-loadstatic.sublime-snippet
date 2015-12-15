@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[{% load staticfiles %}]]></content>
+	<tabTrigger>loadstatic</tabTrigger>
+	<description>django - load staticfiles</description>
+</snippet>

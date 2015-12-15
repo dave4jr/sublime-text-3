@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[{% include "$1.html" %}]]></content>
+	<tabTrigger>include</tabTrigger>
+	<description>Snippet:  django - include</description>
+</snippet>

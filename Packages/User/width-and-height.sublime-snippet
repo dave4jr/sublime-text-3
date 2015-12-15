@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[width:$1
+height:$2]]></content>
+	<tabTrigger>wh</tabTrigger>
+	<description>CenterStack:	CSS - Width/Height</description>
+</snippet>

@@ -1,0 +1,43 @@
+[
+	{
+		"args": null,
+		"command": "copy"
+	},
+	{
+		"args": null,
+		"command": "left_delete"
+	},
+	{
+		"args":
+		{
+			"characters": "<div class=\"#\">\n"
+		},
+		"command": "insert"
+	},
+	{
+		"args": null,
+		"command": "reindent"
+	},
+	{
+		"args": null,
+		"command": "paste_and_indent"
+	},
+	{
+		"args":
+		{
+			"characters": "\n"
+		},
+		"command": "insert"
+	},
+	{
+		"args": null,
+		"command": "left_delete"
+	},
+	{
+		"args":
+		{
+			"characters": "</div>"
+		},
+		"command": "insert"
+	}
+]

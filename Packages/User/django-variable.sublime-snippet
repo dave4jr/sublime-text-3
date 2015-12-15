@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[{{ $1 }}]]></content>
+	<tabTrigger>var</tabTrigger>
+	<description>CenterStack:	Django - VARIABLE</description>
+</snippet>

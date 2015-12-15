@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[<li>$1</li>]]></content>
+	<tabTrigger>li</tabTrigger>
+	<description>CenterStack: li</description>
+</snippet>

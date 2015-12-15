@@ -1,0 +1,8 @@
+{
+	"extensions":
+	[
+		"sublime-commands",
+		"sublime-keymap",
+		"sublime-settings"
+	]
+}

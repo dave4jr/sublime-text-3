@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[{% extends "$1.html" %}]]></content>
+	<tabTrigger>ext</tabTrigger>
+	<description>Django - extends</description>
+</snippet>

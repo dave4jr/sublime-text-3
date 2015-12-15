@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[<div id="$1"></div>]]></content>
+	<tabTrigger>divi</tabTrigger>
+	<description>CenterStack  |  CSS  |  DIV (id)</description>
+</snippet>

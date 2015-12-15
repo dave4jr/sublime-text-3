@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translateX(-50%) translateY(-50%);
+	]]></content>
+	<tabTrigger>center</tabTrigger>
+	<scope>source.scss, source.css</scope>
+	<description>CenterStack: CSS Transform Center</description>
+</snippet>

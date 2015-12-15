@@ -1,0 +1,35 @@
+[
+	{
+		"args": null,
+		"command": "copy"
+	},
+	{
+		"args": null,
+		"command": "left_delete"
+	},
+	{
+		"args":
+		{
+			"characters": "{% comment \"django\" %}\n"
+		},
+		"command": "insert"
+	},
+	{
+		"args": null,
+		"command": "paste"
+	},
+	{
+		"args":
+		{
+			"characters": "\n"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": "{% endComment %}"
+		},
+		"command": "insert"
+	},
+]

@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[<img src="{% static '$1' %}" class="img-responsive$2">]]></content>
+	<tabTrigger>img</tabTrigger>
+	<description>Snippet - img </description>
+</snippet>

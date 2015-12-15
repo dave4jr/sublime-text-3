@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[<div class="flex-row outline$1"></div>]]></content>
+	<tabTrigger>flex</tabTrigger>
+	<description>CenterStack:  Flex-Row</description>
+</snippet>

@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[{% $1 %}]]></content>
+	<tabTrigger>tag</tabTrigger>
+	<description>CenterStack:	Django - TAG</description>
+</snippet>

@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[<h4>$1</h4>]]></content>
+	<tabTrigger>h4</tabTrigger>
+	<description>CenterStack: h4</description>
+</snippet>

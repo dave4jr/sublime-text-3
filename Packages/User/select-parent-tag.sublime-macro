@@ -1,0 +1,4 @@
+[
+	{"command": "bh_modules.tagnameselect", "type": ["cfml", "html", "angle"] },
+	// { "command": "expand_selection", "args": {"to": "line"} }
+]

@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[<div class="space-row-$1"></div>]]></content>
+	<tabTrigger>spacerow</tabTrigger>
+	<description>CenterStack:  Space-row</description>
+</snippet>

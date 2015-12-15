@@ -1,0 +1,28 @@
+[
+	{
+		"args": null,
+		"command": "copy"
+	},
+	{
+		"args": null,
+		"command": "left_delete"
+	},
+	{
+		"args":
+		{
+			"characters": "<span class=\"fw-700\">"
+		},
+		"command": "insert"
+	},
+	{
+		"args": null,
+		"command": "paste"
+	},
+	{
+		"args":
+		{
+			"characters": "</span>"
+		},
+		"command": "insert"
+	}
+]

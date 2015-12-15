@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[<li class="$1">$2</li>]]></content>
+	<tabTrigger>lic</tabTrigger>
+	<description>Snippet - li class</description>
+</snippet>

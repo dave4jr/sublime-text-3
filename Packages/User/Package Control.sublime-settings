@@ -1,0 +1,202 @@
+{
+	"auto_upgrade": true,
+	"auto_upgrade_frequency": 1,
+	"auto_upgrade_ignore":
+	[
+		"BracketHighlighter",
+		"BuildOutputToTab",
+		"ColorSchemeEditor",
+		"Colorsublime",
+		"ConvertToDjango",
+		"Copy Relative Path",
+		"CSS Color Converter",
+		"CSS Extended Completions",
+		"CSS Format",
+		"DevDocs",
+		"EsFormatter",
+		"FileBinder",
+		"FileSystem Autocompletion",
+		"Goto-CSS-Declaration",
+		"JavaScript Completions",
+		"Jedi - Python autocompletion",
+		"jQuery",
+		"JSHint",
+		"LoremIpsum",
+		"MultiEditUtils",
+		"Open Finder",
+		"Open URL",
+		"Package Control",
+		"PackageResourceViewer",
+		"PxToEm",
+		"PyDOC",
+		"REM PX",
+		"SASS Build",
+		"ScopeAlways",
+		"SCSS",
+		"SublimeOnSaveBuild",
+		"Super Calculator",
+		"Theme - Soda",
+		"TrailingSpaces",
+		"View In Browser"
+	],
+	"cache_length": 300,
+	"channels":
+	[
+		"https://packagecontrol.io/channel_v3.json"
+	],
+	"debug": true,
+	"dirs_to_ignore":
+	[
+		".hg",
+		".git",
+		".svn",
+		"_darcs",
+		"CVS"
+	],
+	"enable_tests": false,
+	"files_to_ignore":
+	[
+		"*.pyc",
+		".hgignore",
+		".gitignore",
+		".bzrignore",
+		"*.sublime-project",
+		"*.sublime-workspace",
+		"*.tmTheme.cache"
+	],
+	"files_to_include":
+	[
+	],
+	"git_binary":
+	[
+	],
+	"git_update_command":
+	[
+		"pull",
+		"--ff",
+		"--commit"
+	],
+	"hg_binary":
+	[
+	],
+	"hg_update_command":
+	[
+		"pull",
+		"--update"
+	],
+	"http_cache": true,
+	"http_cache_length": 604800,
+	"http_proxy": "",
+	"https_proxy": "",
+	"ignore_vcs_packages": false,
+	"in_process_packages":
+	[
+	],
+	"install_missing": true,
+	"install_prereleases":
+	[
+	],
+	"installed_packages":
+	[
+		"AAAPackageDev",
+		"Arduino-like IDE",
+		"ASCII Replacer",
+		"Auto Semi-Colon",
+		"auto-save",
+		"AutoFileName",
+		"Autoprefixer",
+		"Bash Build System",
+		"BracketHighlighter",
+		"BuildOutputToTab",
+		"ColorPicker",
+		"ColorSchemeEditor",
+		"Colorsublime",
+		"Console Exec",
+		"Copy Relative Path",
+		"CSS Color Converter",
+		"CSS Format",
+		"Custom Builder",
+		"DevDocs",
+		"EsFormatter",
+		"Evaluate",
+		"FileSystem Autocompletion",
+		"GitLink",
+		"Goto-CSS-Declaration",
+		"HTML Nest Comments",
+		"HTML-CSS-JS Prettify",
+		"JavaScript Completions",
+		"Jedi - Python autocompletion",
+		"jQuery",
+		"JSHint",
+		"Local History",
+		"LoremIpsum",
+		"LPrint",
+		"MagicPython",
+		"MultipleSelectionScroller",
+		"Open Finder",
+		"Origami",
+		"Package Control",
+		"PackageResourceViewer",
+		"Paste PDF Text Block",
+		"Project Manager",
+		"PyDOC",
+		"Python Auto-Complete",
+		"Python Output Format",
+		"QuickGotoAnything",
+		"RecentActiveFiles",
+		"RegReplace",
+		"Remify",
+		"run_multiple_commands",
+		"SASS Build",
+		"ScopeAlways",
+		"SCSS",
+		"Status Bar File Size",
+		"SublimeOnSaveBuild",
+		"SublimeREPL",
+		"Super Calculator",
+		"TrailingSpaces",
+		"View In Browser",
+		"Web Inspector"
+	],
+	"package_destination": "",
+	"package_name_map":
+	{
+	},
+	"package_profiles":
+	{
+		"Binaries Only":
+		{
+			"files_to_ignore":
+			[
+				"*.py",
+				".hgignore",
+				".gitignore",
+				".bzrignore",
+				"*.sublime-project",
+				"*.sublime-workspace",
+				"*.tmTheme.cache"
+			],
+			"files_to_include":
+			[
+				"__init__.py"
+			]
+		}
+	},
+	"proxy_password": "",
+	"proxy_username": "",
+	"remove_orphaned": true,
+	"repositories":
+	[
+	],
+	"submit_url": "https://packagecontrol.io/submit",
+	"submit_usage": true,
+	"timeout": 30,
+	"unmanaged_packages_ignore":
+	[
+		"ColorSchemeEditor",
+		"run_multiple_commands",
+		"BuildOutputToTab",
+		"ConvertToDjango"
+	],
+	"user_agent": "Package Control v%s"
+}

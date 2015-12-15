@@ -1,0 +1,16 @@
+[
+	{
+		"args":
+		{
+			"characters": "/*\tSection\n"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"characters": "========================================= */"
+		},
+		"command": "insert"
+	}
+]

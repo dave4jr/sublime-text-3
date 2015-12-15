@@ -1,0 +1,2157 @@
+{
+	"folder_history":
+	[
+		"/sys/centerstack/projects/diycave/site",
+		"/sys/centerstack/site",
+		"/sys/centerstack/projects/bond6/coming-soon",
+		"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/LiveReload",
+		"/Users/davejr/Library/Application Support/Sublime Text 3",
+		"/sys/sublime/davevjr",
+		"/sys/centerstack/projects/bond6/site",
+		"/sys/centerstack/projects/bond6/template",
+		"/Users/davejr/Desktop/timeline-test",
+		"/sys/centerstack/projects/cma/site",
+		"/sys/centerstack/materials/templates/canvas/django",
+		"/sys/centerstack/coming-soon",
+		"/sys/centerstack/projects/studiom/site",
+		"/sys/centerstack/projects/kindredspirit",
+		"/sys/centerstack/templates/canvas/HTML",
+		"/sys/dev/python/projects",
+		"/sys/centerstack/projects/bond6",
+		"/sys/centerstack/branding/logo",
+		"/sys/centerstack/projects/bond6/logo",
+		"/sys/centerstack/site/static/static_dirs/scss",
+		"/sys/centerstack/site/static/static_dirs/js",
+		"/sys/centerstack/site/static/static_dirs/img",
+		"/sys/centerstack/site/static/static_dirs/css",
+		"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/Default",
+		"/Users/davejr/Library/Application Support/Sublime Text 3/Packages",
+		"/sys/centerstack/projects/ref",
+		"/sys/dev/web/assets/animate-css",
+		"/sys/centerstack/projects/kindredspirit2",
+		"/sys/centerstack/logo",
+		"/sys/fullstackart/projects/kindredspirit"
+	],
+	"last_version": 3083,
+	"last_window_id": 32,
+	"log_indexing": false,
+	"settings":
+	{
+		"new_window_height": 851.0,
+		"new_window_settings":
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"list-style",
+						"list-style-type"
+					],
+					[
+						"if",
+						"if	CenterStack:	Django - If"
+					],
+					[
+						"Sta",
+						"STATIC_DIR	statement"
+					],
+					[
+						"TEMPLATE",
+						"TEMPLATE_FOLDER	statement"
+					],
+					[
+						"else",
+						"else"
+					],
+					[
+						"alert",
+						"alert(${0:message})	Window"
+					],
+					[
+						"for",
+						"for	for (…) {…}"
+					],
+					[
+						"each",
+						"each	$.each()"
+					],
+					[
+						"ready",
+						"ready	document.ready - $(function(){})"
+					],
+					[
+						"scro",
+						"scroll	Event"
+					],
+					[
+						"scroll",
+						"scroll	.scroll()"
+					],
+					[
+						"style",
+						"style	Style CSS"
+					],
+					[
+						"grey",
+						"grey-middle	 custom.scss"
+					],
+					[
+						"light",
+						"light_toast.png	File"
+					],
+					[
+						"brushed_al",
+						"brushed_alu_dark.png	File"
+					],
+					[
+						"pe-so-lin",
+						"pe-so-linkedin	 pe-icons.css"
+					],
+					[
+						"load",
+						"load	.load()"
+					],
+					[
+						"background-",
+						"background-size"
+					]
+				]
+			},
+			"build_system_choices":
+			[
+				[
+					[
+						[
+							"Packages/Python/Python.sublime-build",
+							""
+						],
+						[
+							"Packages/Python/Python.sublime-build",
+							"Syntax Check"
+						],
+						[
+							"Packages/User/django.sublime-build",
+							""
+						]
+					],
+					[
+						"Packages/Python/Python.sublime-build",
+						""
+					]
+				],
+				[
+					[
+						[
+							"Packages/SASS Build/SASS - Compressed.sublime-build",
+							""
+						],
+						[
+							"Packages/SASS Build/SASS.sublime-build",
+							""
+						],
+						[
+							"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+							""
+						]
+					],
+					[
+						"Packages/SASS Build/SASS.sublime-build",
+						""
+					]
+				]
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 269.0,
+				"last_filter": "install",
+				"selected_items":
+				[
+					[
+						"install",
+						"Package Control: Install Package"
+					],
+					[
+						"list",
+						"Package Control: List Packages"
+					],
+					[
+						"remove",
+						"Package Control: Remove Package"
+					],
+					[
+						"liverel",
+						"LiveReload: Enable/disable plug-ins"
+					],
+					[
+						"livere",
+						"Snippet: Create new LiveReload plugin"
+					],
+					[
+						"live",
+						"Snippet: Create new LiveReload plugin"
+					],
+					[
+						"instal",
+						"Package Control: Install Package"
+					],
+					[
+						"task",
+						"Tasks: New document"
+					],
+					[
+						"gutter",
+						"Preferences: GutterColor Settings – User"
+					],
+					[
+						"remov",
+						"Package Control: Remove Package"
+					],
+					[
+						"html",
+						"HTMLBeautify"
+					],
+					[
+						"LiveReload",
+						"Snippet: Create new LiveReload plugin"
+					],
+					[
+						"color",
+						"Color Convert: convert"
+					],
+					[
+						"LiveReload: Enable/disable plugins",
+						"LiveReload: Enable/disable plug-ins"
+					],
+					[
+						"",
+						"Build: New Build System"
+					],
+					[
+						"finder",
+						"Finder: Open here"
+					],
+					[
+						"insta",
+						"Package Control: Install Package"
+					],
+					[
+						"filebin",
+						"FileBinder: Choose a Binder"
+					],
+					[
+						"instla",
+						"Package Control: Install Package"
+					],
+					[
+						"view",
+						"PackageResourceViewer: Open Resource"
+					],
+					[
+						"disable",
+						"Package Control: Disable Package"
+					]
+				],
+				"width": 584.0
+			},
+			"console":
+			{
+				"height": 278.0,
+				"history":
+				[
+					"sublime.log_commands(True)",
+					"run_command('plugin_factory')",
+					"app.run_command('plugin_factory')",
+					"view.run_command('plugin_factory')",
+					"window.run_command('plugin_factory')",
+					"view.run_command('PluginFactory')",
+					"sublime.log_commands(True)",
+					"view.run_command('quick_panel')",
+					"sublime.log_commands(True)",
+					"plain_tasks_new",
+					"sublime.log_commands(True)",
+					"sublime.log_commands(flag)",
+					"view.window().run_command(\"show_minimap\")",
+					"view.window().run_command(\"show_overlay\", {\"key\": True})",
+					"view.run_command(\"show_overlay\")",
+					"view.run_command(\"goto_line\", {\"line\": 7})",
+					"view.run_command('show_overlay')",
+					"sublime.log_commands(True)",
+					"view.run_command('show_overlay')",
+					"application.run_command('show_overlay')",
+					"window.run_command('show_overlay')",
+					"window.run_command('show_panel')",
+					"run_command(\"show_panel\")",
+					"view.run_command(show_panel)",
+					"run_command(show_panel)",
+					"sublime.log_commands(True)",
+					"css_format",
+					"sublime.log_commands(True)"
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/sys/centerstack/projects/cma/site/static/static_dirs/scss/helpers.scss",
+				"/sys/centerstack/projects/cma/site/static/static_dirs/scss/flexbox.scss",
+				"/sys/centerstack/projects/cma/site/static/static_dirs/js/custom.js",
+				"/sys/centerstack/projects/cma/site/static/static_dirs/js/centerstack.js",
+				"/sys/centerstack/projects/cma/site/static/static_dirs/scss/_variables.scss",
+				"/sys/centerstack/projects/cma/site/static/static_dirs/scss/animations.scss",
+				"/sys/centerstack/projects/cma/site/static/static_dirs/scss/typography.scss",
+				"/sys/centerstack/projects/cma/site/static/static_dirs/scss/centerstack.scss",
+				"/sys/centerstack/projects/cma/site/static/static_dirs/scss/custom.scss",
+				"/sys/centerstack/projects/cma/site/static/static_dirs/scss/style.scss",
+				"/sys/centerstack/projects/cma/site/apps/scripts/convertPDF/pdfform.py",
+				"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+				"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+				"/Users/davejr/.bash_profile",
+				"/usr/local/Library/Homebrew/cmd/search.rb",
+				"/usr/local/Library/Homebrew/cmd/search-archive.rb",
+				"/sys/centerstack/projects/cma/site/apps/scripts/convertPDF/convertPDF.py",
+				"/sys/centerstack/projects/cma/site/apps/scripts/convertPDF/html/js/custom.js",
+				"/sys/centerstack/projects/cma/site/apps/scripts/convertPDF/html/David Cash.html",
+				"/sys/centerstack/projects/cma/site/apps/scripts/convertPDF/test.py",
+				"/sys/centerstack/projects/bond6/branding/logo/logo/svg/white.svg",
+				"/sys/centerstack/projects/cma/site/apps/scripts/convertPDF/David Cash.xml",
+				"/sys/centerstack/projects/cma/site/apps/scripts/django_v3.py",
+				"/sys/centerstack/projects/cma/site/apps/scripts/convertPDF/David Cash2.html",
+				"/sys/centerstack/projects/cma/site/apps/scripts/convertPDF/convert.py",
+				"/Volumes/Acrobat DC 2015/Acrobat DC/ignore_AAM.xml",
+				"/sys/centerstack/projects/cma/site/apps/scripts/convertPDF/summary.xls",
+				"/sys/documentation/jquery/sourcee/james.padolsey.com/jquery/index.html",
+				"/sys/documentation/jquery/sourcee/james.padolsey.com/jquery/s.css",
+				"/sys/documentation/jquery/sourcee/james.padolsey.com/jquery/themes/sh_kwrite.min.css",
+				"/sys/documentation/jquery/sourcee/james.padolsey.com/jquery/jqs/git.js",
+				"/sys/docs/jquery/jqapi/README.md",
+				"/sys/docs/jquery/official/README.md",
+				"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
+				"/sys/docs/jquery/jqapi/docs/index.json",
+				"/sys/centerstack/projects/cma/site/apps/scripts/convertPDF/pdf/Dave Luke.pdf",
+				"/sys/centerstack/projects/cma/site/apps/scripts/django.py",
+				"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/Copy Relative Path/README.md",
+				"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/Copy Relative Path/CopyRelativePath.sublime-commands",
+				"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+				"/sys/centerstack/projects/cma/site/CNAME",
+				"/sys/centerstack/projects/cma/site/apps/scripts/pdf.py",
+				"/sys/centerstack/projects/cma/backup/main/urls.py",
+				"/sys/centerstack/projects/cma/site/templates/base.html",
+				"/sys/centerstack/projects/cma/site/main/urls.py",
+				"/sys/centerstack/projects/cma/site/main/settings.py",
+				"/sys/centerstack/projects/cma/site/templates/index.html",
+				"/sys/centerstack/site/main/urls.py",
+				"/sys/centerstack/projects/cma/site/user/pdf-query.py",
+				"/sys/centerstack/site/apps/canvas/templates/canvas/sections.html",
+				"/sys/centerstack/site/static/static_dirs/css/pages.css",
+				"/sys/centerstack/site/static/static_dirs/scss/custom.scss",
+				"/sys/centerstack/site/apps/canvas/templates/canvas/buttons.html",
+				"/sys/centerstack/site/templates/base.html",
+				"/sys/centerstack/site/apps/canvas/urls.py",
+				"/sys/centerstack/site/templates/index.html",
+				"/sys/dev/web/templates/clouds/index.html",
+				"/sys/dev/web/templates/clouds/scss/style.scss",
+				"/sys/centerstack/site/static/static_dirs/scss/helpers.scss",
+				"/sys/centerstack/site/static/static_dirs/scss/_variables.scss",
+				"/sys/centerstack/site/apps/pages/templates/pages/form_elements.html",
+				"/sys/centerstack/site/templates/services.html",
+				"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/transform-center.sublime-snippet",
+				"/sys/centerstack/site/static/static_dirs/scss/canvas.scss",
+				"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/psuedo-after.sublime-snippet",
+				"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/psuedo.sublime-snippet",
+				"/sys/centerstack/site/templates/planner.html",
+				"/sys/centerstack/site/apps/canvas/templates/canvas/index.html",
+				"/sys/centerstack/site/static/static_dirs/scss/flexbox.scss",
+				"/Users/davejr/Desktop/nav.html",
+				"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/section.sublime-snippet",
+				"/sys/centerstack/site/static/static_dirs/fonts/icons.css",
+				"/sys/centerstack/site/static/static_dirs/scss/typography.scss",
+				"/sys/centerstack/site/static/static_dirs/scss/pages.scss",
+				"/sys/centerstack/site/apps/pages/templates/pages/blank_template.html",
+				"/sys/centerstack/site/apps/pages/templates/pages/boxed_layout.html",
+				"/sys/centerstack/site/apps/pages/templates/pages/builder.html",
+				"/sys/centerstack/site/apps/pages/templates/pages/buttons.html",
+				"/sys/centerstack/site/apps/pages/templates/pages/calendar.html",
+				"/sys/centerstack/site/apps/pages/templates/pages/charts.html",
+				"/sys/centerstack/site/apps/pages/templates/pages/color.html",
+				"/sys/centerstack/site/apps/pages/templates/pages/datatables.html",
+				"/sys/centerstack/site/apps/pages/templates/pages/email.html",
+				"/sys/centerstack/site/apps/pages/templates/pages/email_compose.html",
+				"/sys/centerstack/site/apps/pages/templates/pages/form_layouts.html",
+				"/sys/centerstack/site/apps/pages/templates/pages/form_wizard.html",
+				"/sys/centerstack/site/apps/pages/templates/pages/gallery.html",
+				"/sys/centerstack/site/apps/pages/templates/pages/google_map.html",
+				"/sys/centerstack/site/apps/pages/templates/pages/icons.html",
+				"/sys/centerstack/site/apps/pages/templates/pages/index.html",
+				"/sys/centerstack/site/apps/pages/templates/pages/invoice.html",
+				"/sys/centerstack/site/apps/pages/templates/pages/login.html",
+				"/sys/centerstack/site/apps/pages/templates/pages/modals.html",
+				"/sys/centerstack/site/apps/pages/templates/pages/nestables.html",
+				"/sys/centerstack/site/apps/pages/templates/pages/notifications.html",
+				"/sys/centerstack/site/apps/pages/templates/pages/portlets.html",
+				"/sys/centerstack/site/apps/pages/templates/pages/progress.html",
+				"/sys/centerstack/site/apps/pages/templates/pages/register.html",
+				"/sys/centerstack/site/apps/pages/templates/pages/sliders.html",
+				"/sys/centerstack/site/apps/pages/templates/pages/social.html",
+				"/sys/centerstack/site/apps/pages/templates/pages/tables.html",
+				"/sys/centerstack/site/apps/pages/templates/pages/tabs_accordian.html",
+				"/sys/centerstack/site/apps/pages/templates/pages/timeline.html",
+				"/sys/centerstack/site/apps/pages/templates/pages/tree_view.html",
+				"/sys/centerstack/site/apps/pages/templates/pages/typography.html",
+				"/sys/centerstack/site/apps/pages/templates/pages/vector_map.html",
+				"/sys/centerstack/site/static/static_dirs/scss/flexbox-old.scss",
+				"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/flex-row-outline.sublime-snippet",
+				"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/flex-col-outline.sublime-snippet",
+				"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/flex-row.sublime-snippet",
+				"/sys/centerstack/site/static/static_dirs/js/custom.js",
+				"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/davejr/centerstack.tmTheme",
+				"/sys/centerstack/site/static/static_dirs/js/centerstack.js",
+				"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/default/Default (OSX).sublime-keymap",
+				"/sys/centerstack/site/templates/.jsbeautifyrc",
+				"/sys/centerstack/site/apps/pages/templates/pages/.jsbeautifyrc",
+				"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/README.md",
+				"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/JavaScript/JSON.tmLanguage",
+				"/sys/sublime/syntax-definitions/JSON/JSON.tmLanguage",
+				"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/Default (OSX).sublime-keymap",
+				"/sys/centerstack/site/apps/canvas/templates/canvas/charts.html",
+				"/sys/dev/web/assets/chart.js/samples/bar.html",
+				"/sys/centerstack/site/templates/about.html",
+				"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/line.sublime-snippet",
+				"/sys/centerstack/branding/logo/logo.svg",
+				"/sys/centerstack/materials/tools/svg2png/css/logo.scss",
+				"/sys/centerstack/materials/tools/svg2png/logo.html",
+				"/sys/centerstack/site/apps/pages/urls.py"
+			],
+			"find":
+			{
+				"height": 44.0
+			},
+			"find_in_files":
+			{
+				"height": 131.0,
+				"where_history":
+				[
+					"/sys/centerstack/site/templates",
+					"<project>",
+					"/sys/centerstack/site/apps/pages/templates/pages",
+					"<current file>",
+					"/sys/centerstack/site/apps/pages/templates/pages",
+					"/sys/centerstack/site/apps/canvas/templates/canvas",
+					"<project>",
+					"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/LiveReload",
+					"/Users/davejr/Library/Application Support/Sublime Text 3/",
+					"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/Default",
+					"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/LiveReload",
+					"<project>",
+					"<project>,-*.scss,-*.css,-*.js",
+					"<project>,-*.scss,-*.css",
+					"<project>",
+					"<project>,*.py",
+					"<project>",
+					"<project>,*.py",
+					"<project>",
+					"<project>,-*.css,-*.py,-*.sqlite3,-*bootstrap.css,-*bootstrap.min.js",
+					"<project>",
+					"<project>,-*.css,-*.py,-*.sqlite3,-*bootstrap.css,-*bootstrap.min.js",
+					"<project>",
+					"<project>,-*.css,-*.py,-*.sqlite3,-*bootstrap.css,-*bootstrap.min.js,-*jquery-1.11.1.min.js",
+					"<project>,-*.css,-*.py,-*.sqlite3,-*bootstrap.css,-*bootstrap.min.js",
+					"<project>,-*.css,-*.py,-*.sqlite3",
+					"<project>,-*.css,-*.py",
+					"<project>,-*.css",
+					"<project>",
+					"/sys/centerstack/projects/kindredspirit/static/static_dirs/scss/archive",
+					"<project>",
+					"<project>,-</sys/centerstack/projects/kindredspirit/[reference]>",
+					"<project>,-/sys/centerstack/projects/kindredspirit/[reference]",
+					"<project>,-[reference]",
+					"<project>,-*[reference]",
+					"<project>,-*.[reference]",
+					"<project>",
+					"/sys/centerstack/projects/kindredspirit/extras",
+					"<project>",
+					"<project>,<current file>,<open files>",
+					"<project>",
+					""
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					".m",
+					".o",
+					".f",
+					".l",
+					".",
+					"#",
+					"main",
+					"search",
+					"echo",
+					"brew",
+					"workon",
+					"load_for",
+					"+c\"",
+					"relative",
+					"url",
+					"main-portfolio",
+					"pages-btn",
+					"btn",
+					"centerstack",
+					"+t\"",
+					"macro",
+					"+p\"",
+					"macro",
+					"center",
+					"tran",
+					"transform",
+					"overlay",
+					"home",
+					"div[class",
+					"div[class*=\"flex-\"]",
+					"fa",
+					"tab",
+					"bold",
+					"light",
+					"btn",
+					".btn",
+					"border",
+					"\nborder",
+					"border",
+					"no border",
+					"transparent",
+					"justify",
+					"form",
+					"Content",
+					"CONTENT",
+					"content",
+					"overflow",
+					"scroll",
+					"bar",
+					"div[class*=\"box\"]",
+					"box",
+					"htm",
+					"string.quoted.dou",
+					"meta.st",
+					"meta",
+					"json",
+					"dictionary",
+					"meta.structure.dictionary.json",
+					"string.quoted.double",
+					"meta.structure.dictionary",
+					"+p\"",
+					"content",
+					"name=\"",
+					"\"{% url '",
+					"name=\"",
+					"cs-logo-only",
+					"+w",
+					"+m",
+					";",
+					"+i\"",
+					"insert",
+					"width-alt",
+					"span",
+					"one",
+					"green",
+					"white",
+					"select",
+					"border",
+					"timeline-point",
+					"margin-left:21px",
+					".timeline::before",
+					"transfo",
+					"+y\"",
+					"css-sma",
+					"left",
+					"font-family",
+					"body",
+					"font-family",
+					".btn",
+					"wide",
+					"h1",
+					"left",
+					"timeline",
+					"apple",
+					"timeline",
+					"snippet",
+					"php",
+					"fbox-dark",
+					"'url",
+					"url",
+					"'images/",
+					"\"images/",
+					"url",
+					"svg",
+					"i-alt",
+					"svg",
+					"feature list",
+					"spaces",
+					"^[^\\S\\r\\n]+",
+					"+t\"",
+					"workon",
+					"http://",
+					"url",
+					"+s\"",
+					"minimap",
+					"mini",
+					"m",
+					"end",
+					"ends",
+					"endswith",
+					"static",
+					"tag",
+					"self.var.",
+					"Convert",
+					"data",
+					"isfile",
+					"Close",
+					"enable"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+					".cs-m",
+					".cs-o",
+					".cs-f",
+					".cs-l",
+					".cs-",
+					"#cs-",
+					"printf",
+					"main-work",
+					"[class",
+					"[class*=\"flex-\"]",
+					"pages-btn",
+					".pages-btn",
+					"div[class*=\"box-\"]",
+					"name=\"pages_",
+					"\"{% url 'pages_",
+					"\"{% url 'canvas_",
+					"name=\"canvas_",
+					"cs",
+					" !important;",
+					"width-big",
+					"fbox-light",
+					"'../img/canvas/",
+					"\"../img/canvas/",
+					"",
+					"self.",
+					"page_title_dark",
+					"$this",
+					"self",
+					"animateCSS",
+					".prototype.",
+					"fn",
+					"CS",
+					"screen_width",
+					"wrapper_width",
+					"bond",
+					"#timeline-content",
+					"#timeline-point",
+					"#timeline-block",
+					"timeline",
+					"icon",
+					"icons",
+					"feature-icons",
+					"fboxicons",
+					"#heading",
+					"heading",
+					"#blog-subtitle",
+					"blog-title",
+					"img",
+					"",
+					"width",
+					"w",
+					"blue",
+					"li>",
+					"li",
+					"id",
+					"btn-red",
+					"<a href=\"{% url 'home' %}\" class=\"{% current 'home' %}\">",
+					"</a>",
+					"<a>",
+					"row-section-quote",
+					"card-wrapper",
+					"index-quote",
+					"index-wrapper",
+					"h4",
+					"h5",
+					"h4",
+					"img_padding",
+					"left",
+					"* .5",
+					"-dark",
+					"-middle",
+					"-6",
+					"col-lg-offset",
+					"icon-",
+					"",
+					"main",
+					"title",
+					"wrapper",
+					"heading-wrapper",
+					"bortb-callout",
+					"js-right-effect",
+					"$text-black",
+					"$text-grey",
+					"$purple",
+					"$grey",
+					"$green",
+					"$font-family",
+					"",
+					"company-logo",
+					"\\n\\n/\\*===",
+					"",
+					"nav-links",
+					"navbar",
+					"navbar-wrapper",
+					"",
+					"cl-effect-4",
+					"js-left-effect",
+					"",
+					"section-title-caption",
+					"search-form",
+					"slider",
+					"button-white",
+					"button-green",
+					"-",
+					".text",
+					"nav",
+					"$",
+					"underline-effect",
+					"nav-underline-effect",
+					"4",
+					"8",
+					"% !important",
+					"height",
+					"h",
+					"%",
+					"size",
+					"large",
+					"bg-color",
+					"header",
+					"ks",
+					"L",
+					"   "
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"incremental_find":
+			{
+				"height": 34.0
+			},
+			"input":
+			{
+				"height": 49.0
+			},
+			"menu_visible": true,
+			"output.exec":
+			{
+				"height": 227.0
+			},
+			"output.find_results":
+			{
+				"height": 180.0
+			},
+			"pinned_build_system": "",
+			"replace":
+			{
+				"height": 88.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 500.0,
+				"last_filter": "",
+				"selected_items":
+				[
+					[
+						"",
+						"/sys/sublime/projects/bond6.sublime-workspace"
+					]
+				],
+				"width": 380.0
+			},
+			"select_symbol":
+			{
+				"height": 392.0,
+				"last_filter": "coc",
+				"selected_items":
+				[
+					[
+						"coc",
+						"Cocaanimated"
+					],
+					[
+						"compact",
+						"compact_rules"
+					],
+					[
+						"caro",
+						"carousel"
+					],
+					[
+						"",
+						"Accordion"
+					]
+				],
+				"width": 392.0
+			},
+			"show_minimap": false,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 241.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			}
+		},
+		"new_window_width": 1440.0
+	},
+	"windows":
+	[
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"ready",
+						"ready	$(document).ready"
+					],
+					[
+						"tag",
+						"tag	CenterStack:	Django - TAG"
+					],
+					[
+						"list-style",
+						"list-style-type"
+					],
+					[
+						"if",
+						"if	CenterStack:	Django - If"
+					],
+					[
+						"Sta",
+						"STATIC_DIR	statement"
+					],
+					[
+						"TEMPLATE",
+						"TEMPLATE_FOLDER	statement"
+					],
+					[
+						"else",
+						"else"
+					],
+					[
+						"alert",
+						"alert(${0:message})	Window"
+					],
+					[
+						"for",
+						"for	for (…) {…}"
+					],
+					[
+						"each",
+						"each	$.each()"
+					],
+					[
+						"scro",
+						"scroll	Event"
+					],
+					[
+						"scroll",
+						"scroll	.scroll()"
+					],
+					[
+						"style",
+						"style	Style CSS"
+					],
+					[
+						"grey",
+						"grey-middle	 custom.scss"
+					],
+					[
+						"light",
+						"light_toast.png	File"
+					],
+					[
+						"brushed_al",
+						"brushed_alu_dark.png	File"
+					],
+					[
+						"pe-so-lin",
+						"pe-so-linkedin	 pe-icons.css"
+					],
+					[
+						"load",
+						"load	.load()"
+					],
+					[
+						"background-",
+						"background-size"
+					]
+				]
+			},
+			"buffers":
+			[
+				{
+					"file": "/sys/centerstack/site/templates/base.html",
+					"settings":
+					{
+						"buffer_size": 8999,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/sys/centerstack/site/templates/get-started.html",
+					"settings":
+					{
+						"buffer_size": 5315,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/sys/centerstack/site/apps/aura/templates/aura/forms.html",
+					"settings":
+					{
+						"buffer_size": 81467,
+						"line_ending": "Unix"
+					}
+				}
+			],
+			"build_system": "Packages/Python/Python.sublime-build",
+			"build_system_choices":
+			[
+				[
+					[
+						[
+							"Packages/MagicPython/settings/sublime/Python.sublime-build",
+							""
+						],
+						[
+							"Packages/MagicPython/settings/sublime/Python.sublime-build",
+							"Syntax Check"
+						]
+					],
+					[
+						"Packages/MagicPython/settings/sublime/Python.sublime-build",
+						""
+					]
+				],
+				[
+					[
+						[
+							"Packages/MagicPython/settings/sublime/Python.sublime-build",
+							""
+						],
+						[
+							"Packages/MagicPython/settings/sublime/Python.sublime-build",
+							"Syntax Check"
+						],
+						[
+							"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+							""
+						],
+						[
+							"Packages/User/django.sublime-build",
+							""
+						]
+					],
+					[
+						"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+						""
+					]
+				],
+				[
+					[
+						[
+							"Packages/Python/Python.sublime-build",
+							""
+						],
+						[
+							"Packages/Python/Python.sublime-build",
+							"Syntax Check"
+						],
+						[
+							"Packages/MagicPython/settings/sublime/Python.sublime-build",
+							""
+						],
+						[
+							"Packages/MagicPython/settings/sublime/Python.sublime-build",
+							"Syntax Check"
+						],
+						[
+							"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+							""
+						],
+						[
+							"Packages/User/django.sublime-build",
+							""
+						]
+					],
+					[
+						"Packages/Python/Python.sublime-build",
+						""
+					]
+				],
+				[
+					[
+						[
+							"Packages/Python/Python.sublime-build",
+							""
+						],
+						[
+							"Packages/Python/Python.sublime-build",
+							"Syntax Check"
+						],
+						[
+							"Packages/User/django.sublime-build",
+							""
+						]
+					],
+					[
+						"Packages/Python/Python.sublime-build",
+						""
+					]
+				],
+				[
+					[
+						[
+							"Packages/SASS Build/SASS - Compressed.sublime-build",
+							""
+						],
+						[
+							"Packages/SASS Build/SASS.sublime-build",
+							""
+						]
+					],
+					[
+						"Packages/SASS Build/SASS.sublime-build",
+						""
+					]
+				],
+				[
+					[
+						[
+							"Packages/SASS Build/SASS - Compressed.sublime-build",
+							""
+						],
+						[
+							"Packages/SASS Build/SASS.sublime-build",
+							""
+						],
+						[
+							"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+							""
+						]
+					],
+					[
+						"Packages/SASS Build/SASS.sublime-build",
+						""
+					]
+				]
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 271.0,
+				"last_filter": "remove",
+				"selected_items":
+				[
+					[
+						"remove",
+						"Package Control: Remove Package"
+					],
+					[
+						"install",
+						"Package Control: Install Package"
+					],
+					[
+						"enabl",
+						"Package Control: Enable Package"
+					],
+					[
+						"disable",
+						"Package Control: Disable Package"
+					],
+					[
+						"instal",
+						"Package Control: Install Package"
+					],
+					[
+						"repl py",
+						"SublimeREPL: Python - virtualenv"
+					],
+					[
+						"replpty",
+						"SublimeREPL: Python - Sublime Text Console"
+					],
+					[
+						"enable",
+						"Package Control: Enable Package"
+					],
+					[
+						"disal",
+						"Package Control: Disable Package"
+					],
+					[
+						"repl: pyt",
+						"SublimeREPL: Python - Sublime Text Console"
+					],
+					[
+						"sublimeREPL: Python",
+						"SublimeREPL: Python - Sublime Text Console"
+					],
+					[
+						"package",
+						"Package Control: Install Package"
+					],
+					[
+						"install ",
+						"Package Control: Install Package"
+					],
+					[
+						"insta",
+						"Package Control: Install Package"
+					],
+					[
+						"list",
+						"Package Control: List Packages"
+					],
+					[
+						"liverel",
+						"LiveReload: Enable/disable plug-ins"
+					],
+					[
+						"livere",
+						"Snippet: Create new LiveReload plugin"
+					],
+					[
+						"live",
+						"Snippet: Create new LiveReload plugin"
+					],
+					[
+						"task",
+						"Tasks: New document"
+					],
+					[
+						"gutter",
+						"Preferences: GutterColor Settings – User"
+					],
+					[
+						"remov",
+						"Package Control: Remove Package"
+					],
+					[
+						"html",
+						"HTMLBeautify"
+					],
+					[
+						"LiveReload",
+						"Snippet: Create new LiveReload plugin"
+					],
+					[
+						"color",
+						"Color Convert: convert"
+					],
+					[
+						"LiveReload: Enable/disable plugins",
+						"LiveReload: Enable/disable plug-ins"
+					],
+					[
+						"",
+						"Build: New Build System"
+					],
+					[
+						"finder",
+						"Finder: Open here"
+					],
+					[
+						"filebin",
+						"FileBinder: Choose a Binder"
+					],
+					[
+						"instla",
+						"Package Control: Install Package"
+					],
+					[
+						"view",
+						"PackageResourceViewer: Open Resource"
+					]
+				],
+				"width": 584.0
+			},
+			"console":
+			{
+				"height": 278.0,
+				"history":
+				[
+					"sublime.log_commands(True)",
+					"print \"Hello\"",
+					"sublime.log_commands(True)",
+					"run_command('plugin_factory')",
+					"app.run_command('plugin_factory')",
+					"view.run_command('plugin_factory')",
+					"window.run_command('plugin_factory')",
+					"view.run_command('PluginFactory')",
+					"sublime.log_commands(True)",
+					"view.run_command('quick_panel')",
+					"sublime.log_commands(True)",
+					"plain_tasks_new",
+					"sublime.log_commands(True)",
+					"sublime.log_commands(flag)",
+					"view.window().run_command(\"show_minimap\")",
+					"view.window().run_command(\"show_overlay\", {\"key\": True})",
+					"view.run_command(\"show_overlay\")",
+					"view.run_command(\"goto_line\", {\"line\": 7})",
+					"view.run_command('show_overlay')",
+					"sublime.log_commands(True)",
+					"view.run_command('show_overlay')",
+					"application.run_command('show_overlay')",
+					"window.run_command('show_overlay')",
+					"window.run_command('show_panel')",
+					"run_command(\"show_panel\")",
+					"view.run_command(show_panel)",
+					"run_command(show_panel)",
+					"sublime.log_commands(True)",
+					"css_format",
+					"sublime.log_commands(True)"
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"expanded_folders":
+			[
+				"/sys/centerstack/site",
+				"/sys/centerstack/site/apps",
+				"/sys/centerstack/site/apps/aura",
+				"/sys/centerstack/site/apps/aura/static",
+				"/sys/centerstack/site/apps/aura/static/static_dirs",
+				"/sys/centerstack/site/apps/aura/static/static_dirs/aura",
+				"/sys/centerstack/site/apps/aura/static/static_dirs/aura/css",
+				"/sys/centerstack/site/apps/aura/templates",
+				"/sys/centerstack/site/apps/aura/templates/aura",
+				"/sys/centerstack/site/main",
+				"/sys/centerstack/site/static",
+				"/sys/centerstack/site/static/static_dirs",
+				"/sys/centerstack/site/static/static_dirs/css",
+				"/sys/centerstack/site/static/static_dirs/js",
+				"/sys/centerstack/site/static/static_dirs/scss"
+			],
+			"file_history":
+			[
+				"/sys/centerstack/site/static/static_dirs/js/custom.js",
+				"/sys/centerstack/site/static/static_dirs/js/centerstack.js",
+				"/sys/centerstack/site/static/static_dirs/scss/helpers.scss",
+				"/sys/centerstack/site/static/static_dirs/scss/style.scss",
+				"/sys/centerstack/site/static/static_dirs/scss/typography.scss",
+				"/sys/centerstack/site/static/static_dirs/scss/custom.scss",
+				"/Users/davejr/Downloads/bootstrap-datepicker-master/dist/css/bootstrap-datepicker3.standalone.css",
+				"/Users/davejr/Downloads/bootstrap-datepicker-master/dist/css/bootstrap-datepicker3.css",
+				"/Users/davejr/Downloads/bootstrap-datepicker-master/dist/css/bootstrap-datepicker.css",
+				"/Users/davejr/Downloads/bootstrap-datepicker-master/dist/css/bootstrap-datepicker.min.css",
+				"/sys/centerstack/site/static/static_dirs/css/datepicker.css",
+				"/sys/centerstack/site/static/static_dirs/css/animations.css",
+				"/sys/centerstack/site/static/static_dirs/css/animate.css",
+				"/sys/centerstack/site/static/static_dirs/css/bootstrap.css",
+				"/sys/centerstack/site/static/static_dirs/css/calendar.css",
+				"/sys/centerstack/site/templates/index.html",
+				"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/centerstack (SublimePythonIDE).tmTheme",
+				"/sys/centerstack/site/templates/contact.html",
+				"/sys/centerstack/site/apps/aura/static/static_dirs/aura/css/global.css",
+				"/sys/centerstack/site/templates/blog-1.html",
+				"/sys/centerstack/site/templates/about.html",
+				"/sys/centerstack/site/apps/aura/templates/aura/icon-boxes-vertical.html",
+				"/sys/centerstack/site/templates/base.html",
+				"/sys/centerstack/site/main/urls.py",
+				"/sys/centerstack/site/static/static_dirs/scss/_variables.scss",
+				"/sys/centerstack/site/apps/aura/templates/aura/images.html",
+				"/sys/centerstack/site/apps/aura/templates/aura/typo.html",
+				"/sys/centerstack/site/apps/aura/templates/aura/modals.html",
+				"/sys/centerstack/site/apps/aura/static/static_dirs/aura/3dParty/bootstrap/css/bootstrap.css",
+				"/sys/centerstack/site/apps/aura/static/static_dirs/aura/css/tooltips.css",
+				"/sys/centerstack/site/apps/aura/templates/aura/google-maps-grey.html",
+				"/sys/centerstack/site/apps/aura/templates/aura/home-home-2.html",
+				"/sys/centerstack/site/apps/aura/templates/aura/home-onepage-1.html",
+				"/sys/centerstack/site/templates/portfolio.html",
+				"/sys/centerstack/site/apps/tags/templatetags/pagination.py",
+				"/sys/centerstack/site/apps/aura/templates/aura/blog-blog-medium-image.html",
+				"/sys/centerstack/site/apps/aura/templates/aura/portfolio-portfolio-1.html",
+				"/sys/centerstack/site/apps/aura/static/static_dirs/aura/css/typo.css",
+				"/sys/centerstack/site/templates/blog.html",
+				"/sys/centerstack/site/apps/aura/templates/aura/about-about-1.html",
+				"/sys/centerstack/site/apps/tags/templatetags/navigation.py",
+				"/sys/centerstack/site/templates/project-planner.html",
+				"/sys/centerstack/site/templates/archive/base2.html",
+				"/sys/centerstack/site/apps/aura/templates/aura/about-about-3.html",
+				"/sys/centerstack/projects/cma/site/.jsbeautifyrc",
+				"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+				"/sys/centerstack/site/apps/aura/templates/aura/footers-footers-dark.html",
+				"/sys/centerstack/site/apps/aura/templates/aura/footers-footers-light.html",
+				"/sys/centerstack/site/templates/archive/index2.html",
+				"/sys/centerstack/site/apps/aura/templates/aura/sign-in.html",
+				"/sys/centerstack/site/templates/planner.html",
+				"/sys/centerstack/site/templates/archive/index.html",
+				"/sys/centerstack/site/apps/aura/templates/aura/home-home-4.html",
+				"/sys/centerstack/site/apps/aura/templates/aura/forms.html",
+				"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/space-row.sublime-snippet",
+				"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/space-col.sublime-snippet",
+				"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/space-w.sublime-snippet",
+				"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/space-h.sublime-snippet",
+				"/sys/centerstack/site/apps/aura/templates/aura/headers-headers-base.html",
+				"/sys/centerstack/site/apps/aura/templates/aura/services-services-11.html",
+				"/sys/centerstack/site/apps/aura/urls.py",
+				"/sys/centerstack/materials/templates/aura/base/index.html",
+				"/sys/centerstack/materials/templates/aura/base/services-services-10.html",
+				"/sys/centerstack/materials/templates/aura/base/services-services-11.html",
+				"/sys/centerstack/site/templates/toc.html",
+				"/sys/centerstack/site/static/static_dirs/img/bg/low-poly/rock.jpg",
+				"/sys/centerstack/site/static/static_dirs/img/bg/low-poly/low-poly-animal-wallpaper-high-resolution.jpg",
+				"/sys/centerstack/site/static/static_dirs/img/bg/low-poly/home_of_neanderthal__by_pyxartz-d9dys6n.jpg",
+				"/sys/centerstack/site/static/static_dirs/img/bg/low-poly/deep_canyon__by_pyxartz-d6vgdzy.jpg",
+				"/sys/centerstack/branding/logo/slogan/slogan.svg",
+				"/sys/centerstack/branding/logo/svg/logo.svg",
+				"/sys/centerstack/branding/logo/logo-small.svg",
+				"/sys/centerstack/branding/logo/logo.svg",
+				"/sys/centerstack/site/templates/test.html",
+				"/sys/centerstack/site/apps/canvas/views.py",
+				"/sys/centerstack/site/main/views.py",
+				"/sys/centerstack/site/scripts/convertToDjango/convert v3.py",
+				"/sys/centerstack/site/apps/aura/views.py",
+				"/sys/centerstack/materials/templates/aura/base/home-onepage-1.html",
+				"/sys/centerstack/materials/templates/aura/base/home-onepage-2.html",
+				"/sys/centerstack/materials/templates/aura/base/home-onepage-3.html",
+				"/sys/centerstack/materials/templates/aura/base/icon-boxes-horizontal.html",
+				"/sys/centerstack/materials/templates/aura/base/icon-boxes-vertical.html",
+				"/sys/centerstack/materials/templates/aura/base/icons.html",
+				"/sys/centerstack/materials/templates/aura/base/images.html",
+				"/sys/centerstack/materials/templates/aura/base/layouts-fixed-fluid-fixed.html",
+				"/sys/centerstack/materials/templates/aura/base/layouts-fixed-fluid.html",
+				"/sys/centerstack/materials/templates/aura/base/layouts-fluid-fixed.html",
+				"/sys/centerstack/materials/templates/aura/base/lists-groups.html",
+				"/sys/centerstack/materials/templates/aura/base/lists-icons.html",
+				"/sys/centerstack/materials/templates/aura/base/lists-images.html",
+				"/sys/centerstack/materials/templates/aura/base/lists-simple.html",
+				"/sys/centerstack/materials/templates/aura/base/modals.html",
+				"/sys/centerstack/materials/templates/aura/base/portfolio-portfolio-1.html",
+				"/sys/centerstack/materials/templates/aura/base/portfolio-portfolio-10.html",
+				"/sys/centerstack/materials/templates/aura/base/portfolio-portfolio-2.html",
+				"/sys/centerstack/materials/templates/aura/base/portfolio-portfolio-3.html",
+				"/sys/centerstack/materials/templates/aura/base/portfolio-portfolio-4.html",
+				"/sys/centerstack/materials/templates/aura/base/portfolio-portfolio-5.html",
+				"/sys/centerstack/materials/templates/aura/base/portfolio-portfolio-6.html",
+				"/sys/centerstack/materials/templates/aura/base/portfolio-portfolio-7.html",
+				"/sys/centerstack/materials/templates/aura/base/portfolio-portfolio-8.html",
+				"/sys/centerstack/materials/templates/aura/base/portfolio-portfolio-9.html",
+				"/sys/centerstack/materials/templates/aura/base/portfolio-portfolio-masonry-2.html",
+				"/sys/centerstack/materials/templates/aura/base/portfolio-portfolio-masonry.html",
+				"/sys/centerstack/materials/templates/aura/base/portfolio-portfolio-single.html",
+				"/sys/centerstack/materials/templates/aura/base/portfolio-portfolio-timeline.html",
+				"/sys/centerstack/materials/templates/aura/base/pricing-tables.html",
+				"/sys/centerstack/materials/templates/aura/base/sections.html",
+				"/sys/centerstack/materials/templates/aura/base/services-services-1.html",
+				"/sys/centerstack/materials/templates/aura/base/services-services-2.html",
+				"/sys/centerstack/materials/templates/aura/base/services-services-3.html",
+				"/sys/centerstack/materials/templates/aura/base/services-services-4.html",
+				"/sys/centerstack/materials/templates/aura/base/services-services-5.html",
+				"/sys/centerstack/materials/templates/aura/base/services-services-6.html",
+				"/sys/centerstack/materials/templates/aura/base/services-services-7.html",
+				"/sys/centerstack/materials/templates/aura/base/services-services-8.html",
+				"/sys/centerstack/materials/templates/aura/base/services-services-9.html",
+				"/sys/centerstack/materials/templates/aura/base/sign-in.html",
+				"/sys/centerstack/materials/templates/aura/base/sign-up.html",
+				"/sys/centerstack/materials/templates/aura/base/slider.html",
+				"/sys/centerstack/materials/templates/aura/base/socials-big.html",
+				"/sys/centerstack/materials/templates/aura/base/socials-simple.html",
+				"/sys/centerstack/materials/templates/aura/base/socials-small.html",
+				"/sys/centerstack/materials/templates/aura/base/socials.html",
+				"/sys/centerstack/materials/templates/aura/base/tables.html",
+				"/sys/centerstack/materials/templates/aura/base/tabs-big.html",
+				"/sys/centerstack/materials/templates/aura/base/tabs.html"
+			],
+			"find":
+			{
+				"height": 51.0
+			},
+			"find_in_files":
+			{
+				"height": 131.0,
+				"where_history":
+				[
+					"/sys/centerstack/site/templates",
+					"/sys/centerstack/site/apps/aura",
+					"/sys/centerstack/materials/templates/aura",
+					"/sys/centerstack/site/templates",
+					"<project>",
+					"/sys/centerstack/site/apps/pages/templates/pages",
+					"<current file>",
+					"/sys/centerstack/site/apps/pages/templates/pages",
+					"/sys/centerstack/site/apps/canvas/templates/canvas",
+					"<project>",
+					"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/LiveReload",
+					"/Users/davejr/Library/Application Support/Sublime Text 3/",
+					"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/Default",
+					"/Users/davejr/Library/Application Support/Sublime Text 3/Packages/LiveReload",
+					"<project>",
+					"<project>,-*.scss,-*.css,-*.js",
+					"<project>,-*.scss,-*.css",
+					"<project>",
+					"<project>,*.py",
+					"<project>",
+					"<project>,*.py",
+					"<project>",
+					"<project>,-*.css,-*.py,-*.sqlite3,-*bootstrap.css,-*bootstrap.min.js",
+					"<project>",
+					"<project>,-*.css,-*.py,-*.sqlite3,-*bootstrap.css,-*bootstrap.min.js",
+					"<project>",
+					"<project>,-*.css,-*.py,-*.sqlite3,-*bootstrap.css,-*bootstrap.min.js,-*jquery-1.11.1.min.js",
+					"<project>,-*.css,-*.py,-*.sqlite3,-*bootstrap.css,-*bootstrap.min.js",
+					"<project>,-*.css,-*.py,-*.sqlite3",
+					"<project>,-*.css,-*.py",
+					"<project>,-*.css",
+					"<project>",
+					"/sys/centerstack/projects/kindredspirit/static/static_dirs/scss/archive",
+					"<project>",
+					"<project>,-</sys/centerstack/projects/kindredspirit/[reference]>",
+					"<project>,-/sys/centerstack/projects/kindredspirit/[reference]",
+					"<project>,-[reference]",
+					"<project>,-*[reference]",
+					"<project>,-*.[reference]",
+					"<project>",
+					"/sys/centerstack/projects/kindredspirit/extras",
+					"<project>",
+					"<project>,<current file>,<open files>",
+					"<project>",
+					""
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					"placeholder=\".+(?=type)",
+					"page",
+					"with rows",
+					"page-title",
+					"button",
+					"project-planner",
+					"COG",
+					"drop",
+					".close",
+					"modal",
+					"pi-btn",
+					".20",
+					".25",
+					"margin",
+					".btn",
+					"pi-btn",
+					".btn",
+					"padding",
+					".p",
+					"rl",
+					"lr",
+					"padding-top",
+					"padding-bottom",
+					"tb",
+					"160",
+					"page",
+					"map",
+					"get in touc",
+					"blog",
+					"Search",
+					"page",
+					"isotope",
+					"page",
+					"current",
+					"follow us",
+					"follow",
+					"stone",
+					"request",
+					"recent",
+					"WE WERE ABLE TO INTEREST YOU?",
+					"subscribe",
+					"-row-",
+					"-col-",
+					"-w-",
+					"-h-",
+					"has-tall-border",
+					"pi-has-tall-border",
+					"aura-portfolio-3-columns",
+					"portfolio-3",
+					";",
+					".pad-bottom",
+					".pad-top",
+					".pad-left",
+					".pad-right",
+					".pad",
+					".margin-tb",
+					".margin-bottom",
+					".margin-top",
+					".margin-left",
+					".margin-right",
+					".margin",
+					";\n",
+					"url",
+					".img-banner",
+					"rel=\"stylesheet\"",
+					"rel=\"shortcut icon\" ",
+					"type=\"text/css\" ",
+					"\"url\"",
+					"home-home-1",
+					"index",
+					"bg",
+					"54",
+					"bg",
+					"Theme_files",
+					"url",
+					"print",
+					"continue",
+					"self.COUNTER",
+					"basepaths",
+					"self.Counter",
+					"c-logo",
+					"index",
+					"#af4d52",
+					"index",
+					"stone",
+					"script",
+					"git",
+					"folder",
+					"jango-templates",
+					"filenames",
+					"baidu",
+					"http",
+					"templates",
+					"app_name",
+					"app_dir",
+					"[",
+					"url",
+					"print",
+					"REPL",
+					"col",
+					"row",
+					"+c\"",
+					"find",
+					"TEMPLATE_BACKUP",
+					"self.TEMPLATE_FOLDER",
+					"self.TEMPLATE_FOLDERS",
+					"self.TEMPLATE_FILES",
+					"TEMPLATE_FOLDER",
+					"APPNAME",
+					"APPDIR",
+					"production",
+					"transfer",
+					"src",
+					"url",
+					"get_tem",
+					"TEMPLATE_FILES",
+					"print",
+					"url",
+					"href",
+					"src",
+					"url",
+					":hover",
+					"flexbox",
+					"effects",
+					".hover-grow-shado",
+					"hvr",
+					"main-portfolio",
+					"pages-btn"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": true,
+				"replace_history":
+				[
+					"",
+					"get-started",
+					".15",
+					".20",
+					"margin",
+					".m",
+					"padding-left",
+					"padding-right",
+					"rl",
+					"-col-",
+					"-row-",
+					"-col-",
+					"aura-index",
+					" !important;",
+					".p-b-",
+					".p-t-",
+					".p-l-",
+					".p-r-",
+					".p-",
+					".m-tb-",
+					".m-b-",
+					".m-t-",
+					".m-l-",
+					".m-r-",
+					".m-",
+					"",
+					"\"template\"",
+					"index",
+					"themes",
+					"APP_NAME",
+					"APP_DIR",
+					"self.TEMPLATES.files",
+					"TEMPLATE_DIR",
+					"APP_NAME",
+					"APP_DIR",
+					"hover",
+					"main-work",
+					"[class",
+					"[class*=\"flex-\"]",
+					"pages-btn",
+					".pages-btn",
+					"div[class*=\"box-\"]",
+					"name=\"pages_",
+					"\"{% url 'pages_",
+					"\"{% url 'canvas_",
+					"name=\"canvas_",
+					"cs",
+					" !important;",
+					"width-big",
+					"fbox-light",
+					"'../img/canvas/",
+					"\"../img/canvas/",
+					"",
+					"self.",
+					"page_title_dark",
+					"$this",
+					"self",
+					"animateCSS",
+					".prototype.",
+					"fn",
+					"CS",
+					"screen_width",
+					"wrapper_width",
+					"bond",
+					"#timeline-content",
+					"#timeline-point",
+					"#timeline-block",
+					"timeline",
+					"icon",
+					"icons",
+					"feature-icons",
+					"fboxicons",
+					"#heading",
+					"heading",
+					"#blog-subtitle",
+					"blog-title",
+					"img",
+					"",
+					"width",
+					"w",
+					"blue",
+					"li>",
+					"li",
+					"id",
+					"btn-red",
+					"<a href=\"{% url 'home' %}\" class=\"{% current 'home' %}\">",
+					"</a>",
+					"<a>",
+					"row-section-quote",
+					"card-wrapper",
+					"index-quote",
+					"index-wrapper",
+					"h4",
+					"h5",
+					"h4",
+					"img_padding",
+					"left",
+					"* .5",
+					"-dark",
+					"-middle",
+					"-6",
+					"col-lg-offset",
+					"icon-",
+					"",
+					"main",
+					"title",
+					"wrapper",
+					"heading-wrapper",
+					"bortb-callout",
+					"js-right-effect",
+					"$text-black",
+					"$text-grey",
+					"$purple",
+					"$grey",
+					"$green",
+					"$font-family",
+					"",
+					"company-logo",
+					"\\n\\n/\\*===",
+					"",
+					"nav-links",
+					"navbar",
+					"navbar-wrapper",
+					"",
+					"cl-effect-4",
+					"js-left-effect",
+					"",
+					"section-title-caption"
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"groups":
+			[
+				{
+					"selected": 0,
+					"sheets":
+					[
+						{
+							"buffer": 0,
+							"file": "/sys/centerstack/site/templates/base.html",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 8999,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										8725,
+										8725
+									]
+								],
+								"settings":
+								{
+									"BracketHighlighterBusy": false,
+									"bh_regions":
+									[
+										"bh_default",
+										"bh_default_center",
+										"bh_default_open",
+										"bh_default_close",
+										"bh_default_content",
+										"bh_curly",
+										"bh_curly_center",
+										"bh_curly_open",
+										"bh_curly_close",
+										"bh_curly_content",
+										"bh_single_quote",
+										"bh_single_quote_center",
+										"bh_single_quote_open",
+										"bh_single_quote_close",
+										"bh_single_quote_content",
+										"bh_c_define",
+										"bh_c_define_center",
+										"bh_c_define_open",
+										"bh_c_define_close",
+										"bh_c_define_content",
+										"bh_regex",
+										"bh_regex_center",
+										"bh_regex_open",
+										"bh_regex_close",
+										"bh_regex_content",
+										"bh_round",
+										"bh_round_center",
+										"bh_round_open",
+										"bh_round_close",
+										"bh_round_content",
+										"bh_tag",
+										"bh_tag_center",
+										"bh_tag_open",
+										"bh_tag_close",
+										"bh_tag_content",
+										"bh_angle",
+										"bh_angle_center",
+										"bh_angle_open",
+										"bh_angle_close",
+										"bh_angle_content",
+										"bh_unmatched",
+										"bh_unmatched_center",
+										"bh_unmatched_open",
+										"bh_unmatched_close",
+										"bh_unmatched_content",
+										"bh_square",
+										"bh_square_center",
+										"bh_square_open",
+										"bh_square_close",
+										"bh_square_content",
+										"bh_double_quote",
+										"bh_double_quote_center",
+										"bh_double_quote_open",
+										"bh_double_quote_close",
+										"bh_double_quote_content"
+									],
+									"syntax": "Packages/HTML/HTML.tmLanguage",
+									"translate_tabs_to_spaces": false
+								},
+								"translation.x": 0.0,
+								"translation.y": 5371.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 0,
+							"type": "text"
+						},
+						{
+							"buffer": 1,
+							"file": "/sys/centerstack/site/templates/get-started.html",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 5315,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										4631,
+										4631
+									]
+								],
+								"settings":
+								{
+									"BracketHighlighterBusy": false,
+									"bh_regions":
+									[
+										"bh_curly",
+										"bh_curly_center",
+										"bh_curly_open",
+										"bh_curly_close",
+										"bh_curly_content",
+										"bh_single_quote",
+										"bh_single_quote_center",
+										"bh_single_quote_open",
+										"bh_single_quote_close",
+										"bh_single_quote_content",
+										"bh_c_define",
+										"bh_c_define_center",
+										"bh_c_define_open",
+										"bh_c_define_close",
+										"bh_c_define_content",
+										"bh_tag",
+										"bh_tag_center",
+										"bh_tag_open",
+										"bh_tag_close",
+										"bh_tag_content",
+										"bh_double_quote",
+										"bh_double_quote_center",
+										"bh_double_quote_open",
+										"bh_double_quote_close",
+										"bh_double_quote_content",
+										"bh_default",
+										"bh_default_center",
+										"bh_default_open",
+										"bh_default_close",
+										"bh_default_content",
+										"bh_square",
+										"bh_square_center",
+										"bh_square_open",
+										"bh_square_close",
+										"bh_square_content",
+										"bh_angle",
+										"bh_angle_center",
+										"bh_angle_open",
+										"bh_angle_close",
+										"bh_angle_content",
+										"bh_round",
+										"bh_round_center",
+										"bh_round_open",
+										"bh_round_close",
+										"bh_round_content",
+										"bh_unmatched",
+										"bh_unmatched_center",
+										"bh_unmatched_open",
+										"bh_unmatched_close",
+										"bh_unmatched_content",
+										"bh_regex",
+										"bh_regex_center",
+										"bh_regex_open",
+										"bh_regex_close",
+										"bh_regex_content"
+									],
+									"syntax": "Packages/HTML/HTML.tmLanguage",
+									"tab_size": 3,
+									"translate_tabs_to_spaces": false
+								},
+								"translation.x": 0.0,
+								"translation.y": 4017.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 2,
+							"type": "text"
+						},
+						{
+							"buffer": 2,
+							"file": "/sys/centerstack/site/apps/aura/templates/aura/forms.html",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 81467,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										49373,
+										49477
+									]
+								],
+								"settings":
+								{
+									"BracketHighlighterBusy": false,
+									"bh_regions":
+									[
+										"bh_default",
+										"bh_default_center",
+										"bh_default_open",
+										"bh_default_close",
+										"bh_default_content",
+										"bh_curly",
+										"bh_curly_center",
+										"bh_curly_open",
+										"bh_curly_close",
+										"bh_curly_content",
+										"bh_single_quote",
+										"bh_single_quote_center",
+										"bh_single_quote_open",
+										"bh_single_quote_close",
+										"bh_single_quote_content",
+										"bh_c_define",
+										"bh_c_define_center",
+										"bh_c_define_open",
+										"bh_c_define_close",
+										"bh_c_define_content",
+										"bh_regex",
+										"bh_regex_center",
+										"bh_regex_open",
+										"bh_regex_close",
+										"bh_regex_content",
+										"bh_round",
+										"bh_round_center",
+										"bh_round_open",
+										"bh_round_close",
+										"bh_round_content",
+										"bh_tag",
+										"bh_tag_center",
+										"bh_tag_open",
+										"bh_tag_close",
+										"bh_tag_content",
+										"bh_angle",
+										"bh_angle_center",
+										"bh_angle_open",
+										"bh_angle_close",
+										"bh_angle_content",
+										"bh_unmatched",
+										"bh_unmatched_center",
+										"bh_unmatched_open",
+										"bh_unmatched_close",
+										"bh_unmatched_content",
+										"bh_square",
+										"bh_square_center",
+										"bh_square_open",
+										"bh_square_close",
+										"bh_square_content",
+										"bh_double_quote",
+										"bh_double_quote_center",
+										"bh_double_quote_open",
+										"bh_double_quote_close",
+										"bh_double_quote_content"
+									],
+									"syntax": "Packages/HTML/HTML.tmLanguage",
+									"tab_size": 3,
+									"translate_tabs_to_spaces": false
+								},
+								"translation.x": 242.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 1,
+							"type": "text"
+						}
+					]
+				}
+			],
+			"incremental_find":
+			{
+				"height": 41.0
+			},
+			"input":
+			{
+				"height": 49.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"output.CSS Extended Completions":
+			{
+				"height": 0.0
+			},
+			"output.exec":
+			{
+				"height": 251.0
+			},
+			"output.find_results":
+			{
+				"height": 180.0
+			},
+			"pinned_build_system": "",
+			"position": "0 0 4 1440 873 0 0 1440 877 ",
+			"project": "centerstack-site.sublime-project",
+			"replace":
+			{
+				"height": 94.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 500.0,
+				"last_filter": "",
+				"selected_items":
+				[
+					[
+						"",
+						"/sys/sublime/projects/bond6.sublime-workspace"
+					]
+				],
+				"width": 380.0
+			},
+			"select_symbol":
+			{
+				"height": 392.0,
+				"last_filter": "coc",
+				"selected_items":
+				[
+					[
+						"coc",
+						"Cocaanimated"
+					],
+					[
+						"compact",
+						"compact_rules"
+					],
+					[
+						"caro",
+						"carousel"
+					],
+					[
+						"",
+						"Accordion"
+					]
+				],
+				"width": 392.0
+			},
+			"selected_group": 0,
+			"settings":
+			{
+			},
+			"show_minimap": false,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 310.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			},
+			"window_id": 30,
+			"workspace_name": "/sys/sublime/interface/projects/centerstack-site.sublime-workspace"
+		}
+	],
+	"workspaces":
+	{
+		"recent_workspaces":
+		[
+			"/sys/sublime/interface/projects/centerstack-site.sublime-workspace",
+			"/sys/sublime/interface/projects/cma.sublime-workspace",
+			"/sys/sublime/projects/centerstack-site.sublime-workspace",
+			"/sys/sublime/projects/diycave.sublime-workspace",
+			"/sys/sublime/projects/cma.sublime-workspace",
+			"/sys/sublime/projects/centerstack-cs.sublime-workspace",
+			"/sys/sublime/projects/kindredspirit.sublime-workspace",
+			"/sys/sublime/projects/bond6-cs.sublime-workspace",
+			"/sys/sublime/projects/bond6-site.sublime-workspace",
+			"/sys/sublime/projects/bon6.sublime-workspace",
+			"/sys/sublime/workspaces/bond6-coming-soon.sublime-workspace",
+			"/sys/sublime/projects/bond6-coming-soon.sublime-workspace",
+			"/sys/sublime/projects/centerstack.sublime-workspace",
+			"/sys/sublime/projects/bond6.sublime-workspace",
+			"/sys/sublime/projects/rwar.sublime-workspace",
+			"/sys/sublime/projects/studiom.sublime-workspace",
+			"/sys/sublime/projects/coming-soon.sublime-workspace",
+			"/sys/centerstack/site/templates/coming-soon.sublime-workspace",
+			"/sys/ide/sublime-text-3/projects/centerstack.sublime-workspace",
+			"/sys/ide/sublime-text-3/projects/python-projects.sublime-workspace",
+			"/sys/ide/sublime-text-3/projects/bon6.sublime-workspace",
+			"/sys/ide/sublime-text-3/projects/kindredspirit.sublime-workspace",
+			"/sys/ide/sublime-text-3/projects/config.sublime-workspace",
+			"/sys/ide/sublime-text-3/projects/untitled.sublime-workspace"
+		]
+	}
+}

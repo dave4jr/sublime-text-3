@@ -1,0 +1,9 @@
+<snippet>
+	<content>
+<![CDATA[<div class="flex-row">
+	<div class="box-1$1"></div>
+</div>]]>
+	</content>
+	<tabTrigger>flexr</tabTrigger>
+	<description>CenterStack:	Flex-Row</description>
+</snippet>

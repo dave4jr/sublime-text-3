@@ -1,0 +1,9 @@
+[
+	{
+		"args":
+		{
+			"characters": "/*jslint browser: true, devel: true, unparam: true, node: true */"
+		},
+		"command": "insert"
+	}
+]
