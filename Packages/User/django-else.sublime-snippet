@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+{% else %}
+]]></content>
+<tabTrigger>else</tabTrigger>
+<scope>text.html - source</scope>
+<description>CenterStack:	Django - else</description>
+</snippet>

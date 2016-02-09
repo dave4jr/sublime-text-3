@@ -1,0 +1,10 @@
+<snippet>
+<content><![CDATA[
+{% if user.is_authenticated %}
+	$2
+{% endif %}
+]]></content>
+<tabTrigger>ifauth</tabTrigger>
+<scope>text.html - source</scope>
+<description>CenterStack:	Django - If user.auth</description>
+</snippet>

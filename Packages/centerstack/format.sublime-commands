@@ -1,0 +1,18 @@
+[
+	{
+		"caption": "Code Formatter",
+		"command": "run_multiple_commands", "args": {
+			"commands": [
+				{ "command": "select_all" }
+				,{ "command": "detect_indentation" }
+				,{ "command": "unexpand_tabs", "args": {"set_translate_tabs": true} }
+				,{ "command": "set_setting", "args": {"setting": "tab_size", "value": 3 } }
+				,{ "command": "htmlprettify" }
+				,{ "command": "reg_replace", "args": {"replacements": ["format_html_tags_to_inline"] } }
+				,{ "command": "reg_replace", "args": {"replacements": ["format_html_div_to_wrap_single_tags"] } }
+				,{ "command": "reg_replace", "args": {"replacements": ["format_javascript_src_to_inline"] } }
+			]
+		}
+
+	}
+]

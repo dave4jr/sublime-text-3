@@ -53,7 +53,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#B3B3B3</string>
+				<string>#BDBDBD</string>
 			</dict>
 		</dict>
 		<dict>
@@ -65,6 +65,39 @@
 			<dict>
 				<key>foreground</key>
 				<string>#A9A97E</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Arithmetic (Shell)</string>
+			<key>scope</key>
+			<string>punctuation.definition.string.begin.shell,punctuation.definition.string.end.shell</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#00CC99</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Punctuation Def (Shell)</string>
+			<key>scope</key>
+			<string>support.function.builtin.shell</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#A9A97E</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>String Math (Shell)</string>
+			<key>scope</key>
+			<string>string.other.math.shell, constant.numeric.integer.shell, keyword.operator.arithmetic.shell</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#FF0066</string>
 			</dict>
 		</dict>
 		<dict>
@@ -152,7 +185,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#27B4C0</string>
+				<string>#66CC99</string>
 			</dict>
 		</dict>
 		<dict>
@@ -205,6 +238,41 @@
 		</dict>
 		<dict>
 			<key>name</key>
+			<string>Bracket Variable (Shell)</string>
+			<key>scope</key>
+			<string>variable.other.bracket.shell, string.interpolated.dollar.shell</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string />
+				<key>foreground</key>
+				<string>#9966FF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Variable Loop (Shell)</string>
+			<key>scope</key>
+			<string>variable.other.loop.shell, keyword.operator.glob.shell, variable.other.normal.shell</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#27B4C0</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Semi-Colon (Shell)</string>
+			<key>scope</key>
+			<string>keyword.operator.list.shell</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#CC66FF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
 			<string>SCSS Variable</string>
 			<key>scope</key>
 			<string>variable.scss</string>
@@ -238,6 +306,17 @@
 			<dict>
 				<key>foreground</key>
 				<string>#FF3399</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Keyword (Javascript)</string>
+			<key>scope</key>
+			<string>source.js.embedded.html keyword.operator.js, source.js.embedded.html meta.brace.curly.js</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#9966FF</string>
 			</dict>
 		</dict>
 		<dict>
@@ -403,17 +482,6 @@
 			<dict>
 				<key>foreground</key>
 				<string>#3366CC</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Bash Builtins</string>
-			<key>scope</key>
-			<string>support.function.builtin.shell</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#A9A97E</string>
 			</dict>
 		</dict>
 		<dict>
