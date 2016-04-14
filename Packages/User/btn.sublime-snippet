@@ -1,5 +1,5 @@
 <snippet>
-	<content><![CDATA[<a class="btn blue$1 wide fw-600" href="{% url '$2' %}">$3</a>]]></content>
-	<tabTrigger>button</tabTrigger>
-	<description>CenterStack:	Button</description>
+	<content><![CDATA[<a class="btn" href="{% url '$2' %}">$3</a>]]></content>
+	<tabTrigger>btn</tabTrigger>
+	<description>CenterStack:  btn</description>
 </snippet>

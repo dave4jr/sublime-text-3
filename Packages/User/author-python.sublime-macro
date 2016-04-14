@@ -2,7 +2,7 @@
 	{
 		"args":
 		{
-			"characters": "#*====================== #\n"
+			"characters": "#*========================== #\n"
 		},
 		"command": "insert"
 	},
@@ -23,13 +23,6 @@
 	{
 		"args":
 		{
-			"characters": "#*  Client:\t\t\n"
-		},
-		"command": "insert"
-	},
-	{
-		"args":
-		{
 			"characters": "#*  Description:\t\n"
 		},
 		"command": "insert"
@@ -37,7 +30,7 @@
 	{
 		"args":
 		{
-			"characters": "#*====================== #"
+			"characters": "#*========================== #"
 		},
 		"command": "insert"
 	}

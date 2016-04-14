@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[logging.debug($1)]]></content>
+	<tabTrigger>log</tabTrigger>
+	<description>Django - logging.debug</description>
+</snippet>

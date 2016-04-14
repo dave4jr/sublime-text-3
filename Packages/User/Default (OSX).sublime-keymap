@@ -10,7 +10,7 @@
 	// { "keys": ["command+ctrl+alt+x"], "command": "convert_to_django" },
 
 	// Reg Replace
-	{ "keys": ["command+ctrl+alt+4"], "command":"reg_replace", "args": {"replacements": ["remove_html_comments"] } },
+	{ "keys": ["shift+ctrl+c"], "command":"reg_replace", "args": {"replacements": ["remove_html_comments"] } },
 
 
 	// Action Commands
@@ -24,27 +24,27 @@
 	{ "keys": ["command+ctrl+alt+up"], "command": "prev_result" },
 	{ "keys": ["command+ctrl+alt+v"], "command": "package_resource_viewer" },
 	{ "keys": ["command+shift+d"], "command": "goto_definition" },
+	{ "keys": ["command+shift+v"], "command": "paste" },
 	{ "keys": ["command+v"], "command": "paste_and_indent" },
+	{ "keys": ["command+shift+ctrl+v"], "command": "paste_from_history" },
 	{ "keys": ["command+shift+l"], "command": "lorem_ipsum" },
 	{ "keys": ["command+ctrl+alt+p"], "command": "project_manager" },
 	{ "keys": ["command+ctrl+alt+a"], "command": "autoprefixer" },
 	{ "keys": ["command+ctrl+alt+q"], "command": "quick_print" },
 	{ "keys": ["command+shift+r"], "command": "reindent" , "args": { "single_line": false } },
-
-
+	{ "keys": ["shift+space"], "command": "move", "args": {"by": "characters", "forward": true} },
 
 
 	// Code Formatters
 	{ "keys": ["command+ctrl+alt+f"], "command": "css_format", "args": { "action": "expand" } }, 		// CSS:	Extended
-	{ "keys": ["command+ctrl+f"], "command": "css_format", "args": { "action": "compact" } }, 			// CSS:	Single
+	{ "keys": ["command+ctrl+f"], "command": "css_format", "args": { "action": "compact" } }, 		// CSS:	Single
 	{ "keys": ["command+ctrl+shift+f"], "command": "css_format", "args": { "action": "compress" } }, 	// CSS:	Minified
-	{ "keys": ["command+ctrl+j"], "command": "esformatter" },								// JS:	Extended
+	{ "keys": ["command+ctrl+j"], "command": "esformatter" },								// JS:		Extended
 	{ "keys": ["command+ctrl+r"], "command": "colorconvert"},
 	{ "keys": ["command+shift+c"], "command": "color_pick" },
 	{ "keys": ["command+ctrl+shift+p"], "command": "htmlprettify" },
 	{ "keys": ["command+ctrl+x"], "command": "sort_lines", "args": {"case_sensitive": false} },
-	{ "keys": ["command+ctrl+alt+2"], "command": "set_layout", "args": { "cols": [0.0, 1.0], "rows": [0.0, 0.5, 1.0], "cells": [[0, 0, 1, 1], [0, 1, 1, 2]] } },
-
+	{ "keys": ["command+ctrl+shift+2"], "command": "set_layout", "args": { "cols": [0.0, 1.0], "rows": [0.0, 0.5, 1.0], "cells": [[0, 0, 1, 1], [0, 1, 1, 2]] } },
 
 
 
@@ -73,20 +73,20 @@
 	{ "keys": ["command+ctrl+alt+k"], "command": "open_file", "args": {"file": "/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap"} },
 	{ "keys": ["command+ctrl+k"], "command": "open_file", "args": {"file": "/Users/davejr/Library/Application Support/Sublime Text 3/Packages/default/Default (OSX).sublime-keymap"} },
 	{ "keys": ["command+ctrl+p"], "command": "open_dir", "args": {"dir": "/Users/davejr/Library/Application Support/Sublime Text 3/Packages/User"} },
-	{ "keys": ["command+ctrl+alt+`"], "command": "python_two_doc" },
-	{ "keys": ["command+ctrl+shift+1"], "command": "add_file_binder" },
-	{ "keys": ["command+ctrl+shift+2"], "command": "file_binder" },
-	{ "keys": ["command+ctrl+shift+3"], "command": "remove_file_binder" },
-	{ "keys": ["command+ctrl+shift+4"], "command": "update_file_binder" },
+	{ "keys": ["Shift+f1"], "command": "add_file_binder" },
+	{ "keys": ["f1"], "command": "file_binder" },
+	{ "keys": ["command+f1"], "command": "remove_file_binder" },
+	{ "keys": ["command+f2"], "command": "update_file_binder" },
 
 
 
 	// Bracket Highligher
-	{ "keys": ["command+ctrl+alt+]"], "command": "bh_key", "args": { "no_outside_adj": true, "lines": true, "plugin": { "type": ["__all__"], "command": "bh_modules.bracketselect", "args": { "select": "right" } } } }, // Go to right bracket
-	{ "keys": ["command+ctrl+alt+["], "command": "bh_key", "args": { "no_outside_adj": true, "lines": true, "plugin": { "type": ["__all__"], "command": "bh_modules.bracketselect", "args": { "select": "left" } } } }, // Go to left bracket
-	{ "keys": ["command+ctrl+alt+space"], "command": "bh_key", "args": {"lines": true, "no_outside_adj": true, "plugin": {"command": "bh_modules.bracketselect", "type": ["__all__"] } } }, // Select Content Inside Brackets
-	{ "keys": ["command+ctrl+space"], "command": "bh_key", "args": {"lines": true, "no_outside_adj": true, "plugin": {"args": {"always_include_brackets": true}, "command": "bh_modules.bracketselect", "type": ["__all__"] } } },  // Select Content Inside Brackets w/ Brackets
-	{ "keys": ["command+shift+b"], "command": "bh_remove_brackets_custom" },
+	{ "keys": ["command+ctrl+alt+]"], "command": "bh_key", "args": { "no_outside_adj": true, "lines": true, "plugin": { "type": ["__all__"], "command": "bh_modules.bracketselect", "args": { "select": "right" } } } }, 				// Go to right bracket
+	{ "keys": ["command+ctrl+alt+["], "command": "bh_key", "args": { "no_outside_adj": true, "lines": true, "plugin": { "type": ["__all__"], "command": "bh_modules.bracketselect", "args": { "select": "left" } } } }, 				// Go to left bracket
+	{ "keys": ["command+ctrl+alt+space"], "command": "bh_key", "args": {"lines": true, "no_outside_adj": true, "plugin": {"command": "bh_modules.bracketselect", "type": ["__all__"] } } }, 								// Select Content Inside Brackets
+	{ "keys": ["command+ctrl+space"], "command": "bh_key", "args": {"lines": true, "no_outside_adj": true, "plugin": {"args": {"always_include_brackets": true}, "command": "bh_modules.bracketselect", "type": ["__all__"] } } },  	// Select Content Inside Brackets w/ Brackets
+	{ "keys": ["command+r"], "command": "bh_remove_brackets" },
+	{ "keys": ["command+shift+w"], "command": "wrap_brackets" },
 
 
 	// Select / Delete / Manipulate Text
@@ -108,36 +108,37 @@
 	/*	Macros
 	========================================= */
 	// Default
-	{ "keys": ["command+backspace"], "command": "run_macro_file", "args": 				{"file": "res://Packages/Default/Delete Line.sublime-macro"} },
-	{ "keys": ["command+i"], "command": "run_macro_file", "args":						{"file": "res://Packages/Default/Add Line Before.sublime-macro"} },
+	{ "keys": ["command+backspace"], "command": "run_macro_file", "args": 					{"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+	{ "keys": ["command+i"], "command": "run_macro_file", "args":							{"file": "res://Packages/Default/Add Line Before.sublime-macro"} },
 	{ "keys": ["command+ctrl+alt+7"], "command": "run_macro_file", "args": 					{"file": "res://Packages/User/run_view_command.sublime-macro"} },
 	{ "keys": ["command+ctrl+alt+8"], "command": "run_macro_file", "args": 					{"file": "res://Packages/User/run_window_command.sublime-macro"} },
 	{ "keys": ["command+ctrl+alt+9"], "command": "run_macro_file", "args": 					{"file": "res://Packages/User/run_app_command.sublime-macro"} },
 
 	// Django
-	{ "keys": ["command+ctrl+shift+s"], "command": "run_macro_file", "args": 				{"file": "res://Packages/User/django-static-tag.sublime-macro"} },
+	{ "keys": ["command+ctrl+shift+s"], "command": "run_macro_file", "args": 					{"file": "res://Packages/User/django-static-tag.sublime-macro"} },
 
 	// CSS
 	// { "keys": ["command+ctrl+shift+t"], "command": "run_macro_file", "args": 				{"file": "res://Packages/User/transform-center.sublime-macro"} },
 	// { "keys": ["command+ctrl+shift+s"], "command": "run_macro_file", "args": 				{"file": "res://Packages/User/psuedo-before.sublime-macro"} },
 	// { "keys": ["command+ctrl+shift+s"], "command": "run_macro_file", "args": 				{"file": "res://Packages/User/psuedo-after.sublime-macro"} },
+	{ "keys": ["command+ctrl+shift+t"], "command": "run_macro_file", "args": 					{"file": "res://Packages/User/ascii-tab.sublime-macro"} },
 
 	// HTML
-	{ "keys": ["command+ctrl+w"], "command": "run_macro_file", "args": 					{"file": "res://Packages/User/span-wrap-bold.sublime-macro"} },
-	{ "keys": ["command+shift+w"], "command": "run_macro_file", "args": 					{"file": "res://Packages/User/span-wrap-light.sublime-macro"} },
+	{ "keys": ["command+ctrl+w"], "command": "run_macro_file", "args": 						{"file": "res://Packages/User/span-wrap-bold.sublime-macro"} },
+	// { "keys": ["command+shift+w"], "command": "run_macro_file", "args": 					{"file": "res://Packages/User/span-wrap-light.sublime-macro"} },
 	{ "keys": ["command+ctrl+alt+w"], "command": "run_macro_file", "args": 					{"file": "res://Packages/User/div-wrap.sublime-macro"} },
-	{ "keys": ["command+shift+o"], "command": "run_macro_file", "args": 					{"file": "res://Packages/User/css-outline.sublime-macro"} },
+	{ "keys": ["command+shift+o"], "command": "run_macro_file", "args": 						{"file": "res://Packages/User/css-outline.sublime-macro"} },
 	{ "keys": ["command+ctrl+alt+h"], "command": "run_macro_file", "args": 					{"file": "res://Packages/User/header-css.sublime-macro"} },
 	{ "keys": ["command+ctrl+alt+y"], "command": "run_macro_file", "args": 					{"file": "res://Packages/User/subheader-css.sublime-macro"} },
-	{ "keys": ["command+ctrl+shift+y"], "command": "run_macro_file", "args": 				{"file": "res://Packages/User/subheader-css-small.sublime-macro"} },
-	{ "keys": ["command+ctrl+h"], "command": "run_macro_file", "args": 					{"file": "res://Packages/User/header-html.sublime-macro"} },
-	{ "keys": ["command+ctrl+y"], "command": "run_macro_file", "args": 					{"file": "res://Packages/User/subheader-html.sublime-macro"} },
+	{ "keys": ["command+ctrl+shift+y"], "command": "run_macro_file", "args": 					{"file": "res://Packages/User/subheader-css-small.sublime-macro"} },
+	{ "keys": ["command+ctrl+h"], "command": "run_macro_file", "args": 						{"file": "res://Packages/User/header-html.sublime-macro"} },
+	{ "keys": ["command+ctrl+y"], "command": "run_macro_file", "args": 						{"file": "res://Packages/User/subheader-html.sublime-macro"} },
 	{ "keys": ["command+shift+h"], "command": "run_macro_file", "args": 					{"file": "res://Packages/User/header-python.sublime-macro"} },
-	{ "keys": ["command+shift+y"], "command": "run_macro_file", "args": 					{"file": "res://Packages/User/subheader-python.sublime-macro"} },
+	{ "keys": ["command+shift+y"], "command": "run_macro_file", "args": 						{"file": "res://Packages/User/subheader-python.sublime-macro"} },
 	{ "keys": ["command+ctrl+alt+i"], "command": "run_macro_file", "args": 					{"file": "res://Packages/User/author-css.sublime-macro"} },
-	{ "keys": ["command+ctrl+i"], "command": "run_macro_file", "args": 					{"file": "res://Packages/User/author-html.sublime-macro"} },
-	{ "keys": ["command+shift+i"], "command": "run_macro_file", "args": 					{"file": "res://Packages/User/author-python.sublime-macro"} },
-	{ "keys": ["command+ctrl+shift+c"], "command": "run_macro_file", "args": 				{"file": "res://Packages/User/console-log.sublime-macro"} },
+	{ "keys": ["command+ctrl+i"], "command": "run_macro_file", "args": 						{"file": "res://Packages/User/author-html.sublime-macro"} },
+	{ "keys": ["command+shift+i"], "command": "run_macro_file", "args": 						{"file": "res://Packages/User/author-python.sublime-macro"} },
+	{ "keys": ["command+ctrl+shift+c"], "command": "run_macro_file", "args": 					{"file": "res://Packages/User/console-log.sublime-macro"} },
 	{ "keys": ["command+ctrl+alt+o"], "command": "run_macro_file", "args": 					{"file": "res://Packages/User/overlay.sublime-macro"} },
 
 
@@ -152,23 +153,24 @@
 
 
 /*==================================================
-	Origami
+	Origami - Pane Management
 ==================================================*/
-	{ "keys": ["command+shift+ctrl+up"], "command": "travel_to_pane", "args": {"direction": "up"} },
-	{ "keys": ["command+shift+ctrl+right"], "command": "travel_to_pane", "args": {"direction": "right"} },
-	{ "keys": ["command+shift+ctrl+down"], "command": "travel_to_pane", "args": {"direction": "down"} },
-	{ "keys": ["command+shift+ctrl+left"], "command": "travel_to_pane", "args": {"direction": "left"} },
-
-	{ "keys": ["super+k", "shift+up"], "command": "carry_file_to_pane", "args": {"direction": "up"} },
-	{ "keys": ["super+k", "shift+right"], "command": "carry_file_to_pane", "args": {"direction": "right"} },
-	{ "keys": ["super+k", "shift+down"], "command": "carry_file_to_pane", "args": {"direction": "down"} },
-	{ "keys": ["super+k", "shift+left"], "command": "carry_file_to_pane", "args": {"direction": "left"} },
+	{ "keys": ["command+shift+ctrl+up"], "command": "carry_file_to_pane", "args": {"direction": "up"} },
+	{ "keys": ["command+shift+ctrl+right"], "command": "carry_file_to_pane", "args": {"direction": "right"} },
+	{ "keys": ["command+shift+ctrl+down"], "command": "carry_file_to_pane", "args": {"direction": "down"} },
+	{ "keys": ["command+shift+ctrl+left"], "command": "carry_file_to_pane", "args": {"direction": "left"} },
 
 	{ "keys": ["command+shift+alt+ctrl+up"], "command": "destroy_pane", "args": {"direction": "up"} },
 	{ "keys": ["command+shift+alt+ctrl+right"], "command": "destroy_pane", "args": {"direction": "right"} },
 	{ "keys": ["command+shift+alt+ctrl+down"], "command": "destroy_pane", "args": {"direction": "down"} },
 	{ "keys": ["command+shift+alt+ctrl+left"], "command": "destroy_pane", "args": {"direction": "left"} },
-	{ "keys": ["command+shift+alt+ctrl+/"], "command": "destroy_pane", "args": {"direction": "self"} },
+	{ "keys": ["command+shift+alt+ctrl+s"], "command": "destroy_pane", "args": {"direction": "self"} },
+
+	// { "keys": ["command+alt+ctrl+up"], "command": "travel_to_pane", "args": {"direction": "up"} },
+	// { "keys": ["command+alt+ctrl+right"], "command": "travel_to_pane", "args": {"direction": "right"} },
+	// { "keys": ["command+alt+ctrl+down"], "command": "travel_to_pane", "args": {"direction": "down"} },
+	// { "keys": ["command+alt+ctrl+left"], "command": "travel_to_pane", "args": {"direction": "left"} },
+
 
 /*==================================================
 	Bracket Matching
@@ -238,7 +240,7 @@
 			]
 		}
 	}
-	,{ "keys": ["command+ctrl+alt+1"],
+	,{ "keys": ["command+ctrl+shift+1"],
 		"command": "run_multiple_commands", "args": {
 			"commands": [
 				 { "command": "select_all" }
@@ -249,6 +251,31 @@
 				,{ "command": "reg_replace", "args": {"replacements": ["format_html_tags_to_inline"] } }
 				,{ "command": "reg_replace", "args": {"replacements": ["format_html_div_to_wrap_single_tags"] } }
 				,{ "command": "reg_replace", "args": {"replacements": ["format_javascript_src_to_inline"] } }
+			]
+		}
+	}
+
+	/*	Wrap in Div (class)
+	========================================= */
+	,{ "keys": ["command+x"],
+		"command": "run_multiple_commands", "args": {
+			"commands": [
+				 {"command": "run_macro_file", "args": {"file": "res://Packages/User/div-class-wrap.sublime-macro"} }
+				,{ "command": "bh_key", "args": { "no_outside_adj": true, "lines": true, "plugin": { "type": ["__all__"], "command": "bh_modules.bracketselect", "args": { "select": "left" } } }
+					,"context":"window" }
+				,{ "command": "move", "args": {"by": "characters", "forward": true } },{ "command": "move", "args": {"by": "characters", "forward": true } },{ "command": "move", "args": {"by": "characters", "forward": true } },{ "command": "move", "args": {"by": "characters", "forward": true } },{ "command": "move", "args": {"by": "characters", "forward": true } },{ "command": "move", "args": {"by": "characters", "forward": true } },{ "command": "move", "args": {"by": "characters", "forward": true } },{ "command": "move", "args": {"by": "characters", "forward": true } },{ "command": "move", "args": {"by": "characters", "forward": true } },{ "command": "move", "args": {"by": "characters", "forward": true } },{ "command": "move", "args": {"by": "characters", "forward": true } }
+			]
+		}
+	}
+
+	/*	Wrap in Div (id)
+	========================================= */
+	,{ "keys": ["command+shift+x"],
+		"command": "run_multiple_commands", "args": {
+			"commands": [
+				 {"command": "run_macro_file", "args": {"file": "res://Packages/User/div-id-wrap.sublime-macro"} }
+				,{ "command": "bh_key", "args": { "no_outside_adj": true, "lines": true, "plugin": { "type": ["__all__"], "command": "bh_modules.bracketselect", "args": { "select": "left" } } }
+					,"context":"window" },{ "command": "move", "args": {"by": "characters", "forward": true } },{ "command": "move", "args": {"by": "characters", "forward": true } },{ "command": "move", "args": {"by": "characters", "forward": true } },{ "command": "move", "args": {"by": "characters", "forward": true } },{ "command": "move", "args": {"by": "characters", "forward": true } },{ "command": "move", "args": {"by": "characters", "forward": true } },{ "command": "move", "args": {"by": "characters", "forward": true } },{ "command": "move", "args": {"by": "characters", "forward": true } },{ "command": "move", "args": {"by": "characters", "forward": true } },{ "command": "move", "args": {"by": "characters", "forward": true } },{ "command": "move", "args": {"by": "characters", "forward": true } }
 			]
 		}
 	}
@@ -384,12 +411,12 @@
 		{ "key": "setting.repl", "operator": "equal", "operand": true }
 	]
 },
-{ "keys": ["shift+ctrl+c"], "command": "subprocess_repl_send_signal", "args": {"signal": 2},  // sigint
-"context":
-	[
-		{ "key": "setting.repl", "operator": "equal", "operand": true }
-	]
-},
+// { "keys": ["shift+ctrl+c"], "command": "subprocess_repl_send_signal", "args": {"signal": 2},  // sigint
+// "context":
+// 	[
+// 		{ "key": "setting.repl", "operator": "equal", "operand": true }
+// 	]
+// },
 
 
 { "keys": ["ctrl+,", "s"], "command": "repl_transfer_current", "args": {"scope": "selection"}},
@@ -418,10 +445,9 @@
 	// { "keys": ["command+ctrl+shift+down"], "command": "unfold" },
 	// { "keys": ["command+ctrl+shift+left"], "command": "unfold_all" },
 	// { "keys": ["command+shift+space"], "command": "expand_selection", "args": {"to": "tag"} },
-	// { "keys": ["command+ctrl+b"], "command": "run_macro_file", "args": 				{"file": "res://Packages/User/bootstrap-offset.sublime-macro"} },
 	//{ "keys": ["command+ctrl+i"], "command": "run_macro_file", "args": 				{"file": "res://Packages/Default/Add Line Before.sublime-macro"} },
 	// { "keys": ["command+ctrl+alt+l"], "command": "run_macro_file", "args": 			{"file": "res://Packages/User/links.sublime-macro"} },
 	// { "keys": ["ctrl+space"], "command": "auto_complete" },
-	// { "keys": ["command+ctrl+t"], "command": "run_macro_file", "args": 					{"file": "res://Packages/User/ascii-tab.sublime-macro"} },
+	
 	// { "keys": ["command+shift+space"], "command": "run_macro_file", "args": 				{"file": "res://Packages/User/select-parent-tag.sublime-macro"} },
 ]

@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+{% elif $1 %}
+]]></content>
+<tabTrigger>elif</tabTrigger>
+<scope>text.html - source</scope>
+<description>CenterStack:	Django - elif</description>
+</snippet>

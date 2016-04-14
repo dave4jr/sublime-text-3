@@ -84,7 +84,16 @@ def get_function_parameters(callDef):
 
     params = []
     for param in callDef.params:
-        cleaned_param = param.get_code().strip()
+        # logger.info("%s %s" % (param.name, param.description))
+
+        # when you writing a callable object
+        # jedi tring to complete incompleted object
+        # and returns "empty" calldefinition
+        # in this case we have to skip it
+        if not param.name:
+            continue
+
+        cleaned_param = param.description.rstrip(',')
         if '*' in cleaned_param or cleaned_param in ['self', '...']:
             continue
         params.append([s.strip() for s in cleaned_param.split('=')])
@@ -136,8 +145,18 @@ class JediFacade:
 
     def get_autocomplete(self):
         """ Jedi "completion" """
-        data = self._parameters_for_completion() or []
-        data.extend(self._completion() or [])
+        data = []
+
+        try:
+            data.extend(self._parameters_for_completion())
+        except:
+            logger.info("params completion failed")
+
+        try:
+            data.extend(self._completion() or [])
+        except:
+            logger.info("general completion failed")
+
         return data
 
     def get_docstring(self):

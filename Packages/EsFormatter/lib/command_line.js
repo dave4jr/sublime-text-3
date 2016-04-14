@@ -11,7 +11,8 @@
   }
   var basepath = process.argv[2],
     options = JSON.parse(process.argv[3] || "{}");
-  if (esformatter.rc) {
+  if (esformatter.rc && basepath) {
+    basepath = basepath.replace(/\\/g, "/");
     options = merge(options, esformatter.rc(basepath));
   }
 

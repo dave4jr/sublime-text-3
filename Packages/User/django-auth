@@ -1,0 +1,12 @@
+<snippet>
+<content><![CDATA[
+{% if $1 %}
+	$2
+{% else %}
+	$3
+{% endif %}
+]]></content>
+<tabTrigger>if</tabTrigger>
+<scope>text.html - source</scope>
+<description>CenterStack:	Django - If</description>
+</snippet>

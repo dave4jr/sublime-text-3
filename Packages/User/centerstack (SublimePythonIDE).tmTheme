@@ -80,6 +80,17 @@
 		</dict>
 		<dict>
 			<key>name</key>
+			<string>Punctuation (Shell)</string>
+			<key>scope</key>
+			<string>keyword.operator.list.shell</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#3399FF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
 			<string>Brace Curly (Javascript)</string>
 			<key>scope</key>
 			<string>meta.brace.curly.js</string>
@@ -131,6 +142,17 @@
 			<dict>
 				<key>foreground</key>
 				<string>#A9A97E</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>String (Javascript)</string>
+			<key>scope</key>
+			<string>string.quoted.double.js, string.quoted.single.js</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#2AB4C0</string>
 			</dict>
 		</dict>
 		<dict>
@@ -234,13 +256,13 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Bash String</string>
+			<string>String (Shell)</string>
 			<key>scope</key>
 			<string>string.quoted.single.shell, string.quoted.double.shell</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#27B4C0</string>
+				<string>#A9A97E</string>
 			</dict>
 		</dict>
 		<dict>
@@ -252,6 +274,28 @@
 			<dict>
 				<key>foreground</key>
 				<string>#9999ff</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Number (Shell)</string>
+			<key>scope</key>
+			<string>constant.numeric.integer.shell,  string.other.math.shell</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#FF9900</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Number</string>
+			<key>scope</key>
+			<string>constant.numeric.js</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#F1C000</string>
 			</dict>
 		</dict>
 		<dict>
@@ -273,7 +317,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#FF0099</string>
+				<string>#D936A3</string>
 			</dict>
 		</dict>
 		<dict>
@@ -291,13 +335,70 @@
 		</dict>
 		<dict>
 			<key>name</key>
+			<string>Variable (Shell)</string>
+			<key>scope</key>
+			<string>variable.other.normal.shell</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string />
+				<key>foreground</key>
+				<string>#27B4C0</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>$(( )) (Shell)</string>
+			<key>scope</key>
+			<string>punctuation.definition.string.begin.shell, punctuation.definition.string.end.shell</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#33CC66</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Variable</string>
+			<key>scope</key>
+			<string>keyword.operator.arithmetic.sh v,</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string />
+				<key>foreground</key>
+				<string>#27B4C0</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
 			<string>Variable</string>
 			<key>scope</key>
 			<string>variable</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string />
+				<key>foreground</key>
+				<string>#FF0099</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Variable Loop (Shell)</string>
+			<key>scope</key>
+			<string>variable.other.loop.shell</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#99CC66</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Variable (Shell)</string>
+			<key>scope</key>
+			<string>variable.shell</string>
+			<key>settings</key>
+			<dict>
 				<key>foreground</key>
 				<string>#FF0099</string>
 			</dict>
@@ -315,20 +416,6 @@
 				<string>#336699</string>
 			</dict>
 		</dict>
-		<dict>
-			<key>name</key>
-			<string>Variable.shell</string>
-			<key>scope</key>
-			<string>variable</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string />
-				<key>foreground</key>
-				<string>#3366CC</string>
-			</dict>
-		</dict>
-		
 		<dict>
 			<key>name</key>
 			<string>Period - JS</string>
@@ -353,13 +440,13 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Bash Export</string>
+			<string>Shell Export</string>
 			<key>scope</key>
 			<string>storage.modifier.shell</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#99CC00</string>
+				<string>#CC3399</string>
 			</dict>
 		</dict>
 		<dict>
@@ -392,7 +479,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#CC3399</string>
+				<string>#D936A3</string>
 			</dict>
 		</dict>
 		<dict>
@@ -452,7 +539,7 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Bash Function name</string>
+			<string>Shell Function name</string>
 			<key>scope</key>
 			<string>entity.name.function.shell</string>
 			<key>settings</key>
@@ -496,9 +583,20 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Tag name</string>
+			<string>Tag (HTML)</string>
 			<key>scope</key>
-			<string>entity.name.tag</string>
+			<string>entity.name.tag.block.any.html</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#3366CC</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Punctuation Definition Tag  (HTML)</string>
+			<key>scope</key>
+			<string>punctuation.definition.tag.begin.html,punctuation.definition.tag.end.html</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -551,13 +649,13 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Bash Builtins</string>
+			<string>Shell Builtins</string>
 			<key>scope</key>
-			<string>support.function.builtin.shell</string>
+			<string>support.function.builtin.shell, meta.scope.for-in-loop.shell, string.interpolated.dollar.shell</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#A9A97E</string>
+				<string>#3366FF</string>
 			</dict>
 		</dict>
 		<dict>
@@ -702,6 +800,28 @@
 			<dict>
 				<key>foreground</key>
 				<string>#6699FF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Keyword Control (Shell)</string>
+			<key>scope</key>
+			<string>keyword.control.shell</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#9966FF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Keyword Arithmetic (Shell)</string>
+			<key>scope</key>
+			<string>keyword.operator.arithmetic.shell</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#FF9900</string>
 			</dict>
 		</dict>
 		<dict>
