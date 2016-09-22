@@ -1,0 +1,242 @@
+<!--======================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	preferences.html
+ *======================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% block content_site %}
+
+
+<!--	Preferences
+========================================= -->
+<form action="" method="post">
+	{% csrf_token %}
+	<div class="row">
+		<div class="col-md-6">
+			<div class="portlet light portlet-fit">
+				<div class="portlet-title">
+					<div class="caption">
+						<i class="icon-ecommerce_banknotes"> </i>
+						<span class="caption-subject base-font m-l-3"> Global Pricing </span>
+					</div>
+				</div>
+				<div class="portlet-body">
+					<table class="table table-striped table-bordered table-hover order-column" id="preference_prices">
+						<thead>
+							<tr>
+								<th>Price Element</th>
+								<th>Price (USD)</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Bike Deposit Multiple</td>
+								<td class="p-tb-4">
+									<div class="form-group m-b-0">
+										<div class='input-group'>
+											<span class="input-group-addon input-left no-icon text-black-7 mt-white-bg">$</span>
+											{{ PreferenceForm.bike_deposit_multiple | add_class:"form-control" }}
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>Bike Insurance (High-Deductible)</td>
+								<td class="p-tb-4">
+									<div class="form-group m-b-0">
+										<div class='input-group'>
+											<span class="input-group-addon input-left no-icon text-black-7 mt-white-bg">$</span>
+											{{ PreferenceForm.insurance_high_deductible_price | add_class:"form-control" }}
+										</div>
+									</div>
+								</td>
+
+							</tr>
+							<tr>
+								<td>Bike Insurance (Low-Deductible)</td>
+								<td class="p-tb-4">
+									<div class="form-group m-b-0">
+										<div class='input-group'>
+											<span class="input-group-addon input-left no-icon text-black-7 mt-white-bg">$</span>
+											{{ PreferenceForm.insurance_low_deductible_price | add_class:"form-control" }}
+										</div>
+									</div>
+								</td>
+
+							</tr>
+							<tr>
+								<td>Tour Deposit</td>
+								<td class="p-tb-4">
+									<div class="form-group m-b-0">
+										<div class='input-group'>
+											<span class="input-group-addon input-left no-icon text-black-7 mt-white-bg">$</span>
+											{{ PreferenceForm.tour_deposit | add_class:"form-control" }}
+										</div>
+									</div>
+								</td>
+
+							</tr>
+							<tr>
+								<td>Bike Damage Deposit</td>
+								<td class="p-tb-4">
+									<div class="form-group m-b-0">
+										<div class='input-group'>
+											<span class="input-group-addon input-left no-icon text-black-7 mt-white-bg">$</span>
+											{{ PreferenceForm.bike_damage_deposit | add_class:"form-control" }}
+										</div>
+									</div>
+								</td>
+
+							</tr>
+							<tr>
+								<td>Storage Price</td>
+								<td class="p-tb-4">
+									<div class="form-group m-b-0">
+										<div class='input-group'>
+											<span class="input-group-addon input-left no-icon text-black-7 mt-white-bg">$</span>
+											{{ PreferenceForm.storage_price | add_class:"form-control" }}
+										</div>
+									</div>
+								</td>
+
+							</tr>
+							<tr>
+								<td>Custom On-Road Ride</td>
+								<td class="p-tb-4">
+									<div class="form-group m-b-0">
+										<div class='input-group'>
+											<span class="input-group-addon input-left no-icon text-black-7 mt-white-bg">$</span>
+											{{ PreferenceForm.custom_onroad | add_class:"form-control" }}
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>Custom Off-Road Ride</td>
+								<td class="p-tb-4">
+									<div class="form-group m-b-0">
+										<div class='input-group'>
+											<span class="input-group-addon input-left no-icon text-black-7 mt-white-bg">$</span>
+											{{ PreferenceForm.custom_offroad | add_class:"form-control" }}
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>Custom Exclusive Service</td>
+								<td class="p-tb-4">
+									<div class="form-group m-b-0">
+										<div class='input-group'>
+											<span class="input-group-addon input-left no-icon text-black-7 mt-white-bg">$</span>
+											{{ PreferenceForm.custom_deluxe | add_class:"form-control" }}
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<!--	Colors
+		========================================= -->
+		<div class="col-md-6">
+			<div class="portlet light portlet-fit">
+				<div class="portlet-title">
+					<div class="caption">
+						<i class="icon-color_plate"> </i>
+						<span class="caption-subject base-font m-l-3"> Theme </span>
+					</div>
+				</div>
+				<div class="portlet-body">
+					<table class="table table-striped table-bordered table-hover order-column" id="preference_colors">
+						<thead>
+							<tr>
+								<th>Color Element</th>
+								<th>Hex Value</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Primary Color</td>
+								<td>{{ PreferenceForm.global_color | add_class:"form-control" }}</td>
+							</tr>
+							<tr>
+								<td>Calendar (Tour)</td>
+								<td>{{ PreferenceForm.calendar_color_tour | add_class:"form-control" }}</td>
+							</tr>
+							<tr>
+								<td>Calendar (Class)</td>
+								<td>{{ PreferenceForm.calendar_color_class | add_class:"form-control" }}</td>
+							</tr>
+							<tr>
+								<td>Calendar (Bike)</td>
+								<td>{{ PreferenceForm.calendar_color_bike | add_class:"form-control" }}</td>
+							</tr>
+							<tr>
+								<td>Calendar (Staff)</td>
+								<td>{{ PreferenceForm.calendar_color_event | add_class:"form-control" }}</td>
+							</tr>
+							<tr>
+								<td>Datepicker Highlight</td>
+								<td>{{ PreferenceForm.datepicker_color | add_class:"form-control" }}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--	Save / Cancel Buttons
+	========================================= -->
+	<div class="row">
+		<p class="pi-text-center m-t-10">
+			<button type="cancel" name="cancel" class="btn mt-grey-gallery-bg p-rl-40 m-r-5"> Cancel <i class="pe-7s-close-circle right-icon"></i></button>
+			<button type="submit" value="{{ preference.pk }}" name="save" class="btn base p-rl-40"> Save<i class="pe-7s-check right-icon"></i></button>
+		</p>
+	</div>
+</form>
+
+
+
+
+<!--=====================================================
+	Javascript
+=====================================================-->
+	<script>
+		$(function() {
+			var table = $('#preference_colors');
+			table.dataTable({
+				"bStateSave": true,
+				"searchable": false,
+				"paginate": false,
+				"info": false,
+				"searching": false,
+				"sort": false,
+			});
+		});
+	</script>
+
+	<script>
+		$(function() {
+			var table = $('#preference_prices');
+			table.dataTable({
+				"bStateSave": true,
+				"searchable": false,
+				"paginate": false,
+				"info": false,
+				"searching": false,
+				"sort": false,
+			});
+		});
+	</script>
+
+
+
+ {% endblock %}

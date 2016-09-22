@@ -1,7 +1,7 @@
 [
     {
+        "id": "preferences", 
         "caption": "Preferences", 
-        "mnemonic": "n", 
         "children": [
             {
                 "checkbox": true, 
@@ -9,54 +9,54 @@
                 "command": "show_arduino_menu"
             }
         ], 
-        "id": "preferences"
+        "mnemonic": "n"
     }, 
     {
+        "id": "arduino", 
         "caption": "Arduino", 
-        "mnemonic": null, 
         "children": [
             {
                 "caption": "New Sketch", 
                 "command": "new_sketch"
             }, 
             {
+                "id": "sketchbook", 
                 "caption": "Sketchbook", 
-                "mnemonic": null, 
                 "children": [
                     {
                         "caption": "-", 
                         "command": null
                     }
                 ], 
-                "id": "sketchbook"
+                "mnemonic": null
             }, 
             {
+                "id": "examples", 
                 "caption": "Examples", 
-                "mnemonic": null, 
                 "children": [
                     {
+                        "id": "general", 
                         "caption": "General", 
-                        "mnemonic": null, 
                         "children": [
                             {
                                 "caption": "-", 
                                 "command": null
                             }
                         ], 
-                        "id": "general"
+                        "mnemonic": null
                     }
                 ], 
-                "id": "examples"
+                "mnemonic": null
             }, 
             {
                 "caption": "-", 
                 "command": null
             }, 
             {
+                "id": "import library", 
                 "caption": "Import Library", 
-                "mnemonic": null, 
                 "children": [], 
-                "id": "import library"
+                "mnemonic": null
             }, 
             {
                 "caption": "Show Sketch Folder", 
@@ -99,8 +99,8 @@
                 "command": null
             }, 
             {
+                "id": "serial port", 
                 "caption": "Serial Port", 
-                "mnemonic": null, 
                 "children": [
                     {
                         "args": {
@@ -119,11 +119,11 @@
                         "command": "choose_serial_port"
                     }
                 ], 
-                "id": "serial port"
+                "mnemonic": null
             }, 
             {
+                "id": "serial monitor", 
                 "caption": "Serial Monitor", 
-                "mnemonic": null, 
                 "children": [
                     {
                         "caption": "Start", 
@@ -138,8 +138,8 @@
                         "command": "send_serial_text"
                     }, 
                     {
+                        "id": "baudrate", 
                         "caption": "Baudrate", 
-                        "mnemonic": null, 
                         "children": [
                             {
                                 "args": {
@@ -230,11 +230,11 @@
                                 "command": "choose_baudrate"
                             }
                         ], 
-                        "id": "baudrate"
+                        "mnemonic": null
                     }, 
                     {
+                        "id": "line ending", 
                         "caption": "Line Ending", 
-                        "mnemonic": null, 
                         "children": [
                             {
                                 "args": {
@@ -269,11 +269,11 @@
                                 "command": "choose_line_ending"
                             }
                         ], 
-                        "id": "line ending"
+                        "mnemonic": null
                     }, 
                     {
+                        "id": "display as", 
                         "caption": "Display as", 
-                        "mnemonic": null, 
                         "children": [
                             {
                                 "args": {
@@ -300,10 +300,10 @@
                                 "command": "choose_display_mode"
                             }
                         ], 
-                        "id": "display as"
+                        "mnemonic": null
                     }
                 ], 
-                "id": "serial monitor"
+                "mnemonic": null
             }, 
             {
                 "caption": "-", 
@@ -322,8 +322,8 @@
                 "command": null
             }, 
             {
+                "id": "preferences", 
                 "caption": "Preferences", 
-                "mnemonic": null, 
                 "children": [
                     {
                         "caption": "Select Arduino Application Folder", 
@@ -338,8 +338,8 @@
                         "command": "choose_build_folder"
                     }, 
                     {
+                        "id": "language", 
                         "caption": "Language", 
-                        "mnemonic": null, 
                         "children": [
                             {
                                 "args": {
@@ -406,10 +406,10 @@
                                 "command": "choose_language"
                             }
                         ], 
-                        "id": "language"
+                        "mnemonic": null
                     }
                 ], 
-                "id": "preferences"
+                "mnemonic": null
             }, 
             {
                 "checkbox": true, 
@@ -427,8 +427,8 @@
                 "command": "set_full_compilation"
             }, 
             {
+                "id": "show verbose output", 
                 "caption": "Show Verbose Output", 
-                "mnemonic": null, 
                 "children": [
                     {
                         "checkbox": true, 
@@ -441,7 +441,7 @@
                         "command": "show_upload_output"
                     }
                 ], 
-                "id": "show verbose output"
+                "mnemonic": null
             }, 
             {
                 "checkbox": true, 
@@ -453,8 +453,8 @@
                 "command": null
             }, 
             {
+                "id": "references", 
                 "caption": "References", 
-                "mnemonic": null, 
                 "children": [
                     {
                         "args": {
@@ -496,13 +496,13 @@
                         "command": "open_url"
                     }
                 ], 
-                "id": "references"
+                "mnemonic": null
             }, 
             {
                 "caption": "About Stino", 
                 "command": "about_stino"
             }
         ], 
-        "id": "arduino"
+        "mnemonic": null
     }
 ]

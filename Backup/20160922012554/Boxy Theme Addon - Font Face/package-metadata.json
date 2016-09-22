@@ -1,0 +1,1 @@
+{"sublime_text": ">=3103", "version": "1.0.0", "platforms": ["*"], "url": "https://github.com/oivva/boxy-addon-font-face", "description": "Change the font face of the Sublime Text UI", "dependencies": []}
