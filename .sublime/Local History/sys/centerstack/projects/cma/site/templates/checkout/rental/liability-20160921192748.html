@@ -1,0 +1,137 @@
+<!--======================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	checkout.html
+ *======================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% block content_site %}
+
+
+
+<!--	Checkout
+========================================= -->
+<form id="form-checkout-liability" action="{% url 'checkout_liability' pk=reservation.pk %}" method="post" role="form">
+	{% csrf_token %}
+
+	<div class="row">
+		<div class="pi-col-sm-12">
+			<div class="portlet light portlet-fit">
+				<div class="portlet-title">
+					<div class="caption">
+						<i class="icon-7s-lifesaver2"> </i>
+						<span class="caption-subject capitalize"> Waiver Of Liability Notice </span>
+					</div>
+				</div>
+				<div class="portlet-body">
+					<div class="pi-row">
+						<div class="pi-col-md-12 pi-section-white m-t-10">
+							<div class="pi-row pi-grid-small-margins">
+								<div id="liability-waiver" class="pi-col-sm-10 pi-col-sm-offset-1">
+									<p class="text-center p-tb-20"><span style="text-transform: capitalize; color: #E35B5A; font-weight: 400; background: rgba(141, 141, 141, .075); padding: 12.5px 20px; border-radius: 2px; font-size: 14px; letter-spacing: .75px;">please read carefully before signing; you give up certain rights by signing this document</span></p>
+									<p class="p-l-60 p-t-20 inline-block">I, </p>
+									<div style="width: 240px; display: inline-block; padding-right: 10px; padding-left: 10px; position: relative; top: 10px;">
+										<div class="form-group m-b-0">
+											<div class='input-group'>
+												{{ CheckoutLiabilityForm.customer | add_class:"form-control" }}
+												<span class="input-group-addon input-right expandable">
+													<i class="icon-angle-down"></i>
+												</span>
+											</div>
+										</div>
+									</div>
+									<p class="inline">,renting on understand that by signing this document I accept and assume responsibility for any and all risks, whether or not specically itemized herein, and I acknowledge that Colorado Motorcycle Adventures, LLC, its employees, owners, investors, property owners, family of the same and any organization that Colorado Motorcycle Adventures, LLC represents or contracts with shall be held harmless and blameless in the event of any mishap. I understand that riding motorcycles and any activity which are a part of Colorado Motorcycle Adventures offerings/services may involve some risk of injury or death from various hazards, both obvious and obscure, such as but not limited to, bodily injury from falling objects, impairment from unsafe driving or unsafe driving from someone else, injury from driving out of control, equipment failure, and other risks or occurrences not set forth in this agreement. I am prepared and aware of the possibilities of risks and will not look to any entity or individual nor hold them responsible for my or my relatives well-being or the protection from such risks whether or not those risks are known or unknown by those organizations or individuals.</p><br><br><br>
+									<p class="inline p-l-60">In consideration of participating in activity with Colorado Motorcycle Adventures, LLC, I, </p>
+									<div style="width: 240px; display: inline-block; padding-right: 10px; padding-left: 10px; position: relative; top: 10px;">
+										<div class="form-group m-b-0">
+											<div class='input-group'>
+												{{ CheckoutLiabilityForm.customer | add_class:"form-control" }}
+												<span class="input-group-addon input-right expandable">
+													<i class="icon-angle-down"></i>
+												</span>
+											</div>
+										</div>
+									</div>
+									<p class="inline">,on my behalf and on behalf of my heirs, assigns, and representatives—do hereby irrevocably release Colorado Motorcycle Adventures, LLC, its employees, owners, investors, and property owners, family of the same and any organization that Colorado Motorcycle Adventures, LLC represents or contracts with, their successors and assigns from any and all claims which involve any nature of injury or death or damage to persons or property that may occur as a result of my or my parties attendance or participation in such aforementioned activities. Examples of rights I am giving up by signing this document are, but are not limited to, the right to sue Colorado Motorcycle Adventures, LLC in a court of law for monies or damages, the right to receive money for an accident caused by you or someone else, or the right to receive compensation of any kind for an injuiry you received.</p><br><br><br>
+									<p class="inline p-l-60"><span class="fw-700">SEVERABILITY:</span> If any term or other provision of this Agreement is determined to be invalid, illegal or incapable of being enforced by any rule or law, or public policy, all other conditions and provisions of this Agreement shall nevertheless remain in full force and effect so long as the economic or legal substance of the transactions contemplated hereby is not affected in any manner materially adverse to any party. Upon such determination that any term or other provision is invalid, illegal or incapable of being enforced, the parties hereto shall negotiate in good faith to modify this Agreement so as to effect the original intent of the parties as closely as possible in an acceptable manner to the end that transactions contemplated hereby are ful lled to the extent possible. </p><br><br><br>
+									<p class="inline p-l-60"><span class="fw-700">ATTORNEY FEES:</span> In the event of any litigation arising from or related to this Agreement, or the services provided under this Agreement, Colorado Motorcycle Adventures, LLC shall be entitled to recover from the non-prevailing party all reasonable costs incurred including staff time, court costs, attorneys fees, and all other related expenses incurred in such litigation. </p><br><br><br>
+									<p class="inline p-l-60"><span class="fw-700">PRIVACY:</span> I understand that my information will be used solely by Colorado Motorcycle Adventures, LLC to mail or email information and updates about our products and services and that my information will not be given to a third party.</p><br><br><br>
+									<p class="inline p-l-60"><span class="fw-700">PHOTOS, VIDEOS, ETC.:</span> By signing this I give permission to Colorado Motorcycle Adventures, LLC, and photographers or videographers assigned by Colorado Motorcycle Adventures, LLC, to use any photos or video footage which includes me, or my party for online or promotional purposes. I also give permission to use any written quotes for promotional purposes.</p>
+								</div>
+							
+							
+							
+							<!--	Signature
+							========================================= -->
+								<div class="pi-col-sm-10 pi-col-sm-offset-1 m-t-40">
+									<div class="pi-row">
+										<div class="pi-col-sm-9">
+											<label class="fw-400"> Renter Signature </label>
+											<div id="checkout-liability-signature"></div>
+										</div>
+										<div class="pi-col-sm-3">
+											<div class="form-group m-t-5" style="height: 55px;">
+												<label for="label-mileage"> Date </label>
+												<div class='input-group'  style="height: 55px;">
+													<span class="input-group-addon input-left">
+														<i class="icon-7s-date"> </i>
+													</span>
+													{{ CheckoutLiabilityForm.checkout_datetime | add_class:"form-control p-tb-16 fs-14 datetimepicker" | attr:"style:height:53px;" }}
+													<span class="input-group-addon input-right expandable">
+														<i class="icon-angle-down"></i>
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<script>
+								$(function() {
+									var simpleBoard = new DrawingBoard.Board('checkout-liability-signature', {
+										controls: false,
+										webStorage: false,
+										color: '#D05454',
+										webStorage: 'local',
+										size: 3,
+										stretchImg: true,
+
+										{% if reservation.checkout_liability_signature %}
+											background: "{{ reservation.checkout_liability_signature }}",
+										{% else %}
+											background: "#fbfcfc"
+										{% endif %}
+									});
+
+									$('#form-checkout-liability').on('submit', function(e) {
+										var img = simpleBoard.getImg();
+										var imgInput = (simpleBoard.blankCanvas == img) ? '' : img;
+									  	$(this).find('input[name=signature]').val( imgInput );
+									  	simpleBoard.clearWebStorage();
+									});
+								});
+							</script>
+
+
+							<!--	Submit / Close Buttons
+							========================================= -->
+							<p class="pi-text-center m-t-40">
+								<a href="{% url 'checkout' pk=reservation.pk %}" class="btn mt-grey-gallery-bg p-rl-40 m-r-5"> Cancel</a>
+								<button type="submit" value="{{ reservation.pk }}" name="pk" class="btn base p-rl-40"> Save </button>
+								<input type="hidden" name="liability" value=""/>
+								<input type="hidden" name="signature" value=""/>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+
+
+{% endblock %}

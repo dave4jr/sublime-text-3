@@ -1,0 +1,27 @@
+<!--==========================
+*  Author:		Dave Luke Jr
+*  Company:	CenterStack.io
+*  Description:	index.html
+*==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load customtags %}
+{% load staticfiles %}
+{% block content %}
+
+
+<!--	Hero Image
+========================================= -->
+<section class="hero-full text-light parallax-section chalk" id="hero">
+	<div class="wrapper-small index" id="page-title">
+		<h2><strong> World Class<br/><span class="colored"> Personal Training </span><br/> In New York City </strong></h2>
+		<p>
+			<a class="sr-button button-small button-5 circled" href="{% url 'contact' %}"> Get In Touch </a>
+			<a class="sr-button button-small button-4 circled" href="{% url 'train-with-us' %}"> Train With Us </a>
+		</p>
+	</div>
+</section>
+
+
+
+{% endblock %}

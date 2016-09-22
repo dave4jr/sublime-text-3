@@ -1,0 +1,3435 @@
+@font-face {
+    font-family: 'icons';
+    src:    url('fonts/icons.eot?k8h00u');
+    src:    url('fonts/icons.eot?k8h00u#iefix') format('embedded-opentype'),
+        url('fonts/icons.ttf?k8h00u') format('truetype'),
+        url('fonts/icons.woff?k8h00u') format('woff'),
+        url('fonts/icons.svg?k8h00u#icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+i {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.csmail-envelope:before {
+    content: "\e900";
+}
+.csmail-envelope2:before {
+    content: "\e901";
+}
+.csmail-envelope-open:before {
+    content: "\e902";
+}
+.csmail-envelope-open2:before {
+    content: "\e903";
+}
+.csmail-envelope-closed:before {
+    content: "\e904";
+}
+.csmail-envelope-closed2:before {
+    content: "\e905";
+}
+.csmail-envelope-open3:before {
+    content: "\e906";
+}
+.csmail-envelope-open4:before {
+    content: "\e907";
+}
+.csmail-envelope-open5:before {
+    content: "\e908";
+}
+.csmail-envelope-open6:before {
+    content: "\e909";
+}
+.csmail-envelope-closed3:before {
+    content: "\e90a";
+}
+.csmail-envelope-closed4:before {
+    content: "\e90b";
+}
+.csmail-envelope-open7:before {
+    content: "\e90c";
+}
+.csmail-envelope-open8:before {
+    content: "\e90d";
+}
+.csmail-error:before {
+    content: "\e90e";
+}
+.csmail-error2:before {
+    content: "\e90f";
+}
+.csmail-checked:before {
+    content: "\e910";
+}
+.csmail-checked2:before {
+    content: "\e911";
+}
+.csmail-cancel:before {
+    content: "\e912";
+}
+.csmail-cancel2:before {
+    content: "\e913";
+}
+.csmail--forbidden:before {
+    content: "\e914";
+}
+.csmail--forbidden2:before {
+    content: "\e915";
+}
+.csmail-add:before {
+    content: "\e916";
+}
+.csmail-add2:before {
+    content: "\e917";
+}
+.csmail-remove:before {
+    content: "\e918";
+}
+.csmail-remove2:before {
+    content: "\e919";
+}
+.csflag:before {
+    content: "\e91a";
+}
+.csflag2:before {
+    content: "\e91b";
+}
+.csflag3:before {
+    content: "\e91c";
+}
+.csflag4:before {
+    content: "\e91d";
+}
+.csflag5:before {
+    content: "\e91e";
+}
+.csflag6:before {
+    content: "\e91f";
+}
+.csflag7:before {
+    content: "\e920";
+}
+.csflag8:before {
+    content: "\e921";
+}
+.csbookmark:before {
+    content: "\e922";
+}
+.csbookmark2:before {
+    content: "\e923";
+}
+.csbookmark-add:before {
+    content: "\e924";
+}
+.csbookmark-add2:before {
+    content: "\e925";
+}
+.csbookmark-remove:before {
+    content: "\e926";
+}
+.csbookmark-remove2:before {
+    content: "\e927";
+}
+.cseye-hidden:before {
+    content: "\e928";
+}
+.cseye-hidden2:before {
+    content: "\e929";
+}
+.cseye:before {
+    content: "\e92a";
+}
+.cseye2:before {
+    content: "\e92b";
+}
+.csstar:before {
+    content: "\e92c";
+}
+.csstar2:before {
+    content: "\e92d";
+}
+.cskey:before {
+    content: "\e92e";
+}
+.cskey2:before {
+    content: "\e92f";
+}
+.cskey3:before {
+    content: "\e930";
+}
+.cskey4:before {
+    content: "\e931";
+}
+.cstrash-can:before {
+    content: "\e932";
+}
+.cstrash-can2:before {
+    content: "\e933";
+}
+.cstrash-can3:before {
+    content: "\e934";
+}
+.cstrash-can4:before {
+    content: "\e935";
+}
+.csinformation:before {
+    content: "\e936";
+}
+.csinformation2:before {
+    content: "\e937";
+}
+.csinformation3:before {
+    content: "\e938";
+}
+.csinformation4:before {
+    content: "\e939";
+}
+.csbook:before {
+    content: "\e93a";
+}
+.csbook2:before {
+    content: "\e93b";
+}
+.csbook-bookmark:before {
+    content: "\e93c";
+}
+.csbook-bookmark2:before {
+    content: "\e93d";
+}
+.csclipboard-edit:before {
+    content: "\e93e";
+}
+.csclipboard-edit2:before {
+    content: "\e93f";
+}
+.csclipboard-add:before {
+    content: "\e940";
+}
+.csclipboard-add2:before {
+    content: "\e941";
+}
+.csclipboard-remove:before {
+    content: "\e942";
+}
+.csclipboard-remove2:before {
+    content: "\e943";
+}
+.csclipboard:before {
+    content: "\e944";
+}
+.csclipboard2:before {
+    content: "\e945";
+}
+.csclipboard-download:before {
+    content: "\e946";
+}
+.csclipboard-download2:before {
+    content: "\e947";
+}
+.csclipboard-upload:before {
+    content: "\e948";
+}
+.csclipboard-upload2:before {
+    content: "\e949";
+}
+.csclipboard-checked:before {
+    content: "\e94a";
+}
+.csclipboard-checked2:before {
+    content: "\e94b";
+}
+.csclipboard-text:before {
+    content: "\e94c";
+}
+.csclipboard-text2:before {
+    content: "\e94d";
+}
+.csclipboard-list:before {
+    content: "\e94e";
+}
+.csclipboard-list2:before {
+    content: "\e94f";
+}
+.csnote:before {
+    content: "\e950";
+}
+.csnote2:before {
+    content: "\e951";
+}
+.csnote-add:before {
+    content: "\e952";
+}
+.csnote-add2:before {
+    content: "\e953";
+}
+.csnote-remove:before {
+    content: "\e954";
+}
+.csnote-remove2:before {
+    content: "\e955";
+}
+.csnote-text:before {
+    content: "\e956";
+}
+.csnote-text2:before {
+    content: "\e957";
+}
+.csnote-list:before {
+    content: "\e958";
+}
+.csnote-list2:before {
+    content: "\e959";
+}
+.csnote-checked:before {
+    content: "\e95a";
+}
+.csnote-checked2:before {
+    content: "\e95b";
+}
+.csnote-important:before {
+    content: "\e95c";
+}
+.csnote-important2:before {
+    content: "\e95d";
+}
+.csnotebook:before {
+    content: "\e95e";
+}
+.csnotebook2:before {
+    content: "\e95f";
+}
+.csnotebook3:before {
+    content: "\e960";
+}
+.csnotebook4:before {
+    content: "\e961";
+}
+.csnotebook5:before {
+    content: "\e962";
+}
+.csnotebook6:before {
+    content: "\e963";
+}
+.csnotebook7:before {
+    content: "\e964";
+}
+.csnotebook8:before {
+    content: "\e965";
+}
+.csnotebook-text:before {
+    content: "\e966";
+}
+.csnotebook-text2:before {
+    content: "\e967";
+}
+.csnotebook-list:before {
+    content: "\e968";
+}
+.csnotebook-list2:before {
+    content: "\e969";
+}
+.csdocument:before {
+    content: "\e96a";
+}
+.csdocument2:before {
+    content: "\e96b";
+}
+.csdocument-text:before {
+    content: "\e96c";
+}
+.csdocument-text2:before {
+    content: "\e96d";
+}
+.csdocument-text3:before {
+    content: "\e96e";
+}
+.csdocument-text4:before {
+    content: "\e96f";
+}
+.csdocument-download:before {
+    content: "\e970";
+}
+.csdocument-download2:before {
+    content: "\e971";
+}
+.csdocument-upload:before {
+    content: "\e972";
+}
+.csdocument-upload2:before {
+    content: "\e973";
+}
+.csdocument-bookmark:before {
+    content: "\e974";
+}
+.csdocument-bookmark2:before {
+    content: "\e975";
+}
+.csdocument-diagrams:before {
+    content: "\e976";
+}
+.csdocument-diagrams2:before {
+    content: "\e977";
+}
+.csdocument-recording:before {
+    content: "\e978";
+}
+.csdocument-recording2:before {
+    content: "\e979";
+}
+.csdocument-table:before {
+    content: "\e97a";
+}
+.csdocument-table2:before {
+    content: "\e97b";
+}
+.csdocument-music:before {
+    content: "\e97c";
+}
+.csdocument-music2:before {
+    content: "\e97d";
+}
+.csdocument-movie:before {
+    content: "\e97e";
+}
+.csdocument-movie2:before {
+    content: "\e97f";
+}
+.csdocument-play:before {
+    content: "\e980";
+}
+.csdocument-play2:before {
+    content: "\e981";
+}
+.csdocument-graph:before {
+    content: "\e982";
+}
+.csdocument-graph2:before {
+    content: "\e983";
+}
+.csdocument-time:before {
+    content: "\e984";
+}
+.csdocument-time2:before {
+    content: "\e985";
+}
+.csdocument-text5:before {
+    content: "\e986";
+}
+.csdocument-text6:before {
+    content: "\e987";
+}
+.csdocument-code:before {
+    content: "\e988";
+}
+.csdocument-code2:before {
+    content: "\e989";
+}
+.csdocument-cloud:before {
+    content: "\e98a";
+}
+.csdocument-cloud2:before {
+    content: "\e98b";
+}
+.csdocuments:before {
+    content: "\e98c";
+}
+.csdocuments2:before {
+    content: "\e98d";
+}
+.csdocuments3:before {
+    content: "\e98e";
+}
+.csdocuments4:before {
+    content: "\e98f";
+}
+.csdocument-search:before {
+    content: "\e990";
+}
+.csdocument-search2:before {
+    content: "\e991";
+}
+.csdocument-star:before {
+    content: "\e992";
+}
+.csdocument-star2:before {
+    content: "\e993";
+}
+.csdocument-unlocked:before {
+    content: "\e994";
+}
+.csdocument-unlocked2:before {
+    content: "\e995";
+}
+.csdocument-locked:before {
+    content: "\e996";
+}
+.csdocument-locked2:before {
+    content: "\e997";
+}
+.csdocument-error:before {
+    content: "\e998";
+}
+.csdocument-error2:before {
+    content: "\e999";
+}
+.csdocument-cancel:before {
+    content: "\e99a";
+}
+.csdocument-cancel2:before {
+    content: "\e99b";
+}
+.csdocument-checked:before {
+    content: "\e99c";
+}
+.csdocument-checked2:before {
+    content: "\e99d";
+}
+.csdocument-add:before {
+    content: "\e99e";
+}
+.csdocument-add2:before {
+    content: "\e99f";
+}
+.csdocument-remove:before {
+    content: "\e9a0";
+}
+.csdocument-remove2:before {
+    content: "\e9a1";
+}
+.csdocument-forbidden:before {
+    content: "\e9a2";
+}
+.csdocument-forbidden2:before {
+    content: "\e9a3";
+}
+.csdocument-information:before {
+    content: "\e9a4";
+}
+.csdocument-information2:before {
+    content: "\e9a5";
+}
+.csfolder-information:before {
+    content: "\e9a6";
+}
+.csfolder-information2:before {
+    content: "\e9a7";
+}
+.csdocument-list:before {
+    content: "\e9a8";
+}
+.csdocument-list2:before {
+    content: "\e9a9";
+}
+.csdocument-font:before {
+    content: "\e9aa";
+}
+.csdocument-font2:before {
+    content: "\e9ab";
+}
+.csinbox:before {
+    content: "\e9ac";
+}
+.csinbox2:before {
+    content: "\e9ad";
+}
+.csinboxes:before {
+    content: "\e9ae";
+}
+.csinboxes2:before {
+    content: "\e9af";
+}
+.csinbox-document:before {
+    content: "\e9b0";
+}
+.csinbox-document2:before {
+    content: "\e9b1";
+}
+.csinbox-document-text:before {
+    content: "\e9b2";
+}
+.csinbox-document-text2:before {
+    content: "\e9b3";
+}
+.csinbox-download:before {
+    content: "\e9b4";
+}
+.csinbox-download2:before {
+    content: "\e9b5";
+}
+.csinbox-upload:before {
+    content: "\e9b6";
+}
+.csinbox-upload2:before {
+    content: "\e9b7";
+}
+.csfolder:before {
+    content: "\e9b8";
+}
+.csfolder2:before {
+    content: "\e9b9";
+}
+.csfolder3:before {
+    content: "\e9ba";
+}
+.csfolder4:before {
+    content: "\e9bb";
+}
+.csfolders:before {
+    content: "\e9bc";
+}
+.csfolders2:before {
+    content: "\e9bd";
+}
+.csfolder-download:before {
+    content: "\e9be";
+}
+.csfolder-download2:before {
+    content: "\e9bf";
+}
+.csfolder-upload:before {
+    content: "\e9c0";
+}
+.csfolder-upload2:before {
+    content: "\e9c1";
+}
+.csfolder-unlocked:before {
+    content: "\e9c2";
+}
+.csfolder-unlocked2:before {
+    content: "\e9c3";
+}
+.csfolder-locked:before {
+    content: "\e9c4";
+}
+.csfolder-locked2:before {
+    content: "\e9c5";
+}
+.csfolder-search:before {
+    content: "\e9c6";
+}
+.csfolder-search2:before {
+    content: "\e9c7";
+}
+.csfolder-error:before {
+    content: "\e9c8";
+}
+.csfolder-error2:before {
+    content: "\e9c9";
+}
+.csfolder-cancel:before {
+    content: "\e9ca";
+}
+.csfolder-cancel2:before {
+    content: "\e9cb";
+}
+.csfolder-checked:before {
+    content: "\e9cc";
+}
+.csfolder-checked2:before {
+    content: "\e9cd";
+}
+.csfolder-add:before {
+    content: "\e9ce";
+}
+.csfolder-add2:before {
+    content: "\e9cf";
+}
+.csfolder-remove:before {
+    content: "\e9d0";
+}
+.csfolder-remove2:before {
+    content: "\e9d1";
+}
+.csfolder-forbidden:before {
+    content: "\e9d2";
+}
+.csfolder-forbidden2:before {
+    content: "\e9d3";
+}
+.csfolder-bookmark:before {
+    content: "\e9d4";
+}
+.csfolder-bookmark2:before {
+    content: "\e9d5";
+}
+.csdocument-zip:before {
+    content: "\e9d6";
+}
+.csdocument-zip2:before {
+    content: "\e9d7";
+}
+.cszip:before {
+    content: "\e9d8";
+}
+.cszip2:before {
+    content: "\e9d9";
+}
+.cssearch:before {
+    content: "\e9da";
+}
+.cssearch2:before {
+    content: "\e9db";
+}
+.cssearch-plus:before {
+    content: "\e9dc";
+}
+.cssearch-plus2:before {
+    content: "\e9dd";
+}
+.cssearch-minus:before {
+    content: "\e9de";
+}
+.cssearch-minus2:before {
+    content: "\e9df";
+}
+.cslock:before {
+    content: "\e9e0";
+}
+.cslock2:before {
+    content: "\e9e1";
+}
+.cslock-open:before {
+    content: "\e9e2";
+}
+.cslock-open2:before {
+    content: "\e9e3";
+}
+.cslock-open3:before {
+    content: "\e9e4";
+}
+.cslock-open4:before {
+    content: "\e9e5";
+}
+.cslock-stripes:before {
+    content: "\e9e6";
+}
+.cslock-stripes2:before {
+    content: "\e9e7";
+}
+.cslock-rounded:before {
+    content: "\e9e8";
+}
+.cslock-rounded2:before {
+    content: "\e9e9";
+}
+.cslock-rounded-open:before {
+    content: "\e9ea";
+}
+.cslock-rounded-open2:before {
+    content: "\e9eb";
+}
+.cslock-rounded-open3:before {
+    content: "\e9ec";
+}
+.cslock-rounded-open4:before {
+    content: "\e9ed";
+}
+.cscombination-lock:before {
+    content: "\e9ee";
+}
+.cscombination-lock2:before {
+    content: "\e9ef";
+}
+.csprinter:before {
+    content: "\e9f0";
+}
+.csprinter2:before {
+    content: "\e9f1";
+}
+.csprinter3:before {
+    content: "\e9f2";
+}
+.csprinter4:before {
+    content: "\e9f3";
+}
+.csprinter-text:before {
+    content: "\e9f4";
+}
+.csprinter-text2:before {
+    content: "\e9f5";
+}
+.csprinter-text3:before {
+    content: "\e9f6";
+}
+.csprinter-text4:before {
+    content: "\e9f7";
+}
+.csdocument-shred:before {
+    content: "\e9f8";
+}
+.csdocument-shred2:before {
+    content: "\e9f9";
+}
+.csshredder:before {
+    content: "\e9fa";
+}
+.csshredder2:before {
+    content: "\e9fb";
+}
+.csdocument-scan:before {
+    content: "\e9fc";
+}
+.csdocument-scan2:before {
+    content: "\e9fd";
+}
+.cscloud-download:before {
+    content: "\e9fe";
+}
+.cscloud-download2:before {
+    content: "\e9ff";
+}
+.cscloud-upload:before {
+    content: "\ea00";
+}
+.cscloud-upload2:before {
+    content: "\ea01";
+}
+.cscloud-error:before {
+    content: "\ea02";
+}
+.cscloud-error2:before {
+    content: "\ea03";
+}
+.cscloud:before {
+    content: "\ea04";
+}
+.cscloud2:before {
+    content: "\ea05";
+}
+.csinbox-filled:before {
+    content: "\ea06";
+}
+.csinbox-filled2:before {
+    content: "\ea07";
+}
+.cspen:before {
+    content: "\ea08";
+}
+.cspen2:before {
+    content: "\ea09";
+}
+.cspen-angled:before {
+    content: "\ea0a";
+}
+.cspen-angled2:before {
+    content: "\ea0b";
+}
+.csdocument-edit:before {
+    content: "\ea0c";
+}
+.csdocument-edit2:before {
+    content: "\ea0d";
+}
+.csdocument-certificate:before {
+    content: "\ea0e";
+}
+.csdocument-certificate2:before {
+    content: "\ea0f";
+}
+.cscertificate:before {
+    content: "\ea10";
+}
+.cscertificate2:before {
+    content: "\ea11";
+}
+.cspackage:before {
+    content: "\ea12";
+}
+.cspackage2:before {
+    content: "\ea13";
+}
+.csbox:before {
+    content: "\ea14";
+}
+.csbox2:before {
+    content: "\ea15";
+}
+.csbox-filled:before {
+    content: "\ea16";
+}
+.csbox-filled2:before {
+    content: "\ea17";
+}
+.csbox3:before {
+    content: "\ea18";
+}
+.csbox4:before {
+    content: "\ea19";
+}
+.csbox5:before {
+    content: "\ea1a";
+}
+.csbox6:before {
+    content: "\ea1b";
+}
+.csbox-bookmark:before {
+    content: "\ea1c";
+}
+.csbox-bookmark2:before {
+    content: "\ea1d";
+}
+.cstag-cord:before {
+    content: "\ea1e";
+}
+.cstag-cord2:before {
+    content: "\ea1f";
+}
+.cstag:before {
+    content: "\ea20";
+}
+.cstag2:before {
+    content: "\ea21";
+}
+.cstags:before {
+    content: "\ea22";
+}
+.cstags2:before {
+    content: "\ea23";
+}
+.cstag-add:before {
+    content: "\ea24";
+}
+.cstag-add2:before {
+    content: "\ea25";
+}
+.cstag-remove:before {
+    content: "\ea26";
+}
+.cstag-remove2:before {
+    content: "\ea27";
+}
+.cstag-checked:before {
+    content: "\ea28";
+}
+.cstag-checked2:before {
+    content: "\ea29";
+}
+.cstag-cancel:before {
+    content: "\ea2a";
+}
+.cstag-cancel2:before {
+    content: "\ea2b";
+}
+.cspaperclip:before {
+    content: "\ea2c";
+}
+.cspaperclip2:before {
+    content: "\ea2d";
+}
+.csbasketball:before {
+    content: "\ea2e";
+}
+.csbasketball2:before {
+    content: "\ea2f";
+}
+.csbaseball:before {
+    content: "\ea30";
+}
+.csbaseball2:before {
+    content: "\ea31";
+}
+.cstennis-ball:before {
+    content: "\ea32";
+}
+.cstennis-ball2:before {
+    content: "\ea33";
+}
+.csbowling-ball:before {
+    content: "\ea34";
+}
+.csbowling-ball2:before {
+    content: "\ea35";
+}
+.csbilliard-ball:before {
+    content: "\ea36";
+}
+.csbilliard-ball2:before {
+    content: "\ea37";
+}
+.cssoccer-ball:before {
+    content: "\ea38";
+}
+.cssoccer-ball2:before {
+    content: "\ea39";
+}
+.cssoccer-court:before {
+    content: "\ea3a";
+}
+.cssoccer-court2:before {
+    content: "\ea3b";
+}
+.csfootball:before {
+    content: "\ea3c";
+}
+.csfootball2:before {
+    content: "\ea3d";
+}
+.csfootball3:before {
+    content: "\ea3e";
+}
+.csfootball4:before {
+    content: "\ea3f";
+}
+.csbasketball3:before {
+    content: "\ea40";
+}
+.csbasketball4:before {
+    content: "\ea41";
+}
+.csbaseball-set:before {
+    content: "\ea42";
+}
+.csbaseball-set2:before {
+    content: "\ea43";
+}
+.cstennis-ball3:before {
+    content: "\ea44";
+}
+.cstennis-ball4:before {
+    content: "\ea45";
+}
+.cstrophy:before {
+    content: "\ea46";
+}
+.cstrophy2:before {
+    content: "\ea47";
+}
+.cstrophy-one:before {
+    content: "\ea48";
+}
+.cstrophy-one2:before {
+    content: "\ea49";
+}
+.cstrophy3:before {
+    content: "\ea4a";
+}
+.cstrophy4:before {
+    content: "\ea4b";
+}
+.csmedal:before {
+    content: "\ea4c";
+}
+.csmedal2:before {
+    content: "\ea4d";
+}
+.csmedal3:before {
+    content: "\ea4e";
+}
+.csmedal4:before {
+    content: "\ea4f";
+}
+.csweights:before {
+    content: "\ea50";
+}
+.csweights2:before {
+    content: "\ea51";
+}
+.cstennis-racket:before {
+    content: "\ea52";
+}
+.cstennis-racket2:before {
+    content: "\ea53";
+}
+.csbasketball-hoop:before {
+    content: "\ea54";
+}
+.csbasketball-hoop2:before {
+    content: "\ea55";
+}
+.cstable-tennis:before {
+    content: "\ea56";
+}
+.cstable-tennis2:before {
+    content: "\ea57";
+}
+.csvolleyball:before {
+    content: "\ea58";
+}
+.csvolleyball2:before {
+    content: "\ea59";
+}
+.csstop-watch:before {
+    content: "\ea5a";
+}
+.csstop-watch2:before {
+    content: "\ea5b";
+}
+.csstop-watch3:before {
+    content: "\ea5c";
+}
+.csstop-watch4:before {
+    content: "\ea5d";
+}
+.cshockey-stick:before {
+    content: "\ea5e";
+}
+.cshockey-stick2:before {
+    content: "\ea5f";
+}
+.cshockey-sticks:before {
+    content: "\ea60";
+}
+.cshockey-sticks2:before {
+    content: "\ea61";
+}
+.csshuttlecock:before {
+    content: "\ea62";
+}
+.csshuttlecock2:before {
+    content: "\ea63";
+}
+.csgolf:before {
+    content: "\ea64";
+}
+.csgolf2:before {
+    content: "\ea65";
+}
+.csmove:before {
+    content: "\ea66";
+}
+.csmove2:before {
+    content: "\ea67";
+}
+.csclipboard-move:before {
+    content: "\ea68";
+}
+.csclipboard-move2:before {
+    content: "\ea69";
+}
+.csaward:before {
+    content: "\ea6a";
+}
+.csaward2:before {
+    content: "\ea6b";
+}
+.csaward3:before {
+    content: "\ea6c";
+}
+.csaward4:before {
+    content: "\ea6d";
+}
+.csaward5:before {
+    content: "\ea6e";
+}
+.csaward6:before {
+    content: "\ea6f";
+}
+.csaward7:before {
+    content: "\ea70";
+}
+.csaward8:before {
+    content: "\ea71";
+}
+.csmedal5:before {
+    content: "\ea72";
+}
+.csmedal6:before {
+    content: "\ea73";
+}
+.csmedal7:before {
+    content: "\ea74";
+}
+.csmedal8:before {
+    content: "\ea75";
+}
+.csboxing-glove:before {
+    content: "\ea76";
+}
+.csboxing-glove2:before {
+    content: "\ea77";
+}
+.cswhistle:before {
+    content: "\ea78";
+}
+.cswhistle2:before {
+    content: "\ea79";
+}
+.csvolleyball-water:before {
+    content: "\ea7a";
+}
+.csvolleyball-water2:before {
+    content: "\ea7b";
+}
+.cscheckered-flag:before {
+    content: "\ea7c";
+}
+.cscheckered-flag2:before {
+    content: "\ea7d";
+}
+.cstarget-arrow:before {
+    content: "\ea7e";
+}
+.cstarget-arrow2:before {
+    content: "\ea7f";
+}
+.cstarget:before {
+    content: "\ea80";
+}
+.cstarget2:before {
+    content: "\ea81";
+}
+.cssailing-boat:before {
+    content: "\ea82";
+}
+.cssailing-boat2:before {
+    content: "\ea83";
+}
+.cssailing-boat-water:before {
+    content: "\ea84";
+}
+.cssailing-boat-water2:before {
+    content: "\ea85";
+}
+.csbowling-pins:before {
+    content: "\ea86";
+}
+.csbowling-pins2:before {
+    content: "\ea87";
+}
+.csbowling-pin-ball:before {
+    content: "\ea88";
+}
+.csbowling-pin-ball2:before {
+    content: "\ea89";
+}
+.csdiving-goggles:before {
+    content: "\ea8a";
+}
+.csdiving-goggles2:before {
+    content: "\ea8b";
+}
+.cssports-shoe:before {
+    content: "\ea8c";
+}
+.cssports-shoe2:before {
+    content: "\ea8d";
+}
+.cssoccer-shoe:before {
+    content: "\ea8e";
+}
+.cssoccer-shoe2:before {
+    content: "\ea8f";
+}
+.csice-skate:before {
+    content: "\ea90";
+}
+.csice-skate2:before {
+    content: "\ea91";
+}
+.cscloud3:before {
+    content: "\ea92";
+}
+.cscloud4:before {
+    content: "\ea93";
+}
+.cscloud-sun:before {
+    content: "\ea94";
+}
+.cscloud-sun2:before {
+    content: "\ea95";
+}
+.cscloud-moon:before {
+    content: "\ea96";
+}
+.cscloud-moon2:before {
+    content: "\ea97";
+}
+.cscloud-rain:before {
+    content: "\ea98";
+}
+.cscloud-rain2:before {
+    content: "\ea99";
+}
+.cscloud-sun-rain:before {
+    content: "\ea9a";
+}
+.cscloud-sun-rain2:before {
+    content: "\ea9b";
+}
+.cscloud-moon-rain:before {
+    content: "\ea9c";
+}
+.cscloud-moon-rain2:before {
+    content: "\ea9d";
+}
+.cscloud-snow:before {
+    content: "\ea9e";
+}
+.cscloud-snow2:before {
+    content: "\ea9f";
+}
+.cscloud-sun-snow:before {
+    content: "\eaa0";
+}
+.cscloud-sun-snow2:before {
+    content: "\eaa1";
+}
+.cscloud-moon-snow:before {
+    content: "\eaa2";
+}
+.cscloud-moon-snow2:before {
+    content: "\eaa3";
+}
+.cscloud-lightning:before {
+    content: "\eaa4";
+}
+.cscloud-lightning2:before {
+    content: "\eaa5";
+}
+.cscloud-sun-lightning:before {
+    content: "\eaa6";
+}
+.cscloud-sun-lightning2:before {
+    content: "\eaa7";
+}
+.cscloud-moon-lightning:before {
+    content: "\eaa8";
+}
+.cscloud-moon-lightning2:before {
+    content: "\eaa9";
+}
+.cscloud-wind:before {
+    content: "\eaaa";
+}
+.cscloud-wind2:before {
+    content: "\eaab";
+}
+.cscloud-raindrops:before {
+    content: "\eaac";
+}
+.cscloud-raindrops2:before {
+    content: "\eaad";
+}
+.cscloud-sun-raindrops:before {
+    content: "\eaae";
+}
+.cscloud-sun-raindrops2:before {
+    content: "\eaaf";
+}
+.cscloud-moon-raindrops:before {
+    content: "\eab0";
+}
+.cscloud-moon-raindrops2:before {
+    content: "\eab1";
+}
+.cscloud-snowflakes:before {
+    content: "\eab2";
+}
+.cscloud-snowflakes2:before {
+    content: "\eab3";
+}
+.cscloud-sun-snowflakes:before {
+    content: "\eab4";
+}
+.cscloud-sun-snowflakes2:before {
+    content: "\eab5";
+}
+.cscloud-moon-snowflakes:before {
+    content: "\eab6";
+}
+.cscloud-moon-snowflakes2:before {
+    content: "\eab7";
+}
+.csclouds:before {
+    content: "\eab8";
+}
+.csclouds2:before {
+    content: "\eab9";
+}
+.cscloud-add:before {
+    content: "\eaba";
+}
+.cscloud-add2:before {
+    content: "\eabb";
+}
+.cscloud-remove:before {
+    content: "\eabc";
+}
+.cscloud-remove2:before {
+    content: "\eabd";
+}
+.cscloud-error3:before {
+    content: "\eabe";
+}
+.cscloud-error4:before {
+    content: "\eabf";
+}
+.cscloud-fog:before {
+    content: "\eac0";
+}
+.cscloud-fog2:before {
+    content: "\eac1";
+}
+.cs-cloud-sun-fog:before {
+    content: "\eac2";
+}
+.cs-cloud-sun-fog2:before {
+    content: "\eac3";
+}
+.cscloud-moon-fog:before {
+    content: "\eac4";
+}
+.cscloud-moon-fog2:before {
+    content: "\eac5";
+}
+.csmoon-stars:before {
+    content: "\eac6";
+}
+.csmoon-stars2:before {
+    content: "\eac7";
+}
+.csmoon:before {
+    content: "\eac8";
+}
+.csmoon2:before {
+    content: "\eac9";
+}
+.cssun:before {
+    content: "\eaca";
+}
+.cssun2:before {
+    content: "\eacb";
+}
+.cssunrise:before {
+    content: "\eacc";
+}
+.cssunrise2:before {
+    content: "\eacd";
+}
+.cssunset:before {
+    content: "\eace";
+}
+.cssunset2:before {
+    content: "\eacf";
+}
+.cssunset3:before {
+    content: "\ead0";
+}
+.cssunset4:before {
+    content: "\ead1";
+}
+.cssunset5:before {
+    content: "\ead2";
+}
+.cssunset6:before {
+    content: "\ead3";
+}
+.csrainbow:before {
+    content: "\ead4";
+}
+.csrainbow2:before {
+    content: "\ead5";
+}
+.csumbrella:before {
+    content: "\ead6";
+}
+.csumbrella2:before {
+    content: "\ead7";
+}
+.csraindrops:before {
+    content: "\ead8";
+}
+.csraindrops2:before {
+    content: "\ead9";
+}
+.csraindrop:before {
+    content: "\eada";
+}
+.csraindrop2:before {
+    content: "\eadb";
+}
+.cssunglasses:before {
+    content: "\eadc";
+}
+.cssunglasses2:before {
+    content: "\eadd";
+}
+.csstars:before {
+    content: "\eade";
+}
+.csstars2:before {
+    content: "\eadf";
+}
+.csclouds3:before {
+    content: "\eae0";
+}
+.csclouds4:before {
+    content: "\eae1";
+}
+.csmoonrise:before {
+    content: "\eae2";
+}
+.csmoonrise2:before {
+    content: "\eae3";
+}
+.csmoonset:before {
+    content: "\eae4";
+}
+.csmoonset2:before {
+    content: "\eae5";
+}
+.cswind:before {
+    content: "\eae6";
+}
+.cswind2:before {
+    content: "\eae7";
+}
+.csfull-moon:before {
+    content: "\eae8";
+}
+.csfull-moon2:before {
+    content: "\eae9";
+}
+.cscrescent:before {
+    content: "\eaea";
+}
+.cscrescent2:before {
+    content: "\eaeb";
+}
+.cshalf-moon:before {
+    content: "\eaec";
+}
+.cshalf-moon2:before {
+    content: "\eaed";
+}
+.csgibbous-moon:before {
+    content: "\eaee";
+}
+.csgibbous-moon2:before {
+    content: "\eaef";
+}
+.csmoon3:before {
+    content: "\eaf0";
+}
+.csmoon4:before {
+    content: "\eaf1";
+}
+.csgibbous-moon3:before {
+    content: "\eaf2";
+}
+.csgibbous-moon4:before {
+    content: "\eaf3";
+}
+.cshalf-moon3:before {
+    content: "\eaf4";
+}
+.cshalf-moon4:before {
+    content: "\eaf5";
+}
+.cscrescent3:before {
+    content: "\eaf6";
+}
+.cscrescent4:before {
+    content: "\eaf7";
+}
+.csbarometer:before {
+    content: "\eaf8";
+}
+.csbarometer2:before {
+    content: "\eaf9";
+}
+.cscompass-north:before {
+    content: "\eafa";
+}
+.cscompass-north2:before {
+    content: "\eafb";
+}
+.cscompass-west:before {
+    content: "\eafc";
+}
+.cscompass-west2:before {
+    content: "\eafd";
+}
+.cscompass-east:before {
+    content: "\eafe";
+}
+.cscompass-east2:before {
+    content: "\eaff";
+}
+.cscompass-south:before {
+    content: "\eb00";
+}
+.cscompass-south2:before {
+    content: "\eb01";
+}
+.csair-sock:before {
+    content: "\eb02";
+}
+.csair-sock2:before {
+    content: "\eb03";
+}
+.cstornado:before {
+    content: "\eb04";
+}
+.cstornado2:before {
+    content: "\eb05";
+}
+.csdegree-fahrenheit:before {
+    content: "\eb06";
+}
+.csdegree-fahrenheit2:before {
+    content: "\eb07";
+}
+.csdegree-celsius:before {
+    content: "\eb08";
+}
+.csdegree-celsius2:before {
+    content: "\eb09";
+}
+.cswarning:before {
+    content: "\eb0a";
+}
+.cswarning2:before {
+    content: "\eb0b";
+}
+.cscompass:before {
+    content: "\eb0c";
+}
+.cscompass2:before {
+    content: "\eb0d";
+}
+.cscompass3:before {
+    content: "\eb0e";
+}
+.cscompass4:before {
+    content: "\eb0f";
+}
+.cscompass5:before {
+    content: "\eb10";
+}
+.cscompass6:before {
+    content: "\eb11";
+}
+.cscompass7:before {
+    content: "\eb12";
+}
+.cscompass8:before {
+    content: "\eb13";
+}
+.csthermometer:before {
+    content: "\eb14";
+}
+.csthermometer2:before {
+    content: "\eb15";
+}
+.csthermometer-low:before {
+    content: "\eb16";
+}
+.csthermometer-low2:before {
+    content: "\eb17";
+}
+.csthermometer-quarter:before {
+    content: "\eb18";
+}
+.csthermometer-quarter2:before {
+    content: "\eb19";
+}
+.csthermometer-half:before {
+    content: "\eb1a";
+}
+.csthermometer-half2:before {
+    content: "\eb1b";
+}
+.csthermometer-three-quarters:before {
+    content: "\eb1c";
+}
+.csthermometer-three-quarters2:before {
+    content: "\eb1d";
+}
+.csthermometer-full:before {
+    content: "\eb1e";
+}
+.csthermometer-full2:before {
+    content: "\eb1f";
+}
+.cslightning:before {
+    content: "\eb20";
+}
+.cslightning2:before {
+    content: "\eb21";
+}
+.cswind-turbine:before {
+    content: "\eb22";
+}
+.cswind-turbine2:before {
+    content: "\eb23";
+}
+.cssnowflake:before {
+    content: "\eb24";
+}
+.cssnowflake2:before {
+    content: "\eb25";
+}
+.csflashed-face:before {
+    content: "\eb26";
+}
+.csflashed-face2:before {
+    content: "\eb27";
+}
+.csflashed-face3:before {
+    content: "\eb28";
+}
+.csflashed-face4:before {
+    content: "\eb29";
+}
+.csflashed-face-glasses:before {
+    content: "\eb2a";
+}
+.csflashed-face-glasses2:before {
+    content: "\eb2b";
+}
+.csface-missing-moth:before {
+    content: "\eb2c";
+}
+.csface-missing-moth2:before {
+    content: "\eb2d";
+}
+.csneutral-face:before {
+    content: "\eb2e";
+}
+.csneutral-face2:before {
+    content: "\eb2f";
+}
+.cssmiling-face:before {
+    content: "\eb30";
+}
+.cssmiling-face2:before {
+    content: "\eb31";
+}
+.cssad-face:before {
+    content: "\eb32";
+}
+.cssad-face2:before {
+    content: "\eb33";
+}
+.csface-open-mouth:before {
+    content: "\eb34";
+}
+.csface-open-mouth2:before {
+    content: "\eb35";
+}
+.csface-open-mouth3:before {
+    content: "\eb36";
+}
+.csface-open-mouth4:before {
+    content: "\eb37";
+}
+.cswinking-face:before {
+    content: "\eb38";
+}
+.cswinking-face2:before {
+    content: "\eb39";
+}
+.cslaughing-face:before {
+    content: "\eb3a";
+}
+.cslaughing-face2:before {
+    content: "\eb3b";
+}
+.cslaughing-face3:before {
+    content: "\eb3c";
+}
+.cslaughing-face4:before {
+    content: "\eb3d";
+}
+.cssmirking-face:before {
+    content: "\eb3e";
+}
+.cssmirking-face2:before {
+    content: "\eb3f";
+}
+.csstubborn-face:before {
+    content: "\eb40";
+}
+.csstubborn-face2:before {
+    content: "\eb41";
+}
+.csneutral-face3:before {
+    content: "\eb42";
+}
+.csneutral-face4:before {
+    content: "\eb43";
+}
+.cssad-face3:before {
+    content: "\eb44";
+}
+.cssad-face4:before {
+    content: "\eb45";
+}
+.cssmiling-face3:before {
+    content: "\eb46";
+}
+.cssmiling-face4:before {
+    content: "\eb47";
+}
+.cssmiling-face-eyebrows:before {
+    content: "\eb48";
+}
+.cssmiling-face-eyebrows2:before {
+    content: "\eb49";
+}
+.csgrinning-face-eyebrows:before {
+    content: "\eb4a";
+}
+.csgrinning-face-eyebrows2:before {
+    content: "\eb4b";
+}
+.cssad-face-eyebrows:before {
+    content: "\eb4c";
+}
+.cssad-face-eyebrows2:before {
+    content: "\eb4d";
+}
+.csneutral-face-eyebrows:before {
+    content: "\eb4e";
+}
+.csneutral-face-eyebrows2:before {
+    content: "\eb4f";
+}
+.csangry-face:before {
+    content: "\eb50";
+}
+.csangry-face2:before {
+    content: "\eb51";
+}
+.csworried-face:before {
+    content: "\eb52";
+}
+.csworried-face2:before {
+    content: "\eb53";
+}
+.cswinking-face3:before {
+    content: "\eb54";
+}
+.cswinking-face4:before {
+    content: "\eb55";
+}
+.csangry-face-eyebrows:before {
+    content: "\eb56";
+}
+.csangry-face-eyebrows2:before {
+    content: "\eb57";
+}
+.csgrinning-face:before {
+    content: "\eb58";
+}
+.csgrinning-face2:before {
+    content: "\eb59";
+}
+.cssad-face5:before {
+    content: "\eb5a";
+}
+.cssad-face6:before {
+    content: "\eb5b";
+}
+.csgrinning-face-eyebrows3:before {
+    content: "\eb5c";
+}
+.csgrinning-face-eyebrows4:before {
+    content: "\eb5d";
+}
+.csfake-grinning-face-eyebrows:before {
+    content: "\eb5e";
+}
+.csfake-grinning-face-eyebrows2:before {
+    content: "\eb5f";
+}
+.csworried-face-eyebrows:before {
+    content: "\eb60";
+}
+.csworried-face-eyebrows2:before {
+    content: "\eb61";
+}
+.csface-stuck-out-tongue:before {
+    content: "\eb62";
+}
+.csface-stuck-out-tongue2:before {
+    content: "\eb63";
+}
+.csface-stuck-out-tongue3:before {
+    content: "\eb64";
+}
+.csface-stuck-out-tongue4:before {
+    content: "\eb65";
+}
+.cskissing-face:before {
+    content: "\eb66";
+}
+.cskissing-face2:before {
+    content: "\eb67";
+}
+.csgrinning-face-teeth:before {
+    content: "\eb68";
+}
+.csgrinning-face-teeth2:before {
+    content: "\eb69";
+}
+.csangry-face-teeth:before {
+    content: "\eb6a";
+}
+.csangry-face-teeth2:before {
+    content: "\eb6b";
+}
+.csworried-face-teeth:before {
+    content: "\eb6c";
+}
+.csworried-face-teeth2:before {
+    content: "\eb6d";
+}
+.csgrinning-face-teeth3:before {
+    content: "\eb6e";
+}
+.csgrinning-face-teeth4:before {
+    content: "\eb6f";
+}
+.csface-open-mouth-eyebrows:before {
+    content: "\eb70";
+}
+.csface-open-mouth-eyebrows2:before {
+    content: "\eb71";
+}
+.csface-open-mouth-eyebrows3:before {
+    content: "\eb72";
+}
+.csface-open-mouth-eyebrows4:before {
+    content: "\eb73";
+}
+.csangry-face-open-mouth-eyebrows:before {
+    content: "\eb74";
+}
+.csangry-face-open-mouth-eyebrows2:before {
+    content: "\eb75";
+}
+.csunamused-face-tightly-closed-eyes:before {
+    content: "\eb76";
+}
+.csunamused-face-tightly-closed-eyes2:before {
+    content: "\eb77";
+}
+.cssad-face--tightly-closed-eyes:before {
+    content: "\eb78";
+}
+.cssad-face--tightly-closed-eyes2:before {
+    content: "\eb79";
+}
+.cskissing-face3:before {
+    content: "\eb7a";
+}
+.cskissing-face4:before {
+    content: "\eb7b";
+}
+.csface-closed-meyes:before {
+    content: "\eb7c";
+}
+.csface-closed-meyes2:before {
+    content: "\eb7d";
+}
+.csamused-face:before {
+    content: "\eb7e";
+}
+.csamused-face2:before {
+    content: "\eb7f";
+}
+.csamused-face-closed-eyes:before {
+    content: "\eb80";
+}
+.csamused-face-closed-eyes2:before {
+    content: "\eb81";
+}
+.csamused-face-closed-eyes3:before {
+    content: "\eb82";
+}
+.csamused-face-closed-eyes4:before {
+    content: "\eb83";
+}
+.csface-closed-eyes-open-mouth:before {
+    content: "\eb84";
+}
+.csface-closed-eyes-open-mouth2:before {
+    content: "\eb85";
+}
+.csface-closed-eyes-open-mouth3:before {
+    content: "\eb86";
+}
+.csface-closed-eyes-open-mouth4:before {
+    content: "\eb87";
+}
+.csface-closed-eyes-open-mouth5:before {
+    content: "\eb88";
+}
+.csface-closed-eyes-open-mouth6:before {
+    content: "\eb89";
+}
+.cslaughing-face5:before {
+    content: "\eb8a";
+}
+.cslaughing-face6:before {
+    content: "\eb8b";
+}
+.cssmiling-face5:before {
+    content: "\eb8c";
+}
+.cssmiling-face6:before {
+    content: "\eb8d";
+}
+.csgrinning-face3:before {
+    content: "\eb8e";
+}
+.csgrinning-face4:before {
+    content: "\eb8f";
+}
+.cssad-face7:before {
+    content: "\eb90";
+}
+.cssad-face8:before {
+    content: "\eb91";
+}
+.cssad-face9:before {
+    content: "\eb92";
+}
+.cssad-face10:before {
+    content: "\eb93";
+}
+.cssad-face-closed-eyes:before {
+    content: "\eb94";
+}
+.cssad-face-closed-eyes2:before {
+    content: "\eb95";
+}
+.cssad-face11:before {
+    content: "\eb96";
+}
+.cssad-face12:before {
+    content: "\eb97";
+}
+.cssmiling-face7:before {
+    content: "\eb98";
+}
+.cssmiling-face8:before {
+    content: "\eb99";
+}
+.csastonished-face:before {
+    content: "\eb9a";
+}
+.csastonished-face2:before {
+    content: "\eb9b";
+}
+.csastonished-face3:before {
+    content: "\eb9c";
+}
+.csastonished-face4:before {
+    content: "\eb9d";
+}
+.csface-moustache:before {
+    content: "\eb9e";
+}
+.csface-moustache2:before {
+    content: "\eb9f";
+}
+.csface-moustache3:before {
+    content: "\eba0";
+}
+.csface-moustache4:before {
+    content: "\eba1";
+}
+.csface-glasses:before {
+    content: "\eba2";
+}
+.csface-glasses2:before {
+    content: "\eba3";
+}
+.csface-sunglasses:before {
+    content: "\eba4";
+}
+.csface-sunglasses2:before {
+    content: "\eba5";
+}
+.cssmirking-face-sunglasses:before {
+    content: "\eba6";
+}
+.cssmirking-face-sunglasses2:before {
+    content: "\eba7";
+}
+.csmiddle-finger:before {
+    content: "\eba8";
+}
+.csmiddle-finger2:before {
+    content: "\eba9";
+}
+.csrock-n-roll:before {
+    content: "\ebaa";
+}
+.csrock-n-roll2:before {
+    content: "\ebab";
+}
+.cshigh-five:before {
+    content: "\ebac";
+}
+.cshigh-five2:before {
+    content: "\ebad";
+}
+.csthumb-up:before {
+    content: "\ebae";
+}
+.csthumb-up2:before {
+    content: "\ebaf";
+}
+.csthumb-down:before {
+    content: "\ebb0";
+}
+.csthumb-down2:before {
+    content: "\ebb1";
+}
+.csthumb-up3:before {
+    content: "\ebb2";
+}
+.csthumb-up4:before {
+    content: "\ebb3";
+}
+.csthumb-down3:before {
+    content: "\ebb4";
+}
+.csthumb-down4:before {
+    content: "\ebb5";
+}
+.cstwo-fingers-swipe-left:before {
+    content: "\ebb6";
+}
+.cstwo-fingers-swipe-left2:before {
+    content: "\ebb7";
+}
+.cstwo-fingers-swipe-right:before {
+    content: "\ebb8";
+}
+.cstwo-fingers-swipe-right2:before {
+    content: "\ebb9";
+}
+.cstwo-fingers-swipe-up:before {
+    content: "\ebba";
+}
+.cstwo-fingers-swipe-up2:before {
+    content: "\ebbb";
+}
+.cstwo-fingers-swipe-down:before {
+    content: "\ebbc";
+}
+.cstwo-fingers-swipe-down2:before {
+    content: "\ebbd";
+}
+.cstwo-fingers:before {
+    content: "\ebbe";
+}
+.cstwo-fingers2:before {
+    content: "\ebbf";
+}
+.csthree-fingers-double-tap:before {
+    content: "\ebc0";
+}
+.csthree-fingers-double-tap2:before {
+    content: "\ebc1";
+}
+.cstwo-fingers-resize-out:before {
+    content: "\ebc2";
+}
+.cstwo-fingers-resize-out2:before {
+    content: "\ebc3";
+}
+.cstwo-fingers-resize-in:before {
+    content: "\ebc4";
+}
+.cstwo-fingers-resize-in2:before {
+    content: "\ebc5";
+}
+.cstwo-fingers-rotate:before {
+    content: "\ebc6";
+}
+.cstwo-fingers-rotate2:before {
+    content: "\ebc7";
+}
+.csone-finger-swipe-left:before {
+    content: "\ebc8";
+}
+.csone-finger-swipe-left2:before {
+    content: "\ebc9";
+}
+.csone-finger-swipe-right:before {
+    content: "\ebca";
+}
+.csone-finger-swipe-right2:before {
+    content: "\ebcb";
+}
+.csone-finger-swipe-up:before {
+    content: "\ebcc";
+}
+.csone-finger-swipe-up2:before {
+    content: "\ebcd";
+}
+.csone-finger-swipe-down:before {
+    content: "\ebce";
+}
+.csone-finger-swipe-down2:before {
+    content: "\ebcf";
+}
+.csone-finger:before {
+    content: "\ebd0";
+}
+.csone-finger2:before {
+    content: "\ebd1";
+}
+.csone-finger-double-tap:before {
+    content: "\ebd2";
+}
+.csone-finger-double-tap2:before {
+    content: "\ebd3";
+}
+.csone-finger-tap:before {
+    content: "\ebd4";
+}
+.csone-finger-tap2:before {
+    content: "\ebd5";
+}
+.csone-finger-tap-hold:before {
+    content: "\ebd6";
+}
+.csone-finger-tap-hold2:before {
+    content: "\ebd7";
+}
+.csthumb-finger-tap:before {
+    content: "\ebd8";
+}
+.csthumb-finger-tap2:before {
+    content: "\ebd9";
+}
+.csone-finger-click:before {
+    content: "\ebda";
+}
+.csone-finger-click2:before {
+    content: "\ebdb";
+}
+.csthree-fingers-swipe-left:before {
+    content: "\ebdc";
+}
+.csthree-fingers-swipe-left2:before {
+    content: "\ebdd";
+}
+.csthree-fingers-swipe-right:before {
+    content: "\ebde";
+}
+.csthree-fingers-swipe-right2:before {
+    content: "\ebdf";
+}
+.csthree-fingers-swipe-up:before {
+    content: "\ebe0";
+}
+.csthree-fingers-swipe-up2:before {
+    content: "\ebe1";
+}
+.csthree-fingers-swipe-down:before {
+    content: "\ebe2";
+}
+.csthree-fingers-swipe-down2:before {
+    content: "\ebe3";
+}
+.csthree-fingers:before {
+    content: "\ebe4";
+}
+.csthree-fingers2:before {
+    content: "\ebe5";
+}
+.csthree-fingers-double-tap3:before {
+    content: "\ebe6";
+}
+.csthree-fingers-double-tap4:before {
+    content: "\ebe7";
+}
+.cstwo-fingers-swipe-up3:before {
+    content: "\ebe8";
+}
+.cstwo-fingers-swipe-up4:before {
+    content: "\ebe9";
+}
+.csone-finger-double-tap3:before {
+    content: "\ebea";
+}
+.csone-finger-double-tap4:before {
+    content: "\ebeb";
+}
+.cstwo-fingers-swipe-down3:before {
+    content: "\ebec";
+}
+.cstwo-fingers-swipe-down4:before {
+    content: "\ebed";
+}
+.cstwo-fingers-swipe-right3:before {
+    content: "\ebee";
+}
+.cstwo-fingers-swipe-right4:before {
+    content: "\ebef";
+}
+.cstwo-fingers-swipe-left3:before {
+    content: "\ebf0";
+}
+.cstwo-fingers-swipe-left4:before {
+    content: "\ebf1";
+}
+.csone-finger-tap3:before {
+    content: "\ebf2";
+}
+.csone-finger-tap4:before {
+    content: "\ebf3";
+}
+.csone-finger-tap-hold3:before {
+    content: "\ebf4";
+}
+.csone-finger-tap-hold4:before {
+    content: "\ebf5";
+}
+.csone-finger-click3:before {
+    content: "\ebf6";
+}
+.csone-finger-click4:before {
+    content: "\ebf7";
+}
+.csone-finger-swipe-horizontally:before {
+    content: "\ebf8";
+}
+.csone-finger-swipe-horizontally2:before {
+    content: "\ebf9";
+}
+.csone-finger-swipe:before {
+    content: "\ebfa";
+}
+.csone-finger-swipe2:before {
+    content: "\ebfb";
+}
+.cstwo-fingers-double-tap:before {
+    content: "\ebfc";
+}
+.cstwo-fingers-double-tap2:before {
+    content: "\ebfd";
+}
+.cstwo-fingers-tap:before {
+    content: "\ebfe";
+}
+.cstwo-fingers-tap2:before {
+    content: "\ebff";
+}
+.csone-finger-swipe-left3:before {
+    content: "\ec00";
+}
+.csone-finger-swipe-left4:before {
+    content: "\ec01";
+}
+.csone-finger-swipe-right3:before {
+    content: "\ec02";
+}
+.csone-finger-swipe-right4:before {
+    content: "\ec03";
+}
+.csone-finger-swipe-up3:before {
+    content: "\ec04";
+}
+.csone-finger-swipe-up4:before {
+    content: "\ec05";
+}
+.csone-finger-swipe-down3:before {
+    content: "\ec06";
+}
+.csone-finger-swipe-down4:before {
+    content: "\ec07";
+}
+.csfile-numbers:before {
+    content: "\ec08";
+}
+.csfile-numbers2:before {
+    content: "\ec09";
+}
+.csfile-pages:before {
+    content: "\ec0a";
+}
+.csfile-pages2:before {
+    content: "\ec0b";
+}
+.csfile-app:before {
+    content: "\ec0c";
+}
+.csfile-app2:before {
+    content: "\ec0d";
+}
+.csfile-png:before {
+    content: "\ec0e";
+}
+.csfile-png2:before {
+    content: "\ec0f";
+}
+.csfile-pdf:before {
+    content: "\ec10";
+}
+.csfile-pdf2:before {
+    content: "\ec11";
+}
+.csfile-mp3:before {
+    content: "\ec12";
+}
+.csfile-mp32:before {
+    content: "\ec13";
+}
+.csfile-mp4:before {
+    content: "\ec14";
+}
+.csfile-mp42:before {
+    content: "\ec15";
+}
+.csfile-mov:before {
+    content: "\ec16";
+}
+.csfile-mov2:before {
+    content: "\ec17";
+}
+.csfile-jpg:before {
+    content: "\ec18";
+}
+.csfile-jpg2:before {
+    content: "\ec19";
+}
+.csfile-key:before {
+    content: "\ec1a";
+}
+.csfile-key2:before {
+    content: "\ec1b";
+}
+.csfile-html:before {
+    content: "\ec1c";
+}
+.csfile-html2:before {
+    content: "\ec1d";
+}
+.csfile-css:before {
+    content: "\ec1e";
+}
+.csfile-css2:before {
+    content: "\ec1f";
+}
+.csfile-java:before {
+    content: "\ec20";
+}
+.csfile-java2:before {
+    content: "\ec21";
+}
+.csfile-psd:before {
+    content: "\ec22";
+}
+.csfile-psd2:before {
+    content: "\ec23";
+}
+.csfile-ai:before {
+    content: "\ec24";
+}
+.csfile-ai2:before {
+    content: "\ec25";
+}
+.csfile-bmp:before {
+    content: "\ec26";
+}
+.csfile-bmp2:before {
+    content: "\ec27";
+}
+.csfile-dwg:before {
+    content: "\ec28";
+}
+.csfile-dwg2:before {
+    content: "\ec29";
+}
+.csfile-eps:before {
+    content: "\ec2a";
+}
+.csfile-eps2:before {
+    content: "\ec2b";
+}
+.csfile-tiff:before {
+    content: "\ec2c";
+}
+.csfile-tiff2:before {
+    content: "\ec2d";
+}
+.csfile-ots:before {
+    content: "\ec2e";
+}
+.csfile-ots2:before {
+    content: "\ec2f";
+}
+.csfile-php:before {
+    content: "\ec30";
+}
+.csfile-php2:before {
+    content: "\ec31";
+}
+.csfile-py:before {
+    content: "\ec32";
+}
+.csfile-py2:before {
+    content: "\ec33";
+}
+.csfile-c:before {
+    content: "\ec34";
+}
+.csfile-c2:before {
+    content: "\ec35";
+}
+.csfile-sql:before {
+    content: "\ec36";
+}
+.csfile-sql2:before {
+    content: "\ec37";
+}
+.csfile-rb:before {
+    content: "\ec38";
+}
+.csfile-rb2:before {
+    content: "\ec39";
+}
+.csfile-cpp:before {
+    content: "\ec3a";
+}
+.csfile-cpp2:before {
+    content: "\ec3b";
+}
+.csfile-tga:before {
+    content: "\ec3c";
+}
+.csfile-tga2:before {
+    content: "\ec3d";
+}
+.csfile-dxf:before {
+    content: "\ec3e";
+}
+.csfile-dxf2:before {
+    content: "\ec3f";
+}
+.csfile-doc:before {
+    content: "\ec40";
+}
+.csfile-doc2:before {
+    content: "\ec41";
+}
+.csfile-odt:before {
+    content: "\ec42";
+}
+.csfile-odt2:before {
+    content: "\ec43";
+}
+.csfile-xls:before {
+    content: "\ec44";
+}
+.csfile-xls2:before {
+    content: "\ec45";
+}
+.csfile-docx:before {
+    content: "\ec46";
+}
+.csfile-docx2:before {
+    content: "\ec47";
+}
+.csfile-ppt:before {
+    content: "\ec48";
+}
+.csfile-ppt2:before {
+    content: "\ec49";
+}
+.csfile-asp:before {
+    content: "\ec4a";
+}
+.csfile-asp2:before {
+    content: "\ec4b";
+}
+.csfile-ics:before {
+    content: "\ec4c";
+}
+.csfile-ics2:before {
+    content: "\ec4d";
+}
+.csfile-dat:before {
+    content: "\ec4e";
+}
+.csfile-dat2:before {
+    content: "\ec4f";
+}
+.csfile-xml:before {
+    content: "\ec50";
+}
+.csfile-xml2:before {
+    content: "\ec51";
+}
+.csfile-yml:before {
+    content: "\ec52";
+}
+.csfile-yml2:before {
+    content: "\ec53";
+}
+.csfile-h:before {
+    content: "\ec54";
+}
+.csfile-h2:before {
+    content: "\ec55";
+}
+.csfile-exe:before {
+    content: "\ec56";
+}
+.csfile-exe2:before {
+    content: "\ec57";
+}
+.csfile-avi:before {
+    content: "\ec58";
+}
+.csfile-avi2:before {
+    content: "\ec59";
+}
+.csfile-odp:before {
+    content: "\ec5a";
+}
+.csfile-odp2:before {
+    content: "\ec5b";
+}
+.csfile-dotx:before {
+    content: "\ec5c";
+}
+.csfile-dotx2:before {
+    content: "\ec5d";
+}
+.csfile-xlsx:before {
+    content: "\ec5e";
+}
+.csfile-xlsx2:before {
+    content: "\ec5f";
+}
+.csfile-ods:before {
+    content: "\ec60";
+}
+.csfile-ods2:before {
+    content: "\ec61";
+}
+.csfile-pps:before {
+    content: "\ec62";
+}
+.csfile-pps2:before {
+    content: "\ec63";
+}
+.csfile-dot:before {
+    content: "\ec64";
+}
+.csfile-dot2:before {
+    content: "\ec65";
+}
+.csfile-txt:before {
+    content: "\ec66";
+}
+.csfile-txt2:before {
+    content: "\ec67";
+}
+.csfile-rtf:before {
+    content: "\ec68";
+}
+.csfile-rtf2:before {
+    content: "\ec69";
+}
+.csfile-m4v:before {
+    content: "\ec6a";
+}
+.csfile-m4v2:before {
+    content: "\ec6b";
+}
+.csfile-flv:before {
+    content: "\ec6c";
+}
+.csfile-flv2:before {
+    content: "\ec6d";
+}
+.csfile-mpg:before {
+    content: "\ec6e";
+}
+.csfile-mpg2:before {
+    content: "\ec6f";
+}
+.csfile-quicktime:before {
+    content: "\ec70";
+}
+.csfile-quicktime2:before {
+    content: "\ec71";
+}
+.csfile-mid:before {
+    content: "\ec72";
+}
+.csfile-mid2:before {
+    content: "\ec73";
+}
+.csfile-3gp:before {
+    content: "\ec74";
+}
+.csfile-3gp2:before {
+    content: "\ec75";
+}
+.csfile-aiff:before {
+    content: "\ec76";
+}
+.csfile-aiff2:before {
+    content: "\ec77";
+}
+.csfile-aac:before {
+    content: "\ec78";
+}
+.csfile-aac2:before {
+    content: "\ec79";
+}
+.csfile-wav:before {
+    content: "\ec7a";
+}
+.csfile-wav2:before {
+    content: "\ec7b";
+}
+.csfile-zip:before {
+    content: "\ec7c";
+}
+.csfile-zip2:before {
+    content: "\ec7d";
+}
+.csfile-ott:before {
+    content: "\ec7e";
+}
+.csfile-ott2:before {
+    content: "\ec7f";
+}
+.csfile-tgz:before {
+    content: "\ec80";
+}
+.csfile-tgz2:before {
+    content: "\ec81";
+}
+.csfile-dmg:before {
+    content: "\ec82";
+}
+.csfile-dmg2:before {
+    content: "\ec83";
+}
+.csfile-iso:before {
+    content: "\ec84";
+}
+.csfile-iso2:before {
+    content: "\ec85";
+}
+.csfile-rar:before {
+    content: "\ec86";
+}
+.csfile-rar2:before {
+    content: "\ec87";
+}
+.csfile-gif:before {
+    content: "\ec88";
+}
+.csfile-gif2:before {
+    content: "\ec89";
+}
+.csdocument-file-numbers:before {
+    content: "\ec8a";
+}
+.csdocument-file-numbers2:before {
+    content: "\ec8b";
+}
+.csdocument-file-pages:before {
+    content: "\ec8c";
+}
+.csdocument-file-pages2:before {
+    content: "\ec8d";
+}
+.csdocument-file-app:before {
+    content: "\ec8e";
+}
+.csdocument-file-app2:before {
+    content: "\ec8f";
+}
+.csdocument-file-png:before {
+    content: "\ec90";
+}
+.csdocument-file-png2:before {
+    content: "\ec91";
+}
+.csdocument-file-pdf:before {
+    content: "\ec92";
+}
+.csdocument-file-pdf2:before {
+    content: "\ec93";
+}
+.csdocument-file-mp3:before {
+    content: "\ec94";
+}
+.csdocument-file-mp32:before {
+    content: "\ec95";
+}
+.csdocument-file-mp4:before {
+    content: "\ec96";
+}
+.csdocument-file-mp42:before {
+    content: "\ec97";
+}
+.csdocument-file-mov:before {
+    content: "\ec98";
+}
+.csdocument-file-mov2:before {
+    content: "\ec99";
+}
+.csdocument-file-jpg:before {
+    content: "\ec9a";
+}
+.csdocument-file-jpg2:before {
+    content: "\ec9b";
+}
+.csdocument-file-key:before {
+    content: "\ec9c";
+}
+.csdocument-file-key2:before {
+    content: "\ec9d";
+}
+.csdocument-file-html:before {
+    content: "\ec9e";
+}
+.csdocument-file-html2:before {
+    content: "\ec9f";
+}
+.csdocument-file-css:before {
+    content: "\eca0";
+}
+.csdocument-file-css2:before {
+    content: "\eca1";
+}
+.csdocument-file-java:before {
+    content: "\eca2";
+}
+.csdocument-file-java2:before {
+    content: "\eca3";
+}
+.csdocument-file-psd:before {
+    content: "\eca4";
+}
+.csdocument-file-psd2:before {
+    content: "\eca5";
+}
+.csdocument-file-ai:before {
+    content: "\eca6";
+}
+.csdocument-file-ai2:before {
+    content: "\eca7";
+}
+.csdocument-file-bmp:before {
+    content: "\eca8";
+}
+.csdocument-file-bmp2:before {
+    content: "\eca9";
+}
+.csdocument-file-dwg:before {
+    content: "\ecaa";
+}
+.csdocument-file-dwg2:before {
+    content: "\ecab";
+}
+.csdocument-file-eps:before {
+    content: "\ecac";
+}
+.csdocument-file-eps2:before {
+    content: "\ecad";
+}
+.csdocument-file-tiff:before {
+    content: "\ecae";
+}
+.csdocument-file-tiff2:before {
+    content: "\ecaf";
+}
+.csdocument-file-ots:before {
+    content: "\ecb0";
+}
+.csdocument-file-ots2:before {
+    content: "\ecb1";
+}
+.csdocument-file-php:before {
+    content: "\ecb2";
+}
+.csdocument-file-php2:before {
+    content: "\ecb3";
+}
+.csdocument-file-py:before {
+    content: "\ecb4";
+}
+.csdocument-file-py2:before {
+    content: "\ecb5";
+}
+.csdocument-file-c:before {
+    content: "\ecb6";
+}
+.csdocument-file-c2:before {
+    content: "\ecb7";
+}
+.csdocument-file-sql:before {
+    content: "\ecb8";
+}
+.csdocument-file-sql2:before {
+    content: "\ecb9";
+}
+.csdocument-file-rb:before {
+    content: "\ecba";
+}
+.csdocument-file-rb2:before {
+    content: "\ecbb";
+}
+.csdocument-file-cpp:before {
+    content: "\ecbc";
+}
+.csdocument-file-cpp2:before {
+    content: "\ecbd";
+}
+.csdocument-file-tga:before {
+    content: "\ecbe";
+}
+.csdocument-file-tga2:before {
+    content: "\ecbf";
+}
+.csdocument-file-dxf:before {
+    content: "\ecc0";
+}
+.csdocument-file-dxf2:before {
+    content: "\ecc1";
+}
+.csdocument-file-doc:before {
+    content: "\ecc2";
+}
+.csdocument-file-doc2:before {
+    content: "\ecc3";
+}
+.csdocument-file-odt:before {
+    content: "\ecc4";
+}
+.csdocument-file-odt2:before {
+    content: "\ecc5";
+}
+.csdocument-file-xls:before {
+    content: "\ecc6";
+}
+.csdocument-file-xls2:before {
+    content: "\ecc7";
+}
+.csdocument-file-docx:before {
+    content: "\ecc8";
+}
+.csdocument-file-docx2:before {
+    content: "\ecc9";
+}
+.csdocument-file-ppt:before {
+    content: "\ecca";
+}
+.csdocument-file-ppt2:before {
+    content: "\eccb";
+}
+.csdocument-file-asp:before {
+    content: "\eccc";
+}
+.csdocument-file-asp2:before {
+    content: "\eccd";
+}
+.csdocument-file-ics:before {
+    content: "\ecce";
+}
+.csdocument-file-ics2:before {
+    content: "\eccf";
+}
+.csdocument-file-dat:before {
+    content: "\ecd0";
+}
+.csdocument-file-dat2:before {
+    content: "\ecd1";
+}
+.csdocument-file-xml:before {
+    content: "\ecd2";
+}
+.csdocument-file-xml2:before {
+    content: "\ecd3";
+}
+.csdocument-file-yml:before {
+    content: "\ecd4";
+}
+.csdocument-file-yml2:before {
+    content: "\ecd5";
+}
+.csdocument-file-h:before {
+    content: "\ecd6";
+}
+.csdocument-file-h2:before {
+    content: "\ecd7";
+}
+.csdocument-file-exe:before {
+    content: "\ecd8";
+}
+.csdocument-file-exe2:before {
+    content: "\ecd9";
+}
+.csdocument-file-avi:before {
+    content: "\ecda";
+}
+.csdocument-file-avi2:before {
+    content: "\ecdb";
+}
+.csdocument-file-odp:before {
+    content: "\ecdc";
+}
+.csdocument-file-odp2:before {
+    content: "\ecdd";
+}
+.csdocument-file-dotx:before {
+    content: "\ecde";
+}
+.csdocument-file-dotx2:before {
+    content: "\ecdf";
+}
+.csdocument-file-xlsx:before {
+    content: "\ece0";
+}
+.csdocument-file-xlsx2:before {
+    content: "\ece1";
+}
+.csdocument-file-ods:before {
+    content: "\ece2";
+}
+.csdocument-file-ods2:before {
+    content: "\ece3";
+}
+.csdocument-file-pps:before {
+    content: "\ece4";
+}
+.csdocument-file-pps2:before {
+    content: "\ece5";
+}
+.csdocument-file-dot:before {
+    content: "\ece6";
+}
+.csdocument-file-dot2:before {
+    content: "\ece7";
+}
+.csdocument-file-txt:before {
+    content: "\ece8";
+}
+.csdocument-file-txt2:before {
+    content: "\ece9";
+}
+.csdocument-file-rtf:before {
+    content: "\ecea";
+}
+.csdocument-file-rtf2:before {
+    content: "\eceb";
+}
+.csdocument-file-m4v:before {
+    content: "\ecec";
+}
+.csdocument-file-m4v2:before {
+    content: "\eced";
+}
+.csdocument-file-flv:before {
+    content: "\ecee";
+}
+.csdocument-file-flv2:before {
+    content: "\ecef";
+}
+.csdocument-file-mpg:before {
+    content: "\ecf0";
+}
+.csdocument-file-mpg2:before {
+    content: "\ecf1";
+}
+.csdocument-file-qt:before {
+    content: "\ecf2";
+}
+.csdocument-file-qt2:before {
+    content: "\ecf3";
+}
+.csdocument-file-mid:before {
+    content: "\ecf4";
+}
+.csdocument-file-mid2:before {
+    content: "\ecf5";
+}
+.csdocument-file-3gp:before {
+    content: "\ecf6";
+}
+.csdocument-file-3gp2:before {
+    content: "\ecf7";
+}
+.csdocument-file-aiff:before {
+    content: "\ecf8";
+}
+.csdocument-file-aiff2:before {
+    content: "\ecf9";
+}
+.csdocument-file-aac:before {
+    content: "\ecfa";
+}
+.csdocument-file-aac2:before {
+    content: "\ecfb";
+}
+.csdocument-file-wav:before {
+    content: "\ecfc";
+}
+.csdocument-file-wav2:before {
+    content: "\ecfd";
+}
+.csdocument-file-zip:before {
+    content: "\ecfe";
+}
+.csdocument-file-zip2:before {
+    content: "\ecff";
+}
+.csdocument-file-ott:before {
+    content: "\ed00";
+}
+.csdocument-file-ott2:before {
+    content: "\ed01";
+}
+.csdocument-file-tgz:before {
+    content: "\ed02";
+}
+.csdocument-file-tgz2:before {
+    content: "\ed03";
+}
+.csdocument-file-dmg:before {
+    content: "\ed04";
+}
+.csdocument-file-dmg2:before {
+    content: "\ed05";
+}
+.csdocument-file-iso:before {
+    content: "\ed06";
+}
+.csdocument-file-iso2:before {
+    content: "\ed07";
+}
+.csdocument-file-rar:before {
+    content: "\ed08";
+}
+.csdocument-file-rar2:before {
+    content: "\ed09";
+}
+.csdocument-file-gif:before {
+    content: "\ed0a";
+}
+.csdocument-file-gif2:before {
+    content: "\ed0b";
+}
+.csmobile:before {
+    content: "\e000";
+}
+.cslaptop:before {
+    content: "\e001";
+}
+.csdesktop:before {
+    content: "\e002";
+}
+.cstablet:before {
+    content: "\e003";
+}
+.csphone:before {
+    content: "\e004";
+}
+.csdocument3:before {
+    content: "\e005";
+}
+.csdocuments5:before {
+    content: "\e006";
+}
+.cssearch3:before {
+    content: "\e007";
+}
+.csclipboard3:before {
+    content: "\e008";
+}
+.csnewspaper:before {
+    content: "\e009";
+}
+.csnotebook9:before {
+    content: "\e00a";
+}
+.csbook-open:before {
+    content: "\e00b";
+}
+.csbrowser:before {
+    content: "\e00c";
+}
+.cscalendar:before {
+    content: "\e00d";
+}
+.cspresentation:before {
+    content: "\e00e";
+}
+.cspicture:before {
+    content: "\e00f";
+}
+.cspictures:before {
+    content: "\e010";
+}
+.csvideo:before {
+    content: "\e011";
+}
+.cscamera:before {
+    content: "\e012";
+}
+.csprinter5:before {
+    content: "\e013";
+}
+.cstoolbox:before {
+    content: "\e014";
+}
+.csbriefcase:before {
+    content: "\e015";
+}
+.cswallet:before {
+    content: "\e016";
+}
+.csgift:before {
+    content: "\e017";
+}
+.csbargraph:before {
+    content: "\e018";
+}
+.csgrid:before {
+    content: "\e019";
+}
+.csexpand:before {
+    content: "\e01a";
+}
+.csfocus:before {
+    content: "\e01b";
+}
+.csedit:before {
+    content: "\e01c";
+}
+.csadjustments:before {
+    content: "\e01d";
+}
+.csribbon:before {
+    content: "\e01e";
+}
+.cshourglass:before {
+    content: "\e01f";
+}
+.cslock3:before {
+    content: "\e020";
+}
+.csmegaphone:before {
+    content: "\e021";
+}
+.csshield:before {
+    content: "\e022";
+}
+.cstrophy5:before {
+    content: "\e023";
+}
+.csflag9:before {
+    content: "\e024";
+}
+.csmap:before {
+    content: "\e025";
+}
+.cspuzzle:before {
+    content: "\e026";
+}
+.csbasket:before {
+    content: "\e027";
+}
+.csenvelope:before {
+    content: "\e028";
+}
+.csstreetsign:before {
+    content: "\e029";
+}
+.cstelescope:before {
+    content: "\e02a";
+}
+.csgears:before {
+    content: "\e02b";
+}
+.cskey5:before {
+    content: "\e02c";
+}
+.cspaperclip3:before {
+    content: "\e02d";
+}
+.csattachment:before {
+    content: "\e02e";
+}
+.cspricetags:before {
+    content: "\e02f";
+}
+.cslightbulb:before {
+    content: "\e030";
+}
+.cslayers:before {
+    content: "\e031";
+}
+.cspencil:before {
+    content: "\e032";
+}
+.cstools:before {
+    content: "\e033";
+}
+.cstools-2:before {
+    content: "\e034";
+}
+.csscissors:before {
+    content: "\e035";
+}
+.cspaintbrush:before {
+    content: "\e036";
+}
+.csmagnifying-glass:before {
+    content: "\e037";
+}
+.cscircle-compass:before {
+    content: "\e038";
+}
+.cslinegraph:before {
+    content: "\e039";
+}
+.csmic:before {
+    content: "\e03a";
+}
+.csstrategy:before {
+    content: "\e03b";
+}
+.csbeaker:before {
+    content: "\e03c";
+}
+.cscaution:before {
+    content: "\e03d";
+}
+.csrecycle:before {
+    content: "\e03e";
+}
+.csanchor:before {
+    content: "\e03f";
+}
+.csprofile-male:before {
+    content: "\e040";
+}
+.csprofile-female:before {
+    content: "\e041";
+}
+.csbike:before {
+    content: "\e042";
+}
+.cswine:before {
+    content: "\e043";
+}
+.cshotairballoon:before {
+    content: "\e044";
+}
+.csglobe:before {
+    content: "\e045";
+}
+.csgenius:before {
+    content: "\e046";
+}
+.csmap-pin:before {
+    content: "\e047";
+}
+.csdial:before {
+    content: "\e048";
+}
+.cschat:before {
+    content: "\e049";
+}
+.csheart:before {
+    content: "\e04a";
+}
+.cscloud5:before {
+    content: "\e04b";
+}
+.csupload:before {
+    content: "\e04c";
+}
+.csdownload:before {
+    content: "\e04d";
+}
+.cstarget3:before {
+    content: "\e04e";
+}
+.cshazardous:before {
+    content: "\e04f";
+}
+.cspiechart:before {
+    content: "\e050";
+}
+.csspeedometer:before {
+    content: "\e051";
+}
+.csglobal:before {
+    content: "\e052";
+}
+.cscompass9:before {
+    content: "\e053";
+}
+.cslifesaver:before {
+    content: "\e054";
+}
+.csclock:before {
+    content: "\e055";
+}
+.csaperture:before {
+    content: "\e056";
+}
+.csquote:before {
+    content: "\e057";
+}
+.csscope:before {
+    content: "\e058";
+}
+.csalarmclock:before {
+    content: "\e059";
+}
+.csrefresh:before {
+    content: "\e05a";
+}
+.cshappy:before {
+    content: "\e05b";
+}
+.cssad:before {
+    content: "\e05c";
+}
+.csfacebook:before {
+    content: "\e05d";
+}
+.cstwitter:before {
+    content: "\e05e";
+}
+.csgoogleplus:before {
+    content: "\e05f";
+}
+.csrss:before {
+    content: "\e060";
+}
+.cstumblr:before {
+    content: "\e061";
+}
+.cslinkedin:before {
+    content: "\e062";
+}
+.csdribbble:before {
+    content: "\e063";
+}
+

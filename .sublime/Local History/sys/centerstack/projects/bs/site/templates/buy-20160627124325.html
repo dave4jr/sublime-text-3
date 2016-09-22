@@ -1,0 +1,167 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	buy.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+
+<!--	Page Title
+========================================= -->
+<section id="page_title">
+	<h4 class="capitalize fs-24"> Buy A Property </h4>
+</section>
+
+<section class="p-t-40" id="page-body">
+
+
+<!--=====================================================
+	Filter
+=====================================================-->
+	<div id="buy-filter" class="portlet p-t-0 p-b-7 bs-grey-bg">
+		<form action="" method="post">
+			{% csrf_token %}
+			<div class="column-section clearfix">
+
+				 <!--	City
+				 ========================================= -->
+				<div class="form-row column one-sixth">
+					<label for="name"> City</label>
+					{{ PropertyForm.city | add_class:"full-width" }}
+				</div>
+
+
+				 <!--	County
+				 ========================================= -->
+				<div class="form-row column one-sixth">
+					<label for="name"> County	</label>
+					{{ PropertyForm.county | add_class:"full-width" }}
+				</div>
+
+
+				<!--	Keyword
+				========================================= -->
+				<div class="form-row column one-sixth">
+					<label for="name"> Keyword </label>
+					<input class="name req" type="text" placeholder="Search..." />
+				</div>
+
+
+				<!--	Beds / Baths
+				========================================= -->
+				<div class="form-row column one-sixth">
+					<div class="form-row column one-half">
+						<label for="name"> Beds </label>
+						{{ PropertyForm.bedrooms | add_class:"full-width" }}
+					</div>
+					<div class="form-row column one-half last-col">
+						<label for="name"> Baths </label>
+						{{ PropertyForm.bathrooms | add_class:"full-width" }}
+					</div>
+				</div>
+
+
+				<!--	Sqft / Lot Size
+				========================================= -->
+				<div class="form-row column one-sixth">
+					<div class="form-row column one-half">
+						<label for="name"> Sqft </label>
+						{{ PropertyForm.squarefootage | add_class:"full-width" }}
+					</div>
+					<div class="form-row column one-half last-col">
+						<label for="name"> Lot Size </label>
+						{{ PropertyForm.acres | add_class:"full-width" }}
+					</div>
+				</div>
+
+
+				<!--	Price / Submit Button
+				========================================= -->
+				<div class="form-row column one-sixth last-col">
+					<div class="form-row column one-half">
+						<label for="name"> Price </label>
+						{{ PropertyForm.listingprice | add_class:"full-width" }}
+					</div>
+					<div class="form-row column one-half last-col">
+						<button class="m-t-28 sr-button button-1 button-form" type="submit">Search</button>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</form>
+		<p class="m-t-7 fs-11">Property Count = {{ count }}</p>
+	</div>
+	<div class="spacer-medium"></div>
+
+
+	<!--	Grid or Map
+	========================================= -->
+	<!-- <div class="tabs tabs-button">
+		<ul class="tab-nav clearfix">
+			<li class="active"><h6 class="tab-name uppercase"><a href="tab1"> Grid </a></h6></li>
+			<li><h6 class="tab-name uppercase"><a href="tab2"> Map </a></h6></li>
+		</ul>
+		<div class="tab-container clearfix">
+			<div class="tab-content tab1">
+				<p> The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their projects again and again. And if she hasn’t been rewritten, then they are still using her. </p>
+			</div>
+			<div class="tab-content tab2">
+				<p> The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way. When she reached the first hills of the Italic Mountains, </p>
+			</div>
+		</div>
+	</div> -->
+
+
+
+<!--=====================================================
+	Grid
+=====================================================-->
+	<div id="properties" class="isotope-grid gallery-container style-modern-3 isotope-spaced clearfix fitrows m-t-30" data-heightratio=".66">
+
+		{% for property in properties.object_list %}
+
+			<!--	Setting Filter Values
+			========================================= -->
+
+			<div class="isotope-item">
+				<a href="{% url 'buy-single' pk=property.pk %}" class="thumb-overlay overlay-effect-3 text-light">
+					<img src="{{ property.img.0 }}">
+					<img src="{{ property.img.1 }}" class="hover-pic">
+					<div class="overlay-caption">
+						<table>
+							<tr>
+								<td><h6 class="uppercase">{{ property.bedrooms }} BR &bull; {{ property.bathrooms|floatformat:"1" }} BA &bull; {{ property.squarefootage|floatformat:"0"|intcomma }} Sqft.</h6></td>
+								<td><h6 class="uppercase fs-20">${{ property.listingprice|floatformat:"0"|intcomma }}</h6></td>
+							</tr>
+							<tr>
+								<td><h6 class="subtitle-1 o-100 m-t-0">{% include "include/address.html" with arg="street" %}</h6></td>
+								<td><h6 class="subtitle-1 o-100 m-t-0">{% include "include/address.html" with arg="cityzip" %}</h6></td>
+							</tr>
+
+						</table>
+		                        </div>
+				</a>
+			</div>
+				
+		{% endfor %}
+				
+	</div>
+	<div class="spacer-big"> </div>
+
+	<!--	Pagination
+	========================================= -->
+	<div id="pagination">
+		{{ properties.render }}
+	</div>
+
+
+
+</section>
+
+{% endblock %}

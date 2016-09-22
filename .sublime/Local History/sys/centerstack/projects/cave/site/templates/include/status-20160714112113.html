@@ -1,0 +1,32 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	Status Include
+ *==========================-->
+
+ {% if status == "submitted" %}
+	<span class="label label-submitted">Submitted</span>
+{% elif status == "pending_deposit" %}
+	<span class="label label-pending-deposit">Pending Deposit</span>
+{% elif status == "reserved" %}
+	<span class="label label-reserved">Reserved</span>
+{% elif status == "checked_out" %}
+	<span class="label label-checked-out">Checked-Out</span>
+{% elif status == "checked_in" %}
+	<span class="label label-checked-in">Checked-In</span>
+{% elif status == "damaged" %}
+	<span class="label label-damaged">Damage Evaluation</span>
+{% elif status == "pending_damage_payment" %}
+	<span class="label label-pending-damage-payment">Pending Damage Payment</span>
+{% elif status == "closed" %}
+ 	<span class="label label-closed">Closed</span>
+{% endif %}
+
+
+
+
+
+
+
+
+

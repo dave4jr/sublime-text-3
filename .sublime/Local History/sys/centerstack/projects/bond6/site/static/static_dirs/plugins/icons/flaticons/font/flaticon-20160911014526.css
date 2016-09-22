@@ -1,0 +1,46 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 11/09/2016 10:32
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+        font-family: Flaticon;
+        font-style: normal;
+        font-size: 44px;
+        margin-left: 20px;
+}
+
+.flaticon-avatar:before { content: "\f100"; }
+.flaticon-avocado:before { content: "\f101"; }
+.flaticon-barbell-and-plates:before { content: "\f102"; }
+.flaticon-circle:before { content: "\f103"; }
+.flaticon-command:before { content: "\f104"; }
+.flaticon-gym:before { content: "\f105"; }
+.flaticon-gym-1:before { content: "\f106"; }
+.flaticon-people:before { content: "\f107"; }
+.flaticon-people-1:before { content: "\f108"; }
+.flaticon-pregnant:before { content: "\f109"; }
+.flaticon-stopwatch:before { content: "\f10a"; }
+.flaticon-user:before { content: "\f10b"; }
+.flaticon-users:before { content: "\f10c"; }
+.flaticon-woman:before { content: "\f10d"; }
+.flaticon-yoga-carpet:before { content: "\f10e"; }

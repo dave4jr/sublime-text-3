@@ -1,0 +1,264 @@
+/*=============================
+ *  Author:		 Dave Luke Jr
+ *  Company:	 CenterStack.io
+ *  Description:	 Sass Global Variables
+ *=============================*/
+
+
+/*	Font-family
+========================================= */
+$font-raleway: "Raleway", "Helvetica Neue", Helvetica, sans-serif;
+$font-crete: "Crete", "Helvetica Neue", Helvetica, sans-serif;
+$font-lato: "Lato", "Helvetica Neue", Helvetica, sans-serif;
+$font-quicksand: "Quicksand", "Helvetica Neue", Helvetica, sans-serif;
+$font-existence: "Existence", "Helvetica Neue", Helvetica, sans-serif;
+$font-caviar-dreams: "Caviar Dreams", "Helvetica Neue", Helvetica, sans-serif;
+$font-colaborate: "Colaborate-thin", "Helvetica Neue", Helvetica, sans-serif;
+$font-roboto: "roboto", "Helvetica Neue", Helvetica, sans-serif;
+$font-open-sans: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+$font-josefin-sans: "Josefin Sans", "Helvetica Neue", Helvetica, sans-serif;
+
+
+ /*	Metronic Colors
+ ===================== */
+$mt-white: #FFFFFF;
+$mt-default: #E1E5EC;
+$mt-dark: #2F353B;
+$mt-blue: #3598DC;
+$mt-blue-madison: #578EBE;
+$mt-blue-chambray: #2C3E50;
+$mt-blue-ebonyclay: #22313F;
+$mt-blue-hoki: #67809F;
+$mt-blue-steel: #4B77BE;
+$mt-blue-soft: #4C87B9;
+$mt-blue-dark: #5E738B;
+$mt-blue-sharp: #5C9BD1;
+$mt-green: #32C5D2;
+$mt-green-meadow: #1BBC9B;
+$mt-green-seagreen: #1BA39C;
+$mt-green-turquoise: #36D7B7;
+$mt-green-haze: #44B6AE;
+$mt-green-jungle: #26C281;
+$mt-green-soft: #3FABA4;
+$mt-green-dark: #4DB3A2;
+$mt-green-sharp: #2AB4C0;
+$mt-grey: #E5E5E5;
+$mt-grey-steel: #E9EDEF;
+$mt-grey-cararra: #FAFAFA;
+$mt-grey-gallery: #555555;
+$mt-grey-cascade: #95A5A6;
+$mt-grey-silver: #BFBFBF;
+$mt-grey-salsa: #ACB5C3;
+$mt-grey-salt: #BFCAD1;
+$mt-grey-mint: #525E64;
+$mt-red: #E7505A;
+$mt-red-pink: #E08283;
+$mt-red-sunglo: #E26A6A;
+$mt-red-intense: #E35B5A;
+$mt-red-thunderbird: #D91E18;
+$mt-red-flamingo: #EF4836;
+$mt-red-soft: #D05454;
+$mt-red-haze: #F36A5A;
+$mt-red-mint: #E43A45;
+$mt-yellow: #C49F47;
+$mt-yellow-gold: #E87E04;
+$mt-yellow-casablanca: #F2784B;
+$mt-yellow-crusta: #F3C200;
+$mt-yellow-lemon: #F7CA18;
+$mt-yellow-saffron: #F4D03F;
+$mt-yellow-soft: #C8D046;
+$mt-yellow-haze: #C5BF66;
+$mt-yellow-mint: #C5B96B;
+$mt-purple: #8E44AD;
+$mt-purple-plum: #8775A7;
+$mt-purple-medium: #BF55EC;
+$mt-purple-studio: #8E44AD;
+$mt-purple-wisteria: #9B59B6;
+$mt-purple-seance: #9A12B3;
+$mt-purple-intense: #8775A7;
+$mt-purple-sharp: #796799;
+$mt-purple-soft: #8877A9;
+$grey: #f7f8fa;
+$blue: #445685;
+$green: #64a8a7;
+$green-aura: #0dc0c0;
+$forest: #008599;
+$teal: #2D757D;
+$red: #af4d52;
+$orange: #ebb16a;
+$jade: #12c3ac;
+$tan: #cabdaa;
+$black: #000000;
+$white: #fff;
+$primary: #6d5cae;
+$complete: #48b0f7;
+$success: #10cfbd;
+$info: #3b4752;
+$danger: #f55753;
+$warning: #f8d053;
+$grey-light: rgba(247, 248, 250, .5);
+$blue-light: #556BA5;
+$green-light: rgba(100, 168, 167, .35);
+$teal-light: rgba(45, 117, 125, .35);
+$red-light: rgba(175, 77, 82, .35);
+$orange-light: rgba(235, 177, 106, .35);
+$tan-light: rgba(202, 189, 170, .35);
+$black-light: rgba(0, 0, 0, .35);
+$grey-mid: #E5E5E5;
+$grey-mid-light: #F5F5F5;
+$blue-mid: rgba(68, 86, 133, .75);
+$green-mid: rgba(100, 168, 167, .75);
+$teal-mid: rgba(45, 117, 125, .75);
+$red-mid: rgba(175, 77, 82, .75);
+$orange-mid: rgba(235, 177, 106, .75);
+$tan-mid: rgba(202, 189, 170, .75);
+$black-mid: #444444;
+$pi-base: #0dc0c0;
+$pi-base-dark: #0B9E9E;
+$pi-darker: #1F2329;
+$pi-dark: #2e343c;
+$pi-dark-light: #6C7A8C;
+$pi-dark-lighter: #91A4BC;
+$pi-blue: #0f80ba;
+$pi-grey: #737A81;
+$pi-silver: #bdc3ca;
+$pi-silver-light: #DEE3EC;
+
+
+
+$grey-dark: #C0C0C0;
+$blue-dark: #3c4c70;
+$green-dark: #2a6a72;
+
+/*	Text Colors
+========================================= */
+$text-grey-light: #CEE0EA;
+$text-grey: #8c989f;
+$text-silver: #666E70;
+$text-grey-mid: #737C83;
+$text-black-0: #000000;
+$text-black-3: #333333;
+$text-black-4: #444444;
+$text-black-5: #555555;
+$text-black-7: #777;
+$text-black-9: #999999;
+
+
+/*	Other Colors
+========================================= */
+$form-blue: rgba(68, 86, 133, .8);
+$form-blue-light: rgba(121, 153, 235, .8);
+$form-teal: rgba(45, 117, 125, .8);
+$form-orange: rgba(235, 177, 106, .5);
+
+$border-grey: #DDDDDD;
+$border-grey-light: #EEE;
+
+$shadow-color-light: rgba(0, 0, 0, .25);
+$shadow-color-middle: rgba(0, 0, 0, .5);
+$shadow-color-dark: rgba(0, 0, 0, .9);
+
+$section: #F9F9F9;
+
+/*==================================================
+	Structure Outline Colors
+
+	Rule:
+	- Flexbox outlines are solid
+	- Bootstrap outlines are dashes
+==================================================*/
+$flex-row-outline: #009966;
+$flex-col-outline: #ffcc00 ;
+$box-outline: #3399CC;
+$space-outline: #CC0000;
+$bs-col-outline: #FFCC00;
+$bs-container-outline: #CC9933;
+
+
+/*==================================================
+	Linear Gradients
+==================================================*/
+$degree:  120deg;
+$size: 400%;
+$duration:  3s;
+
+
+
+/*==================================================
+	Breakpoints / Breakpoint Container Widths
+==================================================*/
+$xs: 767px;
+$sm: 768px;
+$md: 992px;
+$lg: 1200px;
+
+$xs-container: 100%;
+$sm-container: 750px;
+$md-container: 970px;
+$lg-container: 1170px;
+
+
+
+/*==================================================
+	Mixins
+==================================================*/
+@mixin screen($size, $class...) {
+	@if $size == "xs" {
+		@media (max-width:$xs) {
+			#{$class} { width: $xs-container; }
+		}
+	}
+	@else if $size == "sm" {
+		@media (min-width:$sm) {
+			#{$class} { width: $sm-container; }
+		}
+	}
+	@else if $size == "md" {
+		@media (min-width:$md) {
+			#{$class} { width: $md-container; }
+		}
+	}
+	@else if $size == "lg" {
+		@media (min-width:$lg) {
+			#{$class} { width: $lg-container; }
+		}
+	}
+}
+
+@mixin device($device) {
+	@if $device== "phone" {
+		@media (max-width:$xs) { @content; }
+	}
+	@else if $device == "computer" {
+		@media (min-width:$sm) { @content; }
+	}
+}
+
+/*==================================================
+	Mixin - Maintain Aspect Ratio
+==================================================*/
+@mixin aspect-ratio($width, $height) {
+	position: relative;
+
+	&:before {
+		display: block;
+		content: "";
+		width: 100%;
+		padding-top: ($height / $width) * 100%;
+	}
+	> .content {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+}
+
+/*	Base
+========================================= */
+$font: $font-lato;
+$base: $mt-blue-hoki;
+
+
+

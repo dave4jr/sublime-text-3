@@ -1,0 +1,98 @@
+<div class="portlet light portlet-fit ">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="pe-7s-filter"> </i>
+					<span class="caption-subject base-font"> Pipeline </span>
+				</div>
+			</div>
+			<div class="portlet-body p-b-10">
+				<div class="table-toolbar m-b-5">
+					<div class="row">
+						<div class="col-md-12">
+							<div id="datatable-btn-export" class="pull-right"><div class="dt-buttons"><a class="dt-button buttons-print" tabindex="0" aria-controls="actions_table"><span>Print</span></a><a class="dt-button buttons-pdf buttons-html5" tabindex="0" aria-controls="actions_table"><span>PDF</span></a><a class="dt-button buttons-excel buttons-html5" tabindex="0" aria-controls="actions_table"><span>Excel</span></a></div></div>
+						</div>
+					</div>
+				</div>
+
+				<!--	Table
+				========================================= -->
+				<div id="actions_table_wrapper" class="dataTables_wrapper no-footer"><div class="row"><div class="col-md-6 col-sm-6"></div><div class="col-md-6 col-sm-6"></div></div><div class="table-scrollable"><table class="table table-striped table-bordered table-hover order-column dataTable no-footer" id="actions_table" role="grid" style="width: 1401px;">
+					<thead>
+
+						<tr role="row"><th rowspan="2" class="sorting_disabled" colspan="1" style="width: 54px;"> Customer </th><th rowspan="2" class="sorting_disabled" colspan="1" style="width: 98px;"> Status </th><th rowspan="2" class="sorting_disabled" colspan="1" style="width: 108px;"> Action </th><th rowspan="2" class="sorting_disabled" colspan="1" style="width: 26px;"> Type </th><th rowspan="2" class="sorting_disabled" colspan="1" style="width: 27px;"> Days </th><th colspan="2" rowspan="1"> Reservation Deposit </th><th rowspan="2" class="sorting_disabled" colspan="1" style="width: 44px;"> Damage </th><th colspan="5" rowspan="1"> Rental </th><th colspan="4" rowspan="1"> Total </th></tr>
+						<tr role="row"><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 35px;">Bike </th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 36px;">Tour</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 52px;">Insurance </th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 38px;">Bike </th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 24px;">Tour </th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 28px;">Class</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 41px;">Storage</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 42px;">Deposit</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 44px;">Damage</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 38px;">Rental</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 38px;">Final</th></tr>
+					</thead>
+					<tbody>
+
+					<!--	Table Data
+					========================================= -->
+					
+						
+					
+
+					<tr class="gradeX odd" role="row">
+							<td><a href="/reservations/edit/2">Dave Luke</a></td>
+							<td><!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	Status Include
+ *==========================-->
+
+ 
+	<span class="label label-pending-deposit">Pending Deposit</span>
+
+
+
+
+
+
+
+
+
+
+</td>
+
+							<td class="actions" style="padding: 0px;"><!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	Action Include
+ *==========================-->
+<!-- inputs: status / pk=reservation.pk -->
+
+
+ 
+ 	<form action="/workflow/2/receive_deposit/" method="post">
+ 		<input type="hidden" name="csrfmiddlewaretoken" value="nvrWO4rZ49a7hXfbG3SpUAaXnPFnQrFV">
+ 		<input class="btn btn-sm mt-grey-bg p-rl-5 p-tb-3" value="Received Deposit" type="submit">
+ 	</form>
+
+ </td>
+							<td>bike</td>
+							<td>13</td>
+							<td>$650</td>
+							<td>$0</td>
+							<td>$1,500</td>
+							<td>$234</td>
+							<td>$2,210</td>
+							<td>$0</td>
+							<td>$0</td>
+							<td>$0</td>
+							<td>$650</td>
+							<td>$1,500</td>
+							<td>$2,444</td>
+							<td>$1,794</td>
+						</tr></tbody>
+				</table></div><div class="row"><div class="col-md-5 col-sm-5"></div><div class="col-md-7 col-sm-7"></div></div></div>
+
+				<!--	Footnotes
+				========================================= -->
+				<div class="m-t-10 m-b-10">
+					<ul>
+						<li class="fs-10"><sup class="m-r-5 bold fs-8">1 </sup>Represents a $50/rental day non-refundable deposit to hold bike reservation. All deposits held are applied towards rental </li>
+						<li class="fs-10"><sup class="m-r-5 bold fs-8">2 </sup>Damage depsot amount will be authorized and held for the amount of $1,500 but will not be captured unless needed for damages </li>
+						<li class="fs-10"><sup class="m-r-5 bold fs-8">3 </sup>Represents price of rental minus initial reservation hold deposit </li>
+						<li class="fs-10"><sup class="m-r-5 bold fs-8">4 </sup>Due 60 days before checkout and represents price of rental minus initial reservation hold deposit </li>
+					</ul>
+				</div>
+			</div>
+		</div>

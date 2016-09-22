@@ -1,0 +1,34 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	index.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+
+
+<!--	404
+========================================= -->
+<section class="body-content ">
+	<div class="page-content">
+		<div class="container">
+			<div class="row page-content">
+				<div class="col-md-12">
+					<div class="error-info">
+						<div class="error404"> 404 </div>
+						<div class="error-txt"> Page Not Found </div>
+						<a class="btn btn-medium btn-theme-color " href="{% url 'index' %}"> Take Me Home </a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% endblock %}

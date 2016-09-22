@@ -1,0 +1,102 @@
+.table.table-light > thead > tr > th {
+	font-family: $font !important;
+}
+.dataTables_wrapper .form-control {
+	background-color: #fff !important;
+	border: 1px solid #c2cad8 !important;
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s !important;
+}
+table.dataTable tbody th,
+table.dataTable tbody td {
+	padding: 8px 18px !important;
+}
+#actions_table td:not(.actions) {
+	padding-top: 15px !important;
+	padding-bottom: 5px !important;
+}
+.pagination a {
+	color: #67809F !important;
+}
+.portlet > .portlet-title > .actions > .btn,
+.portlet > .portlet-title > .actions > .btn-group > .btn,
+.portlet > .portlet-title > .actions > .btn-group > .btn.btn-sm,
+.portlet > .portlet-title > .actions > .btn.btn-sm {
+	padding: 6px 10px !important;
+	font-size: 13px !important;
+	line-height: 1.5 !important;
+}
+.modal {
+	color: #777 !important;
+}
+#datatable-btn a,
+#datatable-btn label {
+	font-size: 13px !important;
+}
+#datatable-btn label i {
+	font-size: 22px !important;
+	line-height: 22px;
+	vertical-align: middle;
+	margin-right: 15px;
+}
+.table td,
+.table th {
+	line-height: 16px;
+	vertical-align: center;
+	white-space: nowrap;
+	text-transform: capitalize;
+	font-size: 12px !important;
+	width: 1px;
+	padding: 10px;
+}
+.inventory > td {
+	line-height: 80px !important;
+	vertical-align: middle;
+	text-align: center;
+}
+.table-bordered,
+.table-bordered > tbody > tr > td,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > td,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > thead > tr > th {
+	border: 1px solid rgba(231, 236, 241, 0.62);
+}
+table .label {
+	text-shadow: none !important;
+	font-size: 12px;
+	font-weight: 300;
+	padding: 4px 6px;
+	color: #fff;
+	opacity: .9;
+	border-radius: 2px;
+}
+#cs_datatable_length .form-control {
+	border-radius: 0px !important;
+}
+table.dataTable.no-footer {
+	border-bottom: none;
+}
+#actions_table th,
+#actions_table td {
+	text-align: center;
+}
+.dataTables_wrapper .form-control {
+	background-color: #fbfcfc !important;
+	border: 1px solid #dde1e1 !important;
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s !important;
+}
+div.dataTables_wrapper div.dataTables_length select {
+	width: 50px !important;
+	display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+

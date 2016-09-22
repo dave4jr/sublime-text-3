@@ -1,0 +1,343 @@
+<!DOCTYPE html PUBLIC """">
+<html lang="en">
+<head>
+	<title> mask Forms - Form Masking</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/mask.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/mask.js"></script>
+
+</head>
+<body>
+	<div class="mask-wrap">
+		<div class="mask-forms mask-container wrap-3">
+			<div class="form-header header-primary">
+				<h4><i class="fa fa-money"></i>Numbers and currency</h4>
+			</div>
+			<form method="post" action="/" id="account2">
+				<div class="form-body">
+
+
+					<!--	Comma Separator
+					========================================= -->
+					<div class="section">
+						<label class="field-label">Comma separator </label>
+						<label class="field">
+							<input type="text" class="gui-input auto" placeholder="Comma separator">
+						</label>
+					</div>
+					
+
+					<!--	Period Separator
+					========================================= -->
+					<div class="section">
+						<label class="field-label">Period separator</label>
+						<label class="field">
+							<input type="text" class="gui-input auto" data-a-sep="." data-a-dec="," placeholder="Period separator">
+						</label>
+					</div>
+					
+
+					<!--	Space Separator
+					========================================= -->
+					<div class="section">
+						<label class="field-label">Space separator</label>
+						<label class="field">
+							<input type="text" class="gui-input auto" data-a-sep=" " data-a-dec="." placeholder="Space separator">
+						</label>
+					</div>
+					
+
+					<!--	Dollar Sign
+					========================================= -->
+					<div class="section">
+						<label class="field-label">Dollar sign</label>
+						<label class="field">
+							<input type="text" class="gui-input auto" data-a-sign="$ " placeholder="Dollar sign">
+						</label>
+					</div>
+					
+
+					<!--	Pound Sign
+					========================================= -->
+					<div class="section">
+						<label class="field-label">Pound sign</label>
+						<label class="field">
+							<input type="text" class="gui-input auto" data-a-sep="." data-a-dec="," data-a-sign="£ " placeholder="Pound sign">
+						</label>
+					</div>
+					
+
+					<!--	Euro Sign
+					========================================= -->
+					<div class="section">
+						<label class="field-label">Euro sign </label>
+						<label class="field">
+							<input type="text" class="gui-input auto" data-a-sep="." data-a-dec="," data-a-sign="€ " placeholder="Euro sign">
+						</label>
+					</div>
+					
+
+					<!--	Swiss Franc Sign
+					========================================= -->
+					<div class="section">
+						<label class="field-label">Swiss francs sign</label>
+						<label class="field">
+							<input type="text" class="gui-input auto" data-a-sep=" " data-a-dec="," data-a-sign=" CHF" data-p-sign="s" placeholder="Swiss Francs sign">
+						</label>
+					</div>
+					
+
+					<!--	No Digital Grouping
+					========================================= -->
+					<div class="section">
+						<label class="field-label">No digital grouping</label>
+						<label class="field">
+							<input type="text" class="gui-input auto" data-a-sep="" placeholder="No digital grouping">
+						</label>
+					</div>
+					
+
+					<!--	2 India's Larkhs
+					========================================= -->
+					<div class="section">
+						<label class="field-label">2 India's Lakhs</label>
+						<label class="field">
+							<input type="text" class="gui-input auto" data-d-group="2" data-a-sign="Rs. " placeholder="2 India's Lakhs">
+						</label>
+					</div>
+					
+
+					<!--	4 Some Asian Countries
+					========================================= -->
+					<div class="section">
+						<label class="field-label">4 Some Asian countries</label>
+						<label class="field">
+							<input type="text" class="gui-input auto" data-d-group="4" data-a-sign="¥ " placeholder="4 some Asian countries">
+						</label>
+					</div>
+					
+
+					<!--	Minimum - Maximum
+					========================================= -->
+					<div class="section">
+						<label class="field-label">Minimum - maximum</label>
+						<label class="field">
+							<input type="text" class="gui-input auto" data-v-max="9999" data-v-min="0" placeholder="0 - 9999">
+						</label>
+					</div>
+					
+
+					<!--	Negative - Positive
+					========================================= -->
+					<div class="section">
+						<label class="field-label">Negative - positive</label>
+						<label class="field">
+							<input type="text" class="gui-input auto" data-a-sep="." data-a-dec="," data-v-min="-99.99" data-v-max="1000.00" placeholder="-99.99 to 1000.00">
+						</label>
+					</div>
+					
+
+					<!--	Negative Only With Brackets
+					========================================= -->
+					<div class="section">
+						<label class="field-label">Negative only with brackets</label>
+						<label class="field">
+							<input type="text" class="gui-input auto" data-a-sep="." data-a-dec="," data-v-min="-9999.99" data-v-max="0.00" data-n-bracket="(,)" placeholder="-9999.99 to 0.00">
+						</label>
+					</div>
+				</div>
+
+				<!--	Submit
+				========================================= -->
+				<div class="form-footer">
+					<button type="submit" class="button btn-primary"> Send Form </button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="mask-wrap">
+		<div class="mask-forms mask-container wrap-3">
+			<div class="form-header header-primary">
+				<h4><i class="fa fa-pencil-square"></i>Form Masking</h4>
+			</div>
+			<!-- end .form-header section -->
+			<form method="post" action="/" id="account2">
+				<div class="form-body">
+					<div class="spacer-b30">
+						<div class="tagline"><span> Normal masking  </span></div>
+						<!-- .tagline -->
+					</div>
+					<div class="section">
+						<label for="telephone" class="field-label">Telephone Number </label>
+						<label for="telephone" class="field">
+							<input type="text" name="telephone" id="telephone" class="gui-input" placeholder="Enter telephone">
+						</label>
+					</div>
+					<!-- end section -->
+					<div class="section">
+						<label for="telephonext" class="field-label">Telephone With Optional Extention </label>
+						<label for="telephonext" class="field">
+							<input type="text" name="telephonext" id="telephonext" class="gui-input" placeholder="Enter telephone">
+						</label>
+					</div>
+					<!-- end section -->
+					<div class="section">
+						<label for="zipcode" class="field-label">Zip Code</label>
+						<label for="zipcode" class="field">
+							<input type="text" name="zipcode" id="zipcode" class="gui-input" placeholder="Zip code">
+						</label>
+					</div>
+					<!-- end section -->
+					<div class="section">
+						<label for="color" class="field-label">HEX Color Values (A-F &amp; 0-9)</label>
+						<label for="color" class="field">
+							<input type="text" name="color" id="color" class="gui-input" placeholder="Color HEX code">
+						</label>
+					</div>
+					<!-- end section -->
+					<div class="section">
+						<label for="dates" class="field-label">Date </label>
+						<label for="dates" class="field">
+							<input type="text" name="dates" id="dates" class="gui-input" placeholder="DD/MM/YYYY">
+						</label>
+					</div>
+					<!-- end section -->
+					<div class="section">
+						<label for="dates2" class="field-label">Date Format 2 </label>
+						<label for="dates2" class="field">
+							<input type="text" name="dates2" id="dates2" class="gui-input" placeholder="DD-MM-YYYY">
+						</label>
+					</div>
+					<!-- end section -->
+					<div class="section">
+						<label for="time" class="field-label">Time </label>
+						<label for="time" class="field">
+							<input type="text" name="time" id="time" class="gui-input" placeholder="00:00:00">
+						</label>
+					</div>
+					<!-- end section -->
+					<div class="section">
+						<label for="date-time" class="field-label">Date + Time </label>
+						<label for="date-time" class="field">
+							<input type="text" name="date-time" id="date-time" class="gui-input" placeholder="DD/MM/YYYY 00:00:00">
+						</label>
+					</div>
+					<!-- end section -->
+					<div class="section">
+						<label for="ip4" class="field-label">IPV4 </label>
+						<label for="ip4" class="field">
+							<input type="text" name="ip4" id="ip4" class="gui-input" placeholder="192.168.110.310">
+						</label>
+					</div>
+					<!-- end section -->
+					<div class="section">
+						<label for="ip6" class="field-label">IPV6 </label>
+						<label for="ip6" class="field">
+							<input type="text" name="ip6" id="ip6" class="gui-input" placeholder="9999:9999:9999:9:999:9999:9999:9999">
+						</label>
+					</div>
+					<!-- end section -->
+					<div class="section">
+						<label for="isbn" class="field-label">ISBN </label>
+						<label for="isbn" class="field">
+							<input type="text" name="isbn" id="isbn" class="gui-input" placeholder="999-99-999-9999-9">
+						</label>
+					</div>
+					<!-- end section -->
+					<div class="section">
+						<label for="isbn2" class="field-label">ISBN 2 </label>
+						<label for="isbn2" class="field">
+							<input type="text" name="isbn2" id="isbn2" class="gui-input" placeholder="999 99 999 9999 9">
+						</label>
+					</div>
+					<!-- end section -->
+					<div class="section">
+						<label for="taxid" class="field-label">Tax ID </label>
+						<label for="taxid" class="field">
+							<input type="text" name="taxid" id="taxid" class="gui-input" placeholder="99-9999999">
+						</label>
+					</div>
+					<!-- end section -->
+					<div class="section">
+						<label for="currency" class="field-label">Money / Currency </label>
+						<label for="currency" class="field">
+							<input type="text" name="currency" id="currency" class="gui-input" placeholder="000,000,000,000,000.00">
+						</label>
+					</div>
+					<!-- end section -->
+					<div class="section">
+						<label for="product" class="field-label">Product Activation Key</label>
+						<label for="product" class="field">
+							<input type="text" name="product" id="product" class="gui-input" placeholder="Enter product Activation">
+						</label>
+					</div>
+					<!-- end section -->
+					<div class="section">
+						<label for="serial" class="field-label">Serial Number</label>
+						<label for="serial" class="field">
+							<input type="text" name="serial" id="serial" class="gui-input" placeholder="Enter product serial">
+						</label>
+					</div>
+					<!-- end section -->
+					<div class="section">
+						<label for="alpha" class="field-label">Alpha Characters only (A-Z)</label>
+						<label for="alpha" class="field">
+							<input type="text" name="alpha" id="alpha" class="gui-input" placeholder="Enter alpha characters">
+						</label>
+					</div>
+					<!-- end section -->
+					<div class="spacer-t40 spacer-b40">
+						<div class="tagline"><span> Advanced masking  </span></div>
+						<!-- .tagline -->
+					</div>
+					<div class="section">
+						<p class="small-text fine-grey"> 1 - Select American Express Card Type </p>
+						<p class="small-text fine-grey"> 2 - Notice how the card slots change from 4 to 3 </p>
+						<p class="small-text fine-grey"> 3 - Also notice how the place holder changes from XX to __ </p>
+					</div>
+					<!-- end section -->
+					<div class="frm-row">
+						<div class="section colm colm6">
+							<label for="cardtype" class="field-label">Credit Card Type</label>
+							<label for="cardtype" class="field select">
+								<select id="cardtype" name="cardtype">
+									<option value="">Choose Card Type</option>
+									<option value="amex">American Express</option>
+									<option value="discover">Discover</option>
+									<option value="mastercard">MasterCard</option>
+									<option value="visa">Visa</option>
+								</select>
+								<i class="arrow double"></i>
+							</label>
+						</div>
+						<!-- end .section section -->
+						<div class="section colm colm6">
+							<label for="creditcard" class="field-label">Credit Card Number</label>
+							<label for="creditcard" class="field">
+								<input type="text" id="creditcard" name="creditcard" class="gui-input" placeholder="Credit Card Number">
+							</label>
+						</div>
+						<!-- end .section section -->
+					</div>
+					<!-- end .frm-row section -->
+				</div>
+				<!-- end .form-body section -->
+				<div class="form-footer">
+					<button type="submit" class="button btn-primary"> Send Form </button>
+				</div>
+				<!-- end .form-footer section -->
+			</form>
+		</div>
+		<!-- end .mask-forms section -->
+	</div>
+	<!-- end .mask-wrap section -->
+	<div></div>
+	<!-- end section -->
+</body>
+
+</html>
+<!-- Localized -->

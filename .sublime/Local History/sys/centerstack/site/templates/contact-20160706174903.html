@@ -1,0 +1,134 @@
+<!--======================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	contact.html
+ *======================-->
+ {% extends "base.html" %}
+ {% load staticfiles %}
+ {% load widget_tweaks %}
+ {% block content %}
+
+ 
+<div id="page">
+
+	<!--	Page Title
+	========================================= -->
+	<div id="page-title" class="pi-section-w pi-section-parallax piCounter piTabs piTooltips" style="background-image: url({% static 'img/production/mountains.jpg' %});">
+		<div class="pi-texture" style="background: rgba(24, 28, 32, 0.7);"> </div>
+		<div class="pi-section p-tb-125 pi-text-center">
+			<h2 class="h1 pi-text-shadow pi-has-border pi-has-tall-border pi-has-base-border pi-has-short-border" style="font-size: 60px;">Feel Free. <span class="pi-text-base">Say Hello!</span></h2>
+		</div>
+	</div>
+
+
+	<!--	Contact
+	========================================= -->
+	<div id="contact-message" class="pi-section-w pi-section-white">
+
+
+		<!--	Messages
+		========================================= -->
+		<div class="pi-row">
+			<div class="pi-col-sm-6 pi-col-sm-offset-3">
+				{% if messages %}
+					{% for message in messages %}
+						<p {% if message.tags == "success" %} class="pi-alert pi-alert-success fw-400 capitalize pi-letter-spacing pi-text-center m-t-55 fs-16" {% endif %}>{{ message }}</p>
+					{% endfor %}
+				{% endif %}
+			</div>
+		</div>
+
+
+		<div class="pi-section pi-padding-top-90 pi-padding-bottom-80">
+			<div class="pi-text-center pi-padding-bottom-20">
+				<h3 class="pi-uppercase pi-weight-700 pi-has-border pi-has-tall-border pi-has-short-border pi-margin-bottom-20">Get In Touch</h3>
+				<p class="lead-16 "> Send us a message and we will <br> get back to you as soon as possible.</p>
+			</div>
+			<div class="pi-row">
+				<div class="pi-col-md-8 pi-col-md-offset-2">
+
+					<!--	Form
+					========================================= -->
+					<form action="{% url 'contact' %}#contact-message" method="post" role="form">
+						{% csrf_token %}
+
+						<div class="pi-row pi-grid-small-margins">
+							<div class="pi-col-xs-6">
+								<div class="form-group">
+									<div class="pi-input-with-icon">
+										<div class="pi-input-icon">
+											<i class="icon-user"> </i>
+										</div>
+										{{ ContactForm.name | add_class:"form-control form-control-name" | attr:"placeholder:Full Name"}}
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="pi-input-with-icon">
+										<div class="pi-input-icon">
+											<i class="icon-briefcase"> </i>
+										</div>
+										{{ ContactForm.company | add_class:"form-control form-control-company-name" | attr:"placeholder:Company"}}
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="pi-input-with-icon">
+										<div class="pi-input-icon">
+											<i class="icon-mail"> </i>
+										</div>
+										{{ ContactForm.email | add_class:"form-control form-control-email" | attr:"placeholder:Email Address"}}
+									</div>
+								</div>
+							</div>
+
+							<div class="pi-col-xs-6">
+								<!-- Message -->
+								<div class="form-group">
+									<div class="pi-input-with-icon">
+										<div class="pi-input-icon">
+											<i class="icon-pencil"> </i>
+										</div>
+										{{ ContactForm.message | add_class:"form-control form-control-comments" | attr:"rows:7" | attr:"style:178px" | attr:"placeholder:How can we help?" | attr:"type:textarea"}}
+									</div>
+								</div>
+							</div>
+						</div>
+						<p class="pi-text-center">
+							<button class="btn pi-btn-base pi-btn-wide" type="submit">Send Message<i class="icon-paper-plane pi-icon-right"> </i></button>
+						</p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<!--	Phone Number
+	========================================= -->
+	<div id="phone-page-title" class="pi-section-w pi-section-parallax" style="background: url({% static 'img/production/brushed_alu_dark.png' %}) repeat !important;">
+		<div class="pi-texture" style="background: rgba(24, 28, 32, 0.4);"> </div>
+		<div class="pi-section p-tb-60">
+			<div class="pi-icon-box-vertical pi-text-center">
+				<div class="pi-icon-box-icon pi-icon-box-icon-big pi-icon-box-icon-base">
+					<i class="icon-phone"> </i>
+				</div>
+				<h2 class="h1 pi-has-border pi-has-tall-border pi-has-short-border pi-text-shadow fw-600 fs-46"> (541) 668-5377</h2>
+				<p class="lead-18 pi-text-shadow pi-uppercase pi-weight-700 pi-text-white pi-margin-bottom-5">Bend, Oregon</p>
+				<p class="lead-18 pi-text-shadow pi-uppercase pi-weight-700 pi-margin-bottom-30">
+					<a class="mail-text uppercase oswald" href="mailto:support@goldeyestheme.com">dave@centerstack.io</a>
+				</p>
+			</div>
+		</div>
+	</div>
+
+
+	<!--	Google Map
+	========================================= -->
+	<div class="pi-section-w pi-section-white">
+		<div class="pi-google-map pi-google-map-wide googleMap" data-map-address="Bend" data-map-marker="{% static 'img/map/map-marker.png' %}" data-map-marker-anchor="25,81" data-map-marker-size="75,89" data-map-style="base" data-map-type="roadmap" data-map-zoom="15"> </div>
+	</div>
+
+</div>
+
+{% endblock %}

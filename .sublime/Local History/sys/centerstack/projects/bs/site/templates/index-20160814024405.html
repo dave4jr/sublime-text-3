@@ -1,0 +1,25 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	index.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+
+ <!--	Home
+ ========================================= -->
+ <section class="hero-full parallax-section text-light home-overlay" data-parallax-image="{% static 'img/domik.jpg' %}" id="hero">
+ 	<div class="wrapper align-center" id="page-title">
+ 		<h2 class="home-logo"><strong> BrundageSmith </strong></h2>
+ 		<h4 class="subtitle-1 uppercase m-t-7" style="letter-spacing: 6.2px;"> Real Estate Brokers </h4>
+ 	</div>
+ </section>
+
+
+{% endblock %}

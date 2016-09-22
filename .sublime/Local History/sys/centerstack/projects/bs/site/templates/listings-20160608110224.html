@@ -1,0 +1,80 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	listings.html
+ *==========================-->
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+{% load customtags %}
+{% load humanize %}
+{% block content %}
+
+
+
+
+<!--	Main Wrapper
+========================================= -->
+<div class="main-wrapper">
+	<div class="main">
+		<div class="main-inner">
+			<div class="content-title">
+				<div class="content-title-inner">
+					<div class="container">
+						<h1> Our Listings </h1>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 col-lg-12">
+							<div class="row">
+
+								{% for json in jsons %}
+
+									<div class="col-md-6 col-lg-4">
+										<div class="listing-box">
+											<div class="listing-box-image" style="background-image: url({% static 'villareal/assets/img/tmp/tmp-5.jpg' %})">
+												<span class="listing-box-image-links">
+													<a href="{% url 'villareal-properties-detail-standard' %}">
+														<i class="fa fa-search"> </i>
+														<span> View detail </span>
+													</a>
+													<a href="{% url 'villareal-properties-compare' %}">
+														<i class="fa fa-balance-scale"> </i>
+														<span> Compare property </span>
+													</a>
+												</span>
+											</div>
+											<div class="listing-box-title">
+												<h2><a href="{% url 'villareal-properties-detail-standard' %}"> Bright Island Route </a></h2>
+												<h3> $ 40.000 </h3>
+											</div>
+											<div class="listing-box-content">
+												<dl>
+													<dt> Type </dt>
+													<dd> House </dd>
+													<dt> Location </dt>
+													<dd> New York </dd>
+													<dt> Area </dt>
+													<dd> 180 sqft </dd>
+												</dl>
+											</div>
+										</div>
+									</div>
+
+								{% endfor %}
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+{% endblock %}

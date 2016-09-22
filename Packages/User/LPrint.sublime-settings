@@ -1,13 +1,16 @@
 {
-	"printer": "EPSOND8C848",
-	"filter_chain": ["Enscript"],
-	"landscape": true,
-	"font_size": 16,
+	"filter_chain":
+	[
+		"Enscript"
+	],
 	"font_family": "maven pro",
-	"margin_top": 36,
-	"margin_left": 36,
-	"margin_bottom": 36,
-	"margin_right": 36,
+	"font_size": 16,
+	"header": false,
 	"highlight": true,
-	"header": false
+	"landscape": true,
+	"margin_bottom": 36,
+	"margin_left": 36,
+	"margin_right": 36,
+	"margin_top": 36,
+	"printer": "EPSON_WF_2630_SERIES"
 }

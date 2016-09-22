@@ -1,0 +1,75 @@
+<!--======================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	users.html
+ *======================-->
+ {% extends "base.html" %}
+ {% load widget_tweaks %}
+ {% load humanize %}
+ {% load mathfilters %}
+ {% load staticfiles %}
+ {% block content_site %}
+
+
+
+<!--	Users
+========================================= -->
+<div class="row">
+	<div class="col-md-12">
+		<div class="portlet light ">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="pe-7s-users"> </i>
+					<span class="caption-subject base-font"> Users                                                                                                                                                                                                                                                                                                                                                                                                                                               </span>
+				</div>
+			</div>
+			<div class="portlet-body">
+				<div class="table-scrollable table-scrollable-borderless">
+					<table class="table table-hover table-light">
+						<thead>
+							<tr>
+								<th> Avatar </th>
+								<th> Earnings </th>
+							</tr>
+						</thead>
+						<tbody>
+
+							{% for user in users %}
+
+								<tr>
+									<td class="fit">
+										<form action="{% url 'users' %}" id="upload-file-form" method="post" enctype="multipart/form-data" class="inline">
+											{% csrf_token %}
+											<div id="file-upload" class="fileUpload-icon btn">
+												<img class="user-pic rounded" src="{{ MEDIA_URL }}{{ user.avatar }}">
+												{{ form.avatar | add_class:"upload" | attr:"type:file" }}
+											</div>
+										</form>
+									</td>
+									<td>
+										<img class="user-pic rounded" src="../assets/pages/media/users/avatar4.jpg">
+									</td>
+								</tr>
+
+							{% endfor %}
+
+						</tbody>
+					</table>
+
+
+					<!--	Javascript: Submitting Upload Form
+					========================================= -->
+					<script>
+						$(function() {
+							document.getElementById("file-upload").onchange = function() {
+								document.getElementById("upload-file-form").submit();
+							};
+						});
+					</script>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

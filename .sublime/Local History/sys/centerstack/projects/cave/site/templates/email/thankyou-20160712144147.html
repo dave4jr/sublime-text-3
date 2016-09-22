@@ -1,0 +1,78 @@
+<!--======================================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	Confirmation Email Template.html
+ *======================================-->
+ <!DOCTYPE html>
+ {% load staticfiles %}
+ <html lang="en">
+ <head>
+ 	<meta charset="utf-8">
+ 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+ 	<meta content="noindex" name="robots">
+ 	<title>CMA | Thank You</title>
+ </head>
+ <body style="margin: 0; padding: 0;">
+ 	{% for reservation in reservations %}
+ 		{% if reservation.id == 2 %}
+		 	<table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" max-width="100%">
+			 	<style type="text/css">
+			 		table {
+			 			border-collapse: collapse;
+			 			border-spacing: 0;
+			 			box-sizing: border-box;
+			 		}
+			 		td.text {
+			 			-webkit-font-smoothing: antialiased;
+			 			-ms-text-size-adjust: none;
+			 			-webkit-text-size-adjust: none;
+			 		}
+			 		a[x-apple-data-detectors] {
+			 			color: inherit !important;
+			 			text-decoration: none !important;
+			 			font-size: inherit !important;
+			 			font-family: inherit !important;
+			 			font-weight: inherit !important;
+			 			line-height: inherit !important;
+			 		}
+			 		@media screen and (max-width: 650px) {
+						.text { font-size: 14px !important; line-height: 21px !important; }
+						.h1 { font-size: 20px !important; }
+						.h2 { font-size: 18px !important; }
+						.h3 { font-size: 16px !important; }
+						.h4 { font-size: 14px !important; }
+						.h5 { font-size: 14px !important; }
+						table { line-height: 1.5 !important; }
+						.h1, .h2, .h3, .h4, .h5 { line-height: 1.2 !important; }
+						.flex-size { max-width: 100% !important; width: 650px !important; }
+						.flex-size img { max-width: 100% !important; }
+						.s-paf { padding: 0 !important; }
+						.s-pbf { padding-bottom: 0 !important; }
+						.s-pbm { padding-bottom: 16px !important; }
+						.s-plf { padding-left: 0 !important; }
+						.s-prf { padding-right: 0 !important; }
+						.s-pts { padding-top: 8px !important; }
+						.s-ptm { padding-top: 16px !important; }
+						.s-ptl { padding-top: 32px !important; }
+						.s-tac { text-align: center !important; }
+						.s-tal { text-align: left !important; }
+			 		}
+			 		@media screen and (min-device-width: 375px) and (max-device-width: 500px) {
+						table { font-size: 16px !important; }
+						table.footer-content { font-size: 12px !important; }
+			 		}
+			 	</style>
+			 	<table align="center" bgcolor="#fff" border="0" cellpadding="0" cellspacing="0" width="650px" max-width="100%" height="800px">
+			 		<tr>
+			 			<td style="background: url({% static 'img/email/header-thankyou.jpg' %}) no-repeat; text-align: justify; padding: 250px 65px 20px 65px; color: #444; font-family: 'Helvetica Neue', Verdana, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 1.35;" align="left" class="text">
+			 				<p>{{ reservation.member }},</p>
+			 				<p>From all of us here at Colorado Motorcycle Adventures, we want to extend a great big “thank you” for trusting us with your motorcycle needs. We know that you have options so we appreciate your choice to work with us . If there is anything we can do to make our service and your experience better, please let us know, we would love to hear your feedback. If you had a excepetional experience and would be so kind as to leave an endorsement for us on Google or Facebook, we would very much appreciate it.<br><br>We hope you had a great ride and look forward to seeing you back again next year. In the meantime, ride safe as we’ll look forward to serving you again soon!</p>
+			 				<p>Let's go ride!</p>
+			 			</td>
+			 		</tr>
+			 	</table>
+			</table>
+		{% endif %}
+	{% endfor %}
+ </body>
+ </html>

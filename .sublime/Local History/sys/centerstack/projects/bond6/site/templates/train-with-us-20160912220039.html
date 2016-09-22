@@ -1,0 +1,128 @@
+<!--==========================
+*  Author:		Dave Luke Jr
+*  Company:	CenterStack.io
+*  Description:	train-with-us.html
+*==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load customtags %}
+{% load staticfiles %}
+
+{% block content %}
+
+<section class="hero-big text-light parallax-section" style="background-image: url({% static 'img/boxing.jpg' %}); background-size: cover; background-position: center center;"  id="hero">
+	<div class="wrapper align-center" id="page-title">
+		<h1><strong> Train <span class="coloredd">With</span> Us </strong></h1>
+	</div>
+</section>
+
+
+<!--	Icons
+========================================= -->
+<section id="page-body" class="p-b-80">
+	<div class="wrapper-small">
+		<h3 class="align-center"><strong> Training Plans </strong></h3>
+		<hr class="align-center small thick colored">
+		<p class="align-center fs-15 m-b-70 p-rl-80">At Bond 6 Fitness, we organize our training into 3 main categories: personalized one-on-one training, group or couples training, and pre/post natal training. Each group is tailored specifically for the individual(s), as well as short and long-term goals. </p>
+	</div>
+	<div id="icons" class="wrapper">
+		<div class="column-section align-center clearfix">
+			<div class="column one-third">
+				<i class="flaticon-woman colored"></i>
+				<h5 class="uppercase p-b-5">One-on-One Training</h5>
+				<p>The most personalized and customized training option, where performance and results are the key focus and are tracked for progress and consistency.</p>
+				<a href="#one-on-one" class="sr-button button-2 button-small m-t-20">Read More</a>
+			</div>
+			<div class="column one-third">
+				<i class="flaticon-command colored"></i>
+				<h5 class="uppercase p-b-5">Group Training</h5>
+				<p>Whether it's with your spouse or a number of close friends, the social aspect of trianing with a group aids in workout accountability and overall motivation.</p>
+				<a href="#group" class="sr-button button-2 button-small m-t-20">Read More</a>
+			</div>
+			<div class="column one-third last-col">
+				<i class="flaticon-pregnant colored"></i>
+				<h5 class="uppercase p-b-5">Pre/Post Natal Training</h5>
+				<p>Pre/post natal workouts are uniquely designed to facilitate and prepare your body for the physical and mental challenges of labor and delivery.</p>
+				<a href="#natal" class="sr-button button-2 button-small m-t-20">Read More</a>
+			</div>
+		</div>
+	</div>
+	<div class="spacer-big"></div>
+</section>
+
+
+<section id="page-body" class="parallax-block-section p-t-0">
+	
+	<!--	Block 1
+	========================================= -->
+	<div  id="one-on-one" class="parallax-block" style="background-color: #fff">
+		<div class="column-section clearfix" style="height: 100%;">
+			<div class="column one-third m-0" style="width:47.5%; height: 100%;">
+				<div class="p-l-80 p-r-100 m-t-150">
+					<h4 class="p-b-3 uppercase"><strong> one-on-one training </strong></h4>
+					<hr class="small thick colored" />
+					<p class="fs-15 p-t-3 text-justify p-b-40" style="color: #8d8d8d;"> The most personal and individualized training option. Working one-on-one allows us to develop the most effective programs for you to reach your goals. We will lead you through dynamic training regimens using successfully proven methods. <br><br>Results are our main priority, so we regularly track your progress of strength, conditioning, body composition, and diet. We take tremendous pride in helping you feel amazing about how you look. while reaching maximum fitness levels. </p>
+				</div>
+			</div>
+			<div class="column two-third bg-parallax semi-circle-right m-0" style="width: 52.5%; height: 100%; background-image: url({% static 'img/roof.jpg' %}); background-position: right center;"></div>
+		</div>
+	</div>
+	
+	
+	<!--	Block 2
+	========================================= -->
+	<div id="group" class="parallax-block" style="background-color: #fff">
+		<div class="column-section clearfix" style="height: 100%;">
+			<div class="column two-third bg-parallax semi-circle-left m-0" style="width: 52.5%; height: 100%; background-image: url({% static 'img/boxing-bw.jpg' %}); background-position: left center;"></div>
+			<div class="column one-third m-0" style="width:47.5%; height: 100%;">
+				<div class="p-r-80 p-l-100 m-t-200">
+					<h4 class="p-b-3 uppercase"><strong> group training </strong></h4>
+					<hr class="small thick colored" />
+					<p class="fs-15 p-t-3 text-justify p-b-40" style="color: #8d8d8d;">Train with a spouse, a friend, or few friends. Small group training is fun way to bond while getting a great workout at the same time. Workouts will be designed based on your fitness goals in order to get you your ideal results. <br><br>Because the groups are capped at 4, you won’t lose the close attention to form and safety with exercises. Sometimes friends or partners can push each other better than anyone else. Making healthy lifestyle habits together with those you surround yourself can have huge effect on adherence to those habits.  </p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<!--	Block 3
+	========================================= -->
+	<div id="natal" class="parallax-block" style="background-color: #fff">
+		<div class="column-section clearfix" style="height: 100%;">
+			<div class="column one-third m-0" style="width:47.5%; height: 100%;">
+				<div class="p-l-80 p-r-100 m-t-150">
+					<h4 class="p-b-3 uppercase"><strong> Pre/post natal </strong></h4>
+					<hr class="small thick colored" />
+					<p class="fs-15 p-t-3 text-justify p-b-40" style="color: #8d8d8d;"> From maintaining a healthy body weight, to preparing your body for the physical challenges of labor and delivery, exercise is highly recommended for a healthy pregnancy. Although the guidelines for prenatal and postpartum women are not that much different than the non-pregnant adult, there are some important recommendations and contraindications to adhere to. <br><br>Working with a professionally trained prenatal and postpartum trainer is the safest and most effective way to exercise during this period. Some of the benefits of exercise for prenatal postnatal clients are more energy during pregnancy, reduced stress and anxiety, quicker recovery from birth, fewer complications in pregnancy, shorter labor time and increased self esteem! <br><br>At Bond 6 Fitness, we are certified in pre/post natal fitness by Annette Lange Education Systems (ALES). </p>
+				</div>
+			</div>
+			<div class="column two-third bg-parallax semi-circle-right m-0" style="width: 52.5%; height: 100%; background-image: url({% static 'img/preggo-bw.jpg' %}); background-position: right center;"></div>
+		</div>
+	</div>
+
+</section>
+<div class="spacer-big"></div>
+<div class="spacer-big"></div>
+
+
+
+
+
+<script>
+	$(function() {
+		var h_viewport = $(document).outerHeight();
+		var h = $(".bg-parallax").outerHeight();
+		console.log(h_viewport);
+		console.log(h);
+	});
+</script>
+
+
+
+
+
+
+
+
+	
+{% endblock %}

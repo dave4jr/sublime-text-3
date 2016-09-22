@@ -1,0 +1,73 @@
+<!--======================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	index.html
+ *======================-->
+ {% extends "base.html" %}
+ {% load staticfiles %}
+ {% load page_active from pagination %}
+ {% block content %}
+
+ 
+<div id="page">
+
+	<!--	Page Title
+	========================================= -->
+	<div class="pi-section-w pi-section-parallax piCounter piTabs piTooltips" style="background-image: url({% static 'img/production/light-house-2.jpg' %});">
+		<div class="pi-texture" style="background: rgba(24, 28, 32, 0.6);"> </div>
+		<div class="pi-section p-tb-125 pi-text-center">
+			<h2 class="h1 pi-text-shadow pi-has-border pi-has-tall-border pi-has-base-border pi-has-short-border" style="font-size: 60px;">Speak <span class="pi-text-base">Our</span> Minds</h2>
+		</div>
+	</div>
+
+	<!--	Blog Entries
+	========================================= -->
+	<div class="pi-section-w pi-section-white">
+		<div class="pi-section p-t-100 p-b-20">
+			<div class="pi-row">
+				<div class="pi-col-sm-12">
+
+					{% for blog in blogs %}
+					
+						<!--	Post 1
+						========================================= -->
+						<div class="pi-row">
+							<div class="pi-col-sm-4">
+								<div class="pi-img-w pi-img-round-corners pi-img-shadow">
+									<a href="{% url 'blog-single' pk=blog.pk %}">
+										<img style="padding: 0px; background: #EEE; border-radius: 3px;" src="{{ MEDIA_URL }}{{ blog.img }}">
+										<div class="pi-img-overlay pi-img-overlay-dark">
+											<div class="pi-caption-centered">
+												<div>
+													<span class="pi-caption-icon pi-caption-scale icon-search"> </span>
+												</div>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="pi-col-sm-8">
+								<h2 class="h3 pi-margin-top-minus-5 text-black-4"><a class="pi-link-dark" href="#"> {{ blog.title }} </a></h2>
+								<ul class="pi-meta">
+									<li><i class="icon-user"> </i><a href="#"> {{ blog.author|capfirst }} </a></li>
+									<li><i class="icon-calendar"> </i> {{ blog.date }} </li>
+									<li><i class="icon-clock"> </i> {{ blog.time }} </li>
+								</ul>
+								<p>{{ blog.post|safe }}</p>
+								<p><a class="btn pi-btn-base" href="{% url 'blog-single' pk=blog.pk %}"> Read </a></p>
+							</div>
+						</div>
+						<hr class="pi-divider pi-divider-dashed pi-divider-big" />
+
+					{% endfor %}
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,157 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	buy.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+
+<!--	Page Title
+========================================= -->
+<section id="page_title">
+	<h4 class="capitalize fs-24"> Buy A Property </h4>
+</section>
+
+
+<section class="p-t-40" id="page-body">
+	<div id="buy-filter" class="wrapper-small portlet bs-grey-bg">
+		<form action="" method="post">
+
+			<!--	Selections
+			========================================= -->
+			<div class="column-section clearfix">
+				<div class="form-row column one-third">
+					<label for="name"> City</label>
+					<input class="name req" id="name" name="name" type="text" value="" />
+				</div>
+
+				<div class="form-row column one-third">
+					<label for="name"> County</label>
+					<input class="name req" id="name" name="name" type="text" value="" />
+				</div>
+
+				<div class="form-row column one-sixth">
+					<label for="name"> Bedrooms</label>
+					<input class="name req" id="name" name="name" type="text" value="" />
+				</div>
+
+				<div class="form-row column one-sixth last-col">
+					<label for="email"> Bathrooms</label>
+					<input class="email req" id="email" name="email" type="text" value="" />
+				</div>
+			</div>
+			<div class="clear"></div>
+
+
+			<!--	Ranges
+			========================================= -->
+			<div class="column-section clearfix">
+				<div class="form-row column one-sixth">
+					<label for="name"> Price (min)</label>
+					<input class="name req" id="name" name="name" type="text" value="" />
+				</div>
+
+				<div class="form-row column one-sixth">
+					<label for="name"> Price (max)</label>
+					<input class="name req" id="name" name="name" type="text" value="" />
+				</div>
+
+				<div class="form-row column one-sixth">
+					<label for="name"> Sqft (min)</label>
+					<input class="name req" id="name" name="name" type="text" value="" />
+				</div>
+
+				<div class="form-row column one-sixth">
+					<label for="email"> Sqft (max)</label>
+					<input class="email req" id="email" name="email" type="text" value="" />
+				</div>
+
+				<div class="form-row column one-sixth">
+					<label for="name"> Lot (min)</label>
+					<input class="name req" id="name" name="name" type="text" value="" />
+				</div>
+
+				<div class="form-row column one-sixth last-col">
+					<label for="email"> Lot (max)</label>
+					<input class="email req" id="email" name="email" type="text" value="" />
+				</div>
+			</div>
+			<div class="clear"></div>
+
+
+			<!--	Submit
+			========================================= -->
+			<div class="form-row">
+				<input class="submit" type="submit" value="Submit" />
+			</div>
+		</form>
+	</div>
+
+
+
+	<!--	Filter
+	========================================= -->
+	<ul id="portfolio-filter" class="filter m-t-30" data-related-grid="properties">
+		<li class="active"><a data-filter="*" href="#"> Show All </a></li>
+		<li><a data-filter=".branding" href="#" title="Branding"> Branding </a></li>
+		<li><a data-filter=".web" href="#" title="Print"> Web Design </a></li>
+		<li><a data-filter=".photography" href="#" title="Print"> Photography </a></li>
+	</ul>
+
+	<!--	Grid
+	========================================= -->
+	<div id="properties" class="isotope-grid gallery-container style-modern-3 isotope-spaced clearfix fitrows m-t-30" data-heightratio=".66">
+
+		{% for json in jsons.object_list %}
+
+			<div class="isotope-item">
+				<a href="{% url 'buy-single' listing_rid=json.ListingRid %}" class="thumb-overlay overlay-effect-3 text-light">
+					<img src="{{ json.img.0 }}">
+					<img src="{{ json.img.1 }}" class="hover-pic">
+					<div class="overlay-caption">
+						<table>
+							<tr>
+								<td><h6 class="uppercase">{{ json.Bedrooms }} BR &bull; {{ json.Bathrooms|floatformat:"1" }} BA &bull; {{ json.SquareFootage|floatformat:"0"|intcomma }} Sqft.</h6></td>
+								<td><h6 class="uppercase fs-20">${{ json.ListingPrice|floatformat:"0"|intcomma }}</h6></td>
+							</tr>
+							<tr>
+								<td><h6 class="subtitle-1 o-100 m-t-0">{% include "include/address.html" with arg="street" %}</h6></td>
+								<td><h6 class="subtitle-1 o-100 m-t-0">{% include "include/address.html" with arg="cityzip" %}</h6></td>
+							</tr>
+
+						</table>
+		                        </div>
+				</a>
+			</div>
+				
+		{% endfor %}
+				
+	</div>
+
+	<div class="spacer-big"> </div>
+
+	<!--	Pagination
+	========================================= -->
+	<div id="pagination">
+		{{ jsons.render }}
+	</div>
+
+</section>
+
+
+<!--=====================================================
+	Isotope Javascript
+=====================================================-->
+<script>
+$(function() {
+	
+});
+</script>
+
+{% endblock %}

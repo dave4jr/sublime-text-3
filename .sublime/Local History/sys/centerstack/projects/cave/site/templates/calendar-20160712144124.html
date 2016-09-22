@@ -1,0 +1,263 @@
+<!--======================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	calendar.html
+ *======================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% block content_site %}
+
+
+<!--	Scheduler
+========================================= -->
+<div class="row">
+	<div class="col-md-12">
+		<div class="portlet light portlet-fit">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="pe-7s-date"> </i>
+					<span class="caption-subject base-font"> Calendar </span>
+				</div>
+			</div>
+			<div class="portlet-body">
+				<div id="scheduler-1"></div>
+				<div id="scheduler-2"></div>
+			</div>
+			<div class="row p-b-10">
+				<div class="col-sm-12">
+					<p class="text-center m-t-5">
+						<span class="m-r-40 text-grey fs-12"><i class="fa fa-square fs-14" style="color: {{ preference.calendar_color_bike }}"></i> Bike</span>
+						<span class="m-r-40 text-grey fs-12"><i class="fa fa-square fs-14" style="color: {{ preference.calendar_color_tour }}"></i> Tour</span>
+						<span class="m-r-40 text-grey fs-12"><i class="fa fa-square fs-14" style="color: {{ preference.calendar_color_class }}"></i> Class</span>
+						<span class="text-grey fs-12"><i class="fa fa-square fs-14" style="color: {{ preference.calendar_color_storage }}"></i> Storage</span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--=====================================================
+	Chart 1: Bike Reservations
+=====================================================-->
+<script>
+
+	$(function() {
+
+		function get_date(){
+			var today = new Date();
+			var dd = today.getDate();
+			var mm = today.getMonth()+1;
+			var yyyy = today.getFullYear();
+
+			if(dd<10) {
+			    dd='0'+dd
+			}
+			if(mm<10) {
+			    mm='0'+mm
+			}
+			return mm+'/'+dd+'/'+yyyy;
+		};
+
+		$('#scheduler-1').fullCalendar({
+			defaultView: 'timelineMonth',
+			editable: false,
+			now: get_date(),
+			scrollTime: '00:00',
+			timeFormat: 'ha',
+			displayEventEnd: true,
+			buttonText: {
+		    		prev: "Prev",
+		    		next: "Next",
+		    		today: "Today",
+		    		timelineMonth: "Month",
+		    		timelineYear: "Year"
+		    	},
+			header: {
+				left: '',
+				right: 'prev, next',
+			},
+			contentHeight: "auto",
+			slotWidth: '100%',
+			'slotEventOverlap': false,
+			slotLabelFormat: [
+			    'MMMM YYYY',
+			    'D [\n] ddd'
+			],
+			resourceAreaWidth: '13%',
+			resourceLabelText: 'Bikes',
+			displayEventTime: false,
+			resourceColumns: [
+				{
+					group: true,
+					labelText: "Brand",
+					field: 'manufacturer'
+				},
+				{
+					labelText: "Model",
+					field: 'model'
+				},
+			],
+
+			/*	Resources
+			========================================= */
+			resources: [
+				{% for bike in bikes %}
+					{
+						id: "{{ bike.pk }}",
+						manufacturer: "{{ bike.manufacturer }}",
+						model: "{{ bike.model }}",
+					},
+				{% endfor %}
+			],
+
+
+			/*	Events
+			========================================= */
+			events: [
+				{% for reservation in reservations %}
+
+					{
+						id: '{{ reservation.pk }}',
+						resourceId: "{{ reservation.bike.pk }}",
+						title: '{{ reservation.customer }}\n{{ reservation.checkout_datetime.time }} / {{ reservation.checkin_datetime.time }}',
+						start: '{{ reservation.checkout_datetime.date }}',
+						end: '{{ reservation.checkin_datetime.date }}',
+						allDay: false,
+						color:"{% if reservation.rental_type == "class_bike" %} {{ preference.calendar_color_class }} {% elif reservation.rental_type == "tour_bike" %}{{ preference.calendar_color_tour }}{% else %}{{ preference.calendar_color_bike }}{% endif %}",
+						borderColor: "{{ preference.calendar_color_1 }}",
+						url: "/reservations/edit/{{ reservation.pk }}/",
+					},
+				{% endfor %}
+			],
+		});
+	});
+</script>
+
+
+
+<!--=====================================================
+	Chart-2 For Storage
+=====================================================-->
+<script>
+
+	$(function() {
+
+		function get_date(){
+			var today = new Date();
+			var dd = today.getDate();
+			var mm = today.getMonth()+1;
+			var yyyy = today.getFullYear();
+
+			if(dd<10) {
+			    dd='0'+dd
+			}
+			if(mm<10) {
+			    mm='0'+mm
+			}
+			return mm+'/'+dd+'/'+yyyy;
+		};
+
+		$('#scheduler-2').fullCalendar({
+			defaultView: 'timelineMonth',
+			editable: false,
+			now: get_date(),
+			scrollTime: '00:00',
+			timeFormat: 'ha',
+			displayEventEnd: true,
+			buttonText: {
+		    		prev: "Prev",
+		    		next: "Next",
+		    		today: "Today",
+		    		timelineMonth: "Month",
+		    		timelineYear: "Year"
+		    	},
+			header: {
+				left: '',
+				right: '',
+			},
+			contentHeight: "auto",
+			slotWidth: '100%',
+			'slotEventOverlap': false,
+			eventOverlap:false,
+			slotLabelFormat: [
+			    'MMMM YYYY',
+			    'D [\n] ddd'
+			],
+			resourceAreaWidth: '13%',
+			resourceLabelText: 'Bikes',
+			displayEventTime: false,
+			resourceColumns: [
+				{
+					group: true,
+					labelText: "Brand",
+					field: 'manufacturer'
+				},
+				{
+					labelText: "Model",
+					field: 'model'
+				},
+			],
+
+			/*	Resources
+			========================================= */
+			resources: [
+				{% for reservation in reservations %}
+					{% if reservation.rental_type == "storage" %}
+					{
+						id: "{{ reservation.pk }}",
+						manufacturer: "Storage",
+						model: "{{ reservation.storage_bike }}",
+					},
+					{% endif %}
+				{% endfor %}
+			],
+
+
+			/*	Events
+			========================================= */
+			events: [
+				{% for reservation in reservations %}
+					{% if reservation.rental_type == "storage" %}
+					{
+						id: "{{ reservation.pk }}",
+						resourceId: "{{ reservation.pk }}",
+						title: '{{ reservation.customer }}\n{{ reservation.checkout_datetime.time }} / {{ reservation.checkin_datetime.time }}',
+						start: '{{ reservation.checkout_datetime.date }}',
+						end: '{{ reservation.checkin_datetime.date }}',
+						allDay: false,
+						color: "{{ preference.calendar_color_storage }}",
+						borderColor: "{{ preference.calendar_color_storage }}",
+						url: "/reservations/edit/{{ reservation.pk }}/",
+					},
+					{% endif %}
+				{% endfor %}
+			],
+		});
+	});
+</script>
+
+
+
+
+
+<!--	Scheduler Customization
+========================================= -->
+<script>
+	$(function() {
+		$("#scheduler-2 .fc-head, #scheduler-3 .fc-head").toggleClass("hidden", true);
+
+		$('#scheduler-1 .fc-next-button').onchange = function() {
+			$('#scheduler-2 .fc-next-button').submit();
+		};
+		
+	});
+</script>
+
+
+
+
+ {% endblock %}

@@ -1,0 +1,83 @@
+<!--==========================
+*  Author:		Dave Luke Jr
+*  Company:	CenterStack.io
+*  Description:	blog.html
+*==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load customtags %}
+{% load staticfiles %}
+{% block content %}
+
+
+<!--	Page Title
+========================================= -->
+<section class="page-title mini-title">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h4 class="text-uppercase"> Blog </h4>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!--	Blog
+========================================= -->
+<section class="body-content ">
+	<div class="page-content">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 m-l-150">
+					<div class="blog-classic">
+						<div class="date"> 24
+							<span> MAR 2015 </span>
+						</div>
+						<div class="blog-post">
+							<div class="full-width">
+								<img src="{% static 'img/blog/roof.jpg' %}" />
+							</div>
+							<h4 class="text-uppercase">
+								<a href="{% url 'massive-blog-single' %}"> standard blog post with photo </a>
+							</h4>
+							<ul class="post-meta">
+								<li>
+									<i class="fa fa-user"> </i> posted by
+									<a href="#"> blair </a>
+								</li>
+								<li>
+									<i class="fa fa-folder-open"> </i>
+									<a href="#"> boxing </a> ,
+									<a href="#"> exercise </a> ,
+									<a href="#"> fitness </a>
+								</li>
+							</ul>
+							<p> Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
+							<a class="btn btn-small btn-dark-solid " href="{% url 'blog-single' %}"> Continue Reading </a>
+						</div>
+					</div>
+					
+					
+					<!--	Pagination
+					========================================= -->
+					<div class="text-center">
+						<ul class="pagination custom-pagination">
+							<li><a href="#"> Prev </a></li>
+							<li class="active">
+								<a href="#"> 1 </a>
+							</li>
+							<li><a href="#"> 2 </a></li>
+							<li><a href="#"> 3 </a></li>
+							<li><a href="#"> 4 </a></li>
+							<li><a href="#"> 5 </a></li>
+							<li><a href="#"> Next </a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+		
+{% endblock %}

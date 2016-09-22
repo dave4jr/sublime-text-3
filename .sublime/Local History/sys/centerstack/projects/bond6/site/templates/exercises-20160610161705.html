@@ -1,0 +1,233 @@
+<!--==========================
+*  Author:		Dave Luke Jr
+*  Company:	CenterStack.io
+*  Description:	index.html
+*==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load customtags %}
+{% load staticfiles %}
+{% block content %}
+
+
+<!--	Page Title
+========================================= -->
+<section class="page-title mini-title">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h4 class="text-uppercase"> Exercises </h4>
+				<ol class="breadcrumb">
+					<li><a href="#"> Fitness </a></li>
+					<li class="active"> Exercises </li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!--	Exercises
+========================================= -->
+<section class="body-content page-content">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="text-center">
+					<ul class="portfolio-filter">
+						<li class="active">
+							<a data-filter="*" href="#"> All </a>
+						</li>
+						<li><a data-filter=".cat1" href="#"> Cardio </a></li>
+						<li><a data-filter=".cat2" href="#"> Strength </a></li>
+						<li><a data-filter=".cat3" href="#"> Endurance </a></li>
+						<li><a data-filter=".cat4" href="#"> Flexibility </a></li>
+						<li><a data-filter=".cat4" href="#"> Core </a></li>
+					</ul>
+				</div>
+				<div class="portfolio col-3 portfolio-gallery gutter ">
+					<div class="portfolio-item cat1 cat3 ">
+						<div class="thumb">
+							<img alt="" src="{% static 'massive/img/portfolio/01.jpg' %}" />
+							<div class="portfolio-hover">
+								<div class="action-btn">
+									<a class="popup-gallery" href="{% static 'massive/img/portfolio/01.jpg' %}" title="Title 1">
+										<i class="icon-basic_magnifier"> </i>
+									</a>
+								</div>
+								<div class="portfolio-description">
+									<h4><a class="popup-gallery2" href="{% static 'massive/img/portfolio/01.jpg' %}" title="Title 1"> lightbox view </a></h4>
+									<p><a href="#"> category </a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio-item cat2 cat4 ">
+						<div class="thumb">
+							<img alt="" src="{% static 'massive/img/portfolio/02.jpg' %}" />
+							<div class="portfolio-hover">
+								<div class="action-btn">
+									<a class="popup-gallery" href="{% static 'massive/img/portfolio/02.jpg' %}" title="Title 2">
+										<i class="icon-basic_magnifier"> </i>
+									</a>
+								</div>
+								<div class="portfolio-description">
+									<h4>
+										<a class="popup-gallery2" href="{% static 'massive/img/portfolio/02.jpg' %}" title="Title 2"> lightbox view </a>
+									</h4>
+									<p>
+										<a href="#"> category </a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio-item cat3 cat5 ">
+						<div class="thumb">
+							<img alt="" src="{% static 'massive/img/portfolio/03.jpg' %}" />
+							<div class="portfolio-hover">
+								<div class="action-btn">
+									<a class="popup-gallery" href="{% static 'massive/img/portfolio/03.jpg' %}" title="Title 3">
+										<i class="icon-basic_magnifier"> </i>
+									</a>
+								</div>
+								<div class="portfolio-description">
+									<h4>
+										<a class="popup-gallery2" href="{% static 'massive/img/portfolio/03.jpg' %}" title="Title 3"> lightbox view </a>
+									</h4>
+									<p>
+										<a href="#"> category </a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio-item cat1 cat4 ">
+						<div class="thumb">
+							<img alt="" src="{% static 'massive/img/portfolio/04.jpg' %}" />
+							<div class="portfolio-hover">
+								<div class="action-btn">
+									<a class="popup-gallery" href="{% static 'massive/img/portfolio/04.jpg' %}" title="Title 4">
+										<i class="icon-basic_magnifier"> </i>
+									</a>
+								</div>
+								<div class="portfolio-description">
+									<h4>
+										<a class="popup-gallery2" href="{% static 'massive/img/portfolio/04.jpg' %}" title="Title 4"> lightbox view </a>
+									</h4>
+									<p>
+										<a href="#"> category </a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio-item cat2 cat4">
+						<div class="thumb">
+							<img alt="" src="{% static 'massive/img/portfolio/05.jpg' %}" />
+							<div class="portfolio-hover">
+								<div class="action-btn">
+									<a class="popup-gallery" href="{% static 'massive/img/portfolio/05.jpg' %}" title="Title 5">
+										<i class="icon-basic_magnifier"> </i>
+									</a>
+								</div>
+								<div class="portfolio-description">
+									<h4>
+										<a class="popup-gallery2" href="{% static 'massive/img/portfolio/05.jpg' %}" title="Title 5"> lightbox view </a>
+									</h4>
+									<p>
+										<a href="#"> category 3 </a> ,
+										<a href="#"> category 4 </a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio-item cat1 cat4 cat3 cat5">
+						<div class="thumb">
+							<img alt="" src="{% static 'massive/img/portfolio/06.jpg' %}" />
+							<div class="portfolio-hover">
+								<div class="action-btn">
+									<a class="popup-gallery" href="{% static 'massive/img/portfolio/06.jpg' %}" title="Title 6">
+										<i class="icon-basic_magnifier"> </i>
+									</a>
+								</div>
+								<div class="portfolio-description">
+									<h4>
+										<a class="popup-gallery2" href="{% static 'massive/img/portfolio/06.jpg' %}" title="Title 6"> lightbox view </a>
+									</h4>
+									<p>
+										<a href="#"> category 5 </a> ,
+										<a href="#"> category 6 </a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio-item cat2 cat5">
+						<div class="thumb">
+							<img alt="" src="{% static 'massive/img/portfolio/07.jpg' %}" />
+							<div class="portfolio-hover">
+								<div class="action-btn">
+									<a class="popup-gallery" href="{% static 'massive/img/portfolio/07.jpg' %}" title="Title 7">
+										<i class="icon-basic_magnifier"> </i>
+									</a>
+								</div>
+								<div class="portfolio-description">
+									<h4>
+										<a class="popup-gallery2" href="{% static 'massive/img/portfolio/07.jpg' %}" title="Title 7"> lightbox view </a>
+									</h4>
+									<p>
+										<a href="#"> category </a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio-item cat2 cat5">
+						<div class="thumb">
+							<img alt="" src="{% static 'massive/img/portfolio/08.jpg' %}" />
+							<div class="portfolio-hover">
+								<div class="action-btn">
+									<a class="popup-gallery" href="{% static 'massive/img/portfolio/08.jpg' %}" title="Title 8">
+										<i class="icon-basic_magnifier"> </i>
+									</a>
+								</div>
+								<div class="portfolio-description">
+									<h4>
+										<a class="popup-gallery2" href="{% static 'massive/img/portfolio/08.jpg' %}" title="Title 8"> lightbox view </a>
+									</h4>
+									<p>
+										<a href="#"> category </a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio-item cat2 cat5">
+						<div class="thumb">
+							<img alt="" src="{% static 'massive/img/portfolio/09.jpg' %}" />
+							<div class="portfolio-hover">
+								<div class="action-btn">
+									<a class="popup-gallery" href="{% static 'massive/img/portfolio/09.jpg' %}" title="Title 9">
+										<i class="icon-basic_magnifier"> </i>
+									</a>
+								</div>
+								<div class="portfolio-description">
+									<h4>
+										<a class="popup-gallery2" href="{% static 'massive/img/portfolio/09.jpg' %}" title="Title 9"> lightbox view </a>
+									</h4>
+									<p>
+										<a href="#"> category </a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+		
+{% endblock %}

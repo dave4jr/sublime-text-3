@@ -1,0 +1,263 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	index.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+<!--	Page Title
+========================================= -->
+<section class="page-title background-title dark" style="background-image: url({% static 'img/desert.jpeg' %}">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2 class="text-uppercase"> About Us </h2>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!--	About Us
+========================================= -->
+<section class="body-content">
+	<div class="container">
+		<div class="row page-content">
+			<div class="heading-title text-center">
+				<h2 class="fs-18 text-uppercase"> About Centro </h2>
+				<span class="fs-15 subtitle font-base"> Our Story And Mission Statement </span>
+			</div>
+			<div class="post-list-aside">
+				<div class="post-single">
+					<div class="col-md-5">
+						<div class="post-slider post-img text-center">
+							<ul class="slides">
+								<li data-thumb="img/post/p1.jpg">
+									<a href="javascript:;" title="Freshness Photo">
+										<img class="m-t-30" style="border-radius:3px;" src="{% static 'img/team/team.jpg' %}" />
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-7">
+						<div class="m-t-30">
+							<p> Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.</p>
+							<p> Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets..Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.. </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		<hr>
+	
+	
+	<div class="page-content timeline-parallax">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<!--time line dark -->
+					<div class="timeline dark">
+						<article class="timeline-item alt">
+							<div class="timeline-desk">
+								<div class="panel">
+									<div class="panel-body">
+										<span class="timeline-icon">
+											<i class="icon-mobile"></i>
+										</span>
+										<span class="timeline-date">08:25 am</span>
+										<h1 class="text-uppercase">1 hour ago</h1>
+										<p>Purchased new stationary items for head office </p>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="timeline-item ">
+							<div class="timeline-desk">
+								<div class="panel">
+									<div class="panel-body">
+										<span class="timeline-icon">
+											<i class="icon-lightbulb"></i>
+										</span>
+										<span class="timeline-date">10:00 am</span>
+										<h1 class="text-uppercase">2 hours ago</h1>
+										<p>Completed Coffee meeting with
+											<a href="#">Stive Martin</a> regarding the Product Promotion</p>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="timeline-item alt">
+							<div class="timeline-desk">
+								<div class="panel">
+									<div class="panel-body">
+										<span class="timeline-icon">
+											<i class="icon-strategy"></i>
+										</span>
+										<span class="timeline-date">11:35 am</span>
+										<h1 class="text-uppercase">10 hours ago</h1>
+										<p>3 new photo Uploaded on facebook fan page</p>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="timeline-item">
+							<div class="timeline-desk">
+								<div class="panel">
+									<div class="panel-body">
+										<span class="timeline-icon">
+											<i class="icon-telescope"></i>
+										</span>
+										<span class="timeline-date">3:20 pm</span>
+										<h1 class="text-uppercase">4:30</h1>
+										<p>Outdoor visit at California State Route 85 with John Boltana &amp; Harry Piterson regarding to setup a new show room.</p>
+										<p>
+											<i class=" fa fa-exclamation-sign"></i> New task added for
+											<span><a href="#">Denial Collins</a></span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	
+	
+	
+
+
+	<!--	The Team
+	========================================= -->
+	<div class="page-content">
+		<div id="team" class="container">
+			<div class="row">
+				<div class="heading-title text-center">
+					<h2 class="fs-18 text-uppercase"> Our Team </h2>
+					<span class="fs-15 subtitle font-base"> Our Most Valuable Asset </span>
+				</div>
+				<div class="col-md-4">
+					<div class="team-member">
+						<div class="team-img">
+							<img src="{% static 'img/team/rick.jpg' %}" />
+						</div>
+						<div class="team-hover">
+							<div class="desk">
+								<p> Rick’s interest in printing was sparked more than 45 years ago as an apprentice “printer’s devil” in a book printing shop. Currently he’s enjoying the responsibilities of running a company with partnerships across the country and crafting a working environment for employees to thrive and contribute to our clients’ success.   When away from the office you’re likely to find Rick hiking and relaxing in the great Central Oregon outdoors. </p>
+							</div>
+						</div>
+					</div>
+					<div class="team-title">
+						<h5> Rick Lawrence </h5>
+						<span class="font-base"> President </span>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="team-member">
+						<div class="team-img">
+							<img alt="" src="{% static 'img/team/geoff.jpg' %}" />
+						</div>
+						<div class="team-hover">
+							<div class="desk">
+								<p> A Pacific Northwest native, Geoff has been living and working as a sales and marketing professional in Bend since 1997 and with Centro since 2002.  Away from the office you can find Geoff, his wife Laura and their chocolate Labrador Ben exploring Oregon’s amazing rivers and lakes with fly rods in hand or taking full advantage of the regions finest breweries, eateries and community events. </p>
+							</div>
+						</div>
+					</div>
+					<div class="team-title">
+						<h5> Geoff Clark </h5>
+						<span class="font-base"> Sales & Marketing </span>
+					</div>
+				</div>
+				
+				
+				<div class="col-md-4">
+					<div class="team-member">
+						<div class="team-img">
+							<img src="{% static 'img/team/dina.jpg' %}" />
+						</div>
+						<div class="team-hover">
+							<div class="desk">
+								<p> A Bendite since 1987 Dina has been the accounting and office manager at Centro since 2014 bringing with her over 25 years of office administration and bookkeeping experience.  Her two grown sons also live in Central Oregon.  When not at her “day job” you can find Dina floating the river, walking a trail, or working the concerts and festivals at the Les Schwab Amphitheater. </p>
+							</div>
+						</div>
+					</div>
+					<div class="team-title">
+						<h5> Dina Springstun </h5>
+						<span class="font-base"> Office Manager </span>
+					</div>
+				</div>
+
+				<!--	Second Row
+				========================================= -->
+				<div class="col-md-4 m-t-60">
+					<div class="team-member">
+						<div class="team-img">
+							<img alt="" src="{% static 'img/team/susie.jpg' %}" />
+						</div>
+						<div class="team-hover">
+							<div class="desk">
+								<p> Suzanne moved to Bend in 1992 and started with Centro in 1998.  If you’ve ever called in to Centro more than likely you’ve talked with Suzy – as our customer service expert she values the trust placed in her every day by our clients and takes tremendous pride in doing things the right way.  Suzanne loves Central Oregon’s great restaurants, fun festivals and dog-friendly attitude and her English Sheepdog “Phoebe” can occasionally be found under her desk or quietly patrolling the office kitchen. </p>
+							</div>
+						</div>
+					</div>
+					<div class="team-title">
+						<h5>  Suzanne Fowells </h5>
+						<span class="font-base"> Customer Service </span>
+					</div>
+				</div>
+				<div class="col-md-4 m-t-60">
+					<div class="team-member">
+						<div class="team-img">
+							<img alt="" src="{% static 'img/team/sharalyn.jpg' %}" />
+						</div>
+						<div class="team-hover">
+							<div class="desk">
+								<p> Sharalyn has been in graphic design for over 20 years and has been living and working in the Central Oregon area since 2003.  Along with Richard her partner in life you can find her on horseback most weekends exploring our region’s many trails or traveling to endurance rides with either her Arabian horse “Flash” or her Quarab horse “Dalai Lama”.  Sharalyn and Richard call ‘The Rock-N-Tree Ranch’ near Terrebonne home.</p>
+							</div>
+						</div>
+					</div>
+					<div class="team-title">
+						<h5> Sharalyn Hay </h5>
+						<span class="font-base">  Graphic Design </span>
+					</div>
+				</div>
+				<div class="col-md-4 m-t-60">
+					<div class="team-member">
+						<div class="team-img">
+							<img alt="" src="{% static 'img/team/ken.jpg' %}" />
+						</div>
+						<div class="team-hover">
+							<div class="desk">
+								<p> Ken was born and raised in Bend and for the past 25 years has been keeping Centro’s clients happy personally delivering forms with a smile and maintaining a spotless warehouse.  With his wife Amy he enjoys being outside as much as possible and loves camping, hiking and exploring wild places.  Ken is an avid hunter, fisherman and is more than happy to jump on his off road motorcycle or quad when friends or the trail calls. </p>
+							</div>
+						</div>
+					</div>
+					<div class="team-title">
+						<h5> Ken Karnes </h5>
+						<span class="font-base"> Warehouse Manager </span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	
+</section>
+
+
+
+
+
+{% endblock %}

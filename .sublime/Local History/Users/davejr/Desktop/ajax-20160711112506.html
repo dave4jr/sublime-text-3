@@ -1,0 +1,17 @@
+<script>
+$(function() {
+	$('.ajax').change(function() {
+		$.ajax({
+			type: "GET",
+			url: '/rets/buy/',
+			data: { city: $("#id_city").val(), bedrooms: $("#id_bedrooms").val(), bathrooms: $("#id_bathrooms").val(), squarefootage_gt: $("#id_squarefootage__gt").val(), squarefootage_lt: $("#id_squarefootage__lt").val(), listingprice_gt: $("#id_listingprice__gt").val(), listingprice_lt: $("#id_listingprice__lt").val(), keysearch: $("#id_keysearch").val()},
+			success: function(data) {
+				$("#filter-form").submit();
+			},   
+			error: function(data) {
+				alert("Error");
+			},
+		})
+	});
+});
+</script>

@@ -1,0 +1,157 @@
+/*===========================
+ *  Author:		 Dave Luke Jr
+ *  Company:	 CenterStack.io
+ *  Description:	 Square Styling
+ *===========================*/
+
+
+ .no-order-banner {
+	background: #f2f4f5;
+	color: #58595b;
+	border: 1px solid #c2c7cc;
+	text-align: center;
+	font-size: 20px;
+	line-height: 50px;
+ }
+ input.text, textarea {
+	border: 1px solid #e0e2e3;
+	height: 38px;
+	padding-left: 10px;
+	padding-right: 10px;
+	outline: none;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+ }
+ .login-modal {
+     font-family: "sqmarket";
+     line-height: 1.5;
+     color: #3d454d;
+     background-color: #FDFEFE;
+     margin: 0 auto;
+ }
+
+
+
+Html / Body:
+	background:				#fafafa;
+	color: 					#58595B;
+	font-size:					16px;
+	font-weight: 				300;
+
+Dull-Text Over White:
+	color: 					 #bdc5cc;
+	font-size: 					14px;
+	font-weight: 				300;
+
+Title:
+	color: 					#58595B
+	font-weight: 				500;
+	font-size: 					42px;
+	font-family: 				sqmarket;
+
+Navbar:
+	Primary:					#2B333B if dark, else #fff;
+	Secondary:					#fff or #3D454D if navbar is dark;
+
+Subtitle / Description:
+	color:						#bbb;
+	font-size: 					16px;
+	font-weight: 				300;
+	line-height: 				25.6px;
+	text-rendering:				optimize-legibility;
+	-webkit-font-smoothing: 		antialiased;
+
+Sidebar:
+	background:				#2b333b;
+	color: 					#85898c (non-focused);
+	color: 					#fff (focused);
+
+Grey Sections / Banners:
+	background:				#F2F4F5;			
+	color:						#B0B5BA;
+
+Fixed Banner / Alert:
+	border:					1px solid #c2c7cc;
+
+Modal Or Form Area:
+	background:				#fff or #FDFEFE;
+	padding on either side:			32px;
+
+Input:
+	height: 					40px;
+	border: 					1px solid #c2c7cc;
+	font-size: 					14px;
+	background-color: 			#fff;
+	color: 					#3d454d;
+	border-radius: 				3px;
+	line-height: 				1;
+	padding in input:				10px (left and right)
+	Padding between other inputs:	12px;
+
+Input:focused:
+	border-color:				They have blue, choose different color;
+
+input label:
+	letter-spacing:				0px;
+	font-size: 					13px;
+	color:						#3d454d;
+	line-height: 				1.5;
+
+Text-Area:
+	height:					144px;
+	line-height: 				1.5;
+
+
+Tables:
+	Search Boxes:				border-radius (50%) with icon
+	Border Top:				#73777a
+	Border Horizontals			1px solid #e0e2e3;
+	Header Row:				height: 50px; background: #F2F4F5;
+	font-size:					14px;
+	line-height: 				14px;
+	row-height:				50px;
+	width: 					In % out of 100% total width of table;
+	text-overflow:				ellipsis;
+	no vertical borders
+	{
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	    white-space: nowrap;
+	    height: 50px;
+	    vertical-align: middle;
+	}
+	td, th {
+	    display: table-cell;
+	    vertical-align: inherit;
+	}
+	table {
+	    border-collapse: collapse;
+	    border-spacing: 0;
+	}
+	Rows = display Table-Row
+
+	Select Row: (Highlights it with theme color)
+		{
+		    border-top: 1px solid #2996cc;
+		    border-bottom: 1px solid #2996cc;
+		    background-color: #2996cc;
+		    cursor: default;
+		    color: #fff;
+		}
+
+	Hover Row (Highlights it with Theme Color but )
+		border-bottom: 1px solid #dfeff7;
+		cursor: pointer;
+
+
+
+
+
+
+
+
+

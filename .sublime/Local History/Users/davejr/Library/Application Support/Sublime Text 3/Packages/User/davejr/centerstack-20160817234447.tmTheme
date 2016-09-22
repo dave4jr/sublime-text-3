@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>gutterSettings</key>
+	<dict>
+		<key>background</key>
+		<string>#49483E</string>
+		<key>divider</key>
+		<string>#75715E</string>
+		<key>foreground</key>
+		<string>#75715E</string>
+	</dict>
+	<key>name</key>
+	<string>FSA-django</string>
+	<key>semanticClass</key>
+	<string>theme.centerstack</string>
+	<key>settings</key>
+	<array>
+		<dict>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#fafafa</string>
+				<key>caret</key>
+				<string>#395063</string>
+				<key>foreground</key>
+				<string>#777</string>
+				<key>invisibles</key>
+				<string>#395063</string>
+				<key>lineHighlight</key>
+				<string>#fdfdfd</string>
+				<key>selection</key>
+				<string>#66FF99</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>django</string>
+			<key>scope</key>
+			<string>django.open-string, django.closed-string, django.open-nostring, django.closed-nostring, django.template.tag, keyword.control.filter.django</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#E7E42A</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Comment</string>
+			<key>scope</key>
+			<string>comment</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#C8C8C8</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>String</string>
+			<key>scope</key>
+			<string>string</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#B8B47B</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Tag String (Django)</string>
+			<key>scope</key>
+			<string>string.unquoted.tag-string.django, entity.tag.tagbraces.django, keyword.control.filter.django, storage.type.attr.django, keyword.control.tag-name.django, keyword.operator.django</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#c7254e</string>
+				<key>background</key>
+				<string>#f9f2f4</string>
+			</dict>
+		</dict>
+		<!-- <dict>
+			<key>name</key>
+			<string>Keyword Operator (Django)</string>
+			<key>scope</key>
+			<string>keyword.operator.django</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#6699FF</string>
+			</dict>
+		</dict> -->
+		<dict>
+			<key>name</key>
+			<string>{% Tags (Django)</string>
+			<key>scope</key>
+			<string>storage.type.templatetag.django</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#E7E42A</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Arithmetic (Shell)</string>
+			<key>scope</key>
+			<string>punctuation.definition.string.begin.shell,punctuation.definition.string.end.shell</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#00CC99</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Punctuation Def (Shell)</string>
+			<key>scope</key>
+			<string>support.function.builtin.shell</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#A9A97E</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>String Math (Shell)</string>
+			<key>scope</key>
+			<string>string.other.math.shell, constant.numeric.integer.shell, keyword.operator.arithmetic.shell</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#FF0066</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Meta Function Call Arguments (python only)</string>
+			<key>scope</key>
+			<string>meta.function-call.arguments.python</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#3366FF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Map Variable (SCSS)</key>
+			<string>String</string>
+			<key>scope</key>
+			<string>meta.set.variable, support.constant.property-value.scss, meta.property-value, variable.parameter.url.scss</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#00CC99</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Punctuation - Dictionary - JSON</string>
+			<key>scope</key>
+			<string>meta.structure.array.json</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#33CC99</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Punctuation - Array - JSON</string>
+			<key>scope</key>
+			<string>punctuation.definition.array.begin.json, punctuation.definition.array.end.json</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#CC3399</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Comment Block - JSON</string>
+			<key>scope</key>
+			<string>comment.block.json</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#C8C8C8</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Markdown Punctuation Heading 1</string>
+			<key>scope</key>
+			<string>markup.heading.1.markdown</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#CC3399</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Markdown Punctuation Heading 2</string>
+			<key>scope</key>
+			<string>markup.heading.2.markdown</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#33CC99</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Bash String</string>
+			<key>scope</key>
+			<string>string.quoted.single.shell, string.quoted.double.shell</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#66CC99</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Number</string>
+			<key>scope</key>
+			<string>constant.numeric</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#9999ff</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Built-in constant</string>
+			<key>scope</key>
+			<string>constant.language</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#ed912c</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>User-defined constant</string>
+			<key>scope</key>
+			<string>constant.character, constant.other</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#5FC7AE</string>
+				<key>background</key>
+				<string>#ffffcc</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Variable</string>
+			<key>scope</key>
+			<string>variable</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string />
+				<key>foreground</key>
+				<string>#FF0099</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Bracket Variable (Shell)</string>
+			<key>scope</key>
+			<string>variable.other.bracket.shell, string.interpolated.dollar.shell</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string />
+				<key>foreground</key>
+				<string>#9966FF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Variable Loop (Shell)</string>
+			<key>scope</key>
+			<string>variable.other.loop.shell, keyword.operator.glob.shell, variable.other.normal.shell</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#27B4C0</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Semi-Colon (Shell)</string>
+			<key>scope</key>
+			<string>keyword.operator.list.shell</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#CC66FF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>SCSS Variable</string>
+			<key>scope</key>
+			<string>variable.scss</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#99CCFF</string>
+				<key>background</key>
+				<string>#336699</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Variable.shell</string>
+			<key>scope</key>
+			<string>variable</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string />
+				<key>foreground</key>
+				<string>#3366CC</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Keyword</string>
+			<key>scope</key>
+			<string>keyword</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#FF3399</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Keyword</string>
+			<key>scope</key>
+			<string>keyword.other.important.scss</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#c7254e</string>
+				<key>background</key>
+				<string>#f9f2f4</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Keyword (Javascript)</string>
+			<key>scope</key>
+			<string>source.js.embedded.html keyword.operator.js, source.js.embedded.html meta.brace.curly.js</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#9966FF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Period - JS</string>
+			<key>scope</key>
+			<string>meta.delimiter.method.period.js</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#9933FF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Storage</string>
+			<key>scope</key>
+			<string>storage</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#cd4e38</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Bash Export</string>
+			<key>scope</key>
+			<string>storage.modifier.shell</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#99CC00</string>
+			</dict>
+		</dict>
+		<!-- <dict>
+			<key>name</key>
+			<string>Django Storage type</string>
+			<key>scope</key>
+			<string>storage.type.attr.django</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#CC3399</string>
+			</dict>
+		</dict> -->
+		<dict>
+			<key>name</key>
+			<string>Storage type</string>
+			<key>scope</key>
+			<string>storage.type</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#6699CC</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Class name</string>
+			<key>scope</key>
+			<string>entity.name.class, entity.name.type.class</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#CC33FF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Inherited class</string>
+			<key>scope</key>
+			<string>entity.other.inherited-class</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#05ad97</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Function name</string>
+			<key>scope</key>
+			<string>entity.name.function</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#9966FF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Bash Function name</string>
+			<key>scope</key>
+			<string>entity.name.function.shell</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#009966</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Python Function Name</string>
+			<key>scope</key>
+			<string>entity.name.function.python</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#27B4C0</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Function argument</string>
+			<key>scope</key>
+			<string>variable.parameter</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#FFCC33</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Python Function argument</string>
+			<key>scope</key>
+			<string>variable.parameter.function.python</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#99CC00</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Punctuation Terminator Rule (SCSS)</string>
+			<key>scope</key>
+			<string>punctuation.terminator.rule.scss</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#C8C8C8</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Tag name</string>
+			<key>scope</key>
+			<string>entity.name.tag, punctuation.definition.tag.begin.html, punctuation.definition.tag.end.html</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#7185D4</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Tag attribute</string>
+			<key>scope</key>
+			<string>entity.other.attribute-name</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#27B4C0</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Library function</string>
+			<key>scope</key>
+			<string>support.function</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#3366CC</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Library constant</string>
+			<key>scope</key>
+			<string>support.constant</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#3193c6</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Library class/type</string>
+			<key>scope</key>
+			<string>support.type, support.class</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#3193c6</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Library variable</string>
+			<key>scope</key>
+			<string>support.other.variable</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string> bold</string>
+				<key>foreground</key>
+				<string>#395063</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Property Name SCSS</string>
+			<key>scope</key>
+			<string>meta.property-name.scss</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string> bold</string>
+				<key>foreground</key>
+				<string>#3193c6</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Media Queries - SCSS</string>
+			<key>scope</key>
+			<string>meta.at-rule.media.scss</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string> bold</string>
+				<key>foreground</key>
+				<string>#3333FF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Property Name SCSS</string>
+			<key>scope</key>
+			<string>invalid.illegal</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string> bold</string>
+				<key>foreground</key>
+				<string>#3193c6</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Invalid</string>
+			<key>scope</key>
+			<string>invalid</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string> bold</string>
+				<key>foreground</key>
+				<string>#CCFF66</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Invalid deprecated</string>
+			<key>scope</key>
+			<string>invalid.deprecated</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string> bold</string>
+				<key>foreground</key>
+				<string>#a15ebb</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Function Call</string>
+			<key>scope</key>
+			<string>meta.function-call</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#27B4C0</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Function Call - Punctuation (Python)</string>
+			<key>scope</key>
+			<string>punctuation.definition.arguments.begin.python, punctuation.definition.arguments.end.python</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#27B4C0</string>
+			</dict>
+		</dict>
+		<!-- <dict>
+			<key>name</key>
+			<string>Function Call - Punctuation (Python)</string>
+			<key>scope</key>
+			<string>punctuation.definition.tag.begin.html, punctuation.definition.tag.end.html</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#3366CC</string>
+			</dict>
+		</dict> -->
+		<dict>
+			<key>name</key>
+			<string>Keyword Control</string>
+			<key>scope</key>
+			<string>keyword.control</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#6699FF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			
+			<string>Keyword Control (Python)</string>
+			<key>scope</key>
+			<string>keyword.control.import.from.python, keyword.control.import.python</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#FFCC00</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Function argument</string>
+			<key>scope</key>
+			<string>variable.parameter</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#F7AC20</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Function</string>
+			<key>scope</key>
+			<string>entity.name.function, support.function</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#82BA38</string>
+				<key>background</key>
+				<string>#</string>
+
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>def and class statemetns</string>
+			<key>scope</key>
+			<string>storage</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#CD65BA</string>
+			</dict>
+		</dict>
+	<dict>
+            <key>name</key>
+            <string>SublimeLinter Error</string>
+            <key>scope</key>
+            <string>sublimelinter.mark.error</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#D02000</string>
+            </dict>
+        </dict><dict>
+            <key>name</key>
+            <string>SublimeLinter Gutter Mark</string>
+            <key>scope</key>
+            <string>sublimelinter.gutter-mark</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#FFFFFF</string>
+            </dict>
+        </dict><dict>
+            <key>name</key>
+            <string>SublimeLinter Warning</string>
+            <key>scope</key>
+            <string>sublimelinter.mark.warning</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#DDB700</string>
+            </dict>
+        </dict></array>
+	<key>uuid</key>
+	<string>D8D5E82E-3D5B-46B5-B38E-8C841C21347D</string>
+	<key>colorSpaceName</key>
+	<string>sRGB</string>
+	<key>author</key>
+	<string>www.dropin.fm</string>
+</dict>
+</plist>

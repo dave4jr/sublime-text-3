@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport"/>
+  <meta content="" name="description"/>
+  <meta content="CenterStack" name="author"/>
+  <!--favicon icon-->
+  <link href="{% static 'massive/img/favicon.png' %}" rel="icon" type="image/png"/>
+  <title>
+   VillaReal
+  </title>
+  <!--common style-->
+  <link href="http://fonts.googleapis.com/css?family=Abel|Source+Sans+Pro:400,300,300italic,400italic,600,600italic,700,700italic,900,900italic,200italic,200" rel="stylesheet" type="text/css"/>
+  <link href="{% static 'massive/css/bootstrap.min.css' %}" rel="stylesheet"/>
+  <link href="{% static 'massive/css/font-awesome.min.css' %}" rel="stylesheet"/>
+  <link href="{% static 'massive/css/magnific-popup.css' %}" rel="stylesheet"/>
+  <link href="{% static 'massive/css/shortcodes/shortcodes.css' %}" rel="stylesheet"/>
+  <link href="{% static 'massive/css/owl.carousel.css' %}" rel="stylesheet"/>
+  <link href="{% static 'massive/css/owl.theme.css' %}" rel="stylesheet"/>
+  <link href="{% static 'massive/css/style.css' %}" rel="stylesheet"/>
+  <link href="{% static 'massive/css/style-responsive.css' %}" rel="stylesheet"/>
+  <link href="{% static 'massive/css/default-theme.css' %}" rel="stylesheet"/>
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+ </head>
+ <body>
+  <!--  preloader start -->
+  <div id="tb-preloader">
+   <div class="tb-preloader-wave">
+   </div>
+  </div>
+  <!-- preloader end -->
+  <div class="login login-bg">
+   <div class="container">
+    <div class="login-logo text-center">
+     <a href="#">
+      <img alt="" class="retina" src="{% static 'massive/img/logo.png' %}"/>
+     </a>
+    </div>
+    <div class="login-box btn-rounded login-bg-input border-less-input">
+     <form action="#" class=" " id="login-form" method="post" name="login-form">
+      <div class="text-center">
+       <h3>
+        LOGIN
+       </h3>
+      </div>
+      <div class="form-group">
+       <input class="form-control" id="login-form-username" name="login-form-username" placeholder="Login ID" type="text" value=""/>
+      </div>
+      <div class="form-group">
+       <input class="form-control " id="login-form-password" name="login-form-password" placeholder="Password" type="password" value=""/>
+      </div>
+      <div class="form-group">
+       <button class="btn btn-small btn-dark-solid full-width btn-rounded" id="login-form-submit" name="login-form-submit" value="login">
+        Login
+       </button>
+      </div>
+      <div class="login-social-link">
+       <a class="facebook" href="{% url 'massive-index' %}">
+        Facebook
+       </a>
+       <a class="twitter" href="{% url 'massive-index' %}">
+        Twitter
+       </a>
+      </div>
+      <div class="form-group">
+       <input id="checkbox1" type="checkbox" value="remember-me"/>
+       <label for="checkbox1">
+        Remember me
+       </label>
+       <a class="pull-right" data-toggle="modal" href="#forgotPass">
+        Forgot Password?
+       </a>
+      </div>
+     </form>
+    </div>
+    <div class="copyright-row text-center dark-txt">
+     Copyrights © All Rights Reserved by
+     <a class="theme-color" href="#">
+      Massive
+     </a>
+    </div>
+   </div>
+  </div>
+  <!-- Placed js at the end of the document so the pages load faster -->
+  <script src="{% static 'massive/js/jquery-1.10.2.min.js' %}">
+  </script>
+  <script src="{% static 'massive/js/bootstrap.min.js' %}">
+  </script>
+  <script src="{% static 'massive/js/menuzord.js' %}">
+  </script>
+  <script src="{% static 'massive/js/jquery.flexslider-min.js' %}">
+  </script>
+  <script src="{% static 'massive/js/owl.carousel.min.js' %}">
+  </script>
+  <script src="{% static 'massive/js/jquery.isotope.js' %}">
+  </script>
+  <script src="{% static 'massive/js/jquery.magnific-popup.min.js' %}">
+  </script>
+  <script src="{% static 'massive/js/smooth.js' %}">
+  </script>
+  <script src="{% static 'massive/js/wow.min.js' %}">
+  </script>
+  <script src="{% static 'massive/js/imagesloaded.js' %}">
+  </script>
+  <!--common scripts-->
+  <script src="{% static 'massive/js/scripts.js' %}">
+  </script>
+ </body>
+</html>

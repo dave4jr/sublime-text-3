@@ -1,0 +1,308 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	index.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+
+<!--	Page Title
+========================================= -->
+<section class="page-title background-title dark" style="background-image: url({% static 'img/bg/lots-of-trees.jpeg' %}">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h3 class="text-uppercase"> Testimonials </h3>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--	Testimonials
+========================================= -->
+<section class="body-content ">
+	<div class="page-content">
+		<div class="container">
+			<div class="row">
+				<div class="heading-title text-center">
+					<h3 class="text-uppercase"> testimonial 1 </h3>
+					<span class="text-uppercase"> Some testimonial Examples </span>
+				</div>
+				<div class="col-md-12">
+					<ul class="testimonial plus-box grid-2 ">
+						<li>
+							<div class="avatar">
+								<a href="#">
+									<img alt="Customer Testimonails" src="{% static 'massive/img/testimonial/1.jpg' %}" /> </a>
+							</div>
+							<div class="content">
+								<p> Vestibulum varius fermentum risus vitae lacinia neque auctor nec. Nunc ac rutrum nulla. Nulla maximus dolor in quam euismod ac viverra libero aliquet. </p>
+								<div class="testimonial-meta"> LINDA ANDERSON
+									<span> head of marketing, TB </span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="avatar">
+								<a href="#">
+									<img alt="Customer Testimonails" src="{% static 'massive/img/testimonial/2.jpg' %}" /> </a>
+							</div>
+							<div class="content">
+								<p> Vestibulum varius fermentum risus vitae lacinia neque auctor nec. Nunc ac rutrum nulla. Nulla maximus dolor in quam euismod ac viverra libero aliquet. </p>
+								<div class="testimonial-meta"> FRANKLIN HERBET
+									<span> head of HR, TB </span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="avatar">
+								<a href="#">
+									<img alt="Customer Testimonails" src="{% static 'massive/img/testimonial/3.jpg' %}" /> </a>
+							</div>
+							<div class="content">
+								<p> Vestibulum varius fermentum risus vitae lacinia neque auctor nec. Nunc ac rutrum nulla. Nulla maximus dolor in quam euismod ac viverra libero aliquet. </p>
+								<div class="testimonial-meta"> Martin Smith
+									<span> CEO, TB </span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="avatar">
+								<a href="#">
+									<img alt="Customer Testimonails" src="{% static 'massive/img/testimonial/4.jpg' %}" /> </a>
+							</div>
+							<div class="content">
+								<p> Vestibulum varius fermentum risus vitae lacinia neque auctor nec. Nunc ac rutrum nulla. Nulla maximus dolor in quam euismod ac viverra libero aliquet. </p>
+								<div class="testimonial-meta"> John Doe
+									<span> head of marketing, TB </span>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr/>
+	<div class="page-content">
+		<div class="container">
+			<div class="row">
+				<div class="heading-title text-center">
+					<h3 class="text-uppercase"> testimonial 2 </h3>
+					<span class="text-uppercase"> Some testimonial Examples </span>
+				</div>
+				<div class="col-md-12">
+					<div class="outer-border" id="testimonial-2">
+						<div class="item">
+							<div class="icon">
+								<i class="fa fa-quote-left"> </i>
+							</div>
+							<div class="content">
+								<p> Nam nec dui dolor. Curabitur in laoreet erat. Nam nec dui dolor. Aliquam varius dolor nunc, interdum commodo justoporttitor vitae. Quisque fermentum purus. </p>
+								<div class="testimonial-meta"> - Kevin Paige -
+									<span> ABC </span>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="icon">
+								<i class="fa fa-quote-left"> </i>
+							</div>
+							<div class="content">
+								<p> Vestibulum varius fermentum risus vitae lacinia neque auctor nec. Nunc ac rutrum nulla. Nulla maximus dolor in quam euismod ac viverra libero aliquet. </p>
+								<div class="testimonial-meta"> - John Doe -
+									<span> head of marketing, TB </span>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="icon">
+								<i class="fa fa-quote-left"> </i>
+							</div>
+							<div class="content">
+								<p> Vestibulum varius fermentum risus vitae lacinia neque auctor nec. Nunc ac rutrum nulla. Nulla maximus dolor in quam euismod ac viverra libero aliquet. </p>
+								<div class="testimonial-meta"> - Linda Smith -
+									<span> CEO, TB </span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="testimonial-parallax ">
+		<div class="overlay-dark page-content">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="text-center light-txt big-icon " id="testimonial-3">
+							<div class="item">
+								<div class="icon theme-color">
+									<i class="icon-user_comment"> </i>
+								</div>
+								<div class="content">
+									<p> Nam nec dui dolor. Curabitur in laoreet erat. Nam nec dui dolor. Aliquam varius dolor nunc, interdum commodo justoporttitor vitae. Quisque fermentum purus. </p>
+									<div class="testimonial-meta"> - Kevin Paige -
+										<span> ABC </span>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="icon theme-color">
+									<i class="icon-user"> </i>
+								</div>
+								<div class="content">
+									<p> Vestibulum varius fermentum risus vitae lacinia neque auctor nec. Nunc ac rutrum nulla. Nulla maximus dolor in quam euismod ac viverra libero aliquet. </p>
+									<div class="testimonial-meta"> - John Doe -
+										<span> head of marketing, TB </span>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="icon theme-color">
+									<i class="icon-user_comment"> </i>
+								</div>
+								<div class="content">
+									<p> Vestibulum varius fermentum risus vitae lacinia neque auctor nec. Nunc ac rutrum nulla. Nulla maximus dolor in quam euismod ac viverra libero aliquet. </p>
+									<div class="testimonial-meta"> - Linda Smith -
+										<span> CEO, TB </span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="page-content">
+		<div class="container">
+			<div class="row">
+				<div class="heading-title text-center">
+					<h3 class="text-uppercase"> testimonial 3 </h3>
+					<span class="text-uppercase"> Some testimonial Examples </span>
+				</div>
+				<div class="col-md-6">
+					<div class="testimonial-alt" id="testimonial-4">
+						<div class="item">
+							<div class="content">
+								<p> Nam nec dui dolor. Curabitur in laoreet erat. Nam nec dui dolor. Aliquam varius dolor nunc, interdum commodo justoporttitor vitae. Quisque fermentum purus. </p>
+							</div>
+							<div class="testi-auth">
+								<div class="avatar">
+									<a href="#">
+										<img alt="Customer Testimonails" src="{% static 'massive/img/testimonial/1.jpg' %}" /> </a>
+								</div>
+								<div class="testimonial-meta"> Kevin Paige
+									<span> ABC </span>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="content">
+								<p> Nam nec dui dolor. Curabitur in laoreet erat. Nam nec dui dolor. Aliquam varius dolor nunc, interdum commodo justoporttitor vitae. Quisque fermentum purus. </p>
+							</div>
+							<div class="testi-auth">
+								<div class="avatar">
+									<a href="#">
+										<img alt="Customer Testimonails" src="{% static 'massive/img/testimonial/2.jpg' %}" /> </a>
+								</div>
+								<div class="testimonial-meta"> John Doe
+									<span> DEF </span>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="content">
+								<p> Nam nec dui dolor. Curabitur in laoreet erat. Nam nec dui dolor. Aliquam varius dolor nunc, interdum commodo justoporttitor vitae. Quisque fermentum purus. </p>
+							</div>
+							<div class="testi-auth">
+								<div class="avatar">
+									<a href="#">
+										<img alt="Customer Testimonails" src="{% static 'massive/img/testimonial/3.jpg' %}" /> </a>
+								</div>
+								<div class="testimonial-meta"> Martin Smith
+									<span> GEF </span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="testimonial-alt">
+						<div class="item">
+							<div class="content">
+								<p> Nam nec dui dolor. Curabitur in laoreet erat. Nam nec dui dolor. Aliquam varius dolor nunc, interdum commodo justoporttitor vitae. Quisque fermentum purus. </p>
+							</div>
+							<div class="testi-auth">
+								<div class="avatar">
+									<a href="#">
+										<img alt="Customer Testimonails" src="{% static 'massive/img/testimonial/1.jpg' %}" /> </a>
+								</div>
+								<div class="testimonial-meta"> Kevin Paige
+									<span> ABC </span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="testimonial-parallax ">
+		<div class="overlay-dark page-content">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="text-center light-txt big-icon " id="testimonial-5">
+							<div class="item">
+								<div class="testimonial-thumb">
+									<img alt="" class="img-circle" src="{% static 'massive/img/event_avatar1.jpg' %}" />
+								</div>
+								<div class="content">
+									<p class="half-txt"> Nam nec dui dolor. Curabitur in laoreet erat. Nam nec dui dolor. Aliquam varius dolor nunc, interdum commodo justoporttitor vitae. Quisque fermentum purus. </p>
+									<div class="testimonial-meta"> - Kevin Paige -
+										<span> ABC </span>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="testimonial-thumb">
+									<img alt="" class="img-circle" src="{% static 'massive/img/event_avatar3.jpg' %}" />
+								</div>
+								<div class="content">
+									<p class="half-txt"> Vestibulum varius fermentum risus vitae lacinia neque auctor nec. Nunc ac rutrum nulla. Nulla maximus dolor in quam euismod ac viverra libero aliquet. </p>
+									<div class="testimonial-meta"> - John Doe -
+										<span> head of marketing, TB </span>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="testimonial-thumb">
+									<img alt="" class="img-circle" src="{% static 'massive/img/event_avatar1.jpg' %}" />
+								</div>
+								<div class="content">
+									<p class="half-txt"> Vestibulum varius fermentum risus vitae lacinia neque auctor nec. Nunc ac rutrum nulla. Nulla maximus dolor in quam euismod ac viverra libero aliquet. </p>
+									<div class="testimonial-meta"> - Linda Smith -
+										<span> CEO, TB </span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+{% endblock %}

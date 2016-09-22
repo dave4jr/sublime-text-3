@@ -1,0 +1,105 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	index.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+
+
+<!--	Buy Single
+========================================= -->
+<section id="page-body" class="p-t-0 m-t-80">
+	<div class="column-section boxed-sticky clearfix">
+		<div id="buy-single-left" class="column one-third" >
+		
+			<!--	Image
+			========================================= -->
+			<div class="column one-full m-l-0" style="background: url({{ property.img.0 }}) center center / cover;"></div>
+			
+			<!--	Address & Price
+			========================================= -->
+			<div id="buy-single-left-details" class="row">
+				<div class="col-sm-9">
+					<h4>{% include "include/address.html" with arg="street" %}</h4>
+				</div>
+				<div class="col-sm-3">
+					<h5>${{ property.listingprice|floatformat:"0"|intcomma }}</h5>
+				</div>
+			</div>
+		</div>
+		<div id="buy-single-right" class="column two-third white-bg">
+			<div id="buy-single-icons" class="column-section clearfix p-t-30">
+				<div class="column one-fifth">
+					<span class="fontello-sqft"></span>
+					<h5 class="subtitle-2">Square Feet</h5>
+					<h3><strong>{{ property.squarefootage|floatformat:"0"|intcomma }}</strong></h3>
+				</div>
+				<div class="column one-fifth">
+					<span class="fontello-beds"></span>
+					<h5 class="subtitle-2">Bedrooms</h5>
+					<h3><strong>{{ property.bedrooms }}</strong></h3>
+				</div>
+				<div class="column one-fifth">
+					<span class="fontello-baths"></span>
+					<h5 class="subtitle-2">Bathrooms</h5>
+					<h3><strong>{{ property.bathrooms }}</strong></h3>
+				</div>
+				<div class="column one-fifth">
+					<span class="fontello-year-built"></span>
+					<h5 class="subtitle-2">Year Built</h5>
+					<h3><strong>{{ property.yearbuilt }}</strong></h3>
+				</div>
+				<div class="column one-fifth last-col">
+					<span class="fontello-map"></span>
+					<h5 class="subtitle-2">Lot Size</h5>
+					<h3><strong>{{ property.acres }}</strong></h3>
+				</div>
+			</div>
+			<div class="spacer-small"></div>
+			<div class="column-section clearfix">
+				<div class="column one-half bigpadding tallest m-l-0 p-t-20">
+					<div class="col-content" style="margin-top: 0px;">
+						<h4><strong>Overview</strong></h4>
+						<hr class="mini thick colored">
+						<p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli.</p>
+						<div class="spacer-medium"></div>
+						<h4><strong>Exterior</strong></h4>
+						<hr class="mini thick colored">
+						<p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back.</p>
+					</div>
+				</div>
+				<div class="column one-half bigpadding last-col m-l-40 p-t-20">
+					<div class="col-content" style="margin-top: 0px;">
+						<h4><strong>Community</strong></h4>
+						<hr class="mini thick colored">
+						<p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli.</p>
+						<div class="spacer-medium"></div>
+						<h4><strong>Interior</strong></h4>
+						<hr class="mini thick colored">
+						<p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back.</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+	$(function() {
+		var h = $("#buy-single-right").outerHeight();
+		$("#buy-single-left").outerHeight(h);
+	});
+</script>
+
+
+{% endblock %}
+
+{% block footer %}{% endblock %}

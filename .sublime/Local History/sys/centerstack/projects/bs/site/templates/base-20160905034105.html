@@ -1,0 +1,220 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	base.html
+ *==========================-->
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load customtags %}
+<html class="no-js" lang="en-US">
+<head>
+	<meta charset="utf-8" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<!--	Favicon / Title
+	========================================= -->
+	<link href="{% static 'img/favicon.png' %}" rel="shortcut icon">
+	<title> BrundageSmith </title>
+	
+	<!--	Fonts
+	========================================= -->
+	<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Lora:400italic,700italic" rel="stylesheet">
+	<link href="{% static 'plugins/sudo/css/font-awesome.min.css' %}" id="fontawesome-style-css" media="all" rel="stylesheet">
+	<link href="{% static 'plugins/sudo/css/ionicons.css' %}" id="ionic-icons-style-css" media="all" rel="stylesheet">
+	<link href="{% static 'plugins/hawcons/Stroke/hawcons.css' %}" media="all" rel="stylesheet">
+	<link href="{% static 'plugins/icons/css/pe-icon-7-stroke.css' %}" media="all" rel="stylesheet">
+	<link href="{% static 'plugins/icons/fontello/css/fontello.css' %}" rel="stylesheet">
+
+
+	<!--	Plugin CSS
+	========================================= -->
+	<link href="{% static 'plugins/tooltipster/dist/css/tooltipster.bundle.css' %}" rel="stylesheet" type="text/css" />
+	<link href="{% static 'plugins/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-shadow.min.css' %}" rel="stylesheet" type="text/css" />
+	<link href="{% static 'plugins/sudo/css/owl.carousel.css' %}" id="owlcarousel-css" media="all" rel="stylesheet" type="text/css" />
+	<link href="{% static 'plugins/cssgram/cssgram.min.css' %}"  media="all" rel="stylesheet" type="text/css" />
+	<link href="{% static 'plugins/sudo/css/lightcase.css' %}" id="lightcase-css" media="all" rel="stylesheet" type="text/css" />
+	<link href="{% static 'plugins/sudo/css/isotope.css' %}" id="isotope-style-css" media="all" rel="stylesheet">
+	<link href="{% static 'plugins/bootstrap/grid.css' %}" rel="stylesheet">
+	<link href="{% static 'plugins/bootstrap/responsive.css' %}" rel="stylesheet">
+	<link href="{% static 'plugins/multiselect/dist/css/bootstrap-multiselect.css' %}" rel="stylesheet">
+
+	
+	<!--	Custom CSS
+	========================================= -->
+	<link href="{% static 'css/style.css' %}" id="default-style-css" media="all" rel="stylesheet">
+	<link href="{% static 'css/helpers.css' %}" rel="stylesheet">
+	<link href="{% static 'css/mqueries.css' %}" id="mqueries-style-css" media="all" rel="stylesheet">
+	
+
+	<!--	Javascript
+	========================================= -->
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	<script src="{% static 'js/observe.js' %}"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-B5LPcn-uJnxUFcwSbLGrkRVvYZE5gzU"></script>
+	<script src="{% static 'plugins/gmap/gmap3.min.js' %}"></script>
+
+
+</head>
+<body>
+
+	<!--	Page Loader
+	========================================= -->
+	<div id="page-loader">
+		<div class="page-loader-inner">
+			<span class="loader-figure"> </span>
+		</div>
+	</div>
+
+
+	<!--	Header
+	========================================= -->
+	<div id="page-content">
+
+		{% if request.path == "/" %}
+			<header class="header-transparent transparent-light" id="header">
+				<div class="header-inner clearfix">
+					<div class="right-float" id="menu">
+						<a class="responsive-nav-toggle" href="#">
+							<span class="hamburger"> </span>
+						</a>
+						<div class="menu-inner">
+							<nav id="main-nav">
+								<ul>
+									<li class="{% active 'buy' %}"><a href="{% url 'buy' %}?city=Bend"> Buy </a></li>
+									<li class="{% active 'sell' %}"><a href="{% url 'sell' %}"> Sell </a></li>
+									<li class="{% active 'listings' %}"><a href="{% url 'listings' %}"> Listings </a></li>
+									<li class="{% active 'partners' %}"><a href="{% url 'partners' %}"> Partners </a></li>
+									<li class="{% active 'neighborhoods' %}"><a href="{% url 'neighborhoods' %}"> Neighborhoods </a></li>
+									<li class="{% active 'about' %}"><a href="{% url 'about' %}"> About </a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</header>
+			
+		{% else %}
+		
+			<header class="header-bordered" id="header">
+				<div class="header-inner clearfix">
+					<div class="left-float" id="logo">
+						<h4><a class="fs-20 text-black-4" href="{% url 'index' %}"><span class="font-base">Brundage</span><span class="logo-blue">Smith</span></a></h4>
+					</div>
+					<div class="right-float" id="menu">
+						<a class="responsive-nav-toggle" href="#">
+							<span class="hamburger"> </span>
+						</a>
+						<div class="menu-inner">
+							<nav id="main-nav">
+								<ul>
+									<li class="{% active 'buy' %}"><a href="{% url 'buy' %}?city=Bend"> Buy </a></li>
+									<li class="{% active 'sell' %}"><a href="{% url 'sell' %}"> Sell </a></li>
+									<li class="{% active 'listings' %}"><a href="{% url 'listings' %}"> Listings </a></li>
+									<li class="{% active 'partners' %}"><a href="{% url 'partners' %}"> Partners </a></li>
+									<li class="{% active 'neighborhoods' %}"><a href="{% url 'neighborhoods' %}"> Neighborhoods </a></li>
+									<li class="{% active 'about' %}"><a href="{% url 'about' %}"> About </a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</header>
+
+		{% endif %}
+
+
+
+		<!--	Content
+		========================================= -->
+		{% block content %}
+
+			<!-- Insert Content Here -->
+
+		{% endblock %}
+
+
+		<!--	Footer
+		========================================= -->
+		{% block footer %}
+			<footer id="footer">
+				<div class="footer-inner wrapper">
+					<div class="column-section clearfix">
+						<div class="column one-half">
+							<div class="widget">
+								<a href="{% url 'index' %}"><h3 class="fs-26"><span class="font-base">Brundage</span><span class="logo-blue">Smith</span></h3></a>
+								<p class="m-t-10 fs-14"> World class real estate services in Central Oregon. 
+									<br/> We offer two full-time, seasoned brokers fully entrenched in the global marketplace, sourcing information and leveraging their strengths to more fully serve you. </p>
+							</div>
+							<div class="widget">
+								<ul class="socialmedia-widget hover-fade-1">
+									<li class="facebook">
+										<a href="https://www.facebook.com/Molly-Brundage-Bend-Oregon-Real-Estate-332346853475501/"> </a>
+									</li>
+									<li class="linkedin">
+										<a href="https://www.linkedin.com/in/molly-brundage-402a2410"> </a>
+									</li>
+									<li class="rss">
+										<a href="http://www.findbendhomes.com/cp/our-blog/"> </a>
+									</li>
+									<li class="mail">
+										<a href="mailto:info@brundagesmith.com"> </a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="column one-half last-col p-l-80">
+							<div class="spacer-mini"> </div>
+							<h5><strong> Join our Newsletter </strong></h5>
+							<h6 class="subtitle-1"> Get the latest real estate new and updates in Central Oregon </h6>
+							<div class="spacer-mini"> </div>
+							<form action="#" id="subscribe" method="post">
+								<input id="newsletter-email" name="newsletter-email" placeholder="Email Address..." type="email" />
+								<input id="newsletter-submit" type="submit" value="Sign Up" />
+							</form>
+						</div>
+					</div>
+					<a href="#" id="backtotop"> Back to top </a>
+				</div>
+				<div class="copyright">
+					<small> © 2016 BrundageSmith. All Rights Reserved. Created by
+						<a href="http://www.centerstack.io"> CenterStack </a>
+					</small>
+				</div>
+			</footer>
+		{% endblock %}
+	</div>
+
+
+	<!--	Javascript
+	========================================= -->
+	<script src="{% static 'plugins/sudo/js/jquery.easing.1.3.js' %}"></script>
+	<script src="{% static 'plugins/sudo/js/jquery.visible.min.js' %}"></script>
+	<script src="{% static 'plugins/sudo/js/tweenMax.js' %}"></script>
+	<script src="{% static 'plugins/sudo/js/jquery.owl.carousel.js' %}"></script>
+	<script src="{% static 'plugins/sudo/js/jquery.backgroundparallax.min.js' %}"></script>
+	<script src="{% static 'plugins/isotope/isotope.min.js' %}"></script>
+	<script src="{% static 'plugins/sudo/js/jquery.imagesloaded.min.js' %}"></script>
+	<script src="{% static 'plugins/sudo/js/jquery.lightcase.min.js' %}"></script>
+	<script src="{% static 'plugins/tether/tether.min.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+
+	<!--	Plugins
+	========================================= -->
+	<script src="{% static 'plugins/svg-js/dist/svg.min.js' %}"></script>
+	<script src="{% static 'plugins/screenbbox-js/dist/svg.screenbbox.min.js' %}"></script>
+	<script src="{% static 'plugins/tooltipster/dist/js/tooltipster.bundle.min.js' %}"></script>
+	<script src="{% static 'plugins/tooltipster/dist/js/plugins/tooltipster/SVG/tooltipster-SVG.min.js' %}"></script>
+	<script src="{% static 'plugins/multiselect/dist/js/bootstrap-multiselect.js' %}"></script>
+
+
+	<!--	Custom JS
+	========================================= -->
+	<script src="{% static 'js/custom.js' %}"></script>
+	
+	
+</body>
+</html>

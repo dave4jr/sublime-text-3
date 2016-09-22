@@ -1,0 +1,65 @@
+<!--==========================
+*  Author:		Dave Luke Jr
+*  Company:	CenterStack.io
+*  Description:	blog.html
+*==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load customtags %}
+{% load staticfiles %}
+{% block content %}
+
+
+<!--	Page Title
+========================================= -->
+<section class="hero-auto text-light parallax-section chalk"  id="hero">
+	<div class="wrapper align-center" id="page-title">
+		<h1><strong> Blog </strong></h1>
+	</div>
+</section>
+
+
+<!--	Blog
+========================================= -->
+<section id="page-body">
+	<div class="wrapper-small">
+		<div class="classic-blog blog-container" id="blog-grid">
+			<div class="blog-item">
+				<div class="blog-media">
+					<a class="thumb-overlay" href="{% url 'blog' %}">
+						<img src="{% static 'img/what-we-do.jpg' %}" />
+					</a>
+				</div>
+				<div class="blog-desc">
+					<div class="blog-headline">
+						<h6 class="post-category uppercase"> Nutrition </h6>
+						<h3 class="post-name">
+							<a href="{% url 'blog' %}">
+								<strong> Blair Is A Fag </strong>
+							</a>
+						</h3>
+					</div>
+					<p> When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way. </p>
+					<ul class="blog-meta">
+						<li class="post-date"> 5 hours ago </li>
+						<li class="post-comments">
+							<i class="fa fa-comments"> </i> 3 </li>
+						<li class="post-author"><span> Admin </span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="spacer-medium"> </div>
+		<div id="pagination">
+			<ul>
+				<li class="prev"><a href="#"> Previous Page </a></li>
+				<li class="page"><span class="current"> 1 </span></li>
+				<li class="page"><a href="#"> 2 </a></li>
+				<li class="page"><a href="#"> 3 </a></li>
+				<li class="next"><a href="#"> Next Page </a></li>
+			</ul>
+		</div>
+	</div>
+</section>
+		
+{% endblock %}

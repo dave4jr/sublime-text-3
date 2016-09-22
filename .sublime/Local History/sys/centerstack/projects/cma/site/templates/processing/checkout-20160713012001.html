@@ -1,0 +1,178 @@
+<!--======================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	checkout.html
+ *======================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% block content_site %}
+
+
+
+<!--	Checkout
+========================================= -->
+<form action="{% url 'workflow' fn='checkout' %}" method="post" role="form">
+	{% csrf_token %}
+
+	<div class="row">
+		<div class="pi-col-sm-12">
+			<div class="portlet light portlet-fit">
+				<div class="portlet-title">
+					<div class="caption">
+						<i class="pe-7s-download rotate--90"> </i>
+						<span class="caption-subject capitalize"> Check-Out Form </span>
+					</div>
+				</div>
+				<div class="portlet-body">
+					<div class="row">
+
+						{% if CheckoutForm.errors %}
+							{% for error in CheckoutForm.errors %}
+								<p class="pi-text-center font-mt-red capitalize fs-14">Error: {{ error|escape }}</p>
+							{% endfor %}
+						{% endif %}
+
+						<div class="pi-col-md-12 pi-section-white m-t-10">
+							<div class="pi-row pi-grid-small-margins">
+
+
+								<!--	Customer
+								========================================= -->
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-reservation-phone"> Customer </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-user"> </i>
+											</span>
+											{{ CheckoutForm.customer | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+											<a href="{% url 'customer_new' %}" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+
+
+								<!--	Bike
+								========================================= -->
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-reservation-phone"> Bike </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-bicycle"> </i>
+											</span>
+											{{ CheckoutForm.bike | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+											<a href="{% url 'bike_new' %}" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+								
+
+								<!--	Checkout Mileage
+								========================================= -->
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-mileage"> Confirm Mileage </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="icon-ecommerce_graph_increase"> </i>
+											</span>
+											{{ CheckoutForm.checkout_mileage | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+
+
+								<!--	Checkout Time Actual
+								========================================= -->
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-mileage"> Date / Time </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="icon-basic_elaboration_calendar_next"> </i>
+											</span>
+											{{ CheckoutForm.checkout_datetime_actual | add_class:"form-control datetimepicker" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+							<!--	3 Buttons
+							========================================= -->
+							<div class="pi-row pi-grid-small-margins m-tb-20">
+
+								<div class="pi-col-sm-4">
+									{% if reservation.checkout_membership_complete %}
+										<a href="{% url 'checkout_membership' pk=reservation.pk %}" class="btn btn-block mt-red-soft-bg m-b-10"> Rental Agreement </a>
+									{% else %}
+										<a href="{% url 'checkout_membership' pk=reservation.pk %}" class="btn btn-block mt-green-seagreen-bg m-b-10"> Rental Agreement </a>
+									{% endif %}
+								</div>
+								<div class="pi-col-sm-4">
+									{% if reservation.checkout_liability_complete %}
+										<a href="{% url 'checkout_liability' pk=reservation.pk %}" class="btn btn-block mt-red-soft-bg m-b-10"> Liability Waiver </a>
+									{% else %}
+										<a href="{% url 'checkout_liability' pk=reservation.pk %}" class="btn btn-block mt-green-seagreen-bg m-b-10"> Liability Waiver </a>
+									{% endif %}
+								</div>
+								<div class="pi-col-sm-4">
+									{% if reservation.checkout_condition_complete %}
+										<a href="{% url 'checkout_condition' pk=reservation.pk %}" class="btn btn-block mt-red-soft-bg m-b-10"> Condition Report </a>
+									{% else %}
+										<a href="{% url 'checkout_condition' pk=reservation.pk %}" class="btn btn-block mt-green-seagreen-bg m-b-10"> Condition Report </a>
+									{% endif %}
+								</div>
+							</div>
+
+
+							<!--	Checkout Notes
+							========================================= -->
+							<div class="pi-row pi-grid-small-margins">
+								<div id="notes" class="pi-col-sm-12 p-rl-7">
+									<div class="form-group">
+										<label for="label-notes"> Notes </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-comment"> </i>
+											</span>
+											{{ CheckoutForm.checkout_notes | add_class:"form-control" | attr:"rows:5" | attr:"type:textarea" }}
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+							<!--	Submit / Close Buttons
+							========================================= -->
+							<p class="pi-text-center m-t-40">
+								<a href="{% url 'index' %}" class="btn mt-grey-gallery-bg p-rl-40 m-r-5"> Cancel</a>
+								<button type="submit" value="{{ reservation.pk }}" name="pk" class="btn base p-rl-40"> Check-Out </button>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+
+
+{% endblock %}

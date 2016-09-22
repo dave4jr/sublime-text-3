@@ -1,0 +1,157 @@
+<!--======================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	class_form.html
+ *======================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% block content_site %}
+
+<!--	Class Form
+========================================= -->
+<div class="row">
+	<div class="col-md-12">
+		<div class="portlet box base">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="pe-7s-users"> </i>
+					<span class="caption-subject font-white capitalize"> Class Details </span>
+				</div>
+			</div>
+			<div class="portlet-body">
+				<div class="row">
+
+					{% if ClassForm.errors %}
+						{% for error in ClassForm.errors %}
+							<p class="pi-text-center font-mt-red capitalize fs-18">Error: {{ error|escape }}</p>
+						{% endfor %}
+					{% endif %}
+
+					<div class="pi-col-sm-7 pi-section-white m-t-30">
+
+						<!--	Form
+						========================================= -->
+						<form action="" method="post" role="form">
+							{% csrf_token %}
+
+							<div class="pi-row pi-grid-small-margins m-l-20">
+
+								<!--	Class Name
+								========================================= -->
+								<div class="pi-col-sm-12">
+									<div class="form-group">
+										<label for="label-class-phone"> Class </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-info"> </i>
+											</span>
+											{{ ClassForm.name | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+
+								<!--	Start
+								========================================= -->
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-class-phone"> Class Start </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-date"> </i>
+											</span>
+											{{ ClassForm.start | add_class:"form-control datetimepicker" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+
+								<!--	End
+								========================================= -->
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-class-phone"> Class End </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-date"> </i>
+											</span>
+											{{ ClassForm.end | add_class:"form-control datetimepicker" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+
+								<!--	Location
+								========================================= -->
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label for="label-class-phone"> Location </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-map"> </i>
+											</span>
+											{{ ClassForm.location | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+											<a href="{% url 'location_new' %}" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+
+								<!--	Teacher
+								========================================= -->
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label for="label-class-phone"> Teacher </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-user"> </i>
+											</span>
+											{{ ClassForm.guide | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+											<a href="{% url 'guide_new' %}" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+						
+								<!--	Price
+								========================================= -->
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label for="label-class-phone"> Price </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-cash"> </i>
+											</span>
+											{{ ClassForm.price | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+							</div>
+							<p class="pi-text-center m-t-40">
+								<button type="submit" value="{{ class.pk }}" name="delete" class="btn mt-grey-gallery-bg p-rl-40 m-r-5"> Delete<i class="pe-7s-close-circle right-icon"></i></a>
+								<button type="submit" value="{{ class.pk }}" name="save" class="btn base p-rl-40"> Save<i class="pe-7s-check right-icon"></i></button>
+							</p>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,327 @@
+<!--======================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	files.html
+ *======================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content_site %}
+
+<!--	Files
+========================================= -->
+<div class="pi-row">
+	<div class="pi-col-md-12">
+		<div class="portlet light portlet-fit ">
+
+			<!--	Top Toolbar
+			========================================= -->
+			<div class="portlet-title">
+				<div class="caption p-b-0 p-t-15">
+					<i class="pe-7s-diskette"> </i>
+					<span class="caption-subject base-font"> File Manager </span>
+				</div>
+				<div id="datatable-btn" class="actions pull-right m-t-3">
+					
+
+					<!--	Upload File
+					========================================= -->
+					<form action="{% url 'files' %}" id="upload-file-form" method="post" enctype="multipart/form-data" class="inline">
+						{% csrf_token %}
+						<div id="file-upload" class="fileUpload-icon btn">
+							<i class="icon-basic_elaboration_cloud_upload fs-24"></i>
+							{{ form.file | add_class:"upload" | attr:"type:file" }}
+						</div>
+					</form>
+
+
+
+					<!--	Download File
+					========================================= -->
+					<a id="tree-new-folder" class="btn base-font m-b-0">
+						<i class="icon-basic_elaboration_cloud_download fs-24"></i>
+					</a>
+
+
+					<!--	New Folder
+					========================================= -->
+					<a id="tree-new-folder" class="btn base-font m-b-0">
+						<i class="icon-basic_elaboration_folder_plus m-l-5 fs-22"></i>
+					</a>
+
+
+					<!--	Delete File / Folder
+					========================================= -->
+					<label class="btn base-font m-b-0" id="btn-trash">
+						<i class="pe-7s-trash m-b-3 m-l-5 m-r-0 fs-26"></i>
+					</label>
+
+
+					<!--	Open All Nodes
+					========================================= -->
+					<a id="tree-open-close-nodes" class="btn base-font m-b-0">
+						<i class="pe-7s-angle-right-circle m-r-10 m-t-3 fs-24"></i>
+					</a>
+
+
+					<!--	Search
+					========================================= -->
+					<input id="tree_search" type="text" class="form-control inline" style="width: 150px;" placeholder="Search...">
+					<script>
+						$(function() {
+							document.getElementById("file-upload").onchange = function() {
+								document.getElementById("upload-file-form").submit();
+							};
+						});
+					</script>
+				</div>
+			</div>
+			
+			<div class="portlet-body">
+
+				<!--	Messages
+				========================================= -->
+				<div id="message" class="pi-row">
+					<div class="pi-col-sm-6 pi-col-sm-offset-3">
+						{% if messages %}
+							{% for message in messages %}
+								{% if message.tags == "error" %}
+									<script>
+										$(function() {
+											sweetAlert("Error!", "{{ message }}", "{{ message.tags }}");
+										});
+									</script>
+								{% endif %}
+							{% endfor %}
+						{% endif %}
+					</div>
+				</div>
+
+				<div id="tree" class="tree"></div>
+				<form action="" method="POST" id="delete-checkboxes-form">
+					{% csrf_token %}
+					<input class="hidden" name="tree-checkbox" id="tree-checkbox" value="">
+				</form>
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!--=====================================================
+	Javascript
+=====================================================-->
+<script>
+	$(function() {
+
+		/*	Create Node Helper Function
+		====================================================== */
+		function createNode(tree_node, parent_node, new_node_id, new_node_text, position) {
+			$(tree_node).jstree('create_node', $(parent_node), { "text":new_node_text, "id":new_node_id }, position, false, false);
+		}
+
+
+
+		/*	JSTree
+		========================================= */
+		$.jstree.defaults.core.themes.stripes = true;
+		$('#tree').jstree({
+			'plugins': ["types", "search", "dnd", "contextmenu",  "wholerow", "unique", "sort", "grid"],
+			'sort': function (a, b) { return get_sort(a) < get_sort(b) ? 1 : -1; },
+			"search" : {"show_only_matches": true },
+			'core': {
+				"check_callback": true,
+				'data': {{ json|safe }},
+			},
+			'grid': {
+				"columns": [
+					{"wideCellClass":"tree-striped", "width": "70%", "header": "Nodes"},
+					{"wideCellClass":"tree-striped", "width": "10%", "header": "Type", "value": "filetype"},
+					{"wideCellClass":"tree-striped", "width": "10%", "header": "Contents", "value": "contents"},
+					{"wideCellClass":"tree-striped", "width": "10%", "header": "Size", "value": "filesize"},
+				]
+			},
+			"types": {
+				"folder": { "icon": "icon-basic_folder font-jstree-folder fs-20 m-t--2 m-r-5"},
+				"folder_root": { "icon": "icon-basic_folder font-jstree-folder_root fs-20 m-t--2 m-r-5"},
+				"folder_system": { "icon": "icon-basic_elaboration_folder_remove  fs-20 m-r-5 m-t--2"},
+				"file": { "icon": "fa fa-file font-jstree-file m-t--2 fs-14 m-r-5" },
+				"file_xls": { "icon": "fa fa-file-excel font-jstree-office m-t--2 fs-14 m-r-5" },				// "XLR", "XLS", "XLSX"
+				"file_ppt": { "icon": "fa fa-file-powerpoint-o font-jstree-office m-t--2 fs-14 m-r-5" },		// "PPT", "PPS", "PPTX"
+				"file_doc": { "icon": "fa fa-file-word-o font-jstree-office m-t--2 fs-14 m-r-5" }, 			// "DOC", "DOCX"
+				"file_archive": { "icon": "fa fa-file-archive-o font-jstree-archive m-t--2 fs-14 m-r-5" },		// "ZIP", "TAR", "GZIP,"
+				"file_code": { "icon": "fa fa-file-code-o font-jstree-code m-t--2 fs-14 m-r-5" },			// "HTML", "XML", "XHTML", "CSS", "SCSS", "JS", "PY"
+				"file_pdf": { "icon": "fa fa-file-pdf-o font-jstree-pdf m-t--2 fs-14 m-r-5" },				// "PDF"
+				"file_video": { "icon": "fa fa-file-video-o font-jstree-video m-t--2 fs-14 m-r-5" },			// "ASF", "AVI", "FLV", "M4V", "MOV", "MP4", "MPG", "RM", "SRT", "SWF", "VOB", "WMV"
+				"file_audio": { "icon": "fa fa-file-audio-o font-jstree-audio m-t--2 fs-14 m-r-5" },			// "AIF", "M3U", "M4A", "MID", "MP3", "MPA", "WAV", "WMA"
+				"file_image": { "icon": "fa fa-file-image-o font-jstree-image m-t--2 fs-14 m-r-5" },			// "BMP", "DDS", "GIF", "JPG", "PNG", "PSD", "PSP", "TGA", "THM", "TIF", "TIF", "YUV", "ect", "AI", "EPS", "PS", "SVG"
+			}
+		});
+
+
+
+		/*	Binding Options To Tree
+		========================================= */
+		$('#tree').on('ready.jstree', function() {
+			open_all_binding("#tree-open-close-nodes");
+			$("#tree").jstree("open_node", $('#'+{{ folder_root_id }}));
+
+		});
+
+
+		/*	Drag / Drop
+		========================================= */
+		$(document).on('dnd_start.vakata', function (e, data) {
+			console.log(data);
+		});
+		$(document).on('dnd_stop.vakata', function (e, data) {
+			var target = data["event"].toElement.id;
+			var parent = data["event"].toElement.parentNode.id;
+			console.log(data);
+			console.log(target);
+			console.log(parent);
+
+		});
+	
+
+
+
+
+		/*	Open/Close All Nodes (Set Binding)
+		========================================= */
+		function open_all_binding(id) {
+			$("#tree-open-close-nodes i").toggleClass("pe-7s-angle-right-circle", true)
+			$("#tree-open-close-nodes i").toggleClass("pe-7s-angle-down-circle", false)
+			$(id).on('click', function () {
+				$("#tree").jstree("open_all");
+				close_all_binding("#tree-open-close-nodes");
+			});
+		};
+		function close_all_binding(id) {
+			$("#tree-open-close-nodes i").toggleClass("pe-7s-angle-right-circle", false)
+			$("#tree-open-close-nodes i").toggleClass("pe-7s-angle-down-circle", true)
+			$(id).on('click', function () {
+				$("#tree").jstree("close_all");
+				open_all_binding("#tree-open-close-nodes");
+			});
+		};
+		
+
+
+		/*	Sort Order Array
+		========================================= */
+		function get_sort(id) {
+			var node =$("#tree").jstree(true).get_json(id, {flat:true})
+			var sort = node[0].data.sort_order
+			return sort
+		}
+
+
+
+		/*	Getting Checked Data
+		========================================= */
+		$('#btn-trash').on('click', function () {
+			var checkboxes = [];
+			checkboxes = $('#tree').jstree("get_selected");
+			$("#tree-checkbox").attr("value", checkboxes);
+			$("#delete-checkboxes-form").submit()
+		});
+
+
+
+		/*	Enable Links In Tree
+		========================================= */
+		$('#tree').on('select_node.jstree', function(e, data) {
+			var link = $('#' + data.selected).find('a');
+			if (link.attr("href") != "#" && link.attr("href") != "javascript:;" && link.attr("href") != "") {
+				if (link.attr("target") == "_blank") {
+					link.attr("href").target = "_blank";
+				}
+				document.location.href = link.attr("href");
+				return false;
+			}
+		});
+
+
+
+		/*	New Folder
+		========================================= */
+		$('#tree-new-folder').on('click', function () {
+			swal({
+				title: "",
+				text: "Enter Folder Name",
+				imageUrl: "{% static 'img/logos/symbol.png' %}",
+				type: "input",
+				showCancelButton: true,
+				closeOnConfirm: false,
+				animation: "slide-from-top",
+				// inputPlaceholder: "Folder Name"
+			},
+			function(inputValue) {
+				if (inputValue === false) return false;
+
+				if (inputValue === "") {
+					swal.showInputError("Invalid Input. Please Try Again!");
+					return false
+				}
+
+				/*	Ajax CSRF Cookie
+				========================================= */
+				var csrftoken = Cookies.get('csrftoken');
+				function csrfSafeMethod(method) {
+					return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+				}
+				$.ajaxSetup({
+					beforeSend: function(xhr, settings) {
+						if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+							xhr.setRequestHeader("X-CSRFToken", csrftoken);
+						}
+					}
+				});
+
+					
+				/*	Ajax Call to Django View (files/views.py)
+				========================================= */
+				$.ajax({
+					url: "/files/new_folder/",
+					type: "POST",
+					data: { "folder_name": inputValue },
+					success: function(response) {
+						r = response['alerts']
+						console.log(r)
+						if (r === "exists"){
+							swal.showInputError("Folder '"+inputValue+"' already exists!" );
+							return false;
+						} else {
+							location.reload()
+						}
+					},
+					error : function(xhr,errmsg,err) {
+					        console.log(xhr.status + ": " + xhr.responseText);
+					}
+				});
+			});
+		});
+
+				
+
+		/*	Search Functionality
+		========================================= */
+		var to = false;
+		$('#tree_search').keyup(function () {
+			if(to) { clearTimeout(to); }
+			to = setTimeout(function () {
+				var v = $('#tree_search').val();
+				$('#tree').jstree(true).search(v);
+			}, 250);
+		});
+	});
+</script>
+
+
+
+{% endblock %}

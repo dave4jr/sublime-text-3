@@ -1,0 +1,647 @@
+<!--======================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	index.html
+ *======================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content_site %}
+
+
+<!--=================`====================================
+	Check-Out
+=====================================================-->
+<div class="pi-row">
+	<div class="col-md-3">
+		<div class="portlet box base">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="pe-7s-download rotate--90"> </i>
+					<span class="caption-subject base-font"> Check-Out </span>
+				</div>
+			</div>
+			<div class="portlet-body">
+				<div class="pi-section-white">
+
+					<!--	Error Handling Logic
+					========================================= -->
+					{% if CheckoutForm.errors %}
+						{% for error in CheckoutForm.errors %}
+							<p class="pi-text-center font-mt-red capitalize fs-18">Error: {{ error|escape }}</p>
+						{% endfor %}
+					{% endif %}
+
+					<!--	Form
+					========================================= -->
+					<form action="{% url 'checkout' %}" method="post">
+						{% csrf_token %}
+							
+						<div class="pi-row pi-grid-small-margins">
+
+							<!--	Customer
+							========================================= -->
+							<div class="pi-col-sm-12">
+								<div class="form-group">
+									<label for="label-reservation-phone"> Customer </label>
+									<div class='input-group'>
+										<span class="input-group-addon input-left">
+											<i class="pe-7s-user"> </i>
+										</span>
+										{{ CheckoutForm.customer | add_class:"form-control" }}
+										<span class="input-group-addon input-right expandable">
+											<i class="pe-is-i-angle-down"></i>
+										</span>
+									</div>
+								</div>
+							</div>
+
+
+
+							<!--	Submit / Close Buttons
+							========================================= -->
+							<p class="pi-text-center m-t-20 p-rl-8">
+								<button type="submit" class="btn base pi-btn-wide"> Check-Out </button>
+							</p>
+						</div>
+					</form>
+				 </div>
+			</div>
+		</div>
+	</div>
+
+
+<!--=================`====================================
+	Check-In
+=====================================================-->
+	<div class="col-md-3">
+		<div class="portlet box base">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="pe-7s-download rotate--90"> </i>
+					<span class="caption-subject base-font"> Check-In </span>
+				</div>
+			</div>
+			<div class="portlet-body">
+				<div class="pi-section-white">
+
+					<!--	Error Handling Logic
+					========================================= -->
+					{% if CheckinForm.errors %}
+						{% for error in CheckinForm.errors %}
+							<p class="pi-text-center font-mt-red capitalize fs-18">Error: {{ error|escape }}</p>
+						{% endfor %}
+					{% endif %}
+
+					<!--	Form
+					========================================= -->
+					<form action="{% url 'checkin' %}" method="post">
+						{% csrf_token %}
+							
+						<div class="pi-row pi-grid-small-margins">
+
+							<!--	Customer
+							========================================= -->
+							<div class="pi-col-sm-12">
+								<div class="form-group">
+									<label for="label-reservation-phone"> Customer </label>
+									<div class='input-group'>
+										<span class="input-group-addon input-left">
+											<i class="pe-7s-user"> </i>
+										</span>
+										{{ CheckinForm.customer | add_class:"form-control" }}
+										<span class="input-group-addon input-right expandable">
+											<i class="pe-is-i-angle-down"></i>
+										</span>
+									</div>
+								</div>
+							</div>
+
+
+							<!--	Submit / Close Buttons
+							========================================= -->
+							<p class="pi-text-center m-t-20 p-rl-8">
+								<button type="submit" class="btn base pi-btn-wide"> Check-In </button>
+							</p>
+						</div>
+					</form>
+				 </div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+<!--=====================================================
+	Check Availability
+=====================================================-->
+	<div class="col-md-6">
+		<div class="portlet box base">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="pe-7s-date"> </i>
+					<span class="caption-subject base-font"> Check Availability </span>
+				</div>
+			</div>
+			<div class="portlet-body">
+				<div class="pi-section-white">
+
+					<form action="{% url 'availability' %}" method="post">
+						{% csrf_token %}
+							
+						<div class="pi-row pi-grid-small-margins">
+
+							<div class="pi-col-sm-5 p-0">
+
+								<div class="pi-col-sm-12">
+									<div class="form-group">
+										<label for="id_checkout_datetime"> Check-In </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-date"> </i>
+											</span>
+											{{ AvailabilityForm.start | add_class:"form-control datetimepicker" }}
+										</div>
+									</div>
+								</div>
+
+								<div class="pi-col-sm-12">
+									<div class="form-group">
+										<label for="id_checkout_datetime"> Check-In </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-date"> </i>
+											</span>
+											{{ AvailabilityForm.end | add_class:"form-control datetimepicker" }}
+										</div>
+									</div>
+								</div>
+
+								
+								<div class="pi-col-sm-12">
+									<div class="form-group">
+										<p class="pi-text-center m-t-0">
+											<button type="submit" class="btn base pi-btn-wide"	> Search </button>
+										</p>
+									</div>
+								</div>
+							</div>
+
+
+							<div id="availability-results" class="pi-col-sm-7">
+
+								{% if reservation.errors %}
+										{% for error in reservation.errors %}
+											<p class="pi-text-center font-mt-red capitalize fs-18">Error: {{ error|escape }}</p>
+										{% endfor %}
+								{% endif %}
+
+
+								<div class="form-group">
+									<label for="id_checkout_datetime"> Availability </label>
+									<div class='input-group'>
+										<ul>
+											{% for search in searches %}
+												<li>{{ search }}</li>
+											{% endfor %}
+										</ul>
+									</div>
+								</div>
+								<span class="label label-damage-evaluation p-10 p-rl-15 fs-14">{{ error_message }}</span>
+							</div>
+						</div>
+					</form>
+				 </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!--=====================================================
+	Pipeline
+=====================================================-->
+<div class="row">
+	<div class="col-md-12">
+		<div class="portlet light portlet-fit ">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="pe-7s-filter"> </i>
+					<span class="caption-subject base-font"> Pipeline </span>
+				</div>
+			</div>
+			<div class="portlet-body p-b-10">
+				<div class="table-toolbar m-b-5">
+					<div class="row">
+						<div class="col-md-12">
+							<div id="datatable-btn-export" class="pull-right"></div>
+						</div>
+					</div>
+				</div>
+
+				<!--	Table
+				========================================= -->
+				<table class="table table-striped table-bordered table-hover order-column" id="actions_table">
+					<thead>
+
+						<tr>
+							<th rowspan="2"> Customer </th>
+							<th rowspan="2"> Status </th>
+							<th rowspan="2"> Action </th>
+							<th rowspan="2"> Type </th>
+							<th rowspan="2"> Days </th>
+							<th colspan="2"> Reservation Deposit </th>
+							<th rowspan="2"> Damage </th>
+							<th colspan="5"> Rental </th>
+							<th colspan="4"> Total </th>
+						</tr>
+						<tr>
+							<th>Bike </th>
+							<th>Tour</th>
+							<th>Insurance </th>
+							<th>Bike </th>
+							<th>Tour </th>
+							<th>Class</th>
+							<th>Storage</th>
+							<th>Deposit</th>
+							<th>Damage</th>
+							<th>Rental</th>
+							<th>Final</th>
+						</tr>
+					</thead>
+					<tbody>
+
+					<!--	Table Data
+					========================================= -->
+					{% for reservation in reservations %}
+						<tr class="odd gradeX">
+							<td><a href="/reservations/edit/{{ reservation.pk }}">{{ reservation.customer }}</a></td>
+							<td>{% include "include/status.html" with status=reservation.status %}</td>
+
+							<td class="actions">{% include "include/action.html" with pk=reservation.pk status=reservation.status %}</td>
+							<td>{{ reservation.rental_type|underscore2amp }}</td>
+							<td>{{ reservation.duration }}</td>
+							<td>${{ reservation.bike_deposit|intcomma }}</td>
+							<td>${{ reservation.tour_deposit|intcomma }}</td>
+							<td>${{ reservation.bike_damage_deposit|intcomma }}</td>
+							<td>${{ reservation.bike_insurance|intcomma }}</td>
+							<td>${{ reservation.bike_price|intcomma }}</td>
+							<td>${{ reservation.tour_price|intcomma }}</td>
+							<td>${{ reservation.class_price|intcomma }}</td>
+							<td>${{ reservation.storage_price|intcomma }}</td>
+							<td>${{ reservation.total_deposit|intcomma }}</td>
+							<td>${{ reservation.bike_damage_deposit|intcomma }}</td>
+							<td>${{ reservation.total_price|intcomma }}</td>
+							<td>${{ reservation.final_price|intcomma }}</td>
+						</tr>
+					{% endfor %}
+
+					</tbody>
+				</table>
+
+				<!--	Footnotes
+				========================================= -->
+				<div class="m-t-10 m-b-10">
+					<ul>
+						<li class="fs-10"><sup class="m-r-5 bold fs-8">1 </sup>Represents a $50/rental day non-refundable deposit to hold bike reservation. All deposits held are applied towards rental </li>
+						<li class="fs-10"><sup class="m-r-5 bold fs-8">2 </sup>Damage depsot amount will be authorized and held for the amount of $1,500 but will not be captured unless needed for damages </li>
+						<li class="fs-10"><sup class="m-r-5 bold fs-8">3 </sup>Represents price of rental minus initial reservation hold deposit </li>
+						<li class="fs-10"><sup class="m-r-5 bold fs-8">4 </sup>Due 60 days before checkout and represents price of rental minus initial reservation hold deposit </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!--	Printing in Landscape
+========================================= -->
+<style type="text/css" media="print">
+	@page { size: landscape; }
+	table { writing-mode: tb-rl; }
+</style>
+
+
+<!--	Javascript
+========================================= -->
+<script>
+	$(function() {
+		
+		/*	Checkbox Delete
+		========================================= */
+		var table = $('#actions_table');
+		table.dataTable({
+			"bStateSave": true,
+			"info": false,
+			"sort": false,
+			"paging": false,
+			"searching": false,
+		});
+
+		var table = $('#action_items_table');
+		table.dataTable({
+			"bStateSave": true,
+			"info": false,
+			"sort": false,
+			"paging": false,
+			"searching": false,
+		});
+
+
+		/*	Buttons
+		========================================= */
+		var datatable = $('#actions_table').DataTable();
+		new $.fn.dataTable.Buttons( datatable, {
+			 buttons: [
+				  'print', 'pdf', 'excel'
+			 ]
+		} );
+		datatable.buttons( 0, null ).containers().appendTo( '#datatable-btn-export' );
+
+
+	});
+</script>
+
+
+<!--=====================================================
+	Daily Agenda
+=====================================================-->
+<div class="row">
+	<div class="col-md-6">
+		<div class="portlet box base">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="icon-basic_elaboration_calendar_empty"> </i>
+					<span class="caption-subject base-font"> Agenda - Today </span>
+				</div>
+			</div>
+			<div class="portlet-body">
+				<div id="agenda-today"></div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="portlet box base">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="icon-basic_elaboration_calendar_empty"> </i>
+					<span class="caption-subject base-font"> Agenda - Tomorrow </span>
+				</div>
+			</div>
+			<div class="portlet-body">
+				<div id="agenda-tomorrow"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	$(document).ready(function() {
+		function get_date(){
+			var today = new Date();
+			var dd = today.getDate();
+			var mm = today.getMonth()+1;
+			var yyyy = today.getFullYear();
+
+			if(dd<10) {
+			    dd='0'+dd
+			}
+			if(mm<10) {
+			    mm='0'+mm
+			}
+			return yyyy+'-'+mm+'/'+dd;
+		};
+
+		$('#agenda-today').fullCalendar({
+			defaultDate: "2016-07-02",
+			defaultView: 'agendaDay',
+			eventColor: "#67809F",
+			editable: true,
+			eventLimit: true,
+			events: [
+				{
+					title: 'Call Hotel',
+					start: '2016-07-02'
+				},
+				{
+					title: 'Long Event',
+					start: '2016-07-01',
+					end: '2016-07-10'
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: '2016-07-02T16:00:00'
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: '2016-01-16T16:00:00'
+				},
+				{
+					title: 'Conference',
+					start: '2016-01-11',
+					end: '2016-01-13'
+				},
+				{
+					title: 'Meeting',
+					start: '2016-01-12T10:30:00',
+					end: '2016-01-12T12:30:00'
+				},
+				{
+					title: 'Lunch',
+					start: '2016-01-12T12:00:00'
+				},
+				{
+					title: 'Meeting',
+					start: '2016-01-12T14:30:00'
+				},
+				{
+					title: 'Happy Hour',
+					start: '2016-01-12T17:30:00'
+				},
+				{
+					title: 'Dinner',
+					start: '2016-01-12T20:00:00'
+				},
+				{
+					title: 'Birthday Party',
+					start: '2016-01-13T07:00:00'
+				},
+				{
+					title: 'Click for Google',
+					url: 'http://google.com/',
+					start: '2016-01-28'
+				}
+			]
+		});
+
+		$('#agenda-tomorrow').fullCalendar({
+			defaultDate: "2016-07-03",
+			defaultView: 'agendaDay',
+			eventColor: "#67809F",
+			editable: true,
+			eventLimit: true,
+			events: [
+				{
+					title: 'Call Hotel',
+					start: '2016-07-02'
+				},
+				{
+					title: 'Long Event',
+					start: '2016-07-01',
+					end: '2016-07-10'
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: '2016-07-02T16:00:00'
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: '2016-01-16T16:00:00'
+				},
+				{
+					title: 'Conference',
+					start: '2016-01-11',
+					end: '2016-01-13'
+				},
+				{
+					title: 'Meeting',
+					start: '2016-07-03T10:30:00',
+					end: '2016-01-12T12:30:00'
+				},
+				{
+					title: 'Lunch',
+					start: '2016-07-03T12:00:00'
+				},
+				{
+					title: 'Meeting',
+					start: '2016-01-12T14:30:00'
+				},
+				{
+					title: 'Happy Hour',
+					start: '2016-01-12T17:30:00'
+				},
+				{
+					title: 'Dinner',
+					start: '2016-01-12T20:00:00'
+				},
+				{
+					title: 'Birthday Party',
+					start: '2016-01-13T07:00:00'
+				},
+				{
+					title: 'Click for Google',
+					url: 'http://google.com/',
+					start: '2016-01-28'
+				}
+			]
+		});
+		
+	});
+
+</script>
+
+
+
+
+<!--=====================================================
+	Status History Table
+=====================================================-->
+<div class="row">
+	<div class="col-md-12">
+		<div class="portlet box base">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="pe-7s-refresh-2"> </i>
+					<span class="caption-subject base-font"> Status History </span>
+				</div>
+			</div>
+			<div class="portlet-body">
+
+				<div class="table-toolbar m-b-0">
+					<div class="row">
+						<div class="col-md-12">
+							<div id="status-history-toolbar" class="pull-right"></div>
+						</div>
+					</div>
+				</div>
+
+
+				<table class="table table-striped table-bordered table-hover order-column" id="log_table">
+					<thead>
+						<tr>
+							<th> Customer </th>
+							<th> From </th>
+							<th> To </th>
+							<th> Timestamp </th>
+						</tr>
+					</thead>
+					<tbody>
+
+					{% for log in logs %}
+						<tr class="odd gradeX">
+							<td>{{ log.modified_object }}</td>
+							<td>{{ log.from_state|underscore2space|title }}</td>
+							<td>{{ log.to_state|underscore2space|title }}</td>
+							<td>{{ log.timestamp }}</td>
+						</tr>
+					{% endfor %}
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!--	Javascript: Transaction History
+========================================= -->
+<script>
+	$(function() {
+		
+		var table = $('#log_table');
+		table.dataTable({
+			"language": {
+				"aria": {
+					"sortAscending": ": activate to sort column ascending",
+					"sortDescending": ": activate to sort column descending"
+				},
+				"emptyTable": "No Status History",
+				"info": "Showing _START_ to _END_ of _TOTAL_ records",
+				"infoEmpty": "No Status History Found",
+				"infoFiltered": "(filtered1 from _MAX_ total records)",
+				"lengthMenu": "Show _MENU_",
+				"search": "Search:",
+				"zeroRecords": "No Matching Status Records Found",
+				"paginate": {
+					"previous":"Prev",
+					"next": "Next",
+					"last": "Last",
+					"first": "First"
+				}
+			},
+			"bStateSave": true,
+			"lengthMenu": [
+				[5, 10, 15, 20, -1],
+				[5, 10, 15, 20, "All"]
+			],
+			"pageLength": 10,
+			"pagingType": "bootstrap_full_number",
+			"order": [ [3, "desc"] ],
+		});
+	});
+</script>
+
+
+
+{% endblock %}

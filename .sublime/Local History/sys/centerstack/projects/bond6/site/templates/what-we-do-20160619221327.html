@@ -1,0 +1,80 @@
+<!--==========================
+*  Author:		Dave Luke Jr
+*  Company:	CenterStack.io
+*  Description:	about.html
+*==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load customtags %}
+{% load staticfiles %}
+{% block content %}
+
+
+<!--	Page Title
+========================================= -->
+<section class="hero-auto text-light parallax-section chalk"  id="hero">
+	<div class="wrapper align-center" id="page-title">
+		<h1><strong> What <span class="colored">We</span> Do </strong></h1>
+	</div>
+</section>
+
+<section id="page-body">
+	<div class="wrapper-small">
+		<ul id="hexGrid">
+			<li class="hex">
+				<a class="hexIn creampaper" href="#">
+					<!-- <img src="{% static 'img/hexagon/1.jpg' %}"> -->
+					<h1>This is a title</h1>
+					<p>Some sample text about the article this hexagon leads to</p>
+				</a>
+			</li>
+			<li class="hex">
+				<a class="hexIn creampaper" href="#">
+					<!-- <img src="{% static 'img/hexagon/2.jpg' %}"> -->
+					<h1>This is a title</h1>
+					<p>Some sample text about the article this hexagon leads to</p>
+				</a>
+			</li>
+			<li class="hex">
+				<a class="hexIn creampaper" href="#">
+					<!-- <img src="{% static 'img/hexagon/1.jpg' %}"> -->
+					<h1>This is a title</h1>
+					<p>Some sample text about the article this hexagon leads to</p>
+				</a>
+			</li>
+			<li class="hex">
+				<a class="hexIn wild_oliva" href="#">
+					<img src="{% static 'img/hexagon/6-white.svg' %}">
+					<h1>This is a title</h1>
+					<p>Some sample text about the article this hexagon leads to</p>
+				</a>
+			</li>
+			<li class="hex">
+				<a class="hexIn creampaper" href="#">
+					<!-- <img src="{% static 'img/hexagon/1.jpg' %}"> -->
+					<h1>This is a title</h1>
+					<p>Some sample text about the article this hexagon leads to</p>
+				</a>
+			</li>
+			<li class="hex">
+				<a class="hexIn creampaper" href="#">
+					<!-- <img src="{% static 'img/hexagon/1.jpg' %}"> -->
+					<h1>This is a title</h1>
+					<p>Some sample text about the article this hexagon leads to</p>
+				</a>
+			</li>
+			<li class="hex">
+				<a class="hexIn creampaper" href="#">
+					<!-- <img src="{% static 'img/hexagon/1.jpg' %}"> -->
+					<h1>This is a title</h1>
+					<p>Some sample text about the article this hexagon leads to</p>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="spacer-big"></div>
+</section>
+
+
+	
+{% endblock %}

@@ -1,0 +1,347 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	buy.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load el_pagination_tags %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+
+
+
+<!--	Listings & Map
+========================================= -->
+<div class="container-fluid grey-bg fullwidth-wrapper">
+	<div class="row">
+		<div id="left-col" class="col-sm-4 p-b-100 p-rl-5">
+			<div class="filter-bar-wrapper">
+				<form id="filter-form" action="" method="get">
+					<div id="filter-bar">
+						{{ PropertyFilter.form.city | attr:"multiple:multiple" }}
+						{{ PropertyFilter.form.propertytype | attr:"multiple:multiple" }}
+						{{ PropertyFilter.form.section | attr:"multiple:multiple" }}
+						{{ PropertyFilter.form.bedrooms | attr:"multiple:multiple" }}
+						{{ PropertyFilter.form.bathrooms | attr:"multiple:multiple" }}
+						{{ PropertyFilter.form.view | attr:"multiple:multiple" }}
+						{{ PropertyFilter.form.size__gt | add_class:"filter-manual" | attr:"placeholder:Sqft (Min)" }}
+						{{ PropertyFilter.form.size__lt | add_class:"filter-manual" | attr:"placeholder:Sqft (Max)" }}
+						{{ PropertyFilter.form.acres__gt | add_class:"filter-manual" | attr:"placeholder:Acres (Min)" }}
+						{{ PropertyFilter.form.acres__lt | add_class:"filter-manual" | attr:"placeholder:Acres (Max)" }}
+						{{ PropertyFilter.form.price__gt | add_class:"filter-manual" | attr:"placeholder:Price (Min)" }}
+						{{ PropertyFilter.form.price__lt | add_class:"filter-manual" | attr:"placeholder:Price (Max)" }}
+						{{ PropertyFilter.form.keysearch | attr:"placeholder:Keyword..." }}
+						<input type="submit" value="Filter" class="sr-button button-3 button-tiny filter-submit"> 
+					</div>
+				</form>
+			</div>
+			
+			<div id="properties">
+			{% paginate 15 PropertyFilter %}
+			{% for property in PropertyFilter %}
+				<div class="listing-row">
+					<div class="listing-row-inner">
+						<div class="listing-row-image" data-property-href="{% url 'buy-single' pk=property.pk %}" style="background-image: url({{ property.img.0 }});"></div>
+						<div class="listing-row-content">
+							<h3><a href="{% url 'buy-single' pk=property.pk %}"> {{ property.streetnumber }} {{ property.streetname }} {{ property.streetsuffix }} </a></h3>
+							<h4 class="m-t-0"> ${{ property.listingprice|floatformat:"0"|intcomma }} </h4>
+							<ul class="listing-row-attributes">
+								<li><i class="fontello-city"></i> City <span> {{ property.city }} </span></li>
+								<li><i class="fontello-section"></i> Section <span> {{ property.section }} </span></li>
+								<li><i class="fontello-sqft"></i> Sqft. <span> {{ property.squarefootage|floatformat:"0"|intcomma }} </span></li>
+								<li><i class="fontello-map"></i> Acres <span> {{ property.acres }} </span></li>
+								<li><i class="fontello-beds"></i> Bedrooms <span> {{ property.bedrooms }} </span></li>
+								<li><i class="fontello-baths"></i> Baths <span> {{ property.bathrooms }} </span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+			</div>
+	
+			
+			<!--	Pagination
+			========================================= -->
+			<div class="pagination">
+				<span>
+					{% get_pages %}
+					{{ pages.previous }} {{ pages.next }}
+				</span>
+			</div>
+			
+	
+			<script>
+				$(function() {
+					$('#id_city').multiselect({
+						buttonText: function(options, select) { return 'City'; },
+						enableCaseInsensitiveFiltering: true,
+						buttonClass: 'filter-city',
+						inheritClass: true,
+						maxHeight: 400,
+						numberDisplayed: 1,
+						buttonWidth: 'calc(20% - 4px)',
+					});
+					$('#id_propertytype').multiselect({
+						buttonText: function(options, select) { return 'Type'; },
+						buttonClass: 'filter-type',
+						inheritClass: true,
+						maxHeight: 400,
+						numberDisplayed: 1,
+						buttonWidth: 'calc(20% - 4px)',
+					});
+					$('#id_section').multiselect({
+						buttonText: function(options, select) { return 'Section'; },
+						buttonClass: 'filter-section',
+						inheritClass: true,
+						maxHeight: 400,
+						numberDisplayed: 1,
+						buttonWidth: 'calc(20% - 4px)',
+						
+					});
+					$('#id_bedrooms').multiselect({
+						buttonText: function(options, select) { return 'Beds'; },
+						enableClickableOptGroups: true,
+						buttonClass: 'filter-bedrooms',
+						inheritClass: true,
+						maxHeight: 400,
+						numberDisplayed: 1,
+						buttonWidth: 'calc(20% - 4px)',
+					});
+					$('#id_bathrooms').multiselect({
+						buttonText: function(options, select) { return 'Baths'; },
+						enableClickableOptGroups: true,
+						buttonClass: 'filter-bathrooms',
+						inheritClass: true,
+						maxHeight: 400,
+						numberDisplayed: 1,
+						buttonWidth: 'calc(20% - 4px)',
+					});
+					$('#id_view').multiselect({
+						buttonText: function(options, select) { return 'View'; },
+						buttonClass: 'filter-view',
+						inheritClass: true,
+						maxHeight: 400,
+						numberDisplayed: 1,
+						buttonWidth: 'calc(20% - 4px)',
+					});
+				});
+			</script>
+			
+			
+			
+			<!--	Map Markers
+			========================================= -->
+			<script>
+				var values = [
+					{% for property in PropertyFilter %}
+						{
+							"id": "marker-{{ property.listingrid }}",
+							"center": [{{ property.latitude }}, {{ property.longitude }}],
+							"icon": "{% with d=property.listingprice|num_digits %}{% if d >= 6 %}<p>${{ property.listingprice|div:1000000|floatformat:"2"|intcomma }}M</p>{% else %}<p>${{ property.listingprice|div:1000|floatformat:"2"|intcomma }}K</p>{% endif %}{% endwith %}",
+							"title": "{{ property.streetnumber }} {{ property.streetname }} {{ property.streetsuffix }}",
+							"price": "${{ property.listingprice }}",
+							"image": "{{ property.img.0 }}",
+							"pk": "{{ property.pk|strip_comma }}"
+						},
+					{% endfor %}
+				]
+			</script>
+		</div>
+
+
+
+		<!--	Map
+		========================================= -->
+		<div id="right-col" class="col-sm-8 p-rl-0">
+			<div class="expand-map">
+				<i class="pe-7s-expand1"></i>
+			</div>
+			<div class="map-div">
+				<div id="map-google"></div>
+			</div>
+		</div>
+		<script>
+			$(function() {
+				markers = []
+				$.each(values, function(index, value) {
+					var content ='<div id="'+ value.id + '" class="map-popup-content-wrapper"><div class="map-popup-content"><div class="listing-window-image-wrapper">' + '<a href="/rets/buy/' + value.pk + '">' + '<div class="listing-window-image"style="background-image: url(' + value.image + ');"></div>' + '<div class="listing-window-content">' + '<div class="info">' + '<h2>' + value.title + '</h2>' + '<h3>' + value.price + '</h3>' + '</div>' + '</div>' + '</a>' + '</div></div><i class="fa fa-close close"></i></div>' + '<div class="map-marker">' + value.icon + '</div>';
+					markers.push({
+						latLng: value.center, 
+						data: value.id,			
+						options: { content: content, offset: { x: -18, y: -42 } }
+					});
+				});
+				$('#map-google').gmap3({		
+					map: {									
+						options:{
+							styles: {% include "include/map-styles.html" with arg="apple" %},
+							center:[44.057511, -121.301884],
+							scrollwheel: false,
+							panControl:true,
+							mapTypeControl:false,
+							scaleControl:true,
+							streetViewControl:false,
+							overviewMapControl:false,
+							rotateControl:false,
+							zoomControl: true,
+							zoomControlOptions: {
+								position: google.maps.ControlPosition.RIGHT_CENTER
+							},
+							mapTypeId: google.maps.MapTypeId.ROADMAP,
+							zoom: 13
+						}
+					},
+					overlay: {
+						values: markers,
+						events: {
+							click: function(marker, event, context) {															
+								$('.map-popup-content-wrapper').css('display', 'none');
+
+								if ($(event[0].target).hasClass('close')) {
+									$('#' + context.data).css('display', 'none');
+								} else {
+									$('#' + context.data).css('display', 'block');
+								}
+							}
+						}
+					}
+				});					
+			});
+		</script>
+	</div>
+</div>
+
+
+
+
+
+<!--	Expand Map Button
+========================================= -->
+<script>
+	$(function() {
+		$(".expand-map").click(function() {
+			var el = $("#right-col");
+			if ( el.hasClass('col-sm-8') ) {
+				el.toggleClass('col-sm-8', false);
+				el.toggleClass('col-sm-12', true);
+				el.css("left", "0%");
+				$(".filter-bar-wrapper").css({
+					"background":"transparent",
+					"left": "50%",
+					"margin-left": "-242.5px"
+				});
+				$("#filter-bar").css({
+					"left": "50%",
+					"margin-left": "-242.5px",
+					"border": "1px solid #EEE",
+					"top": "85px"
+				});
+				
+			} else {
+				el.toggleClass('col-sm-12', false);
+				el.toggleClass('col-sm-8', true);
+				el.css("left", "34%");
+				$(".filter-bar-wrapper").css({
+					"background":"#F7F8FA",
+					"left": "0%",
+					"margin-left": "5px"
+				});
+				$("#filter-bar").css({
+					"left": "0%",
+					"margin-left": "0px",
+					"border":"0"
+				});
+			}
+			$("#map-google").gmap3({trigger:"resize"});
+		});
+	});
+</script>
+
+
+
+
+<!--	JS - Click Image Link
+========================================= -->
+<script>
+	$(function() {
+		$(".listing-row-image").click(function() {
+			var href = $(this).data("property-href");
+			location.href = href;
+		});
+	});
+</script>
+	
+	
+
+
+<!--	JS - Set Width Of Filter Bar
+========================================= -->
+<script>
+	$(function() {
+		var w = $(".listing-row").outerWidth() + 15;
+		$("#filter-bar").css("width", w);
+	});
+</script>
+
+
+
+
+<!--	Set Height On Property When Only Few Properties
+============================================== -->
+<script>
+	$(function() {
+		var rh = $("#right-col").outerHeight(true);
+		$("#left-col").outerHeight(rh);
+	});
+</script>
+
+
+
+
+<!--	Change Filter Button Color (After Reload)
+========================================= -->
+<script>
+	$(function() {
+		var inputs = $(".multiselect-container li");
+		$.each(inputs, function(index, val) {
+			var is_checked = $(this).hasClass('active');
+			if (is_checked){
+				var btn = $(this).parent().prev();
+				btn.css({"background":"#FF9D74", "color": "#fff" });
+			}
+		});
+	});
+</script>
+
+
+
+
+<!--	Change Filter Button Color (After Filtered)
+========================================= -->
+<script>
+	$(function() {
+		$('.multiselect-container > li').observe({ attributes: true, attributeFilter: ['class'] }, function(record) {
+		        var dropdown = $(this).parent();
+		        var btn = dropdown.prev();
+		        var is_active = dropdown.find("li").hasClass('active');
+		   	if (is_active){
+		   		btn.css({"background":"#FF9D74", "color": "#fff" });
+		   	} else {
+		   		btn.css({"background":"#FFF", "color": "#777" });
+		   	}
+		});
+	});
+</script>
+
+
+
+
+
+
+
+{% endblock %}

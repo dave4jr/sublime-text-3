@@ -1,0 +1,36 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	404.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+
+
+<!--	About
+========================================= -->
+<section class="notoppadding" id="page-body">
+	<div class="fullwidth-section fullheight" style="background:#f5f6f7;">
+		<div class="fullwidth-content wrapper-small align-center">
+			<h1 class="error-404">
+				<strong> 404 </strong>
+			</h1>
+			<h3>
+				<strong> The Page you were looking <br>for could not be found. </strong>
+			</h3>
+			<div class="spacer-medium"> </div>
+			<a class="sr-button button-small button-4 rounded" href="{% url 'index' %}"> Back To Homepage </a>
+		</div>
+	</div>
+</section>
+
+
+{% endblock %}
+
+{% block footer %}{% endblock %}

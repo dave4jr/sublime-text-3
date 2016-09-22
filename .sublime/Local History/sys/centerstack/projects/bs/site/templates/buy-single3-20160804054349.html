@@ -1,0 +1,454 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	buy.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load el_pagination_tags %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,300,700&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+	<link href="{% static 'plugins/villareal/assets/fonts/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+	<link href="{% static 'plugins/villareal/assets/libraries/owl-carousel/owl.carousel.css' %}" rel="stylesheet" type="text/css">
+	<link href="{% static 'plugins/villareal/assets/libraries/chartist/chartist.min.css' %}" rel="stylesheet" type="text/css">
+	<link href="{% static 'plugins/villareal/assets/css/leaflet.css' %}" rel="stylesheet" type="text/css">
+	<link href="{% static 'plugins/villareal/assets/css/leaflet.markercluster.css' %}" rel="stylesheet" type="text/css">
+	<link href="{% static 'plugins/villareal/assets/css/leaflet.markercluster.default.css' %}" rel="stylesheet" type="text/css">
+	<link href="{% static 'css/villareal.css' %}" rel="stylesheet" type="text/css" id="css-primary">
+	<link href="{% static 'css/helpers.css' %}" rel="stylesheet" type="text/css" id="css-primary">
+	<link rel="shortcut icon" type="image/x-icon" href="assets/favicon.png">
+</head>
+<body class="p-t-60">
+	<div class="page-wrapper white-bg">
+		<div class="main-wrapper">
+			<div class="main">
+				<div class="main-inner">
+					<div class="content">
+						<div class="container">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="listing-detail-attributes bs-grey-bg">
+										<div class="col-sm-3 listing-detail-attribute">
+											<div class="key"> Address </div>
+											<div class="value"> {{ property.streetnumber }} {{ property.streetname }} {{ property.streetsuffix }} {{ property.unit }}</div>
+										</div>
+										<div class="col-sm-3 listing-detail-attribute p-l-40">
+											<div class="key"> Location </div>
+											<div class="value"> {{ property.city }}, {{ property.state }} ({{ property.county }}) </div>
+										</div>
+										<div class="col-sm-3 listing-detail-attribute p-l-80">
+											<div class="key"> MLS Number </div>
+											<div class="value"> {{ property.mlnumber }} </div>
+										</div>
+										<div class="col-sm-3 listing-detail-attribute p-l-60">
+											<div class="key"> Price </div>
+											<div class="value"> ${{ property.listingprice|floatformat:"0"|intcomma }} </div>
+										</div>
+									</div>
+								</div>
+								<div class="listing-detail col-md-12">
+
+									<!--	Slider
+									========================================= -->
+									<div class="row p-10">
+										<div class="col-md-12">
+											<ul class="pgwSlideshow">
+												{% for ii in property.img %}
+													<li><img src="{{ ii }}"></li>
+												{% endfor %}
+											</ul>
+											<script>
+												$(document).ready(function() {
+													$('.pgwSlideshow').pgwSlideshow({
+														transitionEffect: 'sliding',
+														displayControls: false,
+														autoSlide: true,
+														intervalDuration: 4000,
+														maxHeight: 1000,
+													});
+												});
+											</script>
+										</div>
+									</div>
+
+
+
+									<!--	Property Description
+									========================================= -->
+									<div id="property-description" class="row m-t-20">
+										<div class="col-sm-4">
+											<div class="overview portlet grey-bg">
+												<h2 class="m-b-5"> Overview </h2>
+												<ul>
+													<li>
+														<strong> Street </strong>
+														<span> {% include "include/address.html" with arg="street" %} </span>
+													</li>
+													<li>
+														<strong> City </strong>
+														<span> {% include "include/address.html" with arg="city" %} </span>
+													</li>
+													<li>
+														<strong> Style </strong>
+														<span> {{ property.style }} </span>
+													</li>
+													<li>
+														<strong> Water </strong>
+														<span> {{ property.water }} </span>
+													</li>
+													<li>
+														<strong> Year Built </strong>
+														<span> {{ property.yearbuilt }} </span>
+													</li>
+													<li>
+														<strong> View </strong>
+														<span> {{ property.view }} </span>
+													</li>
+													
+												</ul>
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="overview portlet grey-bg">
+												<h2> Features </h2>
+												<ul>
+													<li>
+														<strong> Listing Price </strong>
+														<span> ${{ property.listingprice|floatformat:"0"|intcomma }} </span>
+													</li>
+													<li>
+														<strong> Price / Sqft. </strong>
+														<span> ${{ property.listingprice|div:property.squarefootage|floatformat:"2"|intcomma }} </span>
+													</li>
+													<li>
+														<strong> Bedrooms </strong>
+														<span> {{ property.bedrooms }} </span>
+													</li>
+													<li>
+														<strong> Bathrooms </strong>
+														<span> {{ property.bathrooms|floatformat:"1" }} </span>
+													</li>
+													<li>
+														<strong> Sqft. </strong>
+														<span> {{ property.squarefootage|floatformat:"0"|intcomma }} Sqft. </span>
+													</li>
+													<li>
+														<strong> Acres </strong>
+														<span> {{ property.acres }} </span>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="overview portlet grey-bg">
+												<h2> Description </h2>
+												<p> {{ property.marketingremarks }} </p>
+											</div>
+										</div>
+									</div>
+
+
+									<!--	Ammenities
+									========================================= -->
+									<h2> Amenities </h2>
+									<ul class="amenities">
+									
+										{% with features=property.resikitc|add:","|add:property.resicomm|add:","|add:property.resiinte|add:","|add:property.resiexte|add:","|add:property.resipark|add:","|add:property.resihtco|add:","|add:property.resiinc3|add:","|add:property.resiinc2|add:","|add:property.resiinc1|add:","|add:property.resiroom|strip %}
+
+											<!--	Dishwasher
+											========================================= -->
+											{% if "air conditioning" in features or "a/c" in features or "ac-central" in features or "ac central" in features or "conditioning" in features %}
+												<li class="yes"> Air Conditioning </li>
+											{% else %}
+												<li class="no"> Air Conditioning </li>
+											{% endif %}
+											
+											<!--	Dishwasher
+											========================================= -->
+											{% if "balcony" in features %}
+												<li class="yes"> Balcony </li>
+											{% else %}
+												<li class="no"> Balcony </li>
+											{% endif %}
+											
+											<!--	Ceiling Fan
+											========================================= -->
+											{% if "fan" in features %}
+												<li class="yes"> Ceiling Fan </li>
+											{% else %}
+												<li class="no"> Ceiling Fan </li>
+											{% endif %}
+											
+											<!--	Clubhouse
+											========================================= -->
+											{% if "clubhouse" in features or "recreation" in features or "rec room" in features %}
+												<li class="yes"> Clubhouse </li>
+											{% else %}
+												<li class="no"> Clubhouse </li>
+											{% endif %}
+											
+
+											<!--	Parking
+											========================================= -->
+											{% if "no - parking" in features or "no parking" in features or "noparking" in features %}
+												<li class="no"> Parking </li>
+											{% elif "parking" in features %}
+												<li class="yes"> Parking </li>
+											{% else %}
+												<li class="no"> Parking </li>
+											{% endif %}
+											
+
+											<!--	Dishwasher
+											========================================= -->
+											{% if "dishwasher" in features %}
+												<li class="yes"> Dishwasher </li>
+											{% else %}
+												<li class="no"> Dishwasher </li>
+											{% endif %}
+											
+
+											<!--	Dryer
+											========================================= -->
+											{% if "dryer" in features %}
+												<li class="yes"> Dryer </li>
+											{% else %}
+												<li class="no"> Dryer </li>
+											{% endif %}
+											
+
+											<!--	Furnished
+											========================================= -->
+											{% if "not furnished" in features or "no furnishings" in features or "unfurnished" in features %}
+												<li class="no"> Furnished </li>
+											{% elif "furnished" in features or "furnishings" in features %}
+												<li class="yes"> Furnished </li>
+											{% else %}
+												<li class="no"> Furnished </li>
+											{% endif %}
+											
+
+											<!--	Garage
+											========================================= -->
+											{% if "no - garage" in features or "no garage" in features or "nogarage" in features %}
+												<li class="no"> Garage </li>
+											{% elif "garage" in features %}
+												<li class="yes"> Garage </li>
+											{% else %}
+												<li class="no"> Garage </li>
+											{% endif %}
+											
+
+											<!--	Garbage Disposal
+											========================================= -->
+											{% if "garbage disposal" in features or "disposal" in features %}
+												<li class="yes"> Garbage Disposal </li>
+											{% else %}
+												<li class="no"> Garbage Disposal </li>
+											{% endif %}
+											
+
+											<!--	Gated Community
+											========================================= -->
+											{% if "paved" in features %}
+												<li class="yes"> Paved Road </li>
+											{% else %}
+												<li class="no"> Paved Road </li>
+											{% endif %}
+											
+
+											<!--	Golf
+											========================================= -->
+											{% if "golf" in features %}
+												<li class="yes"> Golf </li>
+											{% else %}
+												<li class="no"> Golf </li>
+											{% endif %}
+											
+
+											<!--	Heater
+											========================================= -->
+											{% if "heating" in features or "heater" in features or "heat pump" in features or "forced air" in features or "foreced-air" in features %}
+												<li class="yes"> Heating </li>
+											{% else %}
+												<li class="no"> Heating </li>
+											{% endif %}
+											
+
+											<!--	Jacuzzi
+											========================================= -->
+											{% if "hot tub" in features or "jacuzzi" in features or "hottub" in features %}
+												<li class="yes"> Hot Tub </li>
+											{% else %}
+												<li class="no"> Hot Tub </li>
+											{% endif %}
+											
+
+											<!--	Landscape
+											========================================= -->
+											{% if "landscaped" in features or "landscape" in features %}
+												<li class="yes"> Landscaped </li>
+											{% else %}
+												<li class="no"> Landscaped </li>
+											{% endif %}
+											
+
+											<!--	Microwave
+											========================================= -->
+											{% if "microwave" in features %}
+												<li class="yes"> Microwave </li>
+											{% else %}
+												<li class="no"> Microwave </li>
+											{% endif %}
+											
+
+											<!--	Park
+											========================================= -->
+											{% if "park" in features %}
+												<li class="yes"> Park </li>
+											{% else %}
+												<li class="no"> Park </li>
+											{% endif %}
+											
+
+											<!--	Patio / Deck
+											========================================= -->
+											{% if "patio" in features or "deck" in features %}
+												<li class="yes"> Patio / Deck </li>
+											{% else %}
+												<li class="no"> Patio / Deck </li>
+											{% endif %}
+											
+											
+											<!--	Pool
+											========================================= -->
+											{% if "pool" in features %}
+												<li class="yes"> Pool </li>
+											{% else %}
+												<li class="no"> Pool </li>
+											{% endif %}
+											
+
+											<!--	Range / Oven
+											========================================= -->
+											{% if "range" in features or "oven" in features %}
+												<li class="yes"> Range / Oven </li>
+											{% else %}
+												<li class="no"> Range / Oven </li>
+											{% endif %}
+											
+
+											<!--	Refrigerator
+											========================================= -->
+											{% if "refrigerator" in features %}
+												<li class="yes"> Refrigerator </li>
+											{% else %}
+												<li class="no"> Refrigerator </li>
+											{% endif %}
+											
+
+											<!--	Tennis Courts
+											========================================= -->
+											{% if "tennis" in features %}
+												<li class="yes"> Tennis Courts </li>
+											{% else %}
+												<li class="no"> Tennis Courts </li>
+											{% endif %}
+											
+
+											<!--	Walk-In Closet
+											========================================= -->
+											{% if "walk-in closet" in features or "walk in closet" in features or "walkin closet" in features %}
+												<li class="yes"> Walk-In Closet </li>
+											{% else %}
+												<li class="no"> Walk-In Closet </li>
+											{% endif %}
+											
+
+											<!--	Washer
+											========================================= -->
+											{% if "washer" in features %}
+												<li class="yes"> Washer </li>
+											{% else %}
+												<li class="no"> Washer </li>
+											{% endif %}
+
+										
+										{% endwith %}
+
+									</ul>
+
+									<!--	Question
+									========================================= -->
+									<h2> Send Us A Question </h2>
+									<div class="comment-create grey-bg portlet p-60">
+										<form action="" method="post">
+											<div class="pi-row pi-grid-small-margins">
+												<div class="pi-col-sm-4">
+													<div class="form-group">
+														<label> Name </label>
+														<input class="form-control" type="text" />
+													</div>
+												</div>
+												<div class="pi-col-sm-4">
+													<div class="form-group">
+														<label> E-mail </label>
+														<input class="form-control" type="email" />
+													</div>
+												</div>
+												<div class="pi-col-sm-4">
+													<div class="form-group">
+														<label> URL </label>
+														<input class="form-control" type="text" />
+													</div>
+												</div>
+												<div class="pi-col-sm-12">
+													<div class="form-group">
+														<label> URL </label>
+														<textarea class="form-control" rows="5"> </textarea>
+													</div>
+												</div>
+											</div>
+											<div class="form-group-btn m-r-20">
+												<a class="btn btn-primary pull-right" href="#"> Send </a>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	<!--	Javascript
+	========================================= -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-B5LPcn-uJnxUFcwSbLGrkRVvYZE5gzU"></script>
+	<script src="{% static 'plugins/villareal/assets/js/jquery.ezmark.min.js' %}"></script>
+	<script src="{% static 'plugins/villareal/assets/js/tether.min.js' %}"></script>
+	<script src="{% static 'plugins/villareal/assets/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'plugins/villareal/assets/js/gmap3.min.js' %}"></script>
+	<script src="{% static 'plugins/villareal/assets/libraries/owl-carousel/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'plugins/villareal/assets/js/villareal.js' %}"></script>
+
+
+</body>
+
+</html>
+
+
+{% endblock %}

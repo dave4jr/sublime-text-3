@@ -1,0 +1,156 @@
+<!--======================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	dropdowns.html
+ *======================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content_site %}
+
+
+<!--	Level
+========================================= -->
+<div class="pi-row">
+	<div class="col-md-3">
+		<div class="portlet box base">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="icon-icon-25-key"> </i>
+					<span class="caption-subject base-font"> Membership Levels </span>
+				</div>
+			</div>
+			<div class="portlet-body">
+				<div class="pi-section-white">
+
+					<!--	Form
+					========================================= -->
+					<form id="dropdown_level_new" action="{% url 'dropdown_level_new' %}" method="post">
+						{% csrf_token %}
+							
+						<div class="pi-row pi-grid-small-margins">
+							<div class="pi-col-sm-12">
+								<div class="form-group m-b-10">
+									<div class='input-group'>
+										<span class="input-group-addon input-left p-l-0"></span>
+										{{ LevelForm.name | add_class:"form-control" | attr:"placeholder: Enter Value..." }}
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				 
+
+					<!--	Table
+					========================================= -->
+					 <form id="dropdown_level_delete" action="{% url 'dropdown_level_delete' %}" method="post">
+					 	{% csrf_token %}
+					 	<div class="pi-row pi-grid-small-margins">
+					 		<div class="pi-col-sm-12">
+								<table class="table table-striped table-bordered table-hover table-checkable order-column" id="dropdown_table">
+									<thead>
+										<tr>
+											<th><input class="group-checkable" data-set="#dropdown_table .checkboxes" type="checkbox"></th>
+											<th> Dropdown </th>
+										</tr>
+									</thead>
+									<tbody>
+
+										{% for level in levels %}
+											<tr class="odd gradeX">
+												<td><input type="checkbox" class="checkboxes" name="checked" value="{{ level.pk }}"></td>
+												<td><a href="/levels/edit/{{ level.pk }}">{{ level.name }}</a></td>
+											</tr>
+										{% endfor %}
+
+									</tbody>
+								</table>
+								<input type="submit" class="hidden" id="checkbox-input">
+							</div>
+						</div>
+					</form>
+
+					<!--	Submit / Close Buttons
+					========================================= -->
+					<div class="pi-row pi-grid-small-margins">
+						<div class="pi-col-sm-6">
+							<p class="pi-text-center m-t-10">
+								<a id="delete_id" value="{{ level.pk }}" name="delete" class="btn mt-grey-gallery-bg p-rl-30 m-r-5"> Delete<i class="icon-7s-close-circle pi-icon-right"></i></a>
+							</p>
+						</div>
+						<div class="pi-col-sm-6">
+							<p class="pi-text-center m-t-10">
+								<a id="submit_id" value="{{ level.pk }}" name="submit" class="btn base p-rl-30"> Save<i class="icon-7s-check pi-icon-right"></i></a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!--	Javascript
+========================================= -->
+<script>
+	$(function() {
+		$("#submit_id").click(function() {
+			$("#dropdown_level_new").submit();
+		});
+		$("#delete_id").click(function() {
+			$("#dropdown_level_delete").submit();
+		});
+	});
+</script>
+
+
+<script>
+	$(function() {
+		
+		/*	Table Setup
+		========================================= */
+		var table = $('#dropdown_table');
+		table.dataTable({
+			"bStateSave": true,
+			"info": false,
+			"sort": false,
+			"paging": false,
+			"searching": false,
+		});
+
+
+		/*	Buttons
+		========================================= */
+		var datatable = $('#dropdown_table').DataTable();
+		new $.fn.dataTable.Buttons( datatable, {
+			 buttons: [
+				  'print', 'pdf', 'excel'
+			 ]
+		} );
+		datatable.buttons( 0, null ).containers().appendTo( '#datatable-btn-export' );
+
+
+	});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

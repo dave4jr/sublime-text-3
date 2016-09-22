@@ -1,0 +1,186 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	base.html
+ *==========================-->
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load customtags %}
+<html class="no-js" lang="en-US">
+<head>
+	<meta charset="utf-8" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<title> BrundageSmith </title>
+
+	<!--	Favicon
+	========================================= -->
+	<link href="{% static 'sudo/files/uploads/favicon.png' %}" rel="shortcut icon">
+	
+	<!--	Fonts
+	========================================= -->
+	<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Lora:400italic,700italic" rel="stylesheet">
+	<link href="{% static 'sudo/files/css/font-awesome.min.css' %}" id="fontawesome-style-css" media="all" rel="stylesheet">
+	<link href="{% static 'sudo/files/css/ionicons.css' %}" id="ionic-icons-style-css" media="all" rel="stylesheet" type="text/css" />
+
+	
+	<!--	CSS Links
+	========================================= -->
+	<link href="{% static 'css/style.css' %}" id="default-style-css" media="all" rel="stylesheet">
+	<link href="{% static 'plugins/tooltipster/dist/css/tooltipster.bundle.css' %}" rel="stylesheet" type="text/css" />
+	<link href="{% static 'plugins/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-noir.min.css' %}" rel="stylesheet" type="text/css" />
+	<link href="{% static 'sudo/files/css/owl.carousel.css' %}" id="owlcarousel-css" media="all" rel="stylesheet" type="text/css" />
+	<link href="{% static 'plugins/cssgram/cssgram.min.css' %}" id="owlcarousel-css" media="all" rel="stylesheet" type="text/css" />
+	<link href="{% static 'sudo/files/css/lightcase.css' %}" id="lightcase-css" media="all" rel="stylesheet" type="text/css" />
+	<link href="{% static 'sudo/files/css/isotope.css' %}" id="isotope-style-css" media="all" rel="stylesheet">
+	<link href="{% static 'sudo/files/css/mqueries.css' %}" id="mqueries-style-css" media="all" rel="stylesheet">
+	<link href="{% static 'css/helpers.css' %}" rel="stylesheet">
+
+	<script src="{% static 'plugins/sudo/js/jquery-2.1.4.min.js' %}"></script>
+
+</head>
+<body>
+
+	<!--	Page Loader
+	========================================= -->
+	<div id="page-loader">
+		<div class="page-loader-inner">
+			<span class="loader-figure"> </span>
+		</div>
+	</div>
+
+
+	<!--	Header
+	========================================= -->
+	<div id="page-content">
+
+		{% if request.path == "/" %}
+			<header class="header-transparent transparent-light" id="header">
+				<div class="header-inner clearfix">
+					<div class="right-float" id="menu">
+						<a class="responsive-nav-toggle" href="#">
+							<span class="hamburger"> </span>
+						</a>
+						<div class="menu-inner">
+							<nav id="main-nav">
+								<ul>
+									<li class="{% active 'buy' %}"><a href="{% url 'buy' %}"> Buy </a></li>
+									<li class="{% active 'sell' %}"><a href="{% url 'sell' %}"> Sell </a></li>
+									<li class="{% active 'listings' %}"><a href="{% url 'listings' %}"> Listings </a></li>
+									<li class="{% active 'neighborhoods' %}"><a href="{% url 'neighborhoods' %}"> Neighborhoods </a></li>
+									<li class="{% active 'about' %}"><a href="{% url 'about' %}"> About </a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</header>
+
+		{% else %}
+
+			<header class="header-bordered" id="header">
+				<div class="header-inner clearfix">
+					<div class="left-float" id="logo">
+						<h4><a class="text-black-4" href="{% url 'index' %}"><span class="font-base">Brundage</span>Smith</a></h4>
+					</div>
+					<div class="right-float" id="menu">
+						<a class="responsive-nav-toggle" href="#">
+							<span class="hamburger"> </span>
+						</a>
+						<div class="menu-inner">
+							<nav id="main-nav">
+								<ul>
+									<li class="{% active 'buy' %}"><a href="{% url 'buy' %}"> Buy </a></li>
+									<li class="{% active 'sell' %}"><a href="{% url 'sell' %}"> Sell </a></li>
+									<li class="{% active 'listings' %}"><a href="{% url 'listings' %}"> Listings </a></li>
+									<li class="menu-item-has-children {% active 'featured' %}">
+										<a href="{% url 'featured' %}"> Featured </a>
+										<ul class="submenu">
+											<li><a href="{% url 'featured' %}"> Bend Trend Homes </a></li>
+											<li><a href="{% url 'featured' %}"> Northwest Bend Lifestyle </a></li>
+										</ul>
+									</li>
+									<li class="{% active 'neighborhoods' %}"><a href="{% url 'neighborhoods' %}"> Neighborhoods </a></li>
+									<li class="{% active 'about' %}"><a href="{% url 'about' %}"> About </a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</header>
+
+		{% endif %}
+
+
+
+		<!--	Content
+		========================================= -->
+		{% block content %}
+
+			<!-- Insert Content Here -->
+
+		{% endblock %}
+
+
+		<!--	Footer
+		========================================= -->
+		{% if request.path != "/" and request.path != "/404/" %}
+			<footer class="footer-light text-dark white-bg" id="footer">
+				<div class="footer-inner align-center wrapper p-tb-40">
+					<div class="column-section clearfix">
+						<div class="column one-full">
+							<div class="widget widget_text">
+								<h1 class="fs-35"><span class="font-base">Brundage</span>Smith</h1>
+							</div>
+							<div class="widget widget_menu m-t-0">
+								<ul class="menu">
+									<li><a href="#"> Buy </a></li>
+									<li><a href="#"> Sell </a></li>
+									<li><a href="#"> Listings </a></li>
+									<li><a href="#"> Neighborhoods </a></li>
+									<li><a href="#"> About </a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<a href="#" id="backtotop"> Back to top </a>
+				</div>
+				<div class="copyright">
+					<small> © 2016 BrundageSmith. All Rights Reserved. Created by
+						<a class="font-base" href="http://www.centerstack.io"> CenterStack </a>
+					</small>
+				</div>
+			</footer>
+		{% endif %}
+	</div>
+
+
+	<!--	Javascript
+	========================================= -->
+	<script src="{% static 'plugins/sudo/js/jquery.easing.1.3.js' %}"></script>
+	<script src="{% static 'plugins/sudo/js/jquery.visible.min.js' %}"></script>
+	<script src="{% static 'plugins/sudo/js/tweenMax.js' %}"></script>
+	<script src="{% static 'plugins/sudo/js/jquery.owl.carousel.js' %}"></script>
+	<script src="{% static 'plugins/sudo/js/jquery.backgroundparallax.min.js' %}"></script>
+	<script src="{% static 'plugins/sudo/js/jquery.isotope.min.js' %}"></script>
+	<script src="{% static 'plugins/sudo/js/jquery.imagesloaded.min.js' %}"></script>
+	<script src="{% static 'plugins/sudo/js/jquery.lightcase.min.js' %}"></script>
+	<script src="{% static 'plugins/svg-js/dist/svg.min.js' %}"></script>
+	<script src="{% static 'plugins/screenbbox-js/dist/svg.screenbbox.min.js' %}"></script>
+	<script src="{% static 'plugins/tooltipster/dist/js/tooltipster.bundle.min.js' %}"></script>
+	<script src="{% static 'plugins/tooltipster/dist/js/plugins/tooltipster/SVG/tooltipster-SVG.min.js' %}"></script>
+	<script src="{% static 'js/script.js' %}"></script>
+	<script>
+      	$(document).ready(function() {
+       		$('.tooltip').tooltipster({
+       			content: $('#tt-aubrey-butte').detach(),
+       			animation: 'fade',
+       			theme: 'tooltipster-noir',
+       		});
+	});
+	</script>
+	
+</body>
+</html>

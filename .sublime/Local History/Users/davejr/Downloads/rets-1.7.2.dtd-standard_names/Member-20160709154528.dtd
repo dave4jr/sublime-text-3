@@ -1,0 +1,60 @@
+<!-- RESO Data Dictionary DTD Member Module 
+     PUBLIC "-//RETS//RESO Data Dictionary Member XML//EN"
+     SYSTEM "http://www.rets.org/dtd/1.7.2/1.3/Member.dtd"
+
+     WARNING: This file is generated using the RESO Data Dictionary Schema tool
+All items in this zip file abide by the following:
+
+Copyright 2015 RESO. By using this document you agree to the RESO End User License Agreement (EULA) posted at:
+
+https://reso.memberclicks.net/assets/docs/reso%20eula.pdf
+-->
+
+
+<!ELEMENT MemberAddress1 (#PCDATA)>
+<!ELEMENT MemberAddress2 (#PCDATA)>
+<!ELEMENT MemberAOR (#PCDATA)>
+<!ELEMENT MemberAORkey (#PCDATA)>
+<!ELEMENT MemberAORMlsId (#PCDATA)>
+<!ELEMENT MemberAssociationComments (#PCDATA)>
+<!ELEMENT MemberCarrierRoute (#PCDATA)>
+<!ELEMENT MemberCity (#PCDATA)>
+<!ELEMENT MemberCountry (#PCDATA)>
+<!ELEMENT MemberCountyOrParish (#PCDATA)>
+<!ELEMENT MemberDesignation (#PCDATA)>
+<!ELEMENT MemberDirectPhone (#PCDATA)>
+<!ELEMENT MemberEmail (#PCDATA)>
+<!ELEMENT MemberFax (#PCDATA)>
+<!ELEMENT MemberFirstName (#PCDATA)>
+<!ELEMENT MemberFullName (#PCDATA)>
+<!ELEMENT MemberHomePhone (#PCDATA)>
+<!ELEMENT MemberLanguages (#PCDATA)>
+<!ELEMENT MemberLastName (#PCDATA)>
+<!ELEMENT MemberLoginId (#PCDATA)>
+<!ELEMENT MemberMiddleName (#PCDATA)>
+<!ELEMENT MemberMlsAccessYN (#PCDATA)>
+<!ELEMENT MemberMlsSecurityClass (#PCDATA)>
+<!ELEMENT MemberMobilePhone (#PCDATA)>
+<!ELEMENT MemberNamePrefix (#PCDATA)>
+<!ELEMENT MemberNameSuffix (#PCDATA)>
+<!ELEMENT MemberNickname (#PCDATA)>
+<!ELEMENT MemberNrdsID (#PCDATA)>
+<!ELEMENT MemberOfficePhone (#PCDATA)>
+<!ELEMENT MemberOfficePhoneExt (#PCDATA)>
+<!ELEMENT MemberPager (#PCDATA)>
+<!ELEMENT MemberPassword (#PCDATA)>
+<!ELEMENT MemberPhoneTTYTDD (#PCDATA)>
+<!ELEMENT MemberPostalCode (#PCDATA)>
+<!ELEMENT MemberPostalCodePlus4 (#PCDATA)>
+<!ELEMENT MemberPreferredPhone (#PCDATA)>
+<!ELEMENT MemberPreferredPhoneExt (#PCDATA)>
+<!ELEMENT MemberStateLicense (#PCDATA)>
+<!ELEMENT MemberStateLicenseState (#PCDATA)>
+<!ELEMENT MemberStateOrProvince (#PCDATA)>
+<!ELEMENT MemberStatus (#PCDATA)>
+<!ELEMENT MemberTollFreePhone (#PCDATA)>
+<!ELEMENT MemberType (#PCDATA)>
+<!ELEMENT MemberVoiceMail (#PCDATA)>
+<!ELEMENT MemberVoiceMailExt (#PCDATA)>
+<!ELEMENT Member (JobTitle?, MemberAddress1?, MemberAddress2?, MemberAOR?, MemberAORkey?, MemberAORMlsId?, MemberAssociationComments?, MemberCarrierRoute?, MemberCity?, MemberCountry?, MemberCountyOrParish?, MemberDesignation?, MemberDirectPhone?, MemberEmail?, MemberFax?, MemberFirstName?, MemberFullName?, MemberHomePhone?, MemberKey?, MemberLanguages?, MemberLastName?, MemberLoginId?, MemberMiddleName?, MemberMlsAccessYN?, MemberMlsId?, MemberMlsSecurityClass?, MemberMobilePhone?, MemberNamePrefix?, MemberNameSuffix?, MemberNickname?, MemberNrdsID?, MemberOfficePhone?, MemberOfficePhoneExt?, MemberPager?, MemberPassword?, MemberPhoneTTYTDD?, MemberPostalCode?, MemberPostalCodePlus4?, MemberPreferredPhone?, MemberPreferredPhoneExt?, MemberStateLicense?, MemberStateLicenseState?, MemberStateOrProvince?, MemberStatus?, MemberTollFreePhone?, MemberType?, MemberVoiceMail?, MemberVoiceMailExt?, OfficeKey?, OfficeMlsId?, OfficeName?, OriginatingSystemMemberKey?, OriginatingSystemName?, TimestampEntered?, TimestampLastLoggedIn?, TimestampModified?)>
+

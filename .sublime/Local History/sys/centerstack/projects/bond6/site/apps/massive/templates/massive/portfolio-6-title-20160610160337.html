@@ -1,0 +1,2524 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport"/>
+  <meta content="" name="description"/>
+  <meta content="CenterStack" name="author"/>
+  <!--favicon icon-->
+  <link href="{% static 'massive/img/favicon.png' %}" rel="icon" type="image/png"/>
+  <title>
+   VillaReal
+  </title>
+  <!--common style-->
+  <link href="http://fonts.googleapis.com/css?family=Abel|Source+Sans+Pro:400,300,300italic,400italic,600,600italic,700,700italic,900,900italic,200italic,200" rel="stylesheet" type="text/css"/>
+  <link href="{% static 'massive/css/bootstrap.min.css' %}" rel="stylesheet"/>
+  <link href="{% static 'massive/css/font-awesome.min.css' %}" rel="stylesheet"/>
+  <link href="{% static 'massive/css/magnific-popup.css' %}" rel="stylesheet"/>
+  <link href="{% static 'massive/css/shortcodes/shortcodes.css' %}" rel="stylesheet"/>
+  <link href="{% static 'massive/css/style.css' %}" rel="stylesheet"/>
+  <link href="{% static 'massive/css/style-responsive.css' %}" rel="stylesheet"/>
+  <link href="{% static 'massive/css/default-theme.css' %}" rel="stylesheet"/>
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+ </head>
+ <body>
+  <!--  preloader start -->
+  <div id="tb-preloader">
+   <div class="tb-preloader-wave">
+   </div>
+  </div>
+  <!-- preloader end -->
+  <div class="wrapper">
+   <!--header start-->
+   <header class=" header-full-width " id="header">
+    <div class="header-sticky light-header ">
+     <div class="container">
+      <div class="menuzord" id="massive-menu">
+       <!--logo start-->
+       <a class="logo-brand" href="{% url 'massive-index' %}">
+        <img alt="" class="retina" src="{% static 'massive/img/logo.png' %}"/>
+       </a>
+       <!--logo end-->
+       <!--mega menu start-->
+       <ul class="menuzord-menu pull-right">
+        <li>
+         <a href="#">
+          Home
+         </a>
+         <ul class="dropdown">
+          <li>
+           <a href="#">
+            Home General
+           </a>
+           <ul class="dropdown">
+            <li>
+             <a href="{% url 'massive-mp-index-general-1' %}">
+              General 1
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-mp-index-general-2' %}">
+              General 2
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-mp-index-general-3' %}">
+              General 3
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-mp-index-general-4' %}">
+              General 4
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <a href="#">
+            Home Corporate
+           </a>
+           <ul class="dropdown">
+            <li>
+             <a href="{% url 'massive-mp-index-corporate-1' %}">
+              Corporate 1
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-mp-index-corporate-2' %}">
+              Corporate 2
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-mp-index-corporate-3' %}">
+              Corporate 3
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-mp-index-corporate-4' %}">
+              Corporate 4
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <a href="#">
+            Home Creative
+           </a>
+           <ul class="dropdown">
+            <li>
+             <a href="{% url 'massive-mp-index-creative-1' %}">
+              Creative 1
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-mp-index-creative-2' %}">
+              Creative 2
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-mp-index-creative-3' %}">
+              Creative 3
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-mp-index-creative-4' %}">
+              Creative 4
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <a href="#">
+            Specialized Home
+           </a>
+           <ul class="dropdown">
+            <li>
+             <a href="{% url 'massive-mp-index-agency' %}">
+              Agency
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-mp-index-renovation' %}">
+              Renovation
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-mp-index-restaurant' %}">
+              Restaurant
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-mp-index-catering-service' %}">
+              Catering
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-mp-index-hotel-resort' %}">
+              Hotel
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-mp-index-event' %}">
+              Event
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-mp-index-magazine-1' %}">
+              Magazine
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-mp-index-fashion' %}">
+              Fashion
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-mp-index-fashion-2' %}">
+              Fashion 2
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-mp-index-travel' %}">
+              Travel
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-mp-index-real-state' %}">
+              Real Estate
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-mp-index-spa' %}">
+              spa
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-mp-index-decor' %}">
+              Decor
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-mp-index-wedding' %}">
+              Wedding
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <a href="#">
+            Home Portfolio
+           </a>
+           <ul class="dropdown">
+            <li>
+             <a href="{% url 'massive-mp-index-portfolio-1' %}">
+              Portfolio 1
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-mp-index-portfolio-2' %}">
+              Portfolio 2
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-mp-index-portfolio-3' %}">
+              Portfolio 3
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-mp-index-portfolio-4' %}">
+              Portfolio 4
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <a href="#">
+            Home Photography
+           </a>
+           <ul class="dropdown">
+            <li>
+             <a href="{% url 'massive-mp-index-photography-1' %}">
+              Photography 1
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-mp-index-photography-2' %}">
+              Photography 2
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-mp-index-photography-3' %}">
+              Photography 3
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <a href="#">
+            Home Blog
+           </a>
+           <ul class="dropdown">
+            <li>
+             <a href="{% url 'massive-mp-index-blog-1' %}">
+              Blog 1
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-mp-index-blog-2' %}">
+              Blog 2
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-mp-index-blog-3' %}">
+              Blog 3
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-mp-index-blog-4' %}">
+              Blog 4
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <a href="#">
+            Home Side Nav
+           </a>
+           <ul class="dropdown">
+            <li>
+             <a href="{% url 'massive-mp-index-leftnav-1' %}">
+              Side Nav 1
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-mp-index-leftnav-2' %}">
+              Side Nav 2
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <a href="#">
+            Home Boxed
+           </a>
+           <ul class="dropdown">
+            <li>
+             <a href="{% url 'massive-mp-index-boxed-view-1' %}">
+              Background Bg
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-mp-index-boxed-view-2' %}">
+              Pattern Bg
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <a href="#">
+            One Page
+           </a>
+           <ul class="dropdown">
+            <li>
+             <a href="{% url 'massive-op-index' %}">
+              Default
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-op-index-revslider-fullscreen' %}">
+              Revolution Slider
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-op-index-html5-video' %}">
+              HTML5 Video
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-op-dotted-menu' %}">
+              Doted Nav
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-op-index-sidebar' %}">
+              Sidebar Nav
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-op-index-text-rotate' %}">
+              Rotate Text
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-op-index-boxed' %}">
+              Boxed View
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <a href="{% url 'massive-mp-index-app-landing' %}">
+            Home App Landing
+           </a>
+          </li>
+          <li>
+           <a href="{% url 'massive-mp-index-parallax' %}">
+            Home Parallax
+           </a>
+          </li>
+          <li>
+           <a href="{% url 'massive-mp-index-coming-soon' %}">
+            Home Coming Soon
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="">
+         <a href="javascript:void(0)">
+          Pages
+         </a>
+         <div class="megamenu">
+          <div class="megamenu-row">
+           <div class="col3">
+            <ul class="list-unstyled">
+             <li>
+              <a href="{% url 'massive-about-us-1' %}">
+               About Us 1
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-about-us-2' %}">
+               About Us 2
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-about-me' %}">
+               About Me
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-our-services-1' %}">
+               Services 1
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-our-services-2' %}">
+               Services 2
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-our-services-3' %}">
+               Services 3
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-our-clients-1' %}">
+               Our Clients 1
+              </a>
+             </li>
+            </ul>
+           </div>
+           <div class="col3">
+            <ul class="list-unstyled">
+             <li>
+              <a href="{% url 'massive-our-clients-2' %}">
+               Our Clients 2
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-shortcode-career' %}">
+               Career
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-faq-1' %}">
+               FAQ 1
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-faq-2' %}">
+               FAQ 2
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-maintenance' %}">
+               Maintenance
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-pricing-table-1' %}">
+               Pricing Table 1
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-pricing-table-2' %}">
+               Pricing Table 2
+              </a>
+             </li>
+            </ul>
+           </div>
+           <div class="col3">
+            <ul class="list-unstyled">
+             <li>
+              <a href="{% url 'massive-our-team-1' %}">
+               Our Team 1
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-our-team-2' %}">
+               Our Team 2
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-contact-us-1' %}">
+               Contact 1
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-contact-us-2' %}">
+               Contact 2
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-contact-us-3' %}">
+               Contact 3
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-404' %}">
+               Error 404
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-404-alt' %}">
+               Error 404 Alt
+              </a>
+             </li>
+            </ul>
+           </div>
+           <div class="col3">
+            <ul class="list-unstyled">
+             <li>
+              <a href="{% url 'massive-login-1' %}">
+               Login 1
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-login-2' %}">
+               Login 2
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-login-register-1' %}">
+               Login/Register 1
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-login-register-2' %}">
+               Login/Register 2
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-login-register-3' %}">
+               Login/Register 3
+              </a>
+             </li>
+            </ul>
+           </div>
+          </div>
+         </div>
+        </li>
+        <li class="">
+         <a href="#">
+          Features
+         </a>
+         <ul class="dropdown">
+          <li>
+           <a href="#">
+            Sliders
+           </a>
+           <ul class="dropdown">
+            <li>
+             <a href="#">
+              Slider Revolution
+             </a>
+             <ul class="dropdown">
+              <li>
+               <a href="{% url 'massive-slider-revolution-fullscreen' %}">
+                Full Screen
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-slider-revolution-fullwidth' %}">
+                Full Width
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-slider-revolution-kenburns' %}">
+                Kenburns
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-slider-revolution-video-bg' %}">
+                Video Banner
+               </a>
+              </li>
+             </ul>
+            </li>
+            <li>
+             <a href="#">
+              Slider flex
+             </a>
+             <ul class="dropdown">
+              <li>
+               <a href="{% url 'massive-slider-flex-fullwidth' %}">
+                Full Width
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-slider-flex-boxed' %}">
+                Boxed
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-slider-flex-boxed-thumb' %}">
+                Thumbnail Box
+               </a>
+              </li>
+             </ul>
+            </li>
+            <li>
+             <a href="#">
+              Slider Owl
+             </a>
+             <ul class="dropdown">
+              <li>
+               <a href="{% url 'massive-slider-owl-fullwidth' %}">
+                Full Width
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-slider-owl-boxed' %}">
+                Boxed
+               </a>
+              </li>
+             </ul>
+            </li>
+            <li>
+             <a href="#">
+              Parallax
+             </a>
+             <ul class="dropdown">
+              <li>
+               <a href="{% url 'massive-static-parallax' %}">
+                Full Screen
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-static-parallax-2' %}">
+                Full Screen 2
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-static-parallax-short' %}">
+                Full Width
+               </a>
+              </li>
+             </ul>
+            </li>
+            <li>
+             <a href="{% url 'massive-slider-bs' %}">
+              Slider BS
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-slider-elastic' %}">
+              Slider Elastic
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-slider-typist-blink' %}">
+              Slider Rotate Text 1
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-slider-typist-mark' %}">
+              Slider Rotate Text 2
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-static-html5-video' %}">
+              HTML5 Video
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <a href="#">
+            Menu Style
+           </a>
+           <ul class="dropdown">
+            <li>
+             <a href="{% url 'massive-menu-light' %}">
+              Light
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-menu-dark' %}">
+              Dark
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-menu-transparent' %}">
+              Transparent
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-menu-semi-transparent' %}">
+              Semi Transparent
+             </a>
+            </li>
+            <li>
+             <a href="#">
+              Align
+             </a>
+             <ul class="dropdown">
+              <li>
+               <a href="{% url 'massive-menu-center' %}">
+                Menu Center 1
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-menu-center-alt' %}">
+                Menu Center 2
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-menu-block-left' %}">
+                Menu Block Left
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-menu-left' %}">
+                Menu Left
+               </a>
+              </li>
+             </ul>
+            </li>
+            <li>
+             <a href="#">
+              Left Side
+             </a>
+             <ul class="dropdown">
+              <li>
+               <a href="{% url 'massive-left-side-nav-fixed' %}">
+                Side Menu  Light
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-left-side-nav-fixed-dark' %}">
+                Side Menu  Dark
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-left-side-nav-open-push' %}">
+                Side Menu Open Push
+               </a>
+              </li>
+             </ul>
+            </li>
+            <li>
+             <a href="#">
+              Topbar
+             </a>
+             <ul class="dropdown">
+              <li>
+               <a href="{% url 'massive-menu-top-bar' %}">
+                Menu Topbar 1
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-menu-top-bar-alt' %}">
+                Menu Topbar 2
+               </a>
+              </li>
+             </ul>
+            </li>
+            <li>
+             <a href="{% url 'massive-menu-bottom' %}">
+              Bottom Position
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-menu-floating' %}">
+              Floating
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-menu-push' %}">
+              Menu Push
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-menu-dotted' %}">
+              Menu Dotted
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-menu-box-link' %}">
+              Box Link
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-menu-border-box-link' %}">
+              Border Box Link
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-menu-border-bottom' %}">
+              Border Bottom
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <a href="#">
+            Page Title
+           </a>
+           <ul class="dropdown">
+            <li>
+             <a href="{% url 'massive-page-title' %}">
+              Default Title
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-page-title-background' %}">
+              Background Title
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-page-title-bg-transparent-header' %}">
+              Bg Transparent Title
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-page-title-parallax-transparent-header' %}">
+              Parallax Transparent
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-page-title-nobg' %}">
+              No Background
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-page-title-pattern' %}">
+              Pattern Title
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-page-title-center' %}">
+              Center Align
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-page-title-right' %}">
+              Right Align
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-page-title-dark' %}">
+              Dark Title
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-page-title-mini' %}">
+              Mini Title
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <a href="#">
+            Footer
+           </a>
+           <ul class="dropdown">
+            <li>
+             <a href="{% url 'massive-footer1' %}">
+              Footer Layout 1
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-footer2' %}">
+              Footer Layout 2
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-footer3' %}">
+              Footer Layout 3
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-footer4' %}">
+              Footer Layout 4
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-footer5' %}">
+              Footer Layout 5
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-footer6' %}">
+              Footer Layout 6
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <a href="#">
+            Gallery
+           </a>
+           <ul class="dropdown">
+            <li>
+             <a href="{% url 'massive-gallery-3' %}">
+              Default Gallery
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-gallery-masonry' %}">
+              Masonry Gallery 1
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-gallery-masonry-2' %}">
+              Masonry Gallery 2
+             </a>
+            </li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li class="active">
+         <a href="#">
+          portfolio
+         </a>
+         <ul class="dropdown">
+          <li>
+           <a href="#">
+            Boxed
+           </a>
+           <ul class="dropdown">
+            <li>
+             <a href="#">
+              Gutter
+             </a>
+             <ul class="dropdown">
+              <li>
+               <a href="{% url 'massive-portfolio-2' %}">
+                2 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-3' %}">
+                3 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-4' %}">
+                4 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-5' %}">
+                5 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-6' %}">
+                6 Grid
+               </a>
+              </li>
+             </ul>
+            </li>
+            <li>
+             <a href="#">
+              Gutter Less
+             </a>
+             <ul class="dropdown">
+              <li>
+               <a href="{% url 'massive-portfolio-2-gutter-less' %}">
+                2 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-3-gutter-less' %}">
+                3 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-4-gutter-less' %}">
+                4 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-5-gutter-less' %}">
+                5 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-6-gutter-less' %}">
+                6 Grid
+               </a>
+              </li>
+             </ul>
+            </li>
+            <li>
+             <a href="#">
+              Title - Gutter
+             </a>
+             <ul class="dropdown">
+              <li>
+               <a href="{% url 'massive-portfolio-2-title' %}">
+                2 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-3-title' %}">
+                3 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-4-title' %}">
+                4 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-5-title' %}">
+                5 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-6-title' %}">
+                6 Grid
+               </a>
+              </li>
+             </ul>
+            </li>
+            <li>
+             <a href="#">
+              Title - Gutter Less
+             </a>
+             <ul class="dropdown">
+              <li>
+               <a href="{% url 'massive-portfolio-2-title-gutter-less' %}">
+                2 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-3-title-gutter-less' %}">
+                3 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-4-title-gutter-less' %}">
+                4 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-5-title-gutter-less' %}">
+                5 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-6-title-gutter-less' %}">
+                6 Grid
+               </a>
+              </li>
+             </ul>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <a href="#">
+            Wide
+           </a>
+           <ul class="dropdown">
+            <li>
+             <a href="#">
+              Gutter
+             </a>
+             <ul class="dropdown">
+              <li>
+               <a href="{% url 'massive-portfolio-2-fullwidth' %}">
+                2 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-3-fullwidth' %}">
+                3 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-4-fullwidth' %}">
+                4 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-5-fullwidth' %}">
+                5 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-6-fullwidth' %}">
+                6 Grid
+               </a>
+              </li>
+             </ul>
+            </li>
+            <li>
+             <a href="#">
+              Gutter Less
+             </a>
+             <ul class="dropdown">
+              <li>
+               <a href="{% url 'massive-portfolio-2-fullwidth-gutter-less' %}">
+                2 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-3-fullwidth-gutter-less' %}">
+                3 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-4-fullwidth-gutter-less' %}">
+                4 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-5-fullwidth-gutter-less' %}">
+                5 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-6-fullwidth-gutter-less' %}">
+                6 Grid
+               </a>
+              </li>
+             </ul>
+            </li>
+            <li>
+             <a href="#">
+              Title - Gutter
+             </a>
+             <ul class="dropdown">
+              <li>
+               <a href="{% url 'massive-portfolio-2-title-fullwidth' %}">
+                2 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-3-title-fullwidth' %}">
+                3 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-4-title-fullwidth' %}">
+                4 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-5-title-fullwidth' %}">
+                5 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-6-title-fullwidth' %}">
+                6 Grid
+               </a>
+              </li>
+             </ul>
+            </li>
+            <li>
+             <a href="#">
+              Title - Gutter Less
+             </a>
+             <ul class="dropdown">
+              <li>
+               <a href="{% url 'massive-portfolio-2-title-fullwidth-gutter-less' %}">
+                2 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-3-title-fullwidth-gutter-less' %}">
+                3 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-4-title-fullwidth-gutter-less' %}">
+                4 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-5-title-fullwidth-gutter-less' %}">
+                5 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-6-title-fullwidth-gutter-less' %}">
+                6 Grid
+               </a>
+              </li>
+             </ul>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <a href="#">
+            Masonry - Boxed
+           </a>
+           <ul class="dropdown">
+            <li>
+             <a href="#">
+              Gutter
+             </a>
+             <ul class="dropdown">
+              <li>
+               <a href="{% url 'massive-portfolio-2-masonry' %}">
+                2 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-3-masonry' %}">
+                3 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-4-masonry' %}">
+                4 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-5-masonry' %}">
+                5 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-6-masonry' %}">
+                6 Grid
+               </a>
+              </li>
+             </ul>
+            </li>
+            <li>
+             <a href="#">
+              Gutter Less
+             </a>
+             <ul class="dropdown">
+              <li>
+               <a href="{% url 'massive-portfolio-2-masonry-gutter-less' %}">
+                2 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-3-masonry-gutter-less' %}">
+                3 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-4-masonry-gutter-less' %}">
+                4 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-5-masonry-gutter-less' %}">
+                5 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-6-masonry-gutter-less' %}">
+                6 Grid
+               </a>
+              </li>
+             </ul>
+            </li>
+            <li>
+             <a href="#">
+              Title - Gutter
+             </a>
+             <ul class="dropdown">
+              <li>
+               <a href="{% url 'massive-portfolio-2-masonry-title' %}">
+                2 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-3-masonry-title' %}">
+                3 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-4-masonry-title' %}">
+                4 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-5-masonry-title' %}">
+                5 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-6-masonry-title' %}">
+                6 Grid
+               </a>
+              </li>
+             </ul>
+            </li>
+            <li>
+             <a href="#">
+              Title - Gutter Less
+             </a>
+             <ul class="dropdown">
+              <li>
+               <a href="{% url 'massive-portfolio-2-masonry-title-gutter-less' %}">
+                2 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-3-masonry-title-gutter-less' %}">
+                3 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-4-masonry-title-gutter-less' %}">
+                4 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-5-masonry-title-gutter-less' %}">
+                5 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-6-masonry-title-gutter-less' %}">
+                6 Grid
+               </a>
+              </li>
+             </ul>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <a href="#">
+            Masonry - Wide
+           </a>
+           <ul class="dropdown">
+            <li>
+             <a href="#">
+              Gutter
+             </a>
+             <ul class="dropdown">
+              <li>
+               <a href="{% url 'massive-portfolio-2-masonry-fullwidth' %}">
+                2 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-3-masonry-fullwidth' %}">
+                3 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-4-masonry-fullwidth' %}">
+                4 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-5-masonry-fullwidth' %}">
+                5 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-6-masonry-fullwidth' %}">
+                6 Grid
+               </a>
+              </li>
+             </ul>
+            </li>
+            <li>
+             <a href="#">
+              Gutter Less
+             </a>
+             <ul class="dropdown">
+              <li>
+               <a href="{% url 'massive-portfolio-2-masonry-fullwidth-gutter-less' %}">
+                2 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-3-masonry-fullwidth-gutter-less' %}">
+                3 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-4-masonry-fullwidth-gutter-less' %}">
+                4 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-5-masonry-fullwidth-gutter-less' %}">
+                5 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-6-masonry-fullwidth-gutter-less' %}">
+                6 Grid
+               </a>
+              </li>
+             </ul>
+            </li>
+            <li>
+             <a href="#">
+              Title - Gutter
+             </a>
+             <ul class="dropdown">
+              <li>
+               <a href="{% url 'massive-portfolio-2-masonry-title-fullwidth' %}">
+                2 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-3-masonry-title-fullwidth' %}">
+                3 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-4-masonry-title-fullwidth' %}">
+                4 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-5-masonry-title-fullwidth' %}">
+                5 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-6-masonry-title-fullwidth' %}">
+                6 Grid
+               </a>
+              </li>
+             </ul>
+            </li>
+            <li>
+             <a href="#">
+              Title - Gutter Less
+             </a>
+             <ul class="dropdown">
+              <li>
+               <a href="{% url 'massive-portfolio-2-masonry-title-fullwidth-gutter-less' %}">
+                2 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-3-masonry-title-fullwidth-gutter-less' %}">
+                3 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-4-masonry-title-fullwidth-gutter-less' %}">
+                4 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-5-masonry-title-fullwidth-gutter-less' %}">
+                5 Grid
+               </a>
+              </li>
+              <li>
+               <a href="{% url 'massive-portfolio-6-masonry-title-fullwidth-gutter-less' %}">
+                6 Grid
+               </a>
+              </li>
+             </ul>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <a href="{% url 'massive-portfolio-details-advanced' %}">
+            Portfolio - Advanced
+           </a>
+          </li>
+          <li>
+           <a href="{% url 'massive-portfolio-single' %}">
+            Portfolio - Details 1
+           </a>
+          </li>
+          <li>
+           <a href="{% url 'massive-portfolio-single-alt' %}">
+            Portfolio - Details 2
+           </a>
+          </li>
+          <li>
+           <a href="{% url 'massive-portfolio-single-gallery' %}">
+            Portfolio Details - Gallery
+           </a>
+          </li>
+          <li>
+           <a href="{% url 'massive-portfolio-single-video' %}">
+            Portfolio - HTML5 Video
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a href="#">
+          Blog
+         </a>
+         <ul class="dropdown">
+          <li>
+           <a href="#">
+            Classic
+           </a>
+           <ul class="dropdown ">
+            <li>
+             <a href="{% url 'massive-blog-sidebar-left' %}">
+              Sidebar Left
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-blog-sidebar-right' %}">
+              Sidebar Right
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-blog-fullwidth' %}">
+              Fullwidth
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-blog-list' %}">
+              Blog List
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <a href="#">
+            Grid
+           </a>
+           <ul class="dropdown ">
+            <li>
+             <a href="{% url 'massive-blog-grid-2' %}">
+              Grid 2
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-blog-grid-3' %}">
+              Grid 3
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-blog-grid-4' %}">
+              Grid 4
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <a href="#">
+            Masonry
+           </a>
+           <ul class="dropdown ">
+            <li>
+             <a href="{% url 'massive-blog-2-masonry' %}">
+              Masonry 2
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-blog-3-masonry' %}">
+              Masonry 3
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-blog-4-masonry' %}">
+              Masonry 4
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-blog-masonry-fullwidth' %}">
+              Masonry Fullwidth
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <a href="#">
+            Blog Details
+           </a>
+           <ul class="dropdown ">
+            <li>
+             <a href="{% url 'massive-blog-single-sidebar-left' %}">
+              Sidebar Left
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-blog-single' %}">
+              Sidebar Right
+             </a>
+            </li>
+            <li>
+             <a href="{% url 'massive-blog-single-fullwidth' %}">
+              Fullwidth
+             </a>
+            </li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li class="">
+         <a href="javascript:void(0)">
+          Shortcodes
+         </a>
+         <div class="megamenu">
+          <div class="megamenu-row">
+           <div class="col3">
+            <ul class="list-unstyled">
+             <li>
+              <a href="{% url 'massive-shortcode-alert' %}">
+               Alert
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-shortcode-buttons' %}">
+               Buttons
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-shortcode-career' %}">
+               Career
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-shortcode-carousel' %}">
+               Carousel
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-shortcode-clients' %}">
+               Clients
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-shortcode-countdown' %}">
+               Countdown
+              </a>
+             </li>
+            </ul>
+           </div>
+           <div class="col3">
+            <ul class="list-unstyled">
+             <li>
+              <a href="{% url 'massive-shortcode-divider' %}">
+               Divider
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-shortcode-featured-box' %}">
+               Featured Box
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-shortcode-fun-factors' %}">
+               Fun Factors
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-shortcode-heading-style' %}">
+               Heading Style
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-shortcode-icon-list' %}">
+               Icon List
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-shortcode-post' %}">
+               Post
+              </a>
+             </li>
+            </ul>
+           </div>
+           <div class="col3">
+            <ul class="list-unstyled">
+             <li>
+              <a href="{% url 'massive-shortcode-pricing-table' %}">
+               Pricing Table
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-shortcode-progress-bar' %}">
+               Progress Bar
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-shortcode-promo-box' %}">
+               Promo box
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-shortcode-subscribe' %}">
+               Subscribe
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-shortcode-tabs' %}">
+               Tabs
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-shortcode-tables' %}">
+               Tables
+              </a>
+             </li>
+            </ul>
+           </div>
+           <div class="col3">
+            <ul class="list-unstyled">
+             <li>
+              <a href="{% url 'massive-shortcode-team' %}">
+               Team
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-shortcode-testimonial' %}">
+               Testimonials
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-shortcode-timeline' %}">
+               Timeline
+              </a>
+             </li>
+             <li>
+              <a href="{% url 'massive-shortcode-toggle-accordion' %}">
+               Toggle Accordion
+              </a>
+             </li>
+            </ul>
+           </div>
+          </div>
+         </div>
+        </li>
+        <li>
+         <a href="#">
+          shop
+         </a>
+         <ul class="dropdown">
+          <li>
+           <a href="{% url 'massive-shop-2' %}">
+            Grid 2
+           </a>
+          </li>
+          <li>
+           <a href="{% url 'massive-shop-3' %}">
+            Grid 3
+           </a>
+          </li>
+          <li>
+           <a href="{% url 'massive-shop-4' %}">
+            Grid 4
+           </a>
+          </li>
+          <li>
+           <a href="{% url 'massive-shop-single' %}">
+            Product Details
+           </a>
+          </li>
+          <li>
+           <a href="{% url 'massive-shop-cart' %}">
+            Shopping Cart
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li class="nav-icon nav-divider">
+         <a href="javascript:void(0)">
+          |
+         </a>
+        </li>
+        <li class="nav-icon cart-info">
+         <a href="javascript:void(0)">
+          <i class="fa fa-shopping-cart">
+          </i>
+          cart(2)
+         </a>
+         <div class="megamenu megamenu-quarter-width ">
+          <div class="megamenu-row">
+           <div class="col12">
+            <!--cart-->
+            <table class="table cart-table-list table-responsive">
+             <tr>
+              <td>
+               <a href="#">
+                <img alt="" src="{% static 'massive/img/product/1.jpg' %}"/>
+               </a>
+              </td>
+              <td>
+               <a href="#">
+                Women's Top
+               </a>
+              </td>
+              <td>
+               X4
+              </td>
+              <td>
+               $ 122.00
+              </td>
+              <td>
+               <a class="close" href="#">
+                <img alt="" src="{% static 'massive/img/product/close.png' %}"/>
+               </a>
+              </td>
+             </tr>
+             <tr>
+              <td>
+               <a href="#">
+                <img alt="" src="{% static 'massive/img/product/2.jpg' %}"/>
+               </a>
+              </td>
+              <td>
+               <a href="#">
+                Men's T-shirt
+               </a>
+              </td>
+              <td>
+               X4
+              </td>
+              <td>
+               $ 122.00
+              </td>
+              <td>
+               <a class="close" href="#">
+                <img alt="" src="{% static 'massive/img/product/close.png' %}"/>
+               </a>
+              </td>
+             </tr>
+            </table>
+            <div class="total-cart pull-right">
+             <ul>
+              <li>
+               <span>
+                Sub Total
+               </span>
+               <span>
+                $ 2000.00
+               </span>
+              </li>
+              <li>
+               <span>
+                Total
+               </span>
+               <span>
+                $ 2000.00
+               </span>
+              </li>
+             </ul>
+            </div>
+            <div class="s-cart-btn pull-right">
+             <a class="btn btn-small btn-theme-color" href="{% url 'massive-shop-cart' %}">
+              View cart
+             </a>
+             <a class="btn btn-small btn-dark-solid" href="#">
+              Checkout
+             </a>
+            </div>
+            <!--cart-->
+           </div>
+          </div>
+         </div>
+        </li>
+        <li class="nav-icon">
+         <a href="javascript:void(0)">
+          <i class="fa fa-search">
+          </i>
+          Search
+         </a>
+         <div class="megamenu megamenu-quarter-width search-box">
+          <div class="megamenu-row">
+           <div class="col12">
+            <form role="form">
+             <input class="form-control" placeholder="Search Here" type="text"/>
+            </form>
+           </div>
+          </div>
+         </div>
+        </li>
+       </ul>
+       <!--mega menu end-->
+      </div>
+     </div>
+    </div>
+   </header>
+   <!--header end-->
+   <!--page title start-->
+   <section class="page-title">
+    <div class="container">
+     <div class="row">
+      <div class="col-md-12">
+       <h4 class="text-uppercase">
+        portfolio title - 6 grid with gutter
+       </h4>
+       <span>
+        Amazing Portfolio Demos
+       </span>
+       <ol class="breadcrumb">
+        <li>
+         <a href="#">
+          Home
+         </a>
+        </li>
+        <li>
+         <a href="#">
+          Shortcodes
+         </a>
+        </li>
+        <li class="active">
+         Portfolio
+        </li>
+       </ol>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!--page title end-->
+   <!--body content start-->
+   <section class="body-content page-content">
+    <div class="container">
+     <div class="row ">
+      <div class="col-md-12">
+       <div class="text-center">
+        <ul class="portfolio-filter">
+         <li class="active">
+          <a data-filter="*" href="#">
+           All
+          </a>
+         </li>
+         <li>
+          <a data-filter=".cat1" href="#">
+           printing
+          </a>
+         </li>
+         <li>
+          <a data-filter=".cat2" href="#">
+           Web
+          </a>
+         </li>
+         <li>
+          <a data-filter=".cat3" href="#">
+           illustration
+          </a>
+         </li>
+         <li>
+          <a data-filter=".cat4" href="#">
+           media
+          </a>
+         </li>
+         <li>
+          <a data-filter=".cat5" href="#">
+           crafts
+          </a>
+         </li>
+        </ul>
+       </div>
+       <div class="portfolio portfolio-with-title col-6 gutter ">
+        <div class="portfolio-item cat1 cat3 ">
+         <div class="thumb">
+          <img alt="" src="{% static 'massive/img/portfolio/01.jpg' %}"/>
+          <div class="portfolio-hover">
+           <div class="action-btn">
+            <a class="popup-link" href="{% static 'massive/img/portfolio/01.jpg' %}" title="lightbox view">
+             <i class="icon-basic_magnifier">
+             </i>
+            </a>
+           </div>
+          </div>
+         </div>
+         <div class="portfolio-title">
+          <h4>
+           <a class="popup-link" href="{% static 'massive/img/portfolio/01.jpg' %}" title="lightbox view">
+            lightbox view
+           </a>
+          </h4>
+          <p>
+           <a href="#">
+            category 1
+           </a>
+           ,
+           <a href="#">
+            category 3
+           </a>
+          </p>
+         </div>
+        </div>
+        <div class="portfolio-item cat2 cat4">
+         <div class="thumb">
+          <img alt="" src="{% static 'massive/img/portfolio/02.jpg' %}"/>
+          <div class="portfolio-hover">
+           <div class="action-btn">
+            <a href="{% url 'massive-portfolio-single' %}">
+             <i class="icon-basic_link">
+             </i>
+            </a>
+           </div>
+          </div>
+         </div>
+         <div class="portfolio-title">
+          <h4>
+           <a href="{% url 'massive-portfolio-single' %}">
+            External link
+           </a>
+          </h4>
+          <p>
+           <a href="#">
+            category 2
+           </a>
+           ,
+           <a href="#">
+            category 4
+           </a>
+          </p>
+         </div>
+        </div>
+        <div class="portfolio-item cat1 cat2">
+         <div class="thumb">
+          <div class="portfolio-slider">
+           <ul class="slides">
+            <li>
+             <a href="{% static 'massive/img/portfolio/07.jpg' %}" title="Freshness Photo">
+              <img alt="" src="{% static 'massive/img/portfolio/07.jpg' %}"/>
+             </a>
+            </li>
+            <li>
+             <a href="{% static 'massive/img/portfolio/07a.jpg' %}" title="Awesome Lightbox">
+              <img alt="" src="{% static 'massive/img/portfolio/07a.jpg' %}"/>
+             </a>
+            </li>
+            <li>
+             <a href="{% static 'massive/img/portfolio/07b.jpg' %}" title="Massive UI Components">
+              <img alt="" src="{% static 'massive/img/portfolio/07b.jpg' %}"/>
+             </a>
+            </li>
+            <li>
+             <a href="{% static 'massive/img/portfolio/07c.jpg' %}" title="Amazing Theme">
+              <img alt="" src="{% static 'massive/img/portfolio/07c.jpg' %}"/>
+             </a>
+            </li>
+           </ul>
+          </div>
+          <div class="portfolio-hover">
+           <div class="action-btn">
+            <a href="#">
+             <i class="icon-basic_magnifier">
+             </i>
+            </a>
+           </div>
+          </div>
+         </div>
+         <div class="portfolio-title">
+          <h4>
+           <a href="#">
+            lightbox Gallary
+           </a>
+          </h4>
+          <p>
+           <a href="#">
+            category 1
+           </a>
+           ,
+           <a href="#">
+            category 2
+           </a>
+          </p>
+         </div>
+        </div>
+        <div class="portfolio-item cat1 cat4">
+         <div class="thumb">
+          <img alt="" src="{% static 'massive/img/portfolio/03.jpg' %}"/>
+          <div class="portfolio-hover">
+           <div class="action-btn">
+            <a class="popup-vimeo" href="https://vimeo.com/45830194">
+             <i class="icon-arrows_keyboard_right">
+             </i>
+            </a>
+           </div>
+          </div>
+         </div>
+         <div class="portfolio-title">
+          <h4>
+           <a class="popup-vimeo" href="https://vimeo.com/45830194">
+            Video lightbox
+           </a>
+          </h4>
+          <p>
+           <a href="#">
+            category 1
+           </a>
+           ,
+           <a href="#">
+            category 4
+           </a>
+          </p>
+         </div>
+        </div>
+        <div class="portfolio-item cat2 cat4">
+         <div class="thumb">
+          <img alt="" src="{% static 'massive/img/portfolio/04.jpg' %}"/>
+          <div class="portfolio-hover">
+           <div class="action-btn">
+            <a class="popup-link" href="{% static 'massive/img/portfolio/04.jpg' %}" title="lightbox view">
+             <i class="icon-basic_magnifier">
+             </i>
+            </a>
+           </div>
+          </div>
+         </div>
+         <div class="portfolio-title">
+          <h4>
+           <a class="popup-link" href="{% static 'massive/img/portfolio/04.jpg' %}" title="lightbox view">
+            lightbox view
+           </a>
+          </h4>
+          <p>
+           <a href="#">
+            category 2
+           </a>
+           ,
+           <a href="#">
+            category 4
+           </a>
+          </p>
+         </div>
+        </div>
+        <div class="portfolio-item cat3 ">
+         <div class="thumb">
+          <img alt="" src="{% static 'massive/img/portfolio/05.jpg' %}"/>
+          <div class="portfolio-hover">
+           <div class="action-btn">
+            <a href="{% url 'massive-portfolio-single' %}">
+             <i class="icon-basic_link">
+             </i>
+            </a>
+           </div>
+          </div>
+         </div>
+         <div class="portfolio-title">
+          <h4>
+           <a href="{% url 'massive-portfolio-single' %}">
+            External link
+           </a>
+          </h4>
+          <p>
+           <a href="#">
+            category 3
+           </a>
+          </p>
+         </div>
+        </div>
+        <div class="portfolio-item cat2 cat4 ">
+         <div class="thumb">
+          <div class="portfolio-slider-alt">
+           <ul class="slides">
+            <li>
+             <a href="{% static 'massive/img/portfolio/08.jpg' %}" title="Freshness">
+              <img alt="" src="{% static 'massive/img/portfolio/08.jpg' %}"/>
+             </a>
+            </li>
+            <li>
+             <a href="{% static 'massive/img/portfolio/08a.jpg' %}" title="Massive">
+              <img alt="" src="{% static 'massive/img/portfolio/08a.jpg' %}"/>
+             </a>
+            </li>
+            <li>
+             <a href="{% static 'massive/img/portfolio/08b.jpg' %}" title="Bootstrap">
+              <img alt="" src="{% static 'massive/img/portfolio/08b.jpg' %}"/>
+             </a>
+            </li>
+           </ul>
+          </div>
+          <div class="portfolio-hover">
+           <div class="action-btn">
+            <a href="#">
+             <i class="icon-basic_magnifier">
+             </i>
+            </a>
+           </div>
+          </div>
+         </div>
+         <div class="portfolio-title">
+          <h4>
+           <a href="#">
+            lightbox gallery
+           </a>
+          </h4>
+          <p>
+           <a href="#">
+            category 2
+           </a>
+           ,
+           <a href="#">
+            category 4
+           </a>
+          </p>
+         </div>
+        </div>
+        <div class="portfolio-item cat1 cat4 cat3 cat5">
+         <div class="thumb">
+          <img alt="" src="{% static 'massive/img/portfolio/06.jpg' %}"/>
+          <div class="portfolio-hover">
+           <div class="action-btn">
+            <a class="popup-link" href="{% static 'massive/img/portfolio/06.jpg' %}" title="lightbox view">
+             <i class="icon-basic_magnifier">
+             </i>
+            </a>
+           </div>
+          </div>
+         </div>
+         <div class="portfolio-title">
+          <h4>
+           <a class="popup-link" href="{% static 'massive/img/portfolio/06.jpg' %}" title="lightbox view">
+            lightbox view
+           </a>
+          </h4>
+          <p>
+           <a href="#">
+            category 1
+           </a>
+           ,
+           <a href="#">
+            category 3
+           </a>
+          </p>
+         </div>
+        </div>
+        <div class="portfolio-item cat2 cat5">
+         <div class="thumb">
+          <img alt="" src="{% static 'massive/img/portfolio/09.jpg' %}"/>
+          <div class="portfolio-hover">
+           <div class="action-btn">
+            <a class="popup-link" href="{% static 'massive/img/portfolio/09.jpg' %}" title="lightbox view">
+             <i class="icon-basic_magnifier">
+             </i>
+            </a>
+           </div>
+          </div>
+         </div>
+         <div class="portfolio-title">
+          <h4>
+           <a class="popup-link" href="{% static 'massive/img/portfolio/09.jpg' %}" title="The Cleaner">
+            lightbox view
+           </a>
+          </h4>
+          <p>
+           <a href="#">
+            category 2
+           </a>
+           ,
+           <a href="#">
+            category 5
+           </a>
+          </p>
+         </div>
+        </div>
+        <div class="portfolio-item cat3 cat5">
+         <div class="thumb">
+          <img alt="" src="{% static 'massive/img/portfolio/10.jpg' %}"/>
+          <div class="portfolio-hover">
+           <div class="action-btn">
+            <a class="popup-link" href="{% static 'massive/img/portfolio/10.jpg' %}" title="lightbox view">
+             <i class="icon-basic_magnifier">
+             </i>
+            </a>
+           </div>
+          </div>
+         </div>
+         <div class="portfolio-title">
+          <h4>
+           <a class="popup-link" href="{% static 'massive/img/portfolio/10.jpg' %}" title="The Cleaner">
+            lightbox view
+           </a>
+          </h4>
+          <p>
+           <a href="#">
+            category 2
+           </a>
+           ,
+           <a href="#">
+            category 5
+           </a>
+          </p>
+         </div>
+        </div>
+        <div class="portfolio-item cat1 cat4">
+         <div class="thumb">
+          <img alt="" src="{% static 'massive/img/portfolio/11.jpg' %}"/>
+          <div class="portfolio-hover">
+           <div class="action-btn">
+            <a class="popup-link" href="{% static 'massive/img/portfolio/11.jpg' %}" title="lightbox view">
+             <i class="icon-basic_magnifier">
+             </i>
+            </a>
+           </div>
+          </div>
+         </div>
+         <div class="portfolio-title">
+          <h4>
+           <a class="popup-link" href="{% static 'massive/img/portfolio/11.jpg' %}" title="The Cleaner">
+            lightbox view
+           </a>
+          </h4>
+          <p>
+           <a href="#">
+            category 2
+           </a>
+           ,
+           <a href="#">
+            category 5
+           </a>
+          </p>
+         </div>
+        </div>
+        <div class="portfolio-item cat2 cat4">
+         <div class="thumb">
+          <img alt="" src="{% static 'massive/img/portfolio/12.jpg' %}"/>
+          <div class="portfolio-hover">
+           <div class="action-btn">
+            <a class="popup-link" href="{% static 'massive/img/portfolio/12.jpg' %}" title="lightbox view">
+             <i class="icon-basic_magnifier">
+             </i>
+            </a>
+           </div>
+          </div>
+         </div>
+         <div class="portfolio-title">
+          <h4>
+           <a class="popup-link" href="{% static 'massive/img/portfolio/12.jpg' %}" title="The Cleaner">
+            lightbox view
+           </a>
+          </h4>
+          <p>
+           <a href="#">
+            category 2
+           </a>
+           ,
+           <a href="#">
+            category 5
+           </a>
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!--body content end-->
+   <!--footer start 1-->
+   <footer class="dark" id="footer">
+    <div class="primary-footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-md-3">
+        <a class="m-bot-20 footer-logo" href="#">
+         <img alt="" class="retina" src="{% static 'massive/img/logo-dark.png' %}"/>
+        </a>
+        <p>
+         Massive is  fully responsible, performance oriented and SEO optimized, retina ready WordPress theme.
+        </p>
+       </div>
+       <div class="col-md-3">
+        <h5 class="text-uppercase">
+         recent posts
+        </h5>
+        <ul class="f-list">
+         <li>
+          <a href="#">
+           Standard Blog post
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           Quotation post
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           Audio Post
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           Massive Video Demo
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           Blog Image Post
+          </a>
+         </li>
+        </ul>
+       </div>
+       <div class="col-md-3">
+        <h5 class="text-uppercase">
+         quick link
+        </h5>
+        <ul class="f-list">
+         <li>
+          <a href="#">
+           About Massive
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           Career
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           Terms &amp; Condition
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           Privacy Policy
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           Contact Us
+          </a>
+         </li>
+        </ul>
+       </div>
+       <div class="col-md-3">
+        <h5 class="text-uppercase">
+         Recent Work
+        </h5>
+        <ul class="r-work">
+         <li>
+          <a href="#">
+           <img alt="" src="{% static 'massive/img/recent-work/1.jpg' %}"/>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <img alt="" src="{% static 'massive/img/recent-work/2.jpg' %}"/>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <img alt="" src="{% static 'massive/img/recent-work/3.jpg' %}"/>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <img alt="" src="{% static 'massive/img/recent-work/4.jpg' %}"/>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <img alt="" src="{% static 'massive/img/recent-work/5.jpg' %}"/>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <img alt="" src="{% static 'massive/img/recent-work/6.jpg' %}"/>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <img alt="" src="{% static 'massive/img/recent-work/7.jpg' %}"/>
+          </a>
+         </li>
+         <li>
+          <a href="#">
+           <img alt="" src="{% static 'massive/img/recent-work/8.jpg' %}"/>
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="secondary-footer">
+     <div class="container">
+      <div class="row">
+       <div class="col-md-6">
+        <span class="m-top-10">
+         Copyright 2012 - 2015 Massive Theme by
+         <a class="f-link" href="http://themebucket.net/" target="_blank">
+          ThemeBucket
+         </a>
+         | All Rights Reserved
+        </span>
+       </div>
+       <div class="col-md-6">
+        <div class="social-link circle pull-right">
+         <a href="#">
+          <i class="fa fa-facebook">
+          </i>
+         </a>
+         <a href="#">
+          <i class="fa fa-twitter">
+          </i>
+         </a>
+         <a href="#">
+          <i class="fa fa-dribbble">
+          </i>
+         </a>
+         <a href="#">
+          <i class="fa fa-google-plus">
+          </i>
+         </a>
+         <a href="#">
+          <i class="fa fa-behance">
+          </i>
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </footer>
+   <!--footer 1 end-->
+  </div>
+  <!-- Placed js at the end of the document so the pages load faster -->
+  <script src="{% static 'massive/js/jquery-1.10.2.min.js' %}">
+  </script>
+  <script src="{% static 'massive/js/bootstrap.min.js' %}">
+  </script>
+  <script src="{% static 'massive/js/menuzord.js' %}">
+  </script>
+  <script src="{% static 'massive/js/jquery.flexslider-min.js' %}">
+  </script>
+  <script src="{% static 'massive/js/jquery.isotope.js' %}">
+  </script>
+  <script src="{% static 'massive/js/jquery.magnific-popup.min.js' %}">
+  </script>
+  <script src="{% static 'massive/js/smooth.js' %}">
+  </script>
+  <script src="{% static 'massive/js/wow.min.js' %}">
+  </script>
+  <script src="{% static 'massive/js/imagesloaded.js' %}">
+  </script>
+  <!--common scripts-->
+  <script src="{% static 'massive/js/scripts.js' %}">
+  </script>
+ </body>
+</html>

@@ -1,0 +1,160 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	buy.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load el_pagination_tags %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+
+
+
+<!--	Listings & Map
+========================================= -->
+<div class="container-fluid grey-bg fullwidth-wrapper">
+	<div class="row">
+		<div id="left-col" class="col-sm-4 p-b-100">
+
+			{% paginate 15 PropertyFilter %}
+			{% for property in PropertyFilter %}
+
+				<div class="listing-row">
+					<div class="listing-row-inner">
+						<div class="listing-row-image" data-property-href="{% url 'buy-single' pk=property.pk %}" style="background-image: url({{ property.img.0 }});"></div>
+
+						<!--	Row Content
+						========================================= -->
+						<div class="listing-row-content">
+							<h3><a href="{% url 'buy-single' pk=property.pk %}"> {{ property.streetnumber }} {{ property.streetname }} {{ property.streetsuffix }} </a></h3>
+							<h4 class="m-t-0"> ${{ property.listingprice|floatformat:"0"|intcomma }} </h4>
+							<ul class="listing-row-attributes">
+								<li><i class="fontello-city"></i> City <span> {{ property.city }} </span></li>
+								<li><i class="fontello-section"></i> Section <span> {{ property.section }} </span></li>
+								<li><i class="fontello-sqft"></i> Sqft. <span> {{ property.squarefootage|floatformat:"0"|intcomma }} </span></li>
+								<li><i class="fontello-map"></i> Acres <span> {{ property.acres }} </span></li>
+								<li><i class="fontello-beds"></i> Bedrooms <span> {{ property.bedrooms }} </span></li>
+								<li><i class="fontello-baths"></i> Baths <span> {{ property.bathrooms }} </span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			{% endfor %}
+	
+			
+			<div class="pagination">
+				<span>
+					{% get_pages %}
+					{{ pages.previous }} {{ pages.next }}
+				</span>
+			</div>
+			
+			
+
+
+			<!--	Map Markers
+			========================================= -->
+			<script>
+				var values = [
+					{% for property in PropertyFilter %}
+						{
+							"id": "marker-{{ property.listingrid }}",
+							"center": [{{ property.latitude }}, {{ property.longitude }}],
+							"icon": "{% with d=property.listingprice|num_digits %}{% if d >= 6 %}<p>${{ property.listingprice|div:1000000|floatformat:"2"|intcomma }}M</p>{% else %}<p>${{ property.listingprice|div:1000|floatformat:"2"|intcomma }}K</p>{% endif %}{% endwith %}",
+							"title": "{{ property.streetnumber }} {{ property.streetname }} {{ property.streetsuffix }}",
+							"price": "${{ property.listingprice }}",
+							"image": "{{ property.img.0 }}"
+						},
+					{% endfor %}
+				]
+			</script>
+		</div>
+
+
+
+		<!--	Map
+		========================================= -->
+		<div id="right-col" class="col-sm-8 p-rl-0">
+			<div id="filter-bar">
+				
+			</div>
+			<div class="map-div">
+				<div id="map-google"></div>
+			</div>
+		</div>
+		<script>
+			$(function() {
+				markers = []
+				$.each(values, function(index, value) {
+					var content ='<div id="'+ value.id + '" class="map-popup-content-wrapper"><div class="map-popup-content"><div class="listing-window-image-wrapper">' + '<a href="properties-detail-standard.html">' + '<div class="listing-window-image"style="background-image: url(' + value.image + ');"></div>' + '<div class="listing-window-content">' + '<div class="info">' + '<h2>' + value.title + '</h2>' + '<h3>' + value.price + '</h3>' + '</div>' + '</div>' + '</a>' + '</div></div><i class="fa fa-close close"></i></div>' + '<div class="map-marker">' + value.icon + '</div>';
+					markers.push({
+						latLng: value.center, 
+						data: value.id,			
+						options: { content: content, offset: { x: -18, y: -42 }							 }
+					});
+				});
+				$('#map-google').gmap3({		
+					map: {									
+						options:{
+							styles: {% include "include/map-styles.html" with arg="apple" %},
+							center:[44.057511, -121.301884],
+							scrollwheel: false,
+							panControl:true,
+							mapTypeControl:false,
+							scaleControl:true,
+							streetViewControl:false,
+							overviewMapControl:false,
+							rotateControl:false,
+							zoomControl: true,
+							zoomControlOptions: {
+								position: google.maps.ControlPosition.RIGHT_CENTER
+							},
+							mapTypeId: google.maps.MapTypeId.ROADMAP,
+							zoom: 14
+						}
+					},
+					overlay: {
+						values: markers,
+						events: {
+							click: function(marker, event, context) {															
+								$('.map-popup-content-wrapper').css('display', 'none');
+
+								if ($(event[0].target).hasClass('close')) {
+									$('#' + context.data).css('display', 'none');
+								} else {
+									$('#' + context.data).css('display', 'block');
+								}
+							}
+						}
+					}
+				});					
+			});
+		</script>
+	</div>
+</div>
+
+
+<!--	Click Image Link
+========================================= -->
+<script>
+	$(function() {
+		$(".listing-row-image").click(function() {
+			var href = $(this).data("property-href");
+			location.href = href;
+		});
+	});
+</script>
+	
+
+	
+	
+
+
+
+{% endblock %}

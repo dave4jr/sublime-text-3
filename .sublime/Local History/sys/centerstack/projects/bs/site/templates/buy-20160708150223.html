@@ -1,0 +1,229 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	buy.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load el_pagination_tags %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+
+<!--	Page Title
+========================================= -->
+<section id="page_title">
+	<h4 class="capitalize fs-24"> Buy A Property </h4>
+</section>
+<section class="p-t-40" id="page-body">
+
+<!--=====================================================
+	Filter
+=====================================================-->
+	<div id="buy-filter" class="wrapper portlet p-tb-20 bs-grey-bg">
+		<div class="column-section clearfix">
+			<form id="filter-form" action="" method="get">
+
+				 <!--	City
+				 ========================================= -->
+				<div class="form-row column one-sixth">
+					<label for="name"> City</label>
+					{{ PropertyFilter.form.city | add_class:"full-width ajax" }}
+				</div>
+
+
+				<!--	Beds / Baths
+				========================================= -->
+				<div class="form-row column one-sixth">
+					<div class="form-row column one-half">
+						<label for="name"> Beds </label>
+						{{ PropertyFilter.form.bedrooms | add_class:"full-width ajax" }}
+					</div>
+					<div class="form-row column one-half last-col">
+						<label for="name"> Baths </label>
+						{{ PropertyFilter.form.bathrooms | add_class:"full-width ajax" }}
+					</div>
+				</div>
+
+
+				<!--	Sqft Range
+				========================================= -->
+				<div class="form-row column one-sixth range">
+					<div class="form-row column one-half">
+						<label for="name"> Sqft </label>
+						{{ PropertyFilter.form.squarefootage__gt | add_class:"full-width ajax" | attr:"placeholder:Min" }}
+					</div>
+					<div class="form-row column one-half last-col">
+						{{ PropertyFilter.form.squarefootage__lt | add_class:"full-width ajax" | attr:"placeholder:Max" }}
+					</div>
+				</div>
+
+
+				<!--	Price Range
+				========================================= -->
+				<div class="form-row column one-sixth range">
+					<div class="form-row column one-half input-symbol">
+						<label for="name"> Listing Price </label>
+						<span>&dollar;</span>
+						{{ PropertyFilter.form.listingprice__gt | add_class:"full-width ajax" | attr:"placeholder:Min" }}
+					</div>
+					<div class="form-row column one-half last-col input-symbol">
+						<span>&dollar;</span>
+						{{ PropertyFilter.form.listingprice__lt | add_class:"full-width ajax" | attr:"placeholder:Max" }}
+					</div>
+				</div>
+
+ 	
+				<!--	Keyword Search
+				========================================= -->
+				<div class="form-row column one-sixth">
+					<label for="name"> Keyword </label>
+					{{ PropertyFilter.form.keysearch | add_class:"full-width ajax" | attr:"placeholder:Search..." }}
+				</div>
+			</form>
+
+
+			<!--	Toggles
+			========================================= -->
+			<div id="toggles" class="form-row column one-sixth last-col range">
+				<div class="form-row column one-half last-col">
+					<button class="on map sr-button button-1  button-form">Map</button>
+				</div>
+				<div class="form-row column one-half m-r-0">
+					<button class="off grid sr-button button-form">Grid</button>
+				</div>
+			</div>
+
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="spacer-small"></div>
+
+
+
+
+<!--=====================================================
+	Map
+=====================================================-->
+	<div id="map" class="b-tb-1"></div>
+	<script>
+
+		/*	Init
+		========================================= */
+		function initMap() {
+			// var bounds = new google.maps.LatLngBounds();
+			var map = new google.maps.Map(document.getElementById('map'), {
+				zoom: 15,
+				center: { lat: 44.057511, lng: -121.331884 },
+				styles: [{"featureType":"poi","elementType":"labels.text.fill","stylers":[{"color":"#747474"},{"lightness":"23"}]},{"featureType":"poi.attraction","elementType":"geometry.fill","stylers":[{"color":"#f38eb0"}]},{"featureType":"poi.government","elementType":"geometry.fill","stylers":[{"color":"#ced7db"}]},{"featureType":"poi.medical","elementType":"geometry.fill","stylers":[{"color":"#ffa5a8"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#c7e5c8"}]},{"featureType":"poi.place_of_worship","elementType":"geometry.fill","stylers":[{"color":"#d6cbc7"}]},{"featureType":"poi.school","elementType":"geometry.fill","stylers":[{"color":"#c4c9e8"}]},{"featureType":"poi.sports_complex","elementType":"geometry.fill","stylers":[{"color":"#b1eaf1"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":"100"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"},{"lightness":"100"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffd4a5"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#ffe9d2"}]},{"featureType":"road.local","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"weight":"3.00"}]},{"featureType":"road.local","elementType":"geometry.stroke","stylers":[{"weight":"0.30"}]},{"featureType":"road.local","elementType":"labels.text","stylers":[{"visibility":"on"}]},{"featureType":"road.local","elementType":"labels.text.fill","stylers":[{"color":"#747474"},{"lightness":"36"}]},{"featureType":"road.local","elementType":"labels.text.stroke","stylers":[{"color":"#e9e5dc"},{"lightness":"30"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"lightness":"100"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#d2e7f7"}]}],
+				mapTypeControl: false,
+				navigationControl: false,
+				scrollwheel: false,
+				streetViewControl: false,
+				zoomControl: true,
+				zoomControlOptions: {
+					style: google.maps.ZoomControlStyle.LARGE,
+					position: google.maps.ControlPosition.RIGHT_CENTER
+				},
+			});
+
+			var infowindow = new google.maps.InfoWindow({
+				maxWidth: 250,
+			});
+
+			{% for property in PropertyFilter %}
+				var marker = new google.maps.Marker({
+					position: {lat: {{ property.latitude }}, lng: {{ property.longitude }} },
+					map: map,
+					icon: "{% static 'plugins/gmap/marker.svg' %}",
+					title: "{{ property.street }}",
+				});
+
+				google.maps.event.addListener(marker, 'click', function(e) {
+					// var content = "<img src='{{ property.img.0 }}' class='map-photo'>";
+					var content = "{{ property.street }}";
+					infowindow.setContent(content);
+					infowindow.setPosition(e.latLng);
+					infowindow.open(map);
+				});
+
+				google.maps.event.addListener(map, 'click', function() {
+					infowindow.close();
+				});
+
+			{% endfor %}
+		}
+	</script>
+
+
+
+<!--=====================================================
+	Grid
+=====================================================-->
+	<div id="grid">
+		<div id="properties" class="isotope-grid gallery-container style-modern-4 isotope-spaced clearfix fitrows m-t-30" data-heightratio=".66">
+			{% paginate 15 PropertyFilter %}
+			{% for property in PropertyFilter %}
+
+				<!--	Setting Filter Values
+				========================================= -->
+				<div class="isotope-item">
+					<a href="{% url 'buy-single' pk=property.pk %}" class="thumb-overlay overlay-effect-3 text-light">
+						<img src="{{ property.img.0 }}">
+						<img src="{{ property.img.1 }}" class="hover-pic">
+						<div class="overlay-caption">
+							<table>
+								<tr>
+									<td><h6 class="uppercase">{{ property.bedrooms }} BR &bull; {{ property.bathrooms|floatformat:"1" }} BA &bull; {{ property.squarefootage|floatformat:"0"|intcomma }} Sqft.</h6></td>
+									<td><h6 class="uppercase fs-20">${{ property.listingprice|floatformat:"0"|intcomma }}</h6></td>
+								</tr>
+								<tr>
+									<td><h6 class="subtitle-1 o-100 m-t-0">{% include "include/address.html" with arg="street" %}</h6></td>
+									<td><h6 class="subtitle-1 o-100 m-t-0">{% include "include/address.html" with arg="cityzip" %}</h6></td>
+								</tr>
+							</table>
+						</div>
+					</a>
+				</div>
+					
+			{% endfor %}
+					
+		</div>
+		<div class="spacer-big"> </div>
+		{% show_pages %}
+	</div>
+
+
+
+
+
+</section>
+
+<!--=====================================================
+	AJAX
+=====================================================-->
+<script>
+$(function() {
+	$('.ajax').change(function() {
+		$.ajax({
+			type: "GET",
+			url: '/rets/buy/',
+			data: { city: $("#id_city").val(), bedrooms: $("#id_bedrooms").val(), bathrooms: $("#id_bathrooms").val(), squarefootage_gt: $("#id_squarefootage__gt").val(), squarefootage_lt: $("#id_squarefootage__lt").val(), listingprice_gt: $("#id_listingprice__gt").val(), listingprice_lt: $("#id_listingprice__lt").val(), keysearch: $("#id_keysearch").val()},
+			success: function(data) {
+				$("#filter-form").submit();
+			},   
+			error: function(data) {
+				alert("Error");
+			},
+		})
+	});
+});
+</script>
+
+
+
+{% endblock %}
+

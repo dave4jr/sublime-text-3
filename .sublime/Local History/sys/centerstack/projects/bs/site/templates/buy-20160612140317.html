@@ -1,0 +1,61 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	index.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+
+<!--	Page Title
+========================================= -->
+<section id="page_title">
+	<h4 class="capitalize fs-24"> Buy A Property </h4>
+</section>
+
+
+<section class="notoppadding" id="page-body">
+
+	<!--	Filter
+	========================================= -->
+	<ul id="portfolio-filter" class="filter" data-related-grid="portfolio-grid">
+		<li class="active"><a data-filter="*" href="#"> Show All </a></li>
+		<li><a data-filter=".branding" href="#" title="Branding"> Branding </a></li>
+		<li><a data-filter=".web" href="#" title="Print"> Web Design </a></li>
+		<li><a data-filter=".photography" href="#" title="Print"> Photography </a></li>
+	</ul>
+
+	<!--	Grid
+	========================================= -->
+	<div class="isotope-grid portfolio-container isotope-spaced style-modern-4 fitrows clearfix" id="portfolio-grid">
+
+		{% for json in jsons.object_list %}
+
+			<div class="isotope-item portfolio-item branding">
+				<div class="portfolio-media">
+					<a class="thumb-overlay" href="{% url 'buy' %}">
+						<img src="{{ json.img.0 }}">
+					</a>
+				</div>
+				<div class="portfolio-desc">
+					<a href="{% url 'sudo-portfolio-single-custom' %}">
+						<h6 class="portfolio-category subtitle-2"> Branding </h6>
+						<h5 class="portfolio-name">
+							<strong> Rissa Smartwatch </strong>
+						</h5>
+					</a>
+				</div>
+			</div>
+
+		{% endfor %}
+		
+	</div>
+	<div class="spacer-big"> </div>
+</section>
+
+{% endblock %}

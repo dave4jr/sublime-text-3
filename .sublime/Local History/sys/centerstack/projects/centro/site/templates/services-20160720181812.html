@@ -1,0 +1,210 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	index.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+<!--	Page Title
+========================================= -->
+<section class="page-title background-title dark parallax-8 overlay">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2 class="text-uppercase"> Services </h2>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!--	Story
+========================================= -->
+<!-- <div class="page-content">
+	<div class="container">
+		<div class="row ">
+			<div class="heading-title text-center">
+				<span class="heading-sub-title text-uppercase theme-color">Centro Print Solutions</span>
+				<h3 class="text-uppercase">Our Services</h3>
+			</div>
+			<div class="col-md-6">
+				<p> Fringilla suscipit risus nec eleifend. Pellentesque eu quam sem, ac malesuada leo sem quam pellente. Awesome sliders give you the opportunity to showcase your content. Advanced theme options panel to easily customize your website. Awesome sliders give you the opportunity to showcase your content. Advanced theme options panel to easily customize your website. </p>
+			</div>
+			<div class="col-md-6">
+				<p> Phasellus fringilla suscipit risus nec eleifend. Pellentesque eu quam sem, ac malesuada leo sem quam pellente. Awesome sliders give you the opportunity to showcase your content. Advanced theme options panel to easily customize your website. Awesome sliders give you the opportunity to showcase your content. Advanced theme options panel to easily customize your website. </p>
+			</div>
+		</div>
+	</div>
+</div> -->
+
+
+
+<!--	Services
+========================================= -->
+<section class="body-content ">
+	<div class="page-content">
+		<div class="container">
+			<div class="row">
+				<div class="heading-title text-center">
+					<h3 class="text-uppercase"> Our Services </h3>
+					<span class="text-uppercase"> Sub-title for services section </span>
+				</div>
+				<div class="career-list">
+					<div class="col-md-6 ">
+						<div class="featured-item career-box text-center">
+							<div class="icon">
+								<i class="icon-desktop"> </i>
+							</div>
+							<div class="title text-uppercase">
+								<h4> Inventory Management </h4>
+							</div>
+							<div class="desc"> Lorem ipsum Ut Duis veniam deserunt ut sint Excepteur minim culpa eu. Lorem ipsum Occaecat sint velit mollit in veniam. </div>
+						</div>
+						<div class="featured-item career-box text-center">
+							<div class="icon">
+								<i class="icon-tools"> </i>
+							</div>
+							<div class="title text-uppercase">
+								<h4> Fulfillment </h4>
+							</div>
+							<div class="desc"> Lorem ipsum Ut labore aliquip aliqua sint minim cupidatat mollit. Lorem ipsum Sed ea dolore non elit elit Excepteur velit velit. </div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="featured-item career-box text-center">
+							<div class="icon">
+								<i class="icon-megaphone"> </i>
+							</div>
+							<div class="title text-uppercase">
+								<h4> Idea Generation </h4>
+							</div>
+							<div class="desc"> Lorem ipsum Velit sed eu amet aliquip dolor velit incididunt. Lorem ipsum Dolor officia Excepteur magna sit aliquip fugiat sit dolor ut ullamco. </div>
+						</div>
+						<div class="featured-item career-box text-center">
+							<div class="icon">
+								<i class="icon-globe2"> </i>
+							</div>
+							<div class="title text-uppercase">
+								<h4> Graphic Design </h4>
+							</div>
+							<div class="desc"> Lorem ipsum Laborum sed cupidatat pariatur non velit est anim. Lorem ipsum Ut officia exercitation elit culpa amet amet ullamco proident. </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="career-list">
+					<div class="col-md-6 ">
+						<div class="featured-item career-box text-center">
+							<div class="icon">
+								<i class="icon-tools"> </i>
+							</div>
+							<div class="title text-uppercase">
+								<h4> Distribution and Warehousing </h4>
+							</div>
+							<div class="desc"> Lorem ipsum Ea Excepteur est sit est est occaecat dolor cupidatat cillum in. Lorem ipsum Pariatur nostrud consequat occaecat anim officia est consequat dolore. Lorem ipsum Nulla anim est labore exercitation ullamco. </div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="featured-item career-box text-center">
+							<div class="icon">
+								<i class="icon-globe2"> </i>
+							</div>
+							<div class="title text-uppercase">
+								<h4> Expertise </h4>
+							</div>
+							<div class="desc"> Lorem ipsum Sed irure voluptate nulla et amet veniam nulla ex eiusmod in. Lorem ipsum Et consectetur non esse eiusmod reprehenderit laboris. Lorem ipsum Sed et quis occaecat esse ullamco. </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<!-- <section class="body-content">
+	<div class="page-content">
+		<div class="container">
+			<div class="row">
+				<div class="feature-box-grid">
+					<div class="col-md-4">
+						<div class="featured-item border-box text-center">
+							<div class="icon">
+								<i class="icon-icon-86-document-list"> </i>
+							</div>
+							<div class="title text-uppercase">
+								<h4> Inventory Management </h4>
+							</div>
+							<div class="desc"> Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="featured-item border-box text-center">
+							<div class="icon">
+								<i class=" icon-browser2"> </i>
+							</div>
+							<div class="title text-uppercase">
+								<h4> Fulfillment (Globe) </h4>
+							</div>
+							<div class="desc"> Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="featured-item border-box text-center">
+							<div class="icon">
+								<i class=" icon-laptop2"> </i>
+							</div>
+							<div class="title text-uppercase">
+								<h4> Idea Generation (Lightbulb) </h4>
+							</div>
+							<div class="desc"> Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="featured-item border-box text-center">
+							<div class="icon">
+								<i class="icon-basic_gear"> </i>
+							</div>
+							<div class="title text-uppercase">
+								<h4> Graphic Design (Pencil) </h4>
+							</div>
+							<div class="desc"> Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="featured-item border-box text-center">
+							<div class="icon">
+								<i class="icon-basic_pencil_ruler"> </i>
+							</div>
+							<div class="title text-uppercase">
+								<h4> Distribution & Warehousing (building) </h4>
+							</div>
+							<div class="desc"> Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="featured-item border-box text-center">
+							<div class="icon">
+								<i class="icon-lightbulb"> </i>
+							</div>
+							<div class="title text-uppercase">
+								<h4> Expertise (Certificate)</h4>
+							</div>
+							<div class="desc"> Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section> -->
+
+{% endblock %}

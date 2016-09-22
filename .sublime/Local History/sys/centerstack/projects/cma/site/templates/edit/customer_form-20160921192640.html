@@ -1,0 +1,317 @@
+<!--======================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	customer_new.html
+ *======================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% block content_site %}
+
+<!--	Customers
+========================================= -->
+<div class="row">
+	<div class="col-md-12">
+		<div class="portlet box base">
+
+			<!--	Top Toolbar
+			========================================= -->
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="pe-7s-users"> </i>
+					<span class="caption-subject font-white capitalize"> Customer Details </span>
+				</div>
+			</div>
+			<div class="portlet-body">
+				<div class="pi-row">
+					<div class="pi-col-xs-6 pi-col-xs-offset-1 pi-section-white m-t-30">
+
+						<!--	Form
+						========================================= -->
+						<form action="" method="post" role="form">
+							{% csrf_token %}
+							<div class="pi-row pi-grid-small-margins">
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-reservation-phone"> Full Name </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-user"> </i>
+											</span>
+											{{ CustomerForm.name | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-customer"> Email Address </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-mail"> </i>
+											</span>
+											{{ CustomerForm.email | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-customer"> Phone </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-phone"> </i>
+											</span>
+											{{ CustomerForm.phone | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-customer"> Date of Birth </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="icon-7s-date"> </i>
+											</span>
+											{{ CustomerForm.dob | add_class:"form-control datepicker" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="icon-angle-down"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-customer"> Street </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-way"> </i>
+											</span>
+											{{ CustomerForm.street | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-customer"> City </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-map"> </i>
+											</span>
+											{{ CustomerForm.city | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-customer"> State </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-map-2"> </i>
+											</span>
+											{{ CustomerForm.state | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="icon-angle-down"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-customer"> Zip Code </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-way"> </i>
+											</span>
+											{{ CustomerForm.zipcode | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-customer"> Country </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-world"> </i>
+											</span>
+											{{ CustomerForm.country | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="icon-angle-down"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-customer"> Emergency Contact Name </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-user"> </i>
+											</span>
+											{{ CustomerForm.emergency_contact_name | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-customer"> Emergency Contact Number </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-phone"> </i>
+											</span>
+											{{ CustomerForm.emergency_contact_number | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-customer"> Driver License Number </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-id"> </i>
+											</span>
+											{{ CustomerForm.driver_license_number | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-customer"> Driver License State </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-map-2"> </i>
+											</span>
+											{{ CustomerForm.driver_license_state | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="icon-angle-down"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-customer"> Driver License Photocopy </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-photo"> </i>
+											</span>
+											{{ CustomerForm.driver_license_photocopy | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-customer"> Current Motorcycle </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-bicycle"> </i>
+											</span>
+											{{ CustomerForm.current_motorcycle | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-customer"> Riding Ability </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-graph1"> </i>
+											</span>
+											{{ CustomerForm.riding_ability | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="icon-angle-down"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-customer"> T-Shirt Size </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-info"> </i>
+											</span>
+											{{ CustomerForm.tshirt_size | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="icon-angle-down"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-customer"> Referral Source </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-user"> </i>
+											</span>
+											{{ CustomerForm.referral_source | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="icon-angle-down"></i>
+											</span>
+											<a href="/admin/customers/referralsource/add/" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!--	Checkboxes
+							========================================= -->
+							<div class="pi-row">
+								<div class="pi-col-sm-4">
+									<div class="checkbox">
+										<label for="website">
+											{{ CustomerForm.return_customer }}
+											Return Customer?
+										</label>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="checkbox">
+										<label for="id_motorcycle_license">
+											{{ CustomerForm.motorcycle_license }}
+											Motorcycel License?
+										</label>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="checkbox">
+										<label for="website">
+											{{ CustomerForm.mailing_list }}
+											Mailing List?
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<!--	Notes
+							========================================= -->
+							<div class="pi-row pi-grid-small-margins">
+								<div class="pi-col-xs-12 pi-section-white">
+									<div class="form-group">
+										<label for="label-customer-phone"> Notes </label>
+										<div class="pi-input-with-icon">
+											<div class="pi-input-icon">
+												<i class="pe-7s-comment"> </i>
+											</div>
+											{{ CustomerForm.notes | add_class:"form-control p-l-40" | attr:"rows:5" | attr:"type:textarea" }}
+										</div>
+									</div>
+								</div>
+							</div>
+							<p class="pi-text-center m-t-40">
+								<button type="submit" value="{{ customer.pk }}" name="delete" class="btn mt-grey-gallery-bg p-rl-40 m-r-5"> Delete<i class="pe-7s-close-circle right-icon"></i></button>
+								<button type="submit" value="{{ customer.pk }}" name="save" class="btn base p-rl-40"> Save<i class="pe-7s-check right-icon"></i></button>
+							</p>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}

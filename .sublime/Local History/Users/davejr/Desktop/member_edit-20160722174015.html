@@ -1,0 +1,798 @@
+<!--======================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	member_details.html
+ *======================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% block content_site %}
+
+<!--	Profile Picture
+========================================= -->
+<div class="profile-cover pw b-b-1">
+	<div class="row">
+		<div class="col-md-3 profile-image">
+			<div class="profile-image-container">
+				<img src="{% static 'img/users/dave-luke-jr.jpg' %}">
+			</div>
+			<h3>Dave Luke Jr. <span class="label label-active fs-12 m-l-10">Steward</span></h3>
+		</div>
+	</div>
+</div>
+
+
+
+<!--	Visit History
+========================================= -->
+<div id="profile-page" class="pi-row">
+	<div class="pi-col-md-4">
+		<div class="portlet light portlet-fit ">
+			<div class="portlet-body">
+				
+			</div>
+		</div>
+	</div>
+
+
+	<!--	Member Details
+	========================================= -->
+	<div class="pi-col-md-8">
+		<div class="portlet light portlet-fit ">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="pe-7s-info"> </i>
+					<span class="caption-subject base-font"> Information </span>
+				</div>
+			</div>
+			<div class="portlet-body">
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+<!--	Profile
+========================================= -->
+<!-- <div class="row">
+	<div class="col-md-3 user-profile">
+		<h3 class="text-center">Dave Luke Jr</h3>
+		<ul class="list-unstyled text-center">
+			<li><p><i class="fa fa-map-marker m-r-xs"></i>Melbourne, Australia</p></li>
+			<li>
+				<p>
+					<i class="fa fa-envelope m-r-xs"></i>
+					<a href="#">example@mail.com</a>
+				</p>
+			</li>
+			<li>
+				<p>
+					<i class="fa fa-link m-r-xs"></i>
+					<a href="#">www.themeforest.net</a>
+				</p>
+			</li>
+		</ul>
+		<hr>
+		<button class="btn btn-primary btn-block">
+			<i class="fa fa-plus m-r-xs"></i>
+			Follow
+		</button>
+	</div>
+	<div class="col-md-6 m-t-lg">
+		<div class="panel panel-white">
+			<div class="panel-body">
+				<div class="post">
+					<textarea class="form-control" placeholder="Post" rows="4=6"></textarea>
+					<div class="post-options">
+						<a href="#">
+							<i class="icon-camera"></i>
+						</a>
+						<a href="#">
+							<i class="icon-camcorder"></i>
+						</a>
+						<a href="#">
+							<i class="icon-music-tone-alt"></i>
+						</a>
+						<a href="#">
+							<i class="icon-link"></i>
+						</a>
+						<a href="#">
+							<i class="icon-microphone"></i>
+						</a>
+						<button class="btn btn-default pull-right">Post</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="profile-timeline">
+			<ul class="list-unstyled">
+				<li class="timeline-item">
+					<div class="panel panel-white">
+						<div class="panel-body">
+							<div class="timeline-item-header">
+								<img src="assets/images/avatar3.png" alt="">
+								<p>Christopher palmer
+									<span>Posted a Status</span>
+								</p>
+								<small>5 hours ago</small>
+							</div>
+							<div class="timeline-item-post">
+								<p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+								<div class="timeline-options">
+									<a href="#">
+										<i class="icon-like"></i> Like (7)</a>
+									<a href="#">
+										<i class="icon-bubble"></i> Comment (2)</a>
+									<a href="#">
+										<i class="icon-share"></i> Share (3)</a>
+								</div>
+								<div class="timeline-comment">
+									<div class="timeline-comment-header">
+										<img src="assets/images/avatar5.png" alt="">
+										<p>Nick Doe
+											<small>1 hour ago</small>
+										</p>
+									</div>
+									<p class="timeline-comment-text">Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+								</div>
+								<div class="timeline-comment">
+									<div class="timeline-comment-header">
+										<img src="assets/images/avatar2.png" alt="">
+										<p>Sandra Smith
+											<small>3 hours ago</small>
+										</p>
+									</div>
+									<p class="timeline-comment-text">Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+								</div>
+								<textarea class="form-control" placeholder="Replay"></textarea>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="panel panel-white">
+						<div class="panel-body">
+							<div class="timeline-item-header">
+								<img src="assets/images/avatar2.png" alt="">
+								<p>Sandra Smith
+									<span>Uploaded Photo</span>
+								</p>
+								<small>2 hours ago</small>
+							</div>
+							<div class="timeline-item-post">
+								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+								<img src="assets/images/post-image.jpg" alt="">
+								<div class="timeline-options">
+									<a href="#">
+										<i class="icon-like"></i> Like (14)</a>
+									<a href="#">
+										<i class="icon-bubble"></i> Comment (1)</a>
+									<a href="#">
+										<i class="icon-share"></i> Share (5)</a>
+								</div>
+								<div class="timeline-comment">
+									<div class="timeline-comment-header">
+										<img src="assets/images/avatar5.png" alt="">
+										<p>Nick Doe
+											<small>1 hours ago</small>
+										</p>
+									</div>
+									<p class="timeline-comment-text">Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+								</div>
+								<textarea class="form-control" placeholder="Replay"></textarea>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="timeline-item">
+					<div class="panel panel-white">
+						<div class="panel-body">
+							<div class="timeline-item-header">
+								<img src="assets/images/avatar5.png" alt="">
+								<p>Nick Doe
+									<span>Was in New York</span>
+								</p>
+								<small>6 hours ago</small>
+							</div>
+							<div class="timeline-item-post">
+								<div id="map-canvas" style="height: 200px; width: 100%; position: relative; overflow: hidden; transform: translateZ(0px); background-color: rgb(229, 227, 223);">
+									<div class="gm-style" style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0;">
+										<div style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;) 8 8, default;">
+											<div style="position: absolute; left: 0px; top: 0px; z-index: 1; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);">
+												<div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;">
+													<div style="position: absolute; left: 0px; top: 0px; z-index: 0;">
+														<div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;">
+															<div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 82px; top: -33px;"></div>
+															<div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: -174px; top: -33px;"></div>
+															<div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 338px; top: -33px;"></div>
+														</div>
+													</div>
+												</div>
+												<div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div>
+												<div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div>
+												<div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;">
+													<div style="position: absolute; left: 0px; top: 0px; z-index: -1;">
+														<div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;">
+															<div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 82px; top: -33px;"></div>
+															<div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: -174px; top: -33px;"></div>
+															<div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 338px; top: -33px;"></div>
+														</div>
+													</div>
+												</div>
+												<div style="position: absolute; z-index: 0; transform: translateZ(0px); left: 0px; top: 0px;">
+													<div style="overflow: hidden; width: 565px; height: 200px;">
+														<img src="https://maps.googleapis.com/maps/api/js/StaticMapService.GetMapImage?1m2&amp;1i38318&amp;2i49185&amp;2e1&amp;3u9&amp;4m2&amp;1u565&amp;2u200&amp;5m5&amp;1e0&amp;5sen-US&amp;6sus&amp;10b1&amp;12b1&amp;token=12943" style="width: 565px; height: 200px;">
+													</div>
+												</div>
+												<div style="position: absolute; left: 0px; top: 0px; z-index: 0;">
+													<div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;">
+														<div style="transform: translateZ(0px); position: absolute; left: 338px; top: -33px; transition: opacity 200ms ease-out;">
+															<img src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i9!2i151!3i192!4i256!2m3!1e0!2sm!3i355027337!3m9!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!5f2&amp;token=28741" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+														</div>
+														<div style="transform: translateZ(0px); position: absolute; left: -174px; top: -33px; transition: opacity 200ms ease-out;">
+															<img src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i9!2i149!3i192!4i256!2m3!1e0!2sm!3i355027337!3m9!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!5f2&amp;token=46054" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+														</div>
+														<div style="transform: translateZ(0px); position: absolute; left: 82px; top: -33px; transition: opacity 200ms ease-out;">
+															<img src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i9!2i150!3i192!4i256!2m3!1e0!2sm!3i355027337!3m9!2sen-US!3sUS!5e18!12m1!1e47!12m3!1e37!2m1!1ssmartmaps!4e0!5m1!5f2&amp;token=108795" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="gm-style-pbc" style="position: absolute; left: 0px; top: 0px; z-index: 2; width: 100%; height: 100%; transition-duration: 0.3s; opacity: 0; display: none;">
+												<p class="gm-style-pbt">Use two fingers to move the map</p>
+											</div>
+											<div style="position: absolute; left: 0px; top: 0px; z-index: 3; width: 100%; height: 100%;"></div>
+											<div style="position: absolute; left: 0px; top: 0px; z-index: 4; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);">
+												<div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div>
+												<div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div>
+												<div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"></div>
+												<div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"></div>
+											</div>
+										</div>
+										<div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;">
+											<a target="_blank" href="https://maps.google.com/maps?ll=40.703313,-73.979681&amp;z=9&amp;t=m&amp;hl=en-US&amp;gl=US&amp;mapclient=apiv3" title="Click to see this area on Google Maps" style="position: static; overflow: visible; float: none; display: inline;">
+												<div style="width: 66px; height: 26px; cursor: pointer;">
+													<img src="https://maps.gstatic.com/mapfiles/api-3/images/google4_hdpi.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 66px; height: 26px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;">
+												</div>
+											</a>
+										</div>
+										<div style="padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto, Arial, sans-serif; color: rgb(34, 34, 34); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; z-index: 10000002; display: none; width: 256px; height: 148px; position: absolute; left: 133px; top: 10px; background-color: white;">
+											<div style="padding: 0px 0px 10px; font-size: 16px;">Map Data</div>
+											<div style="font-size: 13px;">Map data ©2016 Google</div>
+											<div style="width: 13px; height: 13px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 12px; z-index: 10000; cursor: pointer;">
+												<img src="https://maps.gstatic.com/mapfiles/api-3/images/mapcnt6.png" draggable="false" style="position: absolute; left: -2px; top: -336px; width: 59px; height: 492px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+											</div>
+										</div>
+										<div class="gmnoprint" style="z-index: 1000001; position: absolute; right: 168px; bottom: 0px; width: 122px;">
+											<div draggable="false" class="gm-style-cc" style="-webkit-user-select: none; height: 14px; line-height: 14px;">
+												<div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;">
+													<div style="width: 1px;"></div>
+													<div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div>
+												</div>
+												<div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;">
+													<a style="color: rgb(68, 68, 68); text-decoration: none; cursor: pointer; display: none;">Map Data</a>
+													<span>Map data ©2016 Google</span>
+												</div>
+											</div>
+										</div>
+										<div class="gmnoscreen" style="position: absolute; right: 0px; bottom: 0px;">
+											<div style="font-family: Roboto, Arial, sans-serif; font-size: 11px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);">Map data ©2016 Google</div>
+										</div>
+										<div class="gmnoprint gm-style-cc" draggable="false" style="z-index: 1000001; -webkit-user-select: none; height: 14px; line-height: 14px; position: absolute; right: 96px; bottom: 0px;">
+											<div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;">
+												<div style="width: 1px;"></div>
+												<div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div>
+											</div>
+											<div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;">
+												<a href="https://www.google.com/intl/en-US_US/help/terms_maps.html" target="_blank" style="text-decoration: none; cursor: pointer; color: rgb(68, 68, 68);">Terms of Use</a>
+											</div>
+										</div>
+										<div style="width: 25px; height: 25px; overflow: hidden; display: none; margin: 10px 14px; position: absolute; top: 0px; right: 0px;">
+											<img src="https://maps.gstatic.com/mapfiles/api-3/images/sv5.png" draggable="false" class="gm-fullscreen-control" style="position: absolute; left: -52px; top: -86px; width: 164px; height: 112px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;">
+										</div>
+										<div draggable="false" class="gm-style-cc" style="-webkit-user-select: none; height: 14px; line-height: 14px; position: absolute; right: 0px; bottom: 0px;">
+											<div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;">
+												<div style="width: 1px;"></div>
+												<div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div>
+											</div>
+											<div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;">
+												<a target="_new" title="Report errors in the road map or imagery to Google" href="https://www.google.com/maps/@40.7033127,-73.979681,9z/data=!10m1!1e1!12b1?source=apiv3&amp;rapsrc=apiv3" style="font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); text-decoration: none; position: relative;">Report a map error</a>
+											</div>
+										</div>
+										<div class="gmnoprint gm-bundled-control gm-bundled-control-on-bottom" draggable="false" controlwidth="28" controlheight="93" style="margin: 10px; -webkit-user-select: none; position: absolute; bottom: 107px; right: 28px;">
+											<div class="gmnoprint" controlwidth="28" controlheight="55" style="position: absolute; left: 0px; top: 38px;">
+												<div draggable="false" style="-webkit-user-select: none; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; border-radius: 2px; cursor: pointer; width: 28px; height: 55px; background-color: rgb(255, 255, 255);">
+													<div title="Zoom in" style="position: relative; width: 28px; height: 27px; left: 0px; top: 0px;">
+														<div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;">
+															<img src="https://maps.gstatic.com/mapfiles/api-3/images/tmapctrl_hdpi.png" draggable="false" style="position: absolute; left: 0px; top: 0px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 120px; height: 54px;">
+														</div>
+													</div>
+													<div style="position: relative; overflow: hidden; width: 67%; height: 1px; left: 16%; top: 0px; background-color: rgb(230, 230, 230);"></div>
+													<div title="Zoom out" style="position: relative; width: 28px; height: 27px; left: 0px; top: 0px;">
+														<div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;">
+															<img src="https://maps.gstatic.com/mapfiles/api-3/images/tmapctrl_hdpi.png" draggable="false" style="position: absolute; left: 0px; top: -15px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 120px; height: 54px;">
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="gm-svpc" controlwidth="28" controlheight="28" style="box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; border-radius: 2px; width: 28px; height: 28px; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;) 8 8, default; position: absolute; left: 0px; top: 0px; background-color: rgb(255, 255, 255);">
+												<div style="position: absolute; left: 1px; top: 1px;"></div>
+												<div style="position: absolute; left: 1px; top: 1px;">
+													<div aria-label="Street View Pegman Control" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px;">
+														<img src="https://maps.gstatic.com/mapfiles/api-3/images/cb_scout5_hdpi.png" draggable="false" style="position: absolute; left: -147px; top: -26px; width: 215px; height: 835px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+													</div>
+													<div aria-label="Pegman is on top of the Map" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;">
+														<img src="https://maps.gstatic.com/mapfiles/api-3/images/cb_scout5_hdpi.png" draggable="false" style="position: absolute; left: -147px; top: -52px; width: 215px; height: 835px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+													</div>
+													<div aria-label="Street View Pegman Control" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;">
+														<img src="https://maps.gstatic.com/mapfiles/api-3/images/cb_scout5_hdpi.png" draggable="false" style="position: absolute; left: -147px; top: -78px; width: 215px; height: 835px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+													</div>
+												</div>
+											</div>
+											<div class="gmnoprint" controlwidth="28" controlheight="0" style="display: none; position: absolute;">
+												<div title="Rotate map 90 degrees" style="width: 28px; height: 28px; overflow: hidden; position: absolute; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; cursor: pointer; display: none; background-color: rgb(255, 255, 255);">
+													<img src="https://maps.gstatic.com/mapfiles/api-3/images/tmapctrl4_hdpi.png" draggable="false" style="position: absolute; left: -141px; top: 6px; width: 170px; height: 54px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+												</div>
+												<div class="gm-tilt" style="width: 28px; height: 28px; overflow: hidden; position: absolute; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; top: 0px; cursor: pointer; background-color: rgb(255, 255, 255);">
+													<img src="https://maps.gstatic.com/mapfiles/api-3/images/tmapctrl4_hdpi.png" draggable="false" style="position: absolute; left: -141px; top: -13px; width: 170px; height: 54px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;">
+												</div>
+											</div>
+										</div>
+										<div class="gmnoprint" style="margin: 10px; z-index: 0; position: absolute; cursor: pointer; left: 0px; top: 0px;">
+											<div class="gm-style-mtc" style="float: left;">
+												<div draggable="false" title="Show street map" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; padding: 8px; border-bottom-left-radius: 2px; border-top-left-radius: 2px; -webkit-background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; min-width: 22px; font-weight: 500; background-color: rgb(255, 255, 255); background-clip: padding-box;">Map</div>
+												<div style="z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; position: absolute; left: 0px; top: 31px; text-align: left; display: none; background-color: white;">
+													<div draggable="false" title="Show street map with terrain" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; padding: 6px 8px 6px 6px; direction: ltr; text-align: left; white-space: nowrap; background-color: rgb(255, 255, 255);">
+														<span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle; background-color: rgb(255, 255, 255);">
+															<div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden; display: none;">
+																<img src="https://maps.gstatic.com/mapfiles/mv/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 68px; height: 67px;">
+															</div>
+														</span>
+														<label style="vertical-align: middle; cursor: pointer;">Terrain</label>
+													</div>
+												</div>
+											</div>
+											<div class="gm-style-mtc" style="float: left;">
+												<div draggable="false" title="Show satellite imagery" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(86, 86, 86); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; padding: 8px; border-bottom-right-radius: 2px; border-top-right-radius: 2px; -webkit-background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; border-left-width: 0px; min-width: 41px; background-color: rgb(255, 255, 255); background-clip: padding-box;">Satellite</div>
+												<div style="z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; position: absolute; right: 0px; top: 31px; text-align: left; display: none; background-color: white;">
+													<div draggable="false" title="Show imagery with street names" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; padding: 6px 8px 6px 6px; direction: ltr; text-align: left; white-space: nowrap; background-color: rgb(255, 255, 255);">
+														<span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle; background-color: rgb(255, 255, 255);">
+															<div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden;">
+																<img src="https://maps.gstatic.com/mapfiles/mv/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 68px; height: 67px;">
+															</div>
+														</span>
+														<label style="vertical-align: middle; cursor: pointer;">Labels</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="timeline-options">
+									<a href="#">
+										<i class="icon-like"></i> Like (3)</a>
+									<a href="#">
+										<i class="icon-bubble"></i> Comment (0)</a>
+									<a href="#">
+										<i class="icon-share"></i> Share (2)</a>
+								</div>
+								<textarea class="form-control" placeholder="Write a comment..."></textarea>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="col-md-3 m-t-lg">
+		<div class="panel panel-white">
+			<div class="panel-heading">
+				<div class="panel-title">Team</div>
+			</div>
+			<div class="panel-body">
+				<div class="team">
+					<div class="team-member">
+						<div class="online on"></div>
+						<img src="assets/images/avatar1.png" alt=""> </div>
+					<div class="team-member">
+						<div class="online off"></div>
+						<img src="assets/images/avatar2.png" alt=""> </div>
+					<div class="team-member">
+						<div class="online on"></div>
+						<img src="assets/images/avatar3.png" alt=""> </div>
+					<div class="team-member">
+						<div class="online on"></div>
+						<img src="assets/images/avatar5.png" alt=""> </div>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-white">
+			<div class="panel-heading">
+				<div class="panel-title">Some Info</div>
+			</div>
+			<div class="panel-body">
+				<p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+			</div>
+		</div>
+		<div class="panel panel-white">
+			<div class="panel-heading">
+				<div class="panel-title">Skills</div>
+			</div>
+			<div class="panel-body">
+				<p>HTML5</p>
+				<div class="progress progress-xs">
+					<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"> </div>
+				</div>
+				<p>PHP</p>
+				<div class="progress progress-xs">
+					<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"> </div>
+				</div>
+				<p>Javascript</p>
+				<div class="progress progress-xs">
+					<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%"> </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> -->
+
+
+
+<div class="row m-t-200">
+	<div class="col-md-12">
+		<div class="portlet box base">
+
+			<!--	Top Toolbar
+			========================================= -->
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="pe-7s-users"> </i>
+					{% if request.path == "/members/new/" %}
+						<span class="caption-subject font-white capitalize"> New Member </span>
+					{% else %}
+						<span class="caption-subject font-white capitalize"> Edit Member </span>
+					{% endif %}
+				</div>
+			</div>
+			<div class="portlet-body">
+				<div class="pi-row">
+					<div class="pi-col-sm-10 pi-col-sm-offset-1 pi-section-white m-t-30">
+
+						<!--	Form
+						========================================= -->
+						<form action="" method="post" role="form">
+							{% csrf_token %}
+							<div class="pi-row pi-grid-small-margins">
+								<div class="pi-col-sm-3">
+									<div class="form-group">
+										<label> First Name </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-user"> </i>
+											</span>
+											{{ MemberForm.first_name | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-3">
+									<div class="form-group">
+										<label> Last Name </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-user"> </i>
+											</span>
+											{{ MemberForm.last_name | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="pi-row">
+										<div class="pi-col-sm-4">
+											<div class="form-group">
+												<label> Member ID<span class="font-mt-red"> *</span> </label>
+												<div class='input-group'>
+													<span class="input-group-addon input-left">
+														<i class="pe-7s-user"> </i>
+													</span>
+													{{ MemberForm.member_id | add_class:"form-control" | attr:"required:True" }}
+												</div>
+											</div>
+										</div>
+										<div class="pi-col-sm-4">
+											<div class="form-group">
+												<label for="label-member"> Status </label>
+												<div class='input-group'>
+													<span class="input-group-addon input-left">
+														<i class="icon-icon-25-key"></i>
+													</span>
+													{{ MemberForm.status | add_class:"form-control" }}
+													<span class="input-group-addon input-right expandable">
+														<i class="pe-is-i-angle-down"></i>
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="pi-col-sm-4">
+											<div class="form-group">
+												<label for="label-member"> Level </label>
+												<div class='input-group'>
+													<span class="input-group-addon input-left">
+														<i class="icon-icon-25-key"></i>
+													</span>
+													{{ MemberForm.level | add_class:"form-control" }}
+													<span class="input-group-addon input-right expandable">
+														<i class="pe-is-i-angle-down"></i>
+													</span>
+													<a href="{% url 'dropdowns' %}" class="input-group-addon input-right fk">
+														<i class="fa fa-plus"></i>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-3">
+									<div class="form-group">
+										<label for="label-member"> Street </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-way"> </i>
+											</span>
+											{{ MemberForm.street | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-3">
+									<div class="form-group">
+										<label for="label-member"> City </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-map"> </i>
+											</span>
+											{{ MemberForm.city | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-3">
+									<div class="form-group">
+										<label for="label-member"> State </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-map-2"> </i>
+											</span>
+											{{ MemberForm.state | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-3">
+									<div class="form-group">
+										<label for="label-member"> Zip Code </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-way"> </i>
+											</span>
+											{{ MemberForm.zipcode | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label for="label-member"> Cell Phone </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-phone"> </i>
+											</span>
+											{{ MemberForm.phone_cell | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label for="label-member"> Home Phone </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-phone"> </i>
+											</span>
+											{{ MemberForm.phone_home | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label for="label-member"> Email Address </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-mail"> </i>
+											</span>
+											{{ MemberForm.email | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label for="label-member"> Emergency Contact Name </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-user"> </i>
+											</span>
+											{{ MemberForm.emergency_contact_name | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label for="label-member"> Emergency Contact Number </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-phone"> </i>
+											</span>
+											{{ MemberForm.emergency_contact_number | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label for="label-member"> Emergency Contact Relation </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-phone"> </i>
+											</span>
+											{{ MemberForm.emergency_contact_relation | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label for="label-member"> Referral Source </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-user"> </i>
+											</span>
+											{{ MemberForm.referral_source | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+											<a href="/admin/members/referralsource/add/" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label for="label-member"> Date of Birth </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-date"> </i>
+											</span>
+											{{ MemberForm.dob | add_class:"form-control datepicker" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label for="label-member"> Start Date </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-date"> </i>
+											</span>
+											{{ MemberForm.membership_start_date | add_class:"form-control datepicker" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-member"> Expertise </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-user"> </i>
+											</span>
+											{{ MemberForm.expertise | add_class:"form-control" }}
+											<a href="/admin/members/referralsource/add/" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-member"> Certifications </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="icon-icon-138-certificate"> </i>
+											</span>
+											{{ MemberForm.certifications | add_class:"form-control" }}
+											<a href="/admin/members/referralsource/add/" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!--	Checkboxes
+							========================================= -->
+							<!-- <div class="pi-row">
+								<div class="pi-col-sm-4">
+									<div class="checkbox">
+										<label for="website">
+											{{ MemberForm.return_member }}
+											Return Member?
+										</label>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="checkbox">
+										<label for="id_motorcycle_license">
+											{{ MemberForm.motorcycle_license }}
+											Motorcycel License?
+										</label>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="checkbox">
+										<label for="website">
+											{{ MemberForm.mailing_list }}
+											Mailing List?
+										</label>
+									</div>
+								</div>
+							</div>
+ -->
+							<!--	Notes
+							========================================= -->
+							<div class="pi-row pi-grid-small-margins">
+								<div class="pi-col-xs-12 pi-section-white">
+									<div class="form-group">
+										<label for="label-member-phone"> Notes </label>
+										<div class="pi-input-with-icon">
+											<div class="pi-input-icon">
+												<i class="pe-7s-comment"> </i>
+											</div>
+											{{ MemberForm.notes | add_class:"form-control p-l-40" | attr:"rows:5" | attr:"type:textarea" }}
+										</div>
+									</div>
+								</div>
+							</div>
+							<p><span class="font-mt-red">* Required</span></p>
+
+							<!--	Submit / Delete
+							========================================= -->
+							{% if request.path == "/members/new/" %}
+								<p class="pi-text-center m-t-40">
+									<a href="{% url 'members' %}" class="btn mt-grey-gallery-bg p-rl-40 m-r-5"> Cancel<i class="pe-7s-close-circle pi-icon-right"></i></a>
+									<button type="submit" class="btn base p-rl-40"> Save<i class="pe-7s-check pi-icon-right"></i></button>
+								</p>
+							{% else %}
+								<p class="pi-text-center m-t-40">
+									<button type="submit" value="{{ member.pk }}" name="delete" class="btn mt-grey-gallery-bg p-rl-40 m-r-5" formnovalidate> Delete<i class="pe-7s-close-circle pi-icon-right"></i></button>
+									<button type="submit" value="{{ member.pk }}" name="save" class="btn base p-rl-40"> Save<i class="pe-7s-check pi-icon-right"></i></button>
+								</p>
+							{% endif %}
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}

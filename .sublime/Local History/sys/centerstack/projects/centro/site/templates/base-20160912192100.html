@@ -1,0 +1,183 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	index.html
+ *==========================-->
+{% load staticfiles %}
+{% load customtags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="CenterStack" name="author" />
+	<link href="{% static 'massive/img/favicon.png' %}" rel="icon" type="image/png" />
+	<title> Centro Print Solutions </title>
+	
+	<!--	Fonts
+	========================================= -->
+	<link href="http://fonts.googleapis.com/css?family=Abel|Source+Sans+Pro:400,300,300italic,400italic,600,600italic,700,700italic,900,900italic,200italic,200" rel="stylesheet" type="text/css" />
+	<link href="{% static 'massive/css/font-awesome.min.css' %}" rel="stylesheet" />
+	<link href="{% static 'massive/css/bootstrap.min.css' %}" rel="stylesheet" />
+	<link href="{% static 'massive/css/magnific-popup.css' %}" rel="stylesheet" />
+	<link href="{% static 'massive/css/shortcodes/shortcodes.css' %}" rel="stylesheet" />
+	<link href="{% static 'massive/css/owl.carousel.css' %}" rel="stylesheet" />
+	<link href="{% static 'massive/css/owl.theme.css' %}" rel="stylesheet" />
+	
+	<!--	Style
+	========================================= -->
+	<link href="{% static 'css/components.css' %}" rel="stylesheet" />
+	<link href="{% static 'css/style.css' %}" rel="stylesheet" />
+	<link href="{% static 'css/helpers.css' %}" rel="stylesheet" />
+	<link href="{% static 'massive/css/style-responsive.css' %}" rel="stylesheet" />
+	<link href="{% static 'css/default-theme.css' %}" rel="stylesheet" />
+	<link href="{% static 'plugins/massive/slider-revolution/css/extralayers.css' %}" media="screen" rel="stylesheet" type="text/css" />
+	<link href="{% static 'plugins/massive/slider-revolution/css/settings.css' %}" media="screen" rel="stylesheet" type="text/css" /> </head>
+	<link href="{% static 'plugins/icons/css/pe-icon-7-stroke.css' %}" rel="stylesheet" />
+	<link href="{% static 'plugins/icons/icons.css' %}" rel="stylesheet" />
+</head>
+<body>
+
+	<!--	Pre-Loader
+	========================================= -->
+	<div id="tb-preloader">
+		<div class="tb-preloader-wave"> </div>
+	</div>
+
+	<!--	Header
+	========================================= -->
+	<div class="wrapper">
+
+		{% block header %}
+			<header class=" header-full-width " id="header">
+				<div class="header-sticky light-header ">
+					<div class="container">
+						<div class="menuzord" id="massive-menu">
+							<a class="logo-brand" href="{% url 'index' %}"><img width="125" src="{% static 'img/logo/logo.svg' %}"></a>
+							<ul class="menuzord-menu pull-right">
+								<li class="{% active 'index' %}"><a href="{% url 'index' %}"> Home </a></li>
+								<li class="{% active 'about' %}"><a href="{% url 'about' %}"> About </a></li>
+								<li class="{% active 'products' %}"><a href="{% url 'products' %}"> Products </a></li>
+								<li class="{% active 'services' %}"><a href="{% url 'services' %}"> Services </a></li>
+								<li class="{% active 'testimonials' %}"><a href="{% url 'testimonials' %}"> Testimonials </a></li>
+								<li class="{% active 'contact' %}"><a href="{% url 'contact' %}"> Contact </a></li>
+								<a class="btn btn-medium btn-circle btn-theme-border-color fs-13 p-rl-20 m-t-20 m-l-10 btn-transparent" href="{% url 'login' %}">Sign In </a>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</header>
+		{% endblock %}
+
+
+
+		<!--	Content
+		========================================= -->
+		{% block content %}
+
+			<!-- Extend Content Here -->
+
+		{% endblock %}
+
+
+		<!--	Footer
+		========================================= -->
+		{% block footer %}
+			<footer class="gray text-center short-pad footer-5 p-b-20 b-t-1" id="footer">
+				<div class="container">
+					<a class="footer-logo" href="{% url 'massive-index' %}">
+						<img width="150" class="m-b-15" src="{% static 'img/logo/logo-black-6.svg' %}" />
+					</a>
+					<div class="social-link m-b-20">
+						<a class="fs-14" href="{% url 'index' %}"> Home </a>
+						<a class="fs-14" href="{% url 'about' %}"> About </a>
+						<a class="fs-14" href="{% url 'products' %}"> Products </a>
+						<a class="fs-14" href="{% url 'services' %}"> Services </a>
+						<a class="fs-14" href="{% url 'testimonials' %}"> Testimonials </a>
+						<a class="fs-14" href="{% url 'contact' %}"> Contact </a>
+					</div>
+					<div class="copyright-sub-title text-capitalize border-top p-t-20"> © 2016 Centro Print Solutions, All Rights Reserved. <span class="">Created By <a href="http://www.centerstack.io">CenterStack</a></span></div>
+				</div>
+			</footer>
+		{% endblock %}
+	</div>
+
+	<!--	Javascript
+	========================================= -->
+	<script src="{% static 'plugins/massive/js/jquery-1.10.2.min.js' %}"></script>
+	<script src="{% static 'plugins/massive/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'plugins/massive/js/menuzord.js' %}"></script>
+	<script src="{% static 'plugins/massive/js/jquery.flexslider-min.js' %}"></script>
+	<script src="{% static 'plugins/massive/js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'plugins/massive/js/jquery.isotope.js' %}"></script>
+	<script src="{% static 'plugins/massive/js/jquery.magnific-popup.min.js' %}"></script>
+	<script src="{% static 'plugins/massive/js/jquery.countTo.js' %}"></script>
+	<script src="{% static 'plugins/massive/js/smooth.js' %}"></script>
+	<script src="{% static 'plugins/massive/js/wow.min.js' %}"></script>
+	<script src="{% static 'plugins/massive/slider-revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+	<script src="{% static 'plugins/massive/slider-revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+	<script src="{% static 'plugins/massive/js/imagesloaded.js' %}"></script>
+	<script src="{% static 'plugins/massive/js/scripts.js' %}"></script>
+
+	<script type="text/javascript">
+	jQuery(document).ready(function() {
+		jQuery('.tp-banner').show().revolution({
+			dottedOverlay: "none",
+			delay: 8000,
+			startheight: 600,
+			hideThumbs: 200,
+			thumbWidth: 100,
+			thumbHeight: 50,
+			thumbAmount: 5,
+			navigationType: "bullet",
+			navigationArrows: "solo",
+			navigationStyle: "preview4",
+			touchenabled: "on",
+			onHoverStop: "on",
+			swipe_velocity: 0.7,
+			swipe_min_touches: 1,
+			swipe_max_touches: 1,
+			drag_block_vertical: false,
+			parallax: "mouse",
+			parallaxBgFreeze: "on",
+			parallaxLevels: [7, 4, 3, 2, 5, 4, 3, 2, 1, 0],
+			keyboardNavigation: "off",
+			navigationHAlign: "center",
+			navigationVAlign: "bottom",
+			navigationHOffset: 0,
+			navigationVOffset: 20,
+			soloArrowLeftHalign: "left",
+			soloArrowLeftValign: "center",
+			soloArrowLeftHOffset: 20,
+			soloArrowLeftVOffset: 0,
+			soloArrowRightHalign: "right",
+			soloArrowRightValign: "center",
+			soloArrowRightHOffset: 20,
+			soloArrowRightVOffset: 0,
+			shadow: 0,
+			fullWidth: "on",
+			fullScreen: "off",
+			spinner: "spinner4",
+			hideTimerBar: "on",
+			stopLoop: "off",
+			stopAfterLoops: -1,
+			stopAtSlide: -1,
+			shuffle: "off",
+			autoHeight: "off",
+			forceFullWidth: "off",
+			hideThumbsOnMobile: "off",
+			hideNavDelayOnMobile: 1500,
+			hideBulletsOnMobile: "off",
+			hideArrowsOnMobile: "off",
+			hideThumbsUnderResolution: 0,
+			hideSliderAtLimit: 0,
+			hideCaptionAtLimit: 0,
+			hideAllCaptionAtLilmit: 0,
+			startWithSlide: 0,
+			fullScreenOffsetContainer: ""
+		});
+	});
+	</script>
+</body>
+</html>

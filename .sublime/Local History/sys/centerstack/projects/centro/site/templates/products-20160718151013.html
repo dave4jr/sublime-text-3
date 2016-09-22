@@ -1,0 +1,140 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	index.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+<!--	Page Title
+========================================= -->
+<section class="page-title background-title dark parallax-8 chalk">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h3 class="text-uppercase"> Products </h3>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!--	Products
+========================================= -->
+<div class="page-content">
+	<div class="container">
+		<div class="row">
+			<div class="feature-box-grid">
+				<div class="heading-title text-center">
+					<h3 class="text-uppercase">Our Products</h3>
+					<span class="text-uppercase">Centro Product Statement</span>
+				</div>
+				<div class="col-md-4">
+					<div class="featured-item border-box text-center">
+						<div class="icon">
+							<i class="icon-lightbulb"></i>
+						</div>
+						<div class="title text-uppercase">
+							<h4>Creative design</h4>
+						</div>
+						<div class="desc"> Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="featured-item border-box text-center">
+						<div class="icon">
+							<i class=" icon-browser2"></i>
+						</div>
+						<div class="title text-uppercase">
+							<h4>professional code</h4>
+						</div>
+						<div class="desc"> Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="featured-item border-box text-center">
+						<div class="icon">
+							<i class=" icon-laptop2"></i>
+						</div>
+						<div class="title text-uppercase">
+							<h4>easy customize</h4>
+						</div>
+						<div class="desc"> Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="featured-item border-box text-center">
+						<div class="icon">
+							<i class="icon-basic_gear"></i>
+						</div>
+						<div class="title text-uppercase">
+							<h4>24/7 support</h4>
+						</div>
+						<div class="desc"> Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="featured-item border-box text-center">
+						<div class="icon">
+							<i class="icon-basic_pencil_ruler"></i>
+						</div>
+						<div class="title text-uppercase">
+							<h4>bootstrap</h4>
+						</div>
+						<div class="desc"> Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="featured-item border-box text-center">
+						<div class="icon">
+							<i class="icon-basic_todolist_pencil"></i>
+						</div>
+						<div class="title text-uppercase">
+							<h4>clean code</h4>
+						</div>
+						<div class="desc"> Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+					</div>
+				</div>
+			</div>
+			<!--feature border box end-->
+		</div>
+	</div>
+</div>
+
+
+<div class="img-post col-2">
+	<div class="item">
+		<div class="p-img">
+			<img src="img/post/p10.jpg" alt=""> </div>
+		<div class="post-desk">
+			<div class="title">
+				<span class="post-sub-title text-uppercase light-txt">news</span>
+				<h3 class="text-uppercase light-txt">
+					<a href="#">some services that we provide occationaly</a>
+				</h3>
+			</div>
+			<p class="light-txt"> Phasellus fringilla suscipit risus nec eleifend. Pellentesque eu quam sem, ac malesuada leo sem quam pellente. Awesome sliders give you the opportunity to showcase your content. </p>
+		</div>
+	</div>
+	<div class="item">
+		<img src="img/post/p11.jpg" alt="">
+		<div class="post-desk">
+			<div class="title">
+				<span class="post-sub-title text-uppercase light-txt">news</span>
+				<h3 class="text-uppercase light-txt">
+					<a href="#">Editors Now use As Their Default Model</a>
+				</h3>
+			</div>
+			<p class="light-txt"> Fringilla suscipit risus nec eleifend. Pellentesque eu quam sem, ac malesuada leo sem quam pellente. Awesome sliders give you the opportunity to showcase your content. </p>
+		</div>
+	</div>
+</div>
+
+
+
+{% endblock %}

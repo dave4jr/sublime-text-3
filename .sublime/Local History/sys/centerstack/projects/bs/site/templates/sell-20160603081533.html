@@ -1,0 +1,173 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	index.html
+ *==========================-->
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+{% load customtags %}
+{% block content %}
+
+
+<!--	Main Wrapper
+========================================= -->
+<div class="main-wrapper">
+	<div class="main">
+		<div class="main-inner">
+			<div class="content-title m-b-0">
+				<div class="content-title-inner">
+					<div class="container">
+						<h1> Sell A Property </h1>
+					</div>
+				</div>
+			</div>
+
+			<!--	What Sets Us Apart
+			========================================= -->
+			<div id="set-us-apart" class="container-fluid">
+				<div class="row">
+					<div class="listing-detail col-md-12 col-lg-12">
+						<div class="row">
+							<div class="col-lg-5">
+								<div class="overview m-t-50 m-r-20">
+									<img src="{% static 'img/sell/bs.jpg' %}" class="img-responsive" style="border-radius: 6px; box-shadow: 0px 4px 8px rgba(17, 17, 17, .4);">
+								</div>
+							</div>
+							<div class="col-lg-7 p-r-0">
+								<h2> What Really Sets Us Apart? </h2>
+								<p class="m-b-15"> <span class="box-letter">T</span>hat's a great question and with over 1,500 realtors in Central Oregon, it is one that every buyer and seller of real estate should be asking as your real estate is one of your most important financial assets and deserves the best representation. Any listing broker can look in MLS, price a home, put up a lockbox, a sign, some flyers, and hope for a buyer. Any buyer's broker can watch for new listings in MLS, set up a showing, and hope you like it enough to make an offer. Not us...BrundageSmith goes way beyond. We stake our reputation on every relationship we create. </p>
+								<p class="m-b-15"> As experts in this local area, we bring a wealth of knowledge and expertise about buying and selling real estate here. It's not the same everywhere, so you need someone you can trust for up-to-date information. Here are some of the things we can do for you: </p>
+								<ul>
+									<li><i class="fa fa-search fa-fw" aria-hidden="true"></i>Find Your Next Home</li>
+									<li><i class="fa fa-usd fa-fw" aria-hidden="true"></i>Sell A Home</li>
+									<li><i class="fa fa-comments-o fa-fw" aria-hidden="true"></i>Consult On Home Selling Tactics</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<!--	Boxes
+			========================================= -->
+			<div id="sell-boxes" class="container-fluid" style="border-top: 1px solid #EEE; border-bottom: 1px solid #EEE; padding: 0px 120px 0px 120px;">
+				<div class="boxes">
+					<div class="row">
+						<div class="col-md-6 col-lg-4">
+							<div class="box">
+								<div class="box-icon">
+									<i class="fa fa-phone"> </i>
+								</div>
+								<div class="box-content">
+									<h2> Communication </h2>
+									<p> Consistent Communication. You will hear from us - often. We will deliver information so that your real estate quest remains fluid and relevant to what's happening in the market. </p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<div class="box">
+								<div class="box-icon">
+									<i class="fa fa-youtube"> </i>
+								</div>
+								<div class="box-content">
+									<h2> YouTube </h2>
+									<p> Utilize YouTube video slideshows. Youtube is now the 2nd largest search engine. </p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<div class="box">
+								<div class="box-icon">
+									<i class="fa fa-dot-circle-o"> </i>
+								</div>
+								<div class="box-content">
+									<h2> Targeted Emails </h2>
+									<p> We have the ability to send targeted email to every real estate agent in Central Oregon that has assisted a buyer with the purchase of a home similar to yours. </p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<div class="box">
+								<div class="box-icon">
+									<i class="fa fa-desktop"> </i>
+								</div>
+								<div class="box-content">
+									<h2> Online Media </h2>
+									<p> The use of online media is effective and important and ever-changing. You'll see your home on our company's fantastic mobile-friendly website, Facebook Craigslist, YouTube, and our Blog. </p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<div class="box">
+								<div class="box-icon">
+									<i class="fa fa-map-o"> </i>
+								</div>
+								<div class="box-content">
+									<h2> Print Media </h2>
+									<p> While the internet is the preferred home search tool, we do utilize various forms of print media including traditional property flyers, postcards, and advertising in real estate publications. </p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<div class="box">
+								<div class="box-icon">
+									<i class="fa fa-star"> </i>
+								</div>
+								<div class="box-content">
+									<h2> Professionalism </h2>
+									<p> From the use of professional high resolution photos, to our negotiation and search tactics, we display the highest level of professionalism.                     When your home looks great online and in print, so do we and we can't afford not to in this competitve environment. </p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+			<!--	Sell House
+			========================================= -->
+			<div class="container">
+				<div class="col-md-8 col-lg-8">
+					<form action="" method="post">
+						<div class="page-header page-header-small">
+							<h3> Basic Information </h3>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label> Address </label>
+									<input class="form-control" type="text" />
+								</div>
+							</div>
+						</div>
+
+						
+						<!--	Ammenities
+						========================================= -->
+						<div class="page-header page-header-small">
+							<h3> Amenities </h3>
+						</div>
+						<div class="checkbox-list">
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" />
+									Air Conditioning
+								</label>
+							</div>
+						</div>
+						<div class="center m-t-40">
+							<a class="btn btn-primary" href="#"> Submit Property </a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}

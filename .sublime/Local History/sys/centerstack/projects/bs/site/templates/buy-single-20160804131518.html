@@ -1,0 +1,112 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	index.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+
+
+<!--	Buy Single
+========================================= -->
+<section class="p-t-0 m-t-80" id="page-body">
+	<div class="isotope-grid gallery-grid style-modern clearfix">
+		{% for ii in property.img %}
+			{% if forloop.counter <= 4 %}
+				{% if forloop.counter == 1 %}
+					<div class="isotope-item gallery-item wide tall">
+						<img src="{{ ii }}">
+					</div>
+				{% elif forloop.counter == 2 %}
+					<div class="isotope-item gallery-item wide">
+						<img src="{{ ii }}">
+					</div>
+				{% else %}
+					<div class="isotope-item gallery-item">
+						<img src="{{ ii }}">
+					</div>
+				{% endif %}
+			{% endif %}
+		{% endfor %}
+	</div>
+</section>
+<section id="page-body">
+	<div class="wrapper align-center">
+		<h5 class="subtitle-2 colored"><strong> {% include "include/address.html" with arg="city" %} </strong></h5>
+		<h2 class="m-t-10 fs-42"><strong> {% include "include/address.html" with arg="street" %} </strong></h2>
+		<hr class="mini thin m-tb-30" />
+		
+		<!--	Icons
+		========================================= -->
+		<div class="column-section clearfix p-t-40">
+			<div id="buy-single-icons" class="column one-fifth">
+				<span class="fontello-sqft"></span>
+				<h5 class="subtitle-2">Square Feet</h5>
+				<h3><strong>{{ property.squarefootage|floatformat:"0"|intcomma }}</strong></h3>
+			</div>
+			<div id="buy-single-icons" class="column one-fifth">
+				<span class="fontello-beds"></span>
+				<h5 class="subtitle-2">Bedrooms</h5>
+				<h3><strong>{{ property.bedrooms }}</strong></h3>
+			</div>
+			<div id="buy-single-icons" class="column one-fifth">
+				<span class="fontello-baths"></span>
+				<h5 class="subtitle-2">Bathrooms</h5>
+				<h3><strong>{{ property.bathrooms }}</strong></h3>
+			</div>
+			<div id="buy-single-icons" class="column one-fifth">
+				<span class="fontello-year-built"></span>
+				<h5 class="subtitle-2">Year Built</h5>
+				<h3><strong>{{ property.yearbuilt }}</strong></h3>
+			</div>
+			<div id="buy-single-icons" class="column one-fifth last-col">
+				<span class="fontello-map"></span>
+				<h5 class="subtitle-2">Lot Size</h5>
+				<h3><strong>{{ property.acres }}</strong></h3>
+			</div>
+		</div>
+	</div>
+	<div class="spacer-big"> </div>
+	
+	
+	<!--	Masonry Images: Row 2
+	========================================= -->
+	<div class="isotope-grid gallery-grid style-modern clearfix">
+		{% for ii in property.img %}
+			{% if forloop.counter >= 5 and forloop.counter <= 8 %}
+				{% if forloop.counter == 5 %}
+					<div class="isotope-item gallery-item wide">
+						<img src="{{ ii }}">
+					</div>
+				{% elif forloop.counter == 6 %}
+					<div class="isotope-item gallery-item wide tall">
+						<img src="{{ ii }}">
+					</div>
+				{% else %}
+					<div class="isotope-item gallery-item">
+						<img src="{{ ii }}">
+					</div>
+				{% endif %}
+			{% endif %}
+		{% endfor %}
+	</div>
+	<div class="spacer-big"> </div>
+
+	<div id="buy-single-details" class="wrapper-small align-center">
+		<h5 class="subtitle-2 colored"> Property Details </h5>
+		<h2 class="m-t-10 fs-42"><strong> Overview </strong></h2>
+		<hr class="mini thin m-tb-30" />
+		<p>{{ property.marketingremarks }}</p>
+	</div>
+	<div class="spacer-big"> </div>
+	
+</section>
+
+
+{% endblock %}

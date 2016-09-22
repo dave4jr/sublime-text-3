@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Accessible toggle-style checkbox</title>
+	<script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<h1 style="margin-top: 0;">Accessible toggle-style checkbox</h1>
+	<p>No javascript required! Customize the branding easily by changing the values in the mixins.</p>
+	<div class="can-toggle">
+		<input id="a" type="checkbox">
+		<label for="a">
+			<div class="can-toggle__switch" data-checked="On" data-unchecked="Off"></div>
+			<div class="can-toggle__label-text">.can-toggle</div>
+		</label>
+	</div>
+	<br>
+	<div class="can-toggle can-toggle--size-small">
+		<input id="b" type="checkbox">
+		<label for="b">
+			<div class="can-toggle__switch" data-checked="On" data-unchecked="Off"></div>
+			<div class="can-toggle__label-text">.can-toggle.can-toggle--size-small</div>
+		</label>
+	</div>
+	<br>
+	<div class="can-toggle can-toggle--size-large">
+		<input id="c" type="checkbox">
+		<label for="c">
+			<div class="can-toggle__switch" data-checked="On" data-unchecked="Off"></div>
+			<div class="can-toggle__label-text">.can-toggle.can-toggle--size-large</div>
+		</label>
+	</div>
+	<br>
+	<div class="can-toggle demo-rebrand-1">
+		<input id="d" type="checkbox">
+		<label for="d">
+			<div class="can-toggle__switch" data-checked="Good" data-unchecked="Bad"></div>
+			<div class="can-toggle__label-text">.can-toggle.demo-rebrand-1</div>
+		</label>
+	</div>
+	<br>
+	<div class="can-toggle demo-rebrand-2">
+		<input id="e" type="checkbox">
+		<label for="e">
+			<div class="can-toggle__switch" data-checked="Yes" data-unchecked="No"></div>
+			<div class="can-toggle__label-text">.can-toggle.demo-rebrand-2</div>
+		</label>
+	</div>
+</body>
+
+</html>

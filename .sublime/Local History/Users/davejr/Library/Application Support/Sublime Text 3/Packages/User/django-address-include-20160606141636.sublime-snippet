@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[{% include "include/address.html" with arg="$1" %}]]></content>
+	<tabTrigger>address</tabTrigger>
+	<description>Django - Address Include</description>
+</snippet>

@@ -1,0 +1,58 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	featured.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+
+
+<!--	Hero Collage
+========================================= -->
+<section class="hero-big parallax-section text-light no-overlay wood_1" id="hero">
+	<div class="wrapper align-center" id="page-title">
+		<h2 class="uppercase">
+			<strong> Our Partners </strong>
+		</h2>
+	</div>
+</section>
+
+
+
+<!--	Bend Trend Homes
+========================================= -->
+<section id="page-body">
+	<div class="isotope-grid blog-container style-column-3 fitrows isotope-spaced" id="blog-grid">
+	
+		{% for partner in partners  %}
+			<div class="isotope-item blog-item">
+				<div class="blog-media">
+					<a class="thumb-overlay" href="{% url 'partners-single' pk=partner.pk %}">
+						<img src="{{ MEDIA_URL }}{{ partner.img_banner }}">
+					</a>
+				</div>
+				<div class="blog-desc align-center">
+					<div class="blog-headline">
+						<h5 class="post-name">
+							<a href="{% url 'partners-single' pk=partner.pk %}">
+								<strong> {{ partner.name }} </strong>
+							</a>
+						</h5>
+						<h6 class="post-category uppercase colored"> {{ partner.group }} </h6>
+					</div>
+					<p> {{ partner.summary }} </p>
+				</div>
+			</div>
+		{% endfor %}
+		
+	</div>
+	<div class="spacer-big"> </div>
+</section>
+
+{% endblock %}

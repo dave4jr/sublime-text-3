@@ -1,0 +1,3435 @@
+@font-face {
+    font-family: 'icons';
+    src: url('../fonts/icons.eot?k8h00u');
+    src: url('../fonts/icons.eot?k8h00u#iefix') format('embedded-opentype'),
+        url('../fonts/icons.ttf?k8h00u') format('truetype'),
+        url('../fonts/icons.woff?k8h00u') format('woff'),
+        url('../fonts/icons.svg?k8h00u#icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+i {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.cs-mail-envelope:before {
+    content: "\e900";
+}
+.cs-mail-envelope2:before {
+    content: "\e901";
+}
+.cs-mail-envelope-open:before {
+    content: "\e902";
+}
+.cs-mail-envelope-open2:before {
+    content: "\e903";
+}
+.cs-mail-envelope-closed:before {
+    content: "\e904";
+}
+.cs-mail-envelope-closed2:before {
+    content: "\e905";
+}
+.cs-mail-envelope-open3:before {
+    content: "\e906";
+}
+.cs-mail-envelope-open4:before {
+    content: "\e907";
+}
+.cs-mail-envelope-open5:before {
+    content: "\e908";
+}
+.cs-mail-envelope-open6:before {
+    content: "\e909";
+}
+.cs-mail-envelope-closed3:before {
+    content: "\e90a";
+}
+.cs-mail-envelope-closed4:before {
+    content: "\e90b";
+}
+.cs-mail-envelope-open7:before {
+    content: "\e90c";
+}
+.cs-mail-envelope-open8:before {
+    content: "\e90d";
+}
+.cs-mail-error:before {
+    content: "\e90e";
+}
+.cs-mail-error2:before {
+    content: "\e90f";
+}
+.cs-mail-checked:before {
+    content: "\e910";
+}
+.cs-mail-checked2:before {
+    content: "\e911";
+}
+.cs-mail-cancel:before {
+    content: "\e912";
+}
+.cs-mail-cancel2:before {
+    content: "\e913";
+}
+.cs-mail--forbidden:before {
+    content: "\e914";
+}
+.cs-mail--forbidden2:before {
+    content: "\e915";
+}
+.cs-mail-add:before {
+    content: "\e916";
+}
+.cs-mail-add2:before {
+    content: "\e917";
+}
+.cs-mail-remove:before {
+    content: "\e918";
+}
+.cs-mail-remove2:before {
+    content: "\e919";
+}
+.cs-flag:before {
+    content: "\e91a";
+}
+.cs-flag2:before {
+    content: "\e91b";
+}
+.cs-flag3:before {
+    content: "\e91c";
+}
+.cs-flag4:before {
+    content: "\e91d";
+}
+.cs-flag5:before {
+    content: "\e91e";
+}
+.cs-flag6:before {
+    content: "\e91f";
+}
+.cs-flag7:before {
+    content: "\e920";
+}
+.cs-flag8:before {
+    content: "\e921";
+}
+.cs-bookmark:before {
+    content: "\e922";
+}
+.cs-bookmark2:before {
+    content: "\e923";
+}
+.cs-bookmark-add:before {
+    content: "\e924";
+}
+.cs-bookmark-add2:before {
+    content: "\e925";
+}
+.cs-bookmark-remove:before {
+    content: "\e926";
+}
+.cs-bookmark-remove2:before {
+    content: "\e927";
+}
+.cs-eye-hidden:before {
+    content: "\e928";
+}
+.cs-eye-hidden2:before {
+    content: "\e929";
+}
+.cs-eye:before {
+    content: "\e92a";
+}
+.cs-eye2:before {
+    content: "\e92b";
+}
+.cs-star:before {
+    content: "\e92c";
+}
+.cs-star2:before {
+    content: "\e92d";
+}
+.cs-key:before {
+    content: "\e92e";
+}
+.cs-key2:before {
+    content: "\e92f";
+}
+.cs-key3:before {
+    content: "\e930";
+}
+.cs-key4:before {
+    content: "\e931";
+}
+.cs-trash-can:before {
+    content: "\e932";
+}
+.cs-trash-can2:before {
+    content: "\e933";
+}
+.cs-trash-can3:before {
+    content: "\e934";
+}
+.cs-trash-can4:before {
+    content: "\e935";
+}
+.cs-information:before {
+    content: "\e936";
+}
+.cs-information2:before {
+    content: "\e937";
+}
+.cs-information3:before {
+    content: "\e938";
+}
+.cs-information4:before {
+    content: "\e939";
+}
+.cs-book:before {
+    content: "\e93a";
+}
+.cs-book2:before {
+    content: "\e93b";
+}
+.cs-book-bookmark:before {
+    content: "\e93c";
+}
+.cs-book-bookmark2:before {
+    content: "\e93d";
+}
+.cs-clipboard-edit:before {
+    content: "\e93e";
+}
+.cs-clipboard-edit2:before {
+    content: "\e93f";
+}
+.cs-clipboard-add:before {
+    content: "\e940";
+}
+.cs-clipboard-add2:before {
+    content: "\e941";
+}
+.cs-clipboard-remove:before {
+    content: "\e942";
+}
+.cs-clipboard-remove2:before {
+    content: "\e943";
+}
+.cs-clipboard:before {
+    content: "\e944";
+}
+.cs-clipboard2:before {
+    content: "\e945";
+}
+.cs-clipboard-download:before {
+    content: "\e946";
+}
+.cs-clipboard-download2:before {
+    content: "\e947";
+}
+.cs-clipboard-upload:before {
+    content: "\e948";
+}
+.cs-clipboard-upload2:before {
+    content: "\e949";
+}
+.cs-clipboard-checked:before {
+    content: "\e94a";
+}
+.cs-clipboard-checked2:before {
+    content: "\e94b";
+}
+.cs-clipboard-text:before {
+    content: "\e94c";
+}
+.cs-clipboard-text2:before {
+    content: "\e94d";
+}
+.cs-clipboard-list:before {
+    content: "\e94e";
+}
+.cs-clipboard-list2:before {
+    content: "\e94f";
+}
+.cs-note:before {
+    content: "\e950";
+}
+.cs-note2:before {
+    content: "\e951";
+}
+.cs-note-add:before {
+    content: "\e952";
+}
+.cs-note-add2:before {
+    content: "\e953";
+}
+.cs-note-remove:before {
+    content: "\e954";
+}
+.cs-note-remove2:before {
+    content: "\e955";
+}
+.cs-note-text:before {
+    content: "\e956";
+}
+.cs-note-text2:before {
+    content: "\e957";
+}
+.cs-note-list:before {
+    content: "\e958";
+}
+.cs-note-list2:before {
+    content: "\e959";
+}
+.cs-note-checked:before {
+    content: "\e95a";
+}
+.cs-note-checked2:before {
+    content: "\e95b";
+}
+.cs-note-important:before {
+    content: "\e95c";
+}
+.cs-note-important2:before {
+    content: "\e95d";
+}
+.cs-notebook:before {
+    content: "\e95e";
+}
+.cs-notebook2:before {
+    content: "\e95f";
+}
+.cs-notebook3:before {
+    content: "\e960";
+}
+.cs-notebook4:before {
+    content: "\e961";
+}
+.cs-notebook5:before {
+    content: "\e962";
+}
+.cs-notebook6:before {
+    content: "\e963";
+}
+.cs-notebook7:before {
+    content: "\e964";
+}
+.cs-notebook8:before {
+    content: "\e965";
+}
+.cs-notebook-text:before {
+    content: "\e966";
+}
+.cs-notebook-text2:before {
+    content: "\e967";
+}
+.cs-notebook-list:before {
+    content: "\e968";
+}
+.cs-notebook-list2:before {
+    content: "\e969";
+}
+.cs-document:before {
+    content: "\e96a";
+}
+.cs-document2:before {
+    content: "\e96b";
+}
+.cs-document-text:before {
+    content: "\e96c";
+}
+.cs-document-text2:before {
+    content: "\e96d";
+}
+.cs-document-text3:before {
+    content: "\e96e";
+}
+.cs-document-text4:before {
+    content: "\e96f";
+}
+.cs-document-download:before {
+    content: "\e970";
+}
+.cs-document-download2:before {
+    content: "\e971";
+}
+.cs-document-upload:before {
+    content: "\e972";
+}
+.cs-document-upload2:before {
+    content: "\e973";
+}
+.cs-document-bookmark:before {
+    content: "\e974";
+}
+.cs-document-bookmark2:before {
+    content: "\e975";
+}
+.cs-document-diagrams:before {
+    content: "\e976";
+}
+.cs-document-diagrams2:before {
+    content: "\e977";
+}
+.cs-document-recording:before {
+    content: "\e978";
+}
+.cs-document-recording2:before {
+    content: "\e979";
+}
+.cs-document-table:before {
+    content: "\e97a";
+}
+.cs-document-table2:before {
+    content: "\e97b";
+}
+.cs-document-music:before {
+    content: "\e97c";
+}
+.cs-document-music2:before {
+    content: "\e97d";
+}
+.cs-document-movie:before {
+    content: "\e97e";
+}
+.cs-document-movie2:before {
+    content: "\e97f";
+}
+.cs-document-play:before {
+    content: "\e980";
+}
+.cs-document-play2:before {
+    content: "\e981";
+}
+.cs-document-graph:before {
+    content: "\e982";
+}
+.cs-document-graph2:before {
+    content: "\e983";
+}
+.cs-document-time:before {
+    content: "\e984";
+}
+.cs-document-time2:before {
+    content: "\e985";
+}
+.cs-document-text5:before {
+    content: "\e986";
+}
+.cs-document-text6:before {
+    content: "\e987";
+}
+.cs-document-code:before {
+    content: "\e988";
+}
+.cs-document-code2:before {
+    content: "\e989";
+}
+.cs-document-cloud:before {
+    content: "\e98a";
+}
+.cs-document-cloud2:before {
+    content: "\e98b";
+}
+.cs-documents:before {
+    content: "\e98c";
+}
+.cs-documents2:before {
+    content: "\e98d";
+}
+.cs-documents3:before {
+    content: "\e98e";
+}
+.cs-documents4:before {
+    content: "\e98f";
+}
+.cs-document-search:before {
+    content: "\e990";
+}
+.cs-document-search2:before {
+    content: "\e991";
+}
+.cs-document-star:before {
+    content: "\e992";
+}
+.cs-document-star2:before {
+    content: "\e993";
+}
+.cs-document-unlocked:before {
+    content: "\e994";
+}
+.cs-document-unlocked2:before {
+    content: "\e995";
+}
+.cs-document-locked:before {
+    content: "\e996";
+}
+.cs-document-locked2:before {
+    content: "\e997";
+}
+.cs-document-error:before {
+    content: "\e998";
+}
+.cs-document-error2:before {
+    content: "\e999";
+}
+.cs-document-cancel:before {
+    content: "\e99a";
+}
+.cs-document-cancel2:before {
+    content: "\e99b";
+}
+.cs-document-checked:before {
+    content: "\e99c";
+}
+.cs-document-checked2:before {
+    content: "\e99d";
+}
+.cs-document-add:before {
+    content: "\e99e";
+}
+.cs-document-add2:before {
+    content: "\e99f";
+}
+.cs-document-remove:before {
+    content: "\e9a0";
+}
+.cs-document-remove2:before {
+    content: "\e9a1";
+}
+.cs-document-forbidden:before {
+    content: "\e9a2";
+}
+.cs-document-forbidden2:before {
+    content: "\e9a3";
+}
+.cs-document-information:before {
+    content: "\e9a4";
+}
+.cs-document-information2:before {
+    content: "\e9a5";
+}
+.cs-folder-information:before {
+    content: "\e9a6";
+}
+.cs-folder-information2:before {
+    content: "\e9a7";
+}
+.cs-document-list:before {
+    content: "\e9a8";
+}
+.cs-document-list2:before {
+    content: "\e9a9";
+}
+.cs-document-font:before {
+    content: "\e9aa";
+}
+.cs-document-font2:before {
+    content: "\e9ab";
+}
+.cs-inbox:before {
+    content: "\e9ac";
+}
+.cs-inbox2:before {
+    content: "\e9ad";
+}
+.cs-inboxes:before {
+    content: "\e9ae";
+}
+.cs-inboxes2:before {
+    content: "\e9af";
+}
+.cs-inbox-document:before {
+    content: "\e9b0";
+}
+.cs-inbox-document2:before {
+    content: "\e9b1";
+}
+.cs-inbox-document-text:before {
+    content: "\e9b2";
+}
+.cs-inbox-document-text2:before {
+    content: "\e9b3";
+}
+.cs-inbox-download:before {
+    content: "\e9b4";
+}
+.cs-inbox-download2:before {
+    content: "\e9b5";
+}
+.cs-inbox-upload:before {
+    content: "\e9b6";
+}
+.cs-inbox-upload2:before {
+    content: "\e9b7";
+}
+.cs-folder:before {
+    content: "\e9b8";
+}
+.cs-folder2:before {
+    content: "\e9b9";
+}
+.cs-folder3:before {
+    content: "\e9ba";
+}
+.cs-folder4:before {
+    content: "\e9bb";
+}
+.cs-folders:before {
+    content: "\e9bc";
+}
+.cs-folders2:before {
+    content: "\e9bd";
+}
+.cs-folder-download:before {
+    content: "\e9be";
+}
+.cs-folder-download2:before {
+    content: "\e9bf";
+}
+.cs-folder-upload:before {
+    content: "\e9c0";
+}
+.cs-folder-upload2:before {
+    content: "\e9c1";
+}
+.cs-folder-unlocked:before {
+    content: "\e9c2";
+}
+.cs-folder-unlocked2:before {
+    content: "\e9c3";
+}
+.cs-folder-locked:before {
+    content: "\e9c4";
+}
+.cs-folder-locked2:before {
+    content: "\e9c5";
+}
+.cs-folder-search:before {
+    content: "\e9c6";
+}
+.cs-folder-search2:before {
+    content: "\e9c7";
+}
+.cs-folder-error:before {
+    content: "\e9c8";
+}
+.cs-folder-error2:before {
+    content: "\e9c9";
+}
+.cs-folder-cancel:before {
+    content: "\e9ca";
+}
+.cs-folder-cancel2:before {
+    content: "\e9cb";
+}
+.cs-folder-checked:before {
+    content: "\e9cc";
+}
+.cs-folder-checked2:before {
+    content: "\e9cd";
+}
+.cs-folder-add:before {
+    content: "\e9ce";
+}
+.cs-folder-add2:before {
+    content: "\e9cf";
+}
+.cs-folder-remove:before {
+    content: "\e9d0";
+}
+.cs-folder-remove2:before {
+    content: "\e9d1";
+}
+.cs-folder-forbidden:before {
+    content: "\e9d2";
+}
+.cs-folder-forbidden2:before {
+    content: "\e9d3";
+}
+.cs-folder-bookmark:before {
+    content: "\e9d4";
+}
+.cs-folder-bookmark2:before {
+    content: "\e9d5";
+}
+.cs-document-zip:before {
+    content: "\e9d6";
+}
+.cs-document-zip2:before {
+    content: "\e9d7";
+}
+.cs-zip:before {
+    content: "\e9d8";
+}
+.cs-zip2:before {
+    content: "\e9d9";
+}
+.cs-search:before {
+    content: "\e9da";
+}
+.cs-search2:before {
+    content: "\e9db";
+}
+.cs-search-plus:before {
+    content: "\e9dc";
+}
+.cs-search-plus2:before {
+    content: "\e9dd";
+}
+.cs-search-minus:before {
+    content: "\e9de";
+}
+.cs-search-minus2:before {
+    content: "\e9df";
+}
+.cs-lock:before {
+    content: "\e9e0";
+}
+.cs-lock2:before {
+    content: "\e9e1";
+}
+.cs-lock-open:before {
+    content: "\e9e2";
+}
+.cs-lock-open2:before {
+    content: "\e9e3";
+}
+.cs-lock-open3:before {
+    content: "\e9e4";
+}
+.cs-lock-open4:before {
+    content: "\e9e5";
+}
+.cs-lock-stripes:before {
+    content: "\e9e6";
+}
+.cs-lock-stripes2:before {
+    content: "\e9e7";
+}
+.cs-lock-rounded:before {
+    content: "\e9e8";
+}
+.cs-lock-rounded2:before {
+    content: "\e9e9";
+}
+.cs-lock-rounded-open:before {
+    content: "\e9ea";
+}
+.cs-lock-rounded-open2:before {
+    content: "\e9eb";
+}
+.cs-lock-rounded-open3:before {
+    content: "\e9ec";
+}
+.cs-lock-rounded-open4:before {
+    content: "\e9ed";
+}
+.cs-combination-lock:before {
+    content: "\e9ee";
+}
+.cs-combination-lock2:before {
+    content: "\e9ef";
+}
+.cs-printer:before {
+    content: "\e9f0";
+}
+.cs-printer2:before {
+    content: "\e9f1";
+}
+.cs-printer3:before {
+    content: "\e9f2";
+}
+.cs-printer4:before {
+    content: "\e9f3";
+}
+.cs-printer-text:before {
+    content: "\e9f4";
+}
+.cs-printer-text2:before {
+    content: "\e9f5";
+}
+.cs-printer-text3:before {
+    content: "\e9f6";
+}
+.cs-printer-text4:before {
+    content: "\e9f7";
+}
+.cs-document-shred:before {
+    content: "\e9f8";
+}
+.cs-document-shred2:before {
+    content: "\e9f9";
+}
+.cs-shredder:before {
+    content: "\e9fa";
+}
+.cs-shredder2:before {
+    content: "\e9fb";
+}
+.cs-document-scan:before {
+    content: "\e9fc";
+}
+.cs-document-scan2:before {
+    content: "\e9fd";
+}
+.cs-cloud-download:before {
+    content: "\e9fe";
+}
+.cs-cloud-download2:before {
+    content: "\e9ff";
+}
+.cs-cloud-upload:before {
+    content: "\ea00";
+}
+.cs-cloud-upload2:before {
+    content: "\ea01";
+}
+.cs-cloud-error:before {
+    content: "\ea02";
+}
+.cs-cloud-error2:before {
+    content: "\ea03";
+}
+.cs-cloud:before {
+    content: "\ea04";
+}
+.cs-cloud2:before {
+    content: "\ea05";
+}
+.cs-inbox-filled:before {
+    content: "\ea06";
+}
+.cs-inbox-filled2:before {
+    content: "\ea07";
+}
+.cs-pen:before {
+    content: "\ea08";
+}
+.cs-pen2:before {
+    content: "\ea09";
+}
+.cs-pen-angled:before {
+    content: "\ea0a";
+}
+.cs-pen-angled2:before {
+    content: "\ea0b";
+}
+.cs-document-edit:before {
+    content: "\ea0c";
+}
+.cs-document-edit2:before {
+    content: "\ea0d";
+}
+.cs-document-certificate:before {
+    content: "\ea0e";
+}
+.cs-document-certificate2:before {
+    content: "\ea0f";
+}
+.cs-certificate:before {
+    content: "\ea10";
+}
+.cs-certificate2:before {
+    content: "\ea11";
+}
+.cs-package:before {
+    content: "\ea12";
+}
+.cs-package2:before {
+    content: "\ea13";
+}
+.cs-box:before {
+    content: "\ea14";
+}
+.cs-box2:before {
+    content: "\ea15";
+}
+.cs-box-filled:before {
+    content: "\ea16";
+}
+.cs-box-filled2:before {
+    content: "\ea17";
+}
+.cs-box3:before {
+    content: "\ea18";
+}
+.cs-box4:before {
+    content: "\ea19";
+}
+.cs-box5:before {
+    content: "\ea1a";
+}
+.cs-box6:before {
+    content: "\ea1b";
+}
+.cs-box-bookmark:before {
+    content: "\ea1c";
+}
+.cs-box-bookmark2:before {
+    content: "\ea1d";
+}
+.cs-tag-cord:before {
+    content: "\ea1e";
+}
+.cs-tag-cord2:before {
+    content: "\ea1f";
+}
+.cs-tag:before {
+    content: "\ea20";
+}
+.cs-tag2:before {
+    content: "\ea21";
+}
+.cs-tags:before {
+    content: "\ea22";
+}
+.cs-tags2:before {
+    content: "\ea23";
+}
+.cs-tag-add:before {
+    content: "\ea24";
+}
+.cs-tag-add2:before {
+    content: "\ea25";
+}
+.cs-tag-remove:before {
+    content: "\ea26";
+}
+.cs-tag-remove2:before {
+    content: "\ea27";
+}
+.cs-tag-checked:before {
+    content: "\ea28";
+}
+.cs-tag-checked2:before {
+    content: "\ea29";
+}
+.cs-tag-cancel:before {
+    content: "\ea2a";
+}
+.cs-tag-cancel2:before {
+    content: "\ea2b";
+}
+.cs-paperclip:before {
+    content: "\ea2c";
+}
+.cs-paperclip2:before {
+    content: "\ea2d";
+}
+.cs-basketball:before {
+    content: "\ea2e";
+}
+.cs-basketball2:before {
+    content: "\ea2f";
+}
+.cs-baseball:before {
+    content: "\ea30";
+}
+.cs-baseball2:before {
+    content: "\ea31";
+}
+.cs-tennis-ball:before {
+    content: "\ea32";
+}
+.cs-tennis-ball2:before {
+    content: "\ea33";
+}
+.cs-bowling-ball:before {
+    content: "\ea34";
+}
+.cs-bowling-ball2:before {
+    content: "\ea35";
+}
+.cs-billiard-ball:before {
+    content: "\ea36";
+}
+.cs-billiard-ball2:before {
+    content: "\ea37";
+}
+.cs-soccer-ball:before {
+    content: "\ea38";
+}
+.cs-soccer-ball2:before {
+    content: "\ea39";
+}
+.cs-soccer-court:before {
+    content: "\ea3a";
+}
+.cs-soccer-court2:before {
+    content: "\ea3b";
+}
+.cs-football:before {
+    content: "\ea3c";
+}
+.cs-football2:before {
+    content: "\ea3d";
+}
+.cs-football3:before {
+    content: "\ea3e";
+}
+.cs-football4:before {
+    content: "\ea3f";
+}
+.cs-basketball3:before {
+    content: "\ea40";
+}
+.cs-basketball4:before {
+    content: "\ea41";
+}
+.cs-baseball-set:before {
+    content: "\ea42";
+}
+.cs-baseball-set2:before {
+    content: "\ea43";
+}
+.cs-tennis-ball3:before {
+    content: "\ea44";
+}
+.cs-tennis-ball4:before {
+    content: "\ea45";
+}
+.cs-trophy:before {
+    content: "\ea46";
+}
+.cs-trophy2:before {
+    content: "\ea47";
+}
+.cs-trophy-one:before {
+    content: "\ea48";
+}
+.cs-trophy-one2:before {
+    content: "\ea49";
+}
+.cs-trophy3:before {
+    content: "\ea4a";
+}
+.cs-trophy4:before {
+    content: "\ea4b";
+}
+.cs-medal:before {
+    content: "\ea4c";
+}
+.cs-medal2:before {
+    content: "\ea4d";
+}
+.cs-medal3:before {
+    content: "\ea4e";
+}
+.cs-medal4:before {
+    content: "\ea4f";
+}
+.cs-weights:before {
+    content: "\ea50";
+}
+.cs-weights2:before {
+    content: "\ea51";
+}
+.cs-tennis-racket:before {
+    content: "\ea52";
+}
+.cs-tennis-racket2:before {
+    content: "\ea53";
+}
+.cs-basketball-hoop:before {
+    content: "\ea54";
+}
+.cs-basketball-hoop2:before {
+    content: "\ea55";
+}
+.cs-table-tennis:before {
+    content: "\ea56";
+}
+.cs-table-tennis2:before {
+    content: "\ea57";
+}
+.cs-volleyball:before {
+    content: "\ea58";
+}
+.cs-volleyball2:before {
+    content: "\ea59";
+}
+.cs-stop-watch:before {
+    content: "\ea5a";
+}
+.cs-stop-watch2:before {
+    content: "\ea5b";
+}
+.cs-stop-watch3:before {
+    content: "\ea5c";
+}
+.cs-stop-watch4:before {
+    content: "\ea5d";
+}
+.cs-hockey-stick:before {
+    content: "\ea5e";
+}
+.cs-hockey-stick2:before {
+    content: "\ea5f";
+}
+.cs-hockey-sticks:before {
+    content: "\ea60";
+}
+.cs-hockey-sticks2:before {
+    content: "\ea61";
+}
+.cs-shuttlecock:before {
+    content: "\ea62";
+}
+.cs-shuttlecock2:before {
+    content: "\ea63";
+}
+.cs-golf:before {
+    content: "\ea64";
+}
+.cs-golf2:before {
+    content: "\ea65";
+}
+.cs-move:before {
+    content: "\ea66";
+}
+.cs-move2:before {
+    content: "\ea67";
+}
+.cs-clipboard-move:before {
+    content: "\ea68";
+}
+.cs-clipboard-move2:before {
+    content: "\ea69";
+}
+.cs-award:before {
+    content: "\ea6a";
+}
+.cs-award2:before {
+    content: "\ea6b";
+}
+.cs-award3:before {
+    content: "\ea6c";
+}
+.cs-award4:before {
+    content: "\ea6d";
+}
+.cs-award5:before {
+    content: "\ea6e";
+}
+.cs-award6:before {
+    content: "\ea6f";
+}
+.cs-award7:before {
+    content: "\ea70";
+}
+.cs-award8:before {
+    content: "\ea71";
+}
+.cs-medal5:before {
+    content: "\ea72";
+}
+.cs-medal6:before {
+    content: "\ea73";
+}
+.cs-medal7:before {
+    content: "\ea74";
+}
+.cs-medal8:before {
+    content: "\ea75";
+}
+.cs-boxing-glove:before {
+    content: "\ea76";
+}
+.cs-boxing-glove2:before {
+    content: "\ea77";
+}
+.cs-whistle:before {
+    content: "\ea78";
+}
+.cs-whistle2:before {
+    content: "\ea79";
+}
+.cs-volleyball-water:before {
+    content: "\ea7a";
+}
+.cs-volleyball-water2:before {
+    content: "\ea7b";
+}
+.cs-checkered-flag:before {
+    content: "\ea7c";
+}
+.cs-checkered-flag2:before {
+    content: "\ea7d";
+}
+.cs-target-arrow:before {
+    content: "\ea7e";
+}
+.cs-target-arrow2:before {
+    content: "\ea7f";
+}
+.cs-target:before {
+    content: "\ea80";
+}
+.cs-target2:before {
+    content: "\ea81";
+}
+.cs-sailing-boat:before {
+    content: "\ea82";
+}
+.cs-sailing-boat2:before {
+    content: "\ea83";
+}
+.cs-sailing-boat-water:before {
+    content: "\ea84";
+}
+.cs-sailing-boat-water2:before {
+    content: "\ea85";
+}
+.cs-bowling-pins:before {
+    content: "\ea86";
+}
+.cs-bowling-pins2:before {
+    content: "\ea87";
+}
+.cs-bowling-pin-ball:before {
+    content: "\ea88";
+}
+.cs-bowling-pin-ball2:before {
+    content: "\ea89";
+}
+.cs-diving-goggles:before {
+    content: "\ea8a";
+}
+.cs-diving-goggles2:before {
+    content: "\ea8b";
+}
+.cs-sports-shoe:before {
+    content: "\ea8c";
+}
+.cs-sports-shoe2:before {
+    content: "\ea8d";
+}
+.cs-soccer-shoe:before {
+    content: "\ea8e";
+}
+.cs-soccer-shoe2:before {
+    content: "\ea8f";
+}
+.cs-ice-skate:before {
+    content: "\ea90";
+}
+.cs-ice-skate2:before {
+    content: "\ea91";
+}
+.cs-cloud3:before {
+    content: "\ea92";
+}
+.cs-cloud4:before {
+    content: "\ea93";
+}
+.cs-cloud-sun:before {
+    content: "\ea94";
+}
+.cs-cloud-sun2:before {
+    content: "\ea95";
+}
+.cs-cloud-moon:before {
+    content: "\ea96";
+}
+.cs-cloud-moon2:before {
+    content: "\ea97";
+}
+.cs-cloud-rain:before {
+    content: "\ea98";
+}
+.cs-cloud-rain2:before {
+    content: "\ea99";
+}
+.cs-cloud-sun-rain:before {
+    content: "\ea9a";
+}
+.cs-cloud-sun-rain2:before {
+    content: "\ea9b";
+}
+.cs-cloud-moon-rain:before {
+    content: "\ea9c";
+}
+.cs-cloud-moon-rain2:before {
+    content: "\ea9d";
+}
+.cs-cloud-snow:before {
+    content: "\ea9e";
+}
+.cs-cloud-snow2:before {
+    content: "\ea9f";
+}
+.cs-cloud-sun-snow:before {
+    content: "\eaa0";
+}
+.cs-cloud-sun-snow2:before {
+    content: "\eaa1";
+}
+.cs-cloud-moon-snow:before {
+    content: "\eaa2";
+}
+.cs-cloud-moon-snow2:before {
+    content: "\eaa3";
+}
+.cs-cloud-lightning:before {
+    content: "\eaa4";
+}
+.cs-cloud-lightning2:before {
+    content: "\eaa5";
+}
+.cs-cloud-sun-lightning:before {
+    content: "\eaa6";
+}
+.cs-cloud-sun-lightning2:before {
+    content: "\eaa7";
+}
+.cs-cloud-moon-lightning:before {
+    content: "\eaa8";
+}
+.cs-cloud-moon-lightning2:before {
+    content: "\eaa9";
+}
+.cs-cloud-wind:before {
+    content: "\eaaa";
+}
+.cs-cloud-wind2:before {
+    content: "\eaab";
+}
+.cs-cloud-raindrops:before {
+    content: "\eaac";
+}
+.cs-cloud-raindrops2:before {
+    content: "\eaad";
+}
+.cs-cloud-sun-raindrops:before {
+    content: "\eaae";
+}
+.cs-cloud-sun-raindrops2:before {
+    content: "\eaaf";
+}
+.cs-cloud-moon-raindrops:before {
+    content: "\eab0";
+}
+.cs-cloud-moon-raindrops2:before {
+    content: "\eab1";
+}
+.cs-cloud-snowflakes:before {
+    content: "\eab2";
+}
+.cs-cloud-snowflakes2:before {
+    content: "\eab3";
+}
+.cs-cloud-sun-snowflakes:before {
+    content: "\eab4";
+}
+.cs-cloud-sun-snowflakes2:before {
+    content: "\eab5";
+}
+.cs-cloud-moon-snowflakes:before {
+    content: "\eab6";
+}
+.cs-cloud-moon-snowflakes2:before {
+    content: "\eab7";
+}
+.cs-clouds:before {
+    content: "\eab8";
+}
+.cs-clouds2:before {
+    content: "\eab9";
+}
+.cs-cloud-add:before {
+    content: "\eaba";
+}
+.cs-cloud-add2:before {
+    content: "\eabb";
+}
+.cs-cloud-remove:before {
+    content: "\eabc";
+}
+.cs-cloud-remove2:before {
+    content: "\eabd";
+}
+.cs-cloud-error3:before {
+    content: "\eabe";
+}
+.cs-cloud-error4:before {
+    content: "\eabf";
+}
+.cs-cloud-fog:before {
+    content: "\eac0";
+}
+.cs-cloud-fog2:before {
+    content: "\eac1";
+}
+.cs--cloud-sun-fog:before {
+    content: "\eac2";
+}
+.cs--cloud-sun-fog2:before {
+    content: "\eac3";
+}
+.cs-cloud-moon-fog:before {
+    content: "\eac4";
+}
+.cs-cloud-moon-fog2:before {
+    content: "\eac5";
+}
+.cs-moon-stars:before {
+    content: "\eac6";
+}
+.cs-moon-stars2:before {
+    content: "\eac7";
+}
+.cs-moon:before {
+    content: "\eac8";
+}
+.cs-moon2:before {
+    content: "\eac9";
+}
+.cs-sun:before {
+    content: "\eaca";
+}
+.cs-sun2:before {
+    content: "\eacb";
+}
+.cs-sunrise:before {
+    content: "\eacc";
+}
+.cs-sunrise2:before {
+    content: "\eacd";
+}
+.cs-sunset:before {
+    content: "\eace";
+}
+.cs-sunset2:before {
+    content: "\eacf";
+}
+.cs-sunset3:before {
+    content: "\ead0";
+}
+.cs-sunset4:before {
+    content: "\ead1";
+}
+.cs-sunset5:before {
+    content: "\ead2";
+}
+.cs-sunset6:before {
+    content: "\ead3";
+}
+.cs-rainbow:before {
+    content: "\ead4";
+}
+.cs-rainbow2:before {
+    content: "\ead5";
+}
+.cs-umbrella:before {
+    content: "\ead6";
+}
+.cs-umbrella2:before {
+    content: "\ead7";
+}
+.cs-raindrops:before {
+    content: "\ead8";
+}
+.cs-raindrops2:before {
+    content: "\ead9";
+}
+.cs-raindrop:before {
+    content: "\eada";
+}
+.cs-raindrop2:before {
+    content: "\eadb";
+}
+.cs-sunglasses:before {
+    content: "\eadc";
+}
+.cs-sunglasses2:before {
+    content: "\eadd";
+}
+.cs-stars:before {
+    content: "\eade";
+}
+.cs-stars2:before {
+    content: "\eadf";
+}
+.cs-clouds3:before {
+    content: "\eae0";
+}
+.cs-clouds4:before {
+    content: "\eae1";
+}
+.cs-moonrise:before {
+    content: "\eae2";
+}
+.cs-moonrise2:before {
+    content: "\eae3";
+}
+.cs-moonset:before {
+    content: "\eae4";
+}
+.cs-moonset2:before {
+    content: "\eae5";
+}
+.cs-wind:before {
+    content: "\eae6";
+}
+.cs-wind2:before {
+    content: "\eae7";
+}
+.cs-full-moon:before {
+    content: "\eae8";
+}
+.cs-full-moon2:before {
+    content: "\eae9";
+}
+.cs-crescent:before {
+    content: "\eaea";
+}
+.cs-crescent2:before {
+    content: "\eaeb";
+}
+.cs-half-moon:before {
+    content: "\eaec";
+}
+.cs-half-moon2:before {
+    content: "\eaed";
+}
+.cs-gibbous-moon:before {
+    content: "\eaee";
+}
+.cs-gibbous-moon2:before {
+    content: "\eaef";
+}
+.cs-moon3:before {
+    content: "\eaf0";
+}
+.cs-moon4:before {
+    content: "\eaf1";
+}
+.cs-gibbous-moon3:before {
+    content: "\eaf2";
+}
+.cs-gibbous-moon4:before {
+    content: "\eaf3";
+}
+.cs-half-moon3:before {
+    content: "\eaf4";
+}
+.cs-half-moon4:before {
+    content: "\eaf5";
+}
+.cs-crescent3:before {
+    content: "\eaf6";
+}
+.cs-crescent4:before {
+    content: "\eaf7";
+}
+.cs-barometer:before {
+    content: "\eaf8";
+}
+.cs-barometer2:before {
+    content: "\eaf9";
+}
+.cs-compass-north:before {
+    content: "\eafa";
+}
+.cs-compass-north2:before {
+    content: "\eafb";
+}
+.cs-compass-west:before {
+    content: "\eafc";
+}
+.cs-compass-west2:before {
+    content: "\eafd";
+}
+.cs-compass-east:before {
+    content: "\eafe";
+}
+.cs-compass-east2:before {
+    content: "\eaff";
+}
+.cs-compass-south:before {
+    content: "\eb00";
+}
+.cs-compass-south2:before {
+    content: "\eb01";
+}
+.cs-air-sock:before {
+    content: "\eb02";
+}
+.cs-air-sock2:before {
+    content: "\eb03";
+}
+.cs-tornado:before {
+    content: "\eb04";
+}
+.cs-tornado2:before {
+    content: "\eb05";
+}
+.cs-degree-fahrenheit:before {
+    content: "\eb06";
+}
+.cs-degree-fahrenheit2:before {
+    content: "\eb07";
+}
+.cs-degree-celsius:before {
+    content: "\eb08";
+}
+.cs-degree-celsius2:before {
+    content: "\eb09";
+}
+.cs-warning:before {
+    content: "\eb0a";
+}
+.cs-warning2:before {
+    content: "\eb0b";
+}
+.cs-compass:before {
+    content: "\eb0c";
+}
+.cs-compass2:before {
+    content: "\eb0d";
+}
+.cs-compass3:before {
+    content: "\eb0e";
+}
+.cs-compass4:before {
+    content: "\eb0f";
+}
+.cs-compass5:before {
+    content: "\eb10";
+}
+.cs-compass6:before {
+    content: "\eb11";
+}
+.cs-compass7:before {
+    content: "\eb12";
+}
+.cs-compass8:before {
+    content: "\eb13";
+}
+.cs-thermometer:before {
+    content: "\eb14";
+}
+.cs-thermometer2:before {
+    content: "\eb15";
+}
+.cs-thermometer-low:before {
+    content: "\eb16";
+}
+.cs-thermometer-low2:before {
+    content: "\eb17";
+}
+.cs-thermometer-quarter:before {
+    content: "\eb18";
+}
+.cs-thermometer-quarter2:before {
+    content: "\eb19";
+}
+.cs-thermometer-half:before {
+    content: "\eb1a";
+}
+.cs-thermometer-half2:before {
+    content: "\eb1b";
+}
+.cs-thermometer-three-quarters:before {
+    content: "\eb1c";
+}
+.cs-thermometer-three-quarters2:before {
+    content: "\eb1d";
+}
+.cs-thermometer-full:before {
+    content: "\eb1e";
+}
+.cs-thermometer-full2:before {
+    content: "\eb1f";
+}
+.cs-lightning:before {
+    content: "\eb20";
+}
+.cs-lightning2:before {
+    content: "\eb21";
+}
+.cs-wind-turbine:before {
+    content: "\eb22";
+}
+.cs-wind-turbine2:before {
+    content: "\eb23";
+}
+.cs-snowflake:before {
+    content: "\eb24";
+}
+.cs-snowflake2:before {
+    content: "\eb25";
+}
+.cs-flashed-face:before {
+    content: "\eb26";
+}
+.cs-flashed-face2:before {
+    content: "\eb27";
+}
+.cs-flashed-face3:before {
+    content: "\eb28";
+}
+.cs-flashed-face4:before {
+    content: "\eb29";
+}
+.cs-flashed-face-glasses:before {
+    content: "\eb2a";
+}
+.cs-flashed-face-glasses2:before {
+    content: "\eb2b";
+}
+.cs-face-missing-moth:before {
+    content: "\eb2c";
+}
+.cs-face-missing-moth2:before {
+    content: "\eb2d";
+}
+.cs-neutral-face:before {
+    content: "\eb2e";
+}
+.cs-neutral-face2:before {
+    content: "\eb2f";
+}
+.cs-smiling-face:before {
+    content: "\eb30";
+}
+.cs-smiling-face2:before {
+    content: "\eb31";
+}
+.cs-sad-face:before {
+    content: "\eb32";
+}
+.cs-sad-face2:before {
+    content: "\eb33";
+}
+.cs-face-open-mouth:before {
+    content: "\eb34";
+}
+.cs-face-open-mouth2:before {
+    content: "\eb35";
+}
+.cs-face-open-mouth3:before {
+    content: "\eb36";
+}
+.cs-face-open-mouth4:before {
+    content: "\eb37";
+}
+.cs-winking-face:before {
+    content: "\eb38";
+}
+.cs-winking-face2:before {
+    content: "\eb39";
+}
+.cs-laughing-face:before {
+    content: "\eb3a";
+}
+.cs-laughing-face2:before {
+    content: "\eb3b";
+}
+.cs-laughing-face3:before {
+    content: "\eb3c";
+}
+.cs-laughing-face4:before {
+    content: "\eb3d";
+}
+.cs-smirking-face:before {
+    content: "\eb3e";
+}
+.cs-smirking-face2:before {
+    content: "\eb3f";
+}
+.cs-stubborn-face:before {
+    content: "\eb40";
+}
+.cs-stubborn-face2:before {
+    content: "\eb41";
+}
+.cs-neutral-face3:before {
+    content: "\eb42";
+}
+.cs-neutral-face4:before {
+    content: "\eb43";
+}
+.cs-sad-face3:before {
+    content: "\eb44";
+}
+.cs-sad-face4:before {
+    content: "\eb45";
+}
+.cs-smiling-face3:before {
+    content: "\eb46";
+}
+.cs-smiling-face4:before {
+    content: "\eb47";
+}
+.cs-smiling-face-eyebrows:before {
+    content: "\eb48";
+}
+.cs-smiling-face-eyebrows2:before {
+    content: "\eb49";
+}
+.cs-grinning-face-eyebrows:before {
+    content: "\eb4a";
+}
+.cs-grinning-face-eyebrows2:before {
+    content: "\eb4b";
+}
+.cs-sad-face-eyebrows:before {
+    content: "\eb4c";
+}
+.cs-sad-face-eyebrows2:before {
+    content: "\eb4d";
+}
+.cs-neutral-face-eyebrows:before {
+    content: "\eb4e";
+}
+.cs-neutral-face-eyebrows2:before {
+    content: "\eb4f";
+}
+.cs-angry-face:before {
+    content: "\eb50";
+}
+.cs-angry-face2:before {
+    content: "\eb51";
+}
+.cs-worried-face:before {
+    content: "\eb52";
+}
+.cs-worried-face2:before {
+    content: "\eb53";
+}
+.cs-winking-face3:before {
+    content: "\eb54";
+}
+.cs-winking-face4:before {
+    content: "\eb55";
+}
+.cs-angry-face-eyebrows:before {
+    content: "\eb56";
+}
+.cs-angry-face-eyebrows2:before {
+    content: "\eb57";
+}
+.cs-grinning-face:before {
+    content: "\eb58";
+}
+.cs-grinning-face2:before {
+    content: "\eb59";
+}
+.cs-sad-face5:before {
+    content: "\eb5a";
+}
+.cs-sad-face6:before {
+    content: "\eb5b";
+}
+.cs-grinning-face-eyebrows3:before {
+    content: "\eb5c";
+}
+.cs-grinning-face-eyebrows4:before {
+    content: "\eb5d";
+}
+.cs-fake-grinning-face-eyebrows:before {
+    content: "\eb5e";
+}
+.cs-fake-grinning-face-eyebrows2:before {
+    content: "\eb5f";
+}
+.cs-worried-face-eyebrows:before {
+    content: "\eb60";
+}
+.cs-worried-face-eyebrows2:before {
+    content: "\eb61";
+}
+.cs-face-stuck-out-tongue:before {
+    content: "\eb62";
+}
+.cs-face-stuck-out-tongue2:before {
+    content: "\eb63";
+}
+.cs-face-stuck-out-tongue3:before {
+    content: "\eb64";
+}
+.cs-face-stuck-out-tongue4:before {
+    content: "\eb65";
+}
+.cs-kissing-face:before {
+    content: "\eb66";
+}
+.cs-kissing-face2:before {
+    content: "\eb67";
+}
+.cs-grinning-face-teeth:before {
+    content: "\eb68";
+}
+.cs-grinning-face-teeth2:before {
+    content: "\eb69";
+}
+.cs-angry-face-teeth:before {
+    content: "\eb6a";
+}
+.cs-angry-face-teeth2:before {
+    content: "\eb6b";
+}
+.cs-worried-face-teeth:before {
+    content: "\eb6c";
+}
+.cs-worried-face-teeth2:before {
+    content: "\eb6d";
+}
+.cs-grinning-face-teeth3:before {
+    content: "\eb6e";
+}
+.cs-grinning-face-teeth4:before {
+    content: "\eb6f";
+}
+.cs-face-open-mouth-eyebrows:before {
+    content: "\eb70";
+}
+.cs-face-open-mouth-eyebrows2:before {
+    content: "\eb71";
+}
+.cs-face-open-mouth-eyebrows3:before {
+    content: "\eb72";
+}
+.cs-face-open-mouth-eyebrows4:before {
+    content: "\eb73";
+}
+.cs-angry-face-open-mouth-eyebrows:before {
+    content: "\eb74";
+}
+.cs-angry-face-open-mouth-eyebrows2:before {
+    content: "\eb75";
+}
+.cs-unamused-face-tightly-closed-eyes:before {
+    content: "\eb76";
+}
+.cs-unamused-face-tightly-closed-eyes2:before {
+    content: "\eb77";
+}
+.cs-sad-face--tightly-closed-eyes:before {
+    content: "\eb78";
+}
+.cs-sad-face--tightly-closed-eyes2:before {
+    content: "\eb79";
+}
+.cs-kissing-face3:before {
+    content: "\eb7a";
+}
+.cs-kissing-face4:before {
+    content: "\eb7b";
+}
+.cs-face-closed-meyes:before {
+    content: "\eb7c";
+}
+.cs-face-closed-meyes2:before {
+    content: "\eb7d";
+}
+.cs-amused-face:before {
+    content: "\eb7e";
+}
+.cs-amused-face2:before {
+    content: "\eb7f";
+}
+.cs-amused-face-closed-eyes:before {
+    content: "\eb80";
+}
+.cs-amused-face-closed-eyes2:before {
+    content: "\eb81";
+}
+.cs-amused-face-closed-eyes3:before {
+    content: "\eb82";
+}
+.cs-amused-face-closed-eyes4:before {
+    content: "\eb83";
+}
+.cs-face-closed-eyes-open-mouth:before {
+    content: "\eb84";
+}
+.cs-face-closed-eyes-open-mouth2:before {
+    content: "\eb85";
+}
+.cs-face-closed-eyes-open-mouth3:before {
+    content: "\eb86";
+}
+.cs-face-closed-eyes-open-mouth4:before {
+    content: "\eb87";
+}
+.cs-face-closed-eyes-open-mouth5:before {
+    content: "\eb88";
+}
+.cs-face-closed-eyes-open-mouth6:before {
+    content: "\eb89";
+}
+.cs-laughing-face5:before {
+    content: "\eb8a";
+}
+.cs-laughing-face6:before {
+    content: "\eb8b";
+}
+.cs-smiling-face5:before {
+    content: "\eb8c";
+}
+.cs-smiling-face6:before {
+    content: "\eb8d";
+}
+.cs-grinning-face3:before {
+    content: "\eb8e";
+}
+.cs-grinning-face4:before {
+    content: "\eb8f";
+}
+.cs-sad-face7:before {
+    content: "\eb90";
+}
+.cs-sad-face8:before {
+    content: "\eb91";
+}
+.cs-sad-face9:before {
+    content: "\eb92";
+}
+.cs-sad-face10:before {
+    content: "\eb93";
+}
+.cs-sad-face-closed-eyes:before {
+    content: "\eb94";
+}
+.cs-sad-face-closed-eyes2:before {
+    content: "\eb95";
+}
+.cs-sad-face11:before {
+    content: "\eb96";
+}
+.cs-sad-face12:before {
+    content: "\eb97";
+}
+.cs-smiling-face7:before {
+    content: "\eb98";
+}
+.cs-smiling-face8:before {
+    content: "\eb99";
+}
+.cs-astonished-face:before {
+    content: "\eb9a";
+}
+.cs-astonished-face2:before {
+    content: "\eb9b";
+}
+.cs-astonished-face3:before {
+    content: "\eb9c";
+}
+.cs-astonished-face4:before {
+    content: "\eb9d";
+}
+.cs-face-moustache:before {
+    content: "\eb9e";
+}
+.cs-face-moustache2:before {
+    content: "\eb9f";
+}
+.cs-face-moustache3:before {
+    content: "\eba0";
+}
+.cs-face-moustache4:before {
+    content: "\eba1";
+}
+.cs-face-glasses:before {
+    content: "\eba2";
+}
+.cs-face-glasses2:before {
+    content: "\eba3";
+}
+.cs-face-sunglasses:before {
+    content: "\eba4";
+}
+.cs-face-sunglasses2:before {
+    content: "\eba5";
+}
+.cs-smirking-face-sunglasses:before {
+    content: "\eba6";
+}
+.cs-smirking-face-sunglasses2:before {
+    content: "\eba7";
+}
+.cs-middle-finger:before {
+    content: "\eba8";
+}
+.cs-middle-finger2:before {
+    content: "\eba9";
+}
+.cs-rock-n-roll:before {
+    content: "\ebaa";
+}
+.cs-rock-n-roll2:before {
+    content: "\ebab";
+}
+.cs-high-five:before {
+    content: "\ebac";
+}
+.cs-high-five2:before {
+    content: "\ebad";
+}
+.cs-thumb-up:before {
+    content: "\ebae";
+}
+.cs-thumb-up2:before {
+    content: "\ebaf";
+}
+.cs-thumb-down:before {
+    content: "\ebb0";
+}
+.cs-thumb-down2:before {
+    content: "\ebb1";
+}
+.cs-thumb-up3:before {
+    content: "\ebb2";
+}
+.cs-thumb-up4:before {
+    content: "\ebb3";
+}
+.cs-thumb-down3:before {
+    content: "\ebb4";
+}
+.cs-thumb-down4:before {
+    content: "\ebb5";
+}
+.cs-two-fingers-swipe-left:before {
+    content: "\ebb6";
+}
+.cs-two-fingers-swipe-left2:before {
+    content: "\ebb7";
+}
+.cs-two-fingers-swipe-right:before {
+    content: "\ebb8";
+}
+.cs-two-fingers-swipe-right2:before {
+    content: "\ebb9";
+}
+.cs-two-fingers-swipe-up:before {
+    content: "\ebba";
+}
+.cs-two-fingers-swipe-up2:before {
+    content: "\ebbb";
+}
+.cs-two-fingers-swipe-down:before {
+    content: "\ebbc";
+}
+.cs-two-fingers-swipe-down2:before {
+    content: "\ebbd";
+}
+.cs-two-fingers:before {
+    content: "\ebbe";
+}
+.cs-two-fingers2:before {
+    content: "\ebbf";
+}
+.cs-three-fingers-double-tap:before {
+    content: "\ebc0";
+}
+.cs-three-fingers-double-tap2:before {
+    content: "\ebc1";
+}
+.cs-two-fingers-resize-out:before {
+    content: "\ebc2";
+}
+.cs-two-fingers-resize-out2:before {
+    content: "\ebc3";
+}
+.cs-two-fingers-resize-in:before {
+    content: "\ebc4";
+}
+.cs-two-fingers-resize-in2:before {
+    content: "\ebc5";
+}
+.cs-two-fingers-rotate:before {
+    content: "\ebc6";
+}
+.cs-two-fingers-rotate2:before {
+    content: "\ebc7";
+}
+.cs-one-finger-swipe-left:before {
+    content: "\ebc8";
+}
+.cs-one-finger-swipe-left2:before {
+    content: "\ebc9";
+}
+.cs-one-finger-swipe-right:before {
+    content: "\ebca";
+}
+.cs-one-finger-swipe-right2:before {
+    content: "\ebcb";
+}
+.cs-one-finger-swipe-up:before {
+    content: "\ebcc";
+}
+.cs-one-finger-swipe-up2:before {
+    content: "\ebcd";
+}
+.cs-one-finger-swipe-down:before {
+    content: "\ebce";
+}
+.cs-one-finger-swipe-down2:before {
+    content: "\ebcf";
+}
+.cs-one-finger:before {
+    content: "\ebd0";
+}
+.cs-one-finger2:before {
+    content: "\ebd1";
+}
+.cs-one-finger-double-tap:before {
+    content: "\ebd2";
+}
+.cs-one-finger-double-tap2:before {
+    content: "\ebd3";
+}
+.cs-one-finger-tap:before {
+    content: "\ebd4";
+}
+.cs-one-finger-tap2:before {
+    content: "\ebd5";
+}
+.cs-one-finger-tap-hold:before {
+    content: "\ebd6";
+}
+.cs-one-finger-tap-hold2:before {
+    content: "\ebd7";
+}
+.cs-thumb-finger-tap:before {
+    content: "\ebd8";
+}
+.cs-thumb-finger-tap2:before {
+    content: "\ebd9";
+}
+.cs-one-finger-click:before {
+    content: "\ebda";
+}
+.cs-one-finger-click2:before {
+    content: "\ebdb";
+}
+.cs-three-fingers-swipe-left:before {
+    content: "\ebdc";
+}
+.cs-three-fingers-swipe-left2:before {
+    content: "\ebdd";
+}
+.cs-three-fingers-swipe-right:before {
+    content: "\ebde";
+}
+.cs-three-fingers-swipe-right2:before {
+    content: "\ebdf";
+}
+.cs-three-fingers-swipe-up:before {
+    content: "\ebe0";
+}
+.cs-three-fingers-swipe-up2:before {
+    content: "\ebe1";
+}
+.cs-three-fingers-swipe-down:before {
+    content: "\ebe2";
+}
+.cs-three-fingers-swipe-down2:before {
+    content: "\ebe3";
+}
+.cs-three-fingers:before {
+    content: "\ebe4";
+}
+.cs-three-fingers2:before {
+    content: "\ebe5";
+}
+.cs-three-fingers-double-tap3:before {
+    content: "\ebe6";
+}
+.cs-three-fingers-double-tap4:before {
+    content: "\ebe7";
+}
+.cs-two-fingers-swipe-up3:before {
+    content: "\ebe8";
+}
+.cs-two-fingers-swipe-up4:before {
+    content: "\ebe9";
+}
+.cs-one-finger-double-tap3:before {
+    content: "\ebea";
+}
+.cs-one-finger-double-tap4:before {
+    content: "\ebeb";
+}
+.cs-two-fingers-swipe-down3:before {
+    content: "\ebec";
+}
+.cs-two-fingers-swipe-down4:before {
+    content: "\ebed";
+}
+.cs-two-fingers-swipe-right3:before {
+    content: "\ebee";
+}
+.cs-two-fingers-swipe-right4:before {
+    content: "\ebef";
+}
+.cs-two-fingers-swipe-left3:before {
+    content: "\ebf0";
+}
+.cs-two-fingers-swipe-left4:before {
+    content: "\ebf1";
+}
+.cs-one-finger-tap3:before {
+    content: "\ebf2";
+}
+.cs-one-finger-tap4:before {
+    content: "\ebf3";
+}
+.cs-one-finger-tap-hold3:before {
+    content: "\ebf4";
+}
+.cs-one-finger-tap-hold4:before {
+    content: "\ebf5";
+}
+.cs-one-finger-click3:before {
+    content: "\ebf6";
+}
+.cs-one-finger-click4:before {
+    content: "\ebf7";
+}
+.cs-one-finger-swipe-horizontally:before {
+    content: "\ebf8";
+}
+.cs-one-finger-swipe-horizontally2:before {
+    content: "\ebf9";
+}
+.cs-one-finger-swipe:before {
+    content: "\ebfa";
+}
+.cs-one-finger-swipe2:before {
+    content: "\ebfb";
+}
+.cs-two-fingers-double-tap:before {
+    content: "\ebfc";
+}
+.cs-two-fingers-double-tap2:before {
+    content: "\ebfd";
+}
+.cs-two-fingers-tap:before {
+    content: "\ebfe";
+}
+.cs-two-fingers-tap2:before {
+    content: "\ebff";
+}
+.cs-one-finger-swipe-left3:before {
+    content: "\ec00";
+}
+.cs-one-finger-swipe-left4:before {
+    content: "\ec01";
+}
+.cs-one-finger-swipe-right3:before {
+    content: "\ec02";
+}
+.cs-one-finger-swipe-right4:before {
+    content: "\ec03";
+}
+.cs-one-finger-swipe-up3:before {
+    content: "\ec04";
+}
+.cs-one-finger-swipe-up4:before {
+    content: "\ec05";
+}
+.cs-one-finger-swipe-down3:before {
+    content: "\ec06";
+}
+.cs-one-finger-swipe-down4:before {
+    content: "\ec07";
+}
+.cs-file-numbers:before {
+    content: "\ec08";
+}
+.cs-file-numbers2:before {
+    content: "\ec09";
+}
+.cs-file-pages:before {
+    content: "\ec0a";
+}
+.cs-file-pages2:before {
+    content: "\ec0b";
+}
+.cs-file-app:before {
+    content: "\ec0c";
+}
+.cs-file-app2:before {
+    content: "\ec0d";
+}
+.cs-file-png:before {
+    content: "\ec0e";
+}
+.cs-file-png2:before {
+    content: "\ec0f";
+}
+.cs-file-pdf:before {
+    content: "\ec10";
+}
+.cs-file-pdf2:before {
+    content: "\ec11";
+}
+.cs-file-mp3:before {
+    content: "\ec12";
+}
+.cs-file-mp32:before {
+    content: "\ec13";
+}
+.cs-file-mp4:before {
+    content: "\ec14";
+}
+.cs-file-mp42:before {
+    content: "\ec15";
+}
+.cs-file-mov:before {
+    content: "\ec16";
+}
+.cs-file-mov2:before {
+    content: "\ec17";
+}
+.cs-file-jpg:before {
+    content: "\ec18";
+}
+.cs-file-jpg2:before {
+    content: "\ec19";
+}
+.cs-file-key:before {
+    content: "\ec1a";
+}
+.cs-file-key2:before {
+    content: "\ec1b";
+}
+.cs-file-html:before {
+    content: "\ec1c";
+}
+.cs-file-html2:before {
+    content: "\ec1d";
+}
+.cs-file-css:before {
+    content: "\ec1e";
+}
+.cs-file-css2:before {
+    content: "\ec1f";
+}
+.cs-file-java:before {
+    content: "\ec20";
+}
+.cs-file-java2:before {
+    content: "\ec21";
+}
+.cs-file-psd:before {
+    content: "\ec22";
+}
+.cs-file-psd2:before {
+    content: "\ec23";
+}
+.cs-file-ai:before {
+    content: "\ec24";
+}
+.cs-file-ai2:before {
+    content: "\ec25";
+}
+.cs-file-bmp:before {
+    content: "\ec26";
+}
+.cs-file-bmp2:before {
+    content: "\ec27";
+}
+.cs-file-dwg:before {
+    content: "\ec28";
+}
+.cs-file-dwg2:before {
+    content: "\ec29";
+}
+.cs-file-eps:before {
+    content: "\ec2a";
+}
+.cs-file-eps2:before {
+    content: "\ec2b";
+}
+.cs-file-tiff:before {
+    content: "\ec2c";
+}
+.cs-file-tiff2:before {
+    content: "\ec2d";
+}
+.cs-file-ots:before {
+    content: "\ec2e";
+}
+.cs-file-ots2:before {
+    content: "\ec2f";
+}
+.cs-file-php:before {
+    content: "\ec30";
+}
+.cs-file-php2:before {
+    content: "\ec31";
+}
+.cs-file-py:before {
+    content: "\ec32";
+}
+.cs-file-py2:before {
+    content: "\ec33";
+}
+.cs-file-c:before {
+    content: "\ec34";
+}
+.cs-file-c2:before {
+    content: "\ec35";
+}
+.cs-file-sql:before {
+    content: "\ec36";
+}
+.cs-file-sql2:before {
+    content: "\ec37";
+}
+.cs-file-rb:before {
+    content: "\ec38";
+}
+.cs-file-rb2:before {
+    content: "\ec39";
+}
+.cs-file-cpp:before {
+    content: "\ec3a";
+}
+.cs-file-cpp2:before {
+    content: "\ec3b";
+}
+.cs-file-tga:before {
+    content: "\ec3c";
+}
+.cs-file-tga2:before {
+    content: "\ec3d";
+}
+.cs-file-dxf:before {
+    content: "\ec3e";
+}
+.cs-file-dxf2:before {
+    content: "\ec3f";
+}
+.cs-file-doc:before {
+    content: "\ec40";
+}
+.cs-file-doc2:before {
+    content: "\ec41";
+}
+.cs-file-odt:before {
+    content: "\ec42";
+}
+.cs-file-odt2:before {
+    content: "\ec43";
+}
+.cs-file-xls:before {
+    content: "\ec44";
+}
+.cs-file-xls2:before {
+    content: "\ec45";
+}
+.cs-file-docx:before {
+    content: "\ec46";
+}
+.cs-file-docx2:before {
+    content: "\ec47";
+}
+.cs-file-ppt:before {
+    content: "\ec48";
+}
+.cs-file-ppt2:before {
+    content: "\ec49";
+}
+.cs-file-asp:before {
+    content: "\ec4a";
+}
+.cs-file-asp2:before {
+    content: "\ec4b";
+}
+.cs-file-ics:before {
+    content: "\ec4c";
+}
+.cs-file-ics2:before {
+    content: "\ec4d";
+}
+.cs-file-dat:before {
+    content: "\ec4e";
+}
+.cs-file-dat2:before {
+    content: "\ec4f";
+}
+.cs-file-xml:before {
+    content: "\ec50";
+}
+.cs-file-xml2:before {
+    content: "\ec51";
+}
+.cs-file-yml:before {
+    content: "\ec52";
+}
+.cs-file-yml2:before {
+    content: "\ec53";
+}
+.cs-file-h:before {
+    content: "\ec54";
+}
+.cs-file-h2:before {
+    content: "\ec55";
+}
+.cs-file-exe:before {
+    content: "\ec56";
+}
+.cs-file-exe2:before {
+    content: "\ec57";
+}
+.cs-file-avi:before {
+    content: "\ec58";
+}
+.cs-file-avi2:before {
+    content: "\ec59";
+}
+.cs-file-odp:before {
+    content: "\ec5a";
+}
+.cs-file-odp2:before {
+    content: "\ec5b";
+}
+.cs-file-dotx:before {
+    content: "\ec5c";
+}
+.cs-file-dotx2:before {
+    content: "\ec5d";
+}
+.cs-file-xlsx:before {
+    content: "\ec5e";
+}
+.cs-file-xlsx2:before {
+    content: "\ec5f";
+}
+.cs-file-ods:before {
+    content: "\ec60";
+}
+.cs-file-ods2:before {
+    content: "\ec61";
+}
+.cs-file-pps:before {
+    content: "\ec62";
+}
+.cs-file-pps2:before {
+    content: "\ec63";
+}
+.cs-file-dot:before {
+    content: "\ec64";
+}
+.cs-file-dot2:before {
+    content: "\ec65";
+}
+.cs-file-txt:before {
+    content: "\ec66";
+}
+.cs-file-txt2:before {
+    content: "\ec67";
+}
+.cs-file-rtf:before {
+    content: "\ec68";
+}
+.cs-file-rtf2:before {
+    content: "\ec69";
+}
+.cs-file-m4v:before {
+    content: "\ec6a";
+}
+.cs-file-m4v2:before {
+    content: "\ec6b";
+}
+.cs-file-flv:before {
+    content: "\ec6c";
+}
+.cs-file-flv2:before {
+    content: "\ec6d";
+}
+.cs-file-mpg:before {
+    content: "\ec6e";
+}
+.cs-file-mpg2:before {
+    content: "\ec6f";
+}
+.cs-file-quicktime:before {
+    content: "\ec70";
+}
+.cs-file-quicktime2:before {
+    content: "\ec71";
+}
+.cs-file-mid:before {
+    content: "\ec72";
+}
+.cs-file-mid2:before {
+    content: "\ec73";
+}
+.cs-file-3gp:before {
+    content: "\ec74";
+}
+.cs-file-3gp2:before {
+    content: "\ec75";
+}
+.cs-file-aiff:before {
+    content: "\ec76";
+}
+.cs-file-aiff2:before {
+    content: "\ec77";
+}
+.cs-file-aac:before {
+    content: "\ec78";
+}
+.cs-file-aac2:before {
+    content: "\ec79";
+}
+.cs-file-wav:before {
+    content: "\ec7a";
+}
+.cs-file-wav2:before {
+    content: "\ec7b";
+}
+.cs-file-zip:before {
+    content: "\ec7c";
+}
+.cs-file-zip2:before {
+    content: "\ec7d";
+}
+.cs-file-ott:before {
+    content: "\ec7e";
+}
+.cs-file-ott2:before {
+    content: "\ec7f";
+}
+.cs-file-tgz:before {
+    content: "\ec80";
+}
+.cs-file-tgz2:before {
+    content: "\ec81";
+}
+.cs-file-dmg:before {
+    content: "\ec82";
+}
+.cs-file-dmg2:before {
+    content: "\ec83";
+}
+.cs-file-iso:before {
+    content: "\ec84";
+}
+.cs-file-iso2:before {
+    content: "\ec85";
+}
+.cs-file-rar:before {
+    content: "\ec86";
+}
+.cs-file-rar2:before {
+    content: "\ec87";
+}
+.cs-file-gif:before {
+    content: "\ec88";
+}
+.cs-file-gif2:before {
+    content: "\ec89";
+}
+.cs-document-file-numbers:before {
+    content: "\ec8a";
+}
+.cs-document-file-numbers2:before {
+    content: "\ec8b";
+}
+.cs-document-file-pages:before {
+    content: "\ec8c";
+}
+.cs-document-file-pages2:before {
+    content: "\ec8d";
+}
+.cs-document-file-app:before {
+    content: "\ec8e";
+}
+.cs-document-file-app2:before {
+    content: "\ec8f";
+}
+.cs-document-file-png:before {
+    content: "\ec90";
+}
+.cs-document-file-png2:before {
+    content: "\ec91";
+}
+.cs-document-file-pdf:before {
+    content: "\ec92";
+}
+.cs-document-file-pdf2:before {
+    content: "\ec93";
+}
+.cs-document-file-mp3:before {
+    content: "\ec94";
+}
+.cs-document-file-mp32:before {
+    content: "\ec95";
+}
+.cs-document-file-mp4:before {
+    content: "\ec96";
+}
+.cs-document-file-mp42:before {
+    content: "\ec97";
+}
+.cs-document-file-mov:before {
+    content: "\ec98";
+}
+.cs-document-file-mov2:before {
+    content: "\ec99";
+}
+.cs-document-file-jpg:before {
+    content: "\ec9a";
+}
+.cs-document-file-jpg2:before {
+    content: "\ec9b";
+}
+.cs-document-file-key:before {
+    content: "\ec9c";
+}
+.cs-document-file-key2:before {
+    content: "\ec9d";
+}
+.cs-document-file-html:before {
+    content: "\ec9e";
+}
+.cs-document-file-html2:before {
+    content: "\ec9f";
+}
+.cs-document-file-css:before {
+    content: "\eca0";
+}
+.cs-document-file-css2:before {
+    content: "\eca1";
+}
+.cs-document-file-java:before {
+    content: "\eca2";
+}
+.cs-document-file-java2:before {
+    content: "\eca3";
+}
+.cs-document-file-psd:before {
+    content: "\eca4";
+}
+.cs-document-file-psd2:before {
+    content: "\eca5";
+}
+.cs-document-file-ai:before {
+    content: "\eca6";
+}
+.cs-document-file-ai2:before {
+    content: "\eca7";
+}
+.cs-document-file-bmp:before {
+    content: "\eca8";
+}
+.cs-document-file-bmp2:before {
+    content: "\eca9";
+}
+.cs-document-file-dwg:before {
+    content: "\ecaa";
+}
+.cs-document-file-dwg2:before {
+    content: "\ecab";
+}
+.cs-document-file-eps:before {
+    content: "\ecac";
+}
+.cs-document-file-eps2:before {
+    content: "\ecad";
+}
+.cs-document-file-tiff:before {
+    content: "\ecae";
+}
+.cs-document-file-tiff2:before {
+    content: "\ecaf";
+}
+.cs-document-file-ots:before {
+    content: "\ecb0";
+}
+.cs-document-file-ots2:before {
+    content: "\ecb1";
+}
+.cs-document-file-php:before {
+    content: "\ecb2";
+}
+.cs-document-file-php2:before {
+    content: "\ecb3";
+}
+.cs-document-file-py:before {
+    content: "\ecb4";
+}
+.cs-document-file-py2:before {
+    content: "\ecb5";
+}
+.cs-document-file-c:before {
+    content: "\ecb6";
+}
+.cs-document-file-c2:before {
+    content: "\ecb7";
+}
+.cs-document-file-sql:before {
+    content: "\ecb8";
+}
+.cs-document-file-sql2:before {
+    content: "\ecb9";
+}
+.cs-document-file-rb:before {
+    content: "\ecba";
+}
+.cs-document-file-rb2:before {
+    content: "\ecbb";
+}
+.cs-document-file-cpp:before {
+    content: "\ecbc";
+}
+.cs-document-file-cpp2:before {
+    content: "\ecbd";
+}
+.cs-document-file-tga:before {
+    content: "\ecbe";
+}
+.cs-document-file-tga2:before {
+    content: "\ecbf";
+}
+.cs-document-file-dxf:before {
+    content: "\ecc0";
+}
+.cs-document-file-dxf2:before {
+    content: "\ecc1";
+}
+.cs-document-file-doc:before {
+    content: "\ecc2";
+}
+.cs-document-file-doc2:before {
+    content: "\ecc3";
+}
+.cs-document-file-odt:before {
+    content: "\ecc4";
+}
+.cs-document-file-odt2:before {
+    content: "\ecc5";
+}
+.cs-document-file-xls:before {
+    content: "\ecc6";
+}
+.cs-document-file-xls2:before {
+    content: "\ecc7";
+}
+.cs-document-file-docx:before {
+    content: "\ecc8";
+}
+.cs-document-file-docx2:before {
+    content: "\ecc9";
+}
+.cs-document-file-ppt:before {
+    content: "\ecca";
+}
+.cs-document-file-ppt2:before {
+    content: "\eccb";
+}
+.cs-document-file-asp:before {
+    content: "\eccc";
+}
+.cs-document-file-asp2:before {
+    content: "\eccd";
+}
+.cs-document-file-ics:before {
+    content: "\ecce";
+}
+.cs-document-file-ics2:before {
+    content: "\eccf";
+}
+.cs-document-file-dat:before {
+    content: "\ecd0";
+}
+.cs-document-file-dat2:before {
+    content: "\ecd1";
+}
+.cs-document-file-xml:before {
+    content: "\ecd2";
+}
+.cs-document-file-xml2:before {
+    content: "\ecd3";
+}
+.cs-document-file-yml:before {
+    content: "\ecd4";
+}
+.cs-document-file-yml2:before {
+    content: "\ecd5";
+}
+.cs-document-file-h:before {
+    content: "\ecd6";
+}
+.cs-document-file-h2:before {
+    content: "\ecd7";
+}
+.cs-document-file-exe:before {
+    content: "\ecd8";
+}
+.cs-document-file-exe2:before {
+    content: "\ecd9";
+}
+.cs-document-file-avi:before {
+    content: "\ecda";
+}
+.cs-document-file-avi2:before {
+    content: "\ecdb";
+}
+.cs-document-file-odp:before {
+    content: "\ecdc";
+}
+.cs-document-file-odp2:before {
+    content: "\ecdd";
+}
+.cs-document-file-dotx:before {
+    content: "\ecde";
+}
+.cs-document-file-dotx2:before {
+    content: "\ecdf";
+}
+.cs-document-file-xlsx:before {
+    content: "\ece0";
+}
+.cs-document-file-xlsx2:before {
+    content: "\ece1";
+}
+.cs-document-file-ods:before {
+    content: "\ece2";
+}
+.cs-document-file-ods2:before {
+    content: "\ece3";
+}
+.cs-document-file-pps:before {
+    content: "\ece4";
+}
+.cs-document-file-pps2:before {
+    content: "\ece5";
+}
+.cs-document-file-dot:before {
+    content: "\ece6";
+}
+.cs-document-file-dot2:before {
+    content: "\ece7";
+}
+.cs-document-file-txt:before {
+    content: "\ece8";
+}
+.cs-document-file-txt2:before {
+    content: "\ece9";
+}
+.cs-document-file-rtf:before {
+    content: "\ecea";
+}
+.cs-document-file-rtf2:before {
+    content: "\eceb";
+}
+.cs-document-file-m4v:before {
+    content: "\ecec";
+}
+.cs-document-file-m4v2:before {
+    content: "\eced";
+}
+.cs-document-file-flv:before {
+    content: "\ecee";
+}
+.cs-document-file-flv2:before {
+    content: "\ecef";
+}
+.cs-document-file-mpg:before {
+    content: "\ecf0";
+}
+.cs-document-file-mpg2:before {
+    content: "\ecf1";
+}
+.cs-document-file-qt:before {
+    content: "\ecf2";
+}
+.cs-document-file-qt2:before {
+    content: "\ecf3";
+}
+.cs-document-file-mid:before {
+    content: "\ecf4";
+}
+.cs-document-file-mid2:before {
+    content: "\ecf5";
+}
+.cs-document-file-3gp:before {
+    content: "\ecf6";
+}
+.cs-document-file-3gp2:before {
+    content: "\ecf7";
+}
+.cs-document-file-aiff:before {
+    content: "\ecf8";
+}
+.cs-document-file-aiff2:before {
+    content: "\ecf9";
+}
+.cs-document-file-aac:before {
+    content: "\ecfa";
+}
+.cs-document-file-aac2:before {
+    content: "\ecfb";
+}
+.cs-document-file-wav:before {
+    content: "\ecfc";
+}
+.cs-document-file-wav2:before {
+    content: "\ecfd";
+}
+.cs-document-file-zip:before {
+    content: "\ecfe";
+}
+.cs-document-file-zip2:before {
+    content: "\ecff";
+}
+.cs-document-file-ott:before {
+    content: "\ed00";
+}
+.cs-document-file-ott2:before {
+    content: "\ed01";
+}
+.cs-document-file-tgz:before {
+    content: "\ed02";
+}
+.cs-document-file-tgz2:before {
+    content: "\ed03";
+}
+.cs-document-file-dmg:before {
+    content: "\ed04";
+}
+.cs-document-file-dmg2:before {
+    content: "\ed05";
+}
+.cs-document-file-iso:before {
+    content: "\ed06";
+}
+.cs-document-file-iso2:before {
+    content: "\ed07";
+}
+.cs-document-file-rar:before {
+    content: "\ed08";
+}
+.cs-document-file-rar2:before {
+    content: "\ed09";
+}
+.cs-document-file-gif:before {
+    content: "\ed0a";
+}
+.cs-document-file-gif2:before {
+    content: "\ed0b";
+}
+.cs-mobile:before {
+    content: "\e000";
+}
+.cs-laptop:before {
+    content: "\e001";
+}
+.cs-desktop:before {
+    content: "\e002";
+}
+.cs-tablet:before {
+    content: "\e003";
+}
+.cs-phone:before {
+    content: "\e004";
+}
+.cs-document3:before {
+    content: "\e005";
+}
+.cs-documents5:before {
+    content: "\e006";
+}
+.cs-search3:before {
+    content: "\e007";
+}
+.cs-clipboard3:before {
+    content: "\e008";
+}
+.cs-newspaper:before {
+    content: "\e009";
+}
+.cs-notebook9:before {
+    content: "\e00a";
+}
+.cs-book-open:before {
+    content: "\e00b";
+}
+.cs-browser:before {
+    content: "\e00c";
+}
+.cs-calendar:before {
+    content: "\e00d";
+}
+.cs-presentation:before {
+    content: "\e00e";
+}
+.cs-picture:before {
+    content: "\e00f";
+}
+.cs-pictures:before {
+    content: "\e010";
+}
+.cs-video:before {
+    content: "\e011";
+}
+.cs-camera:before {
+    content: "\e012";
+}
+.cs-printer5:before {
+    content: "\e013";
+}
+.cs-toolbox:before {
+    content: "\e014";
+}
+.cs-briefcase:before {
+    content: "\e015";
+}
+.cs-wallet:before {
+    content: "\e016";
+}
+.cs-gift:before {
+    content: "\e017";
+}
+.cs-bargraph:before {
+    content: "\e018";
+}
+.cs-grid:before {
+    content: "\e019";
+}
+.cs-expand:before {
+    content: "\e01a";
+}
+.cs-focus:before {
+    content: "\e01b";
+}
+.cs-edit:before {
+    content: "\e01c";
+}
+.cs-adjustments:before {
+    content: "\e01d";
+}
+.cs-ribbon:before {
+    content: "\e01e";
+}
+.cs-hourglass:before {
+    content: "\e01f";
+}
+.cs-lock3:before {
+    content: "\e020";
+}
+.cs-megaphone:before {
+    content: "\e021";
+}
+.cs-shield:before {
+    content: "\e022";
+}
+.cs-trophy5:before {
+    content: "\e023";
+}
+.cs-flag9:before {
+    content: "\e024";
+}
+.cs-map:before {
+    content: "\e025";
+}
+.cs-puzzle:before {
+    content: "\e026";
+}
+.cs-basket:before {
+    content: "\e027";
+}
+.cs-envelope:before {
+    content: "\e028";
+}
+.cs-streetsign:before {
+    content: "\e029";
+}
+.cs-telescope:before {
+    content: "\e02a";
+}
+.cs-gears:before {
+    content: "\e02b";
+}
+.cs-key5:before {
+    content: "\e02c";
+}
+.cs-paperclip3:before {
+    content: "\e02d";
+}
+.cs-attachment:before {
+    content: "\e02e";
+}
+.cs-pricetags:before {
+    content: "\e02f";
+}
+.cs-lightbulb:before {
+    content: "\e030";
+}
+.cs-layers:before {
+    content: "\e031";
+}
+.cs-pencil:before {
+    content: "\e032";
+}
+.cs-tools:before {
+    content: "\e033";
+}
+.cs-tools-2:before {
+    content: "\e034";
+}
+.cs-scissors:before {
+    content: "\e035";
+}
+.cs-paintbrush:before {
+    content: "\e036";
+}
+.cs-magnifying-glass:before {
+    content: "\e037";
+}
+.cs-circle-compass:before {
+    content: "\e038";
+}
+.cs-linegraph:before {
+    content: "\e039";
+}
+.cs-mic:before {
+    content: "\e03a";
+}
+.cs-strategy:before {
+    content: "\e03b";
+}
+.cs-beaker:before {
+    content: "\e03c";
+}
+.cs-caution:before {
+    content: "\e03d";
+}
+.cs-recycle:before {
+    content: "\e03e";
+}
+.cs-anchor:before {
+    content: "\e03f";
+}
+.cs-profile-male:before {
+    content: "\e040";
+}
+.cs-profile-female:before {
+    content: "\e041";
+}
+.cs-bike:before {
+    content: "\e042";
+}
+.cs-wine:before {
+    content: "\e043";
+}
+.cs-hotairballoon:before {
+    content: "\e044";
+}
+.cs-globe:before {
+    content: "\e045";
+}
+.cs-genius:before {
+    content: "\e046";
+}
+.cs-map-pin:before {
+    content: "\e047";
+}
+.cs-dial:before {
+    content: "\e048";
+}
+.cs-chat:before {
+    content: "\e049";
+}
+.cs-heart:before {
+    content: "\e04a";
+}
+.cs-cloud5:before {
+    content: "\e04b";
+}
+.cs-upload:before {
+    content: "\e04c";
+}
+.cs-download:before {
+    content: "\e04d";
+}
+.cs-target3:before {
+    content: "\e04e";
+}
+.cs-hazardous:before {
+    content: "\e04f";
+}
+.cs-piechart:before {
+    content: "\e050";
+}
+.cs-speedometer:before {
+    content: "\e051";
+}
+.cs-global:before {
+    content: "\e052";
+}
+.cs-compass9:before {
+    content: "\e053";
+}
+.cs-lifesaver:before {
+    content: "\e054";
+}
+.cs-clock:before {
+    content: "\e055";
+}
+.cs-aperture:before {
+    content: "\e056";
+}
+.cs-quote:before {
+    content: "\e057";
+}
+.cs-scope:before {
+    content: "\e058";
+}
+.cs-alarmclock:before {
+    content: "\e059";
+}
+.cs-refresh:before {
+    content: "\e05a";
+}
+.cs-happy:before {
+    content: "\e05b";
+}
+.cs-sad:before {
+    content: "\e05c";
+}
+.cs-facebook:before {
+    content: "\e05d";
+}
+.cs-twitter:before {
+    content: "\e05e";
+}
+.cs-googleplus:before {
+    content: "\e05f";
+}
+.cs-rss:before {
+    content: "\e060";
+}
+.cs-tumblr:before {
+    content: "\e061";
+}
+.cs-linkedin:before {
+    content: "\e062";
+}
+.cs-dribbble:before {
+    content: "\e063";
+}
+

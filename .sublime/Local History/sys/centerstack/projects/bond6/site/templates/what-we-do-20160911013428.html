@@ -1,0 +1,127 @@
+<!--==========================
+*  Author:		Dave Luke Jr
+*  Company:	CenterStack.io
+*  Description:	about.html
+*==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load customtags %}
+{% load staticfiles %}
+{% block content %}
+
+
+<!--	Page Title
+========================================= -->
+<section class="hero-big text-light parallax-section" style="background-image: url({% static 'img/stak/Bond6-196.jpg' %}); background-size: cover; background-position: center center;"  id="hero">
+	<div class="wrapper align-center" id="page-title">
+		<h1><strong> What <span class="coloredd">We</span> Do </strong></h1>
+	</div>
+</section>
+
+
+<!--	Services
+========================================= -->
+<section id="page-body" class="p-b-100">
+	<div class="wrapper-small">
+		<h3 class="align-center p-b-3"><strong> Our Mission </strong></h3>
+		<hr class="align-center small thick colored" />
+		<p class="text-justify fs-16 p-t-3"> Bond 6 Fitness is New York City's premiere private personal training company. Founded by head trainer Blair Small, Bond 6 Fitness has one mission: transform your body and health while reaching optimum levels of fitness. Our emphasis is on ideal body composition through strength and endurance training. Bond 6 customizes training to each client's specific goals, making <br><br>sure to push and challenge you just the right amount to see maximum results. We believe strongly in developing healthy lifestyles with our clients, through inspiration and educated guidance. It is our job to get you eating right and doing the necessary work outside of sessions to reach and sustain your goals. Training with Bond 6 is the complete fitness and health experience.</p>
+	</div>
+</section>
+
+
+<section id="page-body" class="p-tb-0">
+	<div class="column-section boxed-sticky adapt-height clearfix b-tb-1-l">
+		<div class="column one-half bigpadding has-animation p-l-60 p-t-50 p-b-30 p-r-40">
+			<h3 class="p-b-3"><strong> About Blair </strong></h3>
+			<hr class="small thick colored" />
+			<p class="p-b-40 fs-16 p-t-3 text-justify"> Blair has been living in New York City since 2002. He graduated from New York University in 2006 with a major in History and a minor in Journalism, before getting his personal training certification. <br><br>Blair has been training clients in New York City for over 7 years, with more than 10,000 sessions under his belt. He cares deeply about helping others reach their fitness goals, and is dedicated to teaching a lifestyle of health. <br><br>Blair is constantly expanding his knowledge and education, through coursework, new certifications, and practical experiences in the fitness industry. "We want clients to experience how good it feels to be strong, to be fit, to eat well, and to be happy about how you look. We are 100% committed to leading you there." <br><br>In addition to training, Blair enjoys surfing, photography, writing music, cooking and traveling. </p>
+		</div>
+		<div class="column one-half last-col has-animation" data-delay="200" style="background:url({% static 'img/stak/Bond6-302.jpg' %}) center center;background-size:cover;"> </div>
+	</div>
+</section>
+
+
+
+<section id="page-body" class="p-tb-100">
+	<div id="icons" class="wrapper">
+		<h3 class="align-center"><strong> Areas Of Expertise </strong></h3>
+		<hr class="align-center small thick colored">
+		<p class="align-center fs-15 m-b-80">Our goal is to provide you with a complete health and fitness experience,<br>centered around these 6 essential elements of health and fitness.</p>
+		<div class="column-section clearfix">
+			<div class="column one-third">
+				<div class="icon-box">
+					<div class="icon-box-icon align-center">
+						<i class="flaticon-dumbbell-1 colored"> </i>
+					</div>
+					<div class="icon-box-content">
+						<h5 class="uppercase"> STRENGTH TRAINING </h5>
+						<p> Traditional and contemporary modes of strength training using several forms of resistance. </p>
+					</div>
+				</div>
+			</div>
+			<div class="column one-third">
+				<div class="icon-box">
+					<div class="icon-box-icon align-center">
+						<i class="flaticon-treadmill-1 colored"> </i>
+					</div>
+					<div class="icon-box-content">
+						<h5 class="uppercase"> CARDIOVASCULAR CONDITIONING </h5>
+						<p> Aerobic and anaerobic exercise for improving endurance and speed. </p>
+					</div>
+				</div>
+			</div>
+			<div class="column one-third last-col">
+				<div class="icon-box">
+					<div class="icon-box-icon align-center">
+						<i class="flaticon-stopwatch colored"> </i>
+					</div>
+					<div class="icon-box-content">
+						<h5 class="uppercase"> HIIT (High Intensity Interval Training) </h5>
+						<p> A mix of high and low intensity interval exercises for a complete metabolic and fat-burning workout. </p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="column-section clearfix">
+			<div class="column one-third">
+				<div class="icon-box">
+					<div class="icon-box-icon align-center">
+						<i class="flaticon-gym colored"> </i>
+					</div>
+					<div class="icon-box-content">
+						<h5 class="uppercase"> FLEXIBILITY AND MOBILITY TRAINING </h5>
+						<p> Corrective exercise to improve flexibility, mobility, and muscular balance. </p>
+					</div>
+				</div>
+			</div>
+			<div class="column one-third">
+				<div class="icon-box">
+					<div class="icon-box-icon align-center">
+						<i class="flaticon-barbell-and-plates colored"> </i>
+					</div>
+					<div class="icon-box-content">
+						<h5 class="uppercase"> FUNCTIONAL TRAINING </h5>
+						<p> Training for everyday activities to improve joint stability, mobility, and motor patterns. </p>
+					</div>
+				</div>
+			</div>
+			<div class="column one-third last-col">
+				<div class="icon-box">
+					<div class="icon-box-icon align-center">
+						<i class="flaticon-fruit-3 colored"> </i>
+					</div>
+					<div class="icon-box-content">
+						<h5 class="uppercase"> NUTRITIONAL GUIDANCE </h5>
+						<p> Nutritional advice, accountability, and motivation supported by our years of practical experience and knowledge. </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="spacer-big"></div>
+</section>
+	
+
+	
+{% endblock %}

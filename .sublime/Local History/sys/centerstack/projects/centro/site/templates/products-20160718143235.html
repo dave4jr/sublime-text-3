@@ -1,0 +1,506 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	index.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+<!--	Page Title
+========================================= -->
+<section class="page-title background-title dark parallax-8 chalk">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h3 class="text-uppercase"> Products </h3>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!--	Contact Us
+========================================= -->
+<section class="body-content">
+	<div class="page-content ">
+		<div class="container">
+			<div class="row ">
+				<div class="heading-title border-short-bottom text-center">
+					<h3 class="text-uppercase"> we loved to design </h3>
+					<div class="half-txt"> Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus. Nam libero tempore </div>
+				</div>
+				<div class="col-md-4">
+					<div class="featured-item feature-border-box text-left">
+						<div class="icon">
+							<i class="icon-mobile"> </i>
+						</div>
+						<div class="title text-uppercase">
+							<h4> Full Responsive </h4>
+						</div>
+						<div class="desc"> Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="featured-item feature-border-box text-left">
+						<div class="icon">
+							<i class="icon-clock2"> </i>
+						</div>
+						<div class="title text-uppercase">
+							<h4> Timely Deliver </h4>
+						</div>
+						<div class="desc"> Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="featured-item feature-border-box text-left">
+						<div class="icon">
+							<i class="icon-tools"> </i>
+						</div>
+						<div class="title text-uppercase">
+							<h4> 24/7 Support </h4>
+						</div>
+						<div class="desc"> Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="page-content0-">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="responsive-img text-center">
+						<img alt="" src="{% static 'massive/img/browser-view.png' %}" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="page-content gray-bg">
+		<div class="container">
+			<div class="row">
+				<div class="post-list-aside">
+					<div class="post-single">
+						<div class="col-md-6">
+							<div class="post-desk">
+								<div class="m-bot-30">
+									<span class="post-sub-title text-uppercase"> who we are </span>
+									<h4 class="text-uppercase"> We're a hardcore web developer </h4>
+								</div>
+								<p> Phasellus fringilla suscipit risus nec eleifend. Pellentesque eu quam sem, ac malesuada leo sem quam pellente. Awesome sliders give you the opportunity to showcase your content. </p>
+								<ul class="m-bot-30 circle-list inline-block">
+									<li> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </li>
+									<li> Adipisci blanditiis delectus deserunt dolorem </li>
+									<li> Impedit inventore itaque iure libero maiores simso. </li>
+								</ul>
+								<div>
+									<a class="btn btn-small btn-dark-solid " href="#"> Read More </a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="post-img m-top-50">
+								<img alt="" src="{% static 'massive/img/lap-5.png' %}" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="dark dark-bg page-content ">
+		<div class="container">
+			<div class="row">
+				<div class=" inline-block">
+					<div class="col-md-3 ">
+						<div class="fun-factor fun-icon-text-parallel alt">
+							<div class="icon">
+								<i class="icon-layers"> </i>
+								<h1 class="timer theme-color" data-from="0" data-speed="1000" data-to="36"> 36 </h1>
+							</div>
+							<div class="fun-info">
+								<span> HTML multipage </span>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="fun-factor fun-icon-text-parallel alt">
+							<div class="icon">
+								<i class="icon-computer_imac_slim"> </i>
+								<h1 class="timer theme-color" data-from="0" data-speed="1000" data-to="29"> 29 </h1>
+							</div>
+							<div class="fun-info">
+								<span> One page demo </span>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="fun-factor fun-icon-text-parallel alt">
+							<div class="icon">
+								<i class="icon-database"> </i>
+								<h1 class="timer theme-color" data-from="0" data-speed="1000" data-to="87"> 87 </h1>
+							</div>
+							<div class="fun-info">
+								<span> usefull shortcode </span>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="fun-factor fun-icon-text-parallel alt">
+							<div class="icon">
+								<i class="icon-linegraph"> </i>
+								<h1 class="timer theme-color" data-from="0" data-speed="1000" data-to="17"> 17 </h1>
+							</div>
+							<div class="fun-info">
+								<span> Different Category </span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="page-content">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="heading-title border-short-bottom text-center">
+						<h3 class="text-uppercase"> recent work </h3>
+						<div class="half-txt"> Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus. Nam libero tempore </div>
+					</div>
+					<div class="portfolio col-3 gutter m-top-0 m-bot-0 inline-block">
+						<div class="portfolio-item cat1 cat3 ">
+							<div class="thumb">
+								<img alt="" src="{% static 'massive/img/portfolio/01.jpg' %}" />
+								<div class="portfolio-hover">
+									<div class="action-btn">
+										<a class="popup-link" href="{% static 'massive/img/portfolio/01.jpg' %}" title="lightbox view">
+											<i class="icon-basic_magnifier"> </i>
+										</a>
+									</div>
+									<div class="portfolio-description">
+										<h4>
+											<a class="popup-link" href="{% static 'massive/img/portfolio/01.jpg' %}" title="lightbox view"> lightbox view </a>
+										</h4>
+										<p>
+											<a href="#"> category </a>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio-item cat2 cat4">
+							<div class="thumb">
+								<img alt="" src="{% static 'massive/img/portfolio/02.jpg' %}" />
+								<div class="portfolio-hover">
+									<div class="action-btn">
+										<a href="{% url 'massive-portfolio-single' %}">
+											<i class="icon-basic_link"> </i>
+										</a>
+									</div>
+									<div class="portfolio-description">
+										<h4>
+											<a href="{% url 'massive-portfolio-single' %}"> External link </a>
+										</h4>
+										<p>
+											<a href="#"> category 1 </a> ,
+											<a href="#"> category 2 </a>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio-item cat1 cat2">
+							<div class="thumb">
+								<div class="portfolio-slider">
+									<ul class="slides">
+										<li>
+											<a href="{% static 'massive/img/portfolio/07.jpg' %}" title="Freshness Photo">
+												<img alt="" src="{% static 'massive/img/portfolio/07.jpg' %}" /> </a>
+										</li>
+										<li>
+											<a href="{% static 'massive/img/portfolio/07a.jpg' %}" title="Awesome Lightbox">
+												<img alt="" src="{% static 'massive/img/portfolio/07a.jpg' %}" /> </a>
+										</li>
+										<li>
+											<a href="{% static 'massive/img/portfolio/07b.jpg' %}" title="Massive UI Components">
+												<img alt="" src="{% static 'massive/img/portfolio/07b.jpg' %}" /> </a>
+										</li>
+										<li>
+											<a href="{% static 'massive/img/portfolio/07c.jpg' %}" title="Amazing Theme">
+												<img alt="" src="{% static 'massive/img/portfolio/07c.jpg' %}" /> </a>
+										</li>
+									</ul>
+								</div>
+								<div class="portfolio-hover">
+									<div class="action-btn">
+										<a href="#">
+											<i class="icon-basic_magnifier"> </i>
+										</a>
+									</div>
+									<div class="portfolio-description">
+										<h4>
+											<a href="#"> lightbox Gallary </a>
+										</h4>
+										<p>
+											<a href="#"> category </a>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio-item cat1 cat4">
+							<div class="thumb">
+								<img alt="" src="{% static 'massive/img/portfolio/03.jpg' %}" />
+								<div class="portfolio-hover">
+									<div class="action-btn">
+										<a class="popup-vimeo" href="https://vimeo.com/45830194">
+											<i class="icon-arrows_keyboard_right"> </i>
+										</a>
+									</div>
+									<div class="portfolio-description">
+										<h4>
+											<a class="popup-vimeo" href="https://vimeo.com/45830194"> Video lightbox </a>
+										</h4>
+										<p>
+											<a href="#"> category </a>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio-item cat2 cat4">
+							<div class="thumb">
+								<img alt="" src="{% static 'massive/img/portfolio/04.jpg' %}" />
+								<div class="portfolio-hover">
+									<div class="action-btn">
+										<a class="popup-link" href="{% static 'massive/img/portfolio/04.jpg' %}" title="lightbox view">
+											<i class="icon-basic_magnifier"> </i>
+										</a>
+									</div>
+									<div class="portfolio-description">
+										<h4>
+											<a class="popup-link" href="{% static 'massive/img/portfolio/04.jpg' %}" title="lightbox view"> lightbox view </a>
+										</h4>
+										<p>
+											<a href="#"> category 3 </a> ,
+											<a href="#"> category 4 </a>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio-item cat3 ">
+							<div class="thumb">
+								<img alt="" src="{% static 'massive/img/portfolio/05.jpg' %}" />
+								<div class="portfolio-hover">
+									<div class="action-btn">
+										<a href="{% url 'massive-portfolio-single' %}">
+											<i class="icon-basic_link"> </i>
+										</a>
+									</div>
+									<div class="portfolio-description">
+										<h4>
+											<a href="{% url 'massive-portfolio-single' %}"> External link </a>
+										</h4>
+										<p>
+											<a href="#"> category </a>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio-item cat2 cat5 ">
+							<div class="thumb">
+								<div class="portfolio-slider-alt">
+									<ul class="slides">
+										<li>
+											<a href="{% static 'massive/img/portfolio/08.jpg' %}" title="Freshness">
+												<img alt="" src="{% static 'massive/img/portfolio/08.jpg' %}" /> </a>
+										</li>
+										<li>
+											<a href="{% static 'massive/img/portfolio/08a.jpg' %}" title="Massive">
+												<img alt="" src="{% static 'massive/img/portfolio/08a.jpg' %}" /> </a>
+										</li>
+										<li>
+											<a href="{% static 'massive/img/portfolio/08b.jpg' %}" title="Bootstrap">
+												<img alt="" src="{% static 'massive/img/portfolio/08b.jpg' %}" /> </a>
+										</li>
+									</ul>
+								</div>
+								<div class="portfolio-hover">
+									<div class="action-btn">
+										<a href="#">
+											<i class="icon-basic_magnifier"> </i>
+										</a>
+									</div>
+									<div class="portfolio-description">
+										<h4>
+											<a href="#"> lightbox gallery </a>
+										</h4>
+										<p>
+											<a href="#"> category </a>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio-item cat1 cat4 cat3 cat5">
+							<div class="thumb">
+								<img alt="" src="{% static 'massive/img/portfolio/06.jpg' %}" />
+								<div class="portfolio-hover">
+									<div class="action-btn">
+										<a class="popup-link" href="{% static 'massive/img/portfolio/06.jpg' %}" title="lightbox view">
+											<i class="icon-basic_magnifier"> </i>
+										</a>
+									</div>
+									<div class="portfolio-description">
+										<h4>
+											<a class="popup-link" href="{% static 'massive/img/portfolio/06.jpg' %}" title="lightbox view"> lightbox view </a>
+										</h4>
+										<p>
+											<a href="#"> category 5 </a> ,
+											<a href="#"> category 6 </a>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio-item cat2 cat4">
+							<div class="thumb">
+								<img alt="" src="{% static 'massive/img/portfolio/10.jpg' %}" />
+								<div class="portfolio-hover">
+									<div class="action-btn">
+										<a class="popup-link" href="{% static 'massive/img/portfolio/10.jpg' %}" title="lightbox view">
+											<i class="icon-basic_magnifier"> </i>
+										</a>
+									</div>
+									<div class="portfolio-description">
+										<h4>
+											<a class="popup-link" href="{% static 'massive/img/portfolio/10.jpg' %}" title="lightbox view"> lightbox view </a>
+										</h4>
+										<p>
+											<a href="#"> category 3 </a> ,
+											<a href="#"> category 4 </a>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="page-content p-top-0">
+		<div class="container">
+			<div class="row">
+				<div class="heading-title border-short-bottom text-center">
+					<h3 class="text-uppercase"> massive The Only Theme You Need </h3>
+					<div class="half-txt"> Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus. Nam libero tempore </div>
+				</div>
+				<div class="post-list-aside">
+					<div class="post-single">
+						<div class="col-md-6">
+							<section class="normal-tabs line-tab">
+								<ul class="nav nav-tabs">
+									<li class="active">
+										<a aria-expanded="false" data-toggle="tab" href="#tab-01"> Philosophy </a>
+									</li>
+									<li class="">
+										<a aria-expanded="true" data-toggle="tab" href="#tab-02"> Mission &amp; Vision </a>
+									</li>
+									<li class="">
+										<a aria-expanded="false" data-toggle="tab" href="#tab-03"> Our Goal </a>
+									</li>
+								</ul>
+								<div class="panel-body">
+									<div class="tab-content">
+										<div class="tab-pane active" id="tab-01">
+											<p> Praesent pharetra, justo ut scelerisque mattis, leo quam aliquet diam, congue laoreet elit metus eget diam. Proin ac metus diam. In quis scelerisque velit. Proin pellentesque neque ut scelerisque dapibus. Praesent elementum feugiat dignissim. Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque mattis, leo quam aliquet diam, congue laoreet elit metus eget diam. Proin ac metus diam. </p>
+											<p> Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque mattis, leo quam aliquet diam, congue laoreet elit metus eget diam. Proin ac metus diam. </p>
+											<div>
+												<a class="btn btn-medium btn-dark-border " href="#"> read more </a>
+											</div>
+										</div>
+										<div class="tab-pane " id="tab-02">
+											<p> Placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque mattis, leo quam aliquet diam, congue laoreet elit metus eget diam. Proin ac metus diam. In quis scelerisque velit. Proin pellentesque neque ut scelerisque dapibus. Praesent elementum feugiat dignissim. Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque mattis, leo quam aliquet diam, congue laoreet elit metus eget diam. Proin ac metus diam. In quis scelerisque velit. Proin pellentesque neque ut scelerisque dapibus. Praesent elementum feugiat dignissim. Nunc placerat mi id nisi interdum mollis. </p>
+										</div>
+										<div class="tab-pane" id="tab-03">
+											<p> Kusto ut scelerisque mattis, leo quam aliquet diam, congue laoreet elit metus eget diam. Proin ac metus diam. In quis scelerisque velit. Proin pellentesque neque ut scelerisque dapibus. Praesent elementum feugiat dignissim. Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque mattis, leo quam aliquet diam, congue laoreet elit metus eget diam. Proin ac metus diam. In quis scelerisque velit. Proin pellentesque neque ut scelerisque dapibus. Praesent elementum feugiat dignissim. Nunc placerat mi id nisi interdum mollis. </p>
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+						<div class="col-md-6">
+							<div class="post-desk p-top-0 p-bot-0">
+								<div class="heading-title-alt text-left heading-border-bottom">
+									<h4 class="text-uppercase"> some services that we provide occationally </h4>
+								</div>
+								<p> justo ut scelerisque mattis, leo quam aliquet diam, congue laoreet elit metus eget diam. Proin ac metus diam. In quis scelerisque velit. Proin pellentesque neque ut scelerisque dapibus. Praesent elementum feugiat dignissim. Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque mattis, leo quam aliquet diam, congue laoreet elit metus eget diam. Proin ac metus diam. </p>
+								<ul class="m-bot-30 circle-list inline-block">
+									<li> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </li>
+									<li> Adipisci blanditiis delectus deserunt dolorem </li>
+									<li> Impedit inventore itaque iure libero maiores simso. </li>
+								</ul>
+								<div>
+									<a class="btn btn-medium btn-dark-solid " href="#"> read more </a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="full-width promo-box dark-bg ">
+		<div class="container">
+			<div class="col-md-12">
+				<div class="promo-info">
+					<span class="light-txt text-uppercase m-top-0"> Are you impressed with our creative work? </span>
+					<h3 class="light-txt"> start
+						<span class="theme-color"> building your project </span> with massive </h3>
+				</div>
+				<div class="promo-btn">
+					<a class="btn btn-medium btn-light-solid btn-transparent text-uppercase" href="#"> purchase now </a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="page-content">
+		<div class="container">
+			<div class="row">
+				<div class="post-list-aside">
+					<div class="post-single">
+						<div class="col-md-6">
+							<div class="post-desk">
+								<div class="m-bot-30">
+									<h4 class="text-uppercase"> stunning website builder </h4>
+								</div>
+								<p> Phasellus fringilla suscipit risus nec eleifend. Pellentesque eu quam sem, ac malesuada leo sem quam pellente. Awesome sliders give you the opportunity to showcase your content. </p>
+								<ul class="m-bot-30 circle-list inline-block">
+									<li> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </li>
+									<li> Adipisci blanditiis delectus deserunt dolorem </li>
+									<li> Impedit inventore itaque iure libero maiores simso. </li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="post-img">
+								<img alt="" src="{% static 'massive/img/monitor-1.png' %}" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% endblock %}

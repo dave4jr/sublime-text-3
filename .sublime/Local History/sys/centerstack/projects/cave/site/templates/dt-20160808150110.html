@@ -1,0 +1,12 @@
+<tbody>
+	{% for member in members %}
+		<tr id="member_{{ member.pk }}" href="#animatedModal">
+			<td class="col_id">{{ member.member_id }}</td>
+			<td class="col_name">{{ member.name }}</td>
+			<td class="col_level">{{ member.level }}</td>
+			<td class="col_status">{{ member.status }}</td>
+			<td class="col_hours">{{ member.hours_remaining }}</td>
+			<td class="col_angle"><i class="icon-angle-right fs-14"></i></td>
+		</tr>
+	{% endfor %}
+</tbody>

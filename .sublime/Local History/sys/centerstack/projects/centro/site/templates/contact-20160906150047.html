@@ -1,0 +1,82 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	index.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+<!--	Page Title
+========================================= -->
+<section class="page-title background-title dark parallax-wood2">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h3 class="text-uppercase"> Contact Us </h3>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!--	Contact Us
+========================================= -->
+<section class="body-content">
+	<div class="page-content p-t-60">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<h4 class="text-uppercase"> Office Location </h4>
+					<p>  34 SE Bridgeford Blvd <br>Bend, OR 97702 </p>
+					<address>
+						<p> Tel: (541) 382-3534 </p>
+						<p> Fax: (541) 385-3225 </p>
+						<p> Email: info@centroprintsolutions.com </p>
+					</address>
+				</div>
+				<div class="col-md-8">
+					<h4 class="text-uppercase"> have you a question? </h4>
+					<p class="m-b-0"> Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus. Nam libero tempore </p>
+<form action="/contact_me/" class="contact-comments m-t-20" method="post">
+	
+	<div class="row">
+		<div class="col-md-6 form-group">
+			{% csrf_token %}
+			<label> Name * </label>
+			<!-- Name -->
+			<input class=" form-control" id="name" maxlength="100" name="name" required="" type="text" /> </div>
+		<div class="col-md-6 form-group">
+			<label> Email * </label>
+			<!-- Email -->
+			<input class=" form-control" id="email" maxlength="100" name="email" required="" type="email" /> </div>
+		<div class="form-group col-md-6">
+			<label> Phone </label>
+			<!-- Phone -->
+			<input class=" form-control" id="phone" maxlength="100" name="phone" type="text" /> </div>
+		<div class="form-group col-md-6">
+			<label> Subject </label>
+			<!-- Subject -->
+			<input class=" form-control" id="subject" maxlength="100" name="subject" type="text" /> </div>
+		<div class="form-group col-md-12">
+			<label> Comments </label>
+			<!-- Comment -->
+			<textarea class="cmnt-text form-control" id="comments" maxlength="400" name="comments" rows="6"> </textarea>
+		</div>
+		<!-- Send Button -->
+		<div class="form-group col-md-12">
+			<button class="btn btn-small btn-dark-solid " type="submit"> Send Message </button>
+		</div>
+	</div>
+</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% endblock %}

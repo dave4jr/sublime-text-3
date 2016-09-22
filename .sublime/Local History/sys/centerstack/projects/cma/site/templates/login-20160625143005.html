@@ -1,0 +1,223 @@
+<!--======================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	login.html
+ *======================-->
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load widget_tweaks %}
+	
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title> CMA | Login </title>
+	<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<meta content="Rental Management System" name="description" />
+	<meta content="CenterStack" name="author" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+	<!--	Fonts
+	========================================= -->
+	<link href="http://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700,800,900&amp;subset=all">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/global/plugins/font-awesome/css/font-awesome.min.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/global/plugins/simple-line-icons/simple-line-icons.min.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/icons/css/pe-icon-7-stroke.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/icons/css/pe-icon-set-interface.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/icons/css/pe-icon-set-edition.css' %}">
+
+
+	<!--	Bootstrap
+	========================================= -->
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/global/plugins/bootstrap/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/global/plugins/bootstrap-toastr/toastr.min.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/global/plugins/bootstrap-modal/css/bootstrap-modal.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/global/plugins/bootstrap-select/css/bootstrap-select.min.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/global/plugins/select2/css/select2.min.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/global/plugins/select2/css/select2-bootstrap.min.css' %}">
+
+
+	<!--	Date Range Pickers
+	========================================= -->
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/global/plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/global/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/global/plugins/clockface/css/clockface.css' %}">
+
+
+	<!--	Metronic
+	========================================= -->
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/global/plugins/jstree/dist/themes/default/style.min.css' %}" id="style_components">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/global/css/components-rounded.min.css' %}" id="style_components">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/global/plugins/morris/morris.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/pages/css/invoice-2.min.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/pages/css/about.min.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/pages/css/profile-2.min.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/pages/css/profile.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/global/css/plugins.min.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/layouts/layout2/css/layout.min.css' %}">
+
+
+	<!--	CenterStack
+	========================================= -->
+	<link rel="stylesheet" href="{% static 'css/aura.css' %}">
+	<link rel="stylesheet" href="{% static 'css/helpers.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+	
+	<!--	JQuery / Moment / JSColor / Stripe
+	========================================= -->
+	<script src="{% static 'plugins/scheduler/lib/jquery.min.js' %}"></script>
+	<script src="{% static 'plugins/scheduler/lib/moment.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/jquery.mockjax.js' %}"></script>
+	<script src="{% static 'plugins/jscolor/jscolor.js' %}"></script>
+	<script src="https://js.stripe.com/v2/"></script>
+
+	{% include 'session_security/all.html' %}
+
+</head>
+<body style="background: url({% static 'img/bg/4.jpg' %}) no-repeat; background-size: cover;">
+
+<!--	Login Form
+========================================= -->
+	<div class="pi-row">
+		<div class="p-rl-60 pi-col-md-4 pi-col-md-offset-4 pi-col-sm-6 pi-col-sm-offset-3 pi-col-xs-8 pi-col-xs-offset-2" style="position:relative; top: 200px;">
+			<div class="p-rl-20 p-b-10 pi-box pi-round pi-shadow-15 pi-section-white">
+
+				<!--	Logo
+				========================================= -->
+				<div class="pi-row m-b-0 m-t-0">
+					<p class="pi-text-center">
+						<img style="max-width: 100px;" src="{% static 'img/logos/logo-new.png' %}">
+					</p>
+				</div>
+
+				<!--	Form
+				========================================= -->
+				<form action="" name="login" method="post" role="form" autocomplete="off">
+					{% csrf_token %}
+					{% if next %}
+						<input type="hidden" name="next" value="{{ next }}" />
+					{% endif %}
+					<div class="form-group m-b-10">
+						<div class="pi-input-with-icon">
+							<div class="pi-input-icon">
+								<i class="pe-7s-users"> </i>
+							</div>
+							<input class="form-control" type="text" id="username" name="username" placeholder="Username"  autocomplete="off">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="pi-input-with-icon">
+							<div class="pi-input-icon">
+								<i class="pe-7s-lock"> </i>
+							</div>
+							<input class="form-control" type="password" name="password" id="password" placeholder="Password"  autocomplete="off">
+						</div>
+					</div>
+					<p><button class="btn base pi-btn-wide p-rl-20" type="submit">Sign In</button></p>
+				</form>
+			</div>
+			
+		</div>
+	</div>
+
+
+	<!--	Bootstrap
+	========================================= -->
+	<script src="{% static 'plugins/metronic/assets/global/plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/bootstrap-tabdrop/js/bootstrap-tabdrop.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/js.cookie.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/bootstrap-confirmation/bootstrap-confirmation.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/bootstrap-modal/js/bootstrap-modalmanager.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/bootstrap-modal/js/bootstrap-modal.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/bootstrap-toastr/toastr.min.js' %}"></script>
+	
+
+	<!--	Plugins
+	========================================= -->
+	<script src="{% static 'plugins/metronic/assets/global/plugins/jquery.blockui.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/uniform/jquery.uniform.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/jquery.sparkline.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/morris/morris.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/morris/raphael-min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/counterup/jquery.waypoints.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/counterup/jquery.counterup.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/jquery-validation/js/jquery.validate.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/jquery-validation/js/additional-methods.min.js' %}"></script>
+	<script src="{% static 'plugins/easy-pie-chart/dist/easy-pie-chart.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/jstree/dist/jstree.min.js' %}"></script>
+	
+
+	<!--	Datatables
+	========================================= -->
+	<script src="{% static 'plugins/metronic/assets/global/plugins/bootstrap-select/js/bootstrap-select.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/select2/js/select2.full.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/clockface/js/clockface.js' %}"></script>
+	<script src="{% static 'plugins/combodate/combodate.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/scripts/datatable.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/datatables/datatables.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js' %}"></script>
+	<script src="{% static 'plugins/xeditable/bootstrap3-editable/js/bootstrap-editable.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/bootstrap-editable/inputs-ext/address/address.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/bootstrap-editable/inputs-ext/wysihtml5/wysihtml5.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/bootstrap-typeahead/bootstrap3-typeahead.min.js' %}"></script>
+
+
+	<!--	Metronic
+	========================================= -->
+	<script src="{% static 'plugins/metronic/assets/global/scripts/app.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/pages/scripts/dashboard.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/pages/scripts/components-bootstrap-select.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/pages/scripts/components-select2.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/pages/scripts/profile.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/pages/scripts/ui-confirmations.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/pages/scripts/table-datatables-editable.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/pages/scripts/ui-extended-modals.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/pages/scripts/ui-toastr.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/pages/scripts/login.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/pages/scripts/form-samples.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/layouts/layout2/scripts/layout.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/layouts/layout2/scripts/demo.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/layouts/global/scripts/quick-sidebar.min.js' %}"></script>
+
+	<!--	Calendar
+	========================================= -->
+	<script src="{% static 'plugins/amcharts/amcharts/amcharts.js' %}"></script>
+	<script src="{% static 'plugins/amcharts/amcharts/serial.js' %}"></script>
+	<script src="{% static 'plugins/amcharts/amcharts/gantt.js' %}"></script>
+	<script src="{% static 'plugins/amcharts/amcharts/plugins/export/amexport.js' %}"></script>
+
+	<!--	FullCalendar
+	========================================= -->
+	<script src="{% static 'plugins/scheduler/lib/fullcalendar.js' %}"></script>
+	<script src="{% static 'plugins/scheduler/scheduler.js' %}"></script>
+
+	
+	<!--	Centerstack
+	========================================= -->
+	<script src="{% static 'plugins/dateformat/dateformat.min.js' %}"></script>
+	<script src="{% static 'js/aura.js' %}"></script>
+	<script src="{% static 'js/custom.js' %}"></script>
+	<script>
+		$('.actions:has(.btn)').css({
+			padding: '0px'
+		});
+	</script>
+
+</body>
+</html>
+				

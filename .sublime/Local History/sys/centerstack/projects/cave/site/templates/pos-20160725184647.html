@@ -1,0 +1,240 @@
+<!--======================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	charge.html
+ *======================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% block content_site %}
+
+
+<!--	Charge
+========================================= -->
+<div class="pi-row">
+	<div class="pi-col-sm-4">
+		<div class="portlet light portlet-fit ">
+			<div class="portlet-body p-10">
+				<form role="form" id="payment-form" method="POST" action="">
+					{% csrf_token %}
+					<div class="pi-row pi-grid-small-margins">
+						<div class="pi-col-sm-12">
+							<label>Card Number</label>
+							<div class="form-group">
+								<div class="pi-input-with-icon">
+									<div class="pi-input-icon">
+										<i class="icon-7s-credit"> </i>
+									</div>
+									<input type="tel" class="form-control" name="cardNumber" placeholder="•••• •••• •••• ••••" autocomplete="cc-number" required autofocus />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="pi-row pi-grid-small-margins">
+						<div class="pi-col-sm-6">
+							<label for="cardExpiry">
+								<span class="hidden-xs">Expiration Date</span>
+							</label>
+							<div class="form-group">
+								<div class="pi-input-with-icon">
+									<div class="pi-input-icon">
+										<i class="icon-7s-date"> </i>
+									</div>
+									<input type="tel" class="form-control" name="cardExpiry" placeholder="MM / YY" autocomplete="cc-exp" required />
+								</div>
+							</div>
+						</div>
+						<div class="pi-col-sm-6">
+							<label for="cardCVC">CVC</label>
+							<div class="form-group">
+								<div class="pi-input-with-icon">
+									<div class="pi-input-icon">
+										<i class="icon-7s-key"> </i>
+									</div>
+									<input type="tel" class="form-control" name="cardCVC" placeholder="CVC" autocomplete="cc-csc" required />
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<!--	Button
+					========================================= -->
+					<div class="pi-row pi-grid-small-margins">
+						<div class="pi-col-sm-12">
+							<button class="subscribe btn base btn-block o-10" type="button">Charge</button>
+						</div>
+					</div>
+					<div class="pi-row pi-grid-small-margins" style="display:none;">
+						<div class="pi-col-sm-12">
+							<p class="payment-errors"></p>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!--	Stripe / Form Validation Javascript
+========================================= -->
+<script>
+	$(function() {
+		var $form = $('#payment-form');
+		$form.find('.subscribe').on('click', payWithStripe);
+
+		function payWithStripe(e) {
+			e.preventDefault();
+
+			if (!validator.form()) {
+				return;
+			}
+			$form.find('.subscribe').prop('disabled', true);
+
+			var PublishableKey = 'pk_test_6eKlYSUJZWIJnmPzHxp3qAYJ';
+			Stripe.setPublishableKey(PublishableKey);
+
+			var expiry = $form.find('[name=cardExpiry]').payment('cardExpiryVal');
+			var ccData = {
+				number: $form.find('[name=cardNumber]').val().replace(/\s/g, ''),
+				cvc: $form.find('[name=cardCVC]').val(),
+				exp_month: expiry.month,
+				exp_year: expiry.year
+			};
+
+			Stripe.card.createToken(ccData, function stripeResponseHandler(status, response) {
+				if (response.error) {
+					$form.find('.subscribe').html('Try again').prop('disabled', false);
+					$form.find('.payment-errors').text(response.error.message);
+					$form.find('.payment-errors').closest('.pi-row').show();
+				} else {
+					$form.find('.payment-errors').closest('.pi-row').hide();
+					$form.find('.payment-errors').text("");
+					var token = response.id;
+
+					/*	Sweet Alert Confirmation
+					========================================= */
+					swal({
+						title: "Confirm Charge", 
+						text: "Proceed with charge of $xx?", 
+						type:"warning", 
+						showCancelButton:true, 
+						confirmButtonColor:"#DD6B55", 
+						confirmButtonText:"Charge", 
+						cancelButtonText:"Cancel", 
+						closeOnConfirm:false, 
+						closeOnCancel:false,
+						showLoaderOnConfirm: true
+					},
+					function(isConfirm) {
+						if (isConfirm) {
+							$.ajax({
+								url: '/pos/charge/',
+								type: 'POST',
+								data: {
+									"token": token,
+									"csrfmiddlewaretoken": '{{ csrf_token }}'
+								},
+								success: function(data){
+									var r = data.response
+									if (r === "approved") {
+										swal({
+											title: "Payment Approved!",
+											text: "Receipt has been sent to dave@centerstack.io",
+											type: "success",
+											confirmButtonColor:"#BFBFBF",
+											confirmButtonText:"OK"
+										});
+									} else {
+										var error_msg = data.error
+										swal("Card Declined", error_msg, "error");
+									}
+								},
+								error: function(e) {
+									swal("Error", e, "error");
+								}
+							})
+							.fail(function(jqXHR, textStatus, errorThrown) {
+								$form.find('.subscribe').html('A Problem Occurred').removeClass('success').addClass('error');
+								$form.find('.payment-errors').text('Try Refreshing The Page And Trying Again.');
+								$form.find('.payment-errors').closest('.pi-row').show();
+							});
+						}
+						else {
+							swal("Cancelled", "Credit Card Will Not Be Charged.", "error");
+						}
+					});
+				}
+			});
+		}
+		$('input[name=cardNumber]').payment('formatCardNumber');
+		$('input[name=cardCVC]').payment('formatCardCVC');
+		$('input[name=cardExpiry').payment('formatCardExpiry');
+
+		jQuery.validator.addMethod("cardNumber", function(value, element) {
+			return this.optional(element) || Stripe.card.validateCardNumber(value);
+		}, "Please specify a valid credit card number.");
+
+		jQuery.validator.addMethod("cardExpiry", function(value, element) {
+			value = $.payment.cardExpiryVal(value);
+			return this.optional(element) || Stripe.card.validateExpiry(value.month, value.year);
+		}, "Invalid expiration date.");
+
+		jQuery.validator.addMethod("cardCVC", function(value, element) {
+			return this.optional(element) || Stripe.card.validateCVC(value);
+		}, "Invalid CVC.");
+
+		validator = $form.validate({
+			rules: {
+				cardNumber: {
+					required: true,
+					cardNumber: true
+				},
+				cardExpiry: {
+					required: true,
+					cardExpiry: true
+				},
+				cardCVC: {
+					required: true,
+					cardCVC: true
+				}
+			},
+			highlight: function(element) {
+				$(element).closest('.form-control').removeClass('success').addClass('error');
+			},
+			unhighlight: function(element) {
+				$(element).closest('.form-control').removeClass('error').addClass('success');
+			},
+			errorPlacement: function(error, element) {
+				$(element).closest('.form-group').append(error);
+			}
+		});
+
+		paymentFormReady = function() {
+			if ($form.find('[name=cardNumber]').hasClass("success") &&
+				$form.find('[name=cardExpiry]').hasClass("success") &&
+				$form.find('[name=cardCVC]').val().length > 1) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+
+		$form.find('.subscribe').prop('disabled', true);
+		var readyInterval = setInterval(function() {
+			if (paymentFormReady()) {
+				$form.find('.subscribe').prop('disabled', false);
+				clearInterval(readyInterval);
+			}
+		}, 250);
+	});
+</script>
+
+
+
+
+
+{% endblock %}

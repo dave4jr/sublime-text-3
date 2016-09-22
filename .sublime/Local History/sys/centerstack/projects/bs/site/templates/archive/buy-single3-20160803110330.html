@@ -1,0 +1,87 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	buy-single.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+
+<!--	Page Title
+========================================= -->
+<section id="page_title">
+	<h4 class="capitalize fs-24"> Property Details </h4>
+</section>
+	
+
+<!--	About
+========================================= -->
+<section id="page-body">
+	<div class="wrapper" style="width: 900px !important;">
+		<ul class="pgwSlideshow">
+			{% for ii in json.img %}
+				<li><img src="{{ ii }}"></li>
+			{% endfor %}
+		</ul>
+		<script>
+			$(document).ready(function() {
+				$('.pgwSlideshow').pgwSlideshow({
+					transitionEffect: 'sliding',
+					displayControls: false,
+					autoSlide: true,
+					intervalDuration: 5000,
+					maxHeight: 1000,
+				});
+			});
+		</script>
+
+
+		<!--	About Property
+		========================================= -->
+		<div class="spacer-small"></div>
+		<div class="column-section clearfix">
+			<div class="column one-half last-col">
+				<h4><strong> Details </strong></h4>
+				<p class="meta-row">
+					<span class="meta-label"> Street </span>
+					<span class="meta-val"> {% include "include/address.html" with arg="street" %} </span>
+				</p>
+				<p class="meta-row">
+					<span class="meta-label"> City </span>
+					<span class="meta-val"> {% include "include/address.html" with arg="city" %} </span>
+				</p>
+				<p class="meta-row">
+					<span class="meta-label"> Style </span>
+					<span class="meta-val"> {{ json.RESISTYL }} </span>
+				</p>
+				<p class="meta-row">
+					<span class="meta-label"> Water </span>
+					<span class="meta-val"> {{ json.RESIWTRD }} </span>
+				</p>
+				<p class="meta-row">
+					<span class="meta-label"> Year Built </span>
+					<span class="meta-val"> {{ json.YearBuilt }} </span>
+				</p>
+				<p class="meta-row">
+					<span class="meta-label"> Levels </span>
+					<span class="meta-val"> {{ json.RESILEVL }} </span>
+				</p>
+				<p class="meta-row">
+					<span class="meta-label"> View </span>
+					<span class="meta-val"> {{ json.RESIVIEW }} </span>
+				</p>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="spacer-big"></div>
+</section>
+
+{% endblock %}

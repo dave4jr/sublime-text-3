@@ -1,0 +1,23 @@
+<!-- RESO Data Dictionary DTD History Module 
+     PUBLIC "-//RETS//RESO Data Dictionary History XML//EN"
+     SYSTEM "http://www.rets.org/dtd/1.7.2/1.3/History.dtd"
+
+     WARNING: This file is generated using the RESO Data Dictionary Schema tool
+All items in this zip file abide by the following:
+
+Copyright 2015 RESO. By using this document you agree to the RESO End User License Agreement (EULA) posted at:
+
+https://reso.memberclicks.net/assets/docs/reso%20eula.pdf
+-->
+
+
+<!ELEMENT ChangeTimestamp (#PCDATA)>
+<!ELEMENT ChangeType (#PCDATA)>
+<!ELEMENT FieldKey (#PCDATA)>
+<!ELEMENT FieldName (#PCDATA)>
+<!ELEMENT HistoryRecordKey (#PCDATA)>
+<!ELEMENT NewValue (#PCDATA)>
+<!ELEMENT OriginatingSystemHistoryKey (#PCDATA)>
+<!ELEMENT PreviousValue (#PCDATA)>
+<!ELEMENT History (ChangedByMemberID?, ChangedByMemberKey?, ChangeTimestamp?, ChangeType?, ClassName?, FieldKey?, FieldName?, HistoryRecordKey?, NewValue?, OriginatingSystemHistoryKey?, OriginatingSystemName?, PreviousValue?, ResourceName?, ResourceRecordID?, ResourceRecordKey?)>
+

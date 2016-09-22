@@ -1,0 +1,108 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	index.html
+ *==========================-->
+{% load staticfiles %}
+{% load customtags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="CenterStack" name="author" />
+	<link href="{% static 'massive/img/favicon.png' %}" rel="icon" type="image/png" />
+	<title> Centro Print Solutions </title>
+	
+	<!--	Fonts
+	========================================= -->
+	<link href="http://fonts.googleapis.com/css?family=Abel|Source+Sans+Pro:400,300,300italic,400italic,600,600italic,700,700italic,900,900italic,200italic,200" rel="stylesheet" type="text/css" />
+	<link href="{% static 'massive/css/bootstrap.min.css' %}" rel="stylesheet" />
+	<link href="{% static 'massive/css/font-awesome.min.css' %}" rel="stylesheet" />
+	<link href="{% static 'massive/css/magnific-popup.css' %}" rel="stylesheet" />
+	<link href="{% static 'massive/css/shortcodes/shortcodes.css' %}" rel="stylesheet" />
+	<link href="{% static 'massive/css/owl.carousel.css' %}" rel="stylesheet" />
+	<link href="{% static 'massive/css/owl.theme.css' %}" rel="stylesheet" />
+	
+	<!--	Style
+	========================================= -->
+	<link href="{% static 'css/style.css' %}" rel="stylesheet" />
+	<link href="{% static 'css/helpers.css' %}" rel="stylesheet" />
+	<link href="{% static 'massive/css/style-responsive.css' %}" rel="stylesheet" />
+	<link href="{% static 'css/default-theme.css' %}" rel="stylesheet" />
+</head>
+<body>
+
+	<!--	Pre-Loader
+	========================================= -->
+	<div id="tb-preloader">
+		<div class="tb-preloader-wave"> </div>
+	</div>
+
+	<!--	Header
+	========================================= -->
+	<div class="wrapper">
+
+
+		<header class=" header-full-width " id="header">
+			<div class="header-sticky light-header ">
+				<div class="container">
+					<div class="menuzord" id="massive-menu">
+						<a class="logo-brand" href="{% url 'index' %}"><img width="125" src="{% static 'img/logo/logo.svg' %}"></a>
+						<ul class="menuzord-menu pull-right">
+							<li class="{% active 'index' %}"><a href="{% url 'index' %}"> Home </a></li>
+							<li class="{% active 'about' %}"><a href="{% url 'about' %}"> About </a></li>
+							<li class="{% active 'products' %}"><a href="{% url 'products' %}"> Products </a></li>
+							<li class="{% active 'services' %}"><a href="{% url 'services' %}"> Services </a></li>
+							<li class="{% active 'testimonials' %}"><a href="{% url 'testimonials' %}"> Testimonials </a></li>
+							<li class="{% active 'contact' %}"><a href="{% url 'contact' %}"> Contact </a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+
+
+		<!--	Content
+		========================================= -->
+		{% block content %}
+
+			<!-- Extend Content Here -->
+
+		{% endblock %}
+
+
+		<!--	Footer
+		========================================= -->
+		<footer class="stone-section footer-3 p-tb-40" id="footer">
+			<div class="container">
+				<div class="col-md-5">
+					<a href="{% url 'index' %}"><img width="125" class="m-b-20" src="{% static 'img/logo/logo.svg' %}" /></a>
+					<div class="copyright"> © 2016 Centro Print Solutions </div>
+					<div class="copyright-sub-title"> Crafted By <a href="http://www.centerstack.io">CenterStack</a></div>
+				</div>
+				<div class="col-md-2"></div>
+				<div class="col-md-5">
+					<p>Centro Business Description Here</p>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<!--	Javascript
+	========================================= -->
+	<script src="{% static 'massive/js/jquery-1.10.2.min.js' %}"></script>
+	<script src="{% static 'massive/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'massive/js/menuzord.js' %}"></script>
+	<script src="{% static 'massive/js/jquery.flexslider-min.js' %}"></script>
+	<script src="{% static 'massive/js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'massive/js/jquery.isotope.js' %}"></script>
+	<script src="{% static 'massive/js/jquery.magnific-popup.min.js' %}"></script>
+	<script src="{% static 'massive/js/jquery.countTo.js' %}"></script>
+	<script src="{% static 'massive/js/smooth.js' %}"></script>
+	<script src="{% static 'massive/js/wow.min.js' %}"></script>
+	<script src="{% static 'massive/js/imagesloaded.js' %}"></script>
+	<script src="{% static 'massive/js/scripts.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!-- RESO Data Dictionary DTD Shared Elements Module 
+     PUBLIC "-//RETS//RESO Data Dictionary Shared Elements XML//EN"
+     SYSTEM "http://www.rets.org/dtd/1.7.2/1.3/CommonElements.dtd
+
+     WARNING: This file is generated using the RESO Data Dictionary Schema tool
+
+All items in this zip file abide by the following:
+
+Copyright 2015 RESO. By using this document you agree to the RESO End User License Agreement (EULA) posted at:
+
+https://reso.memberclicks.net/assets/docs/reso%20eula.pdf
+-->
+
+<!ELEMENT ChangedByMemberID (#PCDATA)>
+<!ELEMENT ChangedByMemberKey (#PCDATA)>
+<!ELEMENT ClassName (#PCDATA)>
+<!ELEMENT CopyrightNotice (#PCDATA)>
+<!ELEMENT Description (#PCDATA)>
+<!ELEMENT Disclaimer (#PCDATA)>
+<!ELEMENT Ext (#PCDATA)>
+<!ELEMENT GarageSpaces (#PCDATA)>
+<!ELEMENT JobTitle (#PCDATA)>
+<!ELEMENT ListingId (#PCDATA)>
+<!ELEMENT ListingKey (#PCDATA)>
+<!ELEMENT MemberKey (#PCDATA)>
+<!ELEMENT MemberMlsId (#PCDATA)>
+<!ELEMENT MemberOtherPhone (#PCDATA)>
+<!ELEMENT ModificationTimestamp (#PCDATA)>
+<!ELEMENT Number (#PCDATA)>
+<!ELEMENT OfficeKey (#PCDATA)>
+<!ELEMENT OfficeMlsId (#PCDATA)>
+<!ELEMENT OfficeName (#PCDATA)>
+<!ELEMENT OfficePhone (#PCDATA)>
+<!ELEMENT OfficePhoneExt (#PCDATA)>
+<!ELEMENT OriginalEntryTimestamp (#PCDATA)>
+<!ELEMENT OriginatingSystemKey (#PCDATA)>
+<!ELEMENT OriginatingSystemMemberKey (#PCDATA)>
+<!ELEMENT OriginatingSystemName (#PCDATA)>
+<!ELEMENT OtherPhone (#PCDATA)>
+<!ELEMENT ResourceName (#PCDATA)>
+<!ELEMENT ResourceRecordID (#PCDATA)>
+<!ELEMENT ResourceRecordKey (#PCDATA)>
+<!ELEMENT SocialMedia (#PCDATA)>
+<!ELEMENT TimestampEntered (#PCDATA)>
+<!ELEMENT TimestampLastLoggedIn (#PCDATA)>
+<!ELEMENT TimestampModified (#PCDATA)>
+<!ELEMENT Type (#PCDATA)>
+<!ELEMENT UrlOrId (#PCDATA)>

@@ -1,0 +1,255 @@
+<!--======================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	member.html
+ *======================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% block content_site %}
+
+
+<!--	Members
+========================================= -->
+<div class="row">
+	<div class="col-md-12">
+		<div class="portlet light">
+			<div class="portlet-title">
+				<div class="caption">
+					<span class="caption-subject"> Members </span>
+				</div>
+			</div>
+			<div class="portlet-body">
+				<div class="table-toolbar">
+					<div class="row">
+
+						<!--	Status Filter
+						========================================= -->
+						<div class="col-md-8">
+							<form id="filter-form" action="" method="get">
+								{{ members.form.status | add_class:"form-control input-circle m-b-10 mw-115 colored" }}
+							</form>
+						</div>
+
+
+						<!--	Search
+						========================================= -->
+						<div class="col-md-3">
+							<div id="search" class="input-icon m-r-30">
+								<i class="icon-search"></i>
+								<input type="text" class="form-control input-circle inline mw-200 m-b-10">
+							</div>
+						</div>
+
+
+						<!--	New Member
+						========================================= -->
+						<div class="col-md-1">
+							<a class="btn base pull-right" id="member_new" href="#animatedModal"> New Member </a>
+						</div>
+					</div>
+				</div>
+				
+
+				<!--	Table
+				========================================= -->
+				<table class="member-table table hover order-column" id="datatable">
+					<thead>
+						<tr>
+							<th class="col_id"> ID </th>
+							<th class="col_id"> PK </th>
+							<th class="col_name"> Name </th>
+							<th class="col_level"> Level </th>
+							<th class="col_status"> Status </th>
+							<th class="col_hours"> Hours </th>
+							<th class="col_angle"></th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for member in members %}
+							<tr id="member_{{ member.pk }}" class="edit-member" href="#animatedModal">
+								<td class="col_id">{{ member.member_id }}</td>
+								<td class="col_id">{{ member.pk }}</td>
+								<td class="col_name">{{ member.name }}</td>
+								<td class="col_level">{{ member.level }}</td>
+								<td class="col_status">{{ member.status }}</td>
+								<td class="col_hours">{{ member.hours_remaining }}</td>
+								<td class="col_angle"><i class="icon-angle-right fs-14"></i></td>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!--	Modal
+========================================= -->
+<form id="modal-form" action="" data-pk="0" method="post">
+	{% csrf_token %}
+	<div id="animatedModal">
+		<div id="closebt-container">
+			<div class="pi-row">
+				<div class="pi-col-md-4">
+					<img class="closebt" src="{% static 'img/modals/close.svg' %}">
+				</div>
+				<div class="pi-col-md-4">
+					<h2 id="modal-title" class="fs-24 m-tb-8 text-center">Edit Member</h2>
+				</div>
+				<div class="pi-col-md-4">
+					<button id="save" class="btn base pull-right m-t-10 p-rl-14"> Save </button>
+					<button id="delete" class="btn red-sunglo font-mt-red-sunglo btn-outline pull-right m-t-10 m-r-10"> Delete </button>
+				</div>
+			</div>
+		</div>
+		<div class="modal-content">
+			{% include "include/modal-members.html" %}
+		</div>
+	</div>
+</form>
+
+
+
+<!--	Tooltipster
+========================================= -->
+<script>
+	$(function() {
+		$('.tooltipster-validate').tooltipster({
+			trigger: 'custom',
+			onlyOne: false,
+			position: 'top'
+		});
+	});
+</script>
+
+
+
+<!--	JQuery Validate
+========================================= -->
+<script>
+	$(function() {
+		$form = $("#modal-form");
+		$form.validate({
+			rules: {
+				member_id: { required: true, }
+			},
+			messages: {
+				member_id: { required: "Member ID is required" }
+			},
+			errorPlacement: function(error, element) {
+				var lastError = $(element).data('lastError'),
+					newError = $(error).text();
+
+				$(element).data('lastError', newError);
+
+				if (newError !== '' && newError !== lastError) {
+					$(element).tooltipster('content', newError);
+					$(element).tooltipster('show');
+				}
+			}
+		});
+
+		$("#save").click(function(){
+			if ( $form.valid() ) {
+				pk = $form.data("pk");
+				
+				if ( !pk ){
+				 	$.ajax({
+				 		type: "POST",
+				 		url: '{% url "members" %}',
+				 		data: { "form":$form.serialize(), "action":'save', "csrfmiddlewaretoken": '{{ csrf_token }}' }
+				 	});
+				} else {
+					$.ajax({
+						type: "POST",
+						url: "/members/edit/" + pk + "/",
+						data: { "form":$form.serialize(), "action":'save', "csrfmiddlewaretoken": '{{ csrf_token }}' }
+					});
+				}
+				
+			}
+		})
+		
+	});
+</script>
+			
+			
+																																																																				  
+
+<!--	AnimatedModal
+========================================= -->
+<script>
+	$(function() {
+		$("#member_new").animatedModal({
+			beforeOpen: function() {
+				$("#modal-title").text("New Member");
+			}
+		});
+
+		{% for member in members %}
+			$("#member_" + {{ member.pk }}).animatedModal({
+				beforeOpen: function() {
+					$.ajax({
+						type: 'POST',
+						url: "/members/edit/{{ member.pk }}/",
+						data: { "csrfmiddlewaretoken": '{{ csrf_token }}' },
+						success: function(data) {
+							$(".modal-content").html(data);
+							$("#modal-form").attr("data-pk", {{ member.pk }})
+						}
+					});
+				}
+			});
+		{% endfor %}
+
+	});
+</script>
+
+
+
+<!--	Datatables
+========================================= -->
+<script>
+	$(function() {
+		var table = $('#datatable').DataTable({
+			"sort": true,
+			"info": false,
+			"paging": false,
+			"searching": false,
+			"bStateSave": true,
+			"order": [ [1, "desc"] ],
+		});
+
+
+		/*	Select Row
+		========================================= */
+		$('#datatable tbody').on('click', 'tr', function() {
+			if ($(this).hasClass('selected')) {
+				$('#datatable tbody > tr').removeClass('selected');
+			} else {
+				$('#datatable tbody > tr').removeClass('selected');
+				$(this).addClass('selected');
+			}
+		});
+		
+		
+
+		/*	Button To Delete Selected Row
+		========================================= */
+		// $('#delete-selected-row').click(function() {
+		// 	table.row('.selected').remove().draw(false);
+		// });
+
+		
+	});
+</script>
+
+
+
+{% endblock %}

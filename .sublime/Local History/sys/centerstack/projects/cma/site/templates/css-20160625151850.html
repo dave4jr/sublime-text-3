@@ -1,0 +1,42 @@
+<!--======================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	Global Styling
+ *======================-->
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content_site %}
+<style type="text/css">
+
+/*==================================================
+	Dynamic CSS
+==================================================*/
+.datepicker .active {
+	background-color: {{ preference.datepicker_color }} !important;
+}
+.datepicker .btn-primary {
+	color: #fff;
+	background-color: {{ preference.datepicker_color }} !important;
+	border-color: {{ preference.datepicker_color }} !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+{% endblock %}

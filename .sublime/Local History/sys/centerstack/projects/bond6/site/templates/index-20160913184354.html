@@ -1,0 +1,58 @@
+<!--==========================
+*  Author:		Dave Luke Jr
+*  Company:	CenterStack.io
+*  Description:	index.html
+*==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load customtags %}
+{% load staticfiles %}
+{% block content %}
+
+
+
+<!--	Slider
+========================================= -->
+<section class="hero-auto" id="hero">
+	<div class="revolution-slider-wrapper">
+		<div class="revolution-slider" data-version="5.0" id="revolutionslider1">
+			<ul>
+				<li class="text-light" data-masterspeed="700" data-transition="fade">
+					<img class="track-slider" src="{% static 'img/new/track.jpg' %}">
+					<div class="tp-caption" data-hoffset="0" data-start="600" data-transform_idle="o:1;" data-transform_in="y:-250px;opacity:0;s:1000;e:Power3.easeOut;" data-transform_out="opacity:0" data-voffset="0" data-whitespace="normal" data-width="full" data-x="center" data-y="center">
+						<h2 style="letter-spacing: .75px;"><strong> World Class<br/><span class="colored"> Personal Training </span><br/> In New York City </strong></h2>
+						<p class="m-t-15">
+							<a class="sr-button button-small button-5 circled" href="{% url 'contact' %}"> Get In Touch </a>
+							<a class="sr-button button-small button-4 circled" href="{% url 'what-we-do' %}"> What We Do </a>
+						</p>
+					</div>
+				</li>
+				<li class="text-light" data-masterspeed="700" data-transition="fade">
+					<img class="track-slider" src="{% static 'img/new/bridge.jpg' %}">
+					<div class="tp-caption" data-hoffset="0" data-start="600" data-transform_idle="o:1;" data-transform_in="y:-250px;opacity:0;s:1000;e:Power3.easeOut;" data-transform_out="opacity:0" data-voffset="0" data-whitespace="normal" data-width="full" data-x="center" data-y="center">
+						<h2 style="letter-spacing: .75px;"><strong> Train Harder<br/><span class="colored"> Live Better </strong></h2>
+						<p class="m-t-15">
+							<a class="sr-button button-small button-5 circled" href="{% url 'train-with-us' %}"> Train With Us </a>
+						</p>
+					</div>
+				</li>
+				<li class="text-light" data-masterspeed="700" data-transition="fade">
+					<img class="track-slider" src="{% static 'img/new/jump.jpg' %}">
+					<div class="tp-caption" data-hoffset="0" data-start="600" data-transform_idle="o:1;" data-transform_in="y:-250px;opacity:0;s:1000;e:Power3.easeOut;" data-transform_out="opacity:0" data-voffset="0" data-whitespace="normal" data-width="full" data-x="center" data-y="center">
+						<h2 style="letter-spacing: .75px;"><strong> Expand<br/><span class="colored">Your</span><br>Limits </strong></h2>
+						<p class="m-t-15">
+							<a class="sr-button button-small button-5 circled" href="{% url 'blog' %}"> View Our Blog </a>
+						</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+
+
+
+{% endblock %}
+
+{% block footer %}{% endblock %}

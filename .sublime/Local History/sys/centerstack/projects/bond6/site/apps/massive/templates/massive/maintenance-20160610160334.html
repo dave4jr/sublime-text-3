@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport"/>
+  <meta content="" name="description"/>
+  <meta content="CenterStack" name="author"/>
+  <!--favicon icon-->
+  <link href="{% static 'massive/img/favicon.png' %}" rel="icon" type="image/png"/>
+  <title>
+   VillaReal
+  </title>
+  <!--common style-->
+  <link href="http://fonts.googleapis.com/css?family=Abel|Source+Sans+Pro:400,300,300italic,400italic,600,600italic,700,700italic,900,900italic,200italic,200" rel="stylesheet" type="text/css"/>
+  <link href="{% static 'massive/css/bootstrap.min.css' %}" rel="stylesheet"/>
+  <link href="{% static 'massive/css/font-awesome.min.css' %}" rel="stylesheet"/>
+  <link href="{% static 'massive/css/magnific-popup.css' %}" rel="stylesheet"/>
+  <link href="{% static 'massive/css/shortcodes/shortcodes.css' %}" rel="stylesheet"/>
+  <link href="{% static 'massive/css/owl.carousel.css' %}" rel="stylesheet"/>
+  <link href="{% static 'massive/css/owl.theme.css' %}" rel="stylesheet"/>
+  <link href="{% static 'massive/css/style.css' %}" rel="stylesheet"/>
+  <link href="{% static 'massive/css/style-responsive.css' %}" rel="stylesheet"/>
+  <link href="{% static 'massive/css/default-theme.css' %}" rel="stylesheet"/>
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+ </head>
+ <body>
+  <!--  preloader start -->
+  <div id="tb-preloader">
+   <div class="tb-preloader-wave">
+   </div>
+  </div>
+  <!-- preloader end -->
+  <div class="wrapper">
+   <!--header start-->
+   <header class=" nav-center-align" id="header">
+    <div class="light-header">
+     <div class="container">
+      <div class="menuzord" id="massive-menu">
+       <!--logo start-->
+       <a class="logo-brand" href="{% url 'massive-index' %}">
+        <img alt="" class="retina" src="{% static 'massive/img/logo.png' %}"/>
+       </a>
+       <!--logo end-->
+      </div>
+     </div>
+    </div>
+   </header>
+   <!--header end-->
+   <!--maintenance banner start-->
+   <section class="maintenance-banner page-content">
+    <div class="container">
+     <div class="row">
+      <div class="col-md-12 text-center">
+       <img alt="" src="{% static 'massive/img/maintenance.png' %}"/>
+       <div class="heading-title-alt text-center m-top-30 inline-block m-bot-0">
+        <h3 class="text-uppercase">
+         SITE IS UNDER MAINTENANCE
+        </h3>
+        <p>
+         We’’ll be back shortly
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!--maintenance banner end-->
+   <!--body content start-->
+   <section class="body-content">
+    <div class="page-content">
+     <div class="container">
+      <div class="row">
+       <!--features start-->
+       <div class="col-md-4">
+        <div class="featured-item feature-border-box text-left">
+         <div class="icon">
+          <i class="icon-caution">
+          </i>
+         </div>
+         <div class="title text-uppercase">
+          <h4>
+           Why Down
+          </h4>
+         </div>
+         <div class="desc">
+          Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor.
+         </div>
+        </div>
+       </div>
+       <div class="col-md-4">
+        <div class="featured-item feature-border-box text-left">
+         <div class="icon">
+          <i class="icon-clock2">
+          </i>
+         </div>
+         <div class="title text-uppercase">
+          <h4>
+           Timely Deliver
+          </h4>
+         </div>
+         <div class="desc">
+          Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor.
+         </div>
+        </div>
+       </div>
+       <div class="col-md-4">
+        <div class="featured-item feature-border-box text-left">
+         <div class="icon">
+          <i class="icon-tools">
+          </i>
+         </div>
+         <div class="title text-uppercase">
+          <h4>
+           24/7 Support
+          </h4>
+         </div>
+         <div class="desc">
+          Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor.
+         </div>
+        </div>
+       </div>
+       <!--features end-->
+      </div>
+     </div>
+    </div>
+    <div class="container">
+     <div class="row">
+      <div class="col-md-12">
+       <!--subscribe start-->
+       <div class="subscribe-box gray-bg round-5 m-bot-100">
+        <div class="subscribe-info">
+         <h4>
+          subscribe to get in touch
+         </h4>
+         <span>
+          Nullam ut consectetur dolor. Sed sit amet iaculis nisi.
+         </span>
+        </div>
+        <div class="subscribe-form">
+         <form class="form-inline">
+          <input class="form-control" placeholder="Enter your email address" type="text"/>
+          <button class="btn btn-medium btn-rounded btn-dark-solid text-uppercase" type="submit">
+           subscribe
+          </button>
+         </form>
+        </div>
+       </div>
+       <!--subscribe end-->
+      </div>
+     </div>
+    </div>
+   </section>
+   <!--body content end-->
+  </div>
+  <!-- Placed js at the end of the document so the pages load faster -->
+  <script src="{% static 'massive/js/jquery-1.10.2.min.js' %}">
+  </script>
+  <script src="{% static 'massive/js/bootstrap.min.js' %}">
+  </script>
+  <script src="{% static 'massive/js/menuzord.js' %}">
+  </script>
+  <script src="{% static 'massive/js/jquery.flexslider-min.js' %}">
+  </script>
+  <script src="{% static 'massive/js/owl.carousel.min.js' %}">
+  </script>
+  <script src="{% static 'massive/js/jquery.isotope.js' %}">
+  </script>
+  <script src="{% static 'massive/js/jquery.magnific-popup.min.js' %}">
+  </script>
+  <script src="{% static 'massive/js/smooth.js' %}">
+  </script>
+  <script src="{% static 'massive/js/wow.min.js' %}">
+  </script>
+  <script src="{% static 'massive/js/imagesloaded.js' %}">
+  </script>
+  <!--common scripts-->
+  <script src="{% static 'massive/js/scripts.js' %}">
+  </script>
+ </body>
+</html>

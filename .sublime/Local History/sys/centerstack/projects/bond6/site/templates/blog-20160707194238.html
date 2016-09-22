@@ -1,0 +1,80 @@
+<!--==========================
+*  Author:		Dave Luke Jr
+*  Company:	CenterStack.io
+*  Description:	blog.html
+*==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load customtags %}
+{% load staticfiles %}
+{% block content %}
+
+
+<!--	Page Title
+========================================= -->
+<section class="hero-auto text-light parallax-section chalk"  id="hero">
+	<div class="wrapper align-center" id="page-title">
+		<h1><strong> Blog </strong></h1>
+	</div>
+</section>
+
+
+<!--	Blog
+========================================= -->
+<section id="page-body" class="p-t-20">
+	<div class="wrapper-small">
+		<div class=" classic-blog blog-container" id="blog-grid">
+
+			<!--	Filter
+			========================================= -->
+			<ul class="filter" data-related-grid="portfolio-grid" id="portfolio-filter">
+				<li class="active"><a data-filter="*" href="#"> All </a></li>
+				<li><a data-filter=".Fitness" href="#" title="Fitness"> Fitness </a></li>
+				<li><a data-filter=".Nutrition" href="#" title="Nutrition"> Nutrition </a></li>
+				<li><a data-filter=".Training" href="#" title="Training"> Training </a></li>
+				<li><a data-filter=".Music" href="#" title="Music"> Music </a></li>
+			</ul>
+
+			<!--	Blog Entries
+			========================================= -->
+			{% for blog in blogs %}
+				<div class="blog-item isotope-item nutrition m-t-30">
+					<div class="blog-media">
+						<a class="thumb-overlay" href="{% url 'blog' %}">
+							<img src="{{ MEDIA_URL }}{{ blog.img }}" />
+						</a>
+					</div>
+					<div class="blog-desc">
+						<div class="blog-headline">
+							<h6 class="post-category uppercase"> {{ blog.group }} </h6>
+							<h3 class="post-name">
+								<a href="{% url 'blog' %}">
+									<strong> {{ blog.title }} </strong>
+								</a>
+							</h3>
+						</div>
+						<p> {{ blog.post|safe }} </p>
+						<ul class="blog-meta">
+							<li class="post-date"> {{ blog.date }} </li>
+							<li class="post-comments"> {{ blog.time }} </li>
+							<li class="post-author"><span> {{ blog.author|capfirst }} </span></li>
+						</ul>
+					</div>
+				</div>
+			{% endfor %}
+
+		</div>
+		<div class="spacer-medium"> </div>
+		<div id="pagination">
+			<ul>
+				<li class="prev"><a href="#"> Previous Page </a></li>
+				<li class="page"><span class="current"> 1 </span></li>
+				<li class="page"><a href="#"> 2 </a></li>
+				<li class="page"><a href="#"> 3 </a></li>
+				<li class="next"><a href="#"> Next Page </a></li>
+			</ul>
+		</div>
+	</div>
+</section>
+		
+{% endblock %}

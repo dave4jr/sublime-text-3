@@ -1,0 +1,159 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	index.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+
+
+<!--	Buy Single
+========================================= -->
+<section id="page-body" class="buy-single p-t-0 m-t-60">
+	<div class="column-section boxed-sticky clearfix">
+		<div id="buy-single-left" class="column one-third" style="height: 100% !important;">
+		
+			<!--	Image
+			========================================= -->
+			<div class="column one-full m-l-0" style="background: url({{ property.img.0 }}) center center / cover;"></div>
+			
+			<!--	Address & Price
+			========================================= -->
+			<div id="buy-single-left-details">
+				<div class="row">
+					<div class="col-sm-9">
+						<h4>{% include "include/address.html" with arg="street" %}</h4>
+					</div>
+					<div class="col-sm-3" style="border-radius: 10px 0px 0px 10px;">
+						<h5 class="text-center"  style="border-radius: 40px 0px 0px 40px;">${{ property.listingprice|floatformat:"0"|intcomma }}</h5>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<h4 class="subtitle-2 colored fs-14 p-l-20 fw-300 p-tb-0">{% include "include/address.html" with arg="city" %}</h4>
+					</div>
+					<div id="buy-single-details" class="col-sm-12">
+						<p class="m-t-5">{{ property.marketingremarks|boxed_letter:"#EF936D" }}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<!--	Icons
+		========================================= -->
+		<div id="buy-single-right" class="column two-third white-bg">
+			<div id="buy-single-icons" class="column-section clearfix p-t-40">
+				<div class="column one-fifth">
+					<span class="fontello-sqft"></span>
+					<h5 class="subtitle-2">Square Feet</h5>
+					<h3><strong>{{ property.squarefootage|floatformat:"0"|intcomma }}</strong></h3>
+				</div>
+				<div class="column one-fifth">
+					<span class="fontello-beds"></span>
+					<h5 class="subtitle-2">Bedrooms</h5>
+					<h3><strong>{{ property.bedrooms }}</strong></h3>
+				</div>
+				<div class="column one-fifth">
+					<span class="fontello-baths"></span>
+					<h5 class="subtitle-2">Bathrooms</h5>
+					<h3><strong>{{ property.bathrooms }}</strong></h3>
+				</div>
+				<div class="column one-fifth">
+					<span class="fontello-map"></span>
+					<h5 class="subtitle-2">Lot Size</h5>
+					<h3><strong>{{ property.acres }}</strong></h3>
+				</div>
+				<div class="column one-fifth last-col">
+					<span class="fontello-year-built"></span>
+					<h5 class="subtitle-2">Year Built</h5>
+					<h3><strong>{{ property.yearbuilt }}</strong></h3>
+				</div>
+			</div>
+			<div class="spacer-tiny"></div>
+			
+			<!--	4 Quadrants
+			========================================= -->
+			<div id="quadrants" class="column-section clearfix">
+				<div class="column one-half bigpadding tallest m-l-0 p-t-20 p-r-0 p-b-0">
+					<div class="col-content" style="margin-top: 0px;">
+						<div class="overview">
+							<h4><strong>Overview</strong></h4>
+							<ul>
+								<li><p>MLS: </p><span>{{ property.mlnumber }}</span></li>
+								<li><p>Style: </p><span>{{ property.style }}</span></li>
+								<li><p>Subtype: </p><span>{{ property.subtype1 }}</span></li>
+								<li><p>Levels: </p><span>{{ property.resilevl }}</span></li>
+								<li><p>Status: </p><span>{{ property.status }}</span></li>
+								<li><p>Days On Market: </p><span>{{ property.dom }}</span></li>
+							</ul>
+						</div>
+						<div class="spacer-tiny"></div>
+						<div class="community">
+							<h4><strong>Community</strong></h4>
+							<ul>
+								<li><p>Subdivision: </p><span>{{ property.bedrooms }}</span></li>
+								<li><p>Section: </p><span>{{ property.section }}</span></li>
+								<li><p>Elementary School: </p><span>{{ property.resielms }}</span></li>
+								<li><p>Jr. High School: </p><span>{{ property.resijrhi }}</span></li>
+								<li><p>High School: </p><span>{{ property.resisrhi }}</span></li>
+								<li><p>HOA: </p><span>{{ property.resihoa }},{{ property.resihoad }},{{ property.resihoap }}</span></li>
+								<li><p>CC&Rs: </p><span>{{ property.resiccr }}</span></li>
+								<li><p>Amenities: </p><span>{{ property.resicomm }}</span></li>
+								<li><p>Taxes: </p><span>{{ property.resitaxs }}</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="column one-half bigpadding last-col m-l-10 p-t-20 p-r-0 p-b-0">
+					<div class="col-content" style="margin-top: 0px;">
+						<div class="interior">
+							<h4><strong>Interior</strong></h4>
+							<ul>
+								<li><p>Rooms: </p><span class="float-0">{{ property.resiroom|comma_space }}</span></li>
+								<li><p>Interior: </p><span class="float-0">{{ property.resiinte|comma_space }}</span></li>
+								<li><p>Fireplace: </p><span>{{ property.resifire }}</span></li>
+								<li><p>Floors: </p><span>{{ property.resiflor }}</span></li>
+								<li><p>Heat / Cool: </p><span>{{ property.resihtco }}</span></li>
+							</ul>
+						</div>
+						<div class="spacer-tiny"></div>
+						<div class="exterior">
+							<h4><strong>Exterior</strong></h4>
+							<ul>
+								<li><p>New Construction: </p><span>{{ property.resinewc }}</span></li>
+								<li><p>Features: </p><span>{{ property.resiexte }}</span></li>
+								<li><p>Parking: </p><span>{{ property.resipark }}</span></li>
+								<li><p>Additional Buildings: </p><span>{{ property.resiaddi }}</span></li>
+								<li><p>Construction: </p><span>{{ property.resicons }}</span></li>
+								<li><p>Water: </p><span>{{ property.resiwtrd }}</span></li>
+								<li><p>Sewer / Septic: </p><span>{{ property.resisewr }}</span></li>
+								<li><p>Irrigation: </p><span>{{ property.resiirri }}, {{ property.resiirra }}, {{ property.resiirrd }}</span></li>
+								<li><p>View: </p><span>{{ property.view }}</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+	$(function() {
+		var h = $("#buy-single-right").outerHeight();
+		$("#buy-single-left").outerHeight(h);
+	});
+</script>
+
+
+{% endblock %}
+
+{% block footer %}{% endblock %}

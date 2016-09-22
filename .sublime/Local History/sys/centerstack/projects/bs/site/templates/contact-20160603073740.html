@@ -1,0 +1,101 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	contact.html
+ *==========================-->
+
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+{% load customtags %}
+{% block content %}
+
+
+<!--	Contact
+========================================= -->
+<div class="main-wrapper">
+	<div class="main">
+		<div class="main-inner">
+			<div class="content-title">
+				<div class="content-title-inner">
+					<div class="container">
+						<h1> Contact Us </h1>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<div class="contact-map" id="map-google"></div>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8 col-lg-9">
+							<div class="page-subheader page-subheader-small">
+								<h3> Contact Us </h3>
+							</div>
+							<div class="row">
+								<form action="?" method="post">
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label> Name </label>
+											<input class="form-control" type="text" />
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label> E-mail </label>
+											<input class="form-control" type="mail" />
+										</div>
+									</div>
+									<div class="col-sm-12">
+										<div class="form-group">
+											<label> Message </label>
+											<textarea class="form-control" placeholder="Please keep your message as simple as possible" rows="6"> </textarea>
+										</div>
+									</div>
+									<div class="col-sm-12">
+										<button class="btn btn-primary pull-right" type="submit"> Post Message </button>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="col-md-4 col-lg-3">
+							<div class="sidebar">
+								<div class="widget">
+									<h2 class="widgettitle"> Contact Information </h2>
+									<table class="contact">
+										<tbody>
+											<tr>
+												<th> Address: </th>
+												<td> 547 Southwest 13th St, Suite 201
+													<br/> Bend, OR 97702
+													<br/> United States
+													<br/>
+												</td>
+											</tr>
+											<tr>
+												<th> Phone: </th>
+												<td>
+													(541) 330-0588 (Office) <br>
+													(541) 788-8997 (Cell) <br>
+													(866) 624-5540 (Fax)
+												</td>
+											</tr>
+											<tr>
+												<th> E-mail: </th>
+												<td>
+													<a href="mailto:info@brundagesmith.com"> info@brundagesmith.com </a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+		

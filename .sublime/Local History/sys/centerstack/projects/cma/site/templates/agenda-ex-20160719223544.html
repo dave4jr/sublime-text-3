@@ -1,0 +1,176 @@
+<div class="row">
+	<div class="col-md-6">
+		<div class="portlet box base">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="icon-basic_elaboration_calendar_empty"> </i>
+					<span class="caption-subject base-font"> Agenda - Today </span>
+				</div>
+			</div>
+			<div class="portlet-body">
+				<div id="agenda-today"></div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="portlet box base">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="icon-basic_elaboration_calendar_empty"> </i>
+					<span class="caption-subject base-font"> Agenda - Tomorrow </span>
+				</div>
+			</div>
+			<div class="portlet-body">
+				<div id="agenda-tomorrow"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	$(document).ready(function() {
+		function get_date(){
+			var today = new Date();
+			var dd = today.getDate();
+			var mm = today.getMonth()+1;
+			var yyyy = today.getFullYear();
+
+			if(dd<10) {
+			    dd='0'+dd
+			}
+			if(mm<10) {
+			    mm='0'+mm
+			}
+			return yyyy+'-'+mm+'/'+dd;
+		};
+
+		$('#agenda-today').fullCalendar({
+			defaultDate: "2016-07-02",
+			defaultView: 'agendaDay',
+			eventColor: "#67809F",
+			editable: true,
+			eventLimit: true,
+			events: [
+				{
+					title: 'Call Hotel',
+					start: '2016-07-02'
+				},
+				{
+					title: 'Long Event',
+					start: '2016-07-01',
+					end: '2016-07-10'
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: '2016-07-02T16:00:00'
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: '2016-01-16T16:00:00'
+				},
+				{
+					title: 'Conference',
+					start: '2016-01-11',
+					end: '2016-01-13'
+				},
+				{
+					title: 'Meeting',
+					start: '2016-01-12T10:30:00',
+					end: '2016-01-12T12:30:00'
+				},
+				{
+					title: 'Lunch',
+					start: '2016-01-12T12:00:00'
+				},
+				{
+					title: 'Meeting',
+					start: '2016-01-12T14:30:00'
+				},
+				{
+					title: 'Happy Hour',
+					start: '2016-01-12T17:30:00'
+				},
+				{
+					title: 'Dinner',
+					start: '2016-01-12T20:00:00'
+				},
+				{
+					title: 'Birthday Party',
+					start: '2016-01-13T07:00:00'
+				},
+				{
+					title: 'Click for Google',
+					url: 'http://google.com/',
+					start: '2016-01-28'
+				}
+			]
+		});
+
+		$('#agenda-tomorrow').fullCalendar({
+			defaultDate: "2016-07-03",
+			defaultView: 'agendaDay',
+			eventColor: "#67809F",
+			editable: true,
+			eventLimit: true,
+			events: [
+				{
+					title: 'Call Hotel',
+					start: '2016-07-02'
+				},
+				{
+					title: 'Long Event',
+					start: '2016-07-01',
+					end: '2016-07-10'
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: '2016-07-02T16:00:00'
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: '2016-01-16T16:00:00'
+				},
+				{
+					title: 'Conference',
+					start: '2016-01-11',
+					end: '2016-01-13'
+				},
+				{
+					title: 'Meeting',
+					start: '2016-07-03T10:30:00',
+					end: '2016-01-12T12:30:00'
+				},
+				{
+					title: 'Lunch',
+					start: '2016-07-03T12:00:00'
+				},
+				{
+					title: 'Meeting',
+					start: '2016-01-12T14:30:00'
+				},
+				{
+					title: 'Happy Hour',
+					start: '2016-01-12T17:30:00'
+				},
+				{
+					title: 'Dinner',
+					start: '2016-01-12T20:00:00'
+				},
+				{
+					title: 'Birthday Party',
+					start: '2016-01-13T07:00:00'
+				},
+				{
+					title: 'Click for Google',
+					url: 'http://google.com/',
+					start: '2016-01-28'
+				}
+			]
+		});
+		
+	});
+
+</script>

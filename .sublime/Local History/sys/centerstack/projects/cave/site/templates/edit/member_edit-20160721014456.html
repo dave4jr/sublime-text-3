@@ -1,0 +1,364 @@
+<!--======================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	member_details.html
+ *======================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% block content_site %}
+
+<!--	Members
+========================================= -->
+<div class="row">
+	<div class="col-md-12">
+		<div class="portlet box base">
+
+			<!--	Top Toolbar
+			========================================= -->
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="pe-7s-users"> </i>
+					{% if request.path == "/members/new/" %}
+						<span class="caption-subject font-white capitalize"> New Member </span>
+					{% else %}
+						<span class="caption-subject font-white capitalize"> Edit Member </span>
+					{% endif %}
+				</div>
+			</div>
+			<div class="portlet-body">
+				<div class="pi-row">
+					<div class="pi-col-sm-10 pi-col-sm-offset-1 pi-section-white m-t-30">
+
+						<!--	Form
+						========================================= -->
+						<form action="" method="post" role="form">
+							{% csrf_token %}
+							<div class="pi-row pi-grid-small-margins">
+								<div class="pi-col-sm-3">
+									<div class="form-group">
+										<label> First Name </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-user"> </i>
+											</span>
+											{{ MemberForm.first_name | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-3">
+									<div class="form-group">
+										<label> Last Name </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-user"> </i>
+											</span>
+											{{ MemberForm.last_name | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="pi-row">
+										<div class="pi-col-sm-4">
+											<div class="form-group">
+												<label> Member ID<span class="font-mt-red"> *</span> </label>
+												<div class='input-group'>
+													<span class="input-group-addon input-left">
+														<i class="pe-7s-user"> </i>
+													</span>
+													{{ MemberForm.member_id | add_class:"form-control" | attr:"required:True" }}
+												</div>
+											</div>
+										</div>
+										<div class="pi-col-sm-4">
+											<div class="form-group">
+												<label for="label-member"> Status </label>
+												<div class='input-group'>
+													<span class="input-group-addon input-left">
+														<i class="icon-icon-25-key"></i>
+													</span>
+													{{ MemberForm.status | add_class:"form-control" }}
+													<span class="input-group-addon input-right expandable">
+														<i class="pe-is-i-angle-down"></i>
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="pi-col-sm-4">
+											<div class="form-group">
+												<label for="label-member"> Level </label>
+												<div class='input-group'>
+													<span class="input-group-addon input-left">
+														<i class="icon-icon-25-key"></i>
+													</span>
+													{{ MemberForm.level | add_class:"form-control" }}
+													<span class="input-group-addon input-right expandable">
+														<i class="pe-is-i-angle-down"></i>
+													</span>
+													<a href="{% url 'dropdowns' %}" class="input-group-addon input-right fk">
+														<i class="fa fa-plus"></i>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-3">
+									<div class="form-group">
+										<label for="label-member"> Street </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-way"> </i>
+											</span>
+											{{ MemberForm.street | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-3">
+									<div class="form-group">
+										<label for="label-member"> City </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-map"> </i>
+											</span>
+											{{ MemberForm.city | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-3">
+									<div class="form-group">
+										<label for="label-member"> State </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-map-2"> </i>
+											</span>
+											{{ MemberForm.state | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-3">
+									<div class="form-group">
+										<label for="label-member"> Zip Code </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-way"> </i>
+											</span>
+											{{ MemberForm.zipcode | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label for="label-member"> Cell Phone </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-phone"> </i>
+											</span>
+											{{ MemberForm.phone_cell | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label for="label-member"> Home Phone </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-phone"> </i>
+											</span>
+											{{ MemberForm.phone_home | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label for="label-member"> Email Address </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-mail"> </i>
+											</span>
+											{{ MemberForm.email | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label for="label-member"> Emergency Contact Name </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-user"> </i>
+											</span>
+											{{ MemberForm.emergency_contact_name | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label for="label-member"> Emergency Contact Number </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-phone"> </i>
+											</span>
+											{{ MemberForm.emergency_contact_number | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label for="label-member"> Emergency Contact Relation </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-phone"> </i>
+											</span>
+											{{ MemberForm.emergency_contact_relation | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label for="label-member"> Referral Source </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-user"> </i>
+											</span>
+											{{ MemberForm.referral_source | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+											<a href="/admin/members/referralsource/add/" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label for="label-member"> Date of Birth </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-date"> </i>
+											</span>
+											{{ MemberForm.dob | add_class:"form-control datepicker" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label for="label-member"> Start Date </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-date"> </i>
+											</span>
+											{{ MemberForm.membership_start_date | add_class:"form-control datepicker" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-member"> Expertise </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-user"> </i>
+											</span>
+											{{ MemberForm.expertise | add_class:"form-control" }}
+											<a href="/admin/members/referralsource/add/" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-member"> Certifications </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="icon-icon-138-certificate"> </i>
+											</span>
+											{{ MemberForm.certifications | add_class:"form-control" }}
+											<a href="/admin/members/referralsource/add/" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!--	Checkboxes
+							========================================= -->
+							<!-- <div class="pi-row">
+								<div class="pi-col-sm-4">
+									<div class="checkbox">
+										<label for="website">
+											{{ MemberForm.return_member }}
+											Return Member?
+										</label>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="checkbox">
+										<label for="id_motorcycle_license">
+											{{ MemberForm.motorcycle_license }}
+											Motorcycel License?
+										</label>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="checkbox">
+										<label for="website">
+											{{ MemberForm.mailing_list }}
+											Mailing List?
+										</label>
+									</div>
+								</div>
+							</div>
+ -->
+							<!--	Notes
+							========================================= -->
+							<div class="pi-row pi-grid-small-margins">
+								<div class="pi-col-xs-12 pi-section-white">
+									<div class="form-group">
+										<label for="label-member-phone"> Notes </label>
+										<div class="pi-input-with-icon">
+											<div class="pi-input-icon">
+												<i class="pe-7s-comment"> </i>
+											</div>
+											{{ MemberForm.notes | add_class:"form-control p-l-40" | attr:"rows:5" | attr:"type:textarea" }}
+										</div>
+									</div>
+								</div>
+							</div>
+							<p><span class="font-mt-red">* Required</span></p>
+
+							<!--	Submit / Delete
+							========================================= -->
+							{% if request.path == "/members/new/" %}
+								<p class="pi-text-center m-t-40">
+									<a href="{% url 'members' %}" class="btn mt-grey-gallery-bg p-rl-40 m-r-5"> Cancel<i class="pe-7s-close-circle pi-icon-right"></i></a>
+									<button type="submit" class="btn base p-rl-40"> Save<i class="pe-7s-check pi-icon-right"></i></button>
+								</p>
+							{% else %}
+								<p class="pi-text-center m-t-40">
+									<button type="submit" value="{{ member.pk }}" name="delete" class="btn mt-grey-gallery-bg p-rl-40 m-r-5" formnovalidate> Delete<i class="pe-7s-close-circle pi-icon-right"></i></button>
+									<button type="submit" value="{{ member.pk }}" name="save" class="btn base p-rl-40"> Save<i class="pe-7s-check pi-icon-right"></i></button>
+								</p>
+							{% endif %}
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,323 @@
+templates: {
+	button: '<button type="button" class="multiselect dropdown-toggle" data-toggle="dropdown"></button>',
+	ul: '<ul class="multiselect-container dropdown-menu"></ul>',
+	filter: '<li class="multiselect-item filter"><div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span><input class="form-control multiselect-search" type="text"></div></li>',
+	filterClearBtn: '<span class="input-group-btn"><button class="btn btn-default multiselect-clear-filter" type="button"><i class="glyphicon glyphicon-remove-circle"></i></button></span>',
+	li: '<li><a href="javascript:void(0);"><label></label></a></li>',
+	divider: '<li class="multiselect-item divider"></li>',
+	liGroup: '<li class="multiselect-item group"><label class="multiselect-group"></label></li>'
+}
+
+<span class="multiselect-native-select">
+	<select multiple="multiple" id="id_city" name="city">
+		<option value="Antelope">Antelope</option>
+		<option value="Ashland">Ashland</option>
+		<option value="Baker City">Baker City</option>
+	</select>
+	<div class="btn-group" style="width: calc(20% - 4px);">
+		<button type="button" class="multiselect dropdown-toggle btn btn-default" data-toggle="dropdown" title="City" style="width: 100%; overflow: hidden; text-overflow: ellipsis;" aria-expanded="false"><span class="multiselect-selected-text">City</span></button>
+		<ul class="multiselect-container dropdown-menu" style="max-height: 400px; overflow-y: auto; overflow-x: hidden;">
+<li class="multiselect-item multiselect-filter"value="0"><div class="input-group"><span class="input-group-addon"><i class="fa fa-search"></i></span><input class="form-control multiselect-search"type="text"placeholder="Search"></div></li>
+			<li class="multiselect-item multiselect-all">
+				<a tabindex="0" class="multiselect-all">
+					<label class="checkbox">
+						<input type="checkbox" value="multiselect-all"> Select all</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Antelope"> Antelope</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Ashland"> Ashland</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Baker City"> Baker City</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Bend"> Bend</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Black Butte Ranch"> Black Butte Ranch</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Burns"> Burns</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Camp Sherman"> Camp Sherman</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Canyon City"> Canyon City</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Christmas Valley"> Christmas Valley</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Corvallis"> Corvallis</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Crescent"> Crescent</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Crescent Lake"> Crescent Lake</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Crooked River"> Crooked River</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Culver"> Culver</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Dayville"> Dayville</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Detroit"> Detroit</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Eugene"> Eugene</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Fort Rock"> Fort Rock</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Fossil"> Fossil</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Gilchrist"> Gilchrist</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Grass Valley"> Grass Valley</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Hines"> Hines</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Jacksonville"> Jacksonville</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="John Day"> John Day</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Joseph"> Joseph</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="La Grande"> La Grande</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="La Pine"> La Pine</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Madras"> Madras</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Metolius"> Metolius</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Mitchell"> Mitchell</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Monument"> Monument</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Mt Vernon"> Mt Vernon</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="North Bend"> North Bend</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Paulina"> Paulina</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Port Orford"> Port Orford</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Powell Butte"> Powell Butte</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Prairie City"> Prairie City</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Prineville"> Prineville</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Redmond"> Redmond</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Rockaway Beach"> Rockaway Beach</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Shady Cove"> Shady Cove</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Silver Lake"> Silver Lake</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Sisters"> Sisters</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Spray"> Spray</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Sunriver"> Sunriver</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Sweet Home"> Sweet Home</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Terrebonne"> Terrebonne</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Unity"> Unity</label>
+				</a>
+			</li>
+			<li>
+				<a tabindex="0">
+					<label class="checkbox">
+						<input type="checkbox" value="Wilsonville"> Wilsonville</label>
+				</a>
+			</li>
+		</ul>
+	</div>
+</span>

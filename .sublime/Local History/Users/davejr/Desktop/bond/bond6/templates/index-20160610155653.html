@@ -1,0 +1,184 @@
+<!--==========================
+*  Author:		Dave Luke Jr
+*  Company:	CenterStack.io
+*  Description:	about.html
+*==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load customtags %}
+{% load staticfiles %}
+{% block content %}
+
+
+<!--	Hero Image
+========================================= -->
+<div class="banner-state vertical-align text-center banner-home">
+	<div class="container-top p-t-150">
+		<div class="container">
+			<div class="banner-title light-txt m-top-0">
+				<div>
+					<h3 id="home-banner-text" class="text-uppercase semi-transparent theme-bg-space"> World Class Personal Training In New York City</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!--	About
+========================================= -->
+<section class="body-content">
+	<div class="page-content">
+		<div class="container">
+			<div class="row">
+				<div class="heading-title border-short-bottom text-center m-b-60">
+					<div class="m-b-20">
+						<img width="50" src="{% static 'img/logo/6.svg' %}">
+						<!-- <div id="logo-circle">
+						</div> -->
+					</div>
+					<h3 class="text-uppercase p-b-20"> Welcome to Bond6 Fitness </h3>
+					<p class="half-txt p-top-20"> Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus. </p>
+				</div>
+				<div class="post-list catering-list text-center hotel-intro-box-resize">
+					<div class="col-md-4">
+						<div class="post-single m-l-65">
+							<div class="post-img">
+								<img class="circle" src="{% static 'img/exercises/cardio.jpg' %}" />
+							</div>
+							<div class="post-desk">
+								<h4 class="text-uppercase">
+									<a href="#"> Strength Training </a>
+								</h4>
+								<p> Lorem ipsum Anim dolor ad ut dolore labore laboris cupidatat ea proident. </p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="post-single  m-l-65">
+							<div class="post-img">
+								<img class="circle" src="{% static 'massive/img/hotel/hotcircle2.jpg' %}" />
+							</div>
+							<div class="post-desk">
+								<h4 class="text-uppercase">
+									<a href="#"> Cardio </a>
+								</h4>
+								<p> Lorem ipsum Sunt ullamco adipisicing laboris pariatur tempor exercitation magna culpa sit voluptate reprehenderit.  </p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="post-single  m-l-65">
+							<div class="post-img">
+								<img class="circle" src="{% static 'massive/img/hotel/hotcircle3.jpg' %}" />
+							</div>
+							<div class="post-desk">
+								<h4 class="text-uppercase">
+									<a href="#"> Flexibility </a>
+								</h4>
+								<p> Lorem ipsum Reprehenderit voluptate anim sint Duis est nulla adipisicing proident consequat sed in. </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!--	Testimonials
+	========================================= -->
+	<div class="page-content p-t-0 p-b-100">
+		<div class="testimonial-parallax stone" style="border-top: 1px solid #EEE; border-bottom: 1px solid #EEE;">
+			<div class="page-content p-tb-50">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div id="testimonial-3" class="text-center light-txt big-icon  owl-carousel owl-theme" style="opacity: 1; display: block;">
+								<div class="owl-wrapper-outer">
+									<div class="owl-wrapper" style="width: 6660px; left: 0px; display: block; transition: all 800ms ease; transform: translate3d(-1110px, 0px, 0px);">
+										<div class="owl-item" style="width: 1110px;">
+											<div class="item">
+												<div class="icon theme-color">
+													<i class="icon-user_comment"></i>
+												</div>
+												<div class="content">
+													<p class="text-black-4"> Nam nec dui dolor. Curabitur in laoreet erat. Nam nec dui dolor. Aliquam varius dolor nunc, <br> interdum commodo justoporttitor vitae. Quisque fermentum purus. </p>
+													<div class="testimonial-meta text-black-4"> Blair Small
+														<span class="text-black-4">Bond6 Fitness</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="owl-item" style="width: 1110px;">
+											<div class="item">
+												<div class="icon theme-color">
+													<i class="icon-user_comment"></i>
+												</div>
+												<div class="content">
+													<p class="text-black-4"> Nam nec dui dolor. Curabitur in laoreet erat. Nam nec dui dolor. Aliquam varius dolor nunc, <br> interdum commodo justoporttitor vitae. Quisque fermentum purus. </p>
+													<div class="testimonial-meta text-black-4"> Blair Small
+														<span class="text-black-4">Bond6 Fitness</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!--	Contact Us
+	========================================= -->
+	<div class="page-content p-t-50">
+		<div class="container m-b-80">
+			<div class="row">
+				<div class="post-list-aside">
+					<div class="post-single">
+						<div class="col-md-6">
+							<div class="post-img">
+								<img alt="" src="{% static 'massive/img/restaurant/food-glass.png' %}" />
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="post-desk">
+								<div class="heading-title-alt text-left">
+									<span class="heading-sub-title text-uppercase theme-color"> Contact Us </span>
+									<h3 class="text-uppercase"> Have A Question? </h3>
+								</div>
+								<p> Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats minima rerums unsers sadips amets. </p>
+								<form action="#" class="magazine-grid login m-t-15" method="post">
+									<div class="row">
+										<div class="form-group col-md-6">
+											<input class="form-control" placeholder="First Name" type="text" />
+										</div>
+										<div class="form-group col-md-6">
+											<input class="form-control" placeholder="Last Name" type="text" />
+										</div>
+										<div class="form-group col-md-12">
+											<input class="form-control" placeholder="Email Address" type="text" />
+										</div>
+										<div class="col-md-12 form-group">
+											<textarea class="cmnt-text form-control" id="comments" rows="6" maxlength="400" name="comments" placeholder="Comments"> </textarea>
+										</div>
+										<div class="form-group col-md-12">
+											<button class="btn btn-small btn-dark-solid full-width btn-rounded" value="Contact Us"> Contact Us </button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% endblock %}

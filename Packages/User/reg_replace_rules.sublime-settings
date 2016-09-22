@@ -1,0 +1,63 @@
+{
+	"format": "3.0",
+	"replacements":
+	{
+		"format_html_div_to_wrap_single_tags":
+		{
+			"find": "(?i)(\\t+)(<(div|form).+\">\\n\\t+.+/>)(\\s+|)</(div|form)>",
+			"greedy": true,
+			"replace": "\\1\\2\n\\1</\\3>"
+		},
+		"format_html_small_to_inline":
+		{
+			"find": "(?i)<small>\\n\\t+(.+)\\n\\t+</small>",
+			"greedy": true,
+			"replace": "<small>\\1</small>"
+		},
+		"format_html_tags_to_inline":
+		{
+			"find": "(?i)<(span|li|a|small|strong|b|u|big|pre|code|i)>\\n\\t+(.+)\\n\\t+</(span|li|a|small|strong|b|u|big|pre|code|i)>",
+			"greedy": true,
+			"replace": "<\\1>\\2</\\3>"
+		},
+		"format_javascript_src_to_inline":
+		{
+			"find": "(?i)<script src=\"(.+)\">\\n\\t</script>",
+			"greedy": true,
+			"replace": "<script src=\"\\1\"></script>"
+		},
+		"html5_remove_deprecated_type_attr":
+		{
+			"find": "(?i)(<(style|script)[^>]*)\\stype=(\"|')text/(css|javascript)(\"|')([^>]*>)",
+			"greedy": true,
+			"replace": "\\1\\6"
+		},
+		"remove_html_comments":
+		{
+			"find": "<!--[\\s\\S]+?-->",
+			"greedy": true,
+			"replace": "",
+			"scope_filter":
+			[
+				"!comment"
+			]
+		},
+		"remove_json_dangling_commas":
+		{
+			"find": ",([\\r\\n\\s]*)(\\]|\\})",
+			"greedy": true,
+			"replace": "\\1\\2",
+			"scope_filter":
+			[
+				"-string",
+				"-comment"
+			]
+		},
+		"remove_trailing_spaces":
+		{
+			"find": "[ \\t]+$",
+			"greedy": true,
+			"replace": ""
+		}
+	}
+}

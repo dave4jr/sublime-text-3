@@ -1,0 +1,139 @@
+<!--	Bar Chart
+========================================= -->
+<div class="row">
+	<div class="col-md-6">
+		<div class="portlet light portlet-fit ">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="pe-7s-bicycle"> </i>
+					<span class="caption-subject base-font"> Bike Mileages </span>
+				</div>
+			</div>
+			<div class="portlet-body">
+				<div id="mileage_graph" style="width: 100%; height: 200px;"></div>
+			</div>
+		</div>
+	</div>
+
+	<!--	Pie Chart
+	========================================= -->
+	<div class="col-md-3">
+		<div class="portlet light portlet-fit ">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="pe-7s-bicycle"> </i>
+					<span class="caption-subject base-font"> Current Utilization </span>
+				</div>
+			</div>
+			<div class="portlet-body">
+				<div id="pie_graph" style="width: 100%; height: 200px;"></div>
+			</div>
+		</div>
+	</div>
+
+	<!--	Pie Chart
+	========================================= -->
+	<div class="col-md-3">
+		<div class="portlet light portlet-fit ">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="pe-7s-bicycle"> </i>
+					<span class="caption-subject base-font"> Current Utilization </span>
+				</div>
+			</div>
+			<div class="portlet-body">
+				<div id="pie_graph2" style="width: 100%; height: 200px;"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!--	Printing in Landscape
+========================================= -->
+<style type="text/css" media="print">
+	@page { size: landscape; }
+	table { writing-mode: tb-rl; }
+</style>
+
+
+<!--	Javascript
+========================================= -->
+<script>
+	$(function() {
+		
+		/*	Checkbox Delete
+		========================================= */
+		var table = $('#cs_datatable');
+		table.dataTable({
+			"language": {
+				"aria": {
+					"sortAscending": ": activate to sort column ascending",
+					"sortDescending": ": activate to sort column descending"
+				},
+				"emptyTable": "No data available in table",
+				"info": "Showing _START_ to _END_ of _TOTAL_ records",
+				"infoEmpty": "No Records Found",
+					"infoFiltered": "(filtered1 from _MAX_ total records)",
+				"lengthMenu": "Show _MENU_",
+				"search": "Search:",
+				"zeroRecords": "No Matching Records Found",
+				"paginate": {
+					"previous":"Prev",
+					"next": "Next",
+					"last": "Last",
+					"first": "First"
+				}
+			},
+			"bStateSave": true,
+			"lengthMenu": [
+				[5, 10, 15, 20, -1],
+				[5, 10, 15, 20, "All"]
+			],
+			"pageLength": 15,
+			"pagingType": "bootstrap_full_number",
+			"order": [ [2, "asc"] ],
+			"columnDefs": [ {
+				"targets": 0,
+				"orderable": false,
+				"searchable": false
+			}],
+		});
+
+
+		/*	Buttons
+		========================================= */
+		var datatable = $('#cs_datatable').DataTable();
+		new $.fn.dataTable.Buttons( datatable, {
+			 buttons: [
+				  'print', 'pdf', 'excel'
+			 ]
+		} );
+		datatable.buttons( 0, null ).containers().appendTo( '#datatable-btn-export' );
+
+
+		/*	Adding Checked Values
+		========================================= */
+		
+		var table = $('#cs_datatable').dataTable();
+		table.find('.group-checkable').change(function () {
+			var set = jQuery(this).attr("data-set");
+			var checked = jQuery(this).is(":checked");
+			jQuery(set).each(function () {
+				if (checked) {
+					$(this).prop("checked", true);
+					$(this).parents('tr').addClass("active");
+
+				} else {
+					$(this).prop("checked", false);
+					$(this).parents('tr').removeClass("active");
+				}
+			});
+			jQuery.uniform.update(set);
+		});
+		table.on('change', 'tbody tr .checkboxes', function () {
+			var $input = $(this);
+			$(this).parents('tr').toggleClass("active");
+		});
+	});
+</script>

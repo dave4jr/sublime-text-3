@@ -1,0 +1,178 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	index.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+
+
+<!--	Buy Single
+========================================= -->
+<section id="page-body" class="p-t-0 m-t-80">
+	<div class="owl-carousel" data-items="4" data-autoPlay="5000" data-loop="true" data-nav="true" data-dots="false">
+	
+		{% for ii in property.img %}
+			<a class=" text-light" data-rel="lightcase:gallery1" href="{{ ii }}">
+				<div class="item">
+					<img src="{{ ii }}">
+				</div>
+			</a>
+		{% endfor %}
+		
+	</div>
+	<div class="spacer-small"></div>
+
+
+	<div class="wrapper align-center">
+		<h2 class="m-t-10 fs-34"><strong> {% include "include/address.html" with arg="street" %} </strong></h2>
+		<h5 class="subtitle-2 colored"> {% include "include/address.html" with arg="city" %} </h5>
+		<hr class="mini thin m-tb-30" />
+		
+		<!--	Icons
+		========================================= -->
+		<div class="column-section clearfix p-t-40">
+			<div id="buy-single-icons" class="column one-fifth">
+				<span class="fontello-sqft"></span>
+				<h5 class="subtitle-2">Square Feet</h5>
+				<h3><strong>{{ property.squarefootage|floatformat:"0"|intcomma }}</strong></h3>
+			</div>
+			<div id="buy-single-icons" class="column one-fifth">
+				<span class="fontello-beds"></span>
+				<h5 class="subtitle-2">Bedrooms</h5>
+				<h3><strong>{{ property.bedrooms }}</strong></h3>
+			</div>
+			<div id="buy-single-icons" class="column one-fifth">
+				<span class="fontello-baths"></span>
+				<h5 class="subtitle-2">Bathrooms</h5>
+				<h3><strong>{{ property.bathrooms }}</strong></h3>
+			</div>
+			<div id="buy-single-icons" class="column one-fifth">
+				<span class="fontello-year-built"></span>
+				<h5 class="subtitle-2">Year Built</h5>
+				<h3><strong>{{ property.yearbuilt }}</strong></h3>
+			</div>
+			<div id="buy-single-icons" class="column one-fifth last-col">
+				<span class="fontello-map"></span>
+				<h5 class="subtitle-2">Lot Size</h5>
+				<h3><strong>{{ property.acres }}</strong></h3>
+			</div>
+		</div>
+	</div>
+	<div class="spacer-big"> </div>
+	
+	
+	<!--	Description
+	========================================= -->
+	<div id="buy-single-details"  class="p-tb-60 b-tb-1" style="background:#F7F8FA;">
+		<div class="wrapper-small align-center">
+			<h2 class="m-t-10 fs-36"><strong> Marketing Remarks </strong></h2>
+			<hr class="mini thin m-tb-30 colored" />
+			<p>{{ property.marketingremarks }}</p>
+		</div>
+	</div>
+
+	<!--	RETS Data Points
+	========================================= -->
+	<div class="column-section boxed-sticky adapt-height clearfix">
+		<div class="column one-third">
+			<div class="owl-carousel" data-items="4" data-autoPlay="5000" data-loop="true" data-nav="true" data-dots="false">
+			
+				{% for ii in property.img %}
+					<a class=" text-light" data-rel="lightcase:gallery1" href="{{ ii }}">
+						<div class="item">
+							<img src="{{ ii }}">
+						</div>
+					</a>
+				{% endfor %}
+				
+			</div>
+		</div>
+		<div class="column one-third bigpadding tallest" style="min-height: 609px; background: none;">
+			<div class="col-content" style="margin-top: 0px;">
+				<h4><strong>Overview</strong></h4>
+				<hr class="mini thick colored">
+				<p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli.</p>
+				<div class="spacer-medium"></div>
+				<h4><strong>Exterior</strong></h4>
+				<hr class="mini thick colored">
+				<p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back.</p>
+			</div>
+		</div>
+		<div class="column one-third bigpadding last-col" style="min-height: 609px; background: none;">
+			<div class="col-content" style="margin-top: 0px;">
+				<h4><strong>Community</strong></h4>
+				<hr class="mini thick colored">
+				<p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli.</p>
+				<div class="spacer-medium"></div>
+				<h4><strong>Interior</strong></h4>
+				<hr class="mini thick colored">
+				<p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back.</p>
+			</div>
+		</div>
+	</div>
+	<!-- <div class="wrapper p-t-0 buy-single-checkers">
+		<div class="column-section boxed-sticky adapt-height  clearfix">
+			<div class="column one-half text-light bigpadding wood_1">
+				<h3><strong> Overview </strong></h3>
+				<ul>
+					<li><span>List Price</span></li>
+					<li><span>Style</span></li>
+					<li><span>Subtype</span></li>
+					<li><span>Year Built</span></li>
+					<li><span>Bedrooms</span></li>
+					<li><span>Bathrooms</span></li>
+					<li><span>Square Footage</span></li>
+				</ul>
+			</div>
+			<div class="column one-half text-light bigpadding wood_1">
+				<h3><strong> Community </strong></h3>
+				<ul>
+					<li><span>Subdivision</span></li>
+					<li><span>Section</span></li>
+					<li><span>Elementary School</span></li>
+					<li><span>Jr. High School</span></li>
+					<li><span>High School</span></li>
+					<li><span>HOA</span></li>
+					<li><span>CC&R's</span></li>
+					<li><span>Community</span></li>
+					<li><span>Taxex</span></li>
+				</ul>
+			</div>
+			<div class="column one-half text-light bigpadding wood_1">
+				<h3><strong> Interior </strong></h3>
+				<ul>
+					<li><span>Rooms</span></li>
+					<li><span>Interior</span></li>
+					<li><span>Fireplace</span></li>
+					<li><span>Floors</span></li>
+					<li><span>Heat/Cool</span></li>
+				</ul>
+			</div>
+			<div class="column one-half text-light bigpadding wood_1">
+				<h3><strong> Exterior </strong></h3>
+				<ul>
+					<li><span>New Construction</span></li>
+					<li><span>Construction</span></li>
+					<li><span>Exterior</span></li>
+					<li><span>Parking</span></li>
+					<li><span>Additional Buildings</span></li>
+					<li><span>Existing Water</span></li>
+					<li><span>Sewer Septic</span></li>
+					<li><span>Irrigation</span></li>
+					<li><span>Irrigated Acres</span></li>
+					<li><span>View</span></li>
+				</ul>
+			</div>
+		</div>
+	</div> -->
+</section>
+
+
+{% endblock %}

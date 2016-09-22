@@ -1,0 +1,59 @@
+<!--======================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	inventory_details.html
+ *======================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% block content_site %}
+
+<!--	Inventory
+========================================= -->
+<div class="row">
+	<div class="col-md-12">
+		<div class="portlet box base">
+
+			<!--	Top Toolbar
+			========================================= -->
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="pe-7s-ticket"> </i>
+					<span class="caption-subject font-white capitalize"> UPC Lookup </span>
+				</div>
+			</div>
+			<div class="portlet-body">
+				<div class="pi-row">
+					<div class="pi-col-sm-6 pi-col-sm-offset-3 pi-section-white m-t-30">
+
+						<!--	Form
+						========================================= -->
+						<form action="{% url 'inventory_upc' %}" method="POST" role="form">
+							{% csrf_token %}
+							<div class="pi-row pi-grid-small-margins">
+								<div class="pi-col-sm-9">
+									<div class="form-group">
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-ticket"></i>
+											</span>
+											{{ InventoryForm.upc | add_class:"form-control" | attr:"placeholder:UPC Code..." }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-3">
+									<button type="submit" name="name" value="upc" class="btn mt-grey-gallery-bg p-rl-40 p-tb-9"> Search<i class="pe-7s-search pi-icon-right"></i></button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}

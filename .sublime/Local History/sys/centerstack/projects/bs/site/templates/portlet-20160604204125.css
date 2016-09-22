@@ -1,0 +1,94 @@
+.portlet.light.portlet-fit {
+	padding: 0;
+}
+.portlet.light {
+	padding: 12px 20px 15px;
+	background-color: #fff;
+}
+.portlet, .btn {
+	border-radius: 0px !important;
+}
+.portlet {
+	margin-top: 0;
+	margin-bottom: 25px;
+	padding: 0;
+	border-radius: 4px;
+}
+.portlet.light.portlet-fit > .portlet-title {
+	padding: 12px 20px 5px;
+}
+.portlet.light.portlet-fit>.portlet-title {
+	padding: 15px 20px 10px;
+}
+.portlet.light>.portlet-title {
+	padding: 0;
+	min-height: 48px;
+}
+.portlet>.portlet-title {
+	border-bottom: 1px solid #eee;
+	padding: 0;
+	margin-bottom: 10px;
+	min-height: 41px;
+	-webkit-border-radius: 4px 4px 0 0;
+	-moz-border-radius: 4px 4px 0 0;
+	-ms-border-radius: 4px 4px 0 0;
+	-o-border-radius: 4px 4px 0 0;
+	border-radius: 4px 4px 0 0;
+}
+
+.portlet.light>.portlet-title>.caption {
+	color: #666;
+	padding: 10px 0;
+}
+.portlet>.portlet-title>.caption {
+	float: left;
+	display: inline-block;
+	font-size: 18px;
+	line-height: 18px;
+	padding: 10px 0;
+}
+
+.portlet-title .caption {
+	padding-left: 5px !important;
+}
+
+.portlet.light.portlet-fit>.portlet-body {
+	padding: 10px 20px 20px;
+}
+.portlet.light > .portlet-body {
+	padding-top: 5px;
+}
+.portlet.light .portlet-body {
+	padding-top: 8px;
+}
+.portlet > .portlet-body {
+	-webkit-border-radius: 0px !important;
+	-moz-border-radius: 0px !important;
+	-ms-border-radius: 0px !important;
+	-o-border-radius: 0px !important;
+	border-radius: 0px !important;
+}
+.portlet>.portlet-body {
+	-webkit-border-radius: 0 0 4px 4px;
+	-moz-border-radius: 0 0 4px 4px;
+	-ms-border-radius: 0 0 4px 4px;
+	-o-border-radius: 0 0 4px 4px;
+	border-radius: 0 0 4px 4px;
+}
+.chart-tooltip, .chart-tooltip .label, .chat-form, .dashboard-stat2 .display:after, .dashboard-stat2 .progress-info, .dashboard-stat2 .progress-info .progress, .dashboard-stat:after, .dropdown-menu-v2>li>a, .dropdown-menu>li>a, .feeds li .col1, .feeds li:after, .form .form-actions:after, .general-item-list>.item>.item-head:after, .portlet-form .form-actions:after, .portlet>.portlet-body, .portlet>.portlet-title:after, .social-icons:after, .tabbable:after, .table-toolbar:after, .tasks-widget .task-footer:after, .tasks-widget:after, .tiles .tile .tile-object:after, .tiles:after, .timeline .timeline-body:after, .widget-news .widget-news-right-body .widget-news-right-body-title {
+	clear: both;
+}
+.portlet-body {
+	padding-right: 30px !important;
+	padding-left: 30px !important;
+}
+
+
+
+
+
+
+
+
+
+

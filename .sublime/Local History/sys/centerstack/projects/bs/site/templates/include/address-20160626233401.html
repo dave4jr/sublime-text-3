@@ -1,0 +1,50 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	address Inclusion
+ *==========================-->
+
+
+{% if arg == "street" %}
+	{% if property.streetsuffix == "" and property.unit != "" %}
+		{{ property.streetnumber }} {{ property.streetname }}, unit: {{ property.unit }}
+	{% elif property.streetsuffix != "" and property.unit == "" %}
+		{{ property.streetnumber }} {{ property.streetname }} {{ property.streetsuffix }}
+	{% else %}
+		{{ property.streetnumber }} {{ property.streetname }}
+	{% endif %}
+
+{% elif arg == "city" %}
+	{{ property.city }}, {{ property.state }}
+
+{% elif arg == "cityzip" %}
+	{{ property.city }}, {{ property.state }}  {{ property.zipcode }}
+
+{% elif arg == "county" %}
+	{{ property.county }}
+
+{% elif arg == "countylabel" %}
+	{{ property.county }} county
+
+{% elif arg == "countyzip" %}
+	{{ property.county }}, {{ property.zipcode }}
+
+{% elif arg == "address" %}
+	{% if property.streetsuffix == "" and property.unit != "" %}
+		{{ property.streetnumber }} {{ property.streetname }} unit: {{ property.unit }}, {{ property.city }}, {{ property.state }} {{ property.zipcode }}
+	{% elif property.streetsuffix != "" and property.unit == "" %}
+		{{ property.streetnumber }} {{ property.streetname }} {{ property.streetsuffix }}, {{ property.city }}, {{ property.state }} {{ property.zipcode }}
+	{% else %}
+		{{ property.streetnumber }} {{ property.streetname }}, {{ property.city }}, {{ property.state }}  {{ property.zipcode }}
+	{% endif %}
+
+{% else %}
+	"Choose An Argument: Street / city / county / Address"
+{% endif %}
+
+
+
+
+
+
+

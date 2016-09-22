@@ -1,0 +1,143 @@
+<!--======================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	member.html
+ *======================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% block content_site %}
+
+<!--	Members
+========================================= -->
+<div class="row">
+	<div class="col-md-12">
+		<div class="portlet light">
+			<div class="portlet-title">
+				<div class="caption">
+					<span class="caption-subject"> Processing History </span>
+				</div>
+			</div>
+			<div class="portlet-body">
+				<div class="table-toolbar">
+					<div class="row">
+						<div class="col-md-6">
+							<div id="datatable-btn" class="actions">
+								<a class="btn base" href="{% url 'member_new' %}"> New </a>
+								<label id="delete-selected-row" class="btn base m-b-0" for="checkbox-input"> Delete </label>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div id="datatable-btn-export" class="pull-right"></div>
+						</div>
+					</div>
+				</div>
+	
+				<form action="{% url 'member_delete' %}" method="post">
+					{% csrf_token %}
+					<table class="table hover table-checkable order-column" id="datatable">
+
+						<thead>
+							<tr>
+								<th> ID </th>
+								<th> Name </th>
+								<th> Level </th>
+								<th> Start Date </th>
+								<th> Standing </th>
+							</tr>
+						</thead>
+
+						<tbody>
+						{% for member in members %}
+							<tr>
+								<td>{{ member.member_id }}</td>
+								<td>{{ member.name_last_first }}</td>
+								<td>{{ member.level }}</td>
+								<td>{{ member.membership_start_date }}</td>
+								<td>{{ member.status }}</td>
+							</tr>
+						{% endfor %}
+
+						</tbody>
+					</table>
+					<input type="submit" class="hidden" id="checkbox-input">
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!--=====================================================
+	Javascript
+=====================================================-->
+<script>
+	$(function() {
+		var table = $('#datatable').dataTable({
+			"language": {
+				"aria": {
+					"sortAscending": ": activate to sort column ascending",
+					"sortDescending": ": activate to sort column descending"
+				},
+			},
+			"info": false,
+			"sort": true,
+			"paging": false,
+			"searching": false,
+			"bStateSave": true,
+			"order": [ [3, "desc"] ],
+		});
+
+
+		/*	Select Row
+		========================================= */
+		var table = $('#datatable').DataTable();
+		$('#datatable tbody').on('click', 'tr', function() {
+			if ($(this).hasClass('selected')) {
+				$('#datatable tbody > tr').removeClass('selected');
+			} else {
+				$('#datatable tbody > tr').removeClass('selected');
+				$(this).addClass('selected');
+			}
+		});
+
+		/*	Button To Delete Selected Row
+		========================================= */
+		$('#delete-selected-row').click(function() {
+			table.row('.selected').remove().draw(false);
+		});
+
+
+
+
+		/*	Adding Checked Values
+		========================================= */
+		var table = $('#cs_datatable').dataTable();
+		table.find('.group-checkable').change(function () {
+			var set = jQuery(this).attr("data-set");
+			var checked = jQuery(this).is(":checked");
+			jQuery(set).each(function () {
+				if (checked) {
+					$(this).prop("checked", true);
+					$(this).parents('tr').addClass("active");
+
+				} else {
+					$(this).prop("checked", false);
+					$(this).parents('tr').removeClass("active");
+				}
+			});
+			jQuery.uniform.update(set);
+		});
+		table.on('change', 'tbody tr .checkboxes', function () {
+			var $input = $(this);
+			$(this).parents('tr').toggleClass("active");
+		});
+	});
+</script>
+
+
+{% endblock %}

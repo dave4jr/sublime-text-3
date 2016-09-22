@@ -1,0 +1,56 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	buy.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+
+<!--	Page Title
+========================================= -->
+<section class="hero-big parallax-section text-light no-overlay wood_1" id="hero">
+	<div class="wrapper align-center" id="page-title">
+		<h2 class="uppercase">
+			<strong> Our Listings </strong>
+		</h2>
+	</div>
+</section>
+
+<section class="p-t-0" id="page-body">
+	<div id="listings" class="wrapper">
+		<div class="column-section clearfix">
+		
+			{% for property in properties %}
+				<div class="column one-third listing">
+					<div class="listing-row">
+						<div class="listing-img" data-property-href="{% url 'buy-single' pk=property.pk %}" style="background-image: url({{ property.img.0 }}); background-size: cover; width: 100%; height: 250px; cursor: pointer;"></div>
+						<div class="listing-row-inner">
+							<div class="listing-row-content" style="width: 100%;">
+								<h3><a href="{% url 'buy-single' pk=property.pk %}"> {{ property.streetnumber }} {{ property.streetname }} {{ property.streetsuffix }} </a></h3>
+								<h4 class="m-t-0"> ${{ property.listingprice|floatformat:"0"|intcomma }} </h4>
+								<ul class="listing-row-attributes">
+									<li><i class="fontello-city"></i> City <span> {{ property.city }} </span></li>
+									<li><i class="fontello-section"></i> Section <span> {{ property.section }} </span></li>
+									<li><i class="fontello-sqft"></i> Sqft. <span> {{ property.squarefootage|floatformat:"0"|intcomma }} </span></li>
+									<li><i class="fontello-map"></i> Acres <span> {{ property.acres }} </span></li>
+									<li><i class="fontello-beds"></i> Bedrooms <span> {{ property.bedrooms }} </span></li>
+									<li><i class="fontello-baths"></i> Baths <span> {{ property.bathrooms }} </span></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+			
+		</div>
+	</div>
+	<div class="spacer-big"> </div>
+</section>
+
+{% endblock %}

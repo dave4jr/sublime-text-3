@@ -1,0 +1,211 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	index.html
+ *==========================-->
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+{% load customtags %}
+{% load humanize %}
+{% load debugtools_tags %}
+{% block content %}
+
+
+<!--	About
+========================================= -->
+<div class="main-wrapper">
+	<div class="main">
+		<div class="main-inner">
+			<div class="content-title m-b-0">
+				<div class="content-title-inner">
+					<div class="container">
+						<h1> About BrundageSmith </h1>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<div class="container p-t-100">
+					<div class="row">
+						<div class="col-md-4">
+							<div class="listing-box">
+								<div class="listing-box-image" style="background-image: url({% static 'img/about/molly-2.jpg' %});">
+									<a class="listing-box-image-link" href="{% url 'villareal-agents-detail' %}"> </a>
+								</div>
+								<div class="listing-box-title">
+									<h2><a href="{% url 'villareal-agents-detail' %}"> Molly Brundage </a></h2>
+									<h3> Principal Broker / Realtor </h3>
+								</div>
+								<div class="listing-box-content">
+									<p>
+										<strong> 143 </strong> properties in catalogue
+										<br/>
+										<a href="#"><i class="fa fa-at"> </i> info@example.com </a>
+										<br/>
+										<a href="#"><i class="fa fa-phone"> </i> +1-123-456-789 </a>
+									</p>
+									<ul class="listing-box-social">
+										<li><a href="#"><i class="fa fa-facebook"> </i></a></li>
+										<li><a href="#"><i class="fa fa-twitter"> </i></a></li>
+										<li><a href="#"><i class="fa fa-linkedin"> </i></a></li>
+										<li><a href="#"><i class="fa fa-instagram"> </i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div style="padding: 100px 180px 0px 180px; border-bottom: 1px solid #EEE;" class="container-fluid">
+					<div class="row">
+						<div class="listing-detail col-md-12 col-lg-12">
+							<div class="listing-user">
+								<div class="listing-user-image">
+									<a style="background-image: url({% static 'img/about/molly-2.jpg' %});"> </a>
+								</div>
+								<div class="listing-user-title">
+									<h2> Molly Brundage </h2>
+									<h3> Principal Broker / Realtor </h3>
+								</div>
+								<div class="listing-user-social">
+									<ul>
+										<li>
+											<a href="https://www.facebook.com/pages/Molly-Brundage-Bend-Oregon-Real-Estate/332346853475501">
+												<i class="fa fa-facebook"> </i>
+											</a>
+										</li>
+										<li>
+											<a href="https://www.linkedin.com/in/molly-brundage-402a2410">
+												<i class="fa fa-linkedin"> </i>
+											</a>
+										</li>
+										<li>
+											<a href="https://twitter.com/MollyBrundage">
+												<i class="fa fa-twitter"> </i>
+											</a>
+										</li>
+										<li>
+											<a href="http://www.findbendhomes.com/cp/our-blog/">
+												<i class="fa fa-rss"> </i>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-4">
+									<div id="about-contact" class="overview">
+										<h2> Information </h2>
+										<ul>
+											<li>
+												<strong> Phone </strong>
+												<span> 541.330.0588 (Office)
+													<br>
+													<span>541.788.8997 (Cell)</span>
+												</span>
+											</li>
+											<li>
+												<strong> E-mail </strong>
+												<span>
+													<span>cheri@brundagesmith.com</span>
+													<br> csmith@total-property.com </span>
+											</li>
+											<li>
+												<strong> Website </strong>
+												<span>
+													<span>www.brundagesmith.com</span>
+													<br>
+													<span>www.totalbendrealestate.com</span>
+													<br>
+													<span>www.findbendhomes.com</span>
+												</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-8">
+									<h2> About Molly </h2>
+									<p> After working for ten years in Seattle’s real estate sector for one of the world’s largest commercial real estate companies, CB Richard Ellis, I shifted gears in 2002 and moved to Bend to enjoy all that Central Oregon has to offer from running the miles of trails to watching the sunset over the mountains. Currently I serve as the Designated Principal Broker for the successful and reputable firm that I work for, Total Property Resources. Being active in this role adds depth to my knowledge of the current market conditions both locally and globally. I look forward to bringing my years of real estate experience and business acumen to help you reach your real estate goals. </p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div style="padding: 100px 180px 0px 180px" class="container-fluid">
+					<div class="row">
+						<div class="listing-detail col-md-12 col-lg-12">
+							<div class="listing-user">
+								<div class="listing-user-image">
+									<a style="background-image: url({% static 'img/about/cheri.jpg' %});"> </a>
+								</div>
+								<div class="listing-user-title">
+									<h2> Cheri Smith </h2>
+									<h3> Principal Broker / Realtor </h3>
+								</div>
+								<div class="listing-user-social">
+									<ul>
+										<li>
+											<a href="https://www.linkedin.com/in/cherimalleysmith">
+												<i class="fa fa-facebook"> </i>
+											</a>
+										</li>
+										<li>
+											<a href="https://www.linkedin.com/in/cherimalleysmith">
+												<i class="fa fa-linkedin"> </i>
+											</a>
+										</li>
+										<li>
+											<a href="https://www.pinterest.com/findbendhomes">
+												<i class="fa fa-pinterest"> </i>
+											</a>
+										</li>
+										<li>
+											<a href="http://www.findbendhomes.com/cp/our-blog/">
+												<i class="fa fa-rss"> </i>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-4">
+									<div id="about-contact" class="overview">
+										<h2> Information </h2>
+										<ul>
+											<li>
+												<strong> Phone </strong>
+												<span> 541.330.0588 (Office)
+													<br>
+													<span>541.280.9066 (Cell)</span>
+												</span>
+											</li>
+											<li>
+												<strong> E-mail </strong>
+												<span>
+													<span>molly@brundagesmith.com</span>
+													<br> mbrundage@total-property.com </span>
+											</li>
+											<li>
+												<strong> Website </strong>
+												<span>
+													<span>www.brundagesmith.com</span>
+													<br>
+													<span>www.totalbendrealestate.com</span>
+													<br>
+													<span>www.findbendhomes.com</span>
+												</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-8">
+									<h2> About Cheri </h2>
+									<p> After working for ten years in Seattle’s real estate sector for one of the world’s largest commercial real estate companies, CB Richard Ellis, I shifted gears in 2002 and moved to Bend to enjoy all that Central Oregon has to offer from running the miles of trails to watching the sunset over the mountains. Currently I serve as the Designated Principal Broker for the successful and reputable firm that I work for, Total Property Resources. Being active in this role adds depth to my knowledge of the current market conditions both locally and globally. I look forward to bringing my years of real estate experience and business acumen to help you reach your real estate goals. </p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> {% endblock %}

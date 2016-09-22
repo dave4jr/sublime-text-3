@@ -1,0 +1,32 @@
+<!--							
+    See http://www.reso.org for more information.
+    
+    This DTD is identified by PUBLIC and SYSTEM identifiers:
+    
+    PUBLIC "-//RETS//DTD Metadata 1.7.2//EN"
+    SYSTEM "http://www.rets.org/dtd/1.7.2/1.3/rets-metadata-1_7_2.dtd"
+
+All items in this zip file abide by the following:
+
+Copyright 2015 RESO. By using this document you agree to the RESO End User License Agreement (EULA) posted at:
+
+https://reso.memberclicks.net/assets/docs/reso%20eula.pdf
+
+-->
+<!-- BASIC ELEMENTS -->
+<!--DATE/TIME ELEMENTS -->
+<!--see ISO 8601 for acceptable values for Format -->
+<!ENTITY  % METADATA SYSTEM "RETS-METADATA-CONTENT-1_7_2.dtd">
+%METADATA;
+<!ATTLIST RETS
+	ReplyCode CDATA #REQUIRED
+	ReplyText CDATA #REQUIRED
+>
+<!ELEMENT RETS-STATUS EMPTY>
+<!ATTLIST RETS-STATUS
+	ReplyCode CDATA #IMPLIED
+	ReplyText CDATA #IMPLIED
+>
+<!-- COMPOUND ELEMENTS -->
+<!-- PACKAGING ELEMENTS -->
+<!ELEMENT RETS (METADATA?, RETS-STATUS?)>

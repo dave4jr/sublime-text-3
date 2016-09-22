@@ -1,0 +1,143 @@
+<!--======================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	index.html
+ *======================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content_site %}
+
+
+<!--=================`====================================
+	Check-Out
+=====================================================-->
+<div class="pi-row">
+	<div class="col-md-3">
+		<div class="portlet box base">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="pe-7s-download rotate--90"> </i>
+					<span class="caption-subject base-font"> Check-Out </span>
+				</div>
+			</div>
+			<div class="portlet-body">
+				<div class="pi-section-white">
+
+					<!--	Error Handling Logic
+					========================================= -->
+					{% if CheckoutLaunchForm.errors %}
+						{% for error in CheckoutLaunchForm.errors %}
+							<p class="pi-text-center font-mt-red capitalize fs-18">Error: {{ error|escape }}</p>
+						{% endfor %}
+					{% endif %}
+
+					<!--	Form
+					========================================= -->
+					<form action="" method="post">
+						{% csrf_token %}
+							
+						<div class="pi-row pi-grid-small-margins">
+
+							<!--	Member
+							========================================= -->
+							<div class="pi-col-sm-12">
+								<div class="form-group">
+									<label for="label-reservation-phone"> Member </label>
+									<div class='input-group'>
+										<span class="input-group-addon input-left">
+											<i class="pe-7s-user"> </i>
+										</span>
+										{{ CheckoutLaunchForm.member | add_class:"form-control" }}
+										<span class="input-group-addon input-right expandable">
+											<i class="pe-is-i-angle-down"></i>
+										</span>
+									</div>
+								</div>
+							</div>
+
+
+
+							<!--	Submit / Close Buttons
+							========================================= -->
+							<p class="pi-text-center m-t-20 p-rl-8">
+								<button type="submit" name="type" value="checkout" class="btn base pi-btn-wide"> Check-Out </button>
+							</p>
+						</div>
+					</form>
+				 </div>
+			</div>
+		</div>
+	</div>
+
+
+<!--=================`====================================
+	Check-In
+=====================================================-->
+	<div class="col-md-3">
+		<div class="portlet box base">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="pe-7s-download rotate--90"> </i>
+					<span class="caption-subject base-font"> Check-In </span>
+				</div>
+			</div>
+			<div class="portlet-body">
+				<div class="pi-section-white">
+
+					<!--	Error Handling Logic
+					========================================= -->
+					{% if CheckinLaunchForm.errors %}
+						{% for error in CheckinLaunchForm.errors %}
+							<p class="pi-text-center font-mt-red capitalize fs-18">Error: {{ error|escape }}</p>
+						{% endfor %}
+					{% endif %}
+
+					<!--	Form
+					========================================= -->
+					<form action="" method="post">
+						{% csrf_token %}
+							
+						<div class="pi-row pi-grid-small-margins">
+
+							<!--	Member
+							========================================= -->
+							<div class="pi-col-sm-12">
+								<div class="form-group">
+									<label for="label-reservation-phone"> Member </label>
+									<div class='input-group'>
+										<span class="input-group-addon input-left">
+											<i class="pe-7s-user"> </i>
+										</span>
+										{{ CheckinLaunchForm.member | add_class:"form-control" }}
+										<span class="input-group-addon input-right expandable">
+											<i class="pe-is-i-angle-down"></i>
+										</span>
+									</div>
+								</div>
+							</div>
+
+
+							<!--	Submit / Close Buttons
+							========================================= -->
+							<p class="pi-text-center m-t-20 p-rl-8">
+								<button type="submit" name="type" value="checkin" class="btn base pi-btn-wide"> Check-In </button>
+							</p>
+						</div>
+					</form>
+				 </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+{% endblock %}

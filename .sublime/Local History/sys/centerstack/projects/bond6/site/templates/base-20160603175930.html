@@ -1,0 +1,141 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	base.html
+ *==========================-->
+{% load customtags %}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="CenterStack" name="author" />
+	<link href="{% static 'massive/img/favicon.png' %}" rel="icon" type="image/png" />
+	<title> Bond6 Fitness </title>
+
+	<!--	Favicon
+	========================================= -->
+	<link rel="apple-touch-icon" sizes="57x57" href="{% static 'img/favicon/apple-icon-57x57.png' %}">
+	<link rel="apple-touch-icon" sizes="60x60" href="{% static 'img/favicon/apple-icon-60x60.png' %}">
+	<link rel="apple-touch-icon" sizes="72x72" href="{% static 'img/favicon/apple-icon-72x72.png' %}">
+	<link rel="apple-touch-icon" sizes="76x76" href="{% static 'img/favicon/apple-icon-76x76.png' %}">
+	<link rel="apple-touch-icon" sizes="114x114" href="{% static 'img/favicon/apple-icon-114x114.png' %}">
+	<link rel="apple-touch-icon" sizes="120x120" href="{% static 'img/favicon/apple-icon-120x120.png' %}">
+	<link rel="apple-touch-icon" sizes="144x144" href="{% static 'img/favicon/apple-icon-144x144.png' %}">
+	<link rel="apple-touch-icon" sizes="152x152" href="{% static 'img/favicon/apple-icon-152x152.png' %}">
+	<link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/favicon/apple-icon-180x180.png' %}">
+	<link rel="icon" type="image/png" sizes="192x192"  href="{% static 'img/favicon/android-icon-192x192.png' %}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon/favicon-32x32.png' %}">
+	<link rel="icon" type="image/png" sizes="96x96" href="{% static 'img/favicon/favicon-96x96.png' %}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon/favicon-16x16.png' %}">
+	<link rel="manifest" href="{% static 'img/favicon/manifest.json' %}">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="{% static 'img/favicon/ms-icon-144x144.png' %}">
+	<meta name="theme-color" content="#ffffff">
+
+	<!--	Fonts
+	========================================= -->
+	<link href="http://fonts.googleapis.com/css?family=Abel|Source+Sans+Pro:400,300,300italic,400italic,600,600italic,700,700italic,900,900italic,200italic,200" rel="stylesheet" type="text/css" />
+	<link href="{% static 'plugins/massive/css/font-awesome.min.css' %}" rel="stylesheet" />
+
+	<!--	CSS
+	========================================= -->
+	<link href="{% static 'plugins/massive/css/bootstrap.min.css' %}" rel="stylesheet" />
+	<link href="{% static 'plugins/massive/css/magnific-popup.css' %}" rel="stylesheet" />
+	<link href="{% static 'plugins/massive/css/shortcodes/shortcodes.css' %}" rel="stylesheet" />
+	<link href="{% static 'plugins/massive/css/owl.carousel.css' %}" rel="stylesheet" />
+	<link href="{% static 'plugins/massive/css/owl.theme.css' %}" rel="stylesheet" />
+	<link href="{% static 'css/style.css' %}" rel="stylesheet" />
+	<link href="{% static 'plugins/massive/css/style-responsive.css' %}" rel="stylesheet" />
+	<link href="{% static 'css/default-theme.css' %}" rel="stylesheet" />
+	<link href="{% static 'plugins/massive/css/blog.css' %}" rel="stylesheet" />
+	<link href="{% static 'css/helpers.css' %}" rel="stylesheet" />
+</head>
+<body>
+
+	<!--	Pre-Loader
+	========================================= -->
+	<div id="tb-preloader">
+		<div class="tb-preloader-wave"> </div>
+	</div>
+
+	<!--	Header
+	========================================= -->
+	<div class="wrapper">
+		<header class=" nav-center-align" id="header">
+			<div class="light-header">
+				<div class="container mainmenu">
+					<div class="menuzord" id="massive-menu">
+						<a class="logo-brand" href="{% url 'index' %}">
+							<img class="m-tb-10" width="140" src="{% static 'img/logo/logo-black.svg' %}" />
+						</a>
+						<ul class="menuzord-menu border-tb" id="menu-list">
+							<li class="{% active 'index' %}"><a href="{% url 'index' %}"> Home </a></li>
+							<li class="{% active 'about' %}"><a href="{% url 'about' %}"> What We Do </a></li>
+							<li class="{% active 'exercises' %}"><a href="{% url 'exercises' %}"> Train With Us </a></li>
+							<li class="{% active 'testimonials' %}"><a href="{% url 'testimonials' %}"> Testimonials </a></li>
+							<li class="{% active 'blog' %}"><a href="{% url 'blog' %}"> Blog </a></li>
+							<li class="{% active 'contact' %}"><a href="{% url 'contact' %}"> Refer A Friend </a></li>
+							<li class="{% active 'contact' %}"><a href="{% url 'contact' %}"> Contact </a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="menu-appear-alt">
+					<div class="container">
+						<div class="menuzord" id="massive-menu-alt"> </div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+
+
+		<!--	Main Content
+		========================================= -->
+		{% block content %}
+			<!-- Extend Content Here  -->
+		{% endblock %}
+
+
+		<!--	Footer
+		========================================= -->
+		<footer class="dark footer-4 p-tb-40" id="footer">
+			<div class="container">
+				<div class="f-logo-center p-0 p-r-5">
+					<a class="footer-logo" href="{% url 'index' %}">
+						<img width="140" src="{% static 'img/logo/logo-black.svg' %}" />
+					</a>
+				</div>
+				<div class="col-md-6 p-tb-15">
+					<div class="copyright"> © 2016 Bond6 Fitness, All Rights Reserved </div>
+					<div class="copyright-sub-title text-uppercase"> Built by <a href="http://www.centerstack.io">CenterStack</a> </div>
+				</div>
+				<div class="col-md-6">
+					<div class="social-link pull-right circle ">
+						<a href="#"><i class="fa fa-instagram"> </i></a>
+						<a href="#"><i class="fa fa-linkedin"> </i></a>
+						<a href="#"><i class="fa fa-facebook"> </i></a>
+						<a href="#"><i class="fa fa-twitter"> </i></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+	<script src="{% static 'plugins/massive/js/jquery-1.10.2.min.js' %}"></script>
+	<script src="{% static 'plugins/massive/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'plugins/massive/js/menuzord.js' %}"></script>
+	<script src="{% static 'plugins/massive/js/jquery.flexslider-min.js' %}"></script>
+	<script src="{% static 'plugins/massive/js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'plugins/massive/js/jquery.isotope.js' %}"></script>
+	<script src="{% static 'plugins/massive/js/jquery.magnific-popup.min.js' %}"></script>
+	<script src="{% static 'plugins/massive/js/smooth.js' %}"></script>
+	<script src="{% static 'plugins/massive/js/wow.min.js' %}"></script>
+	<script src="{% static 'plugins/massive/js/imagesloaded.js' %}"></script>
+	<script src="{% static 'plugins/massive/js/scripts.js' %}"></script>
+</body>
+
+</html>

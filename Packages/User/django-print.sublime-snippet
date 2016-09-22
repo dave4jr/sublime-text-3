@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[{% print $1 %}]]></content>
+	<tabTrigger>print</tabTrigger>
+	<description>Django Debugtools - Print</description>
+</snippet>

@@ -1,0 +1,234 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	buy.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load el_pagination_tags %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+
+
+
+
+<!--	Django Filter
+========================================= -->
+<section class="p-t-0" id="page-body">
+	<div id="buy-filter" class="portlet p-tb-10 bs-grey-bg">
+		<div class="column-section clearfix">
+			<form id="filter-form" action="" method="get">
+
+
+				 <!--	City
+				 ========================================= -->
+				<div class="form-row column one-sixth">
+					{{ PropertyFilter.form.city | add_class:"full-width ajax" }}
+				</div>
+
+
+				<!--	Beds / Baths
+				========================================= -->
+				<div class="form-row column one-sixth">
+					<div class="form-row column one-half">
+						{{ PropertyFilter.form.bedrooms | add_class:"full-width ajax" }}
+					</div>
+					<div class="form-row column one-half last-col">
+						{{ PropertyFilter.form.bathrooms | add_class:"full-width ajax" }}
+					</div>
+				</div>
+
+
+				<!--	Sqft Range
+				========================================= -->
+				<div class="form-row column one-sixth range">
+					<div class="form-row column one-half">
+						{{ PropertyFilter.form.squarefootage__gt | add_class:"full-width ajax" | attr:"placeholder:Min" }}
+					</div>
+					<div class="form-row column one-half last-col">
+						{{ PropertyFilter.form.squarefootage__lt | add_class:"full-width ajax m-t-0" | attr:"placeholder:Max" }}
+					</div>
+				</div>
+
+
+				<!--	Price Range
+				========================================= -->
+				<div class="form-row column one-sixth range">
+					<div class="form-row column one-half input-symbol">
+						<span>&dollar;</span>
+						{{ PropertyFilter.form.listingprice__gt | add_class:"full-width ajax" | attr:"placeholder:Min" }}
+					</div>
+					<div class="form-row column one-half last-col input-symbol">
+						<span>&dollar;</span>
+						{{ PropertyFilter.form.listingprice__lt | add_class:"full-width ajax m-t-0" | attr:"placeholder:Max" }}
+					</div>
+				</div>
+
+ 	
+				<!--	Keyword Search
+				========================================= -->
+				<div class="form-row column one-sixth">
+					{{ PropertyFilter.form.keysearch | add_class:"full-width ajax" | attr:"placeholder:Search..." }}
+				</div>
+			</form>
+
+
+			<!--	Toggles
+			========================================= -->
+			<div id="toggles" class="form-row column one-sixth last-col range">
+				<div class="form-row column one-half last-col">
+					<button class="on map sr-button button-1  button-form">Map</button>
+				</div>
+				<div class="form-row column one-half m-r-0">
+					<button class="off grid sr-button button-form">Grid</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="spacer-small"></div>
+
+
+	<!--	Map
+	========================================= -->
+	<div class="column-section boxed-sticky clearfix bs-grey-bg">
+		<div class="column one-half p-20">
+
+			{% paginate 5 PropertyFilter %}
+			{% for property in PropertyFilter %}
+				<div class="property-left column-section adapt-height boxed-sticky clearfix white-bg m-b-30">
+					<div class="column one-third p-0" style="height: 200px; background: url({{ property.img.0 }}); background-size: cover;"></div>
+					<div class="column two-third white-bg">
+						<table id="property-table">
+							<tr style="border-bottom: 0; margin-bottom: 20px;">
+								<td colspan="3"><h6 class="uppercase fs-14 align-left">{% include "include/address.html" with arg="street" %}</h6></td>
+								<td><h6 class="uppercase fs-14 align-right">${{ property.listingprice|floatformat:"0"|intcomma }}</h6></td>
+							</tr>
+							<tr>
+								<td><i class="fa fa-map-marker"></i><span class="text-grey"> City</span></td>
+								<td></td>
+								<td>Yo</td>
+								<td>Yo</td>
+							</tr>
+							<tr>
+								<td><i class="fa fa-map-marker"></i><span class="text-grey"> Beds</span></td>
+								<td>Yo</td>
+								<td>Yo</td>
+								<td>Yo</td>
+							</tr>
+							<tr style="border-bottom: 0;">
+								<td><i class="fa fa-map-marker"></i> <span class="text-grey">Baths</span></td>
+								<td>Yo</td>
+								<td>Yo</td>
+								<td>Yo</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			{% endfor %}
+
+		</div>
+		<div class="column one-half p-0 last-col">
+			<div id="map"></div>
+		</div>
+	</div>
+	
+
+
+
+
+
+	<script>
+
+		/*	Init
+		========================================= */
+		function initMap() {
+			var map = new google.maps.Map(document.getElementById('map'), {
+				zoom: 15,
+				center: { lat: 44.057511, lng: -121.331884 },
+				styles: [{"featureType":"landscape","stylers":[{"hue":"#FFBB00"},{"saturation":43.400000000000006},{"lightness":37.599999999999994},{"gamma":1}]},{"featureType":"road.highway","stylers":[{"hue":"#FFC200"},{"saturation":-61.8},{"lightness":45.599999999999994},{"gamma":1}]},{"featureType":"road.arterial","stylers":[{"hue":"#FF0300"},{"saturation":-100},{"lightness":51.19999999999999},{"gamma":1}]},{"featureType":"road.local","stylers":[{"hue":"#FF0300"},{"saturation":-100},{"lightness":52},{"gamma":1}]},{"featureType":"water","stylers":[{"hue":"#0078FF"},{"saturation":-13.200000000000003},{"lightness":2.4000000000000057},{"gamma":1}]},{"featureType":"poi","stylers":[{"hue":"#00FF6A"},{"saturation":-1.0989010989011234},{"lightness":11.200000000000017},{"gamma":1}]}],
+				mapTypeControl: false,
+				navigationControl: false,
+				scrollwheel: false,
+				streetViewControl: false,
+				zoomControl: true,
+				zoomControlOptions: {
+					style: google.maps.ZoomControlStyle.LARGE,
+					position: google.maps.ControlPosition.RIGHT_CENTER
+				},
+			});
+
+			var infowindow = new google.maps.InfoWindow({
+				maxWidth: 250,
+			});
+
+			{% for property in PropertyFilter %}
+				var marker = new google.maps.Marker({
+					position: {lat: {{ property.latitude }}, lng: {{ property.longitude }} },
+					map: map,
+					icon: "{% static 'plugins/gmap/marker.svg' %}",
+					title: "{{ property.street }}",
+				});
+
+				google.maps.event.addListener(marker, 'click', function(e) {
+					// var content = "<img src='{{ property.img.0 }}' class='map-photo'>";
+					var content = "{{ property.street }}";
+					infowindow.setContent(content);
+					infowindow.setPosition(e.latLng);
+					infowindow.open(map);
+				});
+
+				google.maps.event.addListener(map, 'click', function() {
+					infowindow.close();
+				});
+
+			{% endfor %}
+		}
+	</script>
+
+
+
+<!--=====================================================
+	Grid
+=====================================================-->
+	<div id="grid">
+		<div id="properties" class="isotope-grid gallery-container style-modern-4 isotope-spaced clearfix fitrows m-t-30" data-heightratio=".66">
+			{% paginate 15 PropertyFilter %}
+			{% for property in PropertyFilter %}
+
+				<!--	Setting Filter Values
+				========================================= -->
+				<div class="isotope-item">
+					<a href="{% url 'buy-single' pk=property.pk %}" class="thumb-overlay overlay-effect-3 text-light">
+						<img src="{{ property.img.0 }}">
+						<img src="{{ property.img.1 }}" class="hover-pic">
+						<div class="overlay-caption">
+							<table>
+								<tr>
+									<td><h6 class="uppercase">{{ property.bedrooms }} BR &bull; {{ property.bathrooms|floatformat:"1" }} BA &bull; {{ property.squarefootage|floatformat:"0"|intcomma }} Sqft.</h6></td>
+									<td><h6 class="uppercase fs-20">${{ property.listingprice|floatformat:"0"|intcomma }}</h6></td>
+								</tr>
+								<tr>
+									<td><h6 class="subtitle-1 o-100 m-t-0">{% include "include/address.html" with arg="street" %}</h6></td>
+									<td><h6 class="subtitle-1 o-100 m-t-0">{% include "include/address.html" with arg="cityzip" %}</h6></td>
+								</tr>
+							</table>
+						</div>
+					</a>
+				</div>
+					
+			{% endfor %}
+					
+		</div>
+		<div class="spacer-big"> </div>
+		{% show_pages %}
+	</div>
+</section>
+
+
+
+{% endblock %}
+

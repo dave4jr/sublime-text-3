@@ -1,0 +1,192 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	buy.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+
+<!--	Page Title
+========================================= -->
+<section id="page_title">
+	<h4 class="capitalize fs-24"> Buy A Property </h4>
+</section>
+
+<section class="p-t-40" id="page-body">
+
+
+<!--=====================================================
+	Filter
+=====================================================-->
+	<div id="buy-filter" class="wrapper portlet p-t-20 bs-grey-bg">
+		<form action="" method="post">
+			<div class="column-section clearfix">
+
+				 <!--	City
+				 ========================================= -->
+				<div class="form-row column one-sixth">
+					<label for="name"> City</label>
+					<select class="city-select full-width">
+						<option value="*"> Show All </option>
+						<option value=".city-Bend">Bend</option>
+						<option value=".city-Sisters">Sisters</option>
+					</select>
+				</div>
+
+
+				<!--	Beds / Baths
+				========================================= -->
+				<div class="form-row column one-sixth">
+					<div class="form-row column one-half">
+						<label for="name"> Beds </label>
+						<input class="name req" id="name" name="name" type="text" value="" />
+					</div>
+					<div class="form-row column one-half last-col">
+						<label for="name"> Baths </label>
+						<input class="name req" id="name" name="name" type="text" value="" />
+					</div>
+				</div>
+
+
+				<!--	List Price
+				========================================= -->
+				<div class="form-row column one-sixth range">
+					<div class="form-row column one-half">
+						<label> List Price</label>
+						<input class="name req" type="text" placeholder="Min" />
+					</div>
+					<div class="form-row column one-half last-col">
+						<input class="name req" type="text" placeholder="Max" />
+					</div>
+				</div>
+
+
+				<!--	Sqft
+				========================================= -->
+				<div class="form-row column one-sixth range">
+					<div class="form-row column one-half">
+						<label> Sqft.</label>
+						<input class="name req" type="text" placeholder="Min" />
+					</div>
+					<div class="form-row column one-half last-col">
+						<input class="name req" type="text" placeholder="Max" />
+					</div>
+				</div>
+
+
+				<!--	Lot Size
+				========================================= -->
+				<div class="form-row column one-sixth range">
+					<div class="form-row column one-half">
+						<label> Lot Size</label>
+						<input class="name req" type="text" placeholder="Min" />
+					</div>
+					<div class="form-row column one-half last-col">
+						<input class="name req" type="text" placeholder="Max" />
+					</div>
+				</div>
+
+
+				<!--	Keyword
+				========================================= -->
+				<div class="form-row column one-sixth last-col">
+					<label> Keyword</label>
+					<input class="name req" type="text" placeholder="Search..." />
+				</div>
+			</div>
+			<div class="clear"></div>
+		</form>
+	</div>
+
+
+
+<!--=====================================================
+	Grid
+=====================================================-->
+	<div id="properties" class="isotope-grid gallery-container style-modern-4 isotope-spaced clearfix fitrows m-t-30" data-heightratio=".66">
+
+		{% for property in properties %}
+
+			<!--	Setting Filter Values
+			========================================= -->
+			{% with filter_city="city-"|add:property.city %}
+
+				<div class="isotope-item {{ filter_city }}">
+					<a href="{% url 'buy-single' listing_rid=property.listingrid %}" class="thumb-overlay overlay-effect-3 text-light">
+						<img src="{{ property.img.0 }}">
+						<img src="{{ property.img.1 }}" class="hover-pic">
+						<div class="overlay-caption">
+							<table>
+								<tr>
+									<td><h6 class="uppercase">{{ property.bedrooms }} BR &bull; {{ property.bathrooms|floatformat:"1" }} BA &bull; {{ property.squarefootage|floatformat:"0"|intcomma }} Sqft.</h6></td>
+									<td><h6 class="uppercase fs-20">${{ property.listingprice|floatformat:"0"|intcomma }}</h6></td>
+								</tr>
+								<tr>
+									<td><h6 class="subtitle-1 o-100 m-t-0">{% include "include/address.html" with arg="street" %}</h6></td>
+									<td><h6 class="subtitle-1 o-100 m-t-0">{% include "include/address.html" with arg="cityzip" %}</h6></td>
+								</tr>
+
+							</table>
+			                        </div>
+					</a>
+				</div>
+
+			{% endwith %}
+				
+		{% endfor %}
+				
+	</div>
+
+	<div class="spacer-big"> </div>
+
+</section>
+
+
+<!--=====================================================
+	Isotope
+=====================================================-->
+<script>
+$(function() {
+
+	var $grid = $('.isotope-grid').isotope({
+		itemSelector: '.isotope-item',
+		layoutMode: 'fitRows'
+	});
+
+	var $selects = $('#buy-filter select');
+
+	var filterFns = {
+		numberGreaterThan50: function() {
+			var number = $(this).find('.number').text();
+			return parseInt(number, 10) > 50;
+		},
+		ium: function() {
+			var name = $(this).find('.name').text();
+			return name.match(/ium$/);
+		}
+	};
+
+	$selects.on('change', function() {
+		var filterValue = this.value;
+		filterValue = filterFns[filterValue] || filterValue;
+		$grid.isotope({
+			filter: filterValue
+		});
+		var filter_count = $grid.data('isotope').filteredItems;
+		console.log(filter_count)
+	});
+
+	var filter_count = $grid.data('isotope').filteredItems;
+	console.log(filter_count)
+
+
+});
+</script>
+
+{% endblock %}

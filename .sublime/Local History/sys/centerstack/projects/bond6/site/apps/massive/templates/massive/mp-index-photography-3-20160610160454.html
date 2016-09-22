@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport"/>
+  <meta content="" name="description"/>
+  <meta content="CenterStack" name="author"/>
+  <!--favicon icon-->
+  <link href="{% static 'massive/img/favicon.png' %}" rel="icon" type="image/png"/>
+  <title>
+   Bond6 Fitness
+  </title>
+  <!--common style-->
+  <link href="http://fonts.googleapis.com/css?family=Abel|Source+Sans+Pro:400,300,300italic,400italic,600,600italic,700,700italic,900,900italic,200italic,200" rel="stylesheet" type="text/css"/>
+  <link href="{% static 'massive/css/bootstrap.min.css' %}" rel="stylesheet"/>
+  <link href="{% static 'massive/css/font-awesome.min.css' %}" rel="stylesheet"/>
+  <link href="{% static 'massive/css/magnific-popup.css' %}" rel="stylesheet"/>
+  <link href="{% static 'massive/css/shortcodes/shortcodes.css' %}" rel="stylesheet"/>
+  <link href="{% static 'massive/css/owl.carousel.css' %}" rel="stylesheet"/>
+  <link href="{% static 'massive/css/owl.theme.css' %}" rel="stylesheet"/>
+  <link href="{% static 'massive/css/style.css' %}" rel="stylesheet"/>
+  <link href="{% static 'massive/css/style-responsive.css' %}" rel="stylesheet"/>
+  <!--for push nav-->
+  <link href="{% static 'massive/css/push-nav.css' %}" rel="stylesheet"/>
+  <link href="{% static 'massive/css/default-theme.css' %}" rel="stylesheet"/>
+  <!--need this for push nav-->
+  <script src="{% static 'massive/js/modernizr.js' %}">
+  </script>
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+ </head>
+ <body>
+  <!--  preloader start -->
+  <div id="tb-preloader">
+   <div class="tb-preloader-wave">
+   </div>
+  </div>
+  <!-- preloader end -->
+  <div class="wrapper">
+   <!--header start-->
+   <div class="container">
+    <div class="row">
+     <div class="col-md-12">
+      <!--logo start-->
+      <a class="logo-brand m-top-20" href="{% url 'massive-index' %}">
+       <img alt="" class="retina" src="{% static 'massive/img/logo.png' %}"/>
+      </a>
+      <!--logo end-->
+     </div>
+    </div>
+   </div>
+   <a class="cd-nav-trigger" href="#cd-nav">
+    Menu
+    <span class="cd-nav-icon">
+    </span>
+    <svg height="40px" viewbox="0 0 40 40" width="40px" x="0px" y="0px">
+     <circle fill="transparent" r="50">
+     </circle>
+    </svg>
+   </a>
+   <div class="cd-nav" id="cd-nav">
+    <div class="cd-navigation-wrapper">
+     <div class="cd-half-block">
+      <h2>
+       Navigation
+      </h2>
+      <nav>
+       <ul class="cd-primary-nav">
+        <li class="selected">
+         <a href="#">
+          Home
+         </a>
+        </li>
+        <li class="">
+         <a href="#">
+          About Us
+         </a>
+        </li>
+        <li class="">
+         <a href="#">
+          Meet Our Team
+         </a>
+        </li>
+        <li class="">
+         <a href="#">
+          Portfolio
+         </a>
+        </li>
+        <li class="">
+         <a href="#">
+          Services
+         </a>
+        </li>
+        <li class="">
+         <a href="#">
+          Features
+         </a>
+        </li>
+        <li class="">
+         <a href="#">
+          Blog
+         </a>
+        </li>
+        <li class="">
+         <a href="#">
+          Price Table
+         </a>
+        </li>
+        <li class="">
+         <a href="#">
+          Contact Us
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </div>
+     <div class="cd-half-block">
+      <address>
+      </address>
+      <ul class="cd-contact-info">
+       <li>
+        <a href="mailto:themebucket@gmail.com">
+         themebucket@gmail.com
+        </a>
+       </li>
+       <li>
+        0123-12345678
+       </li>
+       <li>
+        <span>
+         DreamLand Street
+        </span>
+        <span>
+         XYZ -123 Lane
+        </span>
+        <span>
+         Melbourne, Australia
+        </span>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <!--header end-->
+   <!--body content start-->
+   <section class="body-content ">
+    <div class="page-content">
+     <div class="container">
+      <div class="row">
+       <div class="col-md-12">
+        <h3 class="text-uppercase">
+         Fringilla augue at maximus vestibulum. Nam pulvinar vitae
+        </h3>
+        <p>
+         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aut commodi cumque
+                                delectus, dolorum eius eos ex maxime, necessitatibus nostrum provident rem repellendus,
+                                voluptate! Cum debitis eligendi illum inventore maiores.
+        </p>
+        <a class="btn btn-medium btn-dark-solid" href="#">
+         Read More
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+    <!--portfolio-->
+    <div class="page-content gray-bg">
+     <div class="container">
+      <div class="row">
+       <div class="col-md-12">
+        <div class="tb-grid">
+         <div class="item box">
+          <figure class="item-inner box-img" data-mfp-src="img/portfolio/01.jpg" data-src="{% static 'massive/img/portfolio/01.jpg' %}">
+          </figure>
+         </div>
+         <div class="item box3">
+          <figure class="item-inner box-img" data-mfp-src="img/portfolio/14.jpg" data-src="{% static 'massive/img/portfolio/14.jpg' %}">
+          </figure>
+         </div>
+         <div class="item box">
+          <figure class="item-inner box-img" data-mfp-src="img/portfolio/03.jpg" data-src="{% static 'massive/img/portfolio/03.jpg' %}">
+          </figure>
+         </div>
+         <div class="item box2">
+          <figure class="item-inner box-img" data-mfp-src="img/portfolio/04.jpg" data-src="{% static 'massive/img/portfolio/04.jpg' %}">
+          </figure>
+         </div>
+         <div class="item box">
+          <figure class="item-inner box-img" data-mfp-src="img/portfolio/05.jpg" data-src="{% static 'massive/img/portfolio/05.jpg' %}">
+          </figure>
+         </div>
+         <div class="item box">
+          <figure class="item-inner box-img" data-mfp-src="img/portfolio/06.jpg" data-src="{% static 'massive/img/portfolio/06.jpg' %}">
+          </figure>
+         </div>
+         <div class="item box">
+          <figure class="item-inner box-img" data-mfp-src="img/portfolio/07.jpg" data-src="{% static 'massive/img/portfolio/07.jpg' %}">
+          </figure>
+         </div>
+         <div class="item box">
+          <figure class="item-inner box-img" data-mfp-src="img/portfolio/08.jpg" data-src="{% static 'massive/img/portfolio/08.jpg' %}">
+          </figure>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <!--portfolio-->
+    <!--promo-->
+    <div class="page-content-">
+     <div class="container">
+      <div class="row">
+       <div class="col-md-12">
+        <div class="promo-box gray-bg m-top-50">
+         <div class="promo-info">
+          <h4>
+           new
+           <span class="theme-color">
+            offer
+           </span>
+           for this
+           <span class="theme-color">
+            summer
+           </span>
+          </h4>
+          <span>
+           Nullam ut consectetur dolor. Sed sit amet iaculis nisi. Mauris ridiculus elementum non felis etewe blandit.
+          </span>
+         </div>
+         <div class="promo-btn">
+          <a class="btn btn-medium btn-dark-solid text-uppercase" href="#">
+           purchase now
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <!--promo-->
+    <!--feature-->
+    <div class="page-content">
+     <div class="container">
+      <div class="heading-title text-center ">
+       <h3 class="text-uppercase">
+        why you will choose massive
+       </h3>
+      </div>
+      <!--feature border box start-->
+      <div class="row ">
+       <div class="col-md-4">
+        <div class="featured-item feature-bg-box text-center">
+         <div class="icon">
+          <i class="icon-mobile">
+          </i>
+         </div>
+         <div class="title text-uppercase">
+          <h4>
+           Fully Responsive
+          </h4>
+         </div>
+         <div class="desc">
+          Ringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend.
+         </div>
+        </div>
+       </div>
+       <div class="col-md-4">
+        <div class="featured-item feature-bg-box text-center">
+         <div class="icon">
+          <i class="icon-layers">
+          </i>
+         </div>
+         <div class="title text-uppercase">
+          <h4>
+           Premium Slider
+          </h4>
+         </div>
+         <div class="desc">
+          Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend.
+         </div>
+        </div>
+       </div>
+       <div class="col-md-4">
+        <div class="featured-item feature-bg-box text-center">
+         <div class="icon">
+          <i class="icon-profile-male">
+          </i>
+         </div>
+         <div class="title text-uppercase">
+          <h4>
+           User Friendly
+          </h4>
+         </div>
+         <div class="desc">
+          Singilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend.
+         </div>
+        </div>
+       </div>
+       <div class="col-md-4">
+        <div class="featured-item feature-bg-box text-center">
+         <div class="icon">
+          <i class="icon-gift">
+          </i>
+         </div>
+         <div class="title text-uppercase">
+          <h4>
+           branding
+          </h4>
+         </div>
+         <div class="desc">
+          Ringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend.
+         </div>
+        </div>
+       </div>
+       <div class="col-md-4">
+        <div class="featured-item feature-bg-box text-center">
+         <div class="icon">
+          <i class="icon-circle-compass">
+          </i>
+         </div>
+         <div class="title text-uppercase">
+          <h4>
+           design
+          </h4>
+         </div>
+         <div class="desc">
+          Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend.
+         </div>
+        </div>
+       </div>
+       <div class="col-md-4">
+        <div class="featured-item feature-bg-box text-center">
+         <div class="icon">
+          <i class="icon-browser2">
+          </i>
+         </div>
+         <div class="title text-uppercase">
+          <h4>
+           development
+          </h4>
+         </div>
+         <div class="desc">
+          Singilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend.
+         </div>
+        </div>
+       </div>
+      </div>
+      <!--feature border box end-->
+     </div>
+    </div>
+    <!--feature-->
+   </section>
+   <!--body content end-->
+   <!--footer start -->
+   <footer class="gray footer-3" id="footer">
+    <div class="container">
+     <div class="f-logo-center">
+      <a class="footer-logo" href="{% url 'massive-index' %}">
+       <img alt="" class="retina" src="{% static 'massive/img/footer-logo.png' %}"/>
+      </a>
+     </div>
+     <!--<div class="sub-title">THE ULTIMATE THEME WITH MASSIVE COLLECTION</div>-->
+     <div class="col-md-6">
+      <div class="copyright">
+       © MASSIVE 2014.
+      </div>
+      <div class="copyright-sub-title text-uppercase">
+       Building your site with lots of fun
+      </div>
+     </div>
+     <div class="col-md-6">
+      <div class="social-link pull-right circle ">
+       <a href="#">
+        <i class="fa fa-facebook">
+        </i>
+       </a>
+       <a href="#">
+        <i class="fa fa-twitter">
+        </i>
+       </a>
+       <a href="#">
+        <i class="fa fa-dribbble">
+        </i>
+       </a>
+       <a href="#">
+        <i class="fa fa-google-plus">
+        </i>
+       </a>
+       <a href="#">
+        <i class="fa fa-behance">
+        </i>
+       </a>
+      </div>
+     </div>
+    </div>
+   </footer>
+   <!--footer end-->
+  </div>
+  <!-- Placed js at the end of the document so the pages load faster -->
+  <script src="{% static 'massive/js/jquery-1.10.2.min.js' %}">
+  </script>
+  <script src="{% static 'massive/js/bootstrap.min.js' %}">
+  </script>
+  <script src="{% static 'massive/js/menuzord.js' %}">
+  </script>
+  <script src="{% static 'massive/js/jquery.flexslider-min.js' %}">
+  </script>
+  <script src="{% static 'massive/js/owl.carousel.min.js' %}">
+  </script>
+  <script src="{% static 'massive/js/jquery.isotope.js' %}">
+  </script>
+  <script src="js/imagesloaded.js?1">
+  </script>
+  <script src="{% static 'massive/js/jquery.magnific-popup.min.js' %}">
+  </script>
+  <script src="{% static 'massive/js/smooth.js' %}">
+  </script>
+  <script src="{% static 'massive/js/wow.min.js' %}">
+  </script>
+  <script src="{% static 'massive/js/imagesloaded.js' %}">
+  </script>
+  <!--common scripts-->
+  <script src="{% static 'massive/js/scripts.js' %}">
+  </script>
+  <script type="text/javascript">
+   $(document).ready(function(){
+            $('.tb-grid').masonry({
+                // options
+                itemSelector: '.item',
+                percentPosition: true,
+                columnWidth: '.box',
+            });
+
+            var $imgBoxes = $('.tb-grid').find('.box-img');
+            $imgBoxes.each(function(index, item) {
+                var $item = $(item), src = $item.data('src');
+                if(src) {
+                    $item.css({
+                        backgroundImage: 'url(' + src + ')'
+                    })
+                }
+            });
+
+            $('.box-img').magnificPopup({
+                type:'image',
+                gallery: {
+                    enabled: true
+                }
+            });
+        });
+  </script>
+  <script>
+   jQuery(document).ready(function($){
+            var isLateralNavAnimating = false;
+
+            //open/close lateral navigation
+            $('.cd-nav-trigger').on('click', function(event){
+                event.preventDefault();
+                //stop if nav animation is running
+                if( !isLateralNavAnimating ) {
+                    if($(this).parents('.csstransitions').length > 0 ) isLateralNavAnimating = true;
+
+                    $('body').toggleClass('navigation-is-open');
+                    $('.cd-navigation-wrapper').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+                        //animation is over
+                        isLateralNavAnimating = false;
+                    });
+                }
+            });
+        });
+  </script>
+ </body>
+</html>

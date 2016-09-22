@@ -1,0 +1,185 @@
+<!--==========================
+*  Author:		Dave Luke Jr
+*  Company:	CenterStack.io
+*  Description:	about.html
+*==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load customtags %}
+{% load staticfiles %}
+{% block content %}
+
+
+<!--	Hero Image
+========================================= -->
+<div class="banner-state text-center vertical-align banner-26 height-600">
+	<div class="container-mid">
+		<div class="container">
+			<div class="banner-box light-box">
+				<h2 class="text-uppercase ls-20"> Bond6 Fitness </h2>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!--	About
+========================================= -->
+<section class="body-content">
+	<div class="page-content p-bot-0 float-left">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="post-list-aside float-left">
+						<div class="post-single">
+							<div class="col-md-6">
+								<div class="post-desk">
+									<h2 class="text-uppercase"> Welcome </h2>
+									<p> Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes. </p>
+									<p> Sadips amets.. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
+									<div>
+										<a class="btn btn-medium btn-dark-solid btn-rounded btn-transparent" href="#"> Reservation </a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="post-img title-img">
+									<img alt="" src="{% static 'massive/img/restaurant/chef.png' %}" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!--	Testimonials
+	========================================= -->
+	<div class="page-content">
+		<div class="testimonial-parallax mt-grey-bg">
+			<div class="page-content">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div id="testimonial-3" class="text-center light-txt big-icon  owl-carousel owl-theme" style="opacity: 1; display: block;">
+								<div class="owl-wrapper-outer">
+									<div class="owl-wrapper" style="width: 6660px; left: 0px; display: block; transition: all 800ms ease; transform: translate3d(-1110px, 0px, 0px);">
+										<div class="owl-item" style="width: 1110px;">
+											<div class="item">
+												<div class="icon theme-color">
+													<i class="icon-user_comment"></i>
+												</div>
+												<div class="content">
+													<p class="text-black-4"> Nam nec dui dolor. Curabitur in laoreet erat. Nam nec dui dolor. Aliquam varius dolor nunc, interdum commodo justoporttitor vitae. Quisque fermentum purus. </p>
+													<div class="testimonial-meta text-black-4"> Blair Small
+														<span class="text-black-4">Bond6 Fitness</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="owl-item" style="width: 1110px;">
+											<div class="item">
+												<div class="icon theme-color">
+													<i class="icon-user"></i>
+												</div>
+												<div class="content">
+													<p>Vestibulum varius fermentum risus vitae lacinia neque auctor nec. Nunc ac rutrum nulla. Nulla maximus dolor in quam euismod ac viverra libero aliquet. </p>
+													<div class="testimonial-meta"> - John Doe -
+														<span>head of marketing, TB</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="owl-item" style="width: 1110px;">
+											<div class="item">
+												<div class="icon theme-color">
+													<i class="icon-user_comment"></i>
+												</div>
+												<div class="content">
+													<p>Vestibulum varius fermentum risus vitae lacinia neque auctor nec. Nunc ac rutrum nulla. Nulla maximus dolor in quam euismod ac viverra libero aliquet. </p>
+													<div class="testimonial-meta"> - Linda Smith -
+														<span>CEO, TB</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="owl-controls clickable">
+									<div class="owl-pagination">
+										<div class="owl-page">
+											<span class=""></span>
+										</div>
+										<div class="owl-page active">
+											<span class=""></span>
+										</div>
+										<div class="owl-page">
+											<span class=""></span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!--	Contact Us
+	========================================= -->
+	<div class="page-content">
+		<div class="container">
+			<div class="row">
+				<div class="post-list-aside">
+					<div class="post-single">
+						<div class="col-md-6">
+							<div class="post-img">
+								<img alt="" src="{% static 'massive/img/restaurant/food-glass.png' %}" />
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="post-desk">
+								<div class="heading-title-alt text-left">
+									<span class="heading-sub-title text-uppercase theme-color"> Contact Us </span>
+									<h3 class="text-uppercase"> Have A Question? </h3>
+								</div>
+								<p> Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats minima rerums unsers sadips amets. </p>
+								<form action="#" class="magazine-grid login m-top-30 " method="post">
+									<div class="row">
+										<div class="form-group col-md-6">
+											<input class="form-control" placeholder="First Name" type="text" />
+										</div>
+										<div class="form-group col-md-6">
+											<input class="form-control" placeholder="Last Name" type="text" />
+										</div>
+										<div class="form-group col-md-6">
+											<input class="form-control" placeholder="Email Address" type="text" />
+										</div>
+										<div class="form-group col-md-6">
+											<input class="form-control" placeholder="Number of Guest" type="number" />
+										</div>
+										<div class="form-group col-md-6">
+											<input class="form-control" placeholder="Booking Date" type="text" />
+										</div>
+										<div class="form-group col-md-6">
+											<input class="form-control" placeholder="Booking Time" type="text" />
+										</div>
+										<div class="form-group col-md-12">
+											<button class="btn btn-small btn-dark-solid full-width btn-rounded" value="Contact Us"> Contact Us </button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% endblock %}

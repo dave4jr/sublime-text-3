@@ -1,0 +1,26 @@
+<!--
+	 See http://www.reso.org for more information.
+    
+    This DTD is identified by PUBLIC and SYSTEM identifiers:
+    
+    PUBLIC "-//RETS//DTD Login 1.7.2//EN"
+    SYSTEM "http://www.rets.org/dtd/1.7.2/1.3/rets-login-1_7_2.dtd"
+
+Copyright 2015 RESO. By using this document you agree to the RESO End User License Agreement (EULA) posted at:
+
+https://reso.memberclicks.net/assets/docs/reso%20eula.pdf
+
+-->
+
+<!ATTLIST RETS
+			ReplyCode CDATA #REQUIRED
+			ReplyText CDATA #REQUIRED  >
+
+<!ATTLIST RETS-STATUS
+			ReplyCode CDATA #IMPLIED
+			ReplyText CDATA #IMPLIED >
+
+<!ELEMENT RETS-RESPONSE (#PCDATA) >
+<!ELEMENT RETS-STATUS (#PCDATA) >
+
+<!ELEMENT RETS (RETS-RESPONSE?, RETS-STATUS?) >

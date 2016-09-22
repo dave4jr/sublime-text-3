@@ -1,0 +1,294 @@
+<!--==========================
+*  Author:		Dave Luke Jr
+*  Company:	CenterStack.io
+*  Description:	about.html
+*==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load customtags %}
+{% load staticfiles %}
+{% block content %}
+
+
+<!--	Page Title
+========================================= -->
+<section class="page-title background-title dark">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h4 class="text-uppercase"> About </h4>
+				<ol class="breadcrumb">
+					<li><a href="#"> Home </a></li>
+					<li class="active"> Page </li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!--	About
+========================================= -->
+<section class="body-content">
+	<!-- <div class="container">
+		<div class="row page-content p-b-0">
+			<div class="post-list-aside">
+				<div class="post-single">
+					<div class="col-md-4">
+						<div class="post-img">
+							<img alt="" src="{% static 'img/about/1c.jpg' %}" />
+						</div>
+					</div>
+					<div class="col-md-8">
+						<div class="">
+							<h4 class="text-uppercase m-b-0"> Blair Small </h4>
+							<p class="theme-color italic m-t-0 m-b-10"> CEO & Founder </p>
+							<p> Bond 6 Fitness is New York City's premiere private personal training company. Founded by head trainer Blair Small, Bond 6 Fitness has one mission: transform your body and health while reaching optimum levels of fitness. Our emphasis is on ideal body composition through strength and endurance training. Bond 6 customizes training to each client's specific goals, making sure to push and challenge you just the right amount to see maximum results. </p>
+							<p> We believe strongly in developing healthy lifestyles with our clients, through inspiration and educated guidance. It is our job to get you eating right and doing the necessary work outside of sessions to reach and sustain your goals. Training with Bond 6 is the complete fitness and health experience. </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+	<div class="page-content p-bot-0">
+		<div class="container">
+			<div class="row">
+				<div class="heading-title text-center">
+					<h3 class="text-uppercase"> What We Do </h3>
+				</div>
+				<div class="col-md-4">
+					<div class="">
+						<h4 class="text-uppercase"> Mission </h4>
+						<p> Bond 6 Fitness is New York City's premiere private personal training company. Founded by head trainer Blair Small, Bond 6 Fitness has one mission: transform your body and health while reaching optimum levels of fitness. Our emphasis is on ideal body composition through strength and endurance training. Bond 6 customizes training to each client's specific goals, making sure to push and challenge you just the right amount to see maximum results.</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="">
+						<h4 class="text-uppercase"> Guidance </h4>
+						<p> We believe strongly in developing healthy lifestyles with our clients, through inspiration and educated guidance. It is our job to get you eating right and doing the necessary work outside of sessions to reach and sustain your goals. Training with Bond 6 is the complete fitness and health experience. </p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="">
+						<h4 class="text-uppercase"> About Blair </h4>
+						<p> Blair has been training clients in New York City for over 7 years, with more than 10,000 sessions under his belt. He cares deeply about helping others reach their fitness goals, and is dedicated to teaching a lifestyle of health. Blair is constantly expanding his knowledge and education, through coursework, new certifications, and practical experiences in the fitness industry. "We want clients to experience how good it feels to be strong, to be fit, to eat well, and to be happy about how you look. We are 100% committed to leading you there." </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!--	Option
+	========================================= -->
+	<div class="page-content p-b-0">
+		<div class="container">
+			<div class="row">
+				<div class="heading-title border-short-bottom text-center m-b-60">
+					<div class="m-b-20">
+						<img width="50" src="{% static 'img/logo/6.svg' %}">
+					</div>
+					<h3 class="text-uppercase p-b-20"> What We Do </h3>
+					<p class="half-txt p-top-20 fs-14"> Bond 6 Fitness is New York City's premiere private personal training company. Founded by head trainer Blair Small, Bond 6 Fitness has one mission: transform your body and health while reaching optimum levels of fitness. Our emphasis is on ideal body composition through strength and endurance training. Bond 6 customizes training to each client's specific goals, making sure to push and challenge you just the right amount to see <br> <br> maximum results. 
+We believe strongly in developing healthy lifestyles with our clients, through inspiration and educated guidance. It is our job to get you eating right and doing the necessary work outside of sessions to reach and sustain your goals. Training with Bond 6 is the complete fitness and health experience. </p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!--	Services
+	========================================= -->
+	<div class="page-content">
+		<div class="container">
+			<div class="row">
+				<div class="feature-box-grid">
+					<div class="col-md-4">
+						<div class="featured-item border-box text-center">
+							<div class="icon">
+								<i class="icon-lightbulb font-theme"> </i>
+							</div>
+							<div class="title text-uppercase">
+								<h4> Creative design </h4>
+							</div>
+							<div class="desc"> Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="featured-item border-box text-center">
+							<div class="icon">
+								<i class="icon-browser2 font-theme"> </i>
+							</div>
+							<div class="title text-uppercase">
+								<h4> professional code </h4>
+							</div>
+							<div class="desc"> Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="featured-item border-box text-center">
+							<div class="icon">
+								<i class="icon-laptop2 font-theme"> </i>
+							</div>
+							<div class="title text-uppercase">
+								<h4> easy customize </h4>
+							</div>
+							<div class="desc"> Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="featured-item border-box text-center">
+							<div class="icon">
+								<i class="icon-basic_gear font-theme"> </i>
+							</div>
+							<div class="title text-uppercase">
+								<h4> 24/7 support </h4>
+							</div>
+							<div class="desc"> Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="featured-item border-box text-center">
+							<div class="icon">
+								<i class="icon-basic_pencil_ruler font-theme"> </i>
+							</div>
+							<div class="title text-uppercase">
+								<h4> bootstrap </h4>
+							</div>
+							<div class="desc"> Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="featured-item border-box text-center">
+							<div class="icon">
+								<i class="icon-basic_todolist_pencil font-theme"> </i>
+							</div>
+							<div class="title text-uppercase">
+								<h4> clean code </h4>
+							</div>
+							<div class="desc"> Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- <div class="page-content p-t-60">
+		<div class="container">
+			<div class="row">
+				<div class="heading-title text-center">
+					<h3 class="text-uppercase"> What We Do </h3>
+					<span class="text-capitalize" style="letter-spacing: 1px;"> Bond 6 Fitness has over 7 years of <br> experience with getting people fit; Our expertise <br> ranges among all of the following areas of fitness. </span>
+				</div>
+				<div class="col-md-6">
+					<div class="featured-item feature-outline m-bot-100">
+						<div class="icon theme-color">
+							<i class="icon-lightbulb font-theme"> </i>
+						</div>
+						<div class="title text-uppercase">
+							<h4>STRENGTH TRAINING </h4>
+						</div>
+						<div class="desc"> Traditional and contemporary modes of strength training using several forms of resistance. </div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="featured-item feature-outline m-bot-100">
+						<div class="icon theme-color">
+							<i class="icon-browser2 font-theme"> </i>
+						</div>
+						<div class="title text-uppercase">
+							<h4>Blair To Fill Out </h4>
+						</div>
+						<div class="desc"> Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="featured-item feature-outline m-bot-100">
+						<div class="icon theme-color">
+							<i class="icon-laptop2 font-theme"> </i>
+						</div>
+						<div class="title text-uppercase">
+							<h4>Blair To Fill Out </h4>
+						</div>
+						<div class="desc"> Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="featured-item feature-outline m-bot-100">
+						<div class="icon theme-color">
+							<i class="icon-basic_gear font-theme"> </i>
+						</div>
+						<div class="title text-uppercase">
+							<h4>Blair To Fill Out </h4>
+						</div>
+						<div class="desc"> Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="featured-item feature-outline">
+						<div class="icon theme-color">
+							<i class="icon-search font-theme"> </i>
+						</div>
+						<div class="title text-uppercase">
+							<h4>Blair To Fill Out </h4>
+						</div>
+						<div class="desc"> Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="featured-item feature-outline">
+						<div class="icon theme-color">
+							<i class="icon-tools2 font-theme"> </i>
+						</div>
+						<div class="title text-uppercase">
+							<h4>Blair To Fill Out </h4>
+						</div>
+						<div class="desc"> Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+	<div class="page-content p-t-40 p-b-200">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="heading-title text-center m-b-20">
+						<h3 class="text-uppercase"> Bond6 Clients </h3>
+						<p> We believe strongly in developing healthy lifestyles with our clients, through inspiration and educated guidance. </p>
+					</div>
+					<div id="clients-1">
+						<div class="item">
+							<img alt="Clients" src="{% static 'massive/img/clients/c-1.png' %}" />
+						</div>
+						<div class="item">
+							<img alt="Clients" src="{% static 'massive/img/clients/c-2.png' %}" />
+						</div>
+						<div class="item">
+							<img alt="Clients" src="{% static 'massive/img/clients/c-3.png' %}" />
+						</div>
+						<div class="item">
+							<img alt="Clients" src="{% static 'massive/img/clients/c-4.png' %}" />
+						</div>
+						<div class="item">
+							<img alt="Clients" src="{% static 'massive/img/clients/c-5.png' %}" />
+						</div>
+						<div class="item">
+							<img alt="Clients" src="{% static 'massive/img/clients/c-6.png' %}" />
+						</div>
+						<div class="item">
+							<img alt="Clients" src="{% static 'massive/img/clients/c-7.png' %}" />
+						</div>
+						<div class="item">
+							<img alt="Clients" src="{% static 'massive/img/clients/c-8.png' %}" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+	
+{% endblock %}

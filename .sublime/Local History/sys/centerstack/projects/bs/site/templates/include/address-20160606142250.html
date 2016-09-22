@@ -1,0 +1,50 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	address Inclusion
+ *==========================-->
+
+
+{% if arg == "street" %}
+	{% if json.StreetSuffix == "" and json.Unit != "" %}
+		{{ json.StreetNumber }} {{ json.StreetName }}, Unit: {{ json.Unit }}
+	{% elif json.StreetSuffix != "" and json.Unit == "" %}
+		{{ json.StreetNumber }} {{ json.StreetName }} {{ json.StreetSuffix }}
+	{% else %}
+		{{ json.StreetNumber }} {{ json.StreetName }}
+	{% endif %}
+
+{% elif arg == "city" %}
+	{{ json.City }}, {{ json.State }}
+
+{% elif arg == "cityzip" %}
+	{{ json.City }}, {{ json.State }}  {{ json.ZipCode }}
+
+{% elif arg == "county" %}
+	{{ json.County }}
+
+{% elif arg == "countylabel" %}
+	{{ json.County }} County
+
+{% elif arg == "countyzip" %}
+	{{ json.County }} | {{ json.ZipCode }}
+
+{% elif arg == "address" %}
+	{% if json.StreetSuffix == "" and json.Unit != "" %}
+		{{ json.StreetNumber }} {{ json.StreetName }} Unit: {{ json.Unit }} | {{ json.City }}, {{ json.State }} {{ json.ZipCode }}
+	{% elif json.StreetSuffix != "" and json.Unit == "" %}
+		{{ json.StreetNumber }} {{ json.StreetName }} {{ json.StreetSuffix }} | {{ json.City }}, {{ json.State }} {{ json.ZipCode }}
+	{% else %}
+		{{ json.StreetNumber }} {{ json.StreetName }} | {{ json.City }}, {{ json.State }}  {{ json.ZipCode }}
+	{% endif %}
+
+{% else %}
+	"Choose An Argument: Street / City / County / Address"
+{% endif %}
+
+
+
+
+
+
+

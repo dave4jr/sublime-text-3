@@ -1,0 +1,57 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	featured.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+
+
+<!--	Hero Collage
+========================================= -->
+<section class="hero-big parallax-section text-light no-overlay wood_1" id="hero">
+	<div class="wrapper align-center" id="page-title">
+		<h2 class="uppercase">
+			<strong> Partners </strong>
+		</h2>
+	</div>
+</section>
+
+
+
+<!--	Bend Trend Homes
+========================================= -->
+<section id="page-body">
+	<div class="wrapper-small align-center">
+		<h5 class="subtitle-2 colored"> The Power Of Two</h5>
+		<h3><strong> Importance Of Our Partnerships</strong></h3>
+		<hr class="small colored">
+		<div class="column-section clearfix m-t-20">
+			<p class="text-justify p-l-10 p-r-0 fs-14"><span style='padding: 3px 8px; margin-right: 3px; text-transform: uppercase; color: #fff; background: #EF936D; border-radius: 4px; font-size: 20px; font-weight: 600;'>T</span>he strength of any team is magnified by the significant ties and relationships that each member brings to the entire group. For the same reason we have partnered with each other to provide the best possible real estate brokerage services, we also understand the imporatance of partnering with others <span class="fw-700 italic">outside</span> of our organization, to serve our clients in the best way possible. Below is a list of our <span class="fw-700 italic">currently active</span> partnerships.</p>
+		</div>
+		<div class="spacer-small"></div>
+	</div>
+	<div id="partners" class="wrapper">
+		<div class="isotope-grid gallery-container style-column-3 isotope-spaced clearfix">
+		
+			{% for partner in partners  %}
+				<div class="isotope-item">
+					<a class="thumb-overlay" href="{% url 'partners-single' pk=partner.pk %}">
+						<img src="{{ MEDIA_URL }}{{ partner.img_logo }}">
+					</a>
+				</div>
+			{% endfor %}
+			
+		</div>
+	</div>
+	<div class="spacer-big"> </div>
+	<a href="#section-contact" class="scroll-to sr-button button-full button-2">Interested In Becoming A Partner?<br><strong>Contact us here</strong></a>
+</section>
+
+{% endblock %}

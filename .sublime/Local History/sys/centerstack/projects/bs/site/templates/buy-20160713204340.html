@@ -1,0 +1,238 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	buy.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load el_pagination_tags %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,300,700&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+	<link href="{% static 'plugins/villareal/assets/fonts/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+	<link href="{% static 'plugins/villareal/assets/libraries/owl-carousel/owl.carousel.css' %}" rel="stylesheet" type="text/css">
+	<link href="{% static 'plugins/villareal/assets/libraries/chartist/chartist.min.css' %}" rel="stylesheet" type="text/css">
+	<link href="{% static 'plugins/villareal/assets/css/leaflet.css' %}" rel="stylesheet" type="text/css">
+	<link href="{% static 'plugins/villareal/assets/css/leaflet.markercluster.css' %}" rel="stylesheet" type="text/css">
+	<link href="{% static 'plugins/villareal/assets/css/leaflet.markercluster.default.css' %}" rel="stylesheet" type="text/css">
+	<link href="{% static 'plugins/villareal/assets/css/villareal.css' %}" rel="stylesheet" type="text/css" id="css-primary">
+	<link href="{% static 'css/helpers.css' %}" rel="stylesheet" type="text/css" id="css-primary">
+	<link rel="shortcut icon" type="image/x-icon" href="assets/favicon.png">
+</head>
+<body class="p-t-60">
+	<div class="page-wrapper">
+		<div class="main-wrapper bs-grey-bg">
+			<div class="main">
+				<div class="main-inner">
+					<div class="content">
+						<div class="container-fluid fullwidth-wrapper">
+							<div class="row">
+								<div class="col-sm-6 p-b-100">
+									<!-- <div class="filter push-bottom">
+										<form action="" method="post">
+											<div class="row">
+												<div class="col-md-3">
+													<div class="form-group">
+														<label> Location </label>
+														<input class="form-control" type="text" />
+													</div>
+												</div>
+												<div class="col-md-3">
+													<div class="form-group">
+														<label> Keyword </label>
+														<input class="form-control" type="text" />
+													</div>
+												</div>
+												<div class="col-md-2">
+													<div class="form-group">
+														<label> Price From </label>
+														<input class="form-control" type="text" />
+													</div>
+												</div>
+												<div class="col-md-2">
+													<div class="form-group">
+														<label> Price To </label>
+														<input class="form-control" type="text" />
+													</div>
+												</div>
+												<div class="col-md-2">
+													<div class="form-group-btn form-group-btn-placeholder-gap">
+														<button class="btn btn-primary btn-block" type="submit"> Filter </button>
+													</div>
+												</div>
+											</div>
+
+											<div class="row filter-options">
+												<div class="col-sm-6">
+													<div class="filter-sort">
+														<strong> Sort By </strong>
+														<div class="checkbox-inline">
+															<label>
+																<input checked="checked" name="filter-form-order" type="checkbox" />
+																Price
+															</label>
+														</div>
+														<div class="checkbox-inline">
+															<label>
+																<input checked="checked" name="filter-form-order" type="checkbox" />
+																Published
+															</label>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-6">
+													<div class="filter-order">
+														<strong> Order By </strong>
+														<div class="checkbox-inline">
+															<label>
+																<input checked="checked" name="filter-form-order" type="radio" /> Asc </label>
+														</div>
+														<div class="checkbox-inline">
+															<label>
+																<input name="filter-form-order" type="radio" /> Desc </label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</form>
+									</div> -->
+									
+
+
+									{% paginate 15 PropertyFilter %}
+									{% for property in PropertyFilter %}
+
+										<div class="listing-row">
+											<div class="listing-row-inner">
+												<div class="listing-row-image" style="background-image: url({{ property.img.0 }});">
+													<span class="listing-row-image-links">
+													
+														<!--	Property Single
+														========================================= -->
+														<a href="{% url 'buy-single' pk=property.pk %}">
+															<i class="fa fa-search"> </i>
+															<span> View detail </span>
+														</a>
+
+														<!--	Compare Property
+														========================================= -->
+														<a href="{% url 'buy' %}">
+															<i class="fa fa-balance-scale"> </i>
+															<span> Compare property </span>
+														</a>
+
+													</span>
+												</div>
+
+												<!--	Row Content
+												========================================= -->
+												<div class="listing-row-content">
+													<h3><a href="{% url 'buy-single' pk=property.pk %}"> {{ property.streetnumber }} {{ property.streetname }} {{ property.streetsuffix }} </a></h3>
+													<h4 class="m-t-0"> ${{ property.listingprice|floatformat:"0"|intcomma }} </h4>
+													<ul class="listing-row-attributes">
+														<li><i class="fa fa-map-marker fs-14"></i> City <span> {{ property.city }} </span></li>
+														<li><i class="fa fa-map fs-14"></i> Region <span> {{ property.style }} </span></li>
+														<li><i class="fa fa-area-chart fs-14"></i> Area <span> {{ property.squarefootage|floatformat:"0"|intcomma }} Sqft. </span></li>
+														<li><i class="fa fa-arrows-alt fs-14"></i> Lot <span> {{ property.acres }} Acres </span></li>
+														<li><i class="fa fa-male fs-14 m-r-0 m-l--6"></i><i class="fa fa-female m-l--3 m-r-0 p-r-1"></i> Baths <span> {{ property.bathrooms }} </span></li>
+														<li><i class="fa fa-bed fs-14"></i> Bedrooms <span> {{ property.bedrooms }} </span></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										{% with num=forloop.counter %}{% endwith %}
+
+									{% endfor %}
+
+									{% show_pages %}
+
+								</div>
+
+
+
+								<!--	Map
+								========================================= -->
+								<div class="col-sm-6">
+									<div id="map-google" class="full"></div>
+								</div>
+
+								<script>
+									/*	Init
+									========================================= */
+									function initMap() {
+										var map = new google.maps.Map(document.getElementById('map-google'), {
+											zoom: 15,
+											center: { lat: 44.057511, lng: -121.331884 },
+											styles: [{"featureType":"poi","elementType":"labels.text.fill","stylers":[{"color":"#747474"},{"lightness":"23"}]},{"featureType":"poi.attraction","elementType":"geometry.fill","stylers":[{"color":"#f38eb0"}]},{"featureType":"poi.government","elementType":"geometry.fill","stylers":[{"color":"#ced7db"}]},{"featureType":"poi.medical","elementType":"geometry.fill","stylers":[{"color":"#ffa5a8"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#c7e5c8"}]},{"featureType":"poi.place_of_worship","elementType":"geometry.fill","stylers":[{"color":"#d6cbc7"}]},{"featureType":"poi.school","elementType":"geometry.fill","stylers":[{"color":"#c4c9e8"}]},{"featureType":"poi.sports_complex","elementType":"geometry.fill","stylers":[{"color":"#b1eaf1"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":"100"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"},{"lightness":"100"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffd4a5"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#ffe9d2"}]},{"featureType":"road.local","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"weight":"3.00"}]},{"featureType":"road.local","elementType":"geometry.stroke","stylers":[{"weight":"0.30"}]},{"featureType":"road.local","elementType":"labels.text","stylers":[{"visibility":"on"}]},{"featureType":"road.local","elementType":"labels.text.fill","stylers":[{"color":"#747474"},{"lightness":"36"}]},{"featureType":"road.local","elementType":"labels.text.stroke","stylers":[{"color":"#e9e5dc"},{"lightness":"30"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"lightness":"100"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#d2e7f7"}]}],
+											mapTypeControl: false,
+											navigationControl: false,
+											scrollwheel: false,
+											streetViewControl: false,
+											zoomControl: true,
+											zoomControlOptions: {
+												style: google.maps.ZoomControlStyle.LARGE,
+												position: google.maps.ControlPosition.RIGHT_CENTER
+											},
+										});
+										var infowindow = new google.maps.InfoWindow({
+											maxWidth: 250,
+										});
+
+										{% for property in PropertyFilter %}
+											var marker = new google.maps.Marker({
+												position: {lat: {{ property.latitude }}, lng: {{ property.longitude }} },
+												map: map,
+												icon: "{% static 'plugins/gmap/marker.svg' %}",
+												title: "{{ property.street }}",
+											});
+											google.maps.event.addListener(marker, 'click', function(e) {
+												// var content = "<img src='{{ property.img.0 }}' class='map-photo'>";
+												var content = "{{ property.street }}";
+												infowindow.setContent(content);
+												infowindow.setPosition(e.latLng);
+												infowindow.open(map);
+											});
+											google.maps.event.addListener(map, 'click', function() {
+												infowindow.close();
+											});
+										{% endfor %}
+									}
+								</script>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	<!--	Javascript
+	========================================= -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-B5LPcn-uJnxUFcwSbLGrkRVvYZE5gzU&callback=initMap"></script>
+	<script src="{% static 'plugins/gmap/gmap3.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'plugins/villareal/assets/js/jquery.js' %}"></script>
+	<script type="text/javascript" src="{% static 'plugins/villareal/assets/js/jquery.ezmark.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'plugins/villareal/assets/js/tether.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'plugins/villareal/assets/js/bootstrap.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'plugins/villareal/assets/js/leaflet.js' %}"></script>
+	<script type="text/javascript" src="{% static 'plugins/villareal/assets/js/leaflet.markercluster.js' %}"></script>
+	<script type="text/javascript" src="{% static 'plugins/villareal/assets/libraries/owl-carousel/owl.carousel.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'plugins/villareal/assets/libraries/chartist/chartist.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'plugins/villareal/assets/js/villareal.js' %}"></script>
+</body>
+
+</html>
+
+
+{% endblock %}

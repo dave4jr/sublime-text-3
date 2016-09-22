@@ -1,0 +1,22 @@
+<div class="owl-carousel" data-items="4" data-autoPlay="5000" data-loop="true" data-nav="true" data-dots="false">
+
+	{% for ii in property.img %}
+		<a class=" text-light" data-rel="lightcase:gallery1" href="{{ ii }}">
+			<div class="item">
+				<img src="{{ ii }}">
+			</div>
+		</a>
+	{% endfor %}
+	
+</div>
+
+{% show_more "Load More" %}
+{% get_pages %}
+{{ pages.previous }} {{ pages.next }}
+
+
+<div class="pagination">
+	<span class="p-10">
+		{% show_pages %}
+	</span>
+</div>

@@ -1,0 +1,87 @@
+<div class="col-md-5">
+	<div class="portlet box base">
+		<div class="portlet-title">
+			<div class="caption">
+				<i class="pe-7s-network"> </i>
+				<span class="caption-subject base-font"> Status & Function Mappings </span>
+			</div>
+		</div>
+		<div class="portlet-body">
+			<table class="table table-striped table-bordered table-hover order-column" id="status_table">
+				<thead>
+					<tr>
+						<th>Function</th>
+						<th>Status</th>
+						<th>Transition</th>
+					</tr>
+				</thead>
+				<tbody>
+
+					<tr>
+						<td>New Reservation</td>
+						<td><span class="label mt-grey-bg status-col">Submitted</span></td>
+						<td>Automatic</td>
+					</tr>
+					<tr>
+						<td class="p-rl-0"><p class="m-b-0">Send Deposit</p></td>
+						<td><span class="label label-pending-deposit status-col">Pending Deposit</span></td>
+						<td>Manual</td>
+					</tr>
+					<tr>
+						<td class="p-rl-0"><p class="m-b-0">Receive Deposit</p></td>
+						<td><span class="label label-deposit-paid status-col">Deposit Paid</span></td>
+						<td>Automatic</td>
+					</tr>
+					<tr>
+						<td class="p-rl-0"><p class="m-b-0">Send Confirmation Email</p></td>
+						<td><span class="label label-reserved status-col">Reserved</span></td>
+						<td>Automatic</td>
+					</tr>
+					<tr>
+						<td class="p-rl-0"><p class="m-b-0">Check-Out</p></td>
+						<td><span class="label label-checked-out status-col">Checked-Out</span></td>
+						<td>Manual</td>
+					</tr>
+					<tr>
+						<td><p class="m-b-0">Check-In</p></td>
+						<td><span class="label label-checked-in status-col status-col-right m-r-20">Checked-In</span><span class="label label-closed">Closed</span></td>
+						<td>Manual</td>
+					</tr>
+					<tr>
+						<td class="p-rl-0"><p class="m-b-0">Check-In: Damage</p></td>
+						<td><span class="label label-checked-in status-col">Checked-In: Damage</span></td>
+						<td>Automatic</td>
+					</tr>
+					<tr>
+						<td class="p-rl-0"><p class="m-b-0">Send Damage Invoice</p></td>
+						<td><span class="label label-pending-damage status-col">Pending Damage Payment</span></td>
+						<td>Manual</td>
+					</tr>
+					<tr>
+						<td class="p-rl-0"><p class="m-b-0">Receive Damage Payment</p></td>
+						<td><span class="label label-damage-paid status-col">Damage Paid</span></td>
+						<td>Automatic</td>
+					</tr>
+					<tr>
+						<td class="p-rl-0"><p class="m-b-0">Send Thank You Email</p></td>
+						<td><span class="label label-closed">Closed</span></td>
+						<td>Automatic</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<script>
+	$(function() {
+		var table = $('#status_table');
+		table.dataTable({
+			"bStateSave": true,
+			"searchable": false,
+			"paginate": false,
+			"info": false,
+			"searching": false,
+			"sort": false,
+		});
+	});
+</script>

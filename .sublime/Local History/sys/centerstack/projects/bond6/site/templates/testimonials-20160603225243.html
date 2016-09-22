@@ -1,0 +1,93 @@
+<!--==========================
+*  Author:		Dave Luke Jr
+*  Company:	CenterStack.io
+*  Description:	testimonials.html
+*==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load customtags %}
+{% load staticfiles %}
+{% block content %}
+
+
+<!--	Page Title
+========================================= -->
+<section class="page-title">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h3 class="text-uppercase fw-900 fs-32 font-theme"> testimonial 1 </h3>
+				<ol class="breadcrumb">
+					<li><a href="#"> Home </a></li>
+					<li class="active"> Page </li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--	Testimonials
+========================================= -->
+<div class="page-content">
+	<div class="container">
+		<div class="row">
+			<div class="heading-title text-center">
+				<h3 class="text-uppercase fw-900 fs-32 font-theme"> testimonial 1 </h3>
+				<span class="text-uppercase"> Some testimonial Examples </span>
+			</div>
+			<div class="col-md-12">
+				<ul class="testimonial plus-box grid-2 ">
+					<li>
+						<div class="avatar">
+							<a href="#">
+								<img alt="Customer Testimonails" src="{% static 'massive/img/testimonial/1.jpg' %}" /> </a>
+						</div>
+						<div class="content">
+							<p> Vestibulum varius fermentum risus vitae lacinia neque auctor nec. Nunc ac rutrum nulla. Nulla maximus dolor in quam euismod ac viverra libero aliquet. </p>
+							<div class="testimonial-meta"> LINDA ANDERSON
+								<span> head of marketing, TB </span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="avatar">
+							<a href="#">
+								<img alt="Customer Testimonails" src="{% static 'massive/img/testimonial/2.jpg' %}" /> </a>
+						</div>
+						<div class="content">
+							<p> Vestibulum varius fermentum risus vitae lacinia neque auctor nec. Nunc ac rutrum nulla. Nulla maximus dolor in quam euismod ac viverra libero aliquet. </p>
+							<div class="testimonial-meta"> FRANKLIN HERBET
+								<span> head of HR, TB </span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="avatar">
+							<a href="#">
+								<img alt="Customer Testimonails" src="{% static 'massive/img/testimonial/3.jpg' %}" /> </a>
+						</div>
+						<div class="content">
+							<p> Vestibulum varius fermentum risus vitae lacinia neque auctor nec. Nunc ac rutrum nulla. Nulla maximus dolor in quam euismod ac viverra libero aliquet. </p>
+							<div class="testimonial-meta"> Martin Smith
+								<span> CEO, TB </span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="avatar">
+							<a href="#">
+								<img alt="Customer Testimonails" src="{% static 'massive/img/testimonial/4.jpg' %}" /> </a>
+						</div>
+						<div class="content">
+							<p> Vestibulum varius fermentum risus vitae lacinia neque auctor nec. Nunc ac rutrum nulla. Nulla maximus dolor in quam euismod ac viverra libero aliquet. </p>
+							<div class="testimonial-meta"> John Doe
+								<span> head of marketing, TB </span>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>	
+{% endblock %}

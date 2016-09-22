@@ -1,0 +1,206 @@
+<!--=======================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	class_edit.html
+ *=======================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% block content_site %}
+<head> {{ ClassForm.media }} </head> 
+
+
+
+<!--	classes
+========================================= -->
+<div class="row">
+	<div class="col-md-12">
+		<div class="portlet box base">
+
+			<!--	Top Toolbar
+			========================================= -->
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="pe-7s-users"> </i>
+					{% if request.path == "/classes/new/" %}
+						<span class="caption-subject font-white capitalize"> New class </span>
+					{% else %}
+						<span class="caption-subject font-white capitalize"> Edit class </span>
+					{% endif %}
+				</div>
+			</div>
+			<div class="portlet-body">
+				<div class="pi-row">
+					<div class="pi-col-sm-10 pi-col-sm-offset-1 pi-section-white m-t-30">
+
+						<!--	Form
+						========================================= -->
+						<form action="" method="post" role="form">
+							{% csrf_token %}
+							<div class="pi-row pi-grid-small-margins">
+								<div class="pi-col-sm-8">
+									<div class="form-group">
+										<label> Class Name</label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-info"> </i>
+											</span>
+											{{ ClassForm.name | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-2">
+									<div class="form-group">
+										<label for="label-class"> Bookings </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-add-user"> </i>
+											</span>
+											{{ ClassForm.bookings | add_class:"form-control" | attr:"disabled:true" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-2">
+									<div class="form-group">
+										<label for="label-class"> Seats </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="icon-icon-40-clipboard-list"> </i>
+											</span>
+											{{ ClassForm.seats | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label> Start </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-date"> </i>
+											</span>
+											{{ ClassForm.start | add_class:"form-control datetimepicker" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-class"> End </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-date"> </i>
+											</span>
+											{{ ClassForm.end | add_class:"form-control datetimepicker" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label for="label-class"> Teacher </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-study"> </i>
+											</span>
+											{{ ClassForm.teacher | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+											<a href="/admin/classes/teacher/add/" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-2">
+									<div class="form-group">
+										<label for="label-class"> Private </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="icon-icon-21-eye-hidden"> </i>
+											</span>
+											{{ ClassForm.is_private | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-2">
+									<div class="form-group">
+										<label for="label-class"> Price </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-cash"> </i>
+											</span>
+											{{ ClassForm.price | add_class:"form-control" | attr:"placeholder:" }}
+											<span class="input-group-addon input-right mask"> $ </span>
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-2">
+									<div class="form-group">
+										<label for="label-class"> Discount </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="icon-icon-145-tag-cord"> </i>
+											</span>
+											{{ ClassForm.discount | add_class:"form-control" }}
+											<span class="input-group-addon input-right mask"> % </span>
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-2">
+									<label></label>
+									<div class="form-group">
+										<div class="fileUpload  full-width btn cave-green-bg">
+											<span>Upload Photo</span>
+											{{ ClassForm.photo | add_class:"upload" }}
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+
+							<!--	Notes
+							========================================= -->
+							<div class="pi-row pi-grid-small-margins  m-t-10">
+								<div class="pi-col-xs-12 pi-section-white">
+									<label>Description</label>
+									<div class="form-group">
+										{{ ClassForm.description | add_class:"mce-format" }}
+									</div>
+								</div>
+							</div>
+							<p><span class="font-mt-red">* Required</span></p>
+
+							<!--	Submit / Delete
+							========================================= -->
+							{% if request.path == "/classes/new/" %}
+								<p class="pi-text-center m-t-40">
+									<button type="submit" value="{{ class.pk }}" name="save" class="btn base p-rl-40"> Save<i class="pe-7s-check pi-icon-right"></i></button>
+									<a href="{% url 'classes' %}" class="btn mt-grey-gallery-bg p-rl-40 m-r-5"> Cancel<i class="pe-7s-close-circle pi-icon-right"></i></a>
+								</p>
+							{% else %}
+								<p class="pi-text-center m-t-40">
+									<button type="submit" value="{{ class.pk }}" name="save" class="btn base p-rl-40"> Save<i class="pe-7s-check pi-icon-right"></i></button>
+									<button type="submit" value="{{ class.pk }}" name="delete" class="btn mt-grey-gallery-bg p-rl-40 m-r-5" formnovalidate> Delete<i class="pe-7s-close-circle pi-icon-right"></i></button>
+								</p>
+							{% endif %}
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}

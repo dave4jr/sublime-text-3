@@ -1,0 +1,324 @@
+<!--======================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	index.html
+ *======================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content_site %}
+
+
+<!--=================`====================================
+	Check-Out
+=====================================================-->
+<div class="pi-row">
+	<div class="col-md-3">
+		<div class="portlet box base">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="pe-7s-download rotate--90"> </i>
+					<span class="caption-subject base-font"> Check-Out </span>
+				</div>
+			</div>
+			<div class="portlet-body">
+				<div class="pi-section-white">
+
+					<!--	Error Handling Logic
+					========================================= -->
+					{% if CheckoutLaunchForm.errors %}
+						{% for error in CheckoutLaunchForm.errors %}
+							<p class="pi-text-center font-mt-red capitalize fs-18">Error: {{ error|escape }}</p>
+						{% endfor %}
+					{% endif %}
+
+					<!--	Form
+					========================================= -->
+					<form action="" method="post">
+						{% csrf_token %}
+							
+						<div class="pi-row pi-grid-small-margins">
+
+							<!--	Customer
+							========================================= -->
+							<div class="pi-col-sm-12">
+								<div class="form-group">
+									<label for="label-reservation-phone"> Customer </label>
+									<div class='input-group'>
+										<span class="input-group-addon input-left">
+											<i class="pe-7s-user"> </i>
+										</span>
+										{{ CheckoutLaunchForm.customer | add_class:"form-control" }}
+										<span class="input-group-addon input-right expandable">
+											<i class="pe-is-i-angle-down"></i>
+										</span>
+									</div>
+								</div>
+							</div>
+
+
+
+							<!--	Submit / Close Buttons
+							========================================= -->
+							<p class="pi-text-center m-t-20 p-rl-8">
+								<button type="submit" name="type" value="checkout" class="btn base pi-btn-wide"> Check-Out </button>
+							</p>
+						</div>
+					</form>
+				 </div>
+			</div>
+		</div>
+	</div>
+
+
+<!--=================`====================================
+	Check-In
+=====================================================-->
+	<div class="col-md-3">
+		<div class="portlet box base">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="pe-7s-download rotate--90"> </i>
+					<span class="caption-subject base-font"> Check-In </span>
+				</div>
+			</div>
+			<div class="portlet-body">
+				<div class="pi-section-white">
+
+					<!--	Error Handling Logic
+					========================================= -->
+					{% if CheckinLaunchForm.errors %}
+						{% for error in CheckinLaunchForm.errors %}
+							<p class="pi-text-center font-mt-red capitalize fs-18">Error: {{ error|escape }}</p>
+						{% endfor %}
+					{% endif %}
+
+					<!--	Form
+					========================================= -->
+					<form action="" method="post">
+						{% csrf_token %}
+							
+						<div class="pi-row pi-grid-small-margins">
+
+							<!--	Customer
+							========================================= -->
+							<div class="pi-col-sm-12">
+								<div class="form-group">
+									<label for="label-reservation-phone"> Customer </label>
+									<div class='input-group'>
+										<span class="input-group-addon input-left">
+											<i class="pe-7s-user"> </i>
+										</span>
+										{{ CheckinLaunchForm.customer | add_class:"form-control" }}
+										<span class="input-group-addon input-right expandable">
+											<i class="pe-is-i-angle-down"></i>
+										</span>
+									</div>
+								</div>
+							</div>
+
+
+							<!--	Submit / Close Buttons
+							========================================= -->
+							<p class="pi-text-center m-t-20 p-rl-8">
+								<button type="submit" name="type" value="checkin" class="btn base pi-btn-wide"> Check-In </button>
+							</p>
+						</div>
+					</form>
+				 </div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+<!--=====================================================
+	Check Availability
+=====================================================-->
+	<div class="col-md-6">
+		<div class="portlet box base">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="pe-7s-date"> </i>
+					<span class="caption-subject base-font"> Check Availability </span>
+				</div>
+			</div>
+			<div class="portlet-body">
+				<div class="pi-section-white">
+
+					<form action="{% url 'availability' %}" method="post">
+						{% csrf_token %}
+							
+						<div class="pi-row pi-grid-small-margins">
+
+							<div class="pi-col-sm-5 p-0">
+
+								<div class="pi-col-sm-12">
+									<div class="form-group">
+										<label for="id_checkout_datetime"> Check-In </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-date"> </i>
+											</span>
+											{{ AvailabilityForm.start | add_class:"form-control datetimepicker" }}
+										</div>
+									</div>
+								</div>
+
+								<div class="pi-col-sm-12">
+									<div class="form-group">
+										<label for="id_checkout_datetime"> Check-In </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-date"> </i>
+											</span>
+											{{ AvailabilityForm.end | add_class:"form-control datetimepicker" }}
+										</div>
+									</div>
+								</div>
+
+								
+								<div class="pi-col-sm-12">
+									<div class="form-group">
+										<p class="pi-text-center m-t-0">
+											<button type="submit" class="btn base pi-btn-wide"	> Search </button>
+										</p>
+									</div>
+								</div>
+							</div>
+
+
+							<div id="availability-results" class="pi-col-sm-7">
+
+								{% if reservation.errors %}
+										{% for error in reservation.errors %}
+											<p class="pi-text-center font-mt-red capitalize fs-18">Error: {{ error|escape }}</p>
+										{% endfor %}
+								{% endif %}
+
+
+								<div class="form-group">
+									<label for="id_checkout_datetime"> Availability </label>
+									<div class='input-group'>
+										<ul>
+											{% for search in searches %}
+												<li>{{ search }}</li>
+											{% endfor %}
+										</ul>
+									</div>
+								</div>
+								<span class="label label-damage-evaluation p-10 p-rl-15 fs-14">{{ error_message }}</span>
+							</div>
+						</div>
+					</form>
+				 </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!--=====================================================
+	Home Section
+=====================================================-->
+
+
+
+
+<!--=====================================================
+	Status History Table
+=====================================================-->
+<div class="row">
+	<div class="col-md-12">
+		<div class="portlet box base">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="pe-7s-refresh-2"> </i>
+					<span class="caption-subject base-font"> Status History </span>
+				</div>
+			</div>
+			<div class="portlet-body">
+
+				<div class="table-toolbar m-b-0">
+					<div class="row">
+						<div class="col-md-12">
+							<div id="status-history-toolbar" class="pull-right"></div>
+						</div>
+					</div>
+				</div>
+
+
+				<table class="table table-striped table-bordered table-hover order-column" id="log_table">
+					<thead>
+						<tr>
+							<th> Customer </th>
+							<th> From </th>
+							<th> To </th>
+							<th> Timestamp </th>
+						</tr>
+					</thead>
+					<tbody>
+
+					{% for log in logs %}
+						<tr class="odd gradeX">
+							<td>{{ log.modified_object }}</td>
+							<td>{{ log.from_state|underscore2space|title }}</td>
+							<td>{{ log.to_state|underscore2space|title }}</td>
+							<td>{{ log.timestamp }}</td>
+						</tr>
+					{% endfor %}
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!--	Javascript: Transaction History
+========================================= -->
+<script>
+	$(function() {
+		
+		var table = $('#log_table');
+		table.dataTable({
+			"language": {
+				"aria": {
+					"sortAscending": ": activate to sort column ascending",
+					"sortDescending": ": activate to sort column descending"
+				},
+				"emptyTable": "No Status History",
+				"info": "Showing _START_ to _END_ of _TOTAL_ records",
+				"infoEmpty": "No Status History Found",
+				"infoFiltered": "(filtered1 from _MAX_ total records)",
+				"lengthMenu": "Show _MENU_",
+				"search": "Search:",
+				"zeroRecords": "No Matching Status Records Found",
+				"paginate": {
+					"previous":"Prev",
+					"next": "Next",
+					"last": "Last",
+					"first": "First"
+				}
+			},
+			"bStateSave": true,
+			"lengthMenu": [
+				[5, 10, 15, 20, -1],
+				[5, 10, 15, 20, "All"]
+			],
+			"pageLength": 10,
+			"pagingType": "bootstrap_full_number",
+			"order": [ [3, "desc"] ],
+		});
+	});
+</script>
+
+
+
+{% endblock %}

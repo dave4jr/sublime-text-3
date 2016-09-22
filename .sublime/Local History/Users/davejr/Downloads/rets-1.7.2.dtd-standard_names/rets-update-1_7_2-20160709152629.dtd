@@ -1,0 +1,39 @@
+<!--	 
+	 See http://www.reso.org for more information.
+    
+    This DTD is identified by PUBLIC and SYSTEM identifiers:
+    
+    PUBLIC "-//RETS//DTD Update 1.7.2//EN"
+    SYSTEM "http://www.rets.org/dtd/1.7.2/1.3/rets-update-1_7_2.dtd"
+							
+Copyright 2015 RESO. By using this document you agree to the RESO End User License Agreement (EULA) posted at:
+
+https://reso.memberclicks.net/assets/docs/reso%20eula.pdf
+-->
+
+<!-- BASIC ELEMENTS -->
+<!--DATE/TIME ELEMENTS -->
+<!--see ISO 8601 for acceptable values for Format -->
+<!ATTLIST RETS
+	ReplyCode CDATA #REQUIRED
+	ReplyText CDATA #REQUIRED
+>
+<!ATTLIST RETS-STATUS
+	ReplyCode CDATA #REQUIRED
+	ReplyText CDATA #REQUIRED
+>
+<!ELEMENT TRANSACTIONID (#PCDATA)>
+<!ATTLIST TRANSACTIONID value CDATA #REQUIRED>
+<!ELEMENT DELIMITER EMPTY>
+<!ATTLIST DELIMITER value CDATA #REQUIRED>
+<!ELEMENT COLUMNS (#PCDATA)>
+<!ELEMENT DATA (#PCDATA)>
+<!ELEMENT WARNINGDATA (#PCDATA)>
+<!ELEMENT ERRORDATA (#PCDATA)>
+<!ELEMENT ERRORBLOCK (ERRORDATA+)>
+<!ELEMENT WARNINGBLOCK (WARNINGDATA+)>
+<!ELEMENT RETS-STATUS EMPTY>
+<!-- COMPOUND ELEMENTS -->
+<!-- PACKAGING ELEMENTS -->
+<!ELEMENT RETS (TRANSACTIONID,DELIMITER?,COLUMNS,DATA*,RETS-STATUS?,ERRORBLOCK?,WARNINGBLOCK?)>
+

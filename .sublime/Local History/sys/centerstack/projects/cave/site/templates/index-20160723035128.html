@@ -1,0 +1,113 @@
+<!--======================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	index.html
+ *======================-->
+ {% extends "base.html" %}
+ {% load widget_tweaks %}
+ {% load humanize %}
+ {% load mathfilters %}
+ {% load staticfiles %}
+ {% load customtags %}
+ {% block content_site %}
+
+
+
+<!--	Square
+========================================= -->
+<script type="text/javascript" src="https://js.squareup.com/v2/paymentform"></script>
+ <div class="row">
+ 	<div class="col-md-6">
+ 		<div class="portlet light portlet-fit ">
+ 			<div class="portlet-title">
+ 				<div class="caption">
+ 					<i class="pe-7s-users"> </i>
+ 					<span class="caption-subject base-font"> Charge </span>
+ 				</div>
+ 			</div>
+ 			<div class="portlet-body">
+ 				<div class="pi-row">
+ 					<div class="pi-col-sm-12">
+						<div id="payment-form" class="pi-row pi-grid-small-margins">
+							<div class="pi-col-sm-12">
+								<label>Card Number</label>
+								<div class="form-group">
+									<div class="pi-input-with-icon">
+										<div class="pi-input-icon">
+											<i class="pe-7s-credit"> </i>
+										</div>
+										<div id="sq-card-number"></div>
+									</div>
+								</div>
+							</div>
+
+							<!--	Expiration Date
+							========================================= -->
+							<div class="pi-col-sm-4">
+								<label>Expiration Date</label>
+								<div class="form-group">
+									<div class="pi-input-with-icon">
+										<div class="pi-input-icon">
+											<i class="pe-7s-date"> </i>
+										</div>
+										<div id="sq-expiration-date"></div>
+									</div>
+								</div>
+							</div>
+
+							<!--	Security Code
+							========================================= -->
+							<div class="pi-col-sm-4">
+								<label>CVV</label>
+								<div class="form-group">
+									<div class="pi-input-with-icon">
+										<div class="pi-input-icon">
+											<i class="pe-7s-key"> </i>
+										</div>
+										<div id="sq-cvv"></div>
+									</div>
+								</div>
+							</div>
+							
+							<!--	Zip Code
+							========================================= -->
+							<div class="pi-col-sm-4">
+								<label>Zip Code</label>
+								<div class="form-group">
+									<div class="pi-input-with-icon">
+										<div class="pi-input-icon">
+											<i class="pe-7s-map-2"> </i>
+										</div>
+										<div id="sq-postal-code"></div>
+									</div>
+								</div>
+							</div>
+							<button class="btn base square-btn" type="submit" onclick="requestCardNonce()">Submit</button>
+						</div>
+ 					</div>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</div>
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

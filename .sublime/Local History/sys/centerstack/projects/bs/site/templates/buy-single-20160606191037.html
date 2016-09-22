@@ -1,0 +1,247 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	buy-single.html
+ *==========================-->
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+{% load customtags %}
+{% load mathfilters %}
+{% load humanize %}
+{% block content %}
+
+
+<!--	Buy Single
+========================================= -->
+<div class="main-wrapper">
+	<div class="main">
+		<div class="main-inner">
+			<div class="content-title">
+				<div class="content-title-inner">
+					<div class="container">
+						<h1> Property Details </h1>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="listing-detail-attributes grey-bg">
+								<div class="col-sm-3 listing-detail-attribute">
+									<div class="key"> Address </div>
+									<div class="value"> {{ json.StreetNumber }} {{ json.StreetName }} {{ json.StreetSuffix }} {{ json.Unit }}</div>
+								</div>
+								<div class="col-sm-3 listing-detail-attribute p-l-20">
+									<div class="key"> Location </div>
+									<div class="value"> {{ json.City }}, {{ json.State }} ({{ json.County }}) </div>
+								</div>
+								<div class="col-sm-3 listing-detail-attribute p-l-60">
+									<div class="key"> MLS Number </div>
+									<div class="value"> {{ json.MLNumber }} </div>
+								</div>
+								<div class="col-sm-3 listing-detail-attribute p-l-60">
+									<div class="key"> Price </div>
+									<div class="value"> ${{ json.ListingPrice|floatformat:"0"|intcomma }} </div>
+								</div>
+							</div>
+						</div>
+						<div class="listing-detail col-md-12">
+
+							<!--	Slider
+							========================================= -->
+							<div class="row p-10">
+								<div class="col-md-12">
+									<ul class="pgwSlideshow">
+										{% for ii in json.img %}
+											<li><img src="{{ ii }}"></li>
+										{% endfor %}
+									</ul>
+									<script>
+										$(document).ready(function() {
+											$('.pgwSlideshow').pgwSlideshow({
+												transitionEffect: 'sliding',
+												displayControls: false,
+												autoSlide: true,
+												intervalDuration: 4000,
+												maxHeight: 1000,
+											});
+										});
+									</script>
+								</div>
+							</div>
+
+
+
+							<!--	Property Description
+							========================================= -->
+							<div class="pi-row pi-grid-small-margins m-t-10">
+								<div class="pi-col-lg-4">
+									<div class="overview portlet grey-bg">
+										<h2> Overview </h2>
+										<ul>
+											<li>
+												<strong> Street </strong>
+												<span> {% include "include/address.html" with arg="street" %} </span>
+											</li>
+											<li>
+												<strong> City </strong>
+												<span> {% include "include/address.html" with arg="city" %} </span>
+											</li>
+											<li>
+												<strong> Style </strong>
+												<span> {{ json.RESISTYL }} </span>
+											</li>
+											<li>
+												<strong> Water </strong>
+												<span> {{ json.RESIWTRD }} </span>
+											</li>
+											<li>
+												<strong> Year Built </strong>
+												<span> {{ json.YearBuilt }} </span>
+											</li>
+											<li>
+												<strong> Levels </strong>
+												<span> {{ json.RESILEVL }} </span>
+											</li>
+											<li>
+												<strong> View </strong>
+												<span> {{ json.RESIVIEW }} </span>
+											</li>
+											
+										</ul>
+									</div>
+								</div>
+								<div class="pi-col-lg-4">
+									<div class="overview portlet grey-bg">
+										<h2> Features </h2>
+										<ul>
+											<li>
+												<strong> Listing Price </strong>
+												<span> ${{ json.ListingPrice|floatformat:"0"|intcomma }} </span>
+											</li>
+											<li>
+												<strong> Price / Sqft. </strong>
+												<span> ${{ json.ListingPrice|div:json.SquareFootage|floatformat:"2"|intcomma }} </span>
+											</li>
+											<li>
+												<strong> Bedrooms </strong>
+												<span> {{ json.Bedrooms }} </span>
+											</li>
+											<li>
+												<strong> Bathrooms </strong>
+												<span> {{ json.Bathrooms|floatformat:"1" }} </span>
+											</li>
+											<li>
+												<strong> Sqft. </strong>
+												<span> {{ json.SquareFootage|floatformat:"0"|intcomma }} Sqft. </span>
+											</li>
+											<li>
+												<strong> Lot Size </strong>
+												<span> {{ json.Acres }} Acres </span>
+											</li>
+											<li>
+												<strong> HOA </strong>
+												<span>
+													{% if json.RESIHOA == "No" %}
+														No
+													{% else %}
+													 	${{ json.RESIHOAD|floatformat:"0"|intcomma }}
+													 {% endif %}
+												</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="pi-col-lg-4">
+									<div class="overview portlet grey-bg">
+										<h2> Description </h2>
+										<p> {{ json.MarketingRemarks }} </p>
+									</div>
+								</div>
+							</div>
+
+
+							<!--	Ammenities
+							========================================= -->
+							<h2> Amenities </h2>
+							<ul class="amenities">
+								<li class="yes"> Conditioning </li>
+								<li class="no"> Balcony </li>
+								<li class="no"> Bedding </li>
+								<li class="no"> Cable TV </li>
+								<li class="no"> Cleaning </li>
+								<li class="no"> Cofee pot </li>
+								<li class="no"> Computer </li>
+								<li class="yes"> Cot </li>
+								<li class="no"> Dishwasher </li>
+								<li class="yes"> DVD </li>
+								<li class="no"> Fan </li>
+								<li class="yes"> Fridge </li>
+								<li class="no"> Grill </li>
+								<li class="yes"> Hairdryer </li>
+								<li class="no"> Heating </li>
+								<li class="yes"> Hi-fi </li>
+								<li class="no"> Internet </li>
+								<li class="yes"> Iron </li>
+								<li class="no"> Juicer </li>
+								<li class="yes"> Lift </li>
+								<li class="yes"> Microwave </li>
+								<li class="yes"> Oven </li>
+								<li class="no"> Parking </li>
+								<li class="no"> Parquet </li>
+								<li class="yes"> Pool </li>
+								<li class="yes"> Radio </li>
+								<li class="no"> Roof terrace </li>
+								<li class="no"> Smoking </li>
+								<li class="yes"> Terrace </li>
+								<li class="no"> Toaster </li>
+								<li class="no"> Towelwes </li>
+								<li class="no"> Use of pool </li>
+							</ul>
+
+							<!--	Question
+							========================================= -->
+							<h2> Send Us A Question </h2>
+							<div class="comment-create grey-bg portlet p-40">
+								<form action="?" method="post">
+									<div class="form-group">
+										<label> Message </label>
+										<textarea class="form-control" rows="5"> </textarea>
+									</div>
+									<div class="row">
+										<div class="col-sm-4">
+											<div class="form-group">
+												<label> Name </label>
+												<input class="form-control" type="text" />
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="form-group">
+												<label> E-mail </label>
+												<input class="form-control" type="email" />
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="form-group">
+												<label> URL </label>
+												<input class="form-control" type="text" />
+											</div>
+										</div>
+									</div>
+									<div class="form-group-btn">
+										<a class="btn btn-primary pull-right" href="#"> Post Comment </a>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}

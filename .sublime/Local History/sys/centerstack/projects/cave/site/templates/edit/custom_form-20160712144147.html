@@ -1,0 +1,148 @@
+<!--======================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	custom_form.html
+ *======================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% block content_site %}
+
+<!--	Customs
+========================================= -->
+<div class="row">
+	<div class="col-md-12">
+		<div class="portlet box base">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="pe-7s-compass"> </i>
+					<span class="caption-subject font-white capitalize"> Custom Route Details </span>
+				</div>
+			</div>
+			<div class="portlet-body">
+				<div class="pi-row">
+
+					{% if CustomForm.errors %}
+						{% for error in CustomForm.errors %}
+							<p class="pi-text-center font-mt-red capitalize fs-18">Error: {{ error|escape }}</p>
+						{% endfor %}
+					{% endif %}
+
+					<div class="pi-col-sm-7 pi-section-white m-t-30">
+
+						<!--	Form
+						========================================= -->
+						<form action="" method="post" role="form">
+							{% csrf_token %}
+
+							<div class="pi-row pi-grid-small-margins m-l-20">
+
+								<!--	Custom
+								========================================= -->
+								<div class="pi-col-sm-12">
+									<div class="form-group">
+										<label for="label-custom-phone"> Route </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-compass"> </i>
+											</span>
+											{{ CustomForm.name | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+
+
+								<!--	Location
+								========================================= -->
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label for="label-custom-phone"> Location </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-map"> </i>
+											</span>
+											{{ CustomForm.location | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+
+
+								<!--	Skill Rating
+								========================================= -->
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label for="label-custom-phone"> Skill Level </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-star"> </i>
+											</span>
+											{{ CustomForm.skill | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-expand-v"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+
+
+								<!--	Mileage
+								========================================= -->
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label for="label-custom-phone"> Total mileage </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-info"> </i>
+											</span>
+											{{ CustomForm.mileage | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+
+
+
+								<!--	Description
+								========================================= -->
+								<div class="pi-col-sm-12">
+									<div class="form-group">
+										<label for="label-member-phone"> Description </label>
+										<div class="pi-input-with-icon">
+											<div class="pi-input-icon">
+												<i class="pe-7s-comment"> </i>
+											</div>
+											{{ CustomForm.description | add_class:"form-control p-l-40" | attr:"rows:1" | attr:"type:textarea" }}
+										</div>
+									</div>
+								</div>
+
+
+								<!--	Notes
+								========================================= -->
+								<div class="pi-col-sm-12">
+									<div class="form-group">
+										<label for="label-member-phone"> Notes </label>
+										<div class="pi-input-with-icon">
+											<div class="pi-input-icon">
+												<i class="pe-7s-comment"> </i>
+											</div>
+											{{ CustomForm.notes | add_class:"form-control p-l-40" | attr:"rows:5" | attr:"type:textarea" }}
+										</div>
+									</div>
+								</div>
+							</div>
+							<p class="pi-text-center m-t-40">
+								<button type="submit" value="{{ custom.pk }}" name="delete" class="btn mt-grey-gallery-bg p-rl-40 m-r-5"> Delete<i class="pe-7s-close-circle pi-icon-right"></i></a>
+								<button type="submit" value="{{ custom.pk }}" name="save" class="btn base p-rl-40"> Save<i class="pe-7s-check pi-icon-right"></i></button>
+							</p>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}

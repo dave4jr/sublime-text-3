@@ -1,0 +1,534 @@
+<!--============================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	reservation_form.html
+ *============================-->
+ {% extends "base.html" %}
+ {% load widget_tweaks %}
+ {% load humanize %}
+ {% load mathfilters %}
+ {% load customtags %}
+ {% load staticfiles %}
+ {% block content_site %}
+
+
+<!--	Reservations
+========================================= -->
+<div class="pi-row">
+
+	<form action="" method="post" role="form">
+		{% csrf_token %}
+
+		<div class="col-md-6">
+			<div class="portlet light portlet-fit">
+				<div class="portlet-title">
+					<div class="caption">
+						<i class="icon-ecommerce_sales"> </i>
+						<span class="caption-subject base-font capitalize"> Reservation Details </span>
+					</div>
+					<div class="actions pull-right" style="width:190px;">
+						<div class="form-group m-b-8">
+							<div class='input-group p-l-10'>
+								{{ ReservationForm.status | add_class:"form-control" }}
+								<span class="input-group-addon input-right expandable">
+									<i class="pe-is-i-angle-down"></i>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="portlet-body">
+					<div class="row"> {% if ReservationForm.errors %} {% for error in ReservationForm.errors %}
+						<p class="pi-text-center font-mt-red capitalize fs-18">Error: {{ error|escape }}</p> {% endfor %} {% endif %}
+						<div class="pi-col-sm-12 pi-section-white m-t-10">
+							
+							<div class="pi-row pi-grid-small-margins">
+
+								<!--	Customer
+								========================================= -->
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-reservation-phone"> Customer </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-user"> </i>
+											</span>
+											{{ ReservationForm.customer | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+											<a href="{% url 'customer_new' %}" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+
+								<!--	Group
+								========================================= -->
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-reservation-phone"> Group </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-users"> </i>
+											</span>
+											{{ ReservationForm.group | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+											<a href="/admin/reservations/group/add/" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+
+								<!--	Status
+								========================================= -->
+								<!-- <div class="pi-col-sm-4">
+									<div class="form-group">
+										<label for="label-reservation-phone"> Status </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-config"> </i>
+											</span>
+											{{ ReservationForm.status | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+										</div>
+									</div>
+								</div> -->
+
+								<!--	Checkout & Checkin
+								========================================= -->
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-reservation-phone"> Check-Out </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-date"> </i>
+											</span>
+											{{ ReservationForm.checkout_datetime | add_class:"form-control datetimepicker" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-reservation-phone"> Check-In </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-date"> </i>
+											</span>
+											{{ ReservationForm.checkin_datetime | add_class:"form-control datetimepicker" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+
+								<!--	Rental Type
+								========================================= -->
+								<div id="rental_type" class="pi-col-sm-12">
+									<div class="form-group">
+										<label for="label-reservation-phone"> Reservation Type </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-network"> </i>
+											</span>
+											{{ ReservationForm.rental_type | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+
+								<!--	Storage Bike
+								========================================= -->
+								<div id="storage_bike" class="pi-col-sm-12 hidden">
+									<div class="form-group">
+										<label for="label-reservation"> Storage Bike </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-box1"> </i>
+											</span>
+											{{ ReservationForm.storage_bike | add_class:"form-control" | attr:"placeholder: Enter Make / Model" }}
+										</div>
+									</div>
+								</div>
+
+								<!--	Tour
+								========================================= -->
+								<div id="tour" class="pi-col-sm-12 hidden">
+									<div class="form-group">
+										<label for="label-reservation-phone"> Tour </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-map-2"> </i>
+											</span>
+											{{ ReservationForm.tour | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+											<a href="{% url 'tour_new' %}" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+								<!--	Class
+								========================================= -->
+								<div id="classes" class="pi-col-sm-12 hidden">
+									<div class="form-group">
+										<label for="label-reservation-phone"> Class </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-display1"> </i>
+											</span>
+											{{ ReservationForm.classes | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+											<a href="{% url 'class_new' %}" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+								<!--	Storage Accessories
+								========================================= -->
+								<div id="storage_accessories" class="pi-col-sm-12 hidden">
+									<div class="form-group">
+										<label class="fw-600 p-l-0" for="label-reservation-phone"> Storage Accesories </label>
+										<div class='input-group'>
+											{{ ReservationForm.storage_accessories | add_class:"form-control checkbox" }}
+											<a href="/admin/reservations/storageaccessories/add/" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+								<!--	Tour Accessories
+								========================================= -->
+								<div id="tour_accessories" class="pi-col-sm-12 hidden">
+									<div class="form-group">
+										<label class="fw-600 p-l-0" for="label-reservation-phone"> Tour Accesories </label>
+										<div class='input-group'>
+											{{ ReservationForm.tour_accessories | add_class:"form-control checkbox" }}
+											<a href="/admin/tours/touraccessories/add/" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+								<!--	Bike
+								========================================= -->
+								<div id="bike" class="pi-col-sm-12 hidden">
+									<div class="form-group">
+										<label for="label-reservation-phone"> Bike </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-bicycle"> </i>
+											</span>
+											{{ ReservationForm.bike | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+											<a href="{% url 'bike_new' %}" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+								<!--	Bike Accessories
+								========================================= -->
+								<div id="bike_accessories" class="pi-col-sm-12 m-b-20 hidden">
+									<div class="form-group m-b-0">
+										<label class="fw-400 p-l-0"> Bike Accessories </label>
+										<div class='input-group'>
+											{{ ReservationForm.bike_accessories | add_class:"checkbox" }}
+											<a href="/admin/bikes/bikeaccessories/add/" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+								<!--	Submit / Close Buttons
+								========================================= -->
+								<p class="pi-text-center m-t-40">
+									<button type="submit" value="{{ reservation.pk }}" name="delete" class="btn mt-grey-gallery-bg p-rl-40 m-r-5"> Delete
+										<i class="pe-7s-close-circle pi-icon-right"></i>
+									</button>
+									<button type="submit" value="{{ reservation.pk }}" name="save" class="btn base p-rl-40"> Save
+										<i class="pe-7s-check pi-icon-right"></i>
+									</button>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+
+<!--=====================================================
+	Payment Timeline
+=====================================================-->
+	<div class="col-md-6">
+		<div class="pi-row">
+			<div class="col-md-12">
+				<div class="portlet light portlet-fit">
+					<div class="portlet-body p-rl-0">
+						<div class="mt-element-step">
+
+						{% if reservation.is_damaged %}
+							<div class="row step-line">
+								<div class="col-md-2 mt-step-col first done">
+									<div class="mt-step-number bg-white">1</div>
+									<div class="mt-step-title uppercase font-grey-cascade">Pending Deposit</div>
+								</div>
+								<div class="col-md-2 mt-step-col done">
+									<div class="mt-step-number bg-white">2</div>
+									<div class="mt-step-title uppercase font-grey-cascade">Reserved</div>
+								</div>
+								<div class="col-md-2 mt-step-col">
+									<div class="mt-step-number bg-white">3</div>
+									<div class="mt-step-title uppercase font-grey-cascade">Checked-Out</div>
+								</div>
+								<div class="col-md-2 mt-step-col">
+									<div class="mt-step-number bg-white">3</div>
+									<div class="mt-step-title uppercase font-grey-cascade">Pending Damage Payment</div>
+								</div>
+								<div class="col-md-2 mt-step-col last">
+									<div class="mt-step-number bg-white">4</div>
+									<div class="mt-step-title uppercase font-grey-cascade">Checked-In</div>
+								</div>
+							</div>
+
+						{% else %}
+							<div class="row step-line">
+								<div class="col-md-3 mt-step-col first done">
+									<div class="mt-step-number bg-white">1</div>
+									<div class="mt-step-title uppercase font-grey-cascade">Pending Deposit</div>
+								</div>
+								<div class="col-md-3 mt-step-col">
+									<div class="mt-step-number bg-white">2</div>
+									<div class="mt-step-title uppercase font-grey-cascade">Reserved</div>
+								</div>
+								<div class="col-md-3 mt-step-col">
+									<div class="mt-step-number bg-white">3</div>
+									<div class="mt-step-title uppercase font-grey-cascade">Checked-Out</div>
+								</div>
+								<div class="col-md-3 mt-step-col last">
+									<div class="mt-step-number bg-white">4</div>
+									<div class="mt-step-title uppercase font-grey-cascade">Checked-In</div>
+								</div>
+							</div>
+
+						{% endif %}
+						</div>
+					</div>
+				</div>
+			</div>
+
+<!--=====================================================
+	Reservation Pricing
+=====================================================-->
+			<div class="col-md-12">
+				<div id="reservation-pricing-table" class="portlet light portlet-fit">
+					<div class="portlet-title">
+						<div class="caption">
+							<i class="icon-ecommerce_banknotes"> </i>
+							<span class="caption-subject base-font capitalize"> Reservation Pricing </span>
+						</div>
+					</div>
+					<div class="portlet-body">
+
+
+						<!-- <ul>
+							<li><span class="fw-500">Duration:</span> {{ reservation.duration }} Days</li>
+							<li><span class="fw-500">Bike Reservation Deposit Rate:</span> ${{ preference.bike_deposit_multiple|intcomma }} / Day</li>
+							<li><span class="fw-500">Bike Accessories:</span> {{ reservation.get_bike_accessories }}</li>
+						</ul> -->
+
+						<!--	Pricing Table
+						========================================= -->
+						<table class="table table-striped table-bordered table-hover order-column" id="bike_pricing">
+							<thead>
+								<tr>
+									<th>Bike</th>
+									<th>Status</th>
+									<th>Payment Due</th>
+									<th>Rate <span class="fw-200">({{ reservation.duration }} days)</span></th>
+									<th>Total</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Reservation Deposit</td>
+
+									{% if reservation.status == "pending_deposit" %}
+										<td><span class="label label-danger">Due</span></td>
+									{% else %}
+										<td></td>
+									{% endif %}
+
+									<td>Immediately</td>
+									<td>${{ preference.bike_deposit_multiple|intcomma }} / Day</td>
+									<td>${{ reservation.bike_deposit|intcomma }}</td>
+								</tr>
+								<tr>
+									<td>Damage Deposit</td>
+									<td></td>
+									<td>{{ reservation.checkout_datetime.date }}</td>
+									<td>-</td>
+									<td>${{ preference.bike_damage_deposit|intcomma }}</td>
+								</tr>
+								<tr>
+									<td>Insurance</td>
+									<td></td>
+									<td>{{ reservation.checkout_datetime.date }}</td>
+									<td>${{ preference.insurance_price|intcomma }} / Day</td>
+									<td>${{ reservation.bike_insurance|intcomma }}</td>
+								</tr>
+								<tr>
+									<td>Rental</td>
+									<td></td>
+									<td>{{ reservation.checkout_datetime.date }}</td>
+									<td>${{ reservation.bike.rental_price|intcomma }} / Day</td>
+									<td>${{ reservation.bike_price|intcomma }}</td>
+								</tr>
+								<tr>
+									<td>Bike Accessories</td>
+									<td></td>
+									<td>{{ reservation.checkout_datetime.date }}</td>
+									<td>-</td>
+									<td>${{ reservation.get_bike_accessories_price|intcomma }}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!--=====================================================
+	Javascript
+=====================================================-->
+<script>
+$(function() {
+	var table = $('#bike_pricing');
+	table.dataTable({
+		"bStateSave": true,
+		"searchable": false,
+		"paginate": false,
+		"info": false,
+		"searching": false,
+		"sort": false,
+	});
+});
+</script>
+
+
+<!--	Reservation Form Script
+========================================= -->
+<script>
+$(function() {
+	/*	Reload
+	========================================= */
+	var rental_type = $('option:selected', $("#id_rental_type")).text();
+	if (rental_type === "---------") {
+		$('#bike, #bike_accessories, #tour, #tour_accessories, #classes, #storage_bike, #storage_accessories').toggleClass('hidden', true)
+	} else if (rental_type === "Bike") {
+		$('#bike, #bike_accessories').toggleClass('hidden', false)
+		$('#tour, #tour_accessories, #classes, #storage_bike, #storage_accessories').toggleClass('hidden', true)
+	} else if (rental_type === "Tour") {
+		$('#tour, #tour_accessories').toggleClass('hidden', false)
+		$('#bike, #bike_accessories, #classes, #storage_bike, #storage_accessories').toggleClass('hidden', true)
+	} else if (rental_type === "Tour / Bike") {
+		$('#bike, #bike_accessories, #tour, #tour_accessories').toggleClass('hidden', false)
+		$('#classes, #storage_bike, #storage_accessories').toggleClass('hidden', true)
+	} else if (rental_type === "Class") {
+		$('#classes').toggleClass('hidden', false)
+		$('#bike, #bike_accessories, #tour, #tour_accessories, #storage_bike, #storage_accessories').toggleClass('hidden', true)
+	} else if (rental_type === "Class / Bike") {
+		$('#classes, #bike, #bike_accessories').toggleClass('hidden', false)
+		$('#tour, #tour_accessories, #storage_bike, #storage_accessories').toggleClass('hidden', true)
+	} else if (rental_type === "Storage") {
+		$('#bike, #bike_accessories, #tour, #tour_accessories, #classes').toggleClass('hidden', true);
+		$('#storage_bike, #storage_accessories').toggleClass('hidden', false);
+	}
+	/*	On-Change
+	========================================= */
+	$("#id_rental_type").change(function() {
+		var rental_type = $('option:selected', this).text();
+		$('#id_tour').val("---------");
+		$('#id_bike').val("---------");
+		$('#id_classes').val("---------");
+		$('#id_storage_bike').val("");
+		/*	Uncheck Bike Accessories
+		========================================= */
+		var bike_accessories = $("#bike_accessories li span")
+		$.each(bike_accessories, function(ii, val) {
+			$(val).removeClass("checked");
+		});
+		var bike_accessories = $("#bike_accessories li input")
+		$.each(bike_accessories, function(ii, val) {
+			$(val).prop("checked", false);
+		});
+		/*	Uncheck Storage Accessories
+		========================================= */
+		var storage_accessories = $("#storage_accessories li span")
+		$.each(storage_accessories, function(ii, val) {
+			$(val).removeClass("checked");
+		});
+		var storage_accessories = $("#storage_accessories li input")
+		$.each(storage_accessories, function(ii, val) {
+			$(val).prop("checked", false);
+		});
+		/*	Uncheck Tour Accessories
+		========================================= */
+		var tour_accessories = $("#tour_accessories li span")
+		$.each(tour_accessories, function(ii, val) {
+			$(val).removeClass("checked");
+		});
+		var tour_accessories = $("#tour_accessories li input")
+		$.each(tour_accessories, function(ii, val) {
+			$(val).prop("checked", false);
+		});
+		if (rental_type === "---------") {
+			$('#bike, #bike_accessories, #tour, #tour_accessories, #classes, #storage, #storage_accessories').toggleClass('hidden', true)
+		} else if (rental_type === "Bike") {
+			$('#bike, #bike_accessories').toggleClass('hidden', false)
+			$('#tour, #tour_accessories, #classes, #storage, #storage_accessories').toggleClass('hidden', true)
+		} else if (rental_type === "Tour") {
+			$('#tour, #tour_accessories').toggleClass('hidden', false)
+			$('#bike, #bike_accessories, #classes, #storage, #storage_accessories').toggleClass('hidden', true)
+		} else if (rental_type === "Tour / Bike") {
+			$('#bike, #bike_accessories, #tour, #tour_accessories').toggleClass('hidden', false)
+			$('#classes, #storage, #storage_accessories').toggleClass('hidden', true)
+		} else if (rental_type === "Class") {
+			$('#classes').toggleClass('hidden', false)
+			$('#bike, #bike_accessories, #tour, #tour_accessories, #storage, #storage_accessories').toggleClass('hidden', true)
+		} else if (rental_type === "Class / Bike") {
+			$('#classes, #bike, #bike_accessories').toggleClass('hidden', false)
+			$('#tour, #tour_accessories, #storage, #storage_accessories').toggleClass('hidden', true)
+		} else if (rental_type === "Storage") {
+			$('#storage_bike, #storage_accessories').toggleClass('hidden', false)
+			$('#bike, #bike_accessories, #classes, #tour, #tour_accessories').toggleClass('hidden', true)
+		}
+	});
+});
+</script>
+
+{% endblock %}

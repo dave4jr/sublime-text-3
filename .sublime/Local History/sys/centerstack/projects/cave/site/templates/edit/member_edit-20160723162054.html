@@ -1,0 +1,253 @@
+<!--======================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	member_details.html
+ *======================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% block content_site %}
+
+<!--	Profile Picture
+========================================= -->
+<form action="" method="post" role="form">
+	{% csrf_token %}
+	<div class="profile-cover noisy_grid b-b-2">
+		<div class="row">
+			<div class="col-md-3 profile-image">
+				<div class="profile-image-container">
+					<img src="{% static 'img/users/dave-luke-jr.jpg' %}">
+				</div>
+				<h3>Dave Luke Jr. <span class="label label-active fs-12">Steward</span></h3>
+			</div>
+			<div class="col-md-12 profile-info">
+				<div class=" profile-info-value">
+					<p class="pi-text-center">
+						<button type="submit" value="{{ member.pk }}" name="delete" class="btn mt-grey-gallery-bg p-rl-15 m-r-5" formnovalidate> Delete<i class="pe-7s-close-circle pi-icon-right"></i></button>
+						<button type="submit" value="{{ member.pk }}" name="save" class="btn base p-rl-20"> Save<i class="pe-7s-check pi-icon-right"></i></button>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!--	Visit History
+	========================================= -->
+	<div id="profile-page" class="pi-row">
+	 	<div class="pi-col-md-6">
+			<div class="portlet light portlet-fit">
+				<div class="portlet-body">
+					<div class="pi-row">
+						<div class="pi-col-sm-12 pi-section-white m-t-30">
+							<div class="pi-row pi-grid-small-margins">
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label> Member ID<span class="font-mt-red"> *</span> </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-id"> </i>
+											</span>
+											{{ MemberForm.member_id | add_class:"form-control" | attr:"required:True" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label> First Name </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-user"> </i>
+											</span>
+											{{ MemberForm.first_name | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label> Last Name </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-user"> </i>
+											</span>
+											{{ MemberForm.last_name | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-member"> Street </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-way"> </i>
+											</span>
+											{{ MemberForm.street | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-member"> City </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-map"> </i>
+											</span>
+											{{ MemberForm.city | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-member"> State </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-map-2"> </i>
+											</span>
+											{{ MemberForm.state | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-member"> Zip Code </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-way"> </i>
+											</span>
+											{{ MemberForm.zipcode | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-member"> Phone </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-phone"> </i>
+											</span>
+											{{ MemberForm.phone | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-member"> Email Address </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-mail"> </i>
+											</span>
+											{{ MemberForm.email | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-member"> Emergency Contact Name </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-user"> </i>
+											</span>
+											{{ MemberForm.emergency_contact_name | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-member"> Emergency Contact Number </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-phone"> </i>
+											</span>
+											{{ MemberForm.emergency_contact_number | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-member"> Emergency Contact Relation </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-phone"> </i>
+											</span>
+											{{ MemberForm.emergency_contact_relation | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-member"> Referral Source </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-user"> </i>
+											</span>
+											{{ MemberForm.referral_source | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+											<a href="/admin/members/referralsource/add/" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-member"> Date of Birth </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-date"> </i>
+											</span>
+											{{ MemberForm.dob | add_class:"form-control datepicker" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-member"> Start Date </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-date"> </i>
+											</span>
+											{{ MemberForm.membership_start_date | add_class:"form-control datepicker" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!--	Graph
+		========================================= -->
+		<div class="pi-col-md-6">
+			<div class="portlet light portlet-fit ">
+				<div class="portlet-body">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+
+
+
+
+
+
+
+
+{% endblock %}

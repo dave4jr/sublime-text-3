@@ -1,0 +1,226 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	sell.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+
+<!--	Page Title
+========================================= -->
+<section id="page_title">
+	<h4 class="capitalize fs-24"> Sell Your Propery </h4>
+</section>
+
+
+<!--	About
+========================================= -->
+<section id="page-body" class="p-t-0">
+	<div class="spacer-big"></div>
+
+	<!--	Our Marketing Plan
+	========================================= -->
+	<div class="column-section boxed-sticky adapt-height clearfix">
+		<div class="column one-half bigpadding p-tb-40" style="background: transparent">
+			<h4 class="capitalize fs-28"><strong> Our Marketing Plan </strong></h4>
+			<hr class="small colored" />
+			<p> According to the National Association of Realtors, 90% of homebuyers use the internet to search for homes. As such, it is vitally important to focus our marketing efforts online.<br><br> Equally important is exposure to the local real estate brokerage community. 89% of home buyers use the services of the real estate agent, so ensuring that your property stays top of mind with the 1,500 local brokers is imperative. We have impeccable relationships with the most active brokers in the community and we leverage those networking capabilities. Holding broker open houses, participating in MLS tours, and being fully entrenched in our local real estate community is key to the success of this type of marketing.</p>
+		</div>
+		<div class="column one-half last-col" style="background:url({% static 'img/sell/interior.jpg'' %}) center center;background-size:cover;"> </div>
+	</div>
+
+
+	<!--	Divider
+	========================================= -->
+	<div class="spacer-big"></div>
+	<hr class="big align-center colored" />
+	<div class="spacer-mini"></div>
+	<hr class="medium align-center colored" />
+	<div class="spacer-mini"></div>
+	<hr class="small align-center colored" />
+	<div class="spacer-mini"></div>
+	<hr class="mini align-center colored" />
+	<div class="spacer-mini"></div>
+
+
+	<!--	The Strategy
+	========================================= -->
+	<div class="wrapper">
+		<div class="spacer-medium"> </div>
+		<h3 class="capitalize align-center fs-30"><strong> The Strategy </strong></h3>
+		<h5 class="subtitle-1 align-center">Our marketing plan is constantly being fine-tuned and adjusted <br>in order to adapt to the surrounding real estate marketplace.</h5>
+		<div class="spacer-big"></div>
+		<div class="column-section align-center clearfix">
+			<div class="column one-third marketing-plan">
+				<i class="ion ion-4x ion-ios-chatboxes-outline marketing-plan-icon"> </i>
+				<h5 class="uppercase"> Communication </h5>
+				<p> Consistent Communication. You will hear from us - often. We will deliver information so that your real estate quest remains fluid and relevant to what's happening in the market. </p>
+			</div>
+			<div class="column one-third marketing-plan">
+				<i class="ion ion-4x ion-ios-videocam-outline marketing-plan-icon"> </i>
+				<h5 class="uppercase"> YouTube </h5>
+				<p> YouTube has seen many challengers in the online video market in recent years, but despite the competition, it remains the premier real estate video marketing platform.  </p>
+			</div>
+			<div class="column one-third last-col marketing-plan">
+				<i class="ion ion-4x ion-ios-email-outline marketing-plan-icon"> </i>
+				<h5 class="uppercase"> Targeted Emails </h5>
+				<p> We have the ability to send targeted email to every real estate agent in Central Oregon that has assisted a buyer with the purchase of a home similar to yours. </p>
+			</div>
+		</div>
+		<div class="column-section align-center clearfix">
+			<div class="column one-third marketing-plan">
+				<i class="ion ion-4x ion-ios-world-outline marketing-plan-icon"> </i>
+				<h5 class="uppercase"> Online Media </h5>
+				<p> Our site was built to be an effective online media tool for our clients. In addition to this site, you will see your home on Facebook, Craigslist, YouTube, and our blog. </p>
+			</div>
+			<div class="column one-third marketing-plan">
+				<i class="ion ion-4x ion-ios-paper-outline marketing-plan-icon"> </i>
+				<h5 class="uppercase"> Print Media </h5>
+				<p> While the internet is the preferred real estate search tool, we also use various forms of print media, including traditional property flyers, postcards, and advertising in real estate publications. </p>
+			</div>
+			<div class="column one-third last-col marketing-plan">
+				<i class="ion ion-4x ion-ios-star-outline marketing-plan-icon"> </i>
+				<h5 class="uppercase"> Professionalism </h5>
+				<p> From the use of professional high resolution photos, to our negotiation and search tactics, we display the highest level of professionalism. </p>
+			</div>
+		</div>
+		<div class="spacer-big"> </div>
+	</div>
+	
+
+	<!--	What Is Your Home Worth?
+	========================================= -->
+	<div class="bs-grey-bg b-t-1" id="section-contact">
+		<div class="spacer-big"> </div>
+		<div class="wrapper-small">
+			<h3 class="capitalize align-center"><strong> What is my home worth? </strong></h3>
+			<h5 class="subtitle-1 align-center">Receive a custom evaluation for your home, including comparisons to other homes that have recently sold or are on the market. This guarantees you receive the most accurate information available. To find out what your home is worth, fill out the information below.</h5>
+			<div class="spacer-medium"> </div>
+
+			<form action="" class="checkform sendemail" id="contact-form" method="post">
+
+				<!--	Home Information
+				========================================= -->
+				<h4 class="capitalize fs-20 b-b-1-d-fc"><strong> Home Information </strong></h4>
+
+
+				<!--	Street
+				========================================= -->
+				<div class="form-row">
+					<label> Street<abbr class="required font-base" title="required"> * </abbr></label>
+					<input class="name req" id="name" name="name" type="text">
+				</div>
+
+				<!--	Street / City / Zip
+				========================================= -->
+				<div class="column-section">
+					<div class="form-row column one-third">
+						<label for="name"> City<abbr class="required font-base" title="required"> * </abbr></label>
+						<input class="name req" id="name" name="name" type="text" value="" />
+					</div>
+
+					<div class="form-row column one-third">
+						<label for="name"> State<abbr class="required font-base" title="required"> * </abbr></label>
+						<input class="name req" id="name" name="name" type="text" value="" />
+					</div>
+
+					<div class="form-row column one-third last-col">
+						<label for="email"> Zip Code<abbr class="required font-base" title="required"> * </abbr></label>
+						<input class="email req" id="email" name="email" type="text" value="" />
+					</div>
+				</div>
+				<div class="clear"></div>
+
+
+				<!--	Beds, Baths, Sqft
+				========================================= -->
+				<div class="column-section">
+					<div class="form-row column one-third">
+						<label for="name"> Beds<abbr class="required font-base" title="required"> * </abbr></label>
+						<input class="name req" id="name" name="name" type="text" value="" />
+					</div>
+
+					<div class="form-row column one-third">
+						<label for="name"> Baths<abbr class="required font-base" title="required"> * </abbr></label>
+						<input class="name req" id="name" name="name" type="text" value="" />
+					</div>
+
+					<div class="form-row column one-third last-col">
+						<label for="email"> Sqft.<abbr class="required font-base" title="required"> * </abbr></label>
+						<input class="email req" id="email" name="email" type="text" value="" />
+					</div>
+				</div>
+				<div class="clear"></div>
+
+
+
+				<!--	Contact Information
+				========================================= -->
+				<h4 class="capitalize fs-20  b-b-1-d-fc"><strong> Contact Information </strong></h4>
+				<div class="spacer-mini"></div>
+
+
+				<!--	First / Last Name
+				========================================= -->
+				<div class="column-section">
+					<div class="form-row column one-half">
+						<label for="name"> First Name<abbr class="required font-base" title="required"> * </abbr></label>
+						<input class="name req" id="name" name="name" type="text" value="" />
+					</div>
+
+					<div class="form-row column one-half last-col">
+						<label for="email"> Last Name<abbr class="required font-base" title="required"> * </abbr></label>
+						<input class="email req" id="email" name="email" type="text" value="" />
+					</div>
+				</div>
+				<div class="clear"></div>
+
+
+				<!--	Email / Phone
+				========================================= -->
+				<div class="column-section">
+					<div class="form-row column one-half">
+						<label for="name"> Email Address<abbr class="required font-base" title="required"> * </abbr></label>
+						<input class="name req" id="name" name="name" type="text" value="" />
+					</div>
+
+					<div class="form-row column one-half last-col">
+						<label for="email"> Phone Number<abbr class="required font-base" title="required"> * </abbr></label>
+						<input class="email req" id="email" name="email" type="text" value="" />
+					</div>
+				</div>
+				<div class="clear"></div>
+
+
+				<!--	Additional Comments
+				========================================= -->
+				<div class="form-row">
+					<label for="message"> Additional Comments<abbr class="required font-base" title="required"> * </abbr></label>
+					<textarea class="message req" cols="50" id="message" name="message" rows="15"> </textarea>
+				</div>
+
+
+				<!--	Submit
+				========================================= -->
+				<div class="form-row">
+					<input class="submit" type="submit" value="Submit" />
+				</div>
+			</form>
+			<div class="spacer-big"> </div>
+		</div>
+	</div>
+
+
+
+
+
+
+</section>
+
+{% endblock %}

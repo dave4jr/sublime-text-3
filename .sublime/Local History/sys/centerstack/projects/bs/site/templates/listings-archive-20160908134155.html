@@ -1,0 +1,69 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	buy.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+
+<!--	Page Title
+========================================= -->
+<section class="hero-big parallax-section text-light no-overlay wood_1" id="hero">
+	<div class="wrapper align-center" id="page-title">
+		<h2 class="uppercase">
+			<strong> Our Listings </strong>
+		</h2>
+	</div>
+</section>
+
+
+<section class="p-t-40" id="page-body">
+	<div id="properties" class="isotope-grid gallery-container style-modern-3 isotope-spaced clearfix fitrows m-t-30" data-heightratio=".66">
+	
+
+		{% for property in properties %}
+
+			<!--	Setting Filter Values
+			========================================= -->
+			<div class="isotope-item">
+				<a href="{% url 'buy-single' pk=property.pk %}" class="thumb-overlay overlay-effect-3 text-light">
+					<img src="{{ property.img.0 }}">
+					<img src="{{ property.img.1 }}" class="hover-pic">
+					<div class="overlay-caption">
+						<table>
+							<tr>
+								<td><h6 class="uppercase">{{ property.bedrooms }} BR &bull; {{ property.bathrooms|floatformat:"1" }} BA &bull; {{ property.squarefootage|floatformat:"0"|intcomma }} Sqft.</h6></td>
+								<td><h6 class="uppercase fs-20">${{ property.listingprice|floatformat:"0"|intcomma }}</h6></td>
+							</tr>
+							<tr>
+								<td><h6 class="subtitle-1 o-100 m-t-0">{% include "include/address.html" with arg="street" %}</h6></td>
+								<td><h6 class="subtitle-1 o-100 m-t-0">{% include "include/address.html" with arg="cityzip" %}</h6></td>
+							</tr>
+
+						</table>
+		                        </div>
+				</a>
+			</div>
+				
+		{% endfor %}
+				
+	</div>
+	<div class="spacer-big"> </div>
+
+	<!--	Pagination
+	========================================= -->
+	<div id="pagination">
+		{{ properties.render }}
+	</div>
+
+
+
+</section>
+
+{% endblock %}

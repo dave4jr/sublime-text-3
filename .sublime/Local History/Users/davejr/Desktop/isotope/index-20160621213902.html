@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Isotope - checkboxes and dropdowns, inclusive and exclusive filters</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/style.css">
+	<script src='js/jquery.min.js'></script>
+</head>
+<body>
+	<div id="form-ui">
+		<p>
+			<select>
+				<option value="">–Select price–</option>
+				<option value=".price10">$10</option>
+				<option value=".price20">$20</option>
+				<option value=".price30">$30</option>
+			</select>
+			<select>
+				<option value="">–Select size–</option>
+				<option value=".small">small</option>
+				<option value=".medium">medium</option>
+				<option value=".large">large</option>
+			</select>
+		</p>
+		<p>
+			<label>
+				<input type="checkbox" value=".red" /> red</label>
+			<label>
+				<input type="checkbox" value=".green" /> green</label>
+			<label>
+				<input type="checkbox" value=".blue" /> blue</label>
+			<label>
+				<input type="checkbox" value=".orange" /> orange</label>
+		</p>
+		<p id="output">--</p>
+	</div>
+	<div id="container">
+		<!-- items added with JS -->
+	</div>
+	<script src='js/isotope.pkgd.min.js'></script>
+	<script src='js/index.js'></script>
+</body>
+
+</html>

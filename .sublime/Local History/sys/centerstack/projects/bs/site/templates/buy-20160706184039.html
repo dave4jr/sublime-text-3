@@ -1,0 +1,203 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	buy.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load el_pagination_tags %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+
+<!--	Page Title
+========================================= -->
+<section id="page_title">
+	<h4 class="capitalize fs-24"> Buy A Property </h4>
+</section>
+<section class="p-t-40" id="page-body">
+
+<!--=====================================================
+	Filter
+=====================================================-->
+	<div id="buy-filter" class="wrapper portlet p-tb-20 bs-grey-bg">
+		<div class="column-section clearfix">
+			<form id="filter-form" action="" method="get">
+
+				 <!--	City
+				 ========================================= -->
+				<div class="form-row column one-sixth">
+					<label for="name"> City</label>
+					{{ PropertyFilter.form.city | add_class:"full-width ajax" }}
+				</div>
+
+
+				<!--	Beds / Baths
+				========================================= -->
+				<div class="form-row column one-sixth">
+					<div class="form-row column one-half">
+						<label for="name"> Beds </label>
+						{{ PropertyFilter.form.bedrooms | add_class:"full-width ajax" }}
+					</div>
+					<div class="form-row column one-half last-col">
+						<label for="name"> Baths </label>
+						{{ PropertyFilter.form.bathrooms | add_class:"full-width ajax" }}
+					</div>
+				</div>
+
+
+				<!--	Sqft Range
+				========================================= -->
+				<div class="form-row column one-sixth range">
+					<div class="form-row column one-half">
+						<label for="name"> Sqft </label>
+						{{ PropertyFilter.form.squarefootage__gt | add_class:"full-width ajax" | attr:"placeholder:Min" }}
+					</div>
+					<div class="form-row column one-half last-col">
+						{{ PropertyFilter.form.squarefootage__lt | add_class:"full-width ajax" | attr:"placeholder:Max" }}
+					</div>
+				</div>
+
+
+				<!--	Price Range
+				========================================= -->
+				<div class="form-row column one-sixth range">
+					<div class="form-row column one-half input-symbol">
+						<label for="name"> Listing Price </label>
+						<span>&dollar;</span>
+						{{ PropertyFilter.form.listingprice__gt | add_class:"full-width ajax" | attr:"placeholder:Min" }}
+					</div>
+					<div class="form-row column one-half last-col input-symbol">
+						<span>&dollar;</span>
+						{{ PropertyFilter.form.listingprice__lt | add_class:"full-width ajax" | attr:"placeholder:Max" }}
+					</div>
+				</div>
+
+ 	
+				<!--	Keyword Search
+				========================================= -->
+				<div class="form-row column one-sixth">
+					<label for="name"> Keyword </label>
+					{{ PropertyFilter.form.keysearch | add_class:"full-width ajax" | attr:"placeholder:Search..." }}
+				</div>
+			</form>
+
+
+			<!--	Toggles
+			========================================= -->
+			<div id="toggles" class="form-row column one-sixth last-col range">
+				<div class="form-row column one-half last-col">
+					<button class="on map sr-button button-1  button-form">Map</button>
+				</div>
+				<div class="form-row column one-half m-r-0">
+					<button class="off grid sr-button button-form">Grid</button>
+				</div>
+			</div>
+
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="spacer-small"></div>
+
+
+
+<!--=====================================================
+	Map
+=====================================================-->
+	<div id="map" class="gmap3"></div>
+	<script>
+	$(function() {
+		var uluru = {
+			lat: -25.363,
+			lng: 131.044
+		};
+		var contentString = '<div id="content">' + '<div id="siteNotice">' + '</div>' + '<h1 id="firstHeading" class="firstHeading">Uluru</h1>' + '<div id="bodyContent">' + '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' + 'sandstone rock formation in the southern part of the ' + 'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) ' + 'south west of the nearest large town, Alice Springs; 450&#160;km ' + '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major ' + 'features of the Uluru - Kata Tjuta National Park. Uluru is ' + 'sacred to the Pitjantjatjara and Yankunytjatjara, the ' + 'Aboriginal people of the area. It has many springs, waterholes, ' + 'rock caves and ancient paintings. Uluru is listed as a World ' + 'Heritage Site.</p>' + '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">' + 'https://en.wikipedia.org/w/index.php?title=Uluru</a> ' + '(last visited June 22, 2009).</p>' + '</div>' + '</div>';
+		$('#map').gmap3({
+			zoom: 4,
+			center: uluru
+		}).marker({
+			position: uluru
+		}).infowindow({
+			content: contentString
+		}).then(function(infowindow) {
+			var map = this.get(0);
+			var marker = this.get(1);
+			marker.addListener('click', function() {
+				infowindow.open(map, marker);
+			});
+		});
+	});
+	</script>
+
+
+
+<!--=====================================================
+	Grid
+=====================================================-->
+	<div id="grid">
+		<div id="properties" class="isotope-grid gallery-container style-modern-3 isotope-spaced clearfix fitrows m-t-30" data-heightratio=".66">
+			{% paginate 15 PropertyFilter %}
+			{% for property in PropertyFilter %}
+
+				<!--	Setting Filter Values
+				========================================= -->
+				<div class="isotope-item">
+					<a href="{% url 'buy-single' pk=property.pk %}" class="thumb-overlay overlay-effect-3 text-light">
+						<img src="{{ property.img.0 }}">
+						<img src="{{ property.img.1 }}" class="hover-pic">
+						<div class="overlay-caption">
+							<table>
+								<tr>
+									<td><h6 class="uppercase">{{ property.bedrooms }} BR &bull; {{ property.bathrooms|floatformat:"1" }} BA &bull; {{ property.squarefootage|floatformat:"0"|intcomma }} Sqft.</h6></td>
+									<td><h6 class="uppercase fs-20">${{ property.listingprice|floatformat:"0"|intcomma }}</h6></td>
+								</tr>
+								<tr>
+									<td><h6 class="subtitle-1 o-100 m-t-0">{% include "include/address.html" with arg="street" %}</h6></td>
+									<td><h6 class="subtitle-1 o-100 m-t-0">{% include "include/address.html" with arg="cityzip" %}</h6></td>
+								</tr>
+							</table>
+						</div>
+					</a>
+				</div>
+					
+			{% endfor %}
+					
+		</div>
+		<div class="spacer-big"> </div>
+		{% show_pages %}
+	</div>
+
+
+
+
+
+</section>
+
+<!--=====================================================
+	AJAX
+=====================================================-->
+<script>
+$(function() {
+	$('.ajax').change(function() {
+		$.ajax({
+			type: "GET",
+			url: '/rets/buy/',
+			data: { city: $("#id_city").val(), bedrooms: $("#id_bedrooms").val(), bathrooms: $("#id_bathrooms").val(), squarefootage_gt: $("#id_squarefootage__gt").val(), squarefootage_lt: $("#id_squarefootage__lt").val(), listingprice_gt: $("#id_listingprice__gt").val(), listingprice_lt: $("#id_listingprice__lt").val(), keysearch: $("#id_keysearch").val()},
+			success: function(data) {
+				$("#filter-form").submit();
+			},   
+			error: function(data) {
+				alert("Error");
+			},
+		})
+	});
+});
+</script>
+
+
+
+{% endblock %}
+

@@ -1,0 +1,88 @@
+<!-- RESO Data Dictionary DTD Contacts Module 
+     PUBLIC "-//RETS//RESO Data Dictionary Contacts XML//EN"
+     SYSTEM "http://www.rets.org/dtd/1.7.2/1.3/Contacts.dtd"
+
+     WARNING: This file is generated using the RESO Data Dictionary Schema tool
+
+All items in this zip file abide by the following:
+
+Copyright 2015 RESO. By using this document you agree to the RESO End User License Agreement (EULA) posted at:
+
+https://reso.memberclicks.net/assets/docs/reso%20eula.pdf
+-->
+
+
+<!ELEMENT Anniversary (#PCDATA)>
+<!ELEMENT AssistantEmail (#PCDATA)>
+<!ELEMENT AssistantName (#PCDATA)>
+<!ELEMENT AssistantPhone (#PCDATA)>
+<!ELEMENT AssistantPhoneExt (#PCDATA)>
+<!ELEMENT Birthdate (#PCDATA)>
+<!ELEMENT BusinessFax (#PCDATA)>
+<!ELEMENT Children (#PCDATA)>
+<!ELEMENT Company (#PCDATA)>
+<!ELEMENT ContactKey (#PCDATA)>
+<!ELEMENT ContactLoginId (#PCDATA)>
+<!ELEMENT ContactPassword (#PCDATA)>
+<!ELEMENT ContactStatus (#PCDATA)>
+<!ELEMENT ContactType (#PCDATA)>
+<!ELEMENT Department (#PCDATA)>
+<!ELEMENT DirectPhone (#PCDATA)>
+<!ELEMENT Email (#PCDATA)>
+<!ELEMENT Email2 (#PCDATA)>
+<!ELEMENT Email3 (#PCDATA)>
+<!ELEMENT FirstName (#PCDATA)>
+<!ELEMENT FullName (#PCDATA)>
+<!ELEMENT Gender (#PCDATA)>
+<!ELEMENT Groups (#PCDATA)>
+<!ELEMENT HomeAddress1 (#PCDATA)>
+<!ELEMENT HomeAddress2 (#PCDATA)>
+<!ELEMENT HomeCarrierRoute (#PCDATA)>
+<!ELEMENT HomeCity (#PCDATA)>
+<!ELEMENT HomeCountry (#PCDATA)>
+<!ELEMENT HomeCountyOrParish (#PCDATA)>
+<!ELEMENT HomeFax (#PCDATA)>
+<!ELEMENT HomePhone (#PCDATA)>
+<!ELEMENT HomePostalCode (#PCDATA)>
+<!ELEMENT HomePostalCodePlus4 (#PCDATA)>
+<!ELEMENT HomeStateOrProvince (#PCDATA)>
+<!ELEMENT Language (#PCDATA)>
+<!ELEMENT LastName (#PCDATA)>
+<!ELEMENT MiddleName (#PCDATA)>
+<!ELEMENT MobilePhone (#PCDATA)>
+<!ELEMENT NamePrefix (#PCDATA)>
+<!ELEMENT NameSuffix (#PCDATA)>
+<!ELEMENT Nickname (#PCDATA)>
+<!ELEMENT Notes (#PCDATA)>
+<!ELEMENT OriginatingSystemContactKey (#PCDATA)>
+<!ELEMENT OtherAddress1 (#PCDATA)>
+<!ELEMENT OtherAddress2 (#PCDATA)>
+<!ELEMENT OtherCarrierRoute (#PCDATA)>
+<!ELEMENT OtherCity (#PCDATA)>
+<!ELEMENT OtherCountry (#PCDATA)>
+<!ELEMENT OtherCountyOrParish (#PCDATA)>
+<!ELEMENT OtherPostalCode (#PCDATA)>
+<!ELEMENT OtherPostalCodePlus4 (#PCDATA)>
+<!ELEMENT OtherStateOrProvince (#PCDATA)>
+<!ELEMENT OwnerMemberID (#PCDATA)>
+<!ELEMENT OwnerMemberKey (#PCDATA)>
+<!ELEMENT Pager (#PCDATA)>
+<!ELEMENT PhoneTTYTTD (#PCDATA)>
+<!ELEMENT PreferedAddress (#PCDATA)>
+<!ELEMENT PreferredPhone (#PCDATA)>
+<!ELEMENT ReferedBy (#PCDATA)>
+<!ELEMENT SpousePartnerName (#PCDATA)>
+<!ELEMENT TollFreePhone (#PCDATA)>
+<!ELEMENT VoiceMail (#PCDATA)>
+<!ELEMENT VoiceMailExt (#PCDATA)>
+<!ELEMENT WorkAddress1 (#PCDATA)>
+<!ELEMENT WorkAddress2 (#PCDATA)>
+<!ELEMENT WorkCarrierRoute (#PCDATA)>
+<!ELEMENT WorkCity (#PCDATA)>
+<!ELEMENT WorkCountry (#PCDATA)>
+<!ELEMENT WorkCountyOrParish (#PCDATA)>
+<!ELEMENT WorkPostalCode (#PCDATA)>
+<!ELEMENT WorkPostalCodePlus4 (#PCDATA)>
+<!ELEMENT WorkStateOrProvince (#PCDATA)>
+<!ELEMENT Contacts (Anniversary?, AssistantEmail?, AssistantName?, AssistantPhone?, AssistantPhoneExt?, Birthdate?, BusinessFax?, Children?, Company?, ContactKey?, ContactLoginId?, ContactPassword?, ContactStatus?, ContactType?, Department?, DirectPhone?, Email?, Email2?, Email3?, FirstName?, FullName?, Gender?, Groups?, HomeAddress1?, HomeAddress2?, HomeCarrierRoute?, HomeCity?, HomeCountry?, HomeCountyOrParish?, HomeFax?, HomePhone?, HomePostalCode?, HomePostalCodePlus4?, HomeStateOrProvince?, JobTitle?, Language?, LastName?, MiddleName?, MobilePhone?, NamePrefix?, NameSuffix?, Nickname?, Notes?, OfficePhone?, OfficePhoneExt?, OriginatingSystemContactKey?, OriginatingSystemName?, OtherAddress1?, OtherAddress2?, OtherCarrierRoute?, OtherCity?, OtherCountry?, OtherCountyOrParish?, OtherPostalCode?, OtherPostalCodePlus4?, OtherStateOrProvince?, OwnerMemberID?, OwnerMemberKey?, Pager?, PhoneTTYTTD?, PreferedAddress?, PreferredPhone?, ReferedBy?, SpousePartnerName?, TimestampEntered?, TimestampModified?, TollFreePhone?, VoiceMail?, VoiceMailExt?, WorkAddress1?, WorkAddress2?, WorkCarrierRoute?, WorkCity?, WorkCountry?, WorkCountyOrParish?, WorkPostalCode?, WorkPostalCodePlus4?, WorkStateOrProvince?)>
+

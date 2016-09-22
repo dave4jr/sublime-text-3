@@ -10,7 +10,7 @@
 	{
 		"args":
 		{
-			"characters": "<span class=\"fw-200\">"
+			"characters": "<span class=''>"
 		},
 		"command": "insert"
 	},

@@ -1,0 +1,200 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	index.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+
+<!--	Page Title
+========================================= -->
+<section id="page_title">
+	<h4 class="capitalize fs-24"> About Us </h4>
+</section>
+
+
+<!--	About
+========================================= -->
+<section id="page-body" class="p-t-0">
+	
+	<div class="fullwidth-section">
+		<div class="fullwidth-content wrapper">
+			<h3 class="align-center"><strong> The Team </strong></h3>
+			<h5 class="subtitle-1 align-center">Two is better than one. We offer two full-time, seasoned brokers fully entrenched in the <br>global marketplace, sourcing information and leveraging their individual strenths to serve you <br> better. We have an excellent rapport together and an internal system in place that allows for <br>two sets of eyes on client care. Simply put, you get twice the expertise and attention.</h5>
+			<div class="spacer-medium"></div>
+			<div class="column-section clearfix">
+
+				<div class="column one-sixth"></div>
+
+				<!--	Molly Brundage
+				========================================= -->
+				<div class="column one-third team-member align-center">
+					<div class="team-image">
+						<img alt="Molly Brundage" width="300" src="{% static 'img/team/molly-bw.jpg' %}" />
+					</div>
+					<div class="team-content">
+						<h5 class="team-name uppercase"><strong> Molly Brundage </strong></h5>
+						<h6 class="subtitle-2 font-base"> Principal Broker / Realtor </h6>
+						<p class="fs-14"> 12 years in residential real estate in Bend. 10 years in commercial real estate in Seattle area. Uber multi-tasker. Night owl - you may get emails at midnight. Lover of all baseball. Raising teenagers. Rock solid work ethic. </p>
+						<ul class="socialmedia-widget style-circled hover-slide-2">
+							<li class="mail"><a href="mailto:molly@brundagesmith.com"> </a></li>
+							<li class="facebook"><a href="https://www.facebook.com/Molly-Brundage-Bend-Oregon-Real-Estate-332346853475501/"> </a></li>
+							<li class="linkedin"><a href="https://www.linkedin.com/in/molly-brundage-402a2410"> </a></li>
+							<li class="rss"><a href="http://www.findbendhomes.com/cp/our-blog/"> </a></li>
+						</ul>
+					</div>
+				</div>
+
+				<!--	Cheri Smith
+				========================================= -->
+				<div class="column one-third team-member align-center">
+					<div class="team-image">
+						<img alt="Cheri Smith" width="300" src="{% static 'img/team/cheri-bw.jpg' %}" />
+					</div>
+					<div class="team-content">
+						<h5 class="team-name uppercase"><strong> Cheri Smith </strong></h5>
+						<h6 class="subtitle-2 font-base"> Broker / Realtor </h6>
+						<p class="fs-14"> 10 years of residential real estate in Bend. Social media and blogging guru. Mom to Wyatt who loves dinosaurs. Task oriented. Analytical by nature. Camping enthusiast. Rock solid work ethic. </p>
+						<ul class="socialmedia-widget style-circled hover-slide-1">
+							<li class="mail"><a href="mailto:cheri@brundagesmith.com"> </a></li>
+							<li class="facebook"><a href="https://www.facebook.com/cherismithRE"> </a></li>
+							<li class="linkedin"><a href="https://www.linkedin.com/in/cherimalleysmith"> </a></li>
+							<li class="rss"><a href="http://www.findbendhomes.com/cp/our-blog/"> </a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!--	Testimonials
+	========================================= -->
+	<div class="fullwidth-section text-light wood_1">
+		<div class="fullwidth-content wrapper-small p-t-60 p-b-80 align-center">
+			<h3 class="capitalize">
+				<strong> Testimonials </strong>
+			</h3>
+			<h4 class="subtitle-2 font-base"> From Our Clients </h4>
+			<div class="spacer-small"> </div>
+			<div id="testimonials" class="owl-slider content-slider nav-light" data-dots="false">
+				<div>
+					<blockquote>
+						Cheri was attentive and helpful through out our search process. Six months before we were ready to buy she was sharing property listings and answering our questions. She made buying an investment property from across the country easier than our experience's buying properties in our local market! We highly recommend Cheri and we will be using her for our next property purchase.
+						<cite> - Duane & Stacey M </cite>
+					</blockquote>
+				</div>
+				<div>
+					<blockquote>
+						Thank you for all of your excellent service on this transaction. You are one in a million!
+						<cite> - C. Kathrens </cite>
+					</blockquote>
+				</div>
+				<div>
+					<blockquote>
+						Cheri was wonderful and informative throughout the sale of our home. We will use her for any transactions that we have in the future and is a referral for any people that we know are looking for homes or want to sell their current homes.
+						<cite> - Kevin & Erin H </cite>
+					</blockquote>
+				</div>
+				<div>
+					<blockquote>
+						Cheri was great. She stuck with us through a failed purchase until we were finally able to secure a home in Redmond. She was very attentive and helpful. As first time home buyers we were unfamiliar with the process so we had many questions, concerns and I know we were a bit high maintenance but she was always there with the answers. This is only a starter home and I hope to use Cheri in the future when we can afford our dream home!
+						<cite> - Dan & Crystal S </cite>
+					</blockquote>
+				</div>
+				<div>
+					<blockquote>
+						First, I think I wasn't the easiest buyer to find a house for - I live out of state, the area I was looking in changed, my price range was always fluctuating...well you get the idea. I've been visiting Bend for many years and loved it. A couple years ago I decided to buy a house to retire to. Cheri showed me lots of houses, we discussed neighborhoods, price trends, etc. In December of 2013, Cheri finally found the perfect house for me in the area I wanted! Cheri never pressured me to jump into something that may not have been a good fit for me, and helped negotiate a great price and fair terms. After I took ownership of the house she has even stopped by during the recent cold weather to make sure everything is OK at the house. I fully recommend contacting Cheri if you're thinking of buying a house in Bend.
+						<cite> - Mike R </cite>
+					</blockquote>
+				</div>
+				<div>
+					<blockquote>
+						Cheri is everything you would want in a realtor: sensible, detail-oriented, diligent, and smart! Buying our house from halfway around the world, we learned very quickly that finding the right property is only the beginning of all the hard work. Cheri managed each step of the process and ensured that every issue was promptly and properly addressed. There is no way we could have acquired this great new bungalow without her expertise and guidance.
+						<cite> - Christine Komons </cite>
+					</blockquote>
+				</div>
+				<div>
+					<blockquote>
+						Cheri is a rare breed in her industry. She cares far more for people than for transactions. She practices professionalism first, yet she understands the personal aspect of real estate as well. Cheri is a wonderful communicator, and advisor. She pays close attention to detail and ultimately gets the job done. If you are looking for a local real estate expert who is creative, fun, and genuinely cares look no further. I highly recommend Cheri Smith and Total Property Resources.
+						<cite> - T. M. </cite>
+					</blockquote>
+				</div>
+				<div>
+					<blockquote>
+						You would think buying a home from 14,000 miles away would be a difficult endeavor, but not with Cheri. She has a wonderful mix of personal warmth and professionalism combined with excellent and timely communication. She was patient, able to get the answers for even the smallest of details, and pointed us to the right people for third-party jobs. Whether you are a local --or like us, looking to relocate to Bend and need someone you can rely on to act in your interests, we highly recommend Cheri.
+						<cite> - Christy & Adam Michell </cite>
+					</blockquote>
+				</div>
+				<div>
+					<blockquote>
+						You are a very good Realtor! I have known dozens and worked with 4 different Realtors purchasing property.... you do your home work and seem to be very prompt in responding. I am impressed with you. I am definitly going to spread the word!
+						<cite> - G. Adams </cite>
+					</blockquote>
+				</div>
+				<div>
+					<blockquote>
+						Just wanted to let you know of the great service we got from Cheri Smith on the sale of our home in Bend. We had the buyer from hell and Cheri dealt with him very well and helped calm us with all the demands he kept making. Cheri is a great asset to your company and we would highly recommend her services to all we know.
+						<cite> - Tom and Lyn </cite>
+					</blockquote>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!--	Contact Us
+	========================================= -->
+	<div class="smart-nav-section grey-bg" id="section-contact">
+		<div class="spacer-big"> </div>
+		<div class="wrapper-small">
+			<h3 class="align-center">
+				<strong> Contact Us </strong>
+			</h3>
+			<h5 class="subtitle-1 align-center">
+				Have a question for us? Send us a message
+				<br/>and we will get back to you as soon as possible.
+			</h5>
+			<div class="spacer-medium"> </div>
+			<form action="" class="checkform sendemail" id="contact-form" method="post">
+				<div class="form-row">
+					<label for="name"> Name
+						<abbr class="required font-base" title="required"> * </abbr>
+					</label>
+					<input class="name req" id="name" name="name" type="text" value="" /> </div>
+				<div class="form-row">
+					<label for="email"> Email
+						<abbr class="required font-base" title="required"> * </abbr>
+					</label>
+					<input class="email req" id="email" name="email" type="text" value="" /> </div>
+				<div class="form-row">
+					<label for="message"> Message
+						<abbr class="required font-base" title="required"> * </abbr>
+					</label>
+					<textarea class="message req" cols="50" id="message" name="message" rows="15"> </textarea>
+				</div>
+				<div class="form-row form-note">
+					<div class="alert-error">
+						<h5> Something went wrong </h5> Please check your entries! </div>
+				</div>
+				<div class="form-row hidden">
+					<input class="form-check" id="form-check" name="form-check" type="text" value="" />
+				</div>
+				<div class="form-row">
+					<input class="submit" name="submit" type="submit" value="Send Message" />
+				</div>
+				<input name="subject" type="hidden" value="Contact Subject Sudo html" />
+				<input name="fields" type="hidden" value="name,email,message" />
+			</form>
+			<div class="spacer-big"> </div>
+		</div>
+	</div>
+</section>
+
+{% endblock %}

@@ -33,6 +33,35 @@
 				]
 			},
 			"name": "settings.py"
+		},
+		{
+			"description": "",
+			"files":
+			[
+			],
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"name": "urls"
 		}
 	]
 }

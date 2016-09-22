@@ -1,0 +1,80 @@
+<!--==========================
+*  Author:		Dave Luke Jr
+*  Company:	CenterStack.io
+*  Description:	about.html
+*==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load customtags %}
+{% load staticfiles %}
+{% block content %}
+
+
+<!--	Page Title
+========================================= -->
+<section class="hero-big text-light parallax-section" style="background-image: url({% static 'img/contact.jpg' %}); background-size: cover; background-position: center center;"  id="hero">
+	<div class="wrapper align-center" id="page-title">
+		<h1><strong> Contact Us </strong></h1>
+	</div>
+</section>
+
+
+<section id="page-body">
+	<div class="wrapper">
+		<div class="column-section clearfix">
+			<div class="column one-third">
+				<h4>
+					<strong> Talk to us </strong>
+				</h4>
+				<p> World Class Personal Training In NYC </p>
+				<h6 class="uppercase"> Contact Us </h6>
+				<p> +1 (917) 494-7160
+					<br/> info@bond6.com
+				</p>
+				<h6 class="uppercase"> Get Social </h6>
+				<ul class="socialmedia-widget size-small hover-fade-1">
+					<li class="facebook"><a href="#"> </a></li>
+					<li class="twitter"><a href="#"> </a></li>
+					<li class="linkedin"><a href="#"> </a></li>
+					<li class="instagram"><a href="#"> </a></li>
+				</ul>
+			</div>
+			<div class="column two-third last-col">
+				<h4><strong> Drop us a message </strong></h4>
+				<p> Have a question? Send us a message and we will get back to you as soon as possible. Thank you! </p>
+				<form action="php/contact-send.php" class="checkform sendemail" id="contact-form" method="post">
+					<div class="form-row">
+						<label for="name"> Name
+							<abbr class="required" title="required"> * </abbr>
+						</label>
+						<input class="name req" id="name" name="name" type="text" value="" /> </div>
+					<div class="form-row">
+						<label for="email"> Email
+							<abbr class="required" title="required"> * </abbr>
+						</label>
+						<input class="email req" id="email" name="email" type="text" value="" /> </div>
+					<div class="form-row">
+						<label for="message"> Message
+							<abbr class="required" title="required"> * </abbr>
+						</label>
+						<textarea class="message req" cols="50" id="message" name="message" rows="15"> </textarea>
+					</div>
+					<div class="form-row form-note">
+						<div class="alert-error">
+							<h5> Something went wrong </h5> Please check your entries! </div>
+					</div>
+					<div class="form-row hidden">
+						<input class="form-check" id="form-check" name="form-check" type="text" value="" />
+					</div>
+					<div class="form-row">
+						<input class="submit" name="submit" type="submit" value="Send Message" />
+					</div>
+					<input name="subject" type="hidden" value="Contact Subject Sudo html" />
+					<input name="fields" type="hidden" value="name,email,message" /> </form>
+			</div>
+		</div>
+	</div>
+	<div class="spacer-big"> </div>
+</section>
+	
+{% endblock %}

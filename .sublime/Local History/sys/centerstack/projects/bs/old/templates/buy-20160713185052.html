@@ -1,0 +1,202 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	index.html
+ *==========================-->
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+{% load customtags %}
+{% load humanize %}
+{% load debugtools_tags %}
+{% block content %}
+
+
+
+
+<!--	Main Wrapper
+========================================= -->
+<div class="main-wrapper stone">
+<div class="main">
+	<div class="main-inner">
+		<div class="content-title">
+			<div class="content-title-inner">
+				<div class="container">
+					<h1> Buy A Property </h1>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="container-fluid fullwidth-wrapper">
+				<div class="row">
+					<div class="col-sm-6 p-b-80">
+
+
+<!--=====================================================
+Filter Form
+=====================================================-->
+						<div class="filter push-bottom">
+							<form action="" method="post">
+								<div class="row">
+									<div class="col-md-3">
+										<div class="form-group">
+											<label> Location </label>
+											<input class="form-control" type="text" />
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="form-group">
+											<label> Keyword </label>
+											<input class="form-control" type="text" /> </div>
+									</div>
+									<div class="col-md-2">
+										<div class="form-group">
+											<label> Price From </label>
+											<input class="form-control" type="text" /> </div>
+									</div>
+									<div class="col-md-2">
+										<div class="form-group">
+											<label> Price To </label>
+											<input class="form-control" type="text" /> </div>
+									</div>
+									<div class="col-md-2">
+										<div class="form-group-btn form-group-btn-placeholder-gap">
+											<button class="btn btn-primary btn-block" type="submit"> Filter </button>
+										</div>
+									</div>
+								</div>
+
+								<!--	Filter Options
+								========================================= -->
+								<div class="row filter-options">
+									<div class="col-sm-6">
+										<div class="filter-sort">
+											<strong> Sort By </strong>
+											<div class="checkbox-inline">
+												<label>
+													<input checked="checked" name="filter-form-order" type="checkbox" />
+													Price
+												</label>
+											</div>
+											<div class="checkbox-inline">
+												<label>
+													<input checked="checked" name="filter-form-order" type="checkbox" />
+													Published
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="filter-order">
+											<strong> Order By </strong>
+											<div class="checkbox-inline">
+												<label>
+													<input checked="checked" name="filter-form-order" type="radio" /> Asc </label>
+											</div>
+											<div class="checkbox-inline">
+												<label>
+													<input name="filter-form-order" type="radio" /> Desc </label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						
+
+
+<!--================================================================
+RETS / IDX
+================================================================-->
+						{% for json in jsons.object_list %}
+
+							<div class="listing-row">
+								<div class="listing-row-inner">
+									<div class="listing-row-image" style="background-image: url({{ json.img.0 }});">
+										<span class="listing-row-image-links">
+										
+											<!--	Property Single
+											========================================= -->
+											<a href="{% url 'buy-single' listing_rid=json.ListingRid %}">
+												<i class="fa fa-search"> </i>
+												<span> View detail </span>
+											</a>
+
+											<!--	Compare Property
+											========================================= -->
+											<a href="{% url 'villareal-properties-compare' %}">
+												<i class="fa fa-balance-scale"> </i>
+												<span> Compare property </span>
+											</a>
+
+										</span>
+									</div>
+
+									<!--	Row Content
+									========================================= -->
+									<div class="listing-row-content">
+										<h3><a href="{% url 'buy-single' listing_rid=json.ListingRid %}"> {{ json.StreetNumber }} {{ json.StreetName }} {{ json.StreetSuffix }} </a></h3>
+										<h4> ${{ json.ListingPrice|floatformat:"0"|intcomma }} </h4>
+										<ul class="listing-row-attributes">
+											<li><i class="fa fa-map-marker fs-14"></i> City <span> {{ json.City }} </span></li>
+											<li><i class="fa fa-map fs-14"></i> Region <span> {{ json.Style }} </span></li>
+											<li><i class="fa fa-area-chart fs-14"></i> Area <span> {{ json.SquareFootage|floatformat:"0"|intcomma }} Sqft. </span></li>
+											<li><i class="fa fa-arrows-alt fs-14"></i> Lot <span> {{ json.Acres }} Acres </span></li>
+											<li><i class="fa fa-male fs-14 m-r-0 m-l--6"></i><i class="fa fa-female m-l--3 m-r-0 p-r-1"></i> Baths <span> {{ json.Bathrooms }} </span></li>
+											<li><i class="fa fa-bed fs-14"></i> Bedrooms <span> {{ json.Bedrooms }} </span></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							{% with num=forloop.counter %}{% endwith %}
+
+						{% endfor %}
+
+						{% if page > 1 %}
+							<div id="pagination">
+								{{ jsons.render }}
+							</div>
+						{% endif %}
+
+					</div>
+
+
+
+					<!--	Map
+					========================================= -->
+					<div class="col-sm-6"">
+						<div id="map-google" class="full"></div>
+					</div>
+					<script>
+						$(function() {
+							$('#map-google').gmap3({
+								styles: [
+									{"featureType":"landscape","elementType":"all","stylers":[{"hue":"#FFBB00"},{"saturation":43.400000000000006},{"lightness":37.599999999999994},{"gamma":1}]},
+									{"featureType":"poi","elementType":"all","stylers":[{"hue":"#00FF6A"},{"saturation":-1.0989010989011234},{"lightness":11.200000000000017},{"gamma":1}]},
+									{"featureType":"road.highway","elementType":"all","stylers":[{"hue":"#FFC200"},{"saturation":-61.8},{"lightness":45.599999999999994},{"gamma":1}]},
+									{"featureType":"road.arterial","elementType":"all","stylers":[{"hue":"#FF0300"},{"saturation":-100},{"lightness":51.19999999999999},{"gamma":1}]},
+									{"featureType":"road.local","elementType":"all","stylers":[{"hue":"#FF0300"},{"saturation":-100},{"lightness":52},{"gamma":1}]},
+									{"featureType":"water","elementType":"all","stylers":[{"hue":"#0078FF"},{"saturation":-13.200000000000003},{"lightness":2.4000000000000057},{"gamma":1}]}
+								],
+								center: [44.0182, -121.3153],
+								scrollwheel: false,
+								zoom:13
+							}).marker([
+								{position:[44.0582, -121.3153]},
+								{address:"86000 Poitiers, France"},
+								{address:"66000 Perpignan, France", icon: "http://maps.google.com/mapfiles/marker_grey.png"}
+							]).on('click', function (marker) {
+								marker.setIcon('http://maps.google.com/mapfiles/marker_green.png');
+							});
+						});
+					</script>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+{% endblock %}

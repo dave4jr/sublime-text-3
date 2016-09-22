@@ -1,0 +1,108 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	partners.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+
+
+<!--	Hero Image
+========================================= -->
+<section class="hero-big parallax-section hero-actual half-overlay" data-parallax-image="{% static 'img/partners/bend-trend-homes/hero.jpg' %}" id="hero"></section>
+
+
+<section id="page-body" class="p-t-60">
+	<div class="wrapper-small align-center">
+		<h3><strong> Bend Trend Homes </strong></h3>
+		<hr class="small colored" />
+		<p class="text-justify"> BendTrend Homes, a DBA of SAC﻿E, Inc., is a licensed General Contractor with the State of Or﻿egon Construction Contractors Board  (CCB# 140416) located in Bend, Oregon. <br> <br>We build high-end northwest contemporary homes and are currently active at The Tetherow Golf Resort Comm﻿unity on Bend's west side, just 20 minutes from Mt. Bachelor Ski Resort. We have recently completed projects in Brasada Ranch and Pronghorn Golf Resort both of which are located in Central Oregon's sunny High Dessert, just east of Bend. <br><br>We are currently building both custom and spec homes in the $900,000 to $1,400,000. price range.  If you are looking for a new contemporary design  home, we have one under construction at Tetherow on Lot 291, which is estimated to be completed in August 2015 and another at Tetherow on Lot 162, which is estimated to break ground in June 2015 and be completed in February 2016. <br><br> If you are interested in having a custom home built and would like to learn more about the process, we can help you. The best way to reach us is via the contact form on our <a class="colored" href="http://www.bendtrendhomes.com">website</a>. We will return your inquiry right away.﻿﻿  </p>
+	</div>
+	<div class="spacer-big"> </div>
+	
+	
+	<!--	Masonry Images
+	========================================= -->
+	<div class="isotope-grid gallery-grid style-modern clearfix">
+		<div class="isotope-item gallery-item wide tall">
+			<img src="{% static 'img/partners/bend-trend-homes/12.jpg' %}" />
+		</div>
+		<div class="isotope-item gallery-item">
+			<img src="{% static 'img/partners/bend-trend-homes/6.jpg' %}" />
+		</div>
+		<div class="isotope-item gallery-item">
+			<img src="{% static 'img/partners/bend-trend-homes/14.jpg' %}" />
+		</div>
+		<div class="isotope-item gallery-item wide">
+			<img src="{% static 'img/partners/bend-trend-homes/7.jpg' %}" />
+		</div>
+	</div>
+	<div class="spacer-big"> </div>
+
+
+	<!--	Floor Plans
+	========================================= -->
+	<div class="wrapper">
+		<div class="wrapper-small align-center">
+			<h3><strong> Floor Plans </strong></h3>
+			<hr class="small colored" />
+			<p class="text-justify"> The floor plans of the custom homes built by Bend Trend Homes can be customized to meet the needs of our clients. The three floor plan options listed below are examples of floor plans that have been incorporated  into recently built custom homes. These plans provide a great starting point for our clients by helping them determine what their space needs are for their custom home. <br><br>For more information about Bend Home Trend Homes' Floor Plans, visit <a class="colored" href="http://www.bendhometrends.com/">www.bendtrendhomes.com</a></p>
+		</div>
+		<div class="isotope-grid blog-container style-column-3 fitrows isotope-spaced m-t-30" id="blog-grid">
+			<div class="isotope-item blog-item">
+				<div class="blog-media">
+					<img src="{% static 'img/partners/bend-trend-homes/juniper-floor-plan.png' %}">
+				</div>
+				<div class="blog-desc align-center">
+					<div class="blog-headline">
+						<h5 class="post-name"><strong> Juniper Floor Plan </strong></h5>
+						<h6 class="post-category uppercase colored"> Single-story / Contemporary </h6>
+					</div>
+				</div>
+			</div>
+			<div class="isotope-item blog-item">
+				<div class="blog-media">
+					<img src="{% static 'img/partners/bend-trend-homes/doug-fir-floor-plan.png' %}" />
+				</div>
+				<div class="blog-desc align-center">
+					<div class="blog-headline">
+						<h5 class="post-name">
+							<strong> The Doug Fir Floor Plan </strong>
+						</h5>
+						<h6 class="post-category uppercase colored"> Single-story / Contemporary </h6>
+					</div>
+				</div>
+			</div>
+			<div class="isotope-item blog-item m-t-5">
+				<div class="blog-media">
+					<img src="{% static 'img/partners/bend-trend-homes/ponderosa-floor-plan.png' %}" />
+				</div>
+				<div class="blog-desc align-center">
+					<div class="blog-headline">
+						<h5 class="post-name">
+							<strong> The Ponderosa Floor Plan </strong>
+						</h5>
+						<h6 class="post-category uppercase colored"> Two-story / Contemporary </h6>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="spacer-big"> </div>
+</section>
+
+
+
+
+
+
+
+
+
+{% endblock %}

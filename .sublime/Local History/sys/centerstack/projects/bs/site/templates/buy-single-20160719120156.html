@@ -1,0 +1,441 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	buy-single.html
+ *==========================-->
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+{% load customtags %}
+{% load mathfilters %}
+{% load humanize %}
+{% block content %}
+
+
+<!--	Buy Single
+========================================= -->
+<div class="main-wrapper">
+	<div class="main">
+		<div class="main-inner">
+			<div class="content-title">
+				<div class="content-title-inner">
+					<div class="container">
+						<h1> Property Details </h1>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="listing-detail-attributes grey-bg">
+								<div class="col-sm-3 listing-detail-attribute">
+									<div class="key"> Address </div>
+									<div class="value"> {{ json.StreetNumber }} {{ json.StreetName }} {{ json.StreetSuffix }} {{ json.Unit }}</div>
+								</div>
+								<div class="col-sm-3 listing-detail-attribute p-l-20">
+									<div class="key"> Location </div>
+									<div class="value"> {{ json.City }}, {{ json.State }} ({{ json.County }}) </div>
+								</div>
+								<div class="col-sm-3 listing-detail-attribute p-l-60">
+									<div class="key"> MLS Number </div>
+									<div class="value"> {{ json.MLNumber }} </div>
+								</div>
+								<div class="col-sm-3 listing-detail-attribute p-l-60">
+									<div class="key"> Price </div>
+									<div class="value"> ${{ json.ListingPrice|floatformat:"0"|intcomma }} </div>
+								</div>
+							</div>
+						</div>
+						<div class="listing-detail col-md-12">
+
+							<!--	Slider
+							========================================= -->
+							<div class="row p-10">
+								<div class="col-md-12">
+									<ul class="pgwSlideshow">
+										{% for ii in json.img %}
+											<li><img src="{{ ii }}"></li>
+										{% endfor %}
+									</ul>
+									<script>
+										$(document).ready(function() {
+											$('.pgwSlideshow').pgwSlideshow({
+												transitionEffect: 'sliding',
+												displayControls: false,
+												autoSlide: true,
+												intervalDuration: 4000,
+												maxHeight: 1000,
+											});
+										});
+									</script>
+								</div>
+							</div>
+
+
+
+							<!--	Property Description
+							========================================= -->
+							<div class="pi-row pi-grid-small-margins m-t-20">
+								<div class="pi-col-lg-4">
+									<div class="overview portlet grey-bg">
+										<h2> Overview </h2>
+										<ul>
+											<li>
+												<strong> Street </strong>
+												<span> {% include "include/address.html" with arg="street" %} </span>
+											</li>
+											<li>
+												<strong> City </strong>
+												<span> {% include "include/address.html" with arg="city" %} </span>
+											</li>
+											<li>
+												<strong> Style </strong>
+												<span> {{ json.RESISTYL }} </span>
+											</li>
+											<li>
+												<strong> Water </strong>
+												<span> {{ json.RESIWTRD }} </span>
+											</li>
+											<li>
+												<strong> Year Built </strong>
+												<span> {{ json.YearBuilt }} </span>
+											</li>
+											<li>
+												<strong> Levels </strong>
+												<span> {{ json.RESILEVL }} </span>
+											</li>
+											<li>
+												<strong> View </strong>
+												<span> {{ json.RESIVIEW }} </span>
+											</li>
+											
+										</ul>
+									</div>
+								</div>
+								<div class="pi-col-lg-4">
+									<div class="overview portlet grey-bg">
+										<h2> Features </h2>
+										<ul>
+											<li>
+												<strong> Listing Price </strong>
+												<span> ${{ json.ListingPrice|floatformat:"0"|intcomma }} </span>
+											</li>
+											<li>
+												<strong> Price / Sqft. </strong>
+												<span> ${{ json.ListingPrice|div:json.SquareFootage|floatformat:"2"|intcomma }} </span>
+											</li>
+											<li>
+												<strong> Bedrooms </strong>
+												<span> {{ json.Bedrooms }} </span>
+											</li>
+											<li>
+												<strong> Bathrooms </strong>
+												<span> {{ json.Bathrooms|floatformat:"1" }} </span>
+											</li>
+											<li>
+												<strong> Sqft. </strong>
+												<span> {{ json.SquareFootage|floatformat:"0"|intcomma }} Sqft. </span>
+											</li>
+											<li>
+												<strong> Lot Size </strong>
+												<span> {{ json.Acres }} Acres </span>
+											</li>
+											<li>
+												<strong> HOA </strong>
+												<span>
+													{% if json.RESIHOA == "No" %}
+														No
+													{% else %}
+													 	${{ json.RESIHOAD|floatformat:"0"|intcomma }}
+													 {% endif %}
+												</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="pi-col-lg-4">
+									<div class="overview portlet grey-bg">
+										<h2> Description </h2>
+										<p> {{ json.MarketingRemarks }} </p>
+									</div>
+								</div>
+							</div>
+
+
+							<!--	Ammenities
+							========================================= -->
+							<h2> Amenities </h2>
+							<ul class="amenities">
+							
+								{% with features=json.RESIKITC|add:","|add:json.RESICOMM|add:","|add:json.RESIINTE|add:","|add:json.RESIEXTE|add:","|add:json.RESIPARK|add:","|add:json.RESIHTCO|add:","|add:json.RESIINC3|add:","|add:json.RESIINC2|add:","|add:json.RESIINC1|add:","|add:json.RESIROOM|strip %}
+
+									<!--	Dishwasher
+									========================================= -->
+									{% if "air conditioning" in features or "a/c" in features or "ac-central" in features or "ac central" in features or "conditioning" in features %}
+										<li class="yes"> Air Conditioning </li>
+									{% else %}
+										<li class="no"> Air Conditioning </li>
+									{% endif %}
+									
+									<!--	Dishwasher
+									========================================= -->
+									{% if "balcony" in features %}
+										<li class="yes"> Balcony </li>
+									{% else %}
+										<li class="no"> Balcony </li>
+									{% endif %}
+									
+									<!--	Ceiling Fan
+									========================================= -->
+									{% if "fan" in features %}
+										<li class="yes"> Ceiling Fan </li>
+									{% else %}
+										<li class="no"> Ceiling Fan </li>
+									{% endif %}
+									
+									<!--	Clubhouse
+									========================================= -->
+									{% if "clubhouse" in features or "recreation" in features or "rec room" in features %}
+										<li class="yes"> Clubhouse </li>
+									{% else %}
+										<li class="no"> Clubhouse </li>
+									{% endif %}
+									
+
+									<!--	Parking
+									========================================= -->
+									{% if "no - parking" in features or "no parking" in features or "noparking" in features %}
+										<li class="no"> Parking </li>
+									{% elif "parking" in features %}
+										<li class="yes"> Parking </li>
+									{% else %}
+										<li class="no"> Parking </li>
+									{% endif %}
+									
+
+									<!--	Dishwasher
+									========================================= -->
+									{% if "dishwasher" in features %}
+										<li class="yes"> Dishwasher </li>
+									{% else %}
+										<li class="no"> Dishwasher </li>
+									{% endif %}
+									
+
+									<!--	Dryer
+									========================================= -->
+									{% if "dryer" in features %}
+										<li class="yes"> Dryer </li>
+									{% else %}
+										<li class="no"> Dryer </li>
+									{% endif %}
+									
+
+									<!--	Furnished
+									========================================= -->
+									{% if "not furnished" in features or "no furnishings" in features or "unfurnished" in features %}
+										<li class="no"> Furnished </li>
+									{% elif "furnished" in features or "furnishings" in features %}
+										<li class="yes"> Furnished </li>
+									{% else %}
+										<li class="no"> Furnished </li>
+									{% endif %}
+									
+
+									<!--	Garage
+									========================================= -->
+									{% if "no - garage" in features or "no garage" in features or "nogarage" in features %}
+										<li class="no"> Garage </li>
+									{% elif "garage" in features %}
+										<li class="yes"> Garage </li>
+									{% else %}
+										<li class="no"> Garage </li>
+									{% endif %}
+									
+
+									<!--	Garbage Disposal
+									========================================= -->
+									{% if "garbage disposal" in features or "disposal" in features %}
+										<li class="yes"> Garbage Disposal </li>
+									{% else %}
+										<li class="no"> Garbage Disposal </li>
+									{% endif %}
+									
+
+									<!--	Gated Community
+									========================================= -->
+									{% if "paved" in features %}
+										<li class="yes"> Paved Road </li>
+									{% else %}
+										<li class="no"> Paved Road </li>
+									{% endif %}
+									
+
+									<!--	Golf
+									========================================= -->
+									{% if "golf" in features %}
+										<li class="yes"> Golf </li>
+									{% else %}
+										<li class="no"> Golf </li>
+									{% endif %}
+									
+
+									<!--	Heater
+									========================================= -->
+									{% if "heating" in features or "heater" in features or "heat pump" in features or "forced air" in features or "foreced-air" in features %}
+										<li class="yes"> Heating </li>
+									{% else %}
+										<li class="no"> Heating </li>
+									{% endif %}
+									
+
+									<!--	Jacuzzi
+									========================================= -->
+									{% if "hot tub" in features or "jacuzzi" in features or "hottub" in features %}
+										<li class="yes"> Hot Tub </li>
+									{% else %}
+										<li class="no"> Hot Tub </li>
+									{% endif %}
+									
+
+									<!--	Landscape
+									========================================= -->
+									{% if "landscaped" in features or "landscape" in features %}
+										<li class="yes"> Landscaped </li>
+									{% else %}
+										<li class="no"> Landscaped </li>
+									{% endif %}
+									
+
+									<!--	Microwave
+									========================================= -->
+									{% if "microwave" in features %}
+										<li class="yes"> Microwave </li>
+									{% else %}
+										<li class="no"> Microwave </li>
+									{% endif %}
+									
+
+									<!--	Park
+									========================================= -->
+									{% if "park" in features %}
+										<li class="yes"> Park </li>
+									{% else %}
+										<li class="no"> Park </li>
+									{% endif %}
+									
+
+									<!--	Patio / Deck
+									========================================= -->
+									{% if "patio" in features or "deck" in features %}
+										<li class="yes"> Patio / Deck </li>
+									{% else %}
+										<li class="no"> Patio / Deck </li>
+									{% endif %}
+									
+									
+									<!--	Pool
+									========================================= -->
+									{% if "pool" in features %}
+										<li class="yes"> Pool </li>
+									{% else %}
+										<li class="no"> Pool </li>
+									{% endif %}
+									
+
+									<!--	Range / Oven
+									========================================= -->
+									{% if "range" in features or "oven" in features %}
+										<li class="yes"> Range / Oven </li>
+									{% else %}
+										<li class="no"> Range / Oven </li>
+									{% endif %}
+									
+
+									<!--	Refrigerator
+									========================================= -->
+									{% if "refrigerator" in features %}
+										<li class="yes"> Refrigerator </li>
+									{% else %}
+										<li class="no"> Refrigerator </li>
+									{% endif %}
+									
+
+									<!--	Tennis Courts
+									========================================= -->
+									{% if "tennis" in features %}
+										<li class="yes"> Tennis Courts </li>
+									{% else %}
+										<li class="no"> Tennis Courts </li>
+									{% endif %}
+									
+
+									<!--	Walk-In Closet
+									========================================= -->
+									{% if "walk-in closet" in features or "walk in closet" in features or "walkin closet" in features %}
+										<li class="yes"> Walk-In Closet </li>
+									{% else %}
+										<li class="no"> Walk-In Closet </li>
+									{% endif %}
+									
+
+									<!--	Washer
+									========================================= -->
+									{% if "washer" in features %}
+										<li class="yes"> Washer </li>
+									{% else %}
+										<li class="no"> Washer </li>
+									{% endif %}
+
+								
+								{% endwith %}
+
+							</ul>
+
+							<!--	Question
+							========================================= -->
+							<h2> Send Us A Question </h2>
+							<div class="comment-create grey-bg portlet p-60">
+								<form action="" method="post">
+									<div class="pi-row pi-grid-small-margins">
+										<div class="pi-col-sm-4">
+											<div class="form-group">
+												<label> Name </label>
+												<input class="form-control" type="text" />
+											</div>
+										</div>
+										<div class="pi-col-sm-4">
+											<div class="form-group">
+												<label> E-mail </label>
+												<input class="form-control" type="email" />
+											</div>
+										</div>
+										<div class="pi-col-sm-4">
+											<div class="form-group">
+												<label> URL </label>
+												<input class="form-control" type="text" />
+											</div>
+										</div>
+										<div class="pi-col-sm-12">
+											<div class="form-group">
+												<label> URL </label>
+												<textarea class="form-control" rows="5"> </textarea>
+											</div>
+										</div>
+									</div>
+									<div class="form-group-btn">
+										<a class="btn btn-primary pull-right" href="#"> Post Comment </a>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}

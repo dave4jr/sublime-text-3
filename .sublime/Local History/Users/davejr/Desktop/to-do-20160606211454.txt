@@ -1,0 +1,3 @@
+Home
+- Resize home image so Blair's head ins't cut off.
+- 

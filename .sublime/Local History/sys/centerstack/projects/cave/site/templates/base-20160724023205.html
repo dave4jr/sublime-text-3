@@ -1,0 +1,401 @@
+ <!--======================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	base.html
+ *======================-->
+<!DOCTYPE html>
+{% load i18n static %}
+{% load staticfiles %}
+{% load customtags %}
+{% load humanize %}
+{% load widget_tweaks %}
+
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title> DIYcave </title>
+	<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="description" content="Colorado Motorcycle Adventures Rental Management System">
+	<meta content="CenterStack" name="author" />
+
+
+	<!--	Fonts
+	========================================= -->
+	<link href="http://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700,800,900&amp;subset=all">
+	<link rel="stylesheet" href="{% static 'plugins/icons/css/font-awesome.min.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/icons/css/pe-icon-7-stroke.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/icons/css/pe-icon-7-filled.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/icons/css/pe-icon-set-interface.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/icons/css/hawcons-filled.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/icons/css/hawcons-stroke.css' %}">
+
+
+	<!--	Bootstrap
+	========================================= -->
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/global/plugins/bootstrap/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/global/plugins/bootstrap-toastr/toastr.min.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/global/plugins/bootstrap-modal/css/bootstrap-modal.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/global/plugins/bootstrap-select/css/bootstrap-select.min.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/global/plugins/select2/css/select2.min.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/global/plugins/select2/css/select2-bootstrap.min.css' %}">
+
+
+	<!--	Datetime Pickers
+	========================================= -->
+	<link rel="stylesheet" href="{% static 'plugins/datetimepicker/bootstrap-datetimepicker.css' %}">
+
+
+	<!--	WYSIWYG Editors
+	========================================= -->
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/global/plugins/bootstrap-editable/inputs-ext/address/address.css' %}">
+
+
+	<!--	Datatables
+	========================================= -->
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/global/plugins/uniform/css/uniform.default.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/global/plugins/datatables/datatables.min.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css' %}">
+
+
+	<!--	Metronic
+	========================================= -->
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/global/plugins/jstree/dist/themes/default/style.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/global/css/components-rounded.min.css' %}" id="style_components">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/global/plugins/morris/morris.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/pages/css/invoice-2.min.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/pages/css/about.min.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/pages/css/profile-2.min.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/pages/css/profile.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/global/css/plugins.min.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/layouts/layout2/css/layout.min.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/metronic/assets/layouts/layout2/css/themes/blue.min.css' %}" id="style_color">
+
+
+	<!--	Plugins
+	========================================= -->
+	<link rel="stylesheet" href="{% static 'plugins/scheduler/lib/cupertino/jquery-ui.min.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/scheduler/lib/fullcalendar.min.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/scheduler/lib/fullcalendar.print.css' %}" media='print'>
+	<link rel="stylesheet" href="{% static 'plugins/scheduler/scheduler.css' %}">
+	<link rel="stylesheet" href="{% static 'plugins/sweetalert/dist/css/sweetalert.css' %}">
+	<!-- <link rel="stylesheet" href="{% static 'plugins/bootbox/bootbox.min.js' %}"> -->
+
+
+	<!--	CenterStack
+	========================================= -->
+	<link rel="stylesheet" href="{% static 'css/aura.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" href="{% static 'css/helpers.css' %}">
+
+	
+	<!--	JQuery
+	========================================= -->
+	<script src="{% static 'plugins/scheduler/lib/jquery.min.js' %}"></script>
+	<script src="{% static 'plugins/momentjs/moment.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/jquery.mockjax.js' %}"></script>
+	<script src="{% static 'plugins/jscolor/jscolor.js' %}"></script>
+
+
+	<!--	Stripe
+	========================================= -->
+	<script src="{% static 'plugins/jquery.validate/dist/jquery.validate.min.js' %}"></script>
+	<script src="{% static 'plugins/jquery.payment/lib/jquery.payment.min.js' %}"></script>
+	<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+
+
+	{% block javascript %}{% endblock %}
+	{% include 'session_security/all.html' %}
+
+
+</head>
+
+<body class="page-header-fixed page-sidebar-fixed page-container-bg-solid page-sidebar-closed">
+
+	<div id="page-loader">
+		<div class="page-loader-inner">
+			<span class="loader-figure"></span>
+		</div>
+	</div>
+
+	<!--	Top Navbar
+	========================================= -->
+	<div class="page-header navbar navbar-fixed-top">
+		<div class="page-header-inner ">
+
+			<!--	Logos
+			========================================= -->
+			<div class="page-logo bg-white">
+				<img alt="logo" class="logo-default sidebar-toggler p-5" src="{% static 'img/logos/logo.png' %}" />
+			</div>
+			<a class="menu-toggler responsive-toggler" data-target=".navbar-collapse" data-toggle="collapse" href="javascript:;"> </a>
+			
+			<!--	Right Icons (Notifications & )
+			========================================= -->
+			<div class="page-top">
+				<div class="top-menu">
+					<ul class="nav navbar-nav pull-right m-r-20">
+
+
+						<!--	Profile Avatar
+						========================================= -->
+						<li class="dropdown dropdown-user">
+							<a class="dropdown-toggle" data-close-others="true" data-hover="dropdown" data-toggle="dropdown" href="javascript:;">
+								{% if user.username == "davejr" %}
+									<img class="img-circle" src="{% static 'img/users/dave-luke-jr.jpg' %}" />
+								{% endif %}
+								<span class="username username-hide-on-mobile fw-300"> {% firstof user.get_short_name user.get_username %} </span>
+								<i class="fa fa-angle-down"> </i>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-default">
+								<li><a class="text-black-7 p-b-5 p-t-10" href="{% url 'index' %}"><i class="pe-7s-user"></i>Profile</a></li>
+								<li><a class="text-black-7 p-tb-5" href="{% url 'users' %}"><i class="pe-7s-users"></i>Users </a></li>
+								<li class="divider"></li>
+								<li><a class="text-black-7 p-tb-5" href="{% url 'admin' %}"><i class="pe-7s-config"></i>Admin</a></li>
+								<li><a class="text-black-7 p-t-5 p-b-10" href="{% url 'logout' %}"><i class="pe-7s-back-2"></i>Log Out</a></li>
+							</ul>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="clearfix"> </div>
+
+	<div class="page-container">
+
+		<!--	Sidebar
+		========================================= -->
+		<div class="page-sidebar-wrapper">
+			<div class="page-sidebar navbar-collapse collapse">
+				<ul class="page-sidebar-menu page-header-fixed page-sidebar-menu-hover-submenu page-sidebar-menu-closed" data-auto-scroll="true" data-keep-expanded="false" data-slide-speed="200">
+					<li class="nav-item {% active 'index' %}">
+						<a class="nav-link nav-toggle" href="{% url 'index' %}">
+							<i class="pe-7s-home"> </i>
+							<span class="title"> Home </span>
+							<span class="selected"></span>
+						</a>
+					</li>
+					<li class="nav-item {% active 'pos' %}">
+						<a class="nav-link nav-toggle" href="{% url 'pos' %}">
+							<i class="pe-7s-cash"> </i>
+							<span class="title"> POS </span>
+							<span class="selected"></span>
+						</a>
+					</li>
+					<li class="nav-item {% active 'members' %} {% active 'member_edit' %} {% active 'member_new' %}">
+						<a class="nav-link nav-toggle" href="{% url 'members' %}">
+							<i class="pe-7s-users"> </i>
+							<span class="title"> Members </span>
+							<span class="selected"> </span>
+						</a>
+					</li>
+					<li class="nav-item {% active 'classes' %} {% active 'class_edit' %} {% active 'class_new' %}">
+						<a class="nav-link nav-toggle" href="{% url 'classes' %}">
+							<i class="pe-7s-study"> </i>
+							<span class="title"> Classes </span>
+							<span class="selected"> </span>
+						</a>
+					</li>
+					<li class="nav-item {% active 'inventory' %} {% active 'inventory_edit' %} {% active 'inventory_new' %}">
+						<a class="nav-link nav-toggle" href="{% url 'inventory' %}">
+							<i class="pe-7s-note2"> </i>
+							<span class="title"> Inventory </span>
+							<span class="selected"> </span>
+						</a>
+					</li>
+					<li class="nav-item {% active 'calendar' %}">
+						<a class="nav-link nav-toggle" href="{% url 'calendar' %}">
+							<i class="pe-7s-date"> </i>
+							<span class="title"> Calendar </span>
+							<span class="selected"> </span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+
+		<!--	Block Content
+		========================================= -->
+		<div class="page-content-wrapper">
+			<div class="page-content p-20">
+
+				
+				{% block content_site %}
+					<!-- Insert Content Here -->
+				{% endblock %}
+					
+			</div>
+		</div>
+	</div>
+
+
+
+	<!--	Footer
+	========================================= -->
+	<div class="page-footer bg-white">
+		<div class="page-footer-inner font-grey-mint"> 2016 ©
+			<a class=" font-grey-mint" href="https://www.centerstack.io" target="_blank" title="CenterStack">CenterStack & DIYcave, All Rights Reserved</a>
+		</div>
+		<div class="page-footer-tools">
+			<span class="go-top">
+				<i class="fa fa-angle-up font-blue-steel"></i>
+			</span>
+		</div>
+	</div>
+
+	<!--	Bootstrap
+	========================================= -->
+	<script src="{% static 'plugins/metronic/assets/global/plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/bootstrap-tabdrop/js/bootstrap-tabdrop.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/js.cookie.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/bootstrap-confirmation/bootstrap-confirmation.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/bootstrap-modal/js/bootstrap-modalmanager.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/bootstrap-modal/js/bootstrap-modal.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/bootstrap-toastr/toastr.min.js' %}"></script>
+	
+
+	<!--	Metronic Plugins
+	========================================= -->
+	<script src="{% static 'plugins/metronic/assets/global/plugins/jquery.blockui.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/uniform/jquery.uniform.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/jquery.sparkline.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/morris/morris.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/morris/raphael-min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/counterup/jquery.waypoints.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/counterup/jquery.counterup.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/jquery-validation/js/jquery.validate.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/jquery-validation/js/additional-methods.min.js' %}"></script>
+	
+
+	<!--	Datatables
+	========================================= -->
+	<script src="{% static 'plugins/metronic/assets/global/plugins/bootstrap-select/js/bootstrap-select.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/select2/js/select2.full.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/clockface/js/clockface.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/scripts/datatable.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/datatables/datatables.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js' %}"></script>
+	<script src="{% static 'plugins/xeditable/bootstrap3-editable/js/bootstrap-editable.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/bootstrap-editable/inputs-ext/address/address.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/bootstrap-editable/inputs-ext/wysihtml5/wysihtml5.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/global/plugins/bootstrap-typeahead/bootstrap3-typeahead.min.js' %}"></script>
+
+
+	<!--	Metronic
+	========================================= -->
+	<script src="{% static 'plugins/metronic/assets/global/scripts/app.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/pages/scripts/dashboard.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/pages/scripts/components-bootstrap-select.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/pages/scripts/components-select2.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/pages/scripts/profile.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/pages/scripts/ui-confirmations.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/pages/scripts/table-datatables-editable.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/pages/scripts/ui-extended-modals.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/pages/scripts/ui-toastr.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/pages/scripts/login.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/pages/scripts/form-samples.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/layouts/layout2/scripts/layout.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/layouts/layout2/scripts/demo.min.js' %}"></script>
+	<script src="{% static 'plugins/metronic/assets/layouts/global/scripts/quick-sidebar.min.js' %}"></script>
+
+	<!--	Plugins
+	========================================= -->
+	<script src="{% static 'plugins/amcharts/amcharts/amcharts.js' %}"></script>
+	<script src="{% static 'plugins/amcharts/amcharts/serial.js' %}"></script>
+	<script src="{% static 'plugins/amcharts/amcharts/pie.js' %}"></script>
+	<script src="{% static 'plugins/amcharts/amcharts/plugins/export/amexport.js' %}"></script>
+	<script src="{% static 'plugins/scheduler/lib/fullcalendar.js' %}"></script>
+	<script src="{% static 'plugins/scheduler/scheduler.js' %}"></script>
+	<script src="{% static 'plugins/easy-pie-chart/dist/easy-pie-chart.js' %}"></script>
+	<script src="{% static 'plugins/sweetalert/dist/sweetalert.min.js' %}"></script>
+	<script src="{% static 'plugins/jstree/dist/jstree.min.js' %}"></script>
+	<script src="{% static 'plugins/jstree/grid/jstreegrid.js' %}"></script>
+	<script src="{% static 'plugins/cookie/jquery.cookie.js' %}"></script>
+
+	
+	<!--	Centerstack
+	========================================= -->
+	<script src="{% static 'plugins/dateformat/dateformat.min.js' %}"></script>
+	<script src="{% static 'plugins/datetimepicker/bootstrap-datetimepicker.min.js' %}"></script>
+	<script src="{% static 'js/aura.js' %}"></script>
+	<script src="{% static 'js/custom.js' %}"></script>
+
+	<!--	Page Loader
+	========================================= -->
+	<script>
+		$(window).load(function() {
+			$("body").addClass("page-is-loaded");
+		});
+	</script>
+
+
+	<!--	Change Upload Button To Filename
+	========================================= -->
+	<script>
+		$(function() {
+			$('input[type="file"]').change(function(){
+			        var file = this.files[0];
+			        $(this).prev().text(file.name)
+			});
+		});
+	</script>
+
+
+	<!--	Input Group Focus
+	========================================= -->
+	<script>
+		$(function() {
+			$(".input-group").click(function(){
+				$(".input-group").removeClass("focused");
+				$(this).toggleClass("focused");
+			});
+		});
+	</script>
+
+
+	<!--	Table Actions
+	========================================= -->
+	<script>
+		$('.actions:has(.btn)').css({
+			padding: '0px'
+		});
+		$('.datepicker').datetimepicker({
+			format: "MM/DD/YYYY",
+		});
+		$('.timepicker').datetimepicker({
+			format: "h:mmA",
+		});
+		$('.datetimepicker').datetimepicker({
+			sideBySide: true,
+			format: "M/DD/YYYY - h:mmA",
+		});
+	</script>
+
+<!-- 	<script>
+	       $(document).on("click", ".alert", function(e) {
+	           bootbox.alert("Hello world!", function() {
+	               console.log("Alert Callback");
+	           });
+	       });
+	   </script> -->
+
+
+
+</body>
+</html>
+				

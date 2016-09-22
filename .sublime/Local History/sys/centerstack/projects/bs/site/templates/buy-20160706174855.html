@@ -1,0 +1,249 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	buy.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load el_pagination_tags %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+
+<!--	Page Title
+========================================= -->
+<section id="page_title">
+	<h4 class="capitalize fs-24"> Buy A Property </h4>
+</section>
+<section class="p-t-40" id="page-body">
+
+<!--=====================================================
+	Filter
+=====================================================-->
+	<div id="buy-filter" class="wrapper portlet p-tb-20 bs-grey-bg">
+		<div class="column-section clearfix">
+			<form id="filter-form" action="" method="get">
+
+				 <!--	City
+				 ========================================= -->
+				<div class="form-row column one-sixth">
+					<label for="name"> City</label>
+					{{ PropertyFilter.form.city | add_class:"full-width ajax" }}
+				</div>
+
+
+				<!--	Beds / Baths
+				========================================= -->
+				<div class="form-row column one-sixth">
+					<div class="form-row column one-half">
+						<label for="name"> Beds </label>
+						{{ PropertyFilter.form.bedrooms | add_class:"full-width ajax" }}
+					</div>
+					<div class="form-row column one-half last-col">
+						<label for="name"> Baths </label>
+						{{ PropertyFilter.form.bathrooms | add_class:"full-width ajax" }}
+					</div>
+				</div>
+
+
+				<!--	Sqft Range
+				========================================= -->
+				<div class="form-row column one-sixth range">
+					<div class="form-row column one-half">
+						<label for="name"> Sqft </label>
+						{{ PropertyFilter.form.squarefootage__gt | add_class:"full-width ajax" | attr:"placeholder:Min" }}
+					</div>
+					<div class="form-row column one-half last-col">
+						{{ PropertyFilter.form.squarefootage__lt | add_class:"full-width ajax" | attr:"placeholder:Max" }}
+					</div>
+				</div>
+
+
+				<!--	Price Range
+				========================================= -->
+				<div class="form-row column one-sixth range">
+					<div class="form-row column one-half input-symbol">
+						<label for="name"> Listing Price </label>
+						<span>&dollar;</span>
+						{{ PropertyFilter.form.listingprice__gt | add_class:"full-width ajax" | attr:"placeholder:Min" }}
+					</div>
+					<div class="form-row column one-half last-col input-symbol">
+						<span>&dollar;</span>
+						{{ PropertyFilter.form.listingprice__lt | add_class:"full-width ajax" | attr:"placeholder:Max" }}
+					</div>
+				</div>
+
+ 	
+				<!--	Keyword Search
+				========================================= -->
+				<div class="form-row column one-sixth">
+					<label for="name"> Keyword </label>
+					{{ PropertyFilter.form.keysearch | add_class:"full-width ajax" | attr:"placeholder:Search..." }}
+				</div>
+			</form>
+
+
+			<!--	Toggles
+			========================================= -->
+			<div id="toggles" class="form-row column one-sixth last-col range">
+				<div class="form-row column one-half last-col">
+					<button class="on map sr-button button-1  button-form">Map</button>
+				</div>
+				<div class="form-row column one-half m-r-0">
+					<button class="off grid sr-button button-form">Grid</button>
+				</div>
+			</div>
+
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="spacer-small"></div>
+
+
+
+<!--=====================================================
+	Map
+=====================================================-->
+	<div id="map-google"></div>
+	<script>
+	$(function() {
+		if ($('#map-google').length) {
+			$.ajax("{% static 'plugins/gmap/markers.json' %}", {
+				success: function(values) {
+					var markers = [];
+					var infos = [];
+
+					$.each(values, function(index, value) {
+							 var content = '<div id="' + value.id + '" class="map-popup-content-wrapper"><div class="map-popup-content"><div class="listing-window-image-wrapper">' +
+										'<a href="properties-detail-standard.html">' +
+											 '<div class="listing-window-image" style="background-image: url(' + value.image + ');"></div>' +
+											 '<div class="listing-window-content">' +
+												  '<div class="info">' +
+														'<h2>' + value.title + '</h2>' +
+														'<h3>' + value.price + '</h3>' +
+												  '</div>' +
+											 '</div>' +
+										'</a>' +
+								  '</div></div><i class="fa fa-close close"></i></div>' +
+								  '<div class="map-marker">' + value.icon + '</div>';
+
+						markers.push({
+							latLng: value.center, 
+							data: value.id,			
+							options: {									
+								content: content,
+								offset: {
+										x: -18,
+										y: -42
+									}							
+							}
+						});
+					});
+
+					$('#map-google').gmap3({		
+						map: {									
+							options:{
+								styles: [{"featureType":"landscape","elementType":"all","stylers":[{"hue":"#FFBB00"},{"saturation":43.400000000000006},{"lightness":37.599999999999994},{"gamma":1}]},{"featureType":"poi","elementType":"all","stylers":[{"hue":"#00FF6A"},{"saturation":-1.0989010989011234},{"lightness":11.200000000000017},{"gamma":1}]},{"featureType":"road.highway","elementType":"all","stylers":[{"hue":"#FFC200"},{"saturation":-61.8},{"lightness":45.599999999999994},{"gamma":1}]},{"featureType":"road.arterial","elementType":"all","stylers":[{"hue":"#FF0300"},{"saturation":-100},{"lightness":51.19999999999999},{"gamma":1}]},{"featureType":"road.local","elementType":"all","stylers":[{"hue":"#FF0300"},{"saturation":-100},{"lightness":52},{"gamma":1}]},{"featureType":"water","elementType":"all","stylers":[{"hue":"#0078FF"},{"saturation":-13.200000000000003},{"lightness":2.4000000000000057},{"gamma":1}]}],
+								center:[40.761077, -73.88],
+								scrollwheel: false,
+								zoom: 12
+							}
+						},
+						marker: {
+							cluster: {
+									radius: 100,
+								}
+						},
+						overlay: {
+							values: markers,
+							events: {
+								click: function(marker, event, context) {															
+									$('.map-popup-content-wrapper').css('display', 'none');
+
+									if ($(event[0].target).hasClass('close')) {
+										$('#' + context.data).css('display', 'none');
+									} else {
+										$('#' + context.data).css('display', 'block');
+									}
+								}
+							}
+						}
+					});					
+				}		
+			});
+		}
+	});
+	</script>
+
+
+
+<!--=====================================================
+	Grid
+=====================================================-->
+	<div id="grid">
+		<div id="properties" class="isotope-grid gallery-container style-modern-3 isotope-spaced clearfix fitrows m-t-30" data-heightratio=".66">
+			{% paginate 15 PropertyFilter %}
+			{% for property in PropertyFilter %}
+
+				<!--	Setting Filter Values
+				========================================= -->
+				<div class="isotope-item">
+					<a href="{% url 'buy-single' pk=property.pk %}" class="thumb-overlay overlay-effect-3 text-light">
+						<img src="{{ property.img.0 }}">
+						<img src="{{ property.img.1 }}" class="hover-pic">
+						<div class="overlay-caption">
+							<table>
+								<tr>
+									<td><h6 class="uppercase">{{ property.bedrooms }} BR &bull; {{ property.bathrooms|floatformat:"1" }} BA &bull; {{ property.squarefootage|floatformat:"0"|intcomma }} Sqft.</h6></td>
+									<td><h6 class="uppercase fs-20">${{ property.listingprice|floatformat:"0"|intcomma }}</h6></td>
+								</tr>
+								<tr>
+									<td><h6 class="subtitle-1 o-100 m-t-0">{% include "include/address.html" with arg="street" %}</h6></td>
+									<td><h6 class="subtitle-1 o-100 m-t-0">{% include "include/address.html" with arg="cityzip" %}</h6></td>
+								</tr>
+							</table>
+						</div>
+					</a>
+				</div>
+					
+			{% endfor %}
+					
+		</div>
+		<div class="spacer-big"> </div>
+		{% show_pages %}
+	</div>
+
+
+
+
+
+</section>
+
+<!--=====================================================
+	AJAX
+=====================================================-->
+<script>
+$(function() {
+	$('.ajax').change(function() {
+		$.ajax({
+			type: "GET",
+			url: '/rets/buy/',
+			data: { city: $("#id_city").val(), bedrooms: $("#id_bedrooms").val(), bathrooms: $("#id_bathrooms").val(), squarefootage_gt: $("#id_squarefootage__gt").val(), squarefootage_lt: $("#id_squarefootage__lt").val(), listingprice_gt: $("#id_listingprice__gt").val(), listingprice_lt: $("#id_listingprice__lt").val(), keysearch: $("#id_keysearch").val()},
+			success: function(data) {
+				$("#filter-form").submit();
+			},   
+			error: function(data) {
+				alert("Error");
+			},
+		})
+	});
+});
+</script>
+
+
+
+{% endblock %}
+

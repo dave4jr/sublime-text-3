@@ -1,0 +1,17 @@
+venv/*
+notes.txt
+*.pyc
+<<<<<<< HEAD
+*.psd
+__pycache__
+db.sqlite3
+*.DS_Store
+=======
+__pycache__
+db.sqlite3
+.DS_Store
+>>>>>>> aa9c36813b90754a93186beb1939a5897f6922af
+/scripts
+.jsbeautifyrc
+
+

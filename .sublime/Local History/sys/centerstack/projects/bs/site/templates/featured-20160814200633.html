@@ -1,0 +1,117 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	featured.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+
+<!--	Page Title
+========================================= -->
+<!-- <section id="page_title">
+	<h4 class="capitalize fs-24"> Featured Properties </h4>
+</section> -->
+
+
+<!--	Hero Collage
+========================================= -->
+<section class="hero-big parallax-section text-light no-overlay wood_1" id="hero">
+	<div class="wrapper align-center" id="page-title">
+		<h2 class="uppercase">
+			<strong> Our Partners </strong>
+		</h2>
+	</div>
+</section>
+
+
+
+<!--	Bend Trend Homes
+========================================= -->
+<section id="page-body">
+	<div class="wrapper-small align-center">
+		<h3><strong> Bend Trend Homes </strong></h3>
+		<hr class="small colored" />
+		<p class="text-justify"> BendTrend Homes, a DBA of SAC﻿E, Inc., is a licensed General Contractor with the State of Or﻿egon Construction Contractors Board  (CCB# 140416) located in Bend, Oregon. <br> <br>We build high-end northwest contemporary homes and are currently active at The Tetherow Golf Resort Comm﻿unity on Bend's west side, just 20 minutes from Mt. Bachelor Ski Resort. We have recently completed projects in Brasada Ranch and Pronghorn Golf Resort both of which are located in Central Oregon's sunny High Dessert, just east of Bend. <br><br>We are currently building both custom and spec homes in the $900,000 to $1,400,000. price range.  If you are looking for a new contemporary design  home, we have one under construction at Tetherow on Lot 291, which is estimated to be completed in August 2015 and another at Tetherow on Lot 162, which is estimated to break ground in June 2015 and be completed in February 2016. <br><br> If you are interested in having a custom home built and would like to learn more about the process, we can help you. The best way to reach us is via the contact form on our <a href="http://www.bendtrendhomes.com">website</a>. We will return your inquiry right away.﻿﻿  </p>
+	</div>
+	<div class="spacer-big"> </div>
+	<div class="isotope-grid gallery-grid style-modern clearfix" data-heightratio="1">
+		<div class="isotope-item gallery-item wide tall">
+			<img src="{% static 'img/featured/bend-trend-homes/12.jpg' %}" />
+		</div>
+		<div class="isotope-item gallery-item">
+			<img src="{% static 'img/featured/bend-trend-homes/6.jpg' %}" />
+		</div>
+		<div class="isotope-item gallery-item">
+			<img src="{% static 'img/featured/bend-trend-homes/14.jpg' %}" />
+		</div>
+		<div class="isotope-item gallery-item wide">
+			<img src="{% static 'img/featured/bend-trend-homes/7.jpg' %}" />
+		</div>
+	</div>
+	<!-- <div class="isotope-grid gallery-grid style-modern clearfix" data-heightratio="1">
+		<div class="isotope-item gallery-item wide tall">
+			<img src="{% static 'img/featured/bend-trend-homes/1.jpg' %}" />
+		</div>
+		<div class="isotope-item gallery-item">
+			<img src="{% static 'img/featured/bend-trend-homes/2.jpg' %}" />
+		</div>
+		<div class="isotope-item gallery-item">
+			<img src="{% static 'img/featured/bend-trend-homes/4.jpg' %}" />
+		</div>
+		<div class="isotope-item gallery-item wide">
+			<img src="{% static 'img/featured/bend-trend-homes/5.jpg' %}" />
+		</div>
+	</div> -->
+	<div class="spacer-big"> </div>
+
+	<div class="wrapper">
+		<h3 class="align-center">
+			<strong> Floor Plans </strong>
+		</h3>
+		<p class="align-center subtitle-1"> The floor plans of the custom homes built by Bend Trend Homes can be customized to meet <br> the needs of our clients. The three floor plan options listed below are examples of floor plans that <br>have been incorporated  into recently built custom homes. These plans provide a great starting point <br>for our clients by helping them determine what their space needs are for their custom home. <br><br>For more information about Bend Home Trend Floor Plans, visit <a href="http://www.bendhometrends.com/"></a></p>
+		<div class="column-section adapt-height clearfix">
+			<div class="column one-third align-center">
+				<a class="thumb-overlay overlay-effect-2 text-light" href="{% static 'img/featured/bend-trend-homes/juniper-floor-plan.jpg' %}" data-rel="lightcase:gallery1">
+					<img src="{% static 'img/featured/bend-trend-homes/juniper-floor-plan.jpg' %}">
+					<img class="hover-pic" src="{% static 'img/featured/bend-trend-homes/juniper-floor-plan.jpg' %}" />
+					<div class="overlay-caption hidden-on-start">
+						<h4 class="caption-sub portfolio-category subtitle-2 o-100"> Juniper Floor Plan </h4>
+						<hr class="zigzag" />
+						<h6 class="caption-name portfolio-name"> Single Story Contemporary Design Home </h6>
+					</div>
+				</a>
+			</div>
+			<div class="column one-third align-center">
+				<a class="thumb-overlay overlay-effect-2 text-light" href="{% static 'img/featured/bend-trend-homes/doug-fir-floor-plan.jpg' %}" data-rel="lightcase:gallery1">
+					<img src="{% static 'img/featured/bend-trend-homes/doug-fir-floor-plan.jpg' %}" />
+					<img class="hover-pic" src="{% static 'img/featured/bend-trend-homes/doug-fir-floor-plan.jpg' %}" />
+					<div class="overlay-caption hidden-on-start">
+						<h4 class="caption-sub portfolio-category subtitle-2 o-100"> The Doug Fir Floor Plan </h4>
+						<hr class="zigzag" />
+						<h6 class="caption-name portfolio-name"> Single Story Contemporary Design Home </h6>
+					</div>
+				</a>
+			</div>
+			<div class="column one-third align-center last-col">
+				<a class="thumb-overlay overlay-effect-2 text-light" href="{% static 'img/featured/bend-trend-homes/ponderosa-floor-plan.jpg' %}" data-rel="lightcase:gallery1">
+					<img src="{% static 'img/featured/bend-trend-homes/ponderosa-floor-plan.jpg' %}" />
+					<img class="hover-pic" src="{% static 'img/featured/bend-trend-homes/ponderosa-floor-plan.jpg' %}" />
+					<div class="overlay-caption hidden-on-start">
+						<h4 class="caption-sub portfolio-category subtitle-2 o-100"> The Ponderosa Floor Plan </h4>
+						<hr class="zigzag" />
+						<h6 class="caption-name portfolio-name"> Two Story Contemporary Design Home </h6>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="spacer-big"> </div>
+</section>
+
+{% endblock %}

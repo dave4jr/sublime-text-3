@@ -1,0 +1,73 @@
+[
+    // Clear all find highlights
+    {
+        "caption": "RegReplace: Clear Highlights",
+        "command": "reg_replace",
+        "args": {"clear": true}
+    },
+
+    // Edit regular expression rule.
+    {
+        "caption": "RegReplace: Edit Regular Expression Rule",
+        "command": "reg_replace_edit_regex"
+    },
+
+    // Create regular expression rule.
+    {
+        "caption": "RegReplace: Create New Regular Expression Rule",
+        "command": "reg_replace_edit_regex",
+        "args": {"new": true}
+    },
+
+    // Delete regular expression rule.
+    {
+        "caption": "RegReplace: Delete Regular Expression Rule",
+        "command": "reg_replace_delete_regex"
+    },
+
+    // Show the regular expression rule edit panel.
+    {
+        "caption": "RegReplace: Show Edit Panel",
+        "command": "reg_replace_show_edit_panel"
+    },
+
+    //Example commands.
+    {
+        "caption": "Reg Replace: HTML5 Remove Deprecated Type Attr",
+        "command": "reg_replace",
+        "args": {"replacements": ["html5_remove_deprecated_type_attr"]}
+    },
+    {
+        "caption": "Reg Replace: Remove Trailing Spaces",
+        "command": "reg_replace",
+        "args": {"replacements": ["remove_trailing_spaces"]}
+    },
+    // Chained replacements in one command
+    {
+        "caption": "Reg Replace: Remove HTML Comments and Trailing Spaces",
+        "command": "reg_replace",
+        "args": {"replacements": ["remove_html_comments", "remove_trailing_spaces"]}
+    },
+
+    // Preferences
+    {
+        "caption": "Preferences: Reg Replace Settings – Default",
+        "command": "open_file",
+        "args": { "file": "${packages}/RegReplace/reg_replace.sublime-settings" }
+    },
+    {
+        "caption": "Preferences: Reg Replace Settings – User",
+        "command": "open_file",
+        "args": { "file": "${packages}/User/reg_replace.sublime-settings" }
+    },
+    {
+        "caption": "Preferences: Reg Replace Commands – Default",
+        "command": "open_file",
+        "args": { "file": "${packages}/RegReplace/Default.sublime-commands" }
+    },
+    {
+        "caption": "Preferences: Reg Replace Commands – User",
+        "command": "open_file",
+        "args": { "file": "${packages}/User/Default.sublime-commands" }
+    }
+]

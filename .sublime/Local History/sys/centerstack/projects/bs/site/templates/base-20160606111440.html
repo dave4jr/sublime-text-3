@@ -1,0 +1,155 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	base.html
+ *==========================-->
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load customtags %}
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+	<meta content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport" />
+	<title> BrundageSmith </title>
+	<meta name="description" content="Cheri Smith and Molly Brundage are real estate brokers specializing in the Bend real estate market. Cheri and Molly represent home buyers and sellers. " >
+
+	<!--	Reset
+	========================================= -->
+	<link href="{% static 'css/reset.css' %}" rel="stylesheet">
+
+	<!--	Font / Icons
+	========================================= -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,300,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+	<link href="{% static 'plugins/villareal/assets/fonts/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css" />
+	<link href="{% static 'plugins/icons/css/line.css' %}" rel="stylesheet" type="text/css" />
+	
+	<!--	CSS
+	========================================= -->
+	<link href="{% static 'plugins/villareal/assets/libraries/owl-carousel/owl.carousel.css' %}" rel="stylesheet" type="text/css" />
+	<link href="{% static 'plugins/ammap/ammap/ammap.css' %}" rel="stylesheet" type="text/css" />
+	<link href="{% static 'plugins/slideshow/pgwslideshow.css' %}" rel="stylesheet" type="text/css" />
+
+	<!--	CenterStack
+	========================================= -->
+	<link href="{% static 'css/helpers.css' %}" rel="stylesheet" type="text/css" />
+	<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" />
+
+	<!--	Javascript
+	========================================= -->
+	<script src="{% static 'plugins/villareal/assets/js/jquery.js' %}"></script>
+	<script src="{% static 'plugins/gmap/gmap3.min.js' %}"></script>
+	<script src="{% static 'plugins/ammap/ammap/ammap.js' %}"></script>
+	<script src="{% static 'plugins/slideshow/pgwslideshow.js' %}"></script>
+
+</head>
+
+{% if request.path == "/" %}
+	<body style="overflow: hidden;" class="cover-pull-top header-transparent">
+{% else %}
+	<body class="mt-white-bg">
+{% endif %}
+	<div class="page-wrapper">
+		<div class="header-wrapper">
+			<div class="header header-small">
+				<div class="header-inner">
+					<div class="container">
+						<div class="header-top">
+							<div class="header-top-inner">
+								{% if request.path != "/" %}
+									<a class="header-logo" href="{% url 'index' %}">
+										<span class="header-logo-text"><span class="font-base">Brundage</span>Smith </span>
+									</a>
+								{% endif %}
+								<div class="nav-primary-wrapper collapse navbar-toggleable-sm">
+									<ul class="nav nav-pills nav-primary">
+										<li class="nav-item"><a class="nav-link {% active 'buy' %}" href="{% url 'buy' %}"> Buy </a></li>
+										<li class="nav-item"><a class="nav-link {% active 'sell' %}" href="{% url 'sell' %}"> Sell </a></li>
+										<li class="nav-item"><a class="nav-link {% active 'listings' %}" href="{% url 'listings' %}"> Listings </a></li>
+										<li class="nav-item"><a class="nav-link {% active 'neighborhoods' %}" href="{% url 'neighborhoods' %}"> Neighborhoods </a></li>
+										<li class="nav-item"><a class="nav-link {% active 'about' %}" href="{% url 'about' %}"> About </a></li>
+									</ul>
+								</div>
+								<button class="navbar-toggler pull-xs-right hidden-md-up" data-target=".nav-primary-wrapper" data-toggle="collapse" type="button"><span> </span><span> </span><span> </span></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!--	Main Wrapper
+		========================================= -->
+		{% block content %}
+
+			<!-- Insert Content Here -->
+			
+		{% endblock %}
+
+
+		<!--	Footer
+		========================================= -->
+		{% if request.path != "/" %}
+			<div class="footer-wrapper">
+				<div class="container">
+					<div class="footer-inner">
+						<div class="footer-top">
+							<div class="footer-top-left">
+								<h2> BrundageSmith Real Estate Brokers </h2>
+								<p> BrundageSmith is a full-service real estate brokerage firm servicing Central Oregon's residential market. Their affiliation with Total Property Resources provides unparalled exposure to the mortgage and banking landscape, information on developing real estate trends, and overall best practices to protect not only our business, but our clients as well.</p>
+								<div class="social">
+									<a href="#"><i class="fa fa-facebook"> </i></a>
+									<a href="#"><i class="fa fa-twitter"> </i></a>
+									<a href="#"><i class="fa fa-linkedin"> </i></a>
+									<a href="#"><i class="fa fa-envelope"> </i></a>
+									<a href="#"><i class="fa fa-instagram"> </i></a>
+								</div>
+							</div>
+							<div class="footer-top-right">
+								<h2> Subscribe To Our Newsletter </h2>
+								<form action="?" method="post">
+									<div class="input-group">
+										<input class="form-control" placeholder="Your e-mail address" type="email" />
+										<span class="input-group-btn">
+											<button class="btn mt-grey-silver-bg" type="submit"> Subscribe </button>
+										</span>
+										
+									</div>
+									
+								</form>
+								<p> * We promise that we will not send you spam messages. </p>
+							</div>
+						</div>
+						<div class="footer-bottom">
+							<div class="footer-left font-mt-grey-silver"> © 2016 BrundageSmith. All Rights Reserved.</div>
+							<div class="footer-right">
+								<a class="font-mt-grey-silver" href="http://www.centerstack.io">Crafted by CenterStack.</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		{% endif %}
+	</div>
+
+
+<!--=====================================================
+	Javascript
+=====================================================-->
+	<script src="//maps.googleapis.com/maps/api/js"></script>
+	<script src="{% static 'plugins/villareal/assets/js/jquery.ezmark.min.js' %}"></script>
+	<script src="{% static 'plugins/villareal/assets/js/tether.min.js' %}"></script>
+	<script src="{% static 'plugins/villareal/assets/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'plugins/villareal/assets/js/villareal.js' %}"></script>
+	<script src="{% static 'plugins/villareal/assets/libraries/owl-carousel/owl.carousel.min.js' %}"></script>
+	
+	<script>
+		$(document).ready(function() {
+			$('.pgwSlideshow').pgwSlideshow();
+		});
+	</script>
+
+
+</body>
+</html>

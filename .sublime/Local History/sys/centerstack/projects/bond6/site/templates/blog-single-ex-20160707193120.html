@@ -1,0 +1,61 @@
+<!--======================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	blog-single.html
+ *======================-->
+ {% extends "base.html" %}
+ {% load staticfiles %}
+ {% load page_active from pagination %}
+ {% block content %}
+
+ 
+<div id="page">
+
+	<!--	Page Title
+	========================================= -->
+	<div class="pi-section-w pi-section-parallax piCounter piTabs piTooltips" style="background-image: url({% static 'img/production/light-house-2.jpg' %});">
+		<div class="pi-texture" style="background: rgba(24, 28, 32, 0.6);"> </div>
+		<div class="pi-section p-tb-125 pi-text-center">
+			<h2 class="h1 pi-text-shadow pi-has-border pi-has-tall-border pi-has-base-border pi-has-short-border" style="font-size: 60px;">Speak <span class="pi-text-base">Our</span> Minds</h2>
+		</div>
+	</div>
+
+	<!--	Blog Entry Single
+	========================================= -->
+	<div class="pi-section-w pi-section-white pi-slider-enabled piTooltips piSocials">
+		<div class="pi-section pi-padding-bottom-10">
+			<div class="pi-row">
+				<div class="pi-col-sm-12 p-b-40">
+					<img class="pi-img-shadow" style="padding: 2px; background: #EEE; border-radius: 3px;" id="blog-single-img" src="{{ MEDIA_URL }}{{ blog.img }}">
+					<h2 class="pi-weight-600 m-t-20 text-black-4"> {{ blog.title }} </h2>
+					<ul class="pi-meta">
+						<li><i class="icon-user"></i><a href="#"> {{ blog.author|capfirst }} </a></li>
+						<li><i class="icon-calendar"></i> {{ blog.date }} </li>
+						<li><i class="icon-clock"></i> {{ blog.time }} </li>
+						<li><i class="icon-comment"></i><a href="http://www.centerstack.io/blog/{{ blog.pk }}/disqus_thread" data-disqus-identifier="blog_{{ blog.pk }}"></a></li>
+					</ul>
+					<p>{{ blog.post_single|safe }}</p>
+					
+					<!--	Disqus
+					========================================= -->
+<!-- 					<div id="disqus_thread"></div>
+					<script>
+						var disqus_config = function () {
+							this.page.url = "http://www.centerstack.io/blog/{{ blog.pk }}";
+							this.page.identifier = "blog_{{ blog.pk }}";
+						};
+						(function() {
+							var d = document, s = d.createElement('script');
+							s.src = '//centerstack.disqus.com/embed.js';
+							s.setAttribute('data-timestamp', +new Date());
+							(d.head || d.body).appendChild(s);
+						})();
+					</script>
+					<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+ -->				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+<!--==========================
+*  Author:		Dave Luke Jr
+*  Company:	CenterStack.io
+*  Description:	index.html
+*==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load customtags %}
+{% load staticfiles %}
+{% block content %}
+
+
+<!--	Hero Image
+========================================= -->
+<section class="hero-full text-light parallax-section" data-parallax-image="{% static 'img/home/3.jpg' %}" id="hero">
+	<div class="wrapper-small" id="page-title">
+		<h1>
+			<strong> Expand
+				<br/>
+				<span class="colored"> Your </span>
+				<br/> Limits </strong>
+		</h1>
+		<p>
+			<a class="sr-button button-small button-5 circled" href="#"> Get in Touch </a>
+			<a class="sr-button button-small button-4 circled" href="#"> Free Training </a>
+		</p>
+	</div>
+</section>
+
+
+
+{% endblock %}

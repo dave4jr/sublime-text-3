@@ -1,0 +1,40 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	address Inclusion
+ *==========================-->
+
+{% with arg = arg|lower %}
+	{% if arg == "street" %}
+		{% if json.StreetSuffix == "" and json.Unit != "" %}
+			{{ json.StreetNumber }} {{ json.StreetName }}, Unit: {{ json.Unit }}
+		{% if json.StreetSuffix != "" and json.Unit == "" %}
+			{{ json.StreetNumber }} {{ json.StreetName }} {{ json.StreetSuffix }}
+		{% else %}
+			{{ json.StreetNumber }} {{ json.StreetName }}
+		{% endif %}
+
+	{% elif arg == "city" %}
+		{{ json.City }}, {{ json.State }}
+
+	{% elif arg == "county" %}
+		{{ json.County }} County
+
+	{% elif arg == "address" %}
+		{% if json.StreetSuffix == "" and json.Unit != "" %}
+			{{ json.StreetNumber }} {{ json.StreetName }} Unit: {{ json.Unit }}, {{ json.City }}, {{ json.State }}
+		{% if json.StreetSuffix != "" and json.Unit == "" %}
+			{{ json.StreetNumber }} {{ json.StreetName }} {{ json.StreetSuffix }}, {{ json.City }}, {{ json.State }}
+		{% else %}
+			{{ json.StreetNumber }} {{ json.StreetName }}, {{ json.City }}, {{ json.State }}
+		{% endif %}
+
+	{% else %}
+		"Choose An Argument: Street / City / County / Address"
+
+{% endwith %}
+
+
+
+
+

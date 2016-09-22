@@ -1,0 +1,70 @@
+<!--==========================
+*  Author:		Dave Luke Jr
+*  Company:	CenterStack.io
+*  Description:	blog.html
+*==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load customtags %}
+{% load staticfiles %}
+{% block content %}
+
+
+<!--	Page Title
+========================================= -->
+<section class="hero-big text-light parallax-section" style="background-image: url({% static 'img/testimonials.jpg' %}); background-size: cover; background-position: top center;"  id="hero">
+	<div class="wrapper align-center" id="page-title">
+		<h1><strong> Testimonials </strong></h1>
+	</div>
+</section>
+
+
+<section id="page-body" class="p-b-0">
+	<div class="wrapper-small">
+		<h3 class="align-center p-b-3"><strong> What People Say </strong></h3>
+		<hr class="align-center small thick colored" />
+		<p class="text-justify p-t-3">When it is all said and done, our primary goal is to serve our customers, and we take that goal very seriously. We take pride in knowing that our customers are happy with our service and are seeing great results as a function of their hardwork and dedication to their health. <br><br> While holding our clients accountable for individual goals is an important part of our process, teaching them to hold themselves accountible for their health is what we strive for. It is this that motivates us to continue to master our craft, not only on an exercise basis, but also from an educational basis. <br><br>Here is what some of our personal training clients have to say about their experience with Bond 6 Fitness. If you are a client and want to leave us a testimonial, please email us at <a class="font-base" href="mailto:info@bond6.com">info@bond6.com</a>.</p>
+	</div>
+</section>
+
+<section id="page-body">
+	<div class="fullwidth-section text-light parallax-section" data-parallax-image="{% static 'sudo/files/uploads/1680x1050-dark.jpg' %}">
+		<div class="fullwidth-content wrapper-small align-center">
+			<div>
+				<blockquote> In any moment of decision, the best thing you can do is the right thing, the next best thing is the wrong thing, and the worst thing you can do is nothing.
+					<cite> Theodore Roosevelt </cite>
+				</blockquote>
+			</div>
+		</div>
+	</div>
+	<div class="fullwidth-section white-bg">
+		<div class="fullwidth-content wrapper-small align-center">
+			<div>
+				<blockquote> In any moment of decision, the best thing you can do is the right thing, the next best thing is the wrong thing, and the worst thing you can do is nothing.
+					<cite> Theodore Roosevelt </cite>
+				</blockquote>
+			</div>
+		</div>
+	</div>
+	<div class="fullwidth-section text-light parallax-section" data-parallax-image="{% static 'sudo/files/uploads/1680x1050-dark.jpg' %}">
+		<div class="fullwidth-content wrapper-small align-center">
+			<div>
+				<blockquote> In any moment of decision, the best thing you can do is the right thing, the next best thing is the wrong thing, and the worst thing you can do is nothing.
+					<cite> Theodore Roosevelt </cite>
+				</blockquote>
+			</div>
+		</div>
+	</div>
+	<div class="fullwidth-section white-bg">
+		<div class="fullwidth-content wrapper-small align-center">
+			<div>
+				<blockquote> In any moment of decision, the best thing you can do is the right thing, the next best thing is the wrong thing, and the worst thing you can do is nothing.
+					<cite> Theodore Roosevelt </cite>
+				</blockquote>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+{% endblock %}

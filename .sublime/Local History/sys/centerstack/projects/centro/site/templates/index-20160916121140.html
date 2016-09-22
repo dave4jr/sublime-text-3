@@ -1,0 +1,250 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	index.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+
+<!--	Revolution Slider
+========================================= -->
+<section class="slider-revolution-wrapper">
+	<div class="tp-banner-container">
+		<div class="tp-banner">
+			<ul>
+				<li class="slider-welcome" data-masterspeed="400" data-saveperformance="on" data-slotamount="7" data-title="Welcome To Centro!" data-transition="fade">
+					<img alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat" src="{% static 'img/ocean.jpg' %}" />
+					<div class="tp-caption customin rev-white customout rev-heading" data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;" data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-easing="Back.easeOut" data-elementdelay="0.1" data-endelementdelay="0.1" data-speed="500" data-splitin="" data-splitout="" data-start="1900" data-x="100" data-y="150"> Welcome! </div>
+					<div class="tp-caption rev-white rev-desc fade" data-easing="Back.easeOut" data-elementdelay="0.1" data-endelementdelay="0.1" data-speed="500" data-splitin="" data-splitout="" data-start="2700" data-x="100" data-y="250"> Since 1972 our clients have relied on Centro for exceptionally <br> responsive, personal service and innovative ideas for all their <br> printed materials, promotional products and packaging needs. </div>
+					<div class="tp-caption rev-white rev-subheading sfr" data-easing="Back.easeOut" data-elementdelay="0.1" data-endelementdelay="0.1" data-speed="500" data-splitin="" data-splitout="" data-start="3200" data-x="100" data-y="380">
+						<a class="btn btn-medium btn-rounded btn-theme-color" href="#">
+							Get In Touch
+						</a>
+					</div>
+				</li>
+				<li class="slider-print-it" data-masterspeed="400" data-saveperformance="on" data-slotamount="7" data-title="Print It" data-transition="fade">
+					<img alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat" src="{% static 'img/print-it.jpg' %}" />
+					<div class="tp-caption customin rev-white customout rev-heading" data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;" data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-easing="Back.easeOut" data-elementdelay="0.1" data-endelementdelay="0.1" data-speed="500" data-splitin="" data-splitout="" data-start="1900" data-x="100" data-y="150"> Print It </div>
+					<div class="tp-caption rev-white rev-desc fade" data-easing="Back.easeOut" data-elementdelay="0.1" data-endelementdelay="0.1" data-speed="500" data-splitin="" data-splitout="" data-start="2700" data-x="100" data-y="250"> Printed products and services tailored around your unique business demands </div>
+					<div class="tp-caption rev-white rev-subheading sfr" data-easing="Back.easeOut" data-elementdelay="0.1" data-endelementdelay="0.1" data-speed="500" data-splitin="" data-splitout="" data-start="3200" data-x="100" data-y="380">
+						<a class="btn btn-medium btn-rounded btn-theme-color" href="#">
+							Print Products
+						</a>
+					</div>
+				</li>
+				<li class="slider-promote-it" data-masterspeed="400" data-saveperformance="on" data-slotamount="7" data-title="Promote It" data-transition="fade">
+					<img alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat" src="{% static 'img/promo.jpg' %}" />
+					<div class="tp-caption customin rev-white customout rev-heading" data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;" data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-easing="Back.easeOut" data-elementdelay="0.1" data-endelementdelay="0.1" data-speed="500" data-splitin="" data-splitout="" data-start="1900" data-x="100" data-y="150"> Promote It </div>
+					<div class="tp-caption rev-white rev-desc fade" data-easing="Back.easeOut" data-elementdelay="0.1" data-endelementdelay="0.1" data-speed="500" data-splitin="" data-splitout="" data-start="2700" data-x="100" data-y="250"> Branded merchandise designed to increase your marketing effectiveness </div>
+					<div class="tp-caption rev-white rev-subheading sfr" data-easing="Back.easeOut" data-elementdelay="0.1" data-endelementdelay="0.1" data-speed="500" data-splitin="" data-splitout="" data-start="3200" data-x="100" data-y="380">
+						<a class="btn btn-medium btn-rounded btn-theme-color" href="#">
+							See Promotions
+						</a>
+					</div>
+				</li>
+				<li class="slider-wear-it" data-masterspeed="400" data-saveperformance="on" data-slotamount="7" data-title="Wear It" data-transition="fade">
+					<img alt="" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat" src="{% static 'img/wear-it.jpg' %}" />
+					<div class="tp-caption rev-white customin customout rev-heading" data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;" data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-easing="Back.easeOut" data-elementdelay="0.1" data-endelementdelay="0.1" data-speed="500" data-splitin="" data-splitout="" data-start="1900" data-x="100" data-y="150"> Wear It </div>
+					<div class="tp-caption rev-white rev-desc fade" data-easing="Back.easeOut" data-elementdelay="0.1" data-endelementdelay="0.1" data-speed="500" data-splitin="" data-splitout="" data-start="2700" data-x="100" data-y="250"> Dress for success and build brand awareness with visible and versatile personalized apparel </div>
+					<div class="tp-caption rev-white rev-subheading sfr" data-easing="Back.easeOut" data-elementdelay="0.1" data-endelementdelay="0.1" data-speed="500" data-splitin="" data-splitout="" data-start="3200" data-x="100" data-y="380">
+						<a class="btn btn-medium btn-rounded btn-theme-color" href="#">
+							View Apparel
+						</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+
+<div class="page-content">
+	<div class="container">
+		<div class="row ">
+			<div class="heading-title text-center m-b-60">
+				<span class="heading-sub-title text-uppercase theme-color">What We Do</span>
+				<h3 class="text-uppercase">What We Do </h3>
+			</div>
+			<div class="col-md-6">
+				<p><span></span>entro’s founder Darrel Hansen started the small business back in 1971 when Bend’s population sign read 11,800 and the IBM Selectric typewriter was the pinnacle of office automation.  For nearly 50 years Centro’s experienced professionals have brought high-tech resources and high-touch customer service to local, regional and national organizations. </p>
+			</div>
+			<div class="col-md-6">
+				<p> Today we offer an immense assortment of printed business forms, promotional products, and branded apparel as well as services personalized to a client’s unique needs.  The key to our success is insuring YOURS – we are a “relationship company” with a team devoted to exceeding client expectations by treating every Centro experience as an exceptional one! </p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="page-content">
+	<div class="container">
+		<!--feature box center align start-->
+		<div class="row">
+			<div class="heading-title text-center">
+				<h3 class="text-uppercase">Feature Center Align</h3>
+				<span class="text-uppercase">Feature Center Align</span>
+			</div>
+			<div class="col-md-4">
+				<div class="featured-item text-center m-bot-80">
+					<div class="icon bottom-border">
+						<i class=" icon-lightbulb"></i>
+					</div>
+					<div class="title text-uppercase">
+						<h4>Creative design</h4>
+					</div>
+					<div class="desc"> Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="featured-item text-center m-bot-80">
+					<div class="icon bottom-border">
+						<i class="  icon-browser2"></i>
+					</div>
+					<div class="title text-uppercase">
+						<h4>Awesome Mega Menu</h4>
+					</div>
+					<div class="desc"> Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="featured-item text-center m-bot-80">
+					<div class="icon bottom-border">
+						<i class=" icon-laptop2"></i>
+					</div>
+					<div class="title text-uppercase">
+						<h4>PARALLAX SUPPORT</h4>
+					</div>
+					<div class="desc"> Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="featured-item text-center">
+					<div class="icon">
+						<i class="icon-music_play_button"></i>
+					</div>
+					<div class="title text-uppercase">
+						<h4>HTML5 VIDEO</h4>
+					</div>
+					<div class="desc"> Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="featured-item text-center">
+					<div class="icon">
+						<i class="icon-arrows_move"></i>
+					</div>
+					<div class="title text-uppercase">
+						<h4>RESPONSIVE LAYOUT</h4>
+					</div>
+					<div class="desc"> Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="featured-item text-center">
+					<div class="icon">
+						<i class="icon-ecommerce_graph3"></i>
+					</div>
+					<div class="title text-uppercase">
+						<h4>ENDLESS POSSIBILITIES</h4>
+					</div>
+					<div class="desc"> Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="feature-parallax dark">
+	<div class="overlay-dark">
+		<div class="container ">
+			<div class="row page-content">
+				<div class="col-md-4">
+					<div class="featured-item text-center">
+						<div class="icon bottom-border">
+							<i class=" icon-lightbulb"></i>
+						</div>
+						<div class="title text-uppercase">
+							<h4>Creative design</h4>
+						</div>
+						<div class="desc"> Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="featured-item text-center">
+						<div class="icon bottom-border">
+							<i class="  icon-browser2"></i>
+						</div>
+						<div class="title text-uppercase">
+							<h4>professional code</h4>
+						</div>
+						<div class="desc"> Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="featured-item text-center">
+						<div class="icon bottom-border">
+							<i class=" icon-laptop2"></i>
+						</div>
+						<div class="title text-uppercase">
+							<h4>easy customize</h4>
+						</div>
+						<div class="desc"> Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!--	Clients
+========================================= -->
+<div class="page-content">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="heading-title text-center m-b-40">
+					<h3 class="text-uppercase"> Notable Clients </h3>
+					<p> We pride ourselves in working with some of the best businesses in Oregon </p>
+				</div>
+				<div id="clients-1">
+					<div class="item">
+						<img alt="Clients" src="{% static 'massive/img/clients/c-1.png' %}" />
+					</div>
+					<div class="item">
+						<img alt="Clients" src="{% static 'massive/img/clients/c-2.png' %}" />
+					</div>
+					<div class="item">
+						<img alt="Clients" src="{% static 'massive/img/clients/c-3.png' %}" />
+					</div>
+					<div class="item">
+						<img alt="Clients" src="{% static 'massive/img/clients/c-4.png' %}" />
+					</div>
+					<div class="item">
+						<img alt="Clients" src="{% static 'massive/img/clients/c-5.png' %}" />
+					</div>
+					<div class="item">
+						<img alt="Clients" src="{% static 'massive/img/clients/c-6.png' %}" />
+					</div>
+					<div class="item">
+						<img alt="Clients" src="{% static 'massive/img/clients/c-7.png' %}" />
+					</div>
+					<div class="item">
+						<img alt="Clients" src="{% static 'massive/img/clients/c-8.png' %}" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,251 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	index.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+
+
+<!--	Buy Single
+========================================= -->
+<section id="page-body" class="p-t-0 m-t-80">
+	<div class="owl-carousel" data-items="3" data-autoPlay="7000" data-loop="true" data-nav="true" data-dots="false">
+	
+		{% for ii in property.img %}
+			<a class="thumb-overlay overlay-effect-1 text-light" data-rel="lightcase:gallery1" href="{{ ii }}">
+				<div class="item">
+					<img src="{{ ii }}">
+				</div>
+			</a>
+		{% endfor %}
+		
+	</div>
+	<div class="spacer-small"></div>
+
+
+	<div class="wrapper align-center">
+		<h2 class="m-t-10 fs-36"><strong> {% include "include/address.html" with arg="street" %} </strong></h2>
+		<h5 class="subtitle-2 colored"> {% include "include/address.html" with arg="city" %} </h5>
+		<hr class="mini thin m-tb-30" />
+		
+		<!--	Icons
+		========================================= -->
+		<div class="column-section clearfix p-t-40">
+			<div id="buy-single-icons" class="column one-fifth">
+				<span class="fontello-sqft"></span>
+				<h5 class="subtitle-2">Square Feet</h5>
+				<h3><strong>{{ property.squarefootage|floatformat:"0"|intcomma }}</strong></h3>
+			</div>
+			<div id="buy-single-icons" class="column one-fifth">
+				<span class="fontello-beds"></span>
+				<h5 class="subtitle-2">Bedrooms</h5>
+				<h3><strong>{{ property.bedrooms }}</strong></h3>
+			</div>
+			<div id="buy-single-icons" class="column one-fifth">
+				<span class="fontello-baths"></span>
+				<h5 class="subtitle-2">Bathrooms</h5>
+				<h3><strong>{{ property.bathrooms }}</strong></h3>
+			</div>
+			<div id="buy-single-icons" class="column one-fifth">
+				<span class="fontello-year-built"></span>
+				<h5 class="subtitle-2">Year Built</h5>
+				<h3><strong>{{ property.yearbuilt }}</strong></h3>
+			</div>
+			<div id="buy-single-icons" class="column one-fifth last-col">
+				<span class="fontello-map"></span>
+				<h5 class="subtitle-2">Lot Size</h5>
+				<h3><strong>{{ property.acres }}</strong></h3>
+			</div>
+		</div>
+	</div>
+	<div class="spacer-big"> </div>
+	
+	
+	<!--	Description
+	========================================= -->
+	<div id="buy-single-details"  class="p-tb-60 b-tb-1" style="background:#F7F8FA;">
+		<div class="wrapper-small align-center">
+			<h2 class="m-t-10 fs-36"><strong> Marketing Remarks </strong></h2>
+			<hr class="mini thin m-tb-30 colored" />
+			<p>{{ property.marketingremarks }}</p>
+		</div>
+	</div>
+
+	<!--	RETS Data Points
+	========================================= -->
+	<div class="p-t-0 buy-single-checkers">
+		<div class="column-section boxed-sticky adapt-height vertical-center clearfix">
+		
+			<!--	Overview
+			========================================= -->
+			<div class="column one-half text-light bigpadding parallax-section" data-parallax-image="{% static 'sudo/files/uploads/1680x1050-dark.jpg' %}">
+				<h2><strong> Overview </strong></h2>
+			</div>
+			<div class="column one-half bigpadding" style="background:#fff">
+				<ul>
+					<li>List Price</li>
+					<li>Style</li>
+					<li>Subtype</li>
+					<li>Year Built</li>
+					<li>Bedrooms</li>
+					<li>Bathrooms</li>
+					<li>Square Footage</li>
+				</ul>
+			</div>
+		
+			<!--	Community
+			========================================= -->
+			<div class="column one-half text-light bigpadding" style="background:#fff;">
+				<ul>
+					<li>List Price</li>
+					<li>Style</li>
+					<li>Subtype</li>
+					<li>Year Built</li>
+					<li>Bedrooms</li>
+					<li>Bathrooms</li>
+					<li>Square Footage</li>
+				</ul>
+			</div>
+			<div class="column one-half text-light bigpadding parallax-section" data-parallax-image="{% static 'sudo/files/uploads/1680x1050-dark.jpg' %}">
+				<h2><strong> Community </strong></h2>
+			</div>
+			
+			
+			<!--	Interior
+			========================================= -->
+			<div class="column one-half text-light bigpadding parallax-section" data-parallax-image="{% static 'sudo/files/uploads/1680x1050-dark.jpg' %}">
+				<h2><strong> Interior </strong></h2>
+			</div>
+			<div class="column one-half text-light bigpadding" style="background:#fff">
+				<ul>
+					<li>List Price</li>
+					<li>Style</li>
+					<li>Subtype</li>
+					<li>Year Built</li>
+					<li>Bedrooms</li>
+					<li>Bathrooms</li>
+					<li>Square Footage</li>
+				</ul>
+			</div>
+			
+			
+			<!--	Exterior
+			========================================= -->
+			<div class="column one-half text-light bigpadding" style="background:#fff;">
+				<ul>
+					<li>List Price</li>
+					<li>Style</li>
+					<li>Subtype</li>
+					<li>Year Built</li>
+					<li>Bedrooms</li>
+					<li>Bathrooms</li>
+					<li>Square Footage</li>
+				</ul>
+			</div>
+			<div class="column one-half text-light bigpadding parallax-section" data-parallax-image="{% static 'sudo/files/uploads/1680x1050-dark.jpg' %}">
+				<h2><strong> Exterior </strong></h2>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<div class="spacer-big"></div>
+<div class="spacer-big"></div>
+<div class="spacer-big"></div>
+
+
+<!--=====================================================
+	Second Test
+=====================================================-->
+<section id="page-body">
+	<div class="p-t-0 buy-single-checkers">
+		<div class="column-section boxed-sticky adapt-height vertical-center clearfix">
+		
+			<!--	Overview
+			========================================= -->
+			<div class="column one-half text-light bigpadding wood_1">
+				<h2><strong> Overview </strong></h2>
+			</div>
+			<div class="column one-half bigpadding" style="background:#fff">
+				<ul>
+					<li>List Price</li>
+					<li>Style</li>
+					<li>Subtype</li>
+					<li>Year Built</li>
+					<li>Bedrooms</li>
+					<li>Bathrooms</li>
+					<li>Square Footage</li>
+				</ul>
+			</div>
+		
+			<!--	Community
+			========================================= -->
+			<div class="column one-half text-light bigpadding" style="background:#fff;">
+				<ul>
+					<li>Subdivision</li>
+					<li>Section</li>
+					<li>Elementary School</li>
+					<li>Jr. High School</li>
+					<li>High School</li>
+					<li>HOA</li>
+					<li>CC&R's</li>
+					<li>Community</li>
+					<li>Taxex</li>
+				</ul>
+			</div>
+			<div class="column one-half text-light bigpadding  noisy_grid">
+				<h2><strong> Community </strong></h2>
+			</div>
+			
+			
+			<!--	Interior
+			========================================= -->
+			<div class="column one-half text-light bigpadding wood_1">
+				<h2><strong> Interior </strong></h2>
+			</div>
+			<div class="column one-half text-light bigpadding" style="background:#fff">
+				<ul>
+					<li>Rooms</li>
+					<li>Interior</li>
+					<li>Fireplace</li>
+					<li>Floors</li>
+					<li>Heat/Cool</li>
+				</ul>
+			</div>
+			
+			
+			<!--	Exterior
+			========================================= -->
+			<div class="column one-half text-light bigpadding" style="background:#fff;">
+				<ul>
+					<li>New Construction</li>
+					<li>Construction</li>
+					<li>Exterior</li>
+					<li>Parking</li>
+					<li>Additional Buildings</li>
+					<li>Existing Water</li>
+					<li>Sewer Septic</li>
+					<li>Irrigation</li>
+					<li>Irrigated Acres</li>
+					<li>View</li>
+				</ul>
+			</div>
+			<div class="column one-half text-light bigpadding wood_1">
+				<h2><strong> Exterior </strong></h2>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+{% endblock %}

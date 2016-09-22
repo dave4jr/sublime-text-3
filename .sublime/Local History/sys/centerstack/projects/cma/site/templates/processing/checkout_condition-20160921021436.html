@@ -1,0 +1,338 @@
+<!--======================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	checkout.html
+ *======================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% block content_site %}
+
+
+
+<!--	Checkout
+========================================= -->
+<form id="form-checkout-condition" action="" method="post" role="form">
+	{% csrf_token %}
+
+	<div class="row">
+		<div class="pi-col-sm-12">
+			<div class="portlet light portlet-fit">
+				<div class="portlet-title">
+					<div class="caption">
+						<i class="pe-7s-note2"> </i>
+						<span class="caption-subject capitalize"> Check-Out Condition Report </span>
+					</div>
+				</div>
+				<div class="portlet-body">
+					<div class="row">
+
+						{% if CheckoutConditionForm.errors %}
+							{% for error in CheckoutConditionForm.errors %}
+								<p class="pi-text-center font-mt-red capitalize fs-14">Error: {{ error|escape }}</p>
+							{% endfor %}
+						{% endif %}
+
+						<div class="pi-col-md-12 pi-section-white m-t-10">
+							<div class="pi-row pi-grid-small-margins">
+
+
+								<!--	Customer
+								========================================= -->
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label for="label-reservation-phone"> Customer </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-user"> </i>
+											</span>
+											{{ CheckoutConditionForm.customer | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+											<a href="{% url 'customer_new' %}" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+
+
+								<!--	Bike
+								========================================= -->
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label for="label-reservation-phone"> Bike </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-bicycle"> </i>
+											</span>
+											{{ CheckoutConditionBikeForm.name | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+											<a href="{% url 'bike_new' %}" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+								
+
+								<!--	License Plate
+								========================================= -->
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label for="label-mileage"> License Plate </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="icon-ecommerce_graph_increase"> </i>
+											</span>
+											{{ CheckoutConditionBikeForm.license_plate | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+
+
+								<!--	checkout time actual
+								========================================= -->
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-mileage"> Check-Out Date </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="icon-basic_elaboration_calendar_next"> </i>
+											</span>
+											{{ CheckoutConditionForm.checkout_datetime | add_class:"form-control datetimepicker" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+
+								<!--	checkin time actual
+								========================================= -->
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-mileage"> Check-In Date </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="icon-basic_elaboration_calendar_next"> </i>
+											</span>
+											{{ CheckoutConditionForm.checkin_datetime | add_class:"form-control datetimepicker" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+							<!--	Image of Bike
+							========================================= -->
+							<div class="pi-row pi-grid-small-margins">
+								<div class="pi-col-sm-12">
+									<div id="checkout-sketch"></div>
+								</div>
+							</div>
+							<script>
+								$(function() {
+									var simpleBoard = new DrawingBoard.Board('checkout-sketch', {
+										controls: false,
+										webStorage: false,
+										color: '#D05454',
+										webStorage: 'local',
+										size: 3,
+										stretchImg: true,
+										enlargeYourContainer: true,
+
+										{% if reservation.checkout_condition %}
+											background: "{{ reservation.checkout_condition }}"
+										{% else %}
+											background: "{% static 'img/checkout/condition.png' %}"
+										{% endif %}
+										
+									});
+
+									$('#form-checkout-condition').on('submit', function(e) {
+										var img = simpleBoard.getImg();
+										var imgInput = (simpleBoard.blankCanvas == img) ? '' : img;
+									  	$(this).find('input[name=condition]').val( imgInput );
+									  	simpleBoard.clearWebStorage();
+									});
+								});
+							</script>
+							
+							
+
+							<!--	Upload Condition Images
+							========================================= -->
+							<div class="pi-row pi-grid-small-margins">
+
+								<div class="pi-col-sm-12 m-b-0 p-l-0 m-l-10" style="border-bottom: 1px solid #EEE; width: 98%;">
+									<label class="m-t-20 fw-400" for="label-reservation-phone"> Bike's Condition - Upload  Images </label>
+								</div>
+
+								
+								<!--	Image 1
+								========================================= -->
+								<div class="pi-col-sm-4">
+									<div class="form-group m-b-0">
+										<label for="label-reservation-phone"> </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-photo"> </i>
+											</span>
+											{{ CheckoutConditionForm.checkout_img_1 | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+
+
+								<!--	Image 2
+								========================================= -->
+								<div class="pi-col-sm-4">
+									<div class="form-group m-b-0">
+										<label for="label-reservation-phone">  </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-photo"> </i>
+											</span>
+											{{ CheckoutConditionForm.checkout_img_2 | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+
+
+								<!--	Image 3
+								========================================= -->
+								<div class="pi-col-sm-4">
+									<div class="form-group m-b-0">
+										<label for="label-reservation-phone">  </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-photo"> </i>
+											</span>
+											{{ CheckoutConditionForm.checkout_img_3 | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+
+
+								<!--	Image 4
+								========================================= -->
+								<div class="pi-col-sm-4">
+									<div class="form-group m-b-0">
+										<label for="label-reservation-phone">  </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-photo"> </i>
+											</span>
+											{{ CheckoutConditionForm.checkout_img_4 | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<!--	Image 5
+								========================================= -->
+								<div class="pi-col-sm-4">
+									<div class="form-group m-b-0">
+										<label for="label-reservation-phone">  </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-photo"> </i>
+											</span>
+											{{ CheckoutConditionForm.checkout_img_5 | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+
+								<!--	Image 6
+								========================================= -->
+								<div class="pi-col-sm-4">
+									<div class="form-group m-b-0">
+										<label for="label-reservation-phone">  </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-photo"> </i>
+											</span>
+											{{ CheckoutConditionForm.checkout_img_6 | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							
+							<!--	Checkout Notes
+							========================================= -->
+							<div class="pi-row pi-grid-small-margins m-t-20">
+								<div id="notes" class="pi-col-sm-12 p-rl-7">
+									<div class="form-group m-b-0">
+										<label for="label-notes"> Notes </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-comment"> </i>
+											</span>
+											{{ CheckoutConditionForm.notes | add_class:"form-control" | attr:"rows:5" | attr:"type:textarea" }}
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+							<!--	Signature
+							========================================= -->
+							<div class="pi-row pi-grid-small-margins m-t-20">
+								<div class="pi-col-sm-12">
+									<label class="fw-400"> Signature </label>
+									<div id="checkout-signature"></div>
+								</div>
+							</div>
+							<script>
+								$(function() {
+									var simpleBoard = new DrawingBoard.Board('checkout-signature', {
+										controls: false,
+										webStorage: false,
+										color: '#D05454',
+										webStorage: 'local',
+										size: 3,
+										stretchImg: true,
+
+										{% if reservation.checkout_signature %}
+											background: "{{ reservation.checkout_signature }}",
+										{% else %}
+											background: "#fbfcfc"
+										{% endif %}
+									});
+
+									$('#form-checkout-condition').on('submit', function(e) {
+										var img = simpleBoard.getImg();
+										var imgInput = (simpleBoard.blankCanvas == img) ? '' : img;
+									  	$(this).find('input[name=signature]').val( imgInput );
+									  	simpleBoard.clearWebStorage();
+									});
+								});
+							</script>
+
+
+							<!--	Submit / Close Buttons
+							========================================= -->
+							<p class="pi-text-center m-t-40">
+								<a href="{% url 'checkout' pk=reservation.pk %}" class="btn mt-grey-gallery-bg p-rl-40 m-r-5"> Cancel</a>
+								<button type="submit" value="{{ reservation.pk }}" name="pk" class="btn base p-rl-40"> Save </button>
+								<input type="hidden" name="condition" value=""/>
+								<input type="hidden" name="signature" value=""/>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+
+
+{% endblock %}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html class="no-js" lang="en-US">
+ <head>
+  <!-- DEFAULT META TAGS -->
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <!-- FONTS -->
+  <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"/>
+  <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet" type="text/css"/>
+  <link href="http://fonts.googleapis.com/css?family=Lora:400italic,700italic" rel="stylesheet" type="text/css"/>
+  <!-- CSS -->
+  <link href="{% static 'sudo/files/css/style.css' %}" id="default-style-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="{% static 'sudo/files/css/mqueries.css' %}" id="mqueries-style-css" media="all" rel="stylesheet" type="text/css"/>
+  <!-- FAVICON -->
+  <link href="{% static 'sudo/files/uploads/favicon.png' %}" rel="shortcut icon"/>
+  <!-- DOCUMENT TITLE -->
+  <title>
+   Bond6 Fitness
+  </title>
+ </head>
+ <body>
+  <!-- PAGE CONTENT -->
+  <div id="page-content">
+   <!-- PAGEBODY -->
+   <section class="notoppadding" id="page-body">
+    <div class="fullwidth-section fullheight text-light" style="background:url(files/uploads/1680x1050-dark.jpg) center center; background-size:cover;">
+     <div class="fullwidth-content wrapper-small align-center">
+      <img alt="Logo" src="{% static 'sudo/files/uploads/logo-sudo-scroll.png' %}" srcset="files/uploads/logo-sudo-scroll.png 1x, files/uploads/logo-sudo-scroll@2x.png 2x"/>
+      <h1>
+       <strong>
+        We're doing
+        <br/>
+        a little maintenance
+       </strong>
+      </h1>
+      <h5 class="subtitle-2">
+       Don't worry, we will be back soon
+       <br/>
+       Please check back in sometime
+      </h5>
+      <div class="spacer-medium">
+      </div>
+      <a class="sr-button button-small button-4 rounded" href="{% url 'sudo-index' %}">
+       Back to homepage
+      </a>
+     </div>
+    </div>
+    <!-- END .fullwidth-section -->
+   </section>
+   <!-- PAGEBODY -->
+  </div>
+  <!-- END #page-content -->
+  <!-- PAGE CONTENT -->
+  <!-- SCRIPTS -->
+  <script src="{% static 'sudo/files/js/jquery-2.1.4.min.js' %}">
+  </script>
+  <script src="{% static 'sudo/files/js/script.js' %}" type="text/javascript">
+  </script>
+  <!-- SCRIPTS -->
+ </body>
+</html>

@@ -1,7 +1,7 @@
 {
 	"trailing_spaces_enabled": true,
 	"trailing_spaces_file_max_size": 1048576,
-	"trailing_spaces_highlight_color": "entity.other.attribute-name",
+	"trailing_spaces_highlight_color": "",
 	"trailing_spaces_include_current_line": false,
 	"trailing_spaces_include_empty_lines": false,
 	"trailing_spaces_modified_lines_only": false,

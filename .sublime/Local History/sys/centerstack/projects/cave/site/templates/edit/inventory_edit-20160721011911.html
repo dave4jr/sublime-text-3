@@ -1,0 +1,278 @@
+<!--======================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	inventory_details.html
+ *======================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% block content_site %}
+
+<!--	Inventory
+========================================= -->
+<div class="row">
+	<div class="col-md-12">
+		<div class="portlet box base">
+
+			<!--	Top Toolbar
+			========================================= -->
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="pe-7s-users"> </i>
+					{% if request.path == "/inventory/new/" %}
+						<span class="caption-subject font-white capitalize"> New inventory </span>
+					{% else %}
+						<span class="caption-subject font-white capitalize"> Edit inventory </span>
+					{% endif %}
+				</div>
+			</div>
+			<div class="portlet-body">
+				<div class="pi-row">
+					<div class="pi-col-sm-10 pi-col-sm-offset-1 pi-section-white m-t-30">
+
+						<!--	Form
+						========================================= -->
+						<form action="" method="post" role="form">
+							{% csrf_token %}
+							<div class="pi-row pi-grid-small-margins">
+
+								<div class="pi-col-sm-12">
+									<div class="form-group">
+										<label> UPC </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-ticket"></i>
+											</span>
+											{{ InventoryForm.upc | add_class:"form-control" | attr:"placeholder:Enter UPC And Hit Search..." }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-12">
+
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label> Title </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-info"></i>
+											</span>
+											{{ InventoryForm.title | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+											<a href="{% url 'dropdowns' %}" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label> Group </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="icon-icon-25-key"></i>
+											</span>
+											{{ InventoryForm.group | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+											<a href="{% url 'dropdowns' %}" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label> Description </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-comment"></i>
+											</span>
+											{{ InventoryForm.description | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label> Brand </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="icon-icon-25-key"></i>
+											</span>
+											{{ InventoryForm.brand | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+											<a href="{% url 'dropdowns' %}" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label> Avg Price </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="icon-icon-25-key"></i>
+											</span>
+											{{ InventoryForm.avg_price | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+											<a href="{% url 'dropdowns' %}" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label> Pack </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="icon-icon-25-key"></i>
+											</span>
+											{{ InventoryForm.pack | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+											<a href="{% url 'dropdowns' %}" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label> Quantity </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="icon-icon-25-key"></i>
+											</span>
+											{{ InventoryForm.quantity | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+											<a href="{% url 'dropdowns' %}" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label> Cost </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="icon-icon-25-key"></i>
+											</span>
+											{{ InventoryForm.cost | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+											<a href="{% url 'dropdowns' %}" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label> Vendor </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="icon-icon-25-key"></i>
+											</span>
+											{{ InventoryForm.vendor | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+											<a href="{% url 'dropdowns' %}" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label> Markup </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="icon-icon-25-key"></i>
+											</span>
+											{{ InventoryForm.markup | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+											<a href="{% url 'dropdowns' %}" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label> Retail </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="icon-icon-25-key"></i>
+											</span>
+											{{ InventoryForm.retail | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+											<a href="{% url 'dropdowns' %}" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+							<!--	Notes
+							========================================= -->
+							<div class="pi-row pi-grid-small-margins">
+								<div class="pi-col-xs-12 pi-section-white">
+									<div class="form-group">
+										<label for="label-inventory-phone"> Notes </label>
+										<div class="pi-input-with-icon">
+											<div class="pi-input-icon">
+												<i class="pe-7s-comment"> </i>
+											</div>
+											{{ inventoryForm.notes | add_class:"form-control p-l-40" | attr:"rows:5" | attr:"type:textarea" }}
+										</div>
+									</div>
+								</div>
+							</div>
+							<p><span class="font-mt-red">* Required</span></p>
+
+							<!--	Submit / Delete
+							========================================= -->
+							{% if request.path == "/inventory/new/" %}
+								<p class="pi-text-center m-t-40">
+									<a href="{% url 'inventory' %}" class="btn mt-grey-gallery-bg p-rl-40 m-r-5"> Cancel<i class="pe-7s-close-circle pi-icon-right"></i></a>
+									<button type="submit" value="{{ inventory.pk }}" name="save" class="btn base p-rl-40"> Save<i class="pe-7s-check pi-icon-right"></i></button>
+								</p>
+							{% else %}
+								<p class="pi-text-center m-t-40">
+									<button type="submit" value="{{ inventory.pk }}" name="delete" class="btn mt-grey-gallery-bg p-rl-40 m-r-5" formnovalidate> Delete<i class="pe-7s-close-circle pi-icon-right"></i></button>
+									<button type="submit" value="{{ inventory.pk }}" name="save" class="btn base p-rl-40"> Save<i class="pe-7s-check pi-icon-right"></i></button>
+								</p>
+							{% endif %}
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}

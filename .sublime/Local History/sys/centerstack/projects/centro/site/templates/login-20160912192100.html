@@ -1,0 +1,49 @@
+<!--==========================
+ *  Author:   Dave Luke Jr
+ *  Company:  CenterStack.io
+ *  Description:  index.html
+ *==========================-->
+ {% extends "base.html" %}
+ {% load widget_tweaks %}
+ {% load humanize %}
+ {% load mathfilters %}
+ {% load staticfiles %}
+ {% load customtags %}
+ {% block header %}{% endblock %}
+ {% block content %}
+
+ <section class="body-content">
+ 	<div class="login login-bg login-parallax">
+ 		<div class="container">
+ 			<div class="login-box btn-rounded p-t-0 p-b-10">
+ 				<form action="http://qnet.e-quantum2k.com/~centro/cgi-bin/nph-login.cgi" enctype="application/x-www-form-urlencoded" id="login-form" method="post" name="login-form">
+ 					<div class="text-center p-b-10 p-t-15">
+ 						<h2> Online Ordering </h2>
+ 					</div>
+ 					<div class="form-group">
+ 						<input class="form-control" id="login-form-client" name="Client" placeholder="Company" type="text" value="" />
+ 					</div>
+ 					<div class="form-group">
+ 						<input class="form-control " id="login-form-cost-center" name="CC" placeholder="Cost Center" type="text" value="" />
+ 					</div>
+ 					<div class="form-group">
+ 						<input class="form-control " id="login-form-cost-username" name="User" placeholder="Username" type="text" value="" />
+ 					</div>
+ 					<div class="form-group">
+ 						<input class="form-control" id="login-form-cost-password" name="password" placeholder="Passwd" type="password" value="" />
+ 					</div>
+ 					<div class="form-group form-buttons">
+ 						<button class="btn btn-small btn-dark-solid half-width btn-rounded" id="login-form-submit" name="login-form-submit" value="login"> Login </button>
+ 						<button onclick="window.location.href = '/';" type="button" class="btn btn-small btn-dark-solid half-width btn-rounded" id="login-cancel-submit" name="login-cancel-submit" value="cancel"> Cancel </button>
+ 					</div>
+ 				</form>
+ 				<div class="contact-info-div">
+ 					<p class="fs-12 lh-18 p-b-0">For login assistance or for more information about Centro Online Ordering, please contact us at (541) 382-3534 or toll-free at (888) 828-1999.</p>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</div>
+ </section>
+
+{% endblock %}
+{% block footer %}{% endblock %}

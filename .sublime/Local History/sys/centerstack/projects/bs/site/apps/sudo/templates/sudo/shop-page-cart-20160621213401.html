@@ -1,0 +1,912 @@
+<!DOCTYPE html> {% load staticfiles %}
+<html class="no-js" lang="en-US">
+<head>
+	<meta charset="utf-8" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet" type="text/css" />
+	<link href="http://fonts.googleapis.com/css?family=Lora:400italic,700italic" rel="stylesheet" type="text/css" />
+	<link href="{% static 'sudo/files/css/style.css' %}" id="default-style-css" media="all" rel="stylesheet" type="text/css" />
+	<link href="{% static 'sudo/files/css/font-awesome.min.css' %}" id="fontawesome-style-css" media="all" rel="stylesheet" type="text/css" />
+	<link href="{% static 'sudo/files/css/ionicons.css' %}" id="ionic-icons-style-css" media="all" rel="stylesheet" type="text/css" />
+	<link href="{% static 'sudo/files/css/mqueries.css' %}" id="mqueries-style-css" media="all" rel="stylesheet" type="text/css" />
+	<link href="{% static 'sudo/files/uploads/favicon.png' %}" rel="shortcut icon" />
+	<title> VillaReal </title>
+</head>
+
+<body>
+	<div id="page-loader">
+		<div class="page-loader-inner">
+			<span class="loader-figure"> </span>
+			<h6 class="loader-label"> Loading </h6>
+			<img alt="Loader Logo" class="loader-logo" src="{% static 'sudo/files/uploads/logo-sudo-scroll.png' %}" srcset="files/uploads/logo-sudo-scroll.png 1x, files/uploads/logo-sudo-scroll@2x.png 2x" /> </div>
+	</div>
+	<div id="page-content">
+		<header class="header-bordered header-transparent" id="header">
+			<div class="header-inner clearfix">
+				<div class="left-float" id="logo">
+					<a href="{% url 'sudo-index' %}">
+						<img alt="Logo Scroll" id="scroll-logo" src="{% static 'sudo/files/uploads/logo-sudo-scroll.png' %}" srcset="files/uploads/logo-sudo-scroll.png 1x, files/uploads/logo-sudo-scroll@2x.png 2x" />
+						<img alt="Logo Dark" id="dark-logo" src="{% static 'sudo/files/uploads/logo-sudo-dark.png' %}" srcset="files/uploads/logo-sudo-dark.png 1x, files/uploads/logo-sudo-dark@2x.png 2x" />
+						<img alt="Logo Light" id="light-logo" src="{% static 'sudo/files/uploads/logo-sudo-light.png' %}" srcset="files/uploads/logo-sudo-light.png 1x, files/uploads/logo-sudo-light@2x.png 2x" /> </a>
+				</div>
+				<div class="right-float" id="menu">
+					<a class="responsive-nav-toggle" href="#">
+						<span class="hamburger"> </span>
+					</a>
+					<div class="menu-inner">
+						<nav id="main-nav">
+							<ul>
+								<li class="menu-item-has-children">
+									<a href="{% url 'sudo-index' %}"> Home </a>
+									<ul class="submenu">
+										<li class="menu-item-has-children">
+											<a href="{% url 'sudo-index' %}"> Agency </a>
+											<ul class="submenu">
+												<li><a href="{% url 'sudo-index' %}"> Agency Main </a></li>
+												<li><a href="{% url 'sudo-index-agency-business' %}"> Agency Business </a></li>
+												<li><a href="{% url 'sudo-index-agency-creative' %}"> Agency Creative </a></li>
+											</ul>
+										</li>
+										<li class="menu-item-has-children">
+											<a href="{% url 'sudo-index-portfolio-modern' %}"> Portfolio </a>
+											<ul class="submenu">
+												<li><a href="{% url 'sudo-index-portfolio-modern' %}"> Portfolio Modern </a></li>
+												<li><a href="{% url 'sudo-index-portfolio-classic' %}"> Portfolio Classic </a></li>
+												<li><a href="{% url 'sudo-index-portfolio-creative' %}"> Portfolio Creative </a></li>
+												<li><a href="{% url 'sudo-index-portfolio-freelancer' %}"> Portfolio Freelancer </a></li>
+											</ul>
+										</li>
+										<li class="menu-item-has-children">
+											<a href="{% url 'sudo-index-blog-classic' %}"> Blog </a>
+											<ul class="submenu">
+												<li><a href="{% url 'sudo-index-blog-classic' %}"> Blog Classic </a></li>
+												<li><a href="{% url 'sudo-index-blog-modern' %}"> Blog Modern </a></li>
+												<li><a href="{% url 'sudo-index-blog-magazine' %}"> Blog Magazine </a></li>
+											</ul>
+										</li>
+										<li class="menu-item-has-children">
+											<a href="{% url 'sudo-index-shop-1' %}"> Shop </a>
+											<ul class="submenu">
+												<li><a href="{% url 'sudo-index-shop-1' %}"> Shop 1 </a></li>
+												<li><a href="{% url 'sudo-index-shop-2' %}"> Shop 2 </a></li>
+											</ul>
+										</li>
+										<li><a href="{% url 'sudo-index-architecture' %}"> Architecture </a></li>
+										<li><a href="{% url 'sudo-index-applanding' %}"> App Landing </a></li>
+										<li><a href="{% url 'sudo-index-fitness' %}"> Gym / Fitness </a></li>
+										<li><a href="{% url 'sudo-index-music' %}"> Music / Band </a></li>
+										<li><a href="{% url 'sudo-index-photography' %}"> Photography </a></li>
+										<li><a href="{% url 'sudo-index-photography-gallery' %}"> Gallery </a></li>
+										<li><a href="{% url 'sudo-index-restaurant' %}"> Resaturant </a></li>
+										<li><a href="{% url 'sudo-index-medical' %}"> Medical </a></li>
+										<li><a href="{% url 'sudo-index-onepage' %}"> One Page </a></li>
+									</ul>
+								</li>
+								<li class="menu-item-has-children">
+									<a href="{% url 'sudo-about-classic' %}"> Pages </a>
+									<ul class="submenu">
+										<li class="menu-item-has-children">
+											<a href="{% url 'sudo-about-classic' %}"> About </a>
+											<ul class="submenu">
+												<li><a href="{% url 'sudo-about-classic' %}"> About Classic </a></li>
+												<li><a href="{% url 'sudo-about-creative' %}"> About Creative </a></li>
+												<li><a href="{% url 'sudo-about-minimal' %}"> About Minimal </a></li>
+												<li><a href="{% url 'sudo-about-me' %}"> About Me </a></li>
+											</ul>
+										</li>
+										<li class="menu-item-has-children">
+											<a href="{% url 'sudo-services-classic' %}"> Services </a>
+											<ul class="submenu">
+												<li><a href="{% url 'sudo-services-classic' %}"> Services Classic </a></li>
+												<li><a href="{% url 'sudo-services-creative' %}"> Services Creative </a></li>
+												<li><a href="{% url 'sudo-services-minimal' %}"> Services Minimal </a></li>
+											</ul>
+										</li>
+										<li class="menu-item-has-children">
+											<a href="{% url 'sudo-contact-classic' %}"> Contact </a>
+											<ul class="submenu">
+												<li><a href="{% url 'sudo-contact-classic' %}"> Contact Classic </a></li>
+												<li><a href="{% url 'sudo-contact-creative' %}"> Contact Creative </a></li>
+												<li><a href="{% url 'sudo-contact-minimal' %}"> Contact Minimal </a></li>
+											</ul>
+										</li>
+										<li class="menu-item-has-children">
+											<a href="{% url 'sudo-about-classic' %}"> Miscellaneous </a>
+											<ul class="submenu">
+												<li><a href="{% url 'sudo-misc-maintenance' %}"> Maintenance </a></li>
+												<li><a href="{% url 'sudo-misc-faq' %}"> FAQ </a></li>
+												<li><a href="{% url 'sudo-misc-404' %}"> 404 </a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li class="menu-item-has-children mega-menu">
+									<a href="{% url 'sudo-portfolio-modern-fullwidth' %}"> Portfolio </a>
+									<div class="mega-menu-content col-4">
+										<div class="mega-menu-inner clearfix">
+											<ul>
+												<li class="mega-menu-title">
+													<a href="{% url 'sudo-portfolio-modern-fullwidth' %}"> Fullwidth Layout </a>
+													<ul>
+														<li><a href="{% url 'sudo-portfolio-modern-fullwidth' %}"> Modern </a></li>
+														<li><a href="{% url 'sudo-portfolio-modern-fullwidth-spaced' %}"> Modern Spaced </a></li>
+														<li><a href="{% url 'sudo-portfolio-grid-fullwidth' %}"> Grid </a></li>
+														<li><a href="{% url 'sudo-portfolio-grid-fullwidth-spaced' %}"> Grid Spaced </a></li>
+														<li><a href="{% url 'sudo-portfolio-masonry-fullwidth' %}"> Masonry </a></li>
+														<li><a href="{% url 'sudo-portfolio-masonry-fullwidth-spaced' %}"> Masonry Spaced </a></li>
+														<li><a href="{% url 'sudo-portfolio-carousel-fullwidth' %}"> Carousel </a></li>
+														<li><a href="{% url 'sudo-portfolio-carousel-fullwidth-spaced' %}"> Carousel Spaced </a></li>
+													</ul>
+												</li>
+												<li class="mega-menu-title">
+													<a href="{% url 'sudo-portfolio-modern-boxed' %}"> Boxed Layout </a>
+													<ul>
+														<li><a href="{% url 'sudo-portfolio-modern-boxed' %}"> Modern </a></li>
+														<li><a href="{% url 'sudo-portfolio-modern-boxed-spaced' %}"> Modern Spaced </a></li>
+														<li><a href="{% url 'sudo-portfolio-grid-boxed' %}"> Grid </a></li>
+														<li><a href="{% url 'sudo-portfolio-grid-boxed-spaced' %}"> Grid Spaced </a></li>
+														<li><a href="{% url 'sudo-portfolio-masonry-boxed' %}"> Masonry </a></li>
+														<li><a href="{% url 'sudo-portfolio-masonry-boxed-spaced' %}"> Masonry Spaced </a></li>
+														<li><a href="{% url 'sudo-portfolio-carousel-boxed' %}"> Carousel </a></li>
+														<li><a href="{% url 'sudo-portfolio-carousel-boxed-spaced' %}"> Carousel Spaced </a></li>
+													</ul>
+												</li>
+												<li class="mega-menu-title">
+													<a href="{% url 'sudo-index' %}"> Variations </a>
+													<ul>
+														<li><a href="{% url 'sudo-portfolio-grid-col2' %}"> Grid 2 Columns </a></li>
+														<li><a href="{% url 'sudo-portfolio-grid-col3' %}"> Grid 3 Columns </a></li>
+														<li><a href="{% url 'sudo-portfolio-grid-col4' %}"> Grid 4 Columns </a></li>
+														<li><a href="{% url 'sudo-portfolio-grid-col5' %}"> Grid 5 Columns </a></li>
+														<li><a href="{% url 'sudo-portfolio-masonry-col2' %}"> Masonry 2 Columns </a></li>
+														<li><a href="{% url 'sudo-portfolio-masonry-col3' %}"> Masonry 3 Columns </a></li>
+														<li><a href="{% url 'sudo-portfolio-masonry-col4' %}"> Masonry 4 Columns </a></li>
+														<li><a href="{% url 'sudo-portfolio-masonry-col5' %}"> Masonry 5 Columns </a></li>
+													</ul>
+												</li>
+												<li class="mega-menu-title">
+													<a href="{% url 'sudo-portfolio-single-smartnav' %}"> Single View </a>
+													<ul>
+														<li><a href="{% url 'sudo-portfolio-single-smartnav' %}"> Smart Nav </a></li>
+														<li><a href="{% url 'sudo-portfolio-single-custom' %}"> Custom </a></li>
+														<li><a href="{% url 'sudo-portfolio-single-gallery' %}"> Gallery </a></li>
+														<li><a href="{% url 'sudo-portfolio-single-slider' %}"> Slider </a></li>
+														<li><a href="{% url 'sudo-portfolio-single-sidebar' %}"> Sidebar </a></li>
+														<li><a href="{% url 'sudo-portfolio-single-photography' %}"> Photography </a></li>
+														<li><a href="{% url 'sudo-portfolio-single-video' %}"> Video Project </a></li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li class="menu-item-has-children mega-menu">
+									<a href="{% url 'sudo-header-light' %}"> Features </a>
+									<div class="mega-menu-content col-4">
+										<div class="mega-menu-inner clearfix">
+											<ul>
+												<li class="mega-menu-title">
+													<a href="{% url 'sudo-header-light' %}"> Header </a>
+													<ul>
+														<li><a href="{% url 'sudo-header-light' %}"> Light Header </a></li>
+														<li><a href="{% url 'sudo-header-dark' %}"> Dark Header </a></li>
+														<li><a href="{% url 'sudo-header-transparent-light' %}"> Transparent Light </a></li>
+														<li><a href="{% url 'sudo-header-transparent-dark' %}"> Transparent Dark </a></li>
+														<li><a href="{% url 'sudo-header-noborders' %}"> No Borders </a></li>
+														<li><a href="{% url 'sudo-header-sub-light' %}"> Submenu Light </a></li>
+														<li><a href="{% url 'sudo-header-sub-dark' %}"> Submenu Dark </a></li>
+														<li><a href="{% url 'sudo-header-logoswitch' %}"> Logo Switch </a></li>
+													</ul>
+												</li>
+												<li class="mega-menu-title">
+													<a href="{% url 'sudo-hero-slider' %}"> Hero / Pagetitle </a>
+													<ul>
+														<li><a href="{% url 'sudo-hero-slider' %}"> Slider </a></li>
+														<li><a href="{% url 'sudo-hero-parallax' %}"> Parallax Background </a></li>
+														<li><a href="{% url 'sudo-hero-video' %}"> Video Background </a></li>
+														<li><a href="{% url 'sudo-hero-color' %}"> Color Background </a></li>
+														<li><a href="{% url 'sudo-hero-simple' %}"> Without Background </a></li>
+														<li><a href="{% url 'sudo-hero-height-auto' %}"> Auto Height </a></li>
+														<li><a href="{% url 'sudo-hero-height-big' %}"> Big Height </a></li>
+														<li><a href="{% url 'sudo-hero-height-full' %}"> Full Height </a></li>
+													</ul>
+												</li>
+												<li class="mega-menu-title">
+													<a href="{% url 'sudo-footer-light' %}"> Footer </a>
+													<ul>
+														<li><a href="{% url 'sudo-footer-light' %}"> Light Footer </a></li>
+														<li><a href="{% url 'sudo-footer-dark' %}"> Dark Footer </a></li>
+														<li><a href="{% url 'sudo-footer-custom' %}"> Custom Background </a></li>
+														<li><a href="{% url 'sudo-footer-minimal' %}"> Minimal </a></li>
+														<li><a href="{% url 'sudo-footer-col3' %}"> 3 Columns </a></li>
+														<li><a href="{% url 'sudo-footer-col4' %}"> 4 Columns </a></li>
+														<li><a href="{% url 'sudo-footer-col5' %}"> 5 Columns </a></li>
+													</ul>
+												</li>
+												<li class="mega-menu-title">
+													<a href="{% url 'sudo-shop-page-cart' %}"> Media </a>
+													<ul>
+														<li><a href="{% url 'sudo-media-video' %}"> Video </a></li>
+														<li><a href="{% url 'sudo-media-audio' %}"> Audio </a></li>
+														<li><a href="{% url 'sudo-media-slider' %}"> Slider </a></li>
+														<li><a href="{% url 'sudo-media-carousel' %}"> Carousel </a></li>
+														<li><a href="{% url 'sudo-media-gallery' %}"> Gallery </a></li>
+														<li><a href="{% url 'sudo-media-hover-effects' %}"> Hover effects </a></li>
+														<li><a href="{% url 'sudo-media-feeds' %}"> Media Feeds </a></li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li class="menu-item-has-children mega-menu">
+									<a href="{% url 'sudo-blog-modern-fullwidth' %}"> Blog </a>
+									<div class="mega-menu-content col-4">
+										<div class="mega-menu-inner clearfix">
+											<ul>
+												<li class="mega-menu-title">
+													<a href="{% url 'sudo-blog-modern-fullwidth' %}"> Fullwidth Layouts </a>
+													<ul>
+														<li>
+															<a href="{% url 'sudo-blog-modern-fullwidth' %}"> Modern
+																<em> no hero </em>
+															</a>
+														</li>
+														<li><a href="{% url 'sudo-blog-modern-fullwidth-sidebar' %}"> Modern Sidebar </a></li>
+														<li><a href="{% url 'sudo-blog-grid-fullwidth' %}"> Grid </a></li>
+														<li><a href="{% url 'sudo-blog-grid-fullwidth-sidebar' %}"> Grid Sidebar </a></li>
+														<li><a href="{% url 'sudo-blog-masonry-fullwidth' %}"> Masonry </a></li>
+														<li><a href="{% url 'sudo-blog-masonry-fullwidth-sidebar' %}"> Masonry Sidebar </a></li>
+														<li><a href="{% url 'sudo-blog-classic' %}"> Classic </a></li>
+														<li><a href="{% url 'sudo-blog-classic-fullwidth-sidebar' %}"> Classic Sidebar </a></li>
+													</ul>
+												</li>
+												<li class="mega-menu-title">
+													<a href="{% url 'sudo-blog-modern-boxed' %}"> Boxed Layouts </a>
+													<ul>
+														<li><a href="{% url 'sudo-blog-modern-boxed' %}"> Modern </a></li>
+														<li><a href="{% url 'sudo-blog-modern-boxed-sidebar' %}"> Modern Sidebar </a></li>
+														<li><a href="{% url 'sudo-blog-grid-boxed' %}"> Grid </a></li>
+														<li><a href="{% url 'sudo-blog-grid-boxed-sidebar' %}"> Grid Sidebar </a></li>
+														<li><a href="{% url 'sudo-blog-masonry-boxed' %}"> Masonry </a></li>
+														<li><a href="{% url 'sudo-blog-masonry-boxed-sidebar' %}"> Masonry Sidebar </a></li>
+														<li><a href="{% url 'sudo-blog-classic' %}"> Classic </a></li>
+														<li><a href="{% url 'sudo-blog-classic-boxed-sidebar' %}"> Classic Sidebar </a></li>
+													</ul>
+												</li>
+												<li class="mega-menu-title">
+													<a href="{% url 'sudo-blog-single-classic' %}"> Single Layout </a>
+													<ul>
+														<li><a href="{% url 'sudo-blog-single-classic' %}"> Classic </a></li>
+														<li><a href="{% url 'sudo-blog-single-custom1' %}"> Custom One </a></li>
+														<li><a href="{% url 'sudo-blog-single-custom2' %}"> Custom Two </a></li>
+														<li><a href="{% url 'sudo-blog-single-custom3' %}"> Custom Three </a></li>
+														<li><a href="{% url 'sudo-blog-single-video-hero' %}"> Video Hero </a></li>
+														<li><a href="{% url 'sudo-blog-single-sidebar' %}"> Sidebar </a></li>
+														<li><a href="{% url 'sudo-blog-single-sidebar-fullwidth' %}"> Sidebar Fullwidth </a></li>
+													</ul>
+												</li>
+												<li class="mega-menu-title">
+													<a href="{% url 'sudo-blog-single-video-extern' %}"> Post Types </a>
+													<ul>
+														<li><a href="{% url 'sudo-blog-single-video-extern' %}"> Video Extern </a></li>
+														<li><a href="{% url 'sudo-blog-single-video-selfhosted' %}"> Video Selfhosted </a></li>
+														<li><a href="{% url 'sudo-blog-single-audio-extern' %}"> Audio Extern </a></li>
+														<li><a href="{% url 'sudo-blog-single-audio-selfhosted' %}"> Audio Selfhosted </a></li>
+														<li><a href="{% url 'sudo-blog-single-slider' %}"> Slider </a></li>
+														<li><a href="{% url 'sudo-blog-single-gallery' %}"> Gallery </a></li>
+														<li><a href="{% url 'sudo-blog-single-quote' %}"> Quote </a></li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li class="menu-item-has-children">
+									<a href="{% url 'sudo-shop-grid-fullwidth' %}"> Shop </a>
+									<ul class="submenu">
+										<li class="menu-item-has-children">
+											<a href="{% url 'sudo-shop-grid-fullwidth' %}"> Layout </a>
+											<ul class="submenu">
+												<li><a href="{% url 'sudo-shop-grid-fullwidth' %}"> Grid Fullwidth </a></li>
+												<li><a href="{% url 'sudo-shop-grid-boxed' %}"> Grid Boxed </a></li>
+												<li><a href="{% url 'sudo-shop-grid-sidebar-left' %}"> Sidebar Left </a></li>
+												<li><a href="{% url 'sudo-shop-grid-sidebar-right' %}"> Sidebar Right </a></li>
+												<li><a href="{% url 'sudo-shop-grid-columns2' %}"> Two columns </a></li>
+												<li><a href="{% url 'sudo-shop-grid-columns3' %}"> Three columns </a></li>
+												<li><a href="{% url 'sudo-shop-grid-boxed' %}"> Four columns </a></li>
+												<li><a href="{% url 'sudo-shop-grid-fullwidth' %}"> Five columns </a></li>
+											</ul>
+										</li>
+										<li class="menu-item-has-children">
+											<a href="{% url 'sudo-shop-single-simple' %}"> Single View </a>
+											<ul class="submenu">
+												<li><a href="{% url 'sudo-shop-single-simple' %}"> Simple </a></li>
+												<li><a href="{% url 'sudo-shop-single-sale' %}"> Sale </a></li>
+												<li><a href="{% url 'sudo-shop-single-custom' %}"> Custom </a></li>
+												<li><a href="{% url 'sudo-shop-single-hero' %}"> With Hero </a></li>
+											</ul>
+										</li>
+										<li class="menu-item-has-children">
+											<a href="{% url 'sudo-shop-page-cart' %}"> Pages </a>
+											<ul class="submenu">
+												<li><a href="{% url 'sudo-shop-page-cart' %}"> Cart </a></li>
+												<li><a href="{% url 'sudo-shop-page-checkout' %}"> Checkout </a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li class="menu-item-has-children">
+									<a href="{% url 'sudo-elements-columns' %}"> Elements </a>
+									<ul class="submenu">
+										<li><a href="{% url 'sudo-elements-columns' %}"> Columns </a></li>
+										<li><a href="{% url 'sudo-elements-buttons' %}"> Buttons </a></li>
+										<li><a href="{% url 'sudo-elements-tabs-arc' %}"> Tabs &amp; Accordion </a></li>
+										<li><a href="{% url 'sudo-elements-separators' %}"> Separators / Deviders </a></li>
+										<li><a href="{% url 'sudo-elements-team' %}"> Team Member </a></li>
+										<li><a href="{% url 'sudo-elements-counter' %}"> Counter </a></li>
+										<li><a href="{% url 'sudo-elements-progressbar' %}"> Progress Bars </a></li>
+										<li><a href="{% url 'sudo-elements-pricing' %}"> Pricing Tables </a></li>
+										<li><a href="{% url 'sudo-elements-testimonials' %}"> Testimonials </a></li>
+										<li><a href="{% url 'sudo-elements-socialicons' %}"> Social Links </a></li>
+										<li><a href="{% url 'sudo-elements-iconboxes' %}"> Icon Boxes </a></li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+						<div class="clearfix" id="menu-misc">
+							<div id="header-search">
+								<a href="#" id="show-search">
+									<i class="fa fa-search"> </i>
+								</a>
+								<div class="header-search-content">
+									<form action="search.html" method="get">
+										<a href="#" id="close-search"> </a>
+										<input class="form-control" name="q" placeholder="Enter your search ..." type="text" value="" />
+										<h5 class="subtitle-1"> ... &amp; press enter to start </h5>
+									</form>
+									<div class="search-outer"> </div>
+								</div>
+							</div>
+							<div id="header-cart">
+								<a href="{% url 'sudo-shop-page-cart' %}" id="show-cart">
+									<i class="fa fa-shopping-cart"> </i>
+									<span> 3 </span>
+								</a>
+								<div class="header-cart-content">
+									<ul class="cart-item-list">
+										<li>
+											<div class="cart-item-image">
+												<a href="{% url 'sudo-shop-single-simple' %}">
+													<img alt="SEO NAME" src="{% static 'sudo/files/uploads/100x130-light.jpg' %}" /> </a>
+											</div>
+											<div class="cart-item-desc">
+												<h6 class="product-name uppercase">
+													<a href="#"> White Stripes Shirt </a>
+												</h6>
+												<span class="cart-item-quantity"> 2 x </span>
+												<span class="cart-item-price"> $ 26.99 </span>
+											</div>
+										</li>
+										<li>
+											<div class="cart-item-image">
+												<a href="{% url 'sudo-shop-single-simple' %}">
+													<img alt="SEO NAME" src="{% static 'sudo/files/uploads/100x130-light.jpg' %}" /> </a>
+											</div>
+											<div class="cart-item-desc">
+												<h6 class="product-name uppercase">
+													<a href="#"> Wood Watch </a>
+												</h6>
+												<span class="cart-item-quantity"> 1 x </span>
+												<span class="cart-item-price"> $ 189.99 </span>
+											</div>
+										</li>
+									</ul>
+									<div class="cart-total">
+										<h6 class="cart-total-name"> Total </h6>
+										<div class="cart-total-amount"> $ 243,97 </div>
+									</div>
+									<div class="cart-action">
+										<a class="cart-action-cart sr-button button-mini button-3" href="{% url 'sudo-shop-page-cart' %}"> View Cart </a>
+										<a class="cart-action-checkout sr-button button-mini button-2" href="{% url 'sudo-shop-page-checkout' %}"> Checkout </a>
+									</div>
+								</div>
+							</div>
+							<div id="header-language">
+								<a href="#" id="show-language"> En
+									<i class="ion ion-ios-arrow-down"> </i>
+								</a>
+								<div class="header-language-content">
+									<ul class="lang-select">
+										<li><a href="#"> De </a></li>
+										<li><a href="#"> Fr </a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section class="hero-auto" id="hero" style="background:#f5f6f7;">
+			<div class="wrapper align-center" id="page-title">
+				<h2 class="uppercase">
+					<strong> Cart </strong>
+				</h2>
+			</div>
+		</section>
+		<section id="page-body">
+			<div class="wrapper" id="shop-cart">
+				<table class="table-cart">
+					<thead>
+						<tr>
+							<th class="product-remove"> </th>
+							<th class="product-image"> </th>
+							<th class="product-name"> Product </th>
+							<th class="product-unit-price"> Unit Price </th>
+							<th class="product-quantity"> Quantity </th>
+							<th class="product-subtotal"> Total </th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="product-remove">
+								<a class="remove-item" href="#">
+									<i class="ion ion-close"> </i>
+								</a>
+							</td>
+							<td class="product-image">
+								<a href="{% url 'sudo-shop-single-simple' %}">
+									<img alt="SEO NAME" src="{% static 'sudo/files/uploads/100x130-light.jpg' %}" /> </a>
+							</td>
+							<td class="product-name">
+								<h6 class="uppercase">
+									<a href="#"> White Stripes Shirt </a>
+								</h6>
+							</td>
+							<td class="product-unit-price">
+								<span class="product-price"> $ 26.99 </span>
+							</td>
+							<td class="product-quantity">
+								<div class="quantity">
+									<input class="minus" type="button" value="-" />
+									<input class="qty" type="text" value="2" />
+									<input class="plus" type="button" value="+" /> </div>
+							</td>
+							<td class="product-subtotal">
+								<span class="product-price"> $53.98 </span>
+							</td>
+						</tr>
+						<tr>
+							<td class="product-remove">
+								<a class="remove-item" href="#">
+									<i class="ion ion-close"> </i>
+								</a>
+							</td>
+							<td class="product-image">
+								<a href="{% url 'sudo-shop-single-simple' %}">
+									<img alt="SEO NAME" src="{% static 'sudo/files/uploads/100x130-light.jpg' %}" /> </a>
+							</td>
+							<td class="product-name">
+								<h6 class="uppercase">
+									<a href="#"> Wood Watch </a>
+								</h6>
+							</td>
+							<td class="product-unit-price">
+								<span class="product-price"> $ 189.99 </span>
+							</td>
+							<td class="product-quantity">
+								<div class="quantity">
+									<input class="minus" type="button" value="-" />
+									<input class="qty" type="text" value="1" />
+									<input class="plus" type="button" value="+" /> </div>
+							</td>
+							<td class="product-subtotal">
+								<span class="product-price"> $189.98 </span>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="6">
+								<div class="coupon-code">
+									<input class="coupon-text" name="coupon" placeholder="Enter Coupon Code" type="text" value="" />
+									<input name="coupon-apply" type="submit" value="Apply Coupon" /> </div>
+								<input class="update-cart" name="update-cart" type="submit" value="Update Cart" /> </td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="spacer-big"> </div>
+				<div class="column-section clearfix">
+					<div class="column one-half">
+						<h5> Calculate Shipping </h5>
+						<form class="calc-shipping">
+							<div class="form-row shipping-country">
+								<select class="full-width" name="calc_shipping_country">
+									<option value="AX"> Åland Islands </option>
+									<option value="AF"> Afghanistan </option>
+									<option value="AL"> Albania </option>
+									<option value="DZ"> Algeria </option>
+									<option value="AD"> Andorra </option>
+									<option value="AO"> Angola </option>
+									<option value="AI"> Anguilla </option>
+									<option value="AQ"> Antarctica </option>
+									<option value="AG"> Antigua and Barbuda </option>
+									<option value="AR"> Argentina </option>
+									<option value="AM"> Armenia </option>
+									<option value="AW"> Aruba </option>
+									<option value="AU"> Australia </option>
+									<option value="AT"> Austria </option>
+									<option value="AZ"> Azerbaijan </option>
+									<option value="BS"> Bahamas </option>
+									<option value="BH"> Bahrain </option>
+									<option value="BD"> Bangladesh </option>
+									<option value="BB"> Barbados </option>
+									<option value="BY"> Belarus </option>
+									<option value="PW"> Belau </option>
+									<option value="BE"> Belgium </option>
+									<option value="BZ"> Belize </option>
+									<option value="BJ"> Benin </option>
+									<option value="BM"> Bermuda </option>
+									<option value="BT"> Bhutan </option>
+									<option value="BO"> Bolivia </option>
+									<option value="BQ"> Bonaire, Saint Eustatius and Saba </option>
+									<option value="BA"> Bosnia and Herzegovina </option>
+									<option value="BW"> Botswana </option>
+									<option value="BV"> Bouvet Island </option>
+									<option value="BR"> Brazil </option>
+									<option value="IO"> British Indian Ocean Territory </option>
+									<option value="VG"> British Virgin Islands </option>
+									<option value="BN"> Brunei </option>
+									<option value="BG"> Bulgaria </option>
+									<option value="BF"> Burkina Faso </option>
+									<option value="BI"> Burundi </option>
+									<option value="KH"> Cambodia </option>
+									<option value="CM"> Cameroon </option>
+									<option value="CA"> Canada </option>
+									<option value="CV"> Cape Verde </option>
+									<option value="KY"> Cayman Islands </option>
+									<option value="CF"> Central African Republic </option>
+									<option value="TD"> Chad </option>
+									<option value="CL"> Chile </option>
+									<option value="CN"> China </option>
+									<option value="CX"> Christmas Island </option>
+									<option value="CC"> Cocos (Keeling) Islands </option>
+									<option value="CO"> Colombia </option>
+									<option value="KM"> Comoros </option>
+									<option value="CG"> Congo (Brazzaville) </option>
+									<option value="CD"> Congo (Kinshasa) </option>
+									<option value="CK"> Cook Islands </option>
+									<option value="CR"> Costa Rica </option>
+									<option value="HR"> Croatia </option>
+									<option value="CU"> Cuba </option>
+									<option value="CW"> CuraÇao </option>
+									<option value="CY"> Cyprus </option>
+									<option value="CZ"> Czech Republic </option>
+									<option value="DK"> Denmark </option>
+									<option value="DJ"> Djibouti </option>
+									<option value="DM"> Dominica </option>
+									<option value="DO"> Dominican Republic </option>
+									<option value="EC"> Ecuador </option>
+									<option value="EG"> Egypt </option>
+									<option value="SV"> El Salvador </option>
+									<option value="GQ"> Equatorial Guinea </option>
+									<option value="ER"> Eritrea </option>
+									<option value="EE"> Estonia </option>
+									<option value="ET"> Ethiopia </option>
+									<option value="FK"> Falkland Islands </option>
+									<option value="FO"> Faroe Islands </option>
+									<option value="FJ"> Fiji </option>
+									<option value="FI"> Finland </option>
+									<option value="FR"> France </option>
+									<option value="GF"> French Guiana </option>
+									<option value="PF"> French Polynesia </option>
+									<option value="TF"> French Southern Territories </option>
+									<option value="GA"> Gabon </option>
+									<option value="GM"> Gambia </option>
+									<option value="GE"> Georgia </option>
+									<option value="DE"> Germany </option>
+									<option value="GH"> Ghana </option>
+									<option value="GI"> Gibraltar </option>
+									<option value="GR"> Greece </option>
+									<option value="GL"> Greenland </option>
+									<option value="GD"> Grenada </option>
+									<option value="GP"> Guadeloupe </option>
+									<option value="GT"> Guatemala </option>
+									<option value="GG"> Guernsey </option>
+									<option value="GN"> Guinea </option>
+									<option value="GW"> Guinea-Bissau </option>
+									<option value="GY"> Guyana </option>
+									<option value="HT"> Haiti </option>
+									<option value="HM"> Heard Island and McDonald Islands </option>
+									<option value="HN"> Honduras </option>
+									<option value="HK"> Hong Kong </option>
+									<option value="HU"> Hungary </option>
+									<option value="IS"> Iceland </option>
+									<option value="IN"> India </option>
+									<option value="ID"> Indonesia </option>
+									<option value="IR"> Iran </option>
+									<option value="IQ"> Iraq </option>
+									<option value="IM"> Isle of Man </option>
+									<option value="IL"> Israel </option>
+									<option value="IT"> Italy </option>
+									<option value="CI"> Ivory Coast </option>
+									<option value="JM"> Jamaica </option>
+									<option value="JP"> Japan </option>
+									<option value="JE"> Jersey </option>
+									<option value="JO"> Jordan </option>
+									<option value="KZ"> Kazakhstan </option>
+									<option value="KE"> Kenya </option>
+									<option value="KI"> Kiribati </option>
+									<option value="KW"> Kuwait </option>
+									<option value="KG"> Kyrgyzstan </option>
+									<option value="LA"> Laos </option>
+									<option value="LV"> Latvia </option>
+									<option value="LB"> Lebanon </option>
+									<option value="LS"> Lesotho </option>
+									<option value="LR"> Liberia </option>
+									<option value="LY"> Libya </option>
+									<option value="LI"> Liechtenstein </option>
+									<option value="LT"> Lithuania </option>
+									<option value="LU"> Luxembourg </option>
+									<option value="MO"> Macao S.A.R., China </option>
+									<option value="MK"> Macedonia </option>
+									<option value="MG"> Madagascar </option>
+									<option value="MW"> Malawi </option>
+									<option value="MY"> Malaysia </option>
+									<option value="MV"> Maldives </option>
+									<option value="ML"> Mali </option>
+									<option value="MT"> Malta </option>
+									<option value="MH"> Marshall Islands </option>
+									<option value="MQ"> Martinique </option>
+									<option value="MR"> Mauritania </option>
+									<option value="MU"> Mauritius </option>
+									<option value="YT"> Mayotte </option>
+									<option value="MX"> Mexico </option>
+									<option value="FM"> Micronesia </option>
+									<option value="MD"> Moldova </option>
+									<option value="MC"> Monaco </option>
+									<option value="MN"> Mongolia </option>
+									<option value="ME"> Montenegro </option>
+									<option value="MS"> Montserrat </option>
+									<option value="MA"> Morocco </option>
+									<option value="MZ"> Mozambique </option>
+									<option value="MM"> Myanmar </option>
+									<option value="NA"> Namibia </option>
+									<option value="NR"> Nauru </option>
+									<option value="NP"> Nepal </option>
+									<option value="NL"> Netherlands </option>
+									<option value="AN"> Netherlands Antilles </option>
+									<option value="NC"> New Caledonia </option>
+									<option value="NZ"> New Zealand </option>
+									<option value="NI"> Nicaragua </option>
+									<option value="NE"> Niger </option>
+									<option value="NG"> Nigeria </option>
+									<option value="NU"> Niue </option>
+									<option value="NF"> Norfolk Island </option>
+									<option value="KP"> North Korea </option>
+									<option value="NO"> Norway </option>
+									<option value="OM"> Oman </option>
+									<option value="PK"> Pakistan </option>
+									<option value="PS"> Palestinian Territory </option>
+									<option value="PA"> Panama </option>
+									<option value="PG"> Papua New Guinea </option>
+									<option value="PY"> Paraguay </option>
+									<option value="PE"> Peru </option>
+									<option value="PH"> Philippines </option>
+									<option value="PN"> Pitcairn </option>
+									<option value="PL"> Poland </option>
+									<option value="PT"> Portugal </option>
+									<option value="QA"> Qatar </option>
+									<option value="IE"> Republic of Ireland </option>
+									<option value="RE"> Reunion </option>
+									<option value="RO"> Romania </option>
+									<option value="RU"> Russia </option>
+									<option value="RW"> Rwanda </option>
+									<option value="ST"> São Tomé and Príncipe </option>
+									<option value="BL"> Saint Barthélemy </option>
+									<option value="SH"> Saint Helena </option>
+									<option value="KN"> Saint Kitts and Nevis </option>
+									<option value="LC"> Saint Lucia </option>
+									<option value="SX"> Saint Martin (Dutch part) </option>
+									<option value="MF"> Saint Martin (French part) </option>
+									<option value="PM"> Saint Pierre and Miquelon </option>
+									<option value="VC"> Saint Vincent and the Grenadines </option>
+									<option value="SM"> San Marino </option>
+									<option value="SA"> Saudi Arabia </option>
+									<option value="SN"> Senegal </option>
+									<option value="RS"> Serbia </option>
+									<option value="SC"> Seychelles </option>
+									<option value="SL"> Sierra Leone </option>
+									<option value="SG"> Singapore </option>
+									<option value="SK"> Slovakia </option>
+									<option value="SI"> Slovenia </option>
+									<option value="SB"> Solomon Islands </option>
+									<option value="SO"> Somalia </option>
+									<option value="ZA"> South Africa </option>
+									<option value="GS"> South Georgia/Sandwich Islands </option>
+									<option value="KR"> South Korea </option>
+									<option value="SS"> South Sudan </option>
+									<option value="ES"> Spain </option>
+									<option value="LK"> Sri Lanka </option>
+									<option value="SD"> Sudan </option>
+									<option value="SR"> Suriname </option>
+									<option value="SJ"> Svalbard and Jan Mayen </option>
+									<option value="SZ"> Swaziland </option>
+									<option value="SE"> Sweden </option>
+									<option value="CH"> Switzerland </option>
+									<option value="SY"> Syria </option>
+									<option value="TW"> Taiwan </option>
+									<option value="TJ"> Tajikistan </option>
+									<option value="TZ"> Tanzania </option>
+									<option value="TH"> Thailand </option>
+									<option value="TL"> Timor-Leste </option>
+									<option value="TG"> Togo </option>
+									<option value="TK"> Tokelau </option>
+									<option value="TO"> Tonga </option>
+									<option value="TT"> Trinidad and Tobago </option>
+									<option value="TN"> Tunisia </option>
+									<option value="TR"> Turkey </option>
+									<option value="TM"> Turkmenistan </option>
+									<option value="TC"> Turks and Caicos Islands </option>
+									<option value="TV"> Tuvalu </option>
+									<option value="UG"> Uganda </option>
+									<option value="UA"> Ukraine </option>
+									<option value="AE"> United Arab Emirates </option>
+									<option value="GB"> United Kingdom (UK) </option>
+									<option selected="selected" value="US"> United States (US) </option>
+									<option value="UY"> Uruguay </option>
+									<option value="UZ"> Uzbekistan </option>
+									<option value="VU"> Vanuatu </option>
+									<option value="VA"> Vatican </option>
+									<option value="VE"> Venezuela </option>
+									<option value="VN"> Vietnam </option>
+									<option value="WF"> Wallis and Futuna </option>
+									<option value="EH"> Western Sahara </option>
+									<option value="WS"> Western Samoa </option>
+									<option value="YE"> Yemen </option>
+									<option value="ZM"> Zambia </option>
+									<option value="ZW"> Zimbabwe </option>
+								</select>
+							</div>
+							<div class="form-row shipping-state">
+								<input name="calc_shipping_state" placeholder="State / county" type="text" value="" />
+							</div>
+							<div class="form-row shipping-postcode">
+								<input name="calc_shipping_postcode" placeholder="Postcode / Zip" type="text" value="" />
+							</div>
+							<div class="form-row shipping-update">
+								<input class="minus" type="button" value="Update Totals" />
+							</div>
+						</form>
+					</div>
+					<div class="column one-half last-col">
+						<h5> Cart Totals </h5>
+						<div class="cart-total">
+							<table class="table-cart">
+								<tbody>
+									<tr>
+										<td>
+											<h6 class="uppercase"> Cart Subtotal </h6>
+										</td>
+										<td>
+											<span class="product-price"> $243.97 </span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<h6 class="uppercase"> Shipping </h6>
+										</td>
+										<td>
+											<span class="product-price"> Free Delivery </span>
+										</td>
+									</tr>
+									<tr class="total">
+										<td>
+											<h5 class="uppercase"> Total </h5>
+										</td>
+										<td>
+											<span class="product-price"> $243.97 </span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="checkout-button">
+							<a class="sr-button button-small button-2" href="{% url 'sudo-shop-page-checkout' %}"> Proceed to Checkout </a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="spacer-big"> </div>
+		</section>
+		<footer class="footer-dark text-light" id="footer">
+			<div class="footer-inner wrapper">
+				<div class="column-section clearfix">
+					<div class="column two-fifth">
+						<div class="widget">
+							<img alt="Logo" src="{% static 'sudo/files/uploads/logo-sudo-light.png' %}" srcset="files/uploads/logo-sudo-light.png 1x, files/uploads/logo-sudo-light@2x.png 2x" />
+							<div class="spacer-mini"> </div>
+							<p> Ultra Performance Wordpress theme for creative agencies.
+								<br/> We provide perfect and professional services, covering all areas of the modern communication. </p>
+						</div>
+						<div class="widget">
+							<ul class="socialmedia-widget hover-fade-1">
+								<li class="facebook">
+									<a href="#"> </a>
+								</li>
+								<li class="twitter">
+									<a href="#"> </a>
+								</li>
+								<li class="dribbble">
+									<a href="#"> </a>
+								</li>
+								<li class="behance">
+									<a href="#"> </a>
+								</li>
+								<li class="instagram">
+									<a href="#"> </a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="column one-fifth">
+						<div class="widget">
+							<h6 class="widget-title uppercase"> Quick Menu </h6>
+							<ul class="menu">
+								<li><a href="#"> About Us </a></li>
+								<li><a href="#"> Portfolio </a></li>
+								<li><a href="#"> Our Team </a></li>
+								<li><a href="#"> Support </a></li>
+								<li><a href="#"> Contact Us </a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="column one-fifth">
+						<div class="widget">
+							<h6 class="widget-title uppercase"> Categories </h6>
+							<ul class="menu">
+								<li><a href="#"> Design </a></li>
+								<li><a href="#"> Graphic </a></li>
+								<li><a href="#"> Stories </a></li>
+								<li><a href="#"> Photography </a></li>
+								<li><a href="#"> Video </a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="column one-fifth last-col">
+						<div class="widget widget_recent_entries">
+							<h6 class="widget-title uppercase"> Recent Posts </h6>
+							<ul>
+								<li>
+									<a href="#"> Waterfalls of Iceland </a>
+									<span class="post-date"> 5 hours ago </span>
+								</li>
+								<li>
+									<a href="#"> Minimal Interior Elements </a>
+									<span class="post-date"> 11 hours ago </span>
+								</li>
+								<li>
+									<a href="#"> Birds flying around </a>
+									<span class="post-date"> 1 day ago </span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<a href="#" id="backtotop"> Back to top </a>
+			</div>
+			<div class="copyright">
+				<small> Copyright © 2016 by Sudo - Made with Love by
+					<a href="http://www.spab-rice.com"> Spab Rice </a>
+				</small>
+			</div>
+		</footer>
+	</div>
+	<script src="{% static 'sudo/files/js/jquery-2.1.4.min.js' %}"></script>
+	<script src="{% static 'sudo/files/js/jquery.easing.1.3.js' %}" type="text/javascript"></script>
+	<script src="{% static 'sudo/files/js/jquery.visible.min.js' %}" type="text/javascript"></script>
+	<script src="{% static 'sudo/files/js/script.js' %}" type="text/javascript"></script>
+</body>
+
+</html>

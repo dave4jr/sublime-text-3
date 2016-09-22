@@ -1,0 +1,61 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	Action Include
+ *==========================-->
+<!-- inputs: status / pk=reservation.pk -->
+
+
+ {% if status == "submitted" %}
+ 	<form action="{% url 'workflow_pk' pk=reservation.pk fn="send_deposit" %}" method="post">
+ 		{% csrf_token %}
+ 		<input class="btn btn-sm mt-grey-bg p-rl-5 p-tb-3" value="Send Deposit" type="submit"></input>
+ 	</form>
+
+ {% elif status == "pending_deposit" %}
+ 	<form action="{% url 'workflow_pk' pk=reservation.pk fn="receive_deposit" %}" method="post">
+ 		{% csrf_token %}
+ 		<input class="btn btn-sm mt-grey-bg p-rl-5 p-tb-3" value="Received Deposit" type="submit"></input>
+ 	</form>
+
+ {% elif status == "reserved" %}
+ 	<form action="{% url 'workflow_pk' pk=reservation.pk fn="checkout" %}" method="post">
+ 		{% csrf_token %}
+ 		<input class="btn btn-sm mt-grey-bg p-rl-5 p-tb-3" value="Check-Out" type="submit"></input>
+ 	</form>
+
+ {% elif status == "checked_out" %}
+ 	<form action="{% url 'workflow_pk' pk=reservation.pk fn="checkin" %}" method="post">
+ 		{% csrf_token %}
+ 		<input class="btn btn-sm mt-grey-bg p-rl-5 p-tb-3" value="Check-In" type="submit"></input>
+ 	</form>
+
+ {% elif status == "checked_in" %}
+ 	<form action="{% url 'workflow_pk' pk=reservation.pk fn="no_damage" %}" method="post">
+ 		{% csrf_token %}
+ 		<input class="btn btn-sm mt-grey-bg p-rl-5 p-tb-3" value="No Damage" type="submit"></input>
+ 	</form>
+ 	<form action="{% url 'workflow_pk' pk=reservation.pk fn="yes_damage" %}" method="post">
+ 		{% csrf_token %}
+ 		<input class="btn btn-sm mt-grey-bg p-rl-5 p-tb-3" value="Damage" type="submit"></input>
+ 	</form>
+
+ {% elif status == "damaged" %}
+ 	<form action="{% url 'workflow_pk' pk=reservation.pk fn="send_damage_invoice" %}" method="post">
+ 		{% csrf_token %}
+ 		<input class="btn btn-sm mt-grey-bg p-rl-5 p-tb-3" value="Send Damage Invoice" type="submit"></input>
+ 	</form>
+
+ {% elif status == "pending_damage_payment" %}
+ 	<form action="{% url 'workflow_pk' pk=reservation.pk fn="receive_damage_payment" %}" method="post">
+ 		{% csrf_token %}
+ 		<input class="btn btn-sm mt-grey-bg p-rl-5 p-tb-3" value="Receive Damage Payment" type="submit"></input>
+ 	</form>
+
+ {% else %}
+ 	<form action="{% url 'workflow_pk' pk=reservation.pk fn="reset" %}" method="post">
+ 		{% csrf_token %}
+ 		<input class="btn btn-sm mt-grey-bg p-rl-5 p-tb-3" value="Reset" type="submit"></input>
+ 	</form>
+
+ {% endif %}

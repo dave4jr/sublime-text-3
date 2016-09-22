@@ -1,0 +1,272 @@
+<!--======================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	bike_form.html
+ *======================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% block content_site %}
+
+
+
+<!--=====================================================
+	Bike Details
+=====================================================-->
+<form action="" method="post" role="form" enctype="multipart/form-data">
+	{% csrf_token %}
+
+	<div class="row">
+		<div class="col-md-6">
+			<div class="portlet light portlet-fit">
+
+				<!--	Top Toolbar
+				========================================= -->
+				<div class="portlet-title">
+					<div class="caption">
+						<i class="pe-7s-bicycle"> </i>
+						<span class="caption-subject base-font"> Bike Detail </span>
+					</div>
+				</div>
+				<div class="portlet-body">
+
+
+					<!--	Tab 1: Detail
+					========================================= -->
+					<div class="pi-row">
+						<div class="pi-col-xs-12 pi-section-white m-t-10">
+							<div class="pi-row pi-grid-small-margins">
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-bike"> Bike </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-bicycle"> </i>
+											</span>
+											{{ BikeForm.name | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+
+
+								<!--	Manufacturer
+								========================================= -->
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-bike"> Manufacturer </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-culture"> </i>
+											</span>
+											{{ BikeForm.manufacturer | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+											<a href="/admin/inventory/manufacturer/add/" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+
+
+								<!--	Model
+								========================================= -->
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-bike"> Model </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-info"> </i>
+											</span>
+											{{ BikeForm.model | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+
+
+								<!--	License Plate
+								========================================= -->
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-bike"> License Plate </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-id"> </i>
+											</span>
+											{{ BikeForm.license_plate | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-bike"> Color </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-pen"> </i>
+											</span>
+											{{ BikeForm.color | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+											<a href="/admin/inventory/color/add/" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-bike"> Year </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-date"> </i>
+											</span>
+											{{ BikeForm.year | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-down"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-bike"> Current Mileage </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-graph1"> </i>
+											</span>
+											{{ BikeForm.current_mileage | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-bike"> Rental Price ($) </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-cash"> </i>
+											</span>
+											{{ BikeForm.rental_price | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+
+
+								<!--	Upload Image
+								========================================= -->
+								<div class="pi-col-sm-12">
+									<div class="form-group">
+										<label for="label-bike"> Upload Bike Image </label>
+										{{ BikeForm.image | add_class:"form-control" }}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+<!--=====================================================
+	Maintenance
+=====================================================-->
+		<div class="col-md-6">
+			<div class="portlet light portlet-fit">
+				<div class="portlet-title">
+					<div class="caption">
+						<i class="pe-7s-tools"> </i>
+						<span class="caption-subject base-font"> Maintenance </span>
+					</div>
+				</div>
+				<div class="portlet-body">
+
+					<!--	Tab 1: Maintenance
+					========================================= -->
+					<div class="tab-pane fade active in" id="work">
+						<div class="pi-row">
+							<div class="pi-col-xs-12 pi-section-white m-t-10">
+
+
+								<table class="table table-striped table-bordered table-hover table-checkable order-column" id="cs_datatable" style="white-space: nowrap;">
+									<thead>
+
+										<!--	Table Column Names
+										========================================= -->
+										<tr>
+											<th> Maintenance </th>
+											<th> Date Completed </th>
+											<th> mileage </th>
+											<th> Schedule </th>
+										</tr>
+									</thead>
+									<tbody>
+
+									<!--	Table Data
+									========================================= -->
+										<tr>
+											<td> <span> Oil <br>Change </span> </td>
+											<td> {{ BikeForm.oil_change_date | add_class:"form-control datepicker" }} </td>
+											<td> {{ BikeForm.oil_change_mileage | add_class:"form-control" }}</td>
+											<td> {{ BikeForm.mileage_per_oil_change | add_class:"form-control" }}</td>
+										</tr>
+										<tr>
+											<td> <span> Air Filter <br> Clean </span> </td>
+											<td> {{ BikeForm.air_filter_clean_date | add_class:"form-control datepicker" }} </td>
+											<td> {{ BikeForm.air_filter_clean_mileage | add_class:"form-control" }}</td>
+											<td> {{ BikeForm.mileage_per_air_filter_clean | add_class:"form-control" }}</td>
+										</tr>
+										<tr>
+											<td> <span>Sprocket & <br> Chain Change</span> </td>
+											<td> {{ BikeForm.sprocket_and_chain_change_date | add_class:"form-control datepicker" }} </td>
+											<td> {{ BikeForm.sprocket_and_chain_change_mileage | add_class:"form-control" }}</td>
+											<td> {{ BikeForm.mileage_per_sprocket_and_chain_change | add_class:"form-control" }}</td>
+										</tr>
+										<tr>
+											<td> <span>Valve <br>Adjustment</span> </td>
+											<td> {{ BikeForm.valve_adjustment_date | add_class:"form-control datepicker" }} </td>
+											<td> {{ BikeForm.valve_adjustment_mileage | add_class:"form-control" }}</td>
+											<td> {{ BikeForm.mileage_per_valve_adjustment | add_class:"form-control" }}</td>
+										</tr>
+										<tr>
+											<td> <span>Brake <br>Fluid Change</span> </td>
+											<td> {{ BikeForm.brake_fluid_change_date | add_class:"form-control datepicker" }} </td>
+											<td> {{ BikeForm.brake_fluid_change_mileage | add_class:"form-control" }}</td>
+											<td> {{ BikeForm.mileage_per_brake_fluid_change | add_class:"form-control" }}</td>
+										</tr>
+										<tr>
+											<td> <span>Coolant <br>Change</span> </td>
+											<td> {{ BikeForm.coolant_change_date | add_class:"form-control datepicker" }} </td>
+											<td> {{ BikeForm.coolant_change_mileage | add_class:"form-control" }}</td>
+											<td> {{ BikeForm.mileage_per_coolant_change | add_class:"form-control" }}</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+		
+			<!--	Submit Buttons
+			========================================= -->
+			<p class="pi-text-center m-t-40">
+				<button type="submit" value="{{ bike.pk }}" name="delete" class="btn mt-grey-gallery-bg p-rl-40 m-r-5"> Delete<i class="pe-7s-close-circle pi-icon-right"></i></button>
+				<button type="submit" value="{{ bike.pk }}" name="save" class="btn base p-rl-40"> Save<i class="pe-7s-check pi-icon-right"></i></button>
+			</p>
+		</div>
+	</div>
+</form>
+
+{% endblock %}

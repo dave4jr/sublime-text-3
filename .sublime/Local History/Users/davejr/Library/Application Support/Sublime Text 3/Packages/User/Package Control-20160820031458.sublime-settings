@@ -1,0 +1,184 @@
+{
+	"auto_upgrade": true,
+	"auto_upgrade_frequency": 1,
+	"auto_upgrade_ignore":
+	[
+		"BuildOutputToTab",
+		"ColorSchemeEditor",
+		"Djaneiro",
+	],
+	"bootstrapped": true,
+	"cache_length": 300,
+	"channels":
+	[
+		"https://packagecontrol.io/channel_v3.json"
+	],
+	"debug": true,
+	"dirs_to_ignore":
+	[
+		".hg",
+		".git",
+		".svn",
+		"_darcs",
+		"CVS"
+	],
+	"enable_tests": false,
+	"files_to_ignore":
+	[
+		"*.pyc",
+		".hgignore",
+		".gitignore",
+		".bzrignore",
+		"*.sublime-project",
+		"*.sublime-workspace",
+		"*.tmTheme.cache"
+	],
+	"files_to_include":
+	[
+	],
+	"git_binary":
+	[
+	],
+	"git_update_command":
+	[
+		"pull",
+		"--ff",
+		"--commit"
+	],
+	"hg_binary":
+	[
+	],
+	"hg_update_command":
+	[
+		"pull",
+		"--update"
+	],
+	"http_cache": true,
+	"http_cache_length": 604800,
+	"http_proxy": "",
+	"https_proxy": "",
+	"ignore_vcs_packages": true,
+	"in_process_packages":
+	[
+	],
+	"install_missing": true,
+	"install_prereleases":
+	[
+	],
+	"installed_packages":
+	[
+		"Arduino-like IDE",
+		"ASCII Replacer",
+		"Auto Semi-Colon",
+		"auto-save",
+		"AutoFileName",
+		"Bash Build System",
+		"Boxy Theme",
+		"Boxy Theme Addon - Font Face",
+		"BracketHighlighter",
+		"BuildOutputToTab",
+		"Color Schemes by carlcalderon",
+		"ColorPicker",
+		"ColorSchemeEditor",
+		"Colorsublime",
+		"Console Exec",
+		"Copy Relative Path",
+		"CSS Color Converter",
+		"CSS Format",
+		"Custom Builder",
+		"DevDocs",
+		"Djaneiro",
+		"Django",
+		"Django Tags",
+		"EsFormatter",
+		"Evaluate",
+		"FileBrowser",
+		"FileSystem Autocompletion",
+		"Goto-CSS-Declaration",
+		"HTML Nest Comments",
+		"HTML-CSS-JS Prettify",
+		"Image2Base64",
+		"JavaScript Completions",
+		"JavaScript Ultimate",
+		"Jedi - Python autocompletion",
+		"jQuery",
+		"JSHint",
+		"JSON Reindent",
+		"JsonTree",
+		"Local History",
+		"LoremIpsum",
+		"Minifier",
+		"MoveTab",
+		"MultipleSelectionScroller",
+		"Open Finder",
+		"Origami",
+		"Package Control",
+		"PackageDev",
+		"PackageResourceViewer",
+		"Paste PDF Text Block",
+		"Pretty JSON",
+		"ProjectManager",
+		"Python Completions",
+		"Python Output Format",
+		"PyYapf Python Formatter",
+		"Quick File Open",
+		"QuickGotoAnything",
+		"RecentActiveFiles",
+		"RegReplace",
+		"Remify",
+		"run_multiple_commands",
+		"SASS Build",
+		"ScopeAlways",
+		"SCSS",
+		"Six - Future JavaScript Syntax",
+		"Status Bar File Size",
+		"SublimeOnSaveBuild",
+		"SublimeREPL",
+		"Super Calculator",
+		"TrailingSpaces",
+		"View In Browser",
+		"Web Inspector"
+	],
+	"package_destination": "",
+	"package_name_map":
+	{
+	},
+	"package_profiles":
+	{
+		"Binaries Only":
+		{
+			"files_to_ignore":
+			[
+				"*.py",
+				".hgignore",
+				".gitignore",
+				".bzrignore",
+				"*.sublime-project",
+				"*.sublime-workspace",
+				"*.tmTheme.cache"
+			],
+			"files_to_include":
+			[
+				"__init__.py"
+			]
+		}
+	},
+	"proxy_password": "",
+	"proxy_username": "",
+	"remove_orphaned": true,
+	"repositories":
+	[
+	],
+	"submit_url": "https://packagecontrol.io/submit",
+	"submit_usage": true,
+	"timeout": 30,
+	"unmanaged_packages_ignore":
+	[
+		"ColorSchemeEditor",
+		"run_multiple_commands",
+		"BuildOutputToTab",
+		"ConvertToDjango",
+		"Djaneiro"
+	],
+	"user_agent": "Package Control v%s"
+}

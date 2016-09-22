@@ -1,0 +1,161 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	index.html
+ *==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% load customtags %}
+{% block content %}
+
+
+
+<!--	Buy Single
+========================================= -->
+<section id="page-body" class="buy-single p-t-0 m-t-60">
+	<div class="column-section boxed-sticky clearfix">
+		<div id="buy-single-left" class="column one-third" style="height: 100% !important;">
+		
+			<!--	Image
+			========================================= -->
+			<div class="column one-full m-l-0" style="background: url({{ property.img.0 }}) center center / cover;"></div>
+			
+			<!--	Address & Price
+			========================================= -->
+			<div id="buy-single-left-details">
+				<div class="row">
+					<div class="col-sm-9">
+						<h4>{% include "include/address.html" with arg="street" %}</h4>
+					</div>
+					<div class="col-sm-3" style="border-radius: 10px 0px 0px 10px;">
+						<h5 class="text-center"  style="border-radius: 40px 0px 0px 40px;">${{ property.listingprice|floatformat:"0"|intcomma }}</h5>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<h4 class="subtitle-2 colored fs-14 p-l-20 fw-300 p-tb-0">{% include "include/address.html" with arg="city" %}</h4>
+					</div>
+					<div id="buy-single-details" class="col-sm-12">
+						<p class="m-t-5">{{ property.marketingremarks|boxed_letter:"#F16932" }}</p>
+					</div>
+				</div>
+				<div class="row">
+					<p class="p-rl-20 text-right subtitle-2 fs-11 m-t-10 text-black-4">MLS #: {{ property.mlnumber }}</p>
+				</div>
+			</div>
+		</div>
+		
+		
+		<!--	Icons
+		========================================= -->
+		<div id="buy-single-right" class="column two-third white-bg">
+			<div id="buy-single-icons" class="column-section clearfix p-t-40">
+				<div class="column one-fifth">
+					<span class="fontello-sqft"></span>
+					<h5 class="subtitle-2">Square Feet</h5>
+					<h3><strong>{{ property.squarefootage|floatformat:"0"|intcomma }}</strong></h3>
+				</div>
+				<div class="column one-fifth">
+					<span class="fontello-beds"></span>
+					<h5 class="subtitle-2">Bedrooms</h5>
+					<h3><strong>{{ property.bedrooms }}</strong></h3>
+				</div>
+				<div class="column one-fifth">
+					<span class="fontello-baths"></span>
+					<h5 class="subtitle-2">Bathrooms</h5>
+					<h3><strong>{{ property.bathrooms }}</strong></h3>
+				</div>
+				<div class="column one-fifth">
+					<span class="fontello-map"></span>
+					<h5 class="subtitle-2">Lot Size</h5>
+					<h3><strong>{{ property.acres }}</strong></h3>
+				</div>
+				<div class="column one-fifth last-col">
+					<span class="fontello-year-built"></span>
+					<h5 class="subtitle-2">Year Built</h5>
+					<h3><strong>{{ property.yearbuilt }}</strong></h3>
+				</div>
+			</div>
+			<div class="spacer-tiny"></div>
+			
+			<!--	4 Quadrants
+			========================================= -->
+			<div id="quadrants" class="column-section clearfix">
+				<div class="column one-half bigpadding tallest m-l-0 p-t-20 p-b-0">
+					<div class="col-content" style="margin-top: 0px;">
+						<div class="overview">
+							<h4><strong>Overview</strong></h4>
+							<ul>
+								<li>Style: </li>
+								<li>Subtype: </li>
+								<li>Levels: </li>
+								<li>Status: </li>
+								<li>Days On Market: </li>
+							</ul>
+						</div>
+						<div class="spacer-tiny"></div>
+						<div class="community">
+							<h4><strong>Community</strong></h4>
+							<ul>
+								<li>Subdivision: </li>
+								<li>Section: </li>
+								<li>Elementary School: </li>
+								<li>Jr. High School: </li>
+								<li>High School: </li>
+								<li>HOA: </li>
+								<li>CC&Rs: </li>
+								<li>Amenities: </li>
+								<li>Taxes: </li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="column one-half bigpadding last-col m-l-10 p-t-20 p-b-0">
+					<div class="col-content" style="margin-top: 0px;">
+						<div class="interior">
+							<h4><strong>Interior</strong></h4>
+							<ul>
+								<li>Rooms: </li>
+								<li>Interior: </li>
+								<li>Fireplace: </li>
+								<li>Floors: </li>
+								<li>Heat / Cool: </li>
+							</ul>
+						</div>
+						<div class="spacer-tiny"></div>
+						<div class="exterior">
+							<h4><strong>Exterior</strong></h4>
+							<ul>
+								<li>New Construction: </li>
+								<li>Features: </li>
+								<li>Parking: </li>
+								<li>Additional Buildings: </li>
+								<li>Construction: </li>
+								<li>Water: </li>
+								<li>Sewer / Septic: </li>
+								<li>Irrigation: </li>
+								<li>View: </li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+	$(function() {
+		var h = $("#buy-single-right").outerHeight();
+		$("#buy-single-left").outerHeight(h);
+	});
+</script>
+
+
+{% endblock %}
+
+{% block footer %}{% endblock %}

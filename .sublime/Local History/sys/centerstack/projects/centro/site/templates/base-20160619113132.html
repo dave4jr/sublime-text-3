@@ -1,0 +1,362 @@
+<!--==========================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	index.html
+ *==========================-->
+{% load staticfiles %}
+{% load customtags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="CenterStack" name="author" />
+	<link href="{% static 'massive/img/favicon.png' %}" rel="icon" type="image/png" />
+	<title> Centro Print Solutions </title>
+	
+	<!--	Fonts
+	========================================= -->
+	<link href="http://fonts.googleapis.com/css?family=Abel|Source+Sans+Pro:400,300,300italic,400italic,600,600italic,700,700italic,900,900italic,200italic,200" rel="stylesheet" type="text/css" />
+	<link href="{% static 'massive/css/bootstrap.min.css' %}" rel="stylesheet" />
+	<link href="{% static 'massive/css/font-awesome.min.css' %}" rel="stylesheet" />
+	<link href="{% static 'massive/css/magnific-popup.css' %}" rel="stylesheet" />
+	<link href="{% static 'massive/css/shortcodes/shortcodes.css' %}" rel="stylesheet" />
+	<link href="{% static 'massive/css/owl.carousel.css' %}" rel="stylesheet" />
+	<link href="{% static 'massive/css/owl.theme.css' %}" rel="stylesheet" />
+	
+	<!--	Style
+	========================================= -->
+	<link href="{% static 'css/style.css' %}" rel="stylesheet" />
+	<link href="{% static 'css/helpers.css' %}" rel="stylesheet" />
+	<link href="{% static 'massive/css/style-responsive.css' %}" rel="stylesheet" />
+	<link href="{% static 'css/default-theme.css' %}" rel="stylesheet" />
+</head>
+<body>
+
+	<!--	Pre-Loader
+	========================================= -->
+	<div id="tb-preloader">
+		<div class="tb-preloader-wave"> </div>
+	</div>
+	<div class="wrapper">
+		<header class=" header-full-width transparent-header " id="header">
+			<div class="header-sticky light-header ">
+				<div class="container">
+					<div class="menuzord" id="massive-menu">
+						<a class="logo-brand" href="{% url 'index' %}"><img width="125" src="{% static 'img/logo/logo.svg' %}"></a>
+						<ul class="menuzord-menu pull-right">
+							<li class="{% active 'index' %}"><a href="{% url 'index' %}"> Home </a></li>
+							<li class="{% active 'about' %}"><a href="{% url 'index' %}"> About </a></li>
+							<li class="{% active 'products' %}"><a href="{% url 'index' %}"> Products </a></li>
+							<li class="{% active 'services' %}"><a href="{% url 'index' %}"> Services </a></li>
+							<li class="{% active 'testimonials' %}"><a href="{% url 'index' %}"> Testimonials </a></li>
+							<li class="{% active 'contact' %}"><a href="{% url 'index' %}"> Contact </a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="full-banner vertical-align banner-11" id="fullscreen-banner">
+			<div class="container-mid">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="banner-title">
+								<h2 class="text-uppercase color-1 theme-bg-space light-txt m-bot-0"> Centro Print Solutions </h2>
+								<h4 class="text-capitalize theme-bg theme-bg-space light-txt m-top-10"> Exceptional Experiences & Exceeding Expectations </h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<section class="body-content">
+			<div class="page-content grey-bg">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-5">
+							<p class="txt-xl"> Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima. </p>
+							<a class="btn btn-medium btn-theme-color text-uppercase" href="#"> Button Text </a>
+						</div>
+						<div class="col-md-7">
+							<p> Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets. Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets. Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets. </p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			 <!--	What We Do
+			========================================= -->
+			<div class="page-content white-bg p-bot-0">
+				<div class="container">
+					<div class="row">
+						<div class="p-b-60 inline-block">
+							<div class="heading-title-alt text-center">
+								<h3 class="text-uppercase"> What we do </h3>
+								<div class="half-txt m-top-30"> Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets. </div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="featured-item feature-bg-box text-center">
+								<div class="icon">
+									<i class="icon-mobile"> </i>
+								</div>
+								<div class="title text-uppercase">
+									<h4> Print </h4>
+								</div>
+								<div class="desc"> Ringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="featured-item feature-bg-box text-center">
+								<div class="icon">
+									<i class="icon-layers"> </i>
+								</div>
+								<div class="title text-uppercase">
+									<h4> Promo </h4>
+								</div>
+								<div class="desc"> Fringilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="featured-item feature-bg-box text-center">
+								<div class="icon">
+									<i class="icon-profile-male"> </i>
+								</div>
+								<div class="title text-uppercase">
+									<h4> Apparel </h4>
+								</div>
+								<div class="desc"> Singilla augue at maximus vestibulum. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+			<!--	Testimonials
+			========================================= -->
+			<div class="page-content grey-bg">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="" id="testimonial-2">
+								<div class="item ">
+									<div class="tst-thumb">
+										<img alt="" class="circle" src="{% static 'massive/img/post/a1.png' %}" />
+									</div>
+									<div class="content">
+										<p class="half-txt"> Nam nec dui dolor. Curabitur in laoreet erat. Nam nec dui dolor. Aliquam varius dolor nunc, interdum commodo justoporttitor vitae. Quisque fermentum purus. </p>
+										<div class="testimonial-meta"> - Kevin Paige -
+											<span> ABC </span>
+										</div>
+									</div>
+								</div>
+								<div class="item ">
+									<div class="tst-thumb">
+										<img alt="" class="circle" src="{% static 'massive/img/post/a1.png' %}" />
+									</div>
+									<div class="content">
+										<p class="half-txt"> Vestibulum varius fermentum risus vitae lacinia neque auctor nec. Nunc ac rutrum nulla. Nulla maximus dolor in quam euismod ac viverra libero aliquet. </p>
+										<div class="testimonial-meta"> - John Doe -
+											<span> head of marketing, TB </span>
+										</div>
+									</div>
+								</div>
+								<div class="item ">
+									<div class="tst-thumb">
+										<img alt="" class="circle" src="{% static 'massive/img/post/a1.png' %}" />
+									</div>
+									<div class="content">
+										<p class="half-txt"> Vestibulum varius fermentum risus vitae lacinia neque auctor nec. Nunc ac rutrum nulla. Nulla maximus dolor in quam euismod ac viverra libero aliquet. </p>
+										<div class="testimonial-meta"> - Linda Smith -
+											<span> CEO, TB </span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr/>
+			<div class="page-content">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<ul class="clients plus-box grid-6 ">
+								<li>
+									<a href="#">
+										<img alt="Clients" src="{% static 'massive/img/clients/c-1.png' %}" /> </a>
+								</li>
+								<li>
+									<a href="#">
+										<img alt="Clients" src="{% static 'massive/img/clients/c-2.png' %}" /> </a>
+								</li>
+								<li>
+									<a href="#">
+										<img alt="Clients" src="{% static 'massive/img/clients/c-3.png' %}" /> </a>
+								</li>
+								<li>
+									<a href="#">
+										<img alt="Clients" src="{% static 'massive/img/clients/c-4.png' %}" /> </a>
+								</li>
+								<li>
+									<a href="#">
+										<img alt="Clients" src="{% static 'massive/img/clients/c-5.png' %}" /> </a>
+								</li>
+								<li>
+									<a href="#">
+										<img alt="Clients" src="{% static 'massive/img/clients/c-6.png' %}" /> </a>
+								</li>
+								<li>
+									<a href="#">
+										<img alt="Clients" src="{% static 'massive/img/clients/c-7.png' %}" /> </a>
+								</li>
+								<li>
+									<a href="#">
+										<img alt="Clients" src="{% static 'massive/img/clients/c-8.png' %}" /> </a>
+								</li>
+								<li>
+									<a href="#">
+										<img alt="Clients" src="{% static 'massive/img/clients/c-9.png' %}" /> </a>
+								</li>
+								<li>
+									<a href="#">
+										<img alt="Clients" src="{% static 'massive/img/clients/c-10.png' %}" /> </a>
+								</li>
+								<li>
+									<a href="#">
+										<img alt="Clients" src="{% static 'massive/img/clients/c-3.png' %}" /> </a>
+								</li>
+								<li>
+									<a href="#">
+										<img alt="Clients" src="{% static 'massive/img/clients/c-4.png' %}" /> </a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="dark" id="footer">
+			<div class="primary-footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3">
+							<a class="m-bot-20 footer-logo" href="#">
+								<img alt="" class="retina" src="{% static 'massive/img/logo-dark.png' %}" /> </a>
+							<p> Massive is fully responsible, Performance oriented and SEO optimized theme. </p>
+						</div>
+						<div class="col-md-3">
+							<h5 class="text-uppercase"> recent posts </h5>
+							<ul class="f-list">
+								<li><a href="#"> Standard Blog post </a></li>
+								<li><a href="#"> Quotation post </a></li>
+								<li><a href="#"> Audio Post </a></li>
+								<li><a href="#"> Massive Video Demo </a></li>
+								<li><a href="#"> Blog Image Post </a></li>
+							</ul>
+						</div>
+						<div class="col-md-3">
+							<h5 class="text-uppercase"> follow us </h5>
+							<ul class="f-list">
+								<li><a href="#"> About Massive </a></li>
+								<li><a href="#"> Career </a></li>
+								<li><a href="#"> Terms &amp; Condition </a></li>
+								<li><a href="#"> Privacy Policy </a></li>
+								<li><a href="#"> Contact Us </a></li>
+							</ul>
+						</div>
+						<div class="col-md-3">
+							<h5 class="text-uppercase"> Recent Work </h5>
+							<ul class="r-work">
+								<li>
+									<a href="#">
+										<img alt="" src="{% static 'massive/img/recent-work/1.jpg' %}" /> </a>
+								</li>
+								<li>
+									<a href="#">
+										<img alt="" src="{% static 'massive/img/recent-work/2.jpg' %}" /> </a>
+								</li>
+								<li>
+									<a href="#">
+										<img alt="" src="{% static 'massive/img/recent-work/3.jpg' %}" /> </a>
+								</li>
+								<li>
+									<a href="#">
+										<img alt="" src="{% static 'massive/img/recent-work/4.jpg' %}" /> </a>
+								</li>
+								<li>
+									<a href="#">
+										<img alt="" src="{% static 'massive/img/recent-work/5.jpg' %}" /> </a>
+								</li>
+								<li>
+									<a href="#">
+										<img alt="" src="{% static 'massive/img/recent-work/6.jpg' %}" /> </a>
+								</li>
+								<li>
+									<a href="#">
+										<img alt="" src="{% static 'massive/img/recent-work/7.jpg' %}" /> </a>
+								</li>
+								<li>
+									<a href="#">
+										<img alt="" src="{% static 'massive/img/recent-work/8.jpg' %}" /> </a>
+								</li>
+								<li>
+									<a href="#">
+										<img alt="" src="{% static 'massive/img/recent-work/9.jpg' %}" /> </a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="secondary-footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6">
+							<span class="m-top-10"> Copyright 2012 - 2015 Massive Theme by
+								<a class="f-link" href="#"> ThemeBucket </a> | All Rights Reserved </span>
+						</div>
+						<div class="col-md-6">
+							<div class="social-link circle pull-right">
+								<a href="#">
+									<i class="fa fa-facebook"> </i>
+								</a>
+								<a href="#">
+									<i class="fa fa-twitter"> </i>
+								</a>
+								<a href="#">
+									<i class="fa fa-dribbble"> </i>
+								</a>
+								<a href="#">
+									<i class="fa fa-google-plus"> </i>
+								</a>
+								<a href="#">
+									<i class="fa fa-behance"> </i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="{% static 'massive/js/jquery-1.10.2.min.js' %}"></script>
+	<script src="{% static 'massive/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'massive/js/menuzord.js' %}"></script>
+	<script src="{% static 'massive/js/jquery.flexslider-min.js' %}"></script>
+	<script src="{% static 'massive/js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'massive/js/jquery.isotope.js' %}"></script>
+	<script src="{% static 'massive/js/jquery.magnific-popup.min.js' %}"></script>
+	<script src="{% static 'massive/js/jquery.countTo.js' %}"></script>
+	<script src="{% static 'massive/js/smooth.js' %}"></script>
+	<script src="{% static 'massive/js/wow.min.js' %}"></script>
+	<script src="{% static 'massive/js/imagesloaded.js' %}"></script>
+	<script src="{% static 'massive/js/scripts.js' %}"></script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!--======================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	charge.html
+ *======================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}
+{% load staticfiles %}
+{% block content_site %}
+
+<!--	Charge
+========================================= -->
+<div class="row">
+	<div class="col-md-12">
+		<div class="portlet light portlet-fit ">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="icon-7s-users"> </i>
+					<span class="caption-subject base-font"> Payment Processing </span>
+				</div>
+			</div>
+			<div class="portlet-body">
+				<div class="pi-row">
+					<div class="pi-col-sm-6">
+						<form action="/" id="payment-form" method="post">
+							{% csrf_token %}
+							<div class="pi-row pi-grid-small-margins">
+								<div class="pi-col-sm-12">
+									<label>Card Number</label>
+									<div class="form-group">
+										<div class="pi-input-with-icon">
+											<div class="pi-input-icon">
+												<i class="icon-7s-credit"> </i>
+											</div>
+											<div id="card-number"></div>
+										</div>
+									</div>
+								</div>
+
+								<!--	Expiration Date
+								========================================= -->
+								<div class="pi-col-sm-4">
+									<label>Expiration Date</label>
+									<div class="form-group">
+										<div class="pi-input-with-icon">
+											<div class="pi-input-icon">
+												<i class="icon-7s-date"> </i>
+											</div>
+											<div id="expiration-date"></div>
+										</div>
+									</div>
+								</div>
+
+								<!--	Security Code
+								========================================= -->
+								<div class="pi-col-sm-4">
+									<label>CVV</label>
+									<div class="form-group">
+										<div class="pi-input-with-icon">
+											<div class="pi-input-icon">
+												<i class="icon-7s-key"> </i>
+											</div>
+											<div id="cvv"></div>
+										</div>
+									</div>
+								</div>
+								
+								<!--	Zip Code
+								========================================= -->
+								<div class="pi-col-sm-4">
+									<label>Zip Code</label>
+									<div class="form-group">
+										<div class="pi-input-with-icon">
+											<div class="pi-input-icon">
+												<i class="icon-7s-map-2"> </i>
+											</div>
+											<div id="postal-code"></div>
+										</div>
+									</div>
+								</div>
+								<input id="btn-pay" class="btn base" type="submit" value="Pay" />
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+{% endblock %}

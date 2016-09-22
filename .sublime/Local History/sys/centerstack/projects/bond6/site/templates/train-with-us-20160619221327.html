@@ -1,0 +1,56 @@
+<!--==========================
+*  Author:		Dave Luke Jr
+*  Company:	CenterStack.io
+*  Description:	train-with-us.html
+*==========================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load customtags %}
+{% load staticfiles %}
+{% block content %}
+
+
+<!--	Page Title
+========================================= -->
+<!-- <section class="hero-auto text-light parallax-section" data-parallax-image="{% static 'img/what-we-do.jpg' %}" id="hero"> -->
+<section class="hero-auto text-light parallax-section chalk" id="hero">
+	<div class="wrapper align-center" id="page-title">
+		<h1><strong> Train <span class="colored">With</span> Us </strong></h1>
+	</div>
+</section>
+
+
+<!--	Train With Us
+========================================= -->
+<section id="page-body">
+	<div class="column-section boxed-sticky adapt-height clearfix">
+		<div class="column one-half bigpadding" style="background: transparent">
+			<h4 class="uppercase"><strong> PRIVATE ONE-ON-ONE TRAINING </strong></h4>
+			<hr class="small thick" />
+			<p> The most personal and individualized training option. Working one-on-one allows us to develop the most effective programs for you to reach your goals. We will lead you through dynamic training regimens using successfully proven methods. Results are our main priority, so we regularly track your progress of strength, conditioning, body composition, and diet. We take tremendous pride in helping you feel amazing about how you look. while reaching maximum fitness levels. </p>
+		</div>
+		<div class="column one-half last-col" style="background:url({% static 'img/twu1.JPG' %}) center center;background-size:cover;"> </div>
+	</div>
+	<div class="spacer-big"> </div>
+	<div class="column-section boxed-sticky adapt-height clearfix">
+		<div class="column one-half" style="background:url({% static 'img/twu2.JPG' %}) center center;background-size:cover;"> </div>
+		<div class="column one-half last-col bigpadding" style="background: transparent">
+			<h4 class="uppercase"><strong> SMALL GROUP TRAINING </strong></h4>
+			<hr class="small thick" />
+			<p> Train with a spouse, a friend, or more. Small group training is fun way to bond while getting a great workout at the same time. Because the groups are small and personal, you won’t lose the close attention to form and safety with exercises. <br><br> Train with a spouse, a friend, or more. Small group training is fun way to bond while getting a great workout at the same time. Because the groups are small and personal, you won’t lose the close attention to form and safety with exercises. </p>
+		</div>
+	</div>
+	<div class="spacer-big"></div>
+	<div class="column-section boxed-sticky adapt-height clearfix">
+		<div class="column one-half bigpadding" style="background: transparent">
+			<h4 class="uppercase"><strong> PRE/POST NATAL TRAINING </strong></h4>
+			<hr class="small thick" />
+			<p> From maintaining a healthy body weight, to preparing your body for the physical challenges of labor and delivery, exercise is highly recommended for a healthy pregnancy. Although the guidelines for prenatal and postpartum women are not that much different than the non-pregnant adult, there are some important recommendations and contraindications to adhere by. Working with a professional prenatal and postpartum trainer is the safest and most effective way to exercise during this period. </p>
+		</div>
+		<div class="column one-half last-col" style="background:url({% static 'img/twu3.JPG' %}) center center;background-size:cover;"> </div>
+	</div>
+	<div class="spacer-big"></div>
+</section>
+
+	
+{% endblock %}

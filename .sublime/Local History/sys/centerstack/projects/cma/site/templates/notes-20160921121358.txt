@@ -1,0 +1,1 @@
+<span style="text-transform: capitalize; color: #fff; font-weight: 400; background: #2AB4C0; font-size: 24px; padding: 2px 10px; border-radius: 3px;">I</span>

@@ -1,0 +1,113 @@
+<!--======================================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	Confirmation Email Template.html
+ *======================================-->
+ <!DOCTYPE html>
+ {% load staticfiles %}
+ <html lang="en">
+ <head>
+ 	<meta charset="utf-8">
+ 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+ 	<meta content="noindex" name="robots">
+ 	<title>CMA | Reservation Confirmation</title>
+ </head>
+ <body style="margin: 0; padding: 0; background: #666666">
+ 	<table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" max-width="100%">
+	 	<style type="text/css">
+	 		table {
+	 			border-collapse: collapse;
+	 			border-spacing: 0;
+	 			box-sizing: border-box;
+	 		}
+	 		td.text {
+	 			-webkit-font-smoothing: antialiased;
+	 			-ms-text-size-adjust: none;
+	 			-webkit-text-size-adjust: none;
+	 		}
+	 		a[x-apple-data-detectors] {
+	 			color: inherit !important;
+	 			text-decoration: none !important;
+	 			font-size: inherit !important;
+	 			font-family: inherit !important;
+	 			font-weight: inherit !important;
+	 			line-height: inherit !important;
+	 		}
+	 		@media screen and (max-width: 650px) {
+				.text { font-size: 14px !important; line-height: 21px !important; }
+				.h1 { font-size: 20px !important; }
+				.h2 { font-size: 18px !important; }
+				.h3 { font-size: 16px !important; }
+				.h4 { font-size: 14px !important; }
+				.h5 { font-size: 14px !important; }
+				table { line-height: 1.5 !important; }
+				.h1, .h2, .h3, .h4, .h5 { line-height: 1.2 !important; }
+				.flex-size { max-width: 100% !important; width: 650px !important; }
+				.flex-size img { max-width: 100% !important; }
+				.s-paf { padding: 0 !important; }
+				.s-pbf { padding-bottom: 0 !important; }
+				.s-pbm { padding-bottom: 16px !important; }
+				.s-plf { padding-left: 0 !important; }
+				.s-prf { padding-right: 0 !important; }
+				.s-pts { padding-top: 8px !important; }
+				.s-ptm { padding-top: 16px !important; }
+				.s-ptl { padding-top: 32px !important; }
+				.s-tac { text-align: center !important; }
+				.s-tal { text-align: left !important; }
+	 		}
+	 		@media screen and (min-device-width: 375px) and (max-device-width: 500px) {
+				table { font-size: 16px !important; }
+				table.footer-content { font-size: 12px !important; }
+	 		}
+	 	</style>
+	 	<table  align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" max-width="100%">
+	 		<tr>
+	 			<td align="center" style="border-bottom: 0;">
+	 				<a style="padding: 0; margin: 0;" href="http://www.coloradomotorcycleadventures.com">
+	 					<img style="padding: 0; margin: 0;" border="0" src="http://localhost:8000/static/img/email/header-confirmation.jpg" width="100%">
+	 				</a>
+	 			</td>
+	 		</tr>
+	 	</table>
+	 	<table align="center" bgcolor="#fff" border="0" cellpadding="0" cellspacing="0" width="650px" max-width="100%" height="200px">
+	 		<tr>
+	 			<td align="left" class="text" style="text-align: justify; padding: 10px 65px; color: #444; font-family: 'Helvetica Neue', Verdana, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 1.35;">
+	 				<p>{{ reservation.customer }},</p>
+	 				<p>Thank you for choosing to ride with Colorado Motorcycle Adventures, you are confirmed with the details below. We know that you are looking forward to your ride so if there is anything we can do to make your trip more enjoyable, please don't hesitate to call us at 720.505.2030. We are here to serve you and make your trip unforgettable!</p>
+	 				<p>Let's go ride!</p>
+	 			</td>
+	 		</tr>
+	 	</table>
+	 	<table align="center" style="background: url('http://localhost:8000/static/img/email/details.jpg') no-repeat" border="0" cellpadding="0" cellspacing="0" width="650px" max-width="100%" height="245px">
+	 		<tr>
+	 			<td align="left" class="text" style="padding: 50px 0px 10px 50px;">
+	 				<img src="http://localhost:8000/media/{{ bike.image }}" width="200px" class="img-responsive">
+	 			</td>
+	 			<td width="330px" align="left" class="text" style="padding: 55px 40px 10px 20px; color: #444; font-family: 'Helvetica Neue', Verdana, Arial, sans-serif; font-size: 14px; font-weight: 300; line-height: .5;">
+	 				<p>Motorcycle: <b>{{ reservation.bike }}</b></p>
+	 				<p>Dates: <b>{{ reservation.checkout_date }} - {{ reservation.checkin_date }}</b></p>
+	 				<p>Accessories: <b>{% for accessories in reservation.accessories.all %}{{ accessories }}{% if forloop.last %}{% else %}, {% endif %}{% endfor %}</b></p>
+	 				<p>Pickup Location: <b>Denver</b></p>
+	 				<p>Pickup Time: <b>{{ reservation.checkout_time }}</b></p>
+	 				<p>Return Location: <b>Denver</b></p>
+	 				<p>Return Time: <b>{{ reservation.checkin_time }}</b></p>
+	 			</td>
+	 		</tr>
+	 	</table>
+	 	<table align="center" style="background: url(http://localhost:8000/static/img/email/footer.jpg) no-repeat;" border="0" cellpadding="0" cellspacing="0" width="650px" max-width="100%" height="215px">
+	 		<tr>
+	 			<td align="center" style="color: transparent">CMA</td><td align="center" style="color: transparent">CMA</td><td align="center" style="color: transparent">CMA</td><td align="center" style="color: transparent">CMA</td><td align="center" style="color: transparent">CMA</td><td align="center" style="color: transparent">CMA</td><td align="center" style="color: transparent">CMA</td><td align="center" style="color: transparent">CMA</td><td align="center" style="color: transparent">CMA</td><td align="center" style="color: transparent">CMA</td>
+	 			<td align="center" style="border-bottom: 0; height: 17px; margin-left: 50px;">
+	 				<a href="https://www.facebook.com/coloradomotorcycleadventures"><img style="padding: 0; margin: 0;" border="0" src="http://localhost:8000/static/img/email/facebook.png" max-width="51px"></a>
+	 			</td>
+	 			<td align="center" style="border-bottom: 0; height: 17px;">
+	 				<a href="https://www.instagram.com/coloradomotorcycleadventures/"><img style="padding: 0; margin: 0;" border="0" src="http://localhost:8000/static/img/email/instagram.png" max-width="51px"></a>
+	 			</td>
+	 			<td align="center" style="border-bottom: 0; height: 17px;">
+	 				<a href="https://www.youtube.com/c/Coloradomotorcycleadventures"><img style="padding: 0; margin: 0;" border="0" src="http://localhost:8000/static/img/email/youtube.png" max-width="51px"></a>
+	 			</td>
+	 		</tr>
+	 	</table>
+	</table>
+ </body>
+ </html>

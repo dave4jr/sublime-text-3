@@ -1,0 +1,202 @@
+<!--======================
+ *  Author:		Dave Luke Jr
+ *  Company:	CenterStack.io
+ *  Description:	tour_form.html
+ *======================-->
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load humanize %}
+{% load mathfilters %}Í
+{% load staticfiles %}
+{% block content_site %}
+
+<!--	Tours
+========================================= -->
+<div class="row">
+	<div class="col-md-12">
+		<div class="portlet box base">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="pe-7s-users"> </i>
+					<span class="caption-subject font-white capitalize"> Tour Details </span>
+				</div>
+			</div>
+			<div class="portlet-body">
+				<div class="pi-row">
+
+					{% if TourForm.errors %}
+						{% for error in TourForm.errors %}
+							<p class="pi-text-center font-mt-red capitalize fs-18">Error: {{ error|escape }}</p>
+						{% endfor %}
+					{% endif %}
+
+					<div class="pi-col-sm-8 pi-section-white m-t-30">
+
+						<!--	Form
+						========================================= -->
+						<form action="" method="post" role="form">
+							{% csrf_token %}
+
+							<div class="pi-row pi-grid-small-margins m-l-20">
+
+								<!--	Tour
+								========================================= -->
+								<div class="pi-col-sm-12">
+									<div class="form-group">
+										<label for="label-tour-phone"> Tour Name </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-way"> </i>
+											</span>
+											{{ TourForm.name | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+
+								<!--	Tour Start
+								========================================= -->
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-tour-phone"> Start Date </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-date"> </i>
+											</span>
+											{{ TourForm.date_start | add_class:"form-control datepicker" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-up"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+
+								<!--	Tour End
+								========================================= -->
+								<div class="pi-col-sm-6">
+									<div class="form-group">
+										<label for="label-tour-phone"> End Date </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-date"> </i>
+											</span>
+											{{ TourForm.date_end | add_class:"form-control datepicker" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-angle-up"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+
+								<!--	Tour Location
+								========================================= -->
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label for="label-tour-phone"> Location </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-map"> </i>
+											</span>
+											{{ TourForm.location | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-expand-v"></i>
+											</span>
+											<a href="/admin/tours/location/add" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+
+								<!--	Tour Guide
+								========================================= -->
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label for="label-tour-phone"> Guide </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-user"> </i>
+											</span>
+											{{ TourForm.guide | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-expand-v"></i>
+											</span>
+											<a href="/admin/tours/guide/add" class="input-group-addon input-right fk">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+
+								<!--	Skill Rating
+								========================================= -->
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label for="label-tour-phone"> Skill Level </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-star"> </i>
+											</span>
+											{{ TourForm.skill | add_class:"form-control" }}
+											<span class="input-group-addon input-right expandable">
+												<i class="pe-is-i-expand-v"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+
+								<!--	mileage
+								========================================= -->
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label for="label-tour-phone"> Total mileage </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-info"> </i>
+											</span>
+											{{ TourForm.mileage | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+
+								<!--	Price (Shared)
+								========================================= -->
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label for="label-tour-phone"> Price (Shared) </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-cash"> </i>
+											</span>
+											{{ TourForm.price_shared | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+
+								<!--	Price (Single)
+								========================================= -->
+								<div class="pi-col-sm-4">
+									<div class="form-group">
+										<label for="label-tour-phone"> Price (Single) </label>
+										<div class='input-group'>
+											<span class="input-group-addon input-left">
+												<i class="pe-7s-cash"> </i>
+											</span>
+											{{ TourForm.price_single | add_class:"form-control" }}
+										</div>
+									</div>
+								</div>
+							</div>
+							<p class="pi-text-center m-t-40">
+								<button type="submit" value="{{ tour.pk }}" name="delete" class="btn mt-grey-gallery-bg p-rl-40 m-r-5"> Delete<i class="pe-7s-close-circle right-icon"></i></button>
+								<button type="submit" value="{{ tour.pk }}" name="save" class="btn base p-rl-40"> Save<i class="pe-7s-check right-icon"></i></button>
+							</p>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}
